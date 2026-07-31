@@ -1,0 +1,816 @@
+import { photos } from "./photos";
+
+export const site = {
+  companyName: "Vikas Bhart",
+  tagline: "Supporting MSMEs. Empowering Bharat.",
+  logo: "/brand/vikas-bhart-logo.jpg",
+  whatsappNumber: "91XXXXXXXXXX",
+  phoneNumber: "1800-XXX-XXXX",
+  email: "hello@vikasbhart.in",
+  offices: [
+    {
+      city: "Ahmedabad",
+      address: "CG Road, Navrangpura — Business desk & walk-ins",
+    },
+    {
+      city: "Jaipur",
+      address: "C-Scheme — Loans, MSME & scheme desk",
+    },
+    {
+      city: "Delhi NCR",
+      address: "Gurugram Sector 44 — Startup & compliance desk",
+    },
+    {
+      city: "Hyderabad",
+      address: "Banjara Hills — South India operations",
+    },
+  ] as const,
+  social: [
+    { label: "WhatsApp", href: "https://wa.me/91XXXXXXXXXX" },
+    { label: "Instagram", href: "#" },
+    { label: "YouTube", href: "#" },
+    { label: "LinkedIn", href: "#" },
+  ] as const,
+  resources: [
+    { label: "MSME / Udyam guide", href: "/services/registration" },
+    { label: "GST registration help", href: "/services/registration" },
+    { label: "Mudra Loan explainer", href: "/schemes/mudra" },
+    { label: "FSSAI licence path", href: "/services/certificate" },
+  ] as const,
+  disclaimer:
+    "We are a private consultancy and are not affiliated with any Government department or agency. All payments must be made only to our official company account.",
+} as const;
+
+export const navigation = [
+  { label: "Startup", href: "/#services", icon: "rocket", section: "services" },
+  { label: "MSME", href: "/#schemes", icon: "cog", section: "schemes" },
+  { label: "Support", href: "/#how-it-works", icon: "handshake", section: "how-it-works" },
+  { label: "Growth", href: "/#stories", icon: "trending", section: "stories" },
+  { label: "Sustain", href: "/#resources", icon: "shield", section: "resources" },
+] as const;
+
+export const hero = {
+  eyebrow: "India's Business Help Desk",
+  headline: "Paisa chahiye? Hum dikhayenge kaise.",
+  subhead:
+    "From company registration and GST to Mudra loans, PMEGP subsidies, FSSAI, ISO, and growth advisory — we turn confusing government paperwork into a clear, bilingual path for shop owners and first-time founders across India.",
+  primaryCta: "Free Check on WhatsApp",
+  secondaryCta: "Call an Expert",
+  image: {
+    src: photos.heroShopkeeper,
+    alt: "Small shop owner smiling in front of their store",
+  },
+  secondaryImage: {
+    src: photos.heroMeeting,
+    alt: "Consultant reviewing loan and scheme documents with a business owner",
+  },
+  floatingProof: "12,000+ businesses helped",
+  microcopy: [
+    "No fees for the first call",
+    "Hindi & English support",
+    "Pan-India desk",
+  ] as const,
+  benefits: [
+    {
+      title: "Money pathways",
+      text: "Bank loans, NBFC credit, and government subsidies matched to your business type.",
+    },
+    {
+      title: "Licences done right",
+      text: "FSSAI, ISO, BIS, GST, trademark — filed with clear timelines and status updates.",
+    },
+    {
+      title: "One desk for everything",
+      text: "Registration, funding, compliance, and growth advice without juggling five agencies.",
+    },
+  ],
+  highlights: [
+    { value: "120+", label: "Schemes screened" },
+    { value: "4–8 wks", label: "Typical funding cycle" },
+    { value: "Hindi + EN", label: "Explained simply" },
+    { value: "4 cities", label: "Office presence" },
+  ],
+} as const;
+
+export const trustBadges = [
+  {
+    label: "MSME Registered",
+    image: photos.badgeMsme,
+    alt: "MSME registration certificate badge",
+  },
+  {
+    label: "ISO 9001:2015",
+    image: photos.badgeIso,
+    alt: "ISO 9001:2015 quality certification badge",
+  },
+  {
+    label: "Govt. Scheme Partner",
+    image: photos.badgeGovt,
+    alt: "Government scheme partner badge",
+  },
+  {
+    label: "5.0 Google Rating",
+    image: photos.badgeRating,
+    alt: "5.0 star Google rating badge",
+  },
+] as const;
+
+export const passbook = {
+  title: "Our Ledger",
+  subtitle:
+    "Real outcomes from registrations, loans, and scheme filings — stamped in plain numbers so you can trust the desk before you dial.",
+  body: "We track every rupee sanctioned, every licence issued, and every first reply. These figures update from live case work across Ahmedabad, Jaipur, Delhi NCR, and Hyderabad.",
+  stats: [
+    { value: "₹480Cr+", label: "Money delivered", stamp: "PAID" },
+    { value: "12,000+", label: "Businesses helped", stamp: "DONE" },
+    { value: "48 hrs", label: "First reply time", stamp: "FAST" },
+    { value: "95%", label: "Applications approved", stamp: "OK" },
+  ],
+  extras: [
+    { label: "Average loan ticket", value: "₹8–22 Lakh" },
+    { label: "Scheme win rate", value: "7 in 10 eligible cases" },
+    { label: "Repeat clients", value: "38%" },
+  ],
+} as const;
+
+export const about = {
+  id: "about",
+  eyebrow: "About Bharosa",
+  heading: "Built for dukaan owners, not dashboards.",
+  body: "Bharosa Business Suvidha started as a walk-in help desk for first-time entrepreneurs who were stuck between bank queues, portal logins, and Hindi-English form language. Today we are a multi-city consultancy covering company incorporation, MSME/Udyam, GST, government schemes, loans, licences, and growth advisory — still explained with pictures and phone calls, not jargon.",
+  mission:
+    "Make capital, compliance, and licences reachable for every serious small business in India.",
+  vision:
+    "A Bharat where opening a shop or startup never fails because of paperwork confusion.",
+  values: [
+    {
+      title: "Clear speech",
+      text: "We explain eligibility in Hindi and English before we ask for a single document.",
+    },
+    {
+      title: "Proof over promises",
+      text: "Stamped outcomes, case timelines, and WhatsApp updates you can forward to family.",
+    },
+    {
+      title: "No hidden desks",
+      text: "One accountable team from first call to money-in-account or licence-in-hand.",
+    },
+    {
+      title: "Respect for small scale",
+      text: "Kirana, tailoring, hardware, food, and first-time founders get the same care as larger MSMEs.",
+    },
+  ],
+  milestones: [
+    { year: "2018", text: "Help desk opens in Ahmedabad for MSME filings." },
+    { year: "2020", text: "Scheme matching desk screens 50+ central & state schemes." },
+    { year: "2023", text: "Crossed ₹300Cr cumulative funding facilitated." },
+    { year: "2026", text: "Four-city presence; 12,000+ businesses supported." },
+  ],
+  images: {
+    team: {
+      src: photos.aboutTeam,
+      alt: "Bharosa consultants with small business clients",
+    },
+    office: {
+      src: photos.aboutOffice,
+      alt: "Walk-in business help desk office",
+    },
+    mission: {
+      src: photos.aboutMission,
+      alt: "Mission visual — growth for Indian MSMEs",
+    },
+  },
+  certifications: [
+    "ISO 9001:2015 process quality",
+    "MSME registered consultancy",
+    "Bank & NBFC partner desk",
+    "Scheme documentation specialists",
+  ],
+} as const;
+
+export const services = {
+  eyebrow: "What We Do",
+  heading: "Ek jagah, har madad.",
+  sub: "Everything your business needs under one roof — registration, funding, licences, growth, and legal — with bilingual guidance and WhatsApp-first updates.",
+  overview:
+    "Whether you are registering a private limited company, applying for a Mudra loan, claiming a PMEGP subsidy, or renewing FSSAI, our desk maps the path, collects the right papers, and follows up with banks and portals until the outcome is real.",
+  categories: [
+    {
+      title: "Registration & tax",
+      text: "Company, LLP, proprietorship, MSME/Udyam, GST, and basic compliance calendars.",
+    },
+    {
+      title: "Capital & schemes",
+      text: "Bank/NBFC loans, collateral-light products, and central/state subsidies matched to your profile.",
+    },
+    {
+      title: "Licences & marks",
+      text: "FSSAI, ISO, BIS, trade licences, and trademark filing with clear document checklists.",
+    },
+  ],
+  comparison: [
+    {
+      feature: "Document checklist in Hindi + English",
+      us: true,
+      diy: false,
+      generic: "Sometimes",
+    },
+    {
+      feature: "Scheme + loan match in one desk",
+      us: true,
+      diy: false,
+      generic: false,
+    },
+    {
+      feature: "WhatsApp status until money/licence lands",
+      us: true,
+      diy: false,
+      generic: "Rare",
+    },
+    {
+      feature: "Walk-in offices in 4 cities",
+      us: true,
+      diy: false,
+      generic: false,
+    },
+  ],
+  items: [
+    {
+      title: "Start a Business",
+      subtitle: "Company / Dukaan register karo",
+      image: photos.serviceRegistration,
+      slug: "registration",
+      aspectRatio: "4 / 5",
+      summary:
+        "Incorporate a company or LLP, register a proprietorship dukaan, get MSME/Udyam, and activate GST with a single coordinated filing plan.",
+      benefits: [
+        "Name approval & incorporation filing",
+        "Udyam / MSME certificate for scheme eligibility",
+        "GST registration with return calendar basics",
+        "Bank KYC pack prepared for account opening",
+      ],
+      documents: [
+        "PAN & Aadhaar of promoters",
+        "Address proof of business premises",
+        "Passport photos & specimen signatures",
+        "Partnership deed / MoA-AoA drafts (as applicable)",
+      ],
+      timeline: "7–21 working days depending on structure",
+      faqs: [
+        {
+          q: "Private limited vs proprietorship — which is faster?",
+          a: "Proprietorship + GST is usually faster for a single-owner dukaan. Private limited suits fundraising and larger contracts.",
+        },
+        {
+          q: "Do I need Udyam if I already have GST?",
+          a: "Yes for most MSME schemes and many bank products — Udyam is the key eligibility proof.",
+        },
+      ],
+      includes: [
+        { label: "Company / dukaan register", icon: "building" as const },
+        { label: "MSME / Udyam", icon: "store" as const },
+        { label: "GST setup", icon: "file" as const },
+      ],
+    },
+    {
+      title: "Get a Loan",
+      subtitle: "Bank se paisa dilwao",
+      image: photos.serviceLoan,
+      slug: "loan",
+      aspectRatio: "4 / 5",
+      summary:
+        "We match you to Mudra, Stand-Up India, working-capital, and NBFC products — then prepare the file banks actually accept.",
+      benefits: [
+        "Lender shortlist based on turnover & collateral",
+        "CMA / basic projections where required",
+        "Application follow-up until sanction",
+        "Disbursement checklist for account credit",
+      ],
+      documents: [
+        "KYC + business registration proofs",
+        "Bank statements (6–12 months)",
+        "ITR / GST returns where available",
+        "Quotations / project cost sheet",
+      ],
+      timeline: "3–8 weeks typical for MSME tickets",
+      faqs: [
+        {
+          q: "Can I get a loan without collateral?",
+          a: "Often yes under Mudra and select NBFC products — eligibility depends on business vintage and cash flows.",
+        },
+      ],
+      includes: [
+        { label: "Bank / NBFC match", icon: "rupee" as const },
+        { label: "Paperwork handled", icon: "file" as const },
+        { label: "Follow-up till money lands", icon: "check" as const },
+      ],
+    },
+    {
+      title: "Government Grant",
+      subtitle: "Sarkar se muft paisa",
+      image: photos.serviceGrant,
+      slug: "grant",
+      aspectRatio: "4 / 5",
+      summary:
+        "PMEGP, seed funds, and state subsidies — we check fit, prepare DPR-style packs, and track portal status.",
+      benefits: [
+        "Eligibility screen across 120+ schemes",
+        "Project report support",
+        "Portal filing & query handling",
+        "Subsidy claim follow-up",
+      ],
+      documents: [
+        "Udyam / business proof",
+        "Project cost & quotations",
+        "Own contribution proof",
+        "Category certificates (if claiming reserved benefits)",
+      ],
+      timeline: "4–12 weeks depending on scheme queue",
+      faqs: [
+        {
+          q: "Is subsidy free money?",
+          a: "Subsidy reduces your project cost or loan burden when approved — it is not instant cash without a viable project.",
+        },
+      ],
+      includes: [
+        { label: "Scheme match", icon: "clipboard" as const },
+        { label: "Application filing", icon: "file" as const },
+        { label: "Subsidy follow-up", icon: "rupee" as const },
+      ],
+    },
+    {
+      title: "Licence & Certificate",
+      subtitle: "FSSAI, ISO, GST wagera",
+      image: photos.serviceCertificate,
+      slug: "certificate",
+      aspectRatio: "4 / 5",
+      summary:
+        "Food, quality, and trade licences that unlock marketplaces, tenders, and buyer trust.",
+      benefits: [
+        "FSSAI basic / state / central guidance",
+        "ISO documentation coaching",
+        "BIS pathway overview",
+        "Trademark search & filing support",
+      ],
+      documents: [
+        "Business identity & address proofs",
+        "Product / process list",
+        "Label / packaging samples (FSSAI)",
+        "Quality manual inputs (ISO)",
+      ],
+      timeline: "1–6 weeks by licence type",
+      faqs: [
+        {
+          q: "Do online sellers need FSSAI?",
+          a: "Most food sellers do — we map the correct category before you pay any portal fee.",
+        },
+      ],
+      includes: [
+        { label: "FSSAI", icon: "check" as const },
+        { label: "ISO / BIS", icon: "clipboard" as const },
+        { label: "GST & trade licences", icon: "file" as const },
+      ],
+    },
+    {
+      title: "Grow Your Business",
+      subtitle: "Naye customer, naya branch",
+      image: photos.serviceGrowth,
+      slug: "growth",
+      aspectRatio: "4 / 5",
+      summary:
+        "Local marketing plans, branch feasibility, and funding for expansion once your core licence and GST are stable.",
+      benefits: [
+        "Customer acquisition playbooks for local trade",
+        "Second-unit / franchise readiness check",
+        "Working-capital sizing",
+        "Digital listing hygiene (maps, catalogues)",
+      ],
+      documents: [
+        "Current sales snapshot",
+        "Rent / property options for expansion",
+        "Staff & inventory estimates",
+      ],
+      timeline: "Advisory sprints of 2–4 weeks",
+      faqs: [
+        {
+          q: "Do you run ads for me?",
+          a: "We set strategy and checklists; media buying can be coordinated with your preferred vendor.",
+        },
+      ],
+      includes: [
+        { label: "Naye customers", icon: "growth" as const },
+        { label: "Marketing help", icon: "handshake" as const },
+        { label: "Naya branch planning", icon: "store" as const },
+      ],
+    },
+    {
+      title: "Legal Help",
+      subtitle: "Kaagaz aur kanoon ki madad",
+      image: photos.serviceLegal,
+      slug: "legal",
+      aspectRatio: "4 / 5",
+      summary:
+        "Agreements, compliance calendars, and notices — practical legal support so small teams do not miss deadlines.",
+      benefits: [
+        "Vendor & partner agreement templates reviewed",
+        "Basic labour & shop act orientation",
+        "Notice & reply coordination",
+        "Annual compliance reminders",
+      ],
+      documents: [
+        "Existing contracts",
+        "Company / firm papers",
+        "Notice copies (if any)",
+      ],
+      timeline: "Depends on matter — first review in 48–72 hrs",
+      faqs: [
+        {
+          q: "Is this a law firm?",
+          a: "We are a consultancy desk that coordinates with qualified professionals where courtroom or complex counsel is needed.",
+        },
+      ],
+      includes: [
+        { label: "Contracts & kaagaz", icon: "file" as const },
+        { label: "Compliance checks", icon: "clipboard" as const },
+        { label: "Legal guidance", icon: "scale" as const },
+      ],
+    },
+  ],
+} as const;
+
+export function getServiceBySlug(slug: string) {
+  return services.items.find((item) => item.slug === slug);
+}
+
+export function getAllServiceSlugs() {
+  return services.items.map((item) => item.slug);
+}
+
+export const howItWorks = {
+  eyebrow: "The Process",
+  heading: "4 kadam, poora kaam.",
+  sub: "You just show up. We handle the rest — from a 2-minute discovery call to money or licence in hand.",
+  diagram: {
+    src: photos.processDiagram,
+    alt: "Four-step process diagram from call to disbursement",
+  },
+  steps: [
+    {
+      title: "Tell Us About You",
+      caption: "2-minute call. No forms.",
+      detail:
+        "Share business type, city, turnover band, and what you need — loan, licence, registration, or subsidy. We reply on WhatsApp with a simple checklist.",
+      image: photos.stepCall,
+    },
+    {
+      title: "We Find Your Match",
+      caption: "We check 120+ schemes for you.",
+      detail:
+        "Our desk screens loans and government schemes against your eligibility, then ranks the top 2–3 realistic options with timelines.",
+      image: photos.stepMatch,
+    },
+    {
+      title: "We Do the Paperwork",
+      caption: "You just sign. We handle the rest.",
+      detail:
+        "We assemble KYC, statements, quotations, and portal forms. You review and sign — we file and track queries.",
+      image: photos.stepPaperwork,
+    },
+    {
+      title: "Money in Your Account",
+      caption: "We follow up until it's done.",
+      detail:
+        "Sanction, disbursement, licence download, or GST live — we stay on the case until the outcome is in your hands.",
+      image: photos.stepMoney,
+    },
+  ],
+} as const;
+
+export const schemes = {
+  eyebrow: "Sarkari Yojana",
+  heading: "Free paisa, jo aapka haq hai.",
+  sub: "Central and popular schemes explained with amounts, eligibility, documents, and timelines — not PDF walls.",
+  link: "Sabhi schemes dekho →",
+  categories: [
+    { label: "Collateral-light loans", count: "Mudra · Stand-Up" },
+    { label: "Subsidy / cost share", count: "PMEGP · state packs" },
+    { label: "Startup grants", count: "Seed Fund · DPIIT paths" },
+  ],
+  items: [
+    {
+      name: "Mudra Loan",
+      tag: "Loan",
+      amount: "Up to ₹20 Lakh",
+      description: "No collateral needed.",
+      longDescription:
+        "Mudra supports micro and small non-farm businesses with Shishu, Kishor, and Tarun tickets. Ideal for traders, manufacturers, and service units that need working capital or equipment without heavy collateral.",
+      image: photos.schemeMudra,
+      slug: "mudra",
+      benefits: [
+        "Collateral-free in most eligible cases",
+        "Ticket sizes for early and growing units",
+        "Works with many public & private banks",
+      ],
+      documents: [
+        "KYC + business proof",
+        "Bank statements",
+        "Quotations / stock details",
+      ],
+      timeline: "2–6 weeks after complete file",
+      eligibility: [
+        { label: "Small / micro business", icon: "briefcase" as const },
+        { label: "No collateral needed", icon: "shield" as const },
+        { label: "Indian citizen / resident", icon: "user" as const },
+      ],
+      faqs: [
+        {
+          q: "Is Mudra only for first-time borrowers?",
+          a: "No — existing micro units can also apply, subject to bank underwriting.",
+        },
+      ],
+    },
+    {
+      name: "PMEGP",
+      tag: "Subsidy",
+      amount: "Up to ₹50 Lakh",
+      description: "Govt. pays part of your cost.",
+      longDescription:
+        "PMEGP helps new manufacturing and service units with margin money subsidy. You bring a viable project; the subsidy reduces the effective loan burden after approval.",
+      image: photos.schemePmegp,
+      slug: "pmegp",
+      benefits: [
+        "Subsidy on eligible project cost",
+        "Support for manufacturing & services",
+        "Works via implementing agencies & banks",
+      ],
+      documents: [
+        "Project report",
+        "Educational / skill proofs where asked",
+        "Own contribution proof",
+      ],
+      timeline: "6–12 weeks typical",
+      eligibility: [
+        { label: "New unit or expansion", icon: "briefcase" as const },
+        { label: "Project cost ready", icon: "landmark" as const },
+        { label: "Own contribution ready", icon: "check" as const },
+      ],
+      faqs: [
+        {
+          q: "Can existing large companies apply?",
+          a: "PMEGP targets new micro enterprises — we screen fit before you invest time.",
+        },
+      ],
+    },
+    {
+      name: "Stand-Up India",
+      tag: "Loan",
+      amount: "₹10L – ₹1 Cr",
+      description: "For women & SC/ST founders.",
+      longDescription:
+        "Stand-Up India finances greenfield enterprises led by women or SC/ST entrepreneurs, typically for manufacturing, services, or trading with a bankable plan.",
+      image: photos.schemeStandup,
+      slug: "standup",
+      benefits: [
+        "Higher ticket sizes for serious projects",
+        "Focus on women & SC/ST founders",
+        "Composite loan structures via banks",
+      ],
+      documents: [
+        "Category certificate where applicable",
+        "Detailed project report",
+        "Collateral / guarantee discussion with bank",
+      ],
+      timeline: "4–10 weeks",
+      eligibility: [
+        { label: "Women or SC/ST founder", icon: "users" as const },
+        { label: "Greenfield project", icon: "sparkles" as const },
+        { label: "Bankable business plan", icon: "briefcase" as const },
+      ],
+      faqs: [
+        {
+          q: "Is trading allowed?",
+          a: "Yes in many cases — bank policy and project quality decide final eligibility.",
+        },
+      ],
+    },
+    {
+      name: "Startup India Seed Fund",
+      tag: "Grant",
+      amount: "Up to ₹20 Lakh",
+      description: "No repayment for eligible startups.",
+      longDescription:
+        "Seed support for DPIIT-recognised startups through incubators — suited to prototype, market entry, and early validation rather than traditional kirana working capital.",
+      image: photos.schemeSeed,
+      slug: "seedfund",
+      benefits: [
+        "Grant-style support (no classic EMI)",
+        "Incubator-led diligence",
+        "Useful for product & tech-enabled startups",
+      ],
+      documents: [
+        "DPIIT recognition",
+        "Pitch / product proof",
+        "Incubator application pack",
+      ],
+      timeline: "Varies by incubator cohort",
+      eligibility: [
+        { label: "DPIIT-recognised startup", icon: "sparkles" as const },
+        { label: "Early-stage idea", icon: "briefcase" as const },
+        { label: "No repayment if eligible", icon: "check" as const },
+      ],
+      faqs: [
+        {
+          q: "Can a local shop apply?",
+          a: "Seed Fund is for recognised startups — traditional shops usually fit Mudra / PMEGP better.",
+        },
+      ],
+    },
+  ],
+} as const;
+
+export function getSchemeBySlug(slug: string) {
+  return schemes.items.find((item) => item.slug === slug);
+}
+
+export function getAllSchemeSlugs() {
+  return schemes.items.map((item) => item.slug);
+}
+
+export const caseStudies = {
+  eyebrow: "Case Studies",
+  heading: "Challenge → solution → paisa.",
+  sub: "Short stories from food, hardware, and tailoring businesses — what blocked them, what we filed, and what landed.",
+  items: [
+    {
+      name: "Ritu Sharma",
+      business: "Saanvi Food Works",
+      image: photos.caseFood,
+      challenge: "Needed working capital + FSSAI clarity for marketplace listing.",
+      solution: "Mudra file + FSSAI state licence + GST hygiene check.",
+      process: "Call → document pack → bank file → licence parallel track.",
+      outcome: "₹22L sanctioned in 6 weeks; listings unblocked.",
+      metrics: ["₹22L loan", "FSSAI live", "6 weeks"],
+      quote:
+        "I only signed papers. They did everything else. ₹22 lakh in 6 weeks.",
+    },
+    {
+      name: "Manoj Verma",
+      business: "Verma Hardware",
+      image: photos.caseHardware,
+      challenge: "Did not know a subsidy existed for expansion machinery.",
+      solution: "PMEGP eligibility screen + project cost sheet + bank liaison.",
+      process: "Scheme match → DPR lite → agency & bank coordination.",
+      outcome: "₹8L subsidy component approved alongside term loan.",
+      metrics: ["₹8L subsidy", "Machine upgrade", "New SKUs"],
+      quote:
+        "I didn't know I could get a govt. subsidy. They found it for me.",
+    },
+    {
+      name: "Asha Devi",
+      business: "Asha Tailoring",
+      image: photos.caseTailoring,
+      challenge: "First-time borrower scared of English forms and hidden fees.",
+      solution: "Hindi walkthrough + Mudra Kishor path + Udyam fresh filing.",
+      process: "Udyam → checklist on WhatsApp → branch visit with us.",
+      outcome: "₹5L loan for machines and festival inventory.",
+      metrics: ["₹5L loan", "Udyam done", "Hindi-first"],
+      quote: "Sab kuch Hindi mein samjhaya. Bahut aasan tha.",
+    },
+  ],
+} as const;
+
+export const testimonials = {
+  eyebrow: "Real People",
+  heading: "Unki kahani, unki zubaani.",
+  sub: "Ratings, business types, and rupee outcomes from founders who look like our visitors — not stock models.",
+  items: [
+    {
+      name: "Ritu Sharma",
+      role: "Founder, Saanvi Food Works",
+      businessType: "Food manufacturing",
+      rating: 5,
+      quote:
+        "I only signed papers. They did everything else. ₹22 lakh in 6 weeks.",
+      badge: "₹22L sanctioned",
+      image: photos.personRitu,
+    },
+    {
+      name: "Manoj Verma",
+      role: "Owner, Verma Hardware",
+      businessType: "Retail / hardware",
+      rating: 5,
+      quote:
+        "I didn't know I could get a govt. subsidy. They found it for me.",
+      badge: "₹8L subsidy",
+      image: photos.personManoj,
+    },
+    {
+      name: "Asha Devi",
+      role: "Founder, Asha Tailoring",
+      businessType: "Services / garments",
+      rating: 5,
+      quote: "Sab kuch Hindi mein samjhaya. Bahut aasan tha.",
+      badge: "₹5L loan",
+      image: photos.personAsha,
+    },
+  ],
+} as const;
+
+export const resources = {
+  id: "resources",
+  eyebrow: "Guides & SEO desk",
+  heading: "Topics founders search for — explained clearly.",
+  sub: "Deep dives on registration, GST, MSME/Udyam, loans, schemes, and licences so you can learn before you call.",
+  topics: [
+    {
+      title: "Business & company registration",
+      text: "Private limited, LLP, and proprietorship paths — when each makes sense for a dukaan or startup.",
+      image: photos.seoCompany,
+      href: "/services/registration",
+    },
+    {
+      title: "GST registration",
+      text: "Thresholds, document list, and how GST links to loans and marketplace onboarding.",
+      image: photos.seoGst,
+      href: "/services/registration",
+    },
+    {
+      title: "MSME / Udyam registration",
+      text: "Why Udyam unlocks schemes, priority sector lending, and tender preferences.",
+      image: photos.seoUdyam,
+      href: "/services/registration",
+    },
+    {
+      title: "FSSAI licence",
+      text: "Basic vs state vs central — mapped to your food business model.",
+      image: photos.seoFssai,
+      href: "/services/certificate",
+    },
+    {
+      title: "ISO certification",
+      text: "ISO 9001 documentation coaching for buyer and tender readiness.",
+      image: photos.seoIso,
+      href: "/services/certificate",
+    },
+    {
+      title: "Trademark registration",
+      text: "Name/logo search and filing support so your brand is protected early.",
+      image: photos.seoTrademark,
+      href: "/services/legal",
+    },
+  ],
+} as const;
+
+export const faq = {
+  heading: "Sawal jo har founder poochta hai",
+  sub: "Eligibility, fees, timelines, and small-business fit — answered without legal fog.",
+  items: [
+    {
+      question: "Kya main eligible hoon?",
+      answer:
+        "Bas 2 minute ka call karo, hum free mein bata denge. Hum business type, city, turnover band, aur documents dekh kar 2–3 realistic options shortlist karte hain — loan, subsidy, ya licence.",
+    },
+    {
+      question: "Kitna paisa lagega hume?",
+      answer:
+        "Pehli baat-cheet bilkul free hai. Koi hidden charge nahi. Agar aap case proceed karte ho to fees clear WhatsApp summary mein likh kar bhejte hain — pehle kaam, phir paisa clarity.",
+    },
+    {
+      question: "Kitna time lagega?",
+      answer:
+        "Zyadatar funding case mein 4–8 hafte, scheme ke hisaab se. Registration aur FSSAI aksar 1–3 hafte. Portal queries aur bank holidays timeline badha sakte hain — hum weekly status dete hain.",
+    },
+    {
+      question: "Kya mera business chhota hai to bhi help milegi?",
+      answer:
+        "Haan! Chhoti dukaan se lekar badi company tak, sabko madad milti hai. Kirana, tailoring, hardware, tiffin, and first-time founders hamare common clients hain.",
+    },
+    {
+      question: "Kya aap government office ho?",
+      answer:
+        "Nahi. Hum private consultancy hain. Hum forms, banks, aur portals par aapke saath kaam karte hain — kisi bhi sarkari department ka hissa nahi.",
+    },
+    {
+      question: "Documents kaise bheju?",
+      answer:
+        "WhatsApp par checklist milti hai. Clear photos / PDFs kaafi hain. Originals sirf bank ya department ke demand par.",
+    },
+  ],
+} as const;
+
+export const finalCta = {
+  heading: "Aaj hi shuru karo.",
+  sub: "Ek free call. Koi obligation nahi. Eligibility, scheme fit, aur next documents — 2 minute mein clear.",
+  primary: "WhatsApp Par Baat Karo",
+  secondary: "1800-XXX-XXXX",
+} as const;
+
+export const footer = {
+  companyName: site.companyName,
+  tagline: site.tagline,
+  overview:
+    "Pan-India business help desk for registration, GST, MSME/Udyam, loans, government schemes, FSSAI, ISO, and growth advisory — bilingual and WhatsApp-first.",
+  offices: site.offices,
+  disclaimer: site.disclaimer,
+  map: { src: photos.footerCity, alt: "Map of Bharosa office cities" },
+} as const;
