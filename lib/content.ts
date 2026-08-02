@@ -146,6 +146,17 @@ export const network = {
   moreLabel: "and 100+ more",
   totalLabel: "Total MSMEs across India",
   totalCount: 78_302_882,
+  /** SVG coords on @svg-maps/india viewBox (0 0 612 696) */
+  metros: [
+    { id: "delhi", name: "Delhi NCR", x: 187, y: 205, office: true, label: "right" },
+    { id: "jaipur", name: "Jaipur", x: 155, y: 235, office: true, label: "right" },
+    { id: "ahmedabad", name: "Ahmedabad", x: 88, y: 300, office: true, label: "right" },
+    { id: "mumbai", name: "Mumbai", x: 118, y: 405, office: false, label: "right" },
+    { id: "hyderabad", name: "Hyderabad", x: 228, y: 455, office: true, label: "right" },
+    { id: "bengaluru", name: "Bengaluru", x: 185, y: 555, office: false, label: "right" },
+    { id: "chennai", name: "Chennai", x: 248, y: 585, office: false, label: "left" },
+    { id: "kolkata", name: "Kolkata", x: 415, y: 320, office: false, label: "left" },
+  ] as const,
   partners: [
     "MSME India",
     "Udyam",

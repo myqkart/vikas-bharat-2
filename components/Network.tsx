@@ -23,9 +23,6 @@ export default function Network() {
       <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal className="order-2 lg:order-1">
           <IndiaNetworkMap />
-          <p className="mt-4 text-center text-xs text-slate lg:text-left">
-            States pulse one by one — hover to see MSME statistics.
-          </p>
         </Reveal>
 
         <Reveal className="order-1 lg:order-2" delay={0.08}>
