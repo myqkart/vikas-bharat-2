@@ -244,9 +244,9 @@ export const network = {
 
 export const missionTrees = {
   id: "vision",
-  eyebrow: "Inside VIKASBHART",
-  heading: "What we actually do for your business.",
-  sub: "Tap a pillar to explore mission, funding, process, and benefits — the support stack behind every client file.",
+  eyebrow: "The Ink Compass",
+  heading: "Spin the seal. Lock a mandate.",
+  sub: "Four living mandates orbit the VIKASBHART seal. Scroll to spin the instrument — when a ring locks at the meridian, support blooms outward from the center.",
   hubLabel: "VIKASBHART",
   hubTagline: "Sapno Se Safalta Tak",
   trees: [
