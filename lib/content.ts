@@ -206,13 +206,16 @@ export const network = {
 
 export const missionTrees = {
   id: "vision",
-  eyebrow: "What Drives Us",
-  heading: "Four branches. One Bharat.",
-  sub: "Mission, funding, process, and benefits — each line grows from the source so you can see how VIKASBHART connects ambition to action.",
+  eyebrow: "Inside VIKASBHART",
+  heading: "What we actually do for your business.",
+  sub: "Explore our living mindmap — mission, funding, process, and benefits — so you can see the support stack behind Sapno Se Safalta Tak.",
+  hubLabel: "VIKASBHART",
+  hubTagline: "Sapno Se Safalta Tak",
   trees: [
     {
       id: "core-mission",
       root: "Core Mission",
+      blurb: "Why we exist — Bharat-first growth for startups & MSMEs.",
       accent: "marigold" as const,
       children: [
         "Atmanirbhar Bharat",
@@ -224,6 +227,7 @@ export const missionTrees = {
     {
       id: "funding",
       root: "Funding Assistance",
+      blurb: "Money pathways we open — grants, loans, subsidies, reports.",
       accent: "success" as const,
       children: [
         "Government Grants",
@@ -237,6 +241,7 @@ export const missionTrees = {
     {
       id: "process",
       root: "Our Process",
+      blurb: "How your file moves — guided, documented, on time.",
       accent: "indigo" as const,
       children: [
         "Expert Guidance",
@@ -250,6 +255,7 @@ export const missionTrees = {
     {
       id: "benefits",
       root: "Key Benefits",
+      blurb: "What you walk away with — credibility and sustainable growth.",
       accent: "ink" as const,
       children: [
         "Professional Credibility",
