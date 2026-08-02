@@ -86,7 +86,7 @@ export const hero = {
   ],
   highlights: [
     { value: "2.45L+", label: "DPIIT startups" },
-    { value: "4,467", label: "IT exemptions" },
+    { value: "4,567", label: "80 IAC Tax Exemption" },
     { value: "₹200 Cr", label: "Startup turnover cap" },
     { value: "4 cities", label: "Office presence" },
   ],
@@ -128,7 +128,7 @@ export const passbook = {
   ],
   extras: [
     { label: "DPIIT-recognised startups", value: "2,45,430" },
-    { label: "Income-tax exemptions issued", value: "4,467" },
+    { label: "PAN India 80 IAC tax exemption", value: "4,567" },
     { label: "Startup turnover threshold", value: "₹200 Cr" },
   ],
 } as const;
@@ -148,8 +148,8 @@ export const startupIndia = {
       stamp: "DPIIT",
     },
     {
-      value: "4,467",
-      label: "Income Tax Exemptions",
+      value: "4,567",
+      label: "80 IAC Tax Exemption",
       stamp: "TAX",
     },
     {

@@ -109,6 +109,37 @@ export default function Network() {
     if (inView) setPlay(true);
   }, [inView, reduce]);
 
+  // Hold the page on the cinema until the map journey finishes
+  useEffect(() => {
+    if (reduce || showContent || !play) return;
+
+    const section = sectionRef.current;
+    const lockY = section
+      ? section.getBoundingClientRect().top + window.scrollY
+      : window.scrollY;
+    window.scrollTo(0, lockY);
+
+    const body = document.body;
+    const prev = {
+      overflow: body.style.overflow,
+      position: body.style.position,
+      top: body.style.top,
+      width: body.style.width,
+    };
+    body.style.overflow = "hidden";
+    body.style.position = "fixed";
+    body.style.top = `-${lockY}px`;
+    body.style.width = "100%";
+
+    return () => {
+      body.style.overflow = prev.overflow;
+      body.style.position = prev.position;
+      body.style.top = prev.top;
+      body.style.width = prev.width;
+      window.scrollTo(0, lockY);
+    };
+  }, [play, showContent, reduce]);
+
   const onPhaseChange = useCallback((p: GlobeCinemaPhase) => {
     setPhase(p);
   }, []);

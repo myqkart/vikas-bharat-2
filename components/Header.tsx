@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -46,16 +46,39 @@ const socialMarks: Record<string, string> = {
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [active, setActive] = useState<string>(navigation[0].href);
   const { scrollY } = useScroll();
+  const lastY = useRef(0);
+  const openRef = useRef(open);
+  openRef.current = open;
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 40);
+
+    const prev = lastY.current;
+    const delta = latest - prev;
+    lastY.current = latest;
+
+    // Keep dock visible while menu is open or near the top
+    if (openRef.current || latest < 72) {
+      setHidden(false);
+      return;
+    }
+    // Hide on scroll down; reveal after a short scroll up (OS-dock feel)
+    if (delta > 4) setHidden(true);
+    else if (delta < -4) setHidden(false);
   });
 
   useEffect(() => {
-    setScrolled(window.scrollY > 40);
+    const y = window.scrollY;
+    lastY.current = y;
+    setScrolled(y > 40);
   }, []);
+
+  useEffect(() => {
+    if (open) setHidden(false);
+  }, [open]);
 
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
@@ -101,9 +124,13 @@ export default function Header() {
     <>
       <motion.header
         initial={{ y: -16, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        animate={{
+          y: hidden ? "-120%" : 0,
+          opacity: hidden ? 0 : 1,
+        }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         className="pointer-events-none fixed inset-x-0 top-0 z-50"
+        style={{ pointerEvents: hidden ? "none" : undefined }}
       >
         <div
           aria-hidden
