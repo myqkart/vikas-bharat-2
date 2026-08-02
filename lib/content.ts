@@ -1,8 +1,8 @@
 import { photos } from "./photos";
 
 export const site = {
-  companyName: "Vikas Bhart",
-  tagline: "Supporting MSMEs. Empowering Bharat.",
+  companyName: "VIKASBHART",
+  tagline: "Sapno Se Safalta Tak",
   logo: "/brand/vikas-bhart-logo.jpg",
   whatsappNumber: "91XXXXXXXXXX",
   phoneNumber: "1800-XXX-XXXX",
@@ -50,10 +50,10 @@ export const navigation = [
 ] as const;
 
 export const hero = {
-  eyebrow: "India's Business Help Desk",
-  headline: "Paisa chahiye? Hum dikhayenge kaise.",
+  eyebrow: "VIKASBHART",
+  headline: "Sapno Se Safalta Tak",
   subhead:
-    "From company registration and GST to Mudra loans, PMEGP subsidies, FSSAI, ISO, and growth advisory — we turn confusing government paperwork into a clear, bilingual path for shop owners and first-time founders across India.",
+    "We help Indian startups and MSMEs grow, succeed, and contribute to an Atmanirbhar Bharat.",
   primaryCta: "Free Check on WhatsApp",
   secondaryCta: "Call an Expert",
   image: {
@@ -130,6 +130,77 @@ export const passbook = {
     { label: "Average loan ticket", value: "₹8–22 Lakh" },
     { label: "Scheme win rate", value: "7 in 10 eligible cases" },
     { label: "Repeat clients", value: "38%" },
+  ],
+} as const;
+
+/** MSME counts by state / UT — mapped to @svg-maps/india location ids */
+export const network = {
+  id: "network",
+  headingLead: "We have the",
+  headingStrong: "Strongest network of",
+  headingAccent: "MSME guidance",
+  headingEnd: "in India",
+  sub: "Providing support across the nation — hover any state for MSME counts.",
+  cta: "Share Your Business Plan Today",
+  ctaHref: `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent("Hi, I want to share my business plan.")}`,
+  moreLabel: "and 100+ more",
+  totalLabel: "Total MSMEs across India",
+  totalCount: 78_302_882,
+  partners: [
+    "MSME India",
+    "Udyam",
+    "Mudra",
+    "PMEGP",
+    "Startup India",
+    "Stand-Up India",
+    "GST Network",
+    "FSSAI",
+    "ISO",
+    "BIS",
+  ] as const,
+  states: [
+    { rank: 1, id: "mh", name: "Maharashtra", count: 10_144_478 },
+    { rank: 2, id: "up", name: "Uttar Pradesh", count: 8_603_272 },
+    { rank: 3, id: "tn", name: "Tamil Nadu", count: 6_227_609 },
+    { rank: 4, id: "wb", name: "West Bengal", count: 5_310_326 },
+    { rank: 5, id: "ka", name: "Karnataka", count: 4_991_314 },
+    { rank: 6, id: "mp", name: "Madhya Pradesh", count: 4_827_725 },
+    { rank: 7, id: "rj", name: "Rajasthan", count: 4_446_338 },
+    { rank: 8, id: "gj", name: "Gujarat", count: 4_369_973 },
+    { rank: 9, id: "br", name: "Bihar", count: 4_273_285 },
+    { rank: 10, id: "ap", name: "Andhra Pradesh", count: 3_928_602 },
+    { rank: 11, id: "tg", name: "Telangana", count: 3_833_083 },
+    { rank: 12, id: "or", name: "Odisha", count: 2_437_145 },
+    { rank: 13, id: "pb", name: "Punjab", count: 2_137_630 },
+    { rank: 14, id: "hr", name: "Haryana", count: 2_018_439 },
+    { rank: 15, id: "kl", name: "Kerala", count: 1_842_567 },
+    { rank: 16, id: "jh", name: "Jharkhand", count: 1_558_451 },
+    { rank: 17, id: "as", name: "Assam", count: 1_512_853 },
+    { rank: 18, id: "dl", name: "Delhi", count: 1_468_297 },
+    { rank: 19, id: "ct", name: "Chhattisgarh", count: 1_348_345 },
+    { rank: 20, id: "jk", name: "Jammu & Kashmir", count: 851_815 },
+    { rank: 21, id: "ut", name: "Uttarakhand", count: 649_476 },
+    { rank: 22, id: "hp", name: "Himachal Pradesh", count: 343_104 },
+    { rank: 23, id: "tr", name: "Tripura", count: 314_007 },
+    { rank: 24, id: "mn", name: "Manipur", count: 178_102 },
+    { rank: 25, id: "ga", name: "Goa", count: 130_080 },
+    { rank: 26, id: "py", name: "Puducherry", count: 108_206 },
+    { rank: 27, id: "ch", name: "Chandigarh", count: 81_054 },
+    { rank: 28, id: "nl", name: "Nagaland", count: 74_746 },
+    { rank: 29, id: "ml", name: "Meghalaya", count: 74_087 },
+    { rank: 30, id: "mz", name: "Mizoram", count: 52_518 },
+    { rank: 31, id: "ar", name: "Arunachal Pradesh", count: 48_870 },
+    { rank: 32, id: "sk", name: "Sikkim", count: 36_269 },
+    {
+      rank: 33,
+      id: "dn",
+      name: "Dadra & Nagar Haveli and Daman & Diu",
+      count: 35_889,
+      aliasIds: ["dd"] as const,
+    },
+    { rank: 34, id: "an", name: "Andaman & Nicobar Islands", count: 22_212 },
+    { rank: 35, id: "la", name: "Ladakh", count: 20_264 },
+    { rank: 36, id: "ld", name: "Lakshadweep", count: 2_451 },
   ],
 } as const;
 

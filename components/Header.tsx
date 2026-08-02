@@ -145,7 +145,7 @@ export default function Header() {
               className="pointer-events-none absolute -right-6 top-1/2 h-14 w-24 -translate-y-1/2 rounded-full bg-success/30 blur-2xl"
             />
 
-            {/* Brand — Vikas Bhart lockup */}
+            {/* Brand — VIKASBHART lockup */}
             <Link
               href="/"
               className="group relative z-10 flex min-w-0 shrink-0 items-center gap-2.5 rounded-full py-1 pr-2 pl-1 focus-visible:outline-offset-4"
@@ -167,16 +167,14 @@ export default function Header() {
                 />
               </motion.span>
               <span className="min-w-0">
-                <span className="flex items-baseline gap-1.5 leading-none">
-                  <span className="font-sans text-[15px] font-bold tracking-[0.04em] text-ink uppercase sm:text-base">
-                    Vikas
-                  </span>
-                  <span className="bg-gradient-to-r from-marigold via-[#e8a01a] to-success bg-clip-text font-sans text-[15px] font-bold tracking-[0.04em] text-transparent uppercase sm:text-base">
-                    Bhart
+                <span className="block font-sans text-[15px] font-bold tracking-[0.06em] text-ink uppercase sm:text-base">
+                  <span className="text-ink">VIKAS</span>
+                  <span className="bg-gradient-to-r from-marigold via-[#e8a01a] to-success bg-clip-text text-transparent">
+                    BHART
                   </span>
                 </span>
-                <span className="mt-0.5 hidden truncate text-[9px] font-bold tracking-[0.12em] text-slate uppercase sm:block">
-                  Supporting MSMEs
+                <span className="mt-0.5 hidden truncate text-[9px] font-bold tracking-[0.08em] text-slate sm:block">
+                  {site.tagline}
                 </span>
               </span>
             </Link>
@@ -376,9 +374,9 @@ export default function Header() {
                     </span>
                     <div>
                       <p className="font-sans text-lg font-bold tracking-wide text-ink uppercase">
-                        Vikas{" "}
+                        <span className="text-ink">VIKAS</span>
                         <span className="bg-gradient-to-r from-marigold to-success bg-clip-text text-transparent">
-                          Bhart
+                          BHART
                         </span>
                       </p>
                       <p className="mt-0.5 max-w-[14rem] text-xs font-semibold text-slate">

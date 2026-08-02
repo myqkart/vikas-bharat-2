@@ -87,7 +87,7 @@ function BrandName() {
   const words = ["VIKAS", "BHART"] as const;
 
   return (
-    <div className="flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 sm:gap-x-4">
+    <div className="flex flex-wrap items-baseline justify-center gap-x-1 gap-y-1 sm:gap-x-1.5">
       {words.map((word, wi) => (
         <span key={word} className="inline-flex overflow-hidden">
           {word.split("").map((char, ci) => (

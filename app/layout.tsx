@@ -17,9 +17,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Vikas Bhart",
+  title: "VIKASBHART",
   description:
-    "Supporting MSMEs. Empowering Bharat. — startup, MSME, support, growth & sustain for Indian businesses.",
+    "Sapno Se Safalta Tak — We help Indian startups and MSMEs grow, succeed, and contribute to an Atmanirbhar Bharat.",
 };
 
 export default function RootLayout({
