@@ -109,34 +109,54 @@ export default function Network() {
     if (inView) setPlay(true);
   }, [inView, reduce]);
 
-  // Hold the page on the cinema until the map journey finishes
+  // Hold scroll during cinema without position:fixed (that zeros scrollY and causes a top→map jump on unlock)
   useEffect(() => {
     if (reduce || showContent || !play) return;
 
     const section = sectionRef.current;
     const lockY = section
-      ? section.getBoundingClientRect().top + window.scrollY
-      : window.scrollY;
+      ? Math.round(section.getBoundingClientRect().top + window.scrollY)
+      : Math.round(window.scrollY);
+
     window.scrollTo(0, lockY);
 
+    const html = document.documentElement;
     const body = document.body;
     const prev = {
-      overflow: body.style.overflow,
-      position: body.style.position,
-      top: body.style.top,
-      width: body.style.width,
+      htmlOverflow: html.style.overflow,
+      bodyOverflow: body.style.overflow,
+      bodyOverscroll: body.style.overscrollBehavior,
     };
+
+    html.style.overflow = "hidden";
     body.style.overflow = "hidden";
-    body.style.position = "fixed";
-    body.style.top = `-${lockY}px`;
-    body.style.width = "100%";
+    body.style.overscrollBehavior = "none";
+
+    const blockScroll = (e: Event) => {
+      e.preventDefault();
+    };
+
+    // Keep the cinema framed if anything tries to nudge scroll
+    const keepFrame = () => {
+      if (Math.abs(window.scrollY - lockY) > 1) {
+        window.scrollTo(0, lockY);
+      }
+    };
+
+    window.addEventListener("wheel", blockScroll, { passive: false });
+    window.addEventListener("touchmove", blockScroll, { passive: false });
+    window.addEventListener("scroll", keepFrame, { passive: true });
 
     return () => {
-      body.style.overflow = prev.overflow;
-      body.style.position = prev.position;
-      body.style.top = prev.top;
-      body.style.width = prev.width;
+      window.removeEventListener("wheel", blockScroll);
+      window.removeEventListener("touchmove", blockScroll);
+      window.removeEventListener("scroll", keepFrame);
+      html.style.overflow = prev.htmlOverflow;
+      body.style.overflow = prev.bodyOverflow;
+      body.style.overscrollBehavior = prev.bodyOverscroll;
+      // Preserve map position after unlock (no top flash)
       window.scrollTo(0, lockY);
+      requestAnimationFrame(() => window.scrollTo(0, lockY));
     };
   }, [play, showContent, reduce]);
 
