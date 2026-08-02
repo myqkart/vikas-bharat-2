@@ -5,6 +5,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import LogoMarquee from "@/components/LogoMarquee";
+import MissionTrees from "@/components/MissionTrees";
 import Network from "@/components/Network";
 import Passbook from "@/components/Passbook";
 import Resources from "@/components/Resources";
@@ -24,6 +25,7 @@ export default function Home() {
       <TrustStrip />
       <Passbook />
       <Network />
+      <MissionTrees />
       <About />
       <Services />
       <HowItWorks />

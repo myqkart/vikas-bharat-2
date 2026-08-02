@@ -204,6 +204,63 @@ export const network = {
   ],
 } as const;
 
+export const missionTrees = {
+  id: "vision",
+  eyebrow: "What Drives Us",
+  heading: "Four branches. One Bharat.",
+  sub: "Mission, funding, process, and benefits — each line grows from the source so you can see how VIKASBHART connects ambition to action.",
+  trees: [
+    {
+      id: "core-mission",
+      root: "Core Mission",
+      accent: "marigold" as const,
+      children: [
+        "Atmanirbhar Bharat",
+        "MSME Empowerment",
+        "Nation Building",
+        "Viksit Bharat Vision",
+      ],
+    },
+    {
+      id: "funding",
+      root: "Funding Assistance",
+      accent: "success" as const,
+      children: [
+        "Government Grants",
+        "Seed Fund Support",
+        "Business Loan Assistance",
+        "Subsidy Consulting",
+        "Project Report Preparation",
+        "Scheme Eligibility Assessment",
+      ],
+    },
+    {
+      id: "process",
+      root: "Our Process",
+      accent: "indigo" as const,
+      children: [
+        "Expert Guidance",
+        "End-to-End Support",
+        "Documentation Assistance",
+        "Dedicated Consultants",
+        "Transparent Workflow",
+        "Timely Execution",
+      ],
+    },
+    {
+      id: "benefits",
+      root: "Key Benefits",
+      accent: "ink" as const,
+      children: [
+        "Professional Credibility",
+        "Economic Growth Partner",
+        "Modern Corporate Tone",
+        "Sustainable Business Building",
+      ],
+    },
+  ],
+} as const;
+
 export const about = {
   id: "about",
   eyebrow: "About Bharosa",
