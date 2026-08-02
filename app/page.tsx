@@ -12,6 +12,7 @@ import Resources from "@/components/Resources";
 import Schemes from "@/components/Schemes";
 import Services from "@/components/Services";
 import SiteChrome from "@/components/SiteChrome";
+import StartupStats from "@/components/StartupStats";
 import Testimonials from "@/components/Testimonials";
 import TrustStrip from "@/components/TrustStrip";
 
@@ -24,6 +25,7 @@ export default function Home() {
       <LogoMarquee />
       <TrustStrip />
       <Passbook />
+      <StartupStats />
       <Network />
       <MissionTrees />
       <About />

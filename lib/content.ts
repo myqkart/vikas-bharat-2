@@ -85,9 +85,9 @@ export const hero = {
     },
   ],
   highlights: [
-    { value: "120+", label: "Schemes screened" },
-    { value: "4–8 wks", label: "Typical funding cycle" },
-    { value: "Hindi + EN", label: "Explained simply" },
+    { value: "2.45L+", label: "DPIIT startups" },
+    { value: "4,467", label: "IT exemptions" },
+    { value: "₹200 Cr", label: "Startup turnover cap" },
     { value: "4 cities", label: "Office presence" },
   ],
 } as const;
@@ -127,9 +127,36 @@ export const passbook = {
     { value: "95%", label: "Applications approved", stamp: "OK" },
   ],
   extras: [
-    { label: "Average loan ticket", value: "₹8–22 Lakh" },
-    { label: "Scheme win rate", value: "7 in 10 eligible cases" },
-    { label: "Repeat clients", value: "38%" },
+    { label: "DPIIT-recognised startups", value: "2,45,430" },
+    { label: "Income-tax exemptions issued", value: "4,467" },
+    { label: "Startup turnover threshold", value: "₹200 Cr" },
+  ],
+} as const;
+
+/** Official Startup India / DPIIT snapshot (static public figures) */
+export const startupIndia = {
+  id: "startup-india",
+  eyebrow: "Startup India · DPIIT",
+  heading: "Recognition numbers that matter.",
+  sub: "Live snapshot founders ask about first — recognition scale, tax relief, and the revised turnover ceiling.",
+  notice:
+    "Pursuant to DPIIT Gazette Notification 108(E) dated 4 February 2026, the turnover threshold for Startup recognition has been revised from ₹100 crore to ₹200 crore. DPIIT-recognised startups should log in to the Startup India portal and download their updated Startup Recognition certificate.",
+  stats: [
+    {
+      value: "2,45,430",
+      label: "DPIIT Recognised Startups",
+      stamp: "DPIIT",
+    },
+    {
+      value: "4,467",
+      label: "Income Tax Exemptions",
+      stamp: "TAX",
+    },
+    {
+      value: "₹200 Cr",
+      label: "Startup turnover threshold",
+      stamp: "NEW",
+    },
   ],
 } as const;
 
@@ -219,7 +246,7 @@ export const missionTrees = {
   id: "vision",
   eyebrow: "Inside VIKASBHART",
   heading: "What we actually do for your business.",
-  sub: "Explore our living mindmap — mission, funding, process, and benefits — so you can see the support stack behind Sapno Se Safalta Tak.",
+  sub: "Tap a pillar to explore mission, funding, process, and benefits — the support stack behind every client file.",
   hubLabel: "VIKASBHART",
   hubTagline: "Sapno Se Safalta Tak",
   trees: [
@@ -744,29 +771,34 @@ export const schemes = {
       amount: "Up to ₹20 Lakh",
       description: "No repayment for eligible startups.",
       longDescription:
-        "Seed support for DPIIT-recognised startups through incubators — suited to prototype, market entry, and early validation rather than traditional kirana working capital.",
+        "Seed support for DPIIT-recognised startups through incubators — suited to prototype, market entry, and early validation rather than traditional kirana working capital. As of DPIIT Gazette Notification 108(E) dated 4 February 2026, the turnover threshold for Startup recognition is ₹200 crore (revised from ₹100 crore). Recognised startups should download their updated certificate from the Startup India portal.",
       image: photos.schemeSeed,
       slug: "seedfund",
       benefits: [
         "Grant-style support (no classic EMI)",
         "Incubator-led diligence",
         "Useful for product & tech-enabled startups",
+        "Aligned with DPIIT recognition up to ₹200 Cr turnover",
       ],
       documents: [
-        "DPIIT recognition",
+        "DPIIT recognition certificate (updated)",
         "Pitch / product proof",
         "Incubator application pack",
       ],
       timeline: "Varies by incubator cohort",
       eligibility: [
         { label: "DPIIT-recognised startup", icon: "sparkles" as const },
-        { label: "Early-stage idea", icon: "briefcase" as const },
+        { label: "Turnover within ₹200 Cr", icon: "briefcase" as const },
         { label: "No repayment if eligible", icon: "check" as const },
       ],
       faqs: [
         {
           q: "Can a local shop apply?",
           a: "Seed Fund is for recognised startups — traditional shops usually fit Mudra / PMEGP better.",
+        },
+        {
+          q: "What changed in Feb 2026?",
+          a: "DPIIT raised the Startup recognition turnover threshold from ₹100 crore to ₹200 crore. Log in to Startup India and download your updated recognition certificate.",
         },
       ],
     },

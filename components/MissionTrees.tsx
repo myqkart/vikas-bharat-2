@@ -2,402 +2,617 @@
 
 import {
   useCallback,
-  useEffect,
-  useId,
-  useLayoutEffect,
   useRef,
   useState,
+  type PointerEvent as ReactPointerEvent,
 } from "react";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
+import type { LucideIcon } from "lucide-react";
+import {
+  BadgeCheck,
+  BadgePercent,
+  Banknote,
+  Briefcase,
+  Building2,
+  ClipboardCheck,
+  Eye,
+  FileText,
+  Flag,
+  GraduationCap,
+  HandCoins,
+  IndianRupee,
+  Landmark,
+  Leaf,
+  ListChecks,
+  Route,
+  Sprout,
+  Store,
+  Timer,
+  TrendingUp,
+  UserCheck,
+} from "lucide-react";
 import { missionTrees } from "@/lib/content";
-import Reveal from "@/components/motion/Reveal";
 
-type Accent = "marigold" | "success" | "indigo" | "ink";
-
-const strokeOf: Record<Accent, string> = {
-  marigold: "#F5A623",
-  success: "#1D8348",
-  indigo: "#1E3E72",
-  ink: "#12294D",
-};
-
-const rootOf: Record<Accent, string> = {
-  marigold: "bg-marigold text-ink",
-  success: "bg-success text-white",
-  indigo: "bg-indigo text-paper",
-  ink: "bg-ink text-paper",
-};
-
-const chipOf: Record<Accent, string> = {
-  marigold: "bg-marigold text-ink border-marigold",
-  success: "bg-success text-white border-success",
-  indigo: "bg-indigo text-paper border-indigo",
-  ink: "bg-ink text-paper border-ink",
-};
-
-type Pt = { x: number; y: number };
+type Accent = (typeof missionTrees.trees)[number]["accent"];
 type Tree = (typeof missionTrees.trees)[number];
 
-function branchPath(from: Pt, to: Pt, vertical: boolean) {
-  if (vertical) {
-    const midY = from.y + (to.y - from.y) * 0.45;
-    return `M ${from.x} ${from.y} C ${from.x} ${midY}, ${to.x} ${midY}, ${to.x} ${to.y}`;
+const trees = missionTrees.trees;
+const CHAPTER_COUNT = trees.length;
+/** Scroll distance per chapter — user must scroll through all four */
+const VH_PER_CHAPTER = 90;
+
+const groupIcons: Record<string, LucideIcon> = {
+  "core-mission": Flag,
+  funding: IndianRupee,
+  process: ListChecks,
+  benefits: BadgeCheck,
+};
+
+const itemIcons: Record<string, LucideIcon> = {
+  "Atmanirbhar Bharat": Flag,
+  "MSME Empowerment": Store,
+  "Nation Building": Landmark,
+  "Viksit Bharat Vision": Eye,
+  "Government Grants": Landmark,
+  "Seed Fund Support": Sprout,
+  "Business Loan Assistance": HandCoins,
+  "Subsidy Consulting": BadgePercent,
+  "Project Report Preparation": FileText,
+  "Scheme Eligibility Assessment": ClipboardCheck,
+  "Expert Guidance": GraduationCap,
+  "End-to-End Support": Route,
+  "Documentation Assistance": FileText,
+  "Dedicated Consultants": UserCheck,
+  "Transparent Workflow": Eye,
+  "Timely Execution": Timer,
+  "Professional Credibility": BadgeCheck,
+  "Economic Growth Partner": TrendingUp,
+  "Modern Corporate Tone": Briefcase,
+  "Sustainable Business Building": Leaf,
+};
+
+const accent: Record<
+  Accent,
+  {
+    hex: string;
+    glow: string;
+    soft: string;
+    solid: string;
+    ink: string;
+    bar: string;
   }
-  const dx = Math.max(to.x - from.x, 40);
-  const pull = Math.min(dx * 0.55, 110);
-  return `M ${from.x} ${from.y} C ${from.x + pull} ${from.y}, ${to.x - pull} ${to.y}, ${to.x} ${to.y}`;
+> = {
+  marigold: {
+    hex: "#F5A623",
+    glow: "rgba(245,166,35,0.4)",
+    soft: "rgba(245,166,35,0.12)",
+    solid: "bg-marigold text-ink",
+    ink: "text-marigold-dark",
+    bar: "bg-marigold",
+  },
+  success: {
+    hex: "#1D8348",
+    glow: "rgba(29,131,72,0.35)",
+    soft: "rgba(29,131,72,0.1)",
+    solid: "bg-success text-white",
+    ink: "text-success",
+    bar: "bg-success",
+  },
+  indigo: {
+    hex: "#1E3E72",
+    glow: "rgba(30,62,114,0.35)",
+    soft: "rgba(30,62,114,0.1)",
+    solid: "bg-indigo text-paper",
+    ink: "text-indigo",
+    bar: "bg-indigo",
+  },
+  ink: {
+    hex: "#12294D",
+    glow: "rgba(18,41,77,0.3)",
+    soft: "rgba(18,41,77,0.08)",
+    solid: "bg-ink text-paper",
+    ink: "text-ink",
+    bar: "bg-ink",
+  },
+};
+
+function clamp(n: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, n));
 }
 
-function DashedBranch({
-  d,
-  stroke,
-  delay,
-  lit,
-  draw,
-  maskKey,
+function StampItem({
+  label,
+  index,
+  accentKey,
+  reduce,
 }: {
-  d: string;
-  stroke: string;
-  delay: number;
-  lit: boolean;
-  draw: boolean;
-  maskKey: string;
+  label: string;
+  index: number;
+  accentKey: Accent;
+  reduce: boolean | null;
 }) {
-  const maskId = `dash-mask-${maskKey}`;
+  const Icon = itemIcons[label] ?? Banknote;
+  const a = accent[accentKey];
+  const [ripple, setRipple] = useState({ x: 0, y: 0, n: 0 });
+  const ref = useRef<HTMLLIElement>(null);
+
+  function onPointerDown(e: ReactPointerEvent<HTMLLIElement>) {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    setRipple({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+      n: ripple.n + 1,
+    });
+  }
 
   return (
-    <g>
-      <mask id={maskId}>
-        <motion.path
-          d={d}
-          fill="none"
-          stroke="white"
-          strokeWidth={4}
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: draw ? 1 : 0 }}
-          transition={{
-            duration: 0.9,
-            delay,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        />
-      </mask>
-      <path
-        d={d}
-        fill="none"
-        stroke={stroke}
-        strokeWidth={lit ? 2.25 : 1.6}
-        strokeLinecap="round"
-        strokeDasharray="5 7"
-        opacity={lit ? 1 : 0.4}
-        mask={`url(#${maskId})`}
-      />
-    </g>
+    <motion.li
+      ref={ref}
+      onPointerDown={onPointerDown}
+      initial={reduce ? false : { opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={
+        reduce
+          ? { duration: 0 }
+          : {
+              type: "spring",
+              stiffness: 340,
+              damping: 24,
+              delay: 0.05 + index * 0.045,
+            }
+      }
+      whileTap={reduce ? undefined : { scale: 0.985 }}
+      className="relative isolate min-h-11 overflow-hidden rounded-[14px] border border-border/70 bg-white px-3 py-2.5 sm:min-h-12 sm:px-3.5 sm:py-3"
+    >
+      <AnimatePresence>
+        {ripple.n > 0 ? (
+          <motion.span
+            key={ripple.n}
+            aria-hidden
+            className="pointer-events-none absolute rounded-full"
+            style={{
+              left: ripple.x,
+              top: ripple.y,
+              width: 10,
+              height: 10,
+              marginLeft: -5,
+              marginTop: -5,
+              background: a.glow,
+            }}
+            initial={{ scale: 0, opacity: 0.5 }}
+            animate={{ scale: 22, opacity: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          />
+        ) : null}
+      </AnimatePresence>
+
+      <span className="relative z-[1] flex items-center gap-2.5 sm:gap-3">
+        <span
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] sm:h-9 sm:w-9"
+          style={{ background: a.soft, color: a.hex }}
+          aria-hidden
+        >
+          <Icon size={15} strokeWidth={2.15} />
+        </span>
+        <span className="text-[13px] font-semibold leading-snug text-ink sm:text-[14px]">
+          {label}
+        </span>
+      </span>
+    </motion.li>
   );
 }
 
-function MindmapFan({ tree }: { tree: Tree }) {
-  const uid = useId().replace(/:/g, "");
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const hubRef = useRef<HTMLDivElement>(null);
-  const leafRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const inView = useInView(wrapRef, { once: true, amount: 0.35 });
-  const [paths, setPaths] = useState<string[]>([]);
-  const [size, setSize] = useState({ w: 0, h: 0 });
-  const [vertical, setVertical] = useState(true);
-  const [lit, setLit] = useState(0);
-  const stroke = strokeOf[tree.accent];
-
-  const measure = useCallback(() => {
-    const wrap = wrapRef.current;
-    const hub = hubRef.current;
-    if (!wrap || !hub) return;
-
-    const wr = wrap.getBoundingClientRect();
-    const hr = hub.getBoundingClientRect();
-    const isVertical = wr.width < 640;
-    setVertical(isVertical);
-
-    const from: Pt = isVertical
-      ? {
-          x: hr.left + hr.width / 2 - wr.left,
-          y: hr.bottom - wr.top,
-        }
-      : {
-          x: hr.right - wr.left,
-          y: hr.top + hr.height / 2 - wr.top,
-        };
-
-    const next: string[] = [];
-    leafRefs.current.forEach((el) => {
-      if (!el) return;
-      const lr = el.getBoundingClientRect();
-      const to: Pt = isVertical
-        ? {
-            x: lr.left - wr.left + 14,
-            y: lr.top + lr.height / 2 - wr.top,
-          }
-        : {
-            x: lr.left - wr.left,
-            y: lr.top + lr.height / 2 - wr.top,
-          };
-      next.push(branchPath(from, to, isVertical));
-    });
-
-    setSize({ w: wr.width, h: wr.height });
-    setPaths(next);
-  }, []);
-
-  useLayoutEffect(() => {
-    measure();
-    const wrap = wrapRef.current;
-    if (!wrap) return;
-    const ro = new ResizeObserver(() => requestAnimationFrame(measure));
-    ro.observe(wrap);
-    const t = window.setTimeout(measure, 80);
-    return () => {
-      ro.disconnect();
-      window.clearTimeout(t);
-    };
-  }, [measure, tree.id, tree.children]);
-
-  useEffect(() => {
-    if (!inView) return;
-    setLit(0);
-    const id = window.setInterval(() => {
-      setLit((n) => (n + 1) % tree.children.length);
-    }, 1700);
-    return () => window.clearInterval(id);
-  }, [inView, tree.id, tree.children.length]);
+function ChapterCard({
+  tree,
+  index,
+  reduce,
+}: {
+  tree: Tree;
+  index: number;
+  reduce: boolean | null;
+}) {
+  const a = accent[tree.accent];
+  const Icon = groupIcons[tree.id] ?? Building2;
 
   return (
-    <div
-      ref={wrapRef}
-      className={`relative ${
-        vertical
-          ? "flex flex-col items-stretch gap-5 pt-1"
-          : "flex min-h-[300px] items-center gap-3"
-      }`}
+    <article
+      className="overflow-hidden rounded-[22px] border border-border/80 bg-white"
+      style={{
+        boxShadow: `0 18px 40px -20px rgba(18,41,77,0.28), 0 0 0 1px ${a.hex}18`,
+      }}
     >
-      {size.w > 0 && paths.length > 0 ? (
-        <svg
-          className="pointer-events-none absolute inset-0 z-0 overflow-visible"
-          width={size.w}
-          height={size.h}
-          viewBox={`0 0 ${size.w} ${size.h}`}
-          aria-hidden
-        >
-          {paths.map((d, i) => (
-            <DashedBranch
-              key={`${tree.id}-${i}-${Math.round(size.w)}-${vertical}`}
-              maskKey={`${uid}-${i}`}
-              d={d}
-              stroke={stroke}
-              delay={0.12 + i * 0.09}
-              lit={lit === i}
-              draw={inView}
+      <div className={`h-1 w-full ${a.bar}`} aria-hidden />
+
+      <div className="px-4 pt-4 pb-4 sm:px-6 sm:pt-5 sm:pb-5 lg:px-7">
+        <div className="flex items-start gap-3 sm:gap-3.5">
+          <span
+            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] sm:h-12 sm:w-12 ${a.solid}`}
+            style={{ boxShadow: `0 10px 24px -10px ${a.glow}` }}
+          >
+            <Icon size={20} strokeWidth={2.1} />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p
+              className={`text-[11px] font-bold tracking-[0.16em] uppercase ${a.ink}`}
+            >
+              Chapter {String(index + 1).padStart(2, "0")} of {CHAPTER_COUNT}
+            </p>
+            <h3 className="mt-0.5 font-display text-[20px] font-semibold leading-tight text-ink sm:text-[26px] lg:text-[30px]">
+              {tree.root}
+            </h3>
+            <p className="mt-1.5 text-[13px] leading-relaxed text-slate sm:text-[15px]">
+              {tree.blurb}
+            </p>
+          </div>
+        </div>
+
+        <ul className="mt-4 grid grid-cols-1 gap-2 sm:mt-5 sm:grid-cols-2 sm:gap-2.5 lg:grid-cols-2">
+          {tree.children.map((leaf, i) => (
+            <StampItem
+              key={leaf}
+              label={leaf}
+              index={i}
+              accentKey={tree.accent}
+              reduce={reduce}
             />
           ))}
-        </svg>
-      ) : null}
+        </ul>
+      </div>
+    </article>
+  );
+}
 
+function ParallaxOrbs({
+  progress,
+  activeAccent,
+}: {
+  progress: MotionValue<number>;
+  activeAccent: Accent;
+}) {
+  const a = accent[activeAccent];
+  const y1 = useTransform(progress, [0, 1], [0, -80]);
+  const y2 = useTransform(progress, [0, 1], [20, 70]);
+  const y3 = useTransform(progress, [0, 1], [-10, 40]);
+  const x2 = useTransform(progress, [0, 1], [0, -30]);
+
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       <motion.div
-        ref={hubRef}
-        className={`relative z-10 ${vertical ? "mx-auto" : "shrink-0"}`}
-        initial={{ opacity: 0, scale: 0.92 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ type: "spring", stiffness: 240, damping: 18 }}
-      >
-        <div
-          className={`rounded-[14px] px-5 py-3 text-center text-sm font-bold shadow-raised sm:px-6 sm:py-3.5 sm:text-base ${rootOf[tree.accent]}`}
-        >
-          {tree.root}
-        </div>
-        <span
-          aria-hidden
-          className={`absolute h-2.5 w-2.5 rounded-full ring-[4px] ring-paper ${
-            vertical
-              ? "bottom-0 left-1/2 translate-y-1/2 -translate-x-1/2"
-              : "top-1/2 right-0 translate-x-1/2 -translate-y-1/2"
-          }`}
-          style={{ background: stroke }}
-        />
-      </motion.div>
-
-      <ul
-        className={`relative z-10 flex flex-col gap-2.5 ${
-          vertical ? "w-full pl-6" : "ml-8 w-full max-w-lg flex-1"
-        }`}
-      >
-        {tree.children.map((leaf, i) => {
-          const on = lit === i;
-          return (
-            <motion.li
-              key={leaf}
-              ref={(el) => {
-                leafRefs.current[i] = el;
-              }}
-              initial={{ opacity: 0, y: vertical ? 12 : 0, x: vertical ? 0 : 20 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{
-                delay: 0.4 + i * 0.08,
-                duration: 0.4,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              onPointerEnter={() => setLit(i)}
-            >
-              <div
-                className={`flex min-h-11 items-center gap-3 rounded-[14px] border px-3.5 py-3 transition-shadow ${
-                  on
-                    ? "border-transparent bg-white shadow-card"
-                    : "border-border/70 bg-white/80"
-                }`}
-              >
-                <span
-                  className="h-2 w-2 shrink-0 rounded-full"
-                  style={{
-                    background: stroke,
-                    boxShadow: on ? `0 0 0 4px ${stroke}30` : undefined,
-                  }}
-                  aria-hidden
-                />
-                <span className="text-[14px] font-semibold leading-snug text-ink sm:text-[15px]">
-                  {leaf}
-                </span>
-              </div>
-            </motion.li>
-          );
-        })}
-      </ul>
+        className="absolute -top-24 left-[-10%] h-72 w-72 rounded-full blur-3xl"
+        style={{
+          y: y1,
+          background: `radial-gradient(circle, ${a.glow}, transparent 70%)`,
+        }}
+      />
+      <motion.div
+        className="absolute top-[35%] right-[-15%] h-80 w-80 rounded-full blur-3xl"
+        style={{
+          y: y2,
+          x: x2,
+          background: "radial-gradient(circle, rgba(30,62,114,0.2), transparent 70%)",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-[10%] left-[20%] h-52 w-52 rounded-full blur-2xl"
+        style={{
+          y: y3,
+          background: "radial-gradient(circle, rgba(29,131,72,0.16), transparent 70%)",
+        }}
+      />
     </div>
   );
 }
 
+function ProgressRail({
+  progress,
+  activeIndex,
+  onSelect,
+}: {
+  progress: MotionValue<number>;
+  activeIndex: number;
+  onSelect: (i: number) => void;
+}) {
+  const scaleX = useSpring(progress, { stiffness: 120, damping: 28 });
+
+  return (
+    <div className="w-full">
+      <div className="relative h-1 overflow-hidden rounded-full bg-ink/10">
+        <motion.div
+          className="absolute inset-y-0 left-0 origin-left rounded-full"
+          style={{
+            scaleX,
+            background: accent[trees[activeIndex].accent].hex,
+          }}
+        />
+      </div>
+      <div className="mt-3 flex items-center justify-center gap-1 sm:justify-between">
+        {trees.map((tree, i) => {
+          const selected = i === activeIndex;
+          const a = accent[tree.accent];
+          return (
+            <button
+              key={tree.id}
+              type="button"
+              onClick={() => onSelect(i)}
+              className="flex min-h-10 min-w-[4.5rem] flex-col items-center justify-center gap-0.5 rounded-[12px] px-2 py-1.5 sm:min-w-0 sm:flex-1 sm:px-1"
+              style={{
+                background: selected ? a.soft : "transparent",
+              }}
+              aria-label={tree.root}
+              aria-current={selected ? "step" : undefined}
+            >
+              <span
+                className="text-[10px] font-bold tracking-wide"
+                style={{ color: selected ? a.hex : "#5B6472" }}
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span
+                className={`max-w-full truncate text-[10px] font-semibold sm:text-[11px] ${
+                  selected ? a.ink : "text-slate"
+                }`}
+              >
+                {tree.root.split(" ")[0]}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/** Flat fallback when prefers-reduced-motion — still shows all chapters in order */
+function ReducedStack() {
+  return (
+    <section
+      id={missionTrees.id}
+      aria-labelledby="mission-trees-heading"
+      className="relative px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
+    >
+      <div className="mx-auto max-w-[640px] lg:max-w-[900px]">
+        <p className="text-[12px] font-semibold tracking-[0.16em] text-slate uppercase">
+          {missionTrees.eyebrow}
+        </p>
+        <h2
+          id="mission-trees-heading"
+          className="mt-2 font-display text-[26px] font-semibold text-ink lg:text-[36px]"
+        >
+          {missionTrees.heading}
+        </h2>
+        <p className="mt-3 text-[15px] text-slate lg:text-base">{missionTrees.sub}</p>
+
+        <div className="mt-8 space-y-6">
+          {trees.map((tree, i) => (
+            <ChapterCard key={tree.id} tree={tree} index={i} reduce />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function MissionTrees() {
-  const trees = missionTrees.trees;
-  const [activeId, setActiveId] = useState<string>(trees[0].id);
-  const sectionRef = useRef<HTMLElement>(null);
-  const tabsRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(sectionRef, { amount: 0.25 });
-  const paused = useRef(false);
-  const active = trees.find((t) => t.id === activeId) ?? trees[0];
+  const reduce = useReducedMotion();
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const jumping = useRef(false);
+  const dragX = useMotionValue(0);
 
-  useEffect(() => {
-    if (!inView) return;
-    const id = window.setInterval(() => {
-      if (paused.current) return;
-      setActiveId((curr) => {
-        const i = trees.findIndex((t) => t.id === curr);
-        return trees[(i + 1) % trees.length].id;
-      });
-    }, 5500);
-    return () => window.clearInterval(id);
-  }, [inView, trees]);
+  const { scrollYProgress } = useScroll({
+    target: trackRef,
+    offset: ["start start", "end end"],
+  });
 
-  // Keep active chip visible in the horizontal scroller
-  useEffect(() => {
-    const scroller = tabsRef.current;
-    if (!scroller) return;
-    const chip = scroller.querySelector<HTMLElement>(`[data-id="${activeId}"]`);
-    chip?.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
+  const chapterRaw = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, CHAPTER_COUNT - 1],
+  );
+
+  const chapterLocal = useTransform(chapterRaw, (v) => v - Math.floor(v + 0.0001));
+  const cardY = useTransform(chapterLocal, [0, 0.5, 1], [22, 0, -22]);
+  const cardScale = useTransform(chapterLocal, [0, 0.5, 1], [0.98, 1, 0.98]);
+  const smoothY = useSpring(cardY, { stiffness: 140, damping: 28 });
+  const smoothScale = useSpring(cardScale, { stiffness: 140, damping: 28 });
+
+  useMotionValueEvent(chapterRaw, "change", (v) => {
+    if (jumping.current) return;
+    const next = clamp(Math.round(v), 0, CHAPTER_COUNT - 1);
+    setActiveIndex((prev) => {
+      if (next === prev) return prev;
+      setDirection(next > prev ? 1 : -1);
+      return next;
     });
-  }, [activeId]);
+  });
+
+  const scrollToChapter = useCallback((index: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const next = clamp(index, 0, CHAPTER_COUNT - 1);
+    const rect = track.getBoundingClientRect();
+    const trackTop = window.scrollY + rect.top;
+    const scrollable = Math.max(track.offsetHeight - window.innerHeight, 1);
+    const target =
+      trackTop + (scrollable * next) / Math.max(CHAPTER_COUNT - 1, 1);
+
+    jumping.current = true;
+    setDirection(next > activeIndex ? 1 : -1);
+    setActiveIndex(next);
+    window.scrollTo({ top: target, behavior: "smooth" });
+    window.setTimeout(() => {
+      jumping.current = false;
+    }, 800);
+  }, [activeIndex]);
+
+  if (reduce) return <ReducedStack />;
+
+  const active = trees[activeIndex];
+
+  const variants = {
+    enter: (dir: number) => ({
+      x: dir >= 0 ? 48 : -48,
+      opacity: 0,
+    }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir: number) => ({
+      x: dir >= 0 ? -36 : 36,
+      opacity: 0,
+    }),
+  };
 
   return (
     <section
-      ref={sectionRef}
       id={missionTrees.id}
       aria-labelledby="mission-trees-heading"
-      className="relative overflow-hidden px-4 py-14 sm:px-5 lg:px-8 lg:py-24"
+      className="relative"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(245,166,35,0.12),transparent_50%)]" />
+      <div
+        ref={trackRef}
+        className="relative"
+        style={{ height: `${CHAPTER_COUNT * VH_PER_CHAPTER}vh` }}
+      >
+        <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden px-4 pt-[max(4.75rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-6 lg:px-8">
+          <ParallaxOrbs progress={scrollYProgress} activeAccent={active.accent} />
 
-      <div className="relative mx-auto max-w-[720px] lg:max-w-[980px]">
-        <Reveal>
-          <p className="text-[12px] font-semibold tracking-[0.16em] text-slate uppercase sm:text-[13px]">
-            {missionTrees.eyebrow}
-          </p>
-          <h2
-            id="mission-trees-heading"
-            className="mt-2 max-w-xl font-display text-[26px] font-semibold leading-[1.15] text-ink sm:text-[32px] lg:text-[40px]"
-          >
-            {missionTrees.heading}
-          </h2>
-          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-slate sm:text-base lg:text-lg">
-            {missionTrees.sub}
-          </p>
-        </Reveal>
+          <div className="relative z-10 mx-auto flex h-full w-full max-w-[420px] flex-col lg:max-w-[1080px]">
+            {/* Header */}
+            <header className="shrink-0">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0 lg:max-w-2xl">
+                  <p className="text-[11px] font-semibold tracking-[0.16em] text-slate uppercase sm:text-[12px]">
+                    {missionTrees.eyebrow}
+                  </p>
+                  <h2
+                    id="mission-trees-heading"
+                    className="mt-1 font-display text-[22px] font-semibold leading-[1.15] text-ink sm:text-[28px] lg:text-[40px]"
+                  >
+                    {missionTrees.heading}
+                  </h2>
+                  <p className="mt-1.5 line-clamp-2 text-[13px] leading-snug text-slate sm:text-[14px] lg:line-clamp-none lg:text-base">
+                    {missionTrees.sub}
+                  </p>
+                </div>
+                <div
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border bg-white text-[12px] font-bold text-ink shadow-card"
+                  aria-live="polite"
+                >
+                  {activeIndex + 1}/{CHAPTER_COUNT}
+                </div>
+              </div>
+            </header>
 
-        {/* Mobile-first pillar chips */}
-        <div
-          ref={tabsRef}
-          className="-mx-4 mt-8 flex gap-2 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden"
-          role="tablist"
-          aria-label="Business pillars"
-          onPointerDown={() => {
-            paused.current = true;
-          }}
-          onPointerUp={() => {
-            window.setTimeout(() => {
-              paused.current = false;
-            }, 2500);
-          }}
-        >
-          {trees.map((tree) => {
-            const selected = tree.id === activeId;
-            return (
-              <button
-                key={tree.id}
-                type="button"
-                role="tab"
-                data-id={tree.id}
-                aria-selected={selected}
-                onClick={() => {
-                  paused.current = true;
-                  setActiveId(tree.id);
-                  window.setTimeout(() => {
-                    paused.current = false;
-                  }, 4000);
-                }}
-                className={`shrink-0 rounded-full border px-4 py-2.5 text-sm font-bold transition-colors ${
-                  selected
-                    ? chipOf[tree.accent]
-                    : "border-border bg-white/80 text-ink"
-                }`}
-              >
-                {tree.root}
-              </button>
-            );
-          })}
-        </div>
+            <div className="mt-3 flex min-h-0 flex-1 flex-col lg:mt-5 lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10">
+              {/* Desktop nav */}
+              <aside className="relative z-10 hidden lg:flex lg:flex-col lg:justify-center lg:gap-2">
+                {trees.map((tree, i) => {
+                  const selected = i === activeIndex;
+                  const ta = accent[tree.accent];
+                  const Icon = groupIcons[tree.id] ?? Building2;
+                  return (
+                    <button
+                      key={tree.id}
+                      type="button"
+                      onClick={() => scrollToChapter(i)}
+                      className="flex min-h-14 items-center gap-3 rounded-[16px] border px-3.5 py-3 text-left"
+                      style={{
+                        borderColor: selected ? ta.hex : "var(--color-border)",
+                        background: selected
+                          ? `linear-gradient(90deg, ${ta.soft}, #fff)`
+                          : "#fff",
+                        boxShadow: selected
+                          ? `0 10px 24px -14px ${ta.glow}`
+                          : "none",
+                      }}
+                    >
+                      <span
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] ${
+                          selected ? ta.solid : "bg-paper-deep text-slate"
+                        }`}
+                      >
+                        <Icon size={18} strokeWidth={2.1} />
+                      </span>
+                      <span className="min-w-0">
+                        <span
+                          className={`block text-[10px] font-bold tracking-[0.14em] uppercase ${
+                            selected ? ta.ink : "text-slate"
+                          }`}
+                        >
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="block truncate text-[13px] font-semibold text-ink">
+                          {tree.root}
+                        </span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </aside>
 
-        <p className="mt-3 text-sm leading-relaxed text-slate">{active.blurb}</p>
+              {/* Parallax card stage */}
+              <div className="relative flex min-h-0 flex-1 flex-col justify-center">
+                <motion.div
+                  className="w-full"
+                  style={{ y: smoothY, scale: smoothScale }}
+                >
+                  <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div
+                      key={active.id}
+                      custom={direction}
+                      variants={variants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      transition={{ type: "spring", stiffness: 280, damping: 30 }}
+                      style={{ x: dragX }}
+                      drag="x"
+                      dragConstraints={{ left: 0, right: 0 }}
+                      dragElastic={0.14}
+                      onDragEnd={(_, info) => {
+                        if (info.offset.x < -64 || info.velocity.x < -350)
+                          scrollToChapter(activeIndex + 1);
+                        else if (info.offset.x > 64 || info.velocity.x > 350)
+                          scrollToChapter(activeIndex - 1);
+                        dragX.set(0);
+                      }}
+                    >
+                      <ChapterCard
+                        tree={active}
+                        index={activeIndex}
+                        reduce={false}
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                </motion.div>
+              </div>
+            </div>
 
-        {/* Mindmap panel */}
-        <div
-          className="mt-5 rounded-[20px] border border-border/80 bg-white/85 p-4 shadow-card sm:p-6"
-          onPointerEnter={() => {
-            paused.current = true;
-          }}
-          onPointerLeave={() => {
-            paused.current = false;
-          }}
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={active.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <MindmapFan tree={active} />
-            </motion.div>
-          </AnimatePresence>
+            {/* Scroll progress + chapter jumps — centered on mobile */}
+            <div className="relative z-10 mx-auto mt-auto w-full max-w-[360px] shrink-0 pt-3 pb-1 sm:max-w-none lg:mx-0 lg:max-w-none">
+              <ProgressRail
+                progress={scrollYProgress}
+                activeIndex={activeIndex}
+                onSelect={scrollToChapter}
+              />
+              <p className="mt-2 text-center text-[11px] text-slate/75 lg:text-left">
+                Keep scrolling — all {CHAPTER_COUNT} chapters unlock as you go
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
