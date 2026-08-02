@@ -12,7 +12,18 @@ export default function Footer() {
     <footer className="border-t border-border bg-paper-deep">
       <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-14 lg:grid-cols-12 lg:px-8">
         <div className="lg:col-span-4">
-          <p className="font-display text-xl font-semibold text-ink">
+          <Link href="/" className="inline-block" aria-label={site.companyName}>
+            <span className="relative block h-20 w-20 overflow-hidden rounded-2xl bg-white shadow-card ring-1 ring-border">
+              <Image
+                src={site.logo}
+                alt={site.companyName}
+                fill
+                sizes="80px"
+                className="object-contain p-1"
+              />
+            </span>
+          </Link>
+          <p className="mt-4 font-display text-xl font-semibold text-ink">
             {footer.companyName}
           </p>
           <p className="mt-2 text-sm font-semibold text-slate">{footer.tagline}</p>

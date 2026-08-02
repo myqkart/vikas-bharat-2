@@ -3,7 +3,7 @@ import { photos } from "./photos";
 export const site = {
   companyName: "VIKASBHART",
   tagline: "Sapno Se Safalta Tak",
-  logo: "/brand/vikas-bhart-logo.jpg",
+  logo: "/brand/vikas-bharat-logo.png",
   whatsappNumber: "91XXXXXXXXXX",
   phoneNumber: "1800-XXX-XXXX",
   email: "hello@vikasbhart.in",

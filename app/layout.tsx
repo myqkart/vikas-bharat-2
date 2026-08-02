@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: "VIKASBHART",
   description:
     "Sapno Se Safalta Tak — We help Indian startups and MSMEs grow, succeed, and contribute to an Atmanirbhar Bharat.",
+  icons: {
+    icon: [{ url: "/brand/vikas-bharat-logo.png", type: "image/png" }],
+    apple: [{ url: "/brand/vikas-bharat-logo.png" }],
+  },
 };
 
 export default function RootLayout({

@@ -172,38 +172,28 @@ export default function Header() {
               className="pointer-events-none absolute -right-6 top-1/2 h-14 w-24 -translate-y-1/2 rounded-full bg-success/30 blur-2xl"
             />
 
-            {/* Brand — VIKASBHART lockup */}
+            {/* Brand — official Vikas Bharat lockup */}
             <Link
               href="/"
-              className="group relative z-10 flex min-w-0 shrink-0 items-center gap-2.5 rounded-full py-1 pr-2 pl-1 focus-visible:outline-offset-4"
+              className="group relative z-10 flex min-w-0 shrink-0 items-center rounded-xl py-0.5 focus-visible:outline-offset-4"
               onClick={() => setOpen(false)}
+              aria-label={site.companyName}
             >
               <motion.span
                 layout
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.97 }}
-                className="relative h-10 w-10 overflow-hidden rounded-full bg-white shadow-[0_8px_20px_-6px_rgba(18,41,77,0.45)] ring-1 ring-border/70 sm:h-11 sm:w-11"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="relative block h-12 w-12 overflow-hidden rounded-xl bg-white shadow-[0_8px_20px_-6px_rgba(18,41,77,0.35)] ring-1 ring-border/60 sm:h-14 sm:w-14"
               >
                 <Image
                   src={site.logo}
-                  alt=""
+                  alt={site.companyName}
                   fill
-                  sizes="44px"
+                  sizes="56px"
                   priority
-                  className="object-cover object-[50%_32%]"
+                  className="object-contain p-0.5"
                 />
               </motion.span>
-              <span className="min-w-0">
-                <span className="block font-sans text-[15px] font-bold tracking-[0.06em] text-ink uppercase sm:text-base">
-                  <span className="text-ink">VIKAS</span>
-                  <span className="bg-gradient-to-r from-marigold via-[#e8a01a] to-success bg-clip-text text-transparent">
-                    BHART
-                  </span>
-                </span>
-                <span className="mt-0.5 hidden truncate text-[9px] font-bold tracking-[0.08em] text-slate sm:block">
-                  {site.tagline}
-                </span>
-              </span>
             </Link>
 
             {/* Desktop nav — Startup · MSME · Support · Growth · Sustain */}
@@ -390,21 +380,18 @@ export default function Header() {
               <div className="relative flex h-full flex-col px-6 pt-6 pb-7 sm:px-8">
                 <div className="mb-6 flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="relative h-12 w-12 overflow-hidden rounded-full bg-white ring-1 ring-border">
+                    <span className="relative h-14 w-14 overflow-hidden rounded-xl bg-white ring-1 ring-border">
                       <Image
                         src={site.logo}
-                        alt=""
+                        alt={site.companyName}
                         fill
-                        sizes="48px"
-                        className="object-cover object-[50%_32%]"
+                        sizes="56px"
+                        className="object-contain p-0.5"
                       />
                     </span>
                     <div>
-                      <p className="font-sans text-lg font-bold tracking-wide text-ink uppercase">
-                        <span className="text-ink">VIKAS</span>
-                        <span className="bg-gradient-to-r from-marigold to-success bg-clip-text text-transparent">
-                          BHART
-                        </span>
+                      <p className="font-sans text-lg font-bold tracking-wide text-ink">
+                        {site.companyName}
                       </p>
                       <p className="mt-0.5 max-w-[14rem] text-xs font-semibold text-slate">
                         {site.tagline}

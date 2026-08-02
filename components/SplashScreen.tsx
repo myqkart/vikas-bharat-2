@@ -84,34 +84,15 @@ function SplashParticles({ active }: { active: boolean }) {
 }
 
 function BrandName() {
-  const words = ["VIKAS", "BHART"] as const;
-
   return (
-    <div className="flex flex-wrap items-baseline justify-center gap-x-1 gap-y-1 sm:gap-x-1.5">
-      {words.map((word, wi) => (
-        <span key={word} className="inline-flex overflow-hidden">
-          {word.split("").map((char, ci) => (
-            <motion.span
-              key={`${word}-${ci}`}
-              className={`inline-block font-sans text-[clamp(2rem,7vw,3.75rem)] font-bold tracking-[0.12em] ${
-                wi === 0
-                  ? "text-paper"
-                  : "bg-gradient-to-r from-marigold via-[#f0c14a] to-success bg-clip-text text-transparent"
-              }`}
-              initial={{ y: "110%", opacity: 0, filter: "blur(10px)" }}
-              animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
-              transition={{
-                delay: 1.35 + wi * 0.18 + ci * 0.035,
-                duration: 0.55,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </span>
-      ))}
-    </div>
+    <motion.p
+      className="mt-1 text-center text-[13px] font-semibold tracking-[0.14em] text-paper/80 uppercase sm:text-sm"
+      initial={{ opacity: 0, y: 12, filter: "blur(8px)" }}
+      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      transition={{ delay: 1.45, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {site.tagline}
+    </motion.p>
   );
 }
 
@@ -290,14 +271,14 @@ function SplashScreen({ onComplete, audio }: SplashScreenProps) {
             }}
           />
 
-          <div className="relative h-[min(42vw,168px)] w-[min(42vw,168px)] overflow-hidden rounded-[28%] bg-white/95 shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_24px_80px_-12px_rgba(0,0,0,0.55)] ring-1 ring-white/30">
+          <div className="relative h-[min(52vw,220px)] w-[min(52vw,220px)] overflow-hidden rounded-[22px] bg-white shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_24px_80px_-12px_rgba(0,0,0,0.55)] ring-1 ring-white/30">
             <Image
               src={site.logo}
-              alt=""
+              alt={site.companyName}
               fill
               priority
-              sizes="168px"
-              className="object-cover object-[50%_32%]"
+              sizes="220px"
+              className="object-contain p-3"
             />
             <motion.span
               aria-hidden
