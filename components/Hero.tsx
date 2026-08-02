@@ -99,7 +99,7 @@ export default function Hero({
       <div className="noise-overlay pointer-events-none absolute inset-0" />
 
       <Spotlight>
-        <div className="relative mx-auto grid max-w-[1240px] items-center gap-10 px-5 pt-28 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:pt-32 lg:pb-24">
+        <div className="relative mx-auto grid max-w-[1240px] items-center gap-10 px-5 pt-20 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:pt-24 lg:pb-24">
           {/* Copy column */}
           <motion.div
             className="min-w-0"
@@ -370,7 +370,7 @@ function SimpleHero({
   animate: boolean;
 }) {
   return (
-    <section className="relative overflow-hidden px-5 pt-28 pb-16 lg:px-8 lg:pt-32 lg:pb-24">
+    <section className="relative overflow-hidden px-5 pt-16 pb-16 lg:px-8 lg:pt-20 lg:pb-24">
       <FloatingOrbs />
       <div className="relative mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-2">
         <motion.div

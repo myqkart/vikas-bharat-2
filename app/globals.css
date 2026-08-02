@@ -72,7 +72,7 @@ body {
 /* Offset in-page anchors for the floating header (never #home — that must stay at 0) */
 section[id]:not(#home),
 div[id]:not(#home) {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 4.5rem;
 }
 
 /* Animated mesh / aurora background */
@@ -212,7 +212,7 @@ div[id]:not(#home) {
   pointer-events: none;
 }
 
-/* Floating glass navigation */
+/* Floating glass navigation — morphing beacon */
 .nav-glass {
   background: linear-gradient(
     135deg,
@@ -243,6 +243,26 @@ div[id]:not(#home) {
     0 1px 0 rgba(255, 255, 255, 0.75) inset,
     0 4px 10px rgba(18, 41, 77, 0.06),
     0 18px 48px -14px rgba(18, 41, 77, 0.22);
+}
+
+.beacon-shell {
+  isolation: isolate;
+}
+
+.beacon-rim {
+  background: linear-gradient(
+    125deg,
+    rgba(245, 166, 35, 0.55),
+    rgba(255, 255, 255, 0.22) 38%,
+    rgba(30, 62, 114, 0.35) 70%,
+    rgba(29, 131, 72, 0.45)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
 }
 
 .nav-cta {

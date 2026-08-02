@@ -18,7 +18,7 @@ export default function WhatsAppFloat() {
       transition={{ delay: 1.1, type: "spring", stiffness: 200, damping: 14 }}
       whileHover={{ scale: 1.1, rotate: -6 }}
       whileTap={{ scale: 0.94 }}
-      className="fixed right-4 bottom-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-success text-white shadow-raised sm:right-6 sm:bottom-6"
+      className="fixed right-4 bottom-4 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-success text-white shadow-raised md:flex sm:right-6 sm:bottom-6"
     >
       <motion.span
         aria-hidden
