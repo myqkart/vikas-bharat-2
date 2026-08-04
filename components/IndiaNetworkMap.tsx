@@ -100,10 +100,6 @@ export default function IndiaNetworkMap() {
 
   return (
     <div ref={wrapRef} className="relative mx-auto w-full max-w-[520px]">
-      <p className="mb-3 text-center text-[11px] font-bold tracking-[0.14em] text-slate uppercase lg:text-left">
-        Hover any state for MSME counts
-      </p>
-
       <svg
         viewBox={indiaMap.viewBox}
         role="img"
@@ -211,10 +207,6 @@ export default function IndiaNetworkMap() {
           </p>
         </div>
       ) : null}
-
-      <p className="mt-3 text-center text-xs text-slate lg:text-left">
-        States pulse one by one — hover for MSME statistics.
-      </p>
     </div>
   );
 }
