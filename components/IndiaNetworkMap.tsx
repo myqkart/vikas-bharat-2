@@ -98,6 +98,45 @@ export default function IndiaNetworkMap() {
     });
   };
 
+  useEffect(() => {
+    if (hoveredId) return;
+
+    const updatePosition = () => {
+      if (!pulseId) {
+        setTooltip(null);
+        return;
+      }
+
+      const data = byMapId.get(pulseId);
+      if (!data) {
+        setTooltip(null);
+        return;
+      }
+
+      const el = document.getElementById(`map-state-${pulseId}`);
+      const wrap = wrapRef.current;
+      if (!el || !wrap) return;
+
+      const elRect = el.getBoundingClientRect();
+      const wrapRect = wrap.getBoundingClientRect();
+
+      setTooltip({
+        x: (elRect.left + elRect.width / 2) - wrapRect.left,
+        y: (elRect.top + elRect.height / 2) - wrapRect.top,
+        name: data.name,
+        rank: data.rank,
+        count: data.count,
+      });
+    };
+
+    updatePosition();
+
+    window.addEventListener("resize", updatePosition);
+    return () => {
+      window.removeEventListener("resize", updatePosition);
+    };
+  }, [pulseId, hoveredId, byMapId]);
+
   return (
     <div ref={wrapRef} className="relative mx-auto w-full max-w-[520px]">
       <svg
@@ -138,6 +177,7 @@ export default function IndiaNetworkMap() {
 
           return (
             <path
+              id={`map-state-${loc.id}`}
               key={loc.id}
               d={loc.path}
               fill={fill}
@@ -192,7 +232,13 @@ export default function IndiaNetworkMap() {
       {tooltip ? (
         <div
           className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-[120%] rounded-[14px] border border-border bg-white px-3.5 py-2.5 shadow-raised"
-          style={{ left: tooltip.x, top: tooltip.y }}
+          style={{
+            left: tooltip.x,
+            top: tooltip.y,
+            transition: hoveredId
+              ? "none"
+              : "left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), top 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
+          }}
           role="tooltip"
         >
           <p className="text-[11px] font-semibold tracking-wide text-slate uppercase">
