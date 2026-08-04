@@ -20,6 +20,7 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
+import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import {
   BadgeCheck,
@@ -43,7 +44,7 @@ import {
   TrendingUp,
   UserCheck,
 } from "lucide-react";
-import { missionTrees } from "@/lib/content";
+import { missionTrees, site } from "@/lib/content";
 
 type Accent = (typeof missionTrees.trees)[number]["accent"];
 type Tree = (typeof missionTrees.trees)[number];
@@ -266,117 +267,7 @@ function Atmosphere({
   );
 }
 
-function BloomToken({
-  label,
-  index,
-  total,
-  accentKey,
-  focused,
-  onFocus,
-}: {
-  label: string;
-  index: number;
-  total: number;
-  accentKey: Accent;
-  focused: boolean;
-  onFocus: () => void;
-}) {
-  const a = accent[accentKey];
-  const Icon = itemIcons[label] ?? Banknote;
-  const ang = tokenAngle(index, total);
-  const tip = polar(ang, R_TOKENS);
-  const inner = polar(ang, R_SEAL + 10);
-  const outer = polar(ang, R_TOKENS - 30);
-  const spoke = `M ${inner.x} ${inner.y} L ${outer.x} ${outer.y}`;
 
-  return (
-    <g>
-      <motion.path
-        d={spoke}
-        fill="none"
-        stroke={a.hex}
-        strokeWidth={1.15}
-        strokeLinecap="round"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: focused ? 0.55 : 0.28 }}
-        transition={{
-          duration: 0.55,
-          delay: 0.06 + index * 0.05,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      />
-      <motion.g
-        initial={{ opacity: 0, scale: 0.35 }}
-        animate={{ opacity: 1, scale: focused ? 1.08 : 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 300,
-          damping: 20,
-          delay: 0.1 + index * 0.055,
-        }}
-        style={{
-          transformOrigin: `${tip.x}px ${tip.y}px`,
-        }}
-      >
-        <circle
-          cx={tip.x}
-          cy={tip.y}
-          r={focused ? 24 : 21}
-          fill="#FBF6EC"
-          stroke={a.hex}
-          strokeWidth={focused ? 2.2 : 1.5}
-          className="cursor-pointer"
-          onClick={onFocus}
-          style={{
-            filter: focused
-              ? `drop-shadow(0 8px 18px ${a.glow})`
-              : `drop-shadow(0 4px 10px ${a.glow})`,
-          }}
-        />
-        <circle
-          cx={tip.x}
-          cy={tip.y}
-          r={16}
-          fill={a.soft}
-          stroke={a.hex}
-          strokeWidth={0.55}
-          strokeOpacity={0.35}
-          className="pointer-events-none"
-        />
-        <foreignObject
-          x={tip.x - 11}
-          y={tip.y - 11}
-          width={22}
-          height={22}
-          className="pointer-events-none"
-        >
-          <div
-            className="flex h-full w-full items-center justify-center"
-            style={{ color: a.hex }}
-          >
-            <Icon size={13} strokeWidth={2.2} />
-          </div>
-        </foreignObject>
-        <foreignObject
-          x={tip.x - 56}
-          y={tip.y + 26}
-          width={112}
-          height={40}
-          className="pointer-events-none"
-        >
-          <p
-            className="text-center text-[10px] leading-tight font-semibold sm:text-[11px]"
-            style={{
-              color: focused ? a.ink : "rgba(18,41,77,0.62)",
-            }}
-          >
-            {label}
-          </p>
-        </foreignObject>
-      </motion.g>
-    </g>
-  );
-}
 
 function MandateArc({
   tree,
@@ -557,17 +448,16 @@ function CenterSeal({
           transition={{ type: "spring", stiffness: 360, damping: 22 }}
           style={{ transformOrigin: `${CX}px ${CY}px` }}
         >
-          <foreignObject x={CX - 64} y={CY - 34} width={128} height={68}>
-            <div className="flex h-full flex-col items-center justify-center text-center">
-              <p
-                className="text-[9px] font-bold tracking-[0.22em] uppercase"
-                style={{ color: a.ink }}
-              >
-                {missionTrees.hubLabel}
-              </p>
-              <p className="mt-1 font-display text-[13px] leading-tight font-semibold text-ink sm:text-[14px]">
-                {missionTrees.hubTagline}
-              </p>
+          <foreignObject x={CX - 40} y={CY - 40} width={80} height={80}>
+            <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white flex items-center justify-center shadow-card ring-1 ring-border/20">
+              <Image 
+                src={site.logo} 
+                alt={site.companyName} 
+                fill 
+                sizes="80px" 
+                className="object-contain p-1.5"
+                priority 
+              />
             </div>
           </foreignObject>
         </motion.g>
@@ -737,10 +627,56 @@ export default function MissionTrees() {
               ref={stageRef}
               onPointerMove={onPointerMove}
               onPointerLeave={onPointerLeave}
-              className="relative mt-1 flex min-h-0 flex-1 flex-col items-center justify-center lg:mt-0 lg:grid lg:grid-cols-[minmax(0,1fr)_260px] lg:items-center lg:gap-4"
+              className="relative mt-1 flex min-h-0 flex-1 flex-col items-center justify-center gap-6 lg:mt-0 lg:grid lg:grid-cols-[240px_minmax(0,1fr)_260px] lg:items-center lg:gap-8 w-full"
             >
+              {/* Left Column - 5-6 points list */}
+              <aside className="relative z-10 w-full max-w-xs shrink-0 flex flex-col gap-3">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={active.id}
+                    initial={{ opacity: 0, x: -14 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -10 }}
+                    className="flex flex-col gap-2.5"
+                  >
+                    {active.children.map((leaf) => {
+                      const on = focusedLeaf === leaf;
+                      const Icon = itemIcons[leaf] ?? Banknote;
+                      return (
+                        <button
+                          key={leaf}
+                          type="button"
+                          onClick={() => setFocusedLeaf(leaf)}
+                          className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl border text-left transition-all duration-300 w-full ${
+                            on 
+                              ? "bg-white shadow-raised border-border/80" 
+                              : "bg-white/40 border-border/20 hover:bg-white/60"
+                          }`}
+                        >
+                          <div 
+                            className={`h-8 w-8 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
+                              on ? "text-white" : "text-slate/60"
+                            }`}
+                            style={{ backgroundColor: on ? a.hex : "rgba(18,41,77,0.05)" }}
+                          >
+                            <Icon size={14} strokeWidth={2.2} />
+                          </div>
+                          <span 
+                            className="text-xs font-bold transition-colors"
+                            style={{ color: on ? a.ink : "rgba(18,41,77,0.7)" }}
+                          >
+                            {leaf}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </motion.div>
+                </AnimatePresence>
+              </aside>
+
+              {/* Center Column - Compass */}
               <motion.div
-                className="relative mx-auto aspect-square w-full max-w-[min(100%,520px)] lg:max-w-[600px]"
+                className="relative mx-auto aspect-square w-full max-w-[min(100%,480px)] lg:max-w-[500px]"
                 style={{ transform, transformStyle: "preserve-3d" }}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
@@ -851,28 +787,6 @@ export default function MissionTrees() {
                     />
                   ))}
 
-                  <AnimatePresence mode="wait">
-                    <motion.g
-                      key={active.id}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.25 }}
-                    >
-                      {active.children.map((leaf, i) => (
-                        <BloomToken
-                          key={leaf}
-                          label={leaf}
-                          index={i}
-                          total={active.children.length}
-                          accentKey={active.accent}
-                          focused={focusedLeaf === leaf}
-                          onFocus={() => setFocusedLeaf(leaf)}
-                        />
-                      ))}
-                    </motion.g>
-                  </AnimatePresence>
-
                   <CenterSeal
                     activeAccent={active.accent}
                     stamped={stamped}
@@ -881,6 +795,7 @@ export default function MissionTrees() {
                 </svg>
               </motion.div>
 
+              {/* Right Column - Details panel */}
               <aside className="relative z-10 mt-0 w-full max-w-md shrink-0 px-2 text-center lg:max-w-none lg:px-0 lg:text-left">
                 <AnimatePresence mode="wait">
                   <motion.div
