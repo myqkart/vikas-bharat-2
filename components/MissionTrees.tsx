@@ -630,7 +630,7 @@ export default function MissionTrees() {
               className="relative mt-1 flex min-h-0 flex-1 flex-col items-center justify-center gap-6 lg:mt-0 lg:grid lg:grid-cols-[240px_minmax(0,1fr)_260px] lg:items-center lg:gap-8 w-full"
             >
               {/* Left Column - 5-6 points list */}
-              <aside className="relative z-10 w-full max-w-xs shrink-0 flex flex-col gap-3">
+              <aside className="relative z-10 w-full max-w-xs shrink-0 hidden lg:flex lg:flex-col gap-3">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={active.id}
