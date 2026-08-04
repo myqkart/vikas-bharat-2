@@ -368,14 +368,14 @@ function MandateArc({
         {/* Upright label — only when near the lock meridian */}
         {selected ? (
           <foreignObject
-            x={-78}
+            x={-100}
             y={34}
-            width={156}
-            height={28}
+            width={200}
+            height={36}
             className="pointer-events-none"
           >
             <p
-              className="text-center text-[12px] font-bold tracking-[0.02em]"
+              className="text-center text-[15px] font-extrabold tracking-[0.02em] leading-tight"
               style={{ color: a.ink }}
             >
               {tree.root}
@@ -525,10 +525,21 @@ export default function MissionTrees() {
   useMotionValueEvent(chapterRaw, "change", (v) => {
     if (jumping.current) return;
     const next = clamp(Math.round(v), 0, CHAPTER_COUNT - 1);
+    
+    const children = trees[next]?.children ?? [];
+    let targetLeaf: string | null = null;
+    if (children.length > 0) {
+      const minV = next === 0 ? 0 : next - 0.5;
+      const maxV = next === CHAPTER_COUNT - 1 ? CHAPTER_COUNT - 1 : next + 0.5;
+      const p = (v - minV) / (maxV - minV || 1);
+      const idx = clamp(Math.floor(p * children.length), 0, children.length - 1);
+      targetLeaf = children[idx];
+    }
+    setFocusedLeaf(targetLeaf);
+
     setActiveIndex((prev) => {
       if (next === prev) return prev;
       setStamped((s) => s + 1);
-      setFocusedLeaf(trees[next]?.children[0] ?? null);
       return next;
     });
   });
@@ -817,23 +828,17 @@ export default function MissionTrees() {
                     <p className="mt-2 text-[13px] leading-relaxed text-slate sm:text-[14px]">
                       {active.blurb}
                     </p>
-                    <ul className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1 lg:justify-start">
+                    <ul className="mt-4 space-y-2.5 text-left w-full max-w-sm mx-auto lg:mx-0">
                       {active.children.map((leaf) => {
-                        const on = focusedLeaf === leaf;
                         return (
-                          <li key={leaf}>
-                            <button
-                              type="button"
-                              onClick={() => setFocusedLeaf(leaf)}
-                              className="text-[12px] font-semibold transition-colors sm:text-[13px]"
-                              style={{
-                                color: on ? a.hex : "rgba(18,41,77,0.5)",
-                                textDecoration: on ? "underline" : "none",
-                                textUnderlineOffset: 3,
-                              }}
-                            >
+                          <li key={leaf} className="flex items-start gap-2.5 text-[13px] sm:text-[14px] text-charcoal">
+                            <span 
+                              className="mt-1.5 flex h-1.5 w-1.5 shrink-0 rounded-full animate-pulse"
+                              style={{ backgroundColor: a.hex }}
+                            />
+                            <span className="font-semibold leading-tight text-ink/90">
                               {leaf}
-                            </button>
+                            </span>
                           </li>
                         );
                       })}
