@@ -5,7 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { site } from "@/lib/content";
 
-const TOTAL_MS = 3200;
+const TOTAL_MS = 4200;
 const EXIT_MS = 850;
 
 /**
@@ -64,11 +64,11 @@ function SplashParticles({ active }: { active: boolean }) {
           animate={
             active
               ? {
-                  opacity: [0, 0.9, 0.35, 0.8, 0],
-                  scale: [0, 1.2, 0.8, 1, 0.4],
-                  y: [0, -24 - (p.id % 20), 8, -12],
-                  x: [0, (p.id % 2 === 0 ? 1 : -1) * (8 + (p.id % 10))],
-                }
+                opacity: [0, 0.9, 0.35, 0.8, 0],
+                scale: [0, 1.2, 0.8, 1, 0.4],
+                y: [0, -24 - (p.id % 20), 8, -12],
+                x: [0, (p.id % 2 === 0 ? 1 : -1) * (8 + (p.id % 10))],
+              }
               : { opacity: 0 }
           }
           transition={{
@@ -85,14 +85,14 @@ function SplashParticles({ active }: { active: boolean }) {
 
 function BrandName() {
   return (
-    <motion.p
-      className="mt-1 text-center text-[13px] font-semibold tracking-[0.14em] text-paper/80 uppercase sm:text-sm"
+    <motion.h1
+      className="mt-2 text-center text-xl font-bold tracking-[0.25em] text-white uppercase sm:text-2xl font-display"
       initial={{ opacity: 0, y: 12, filter: "blur(8px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ delay: 1.45, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
     >
-      {site.tagline}
-    </motion.p>
+      {site.companyName}
+    </motion.h1>
   );
 }
 
@@ -157,35 +157,39 @@ function SplashScreen({ onComplete, audio }: SplashScreenProps) {
           : { duration: 0.2 }
       }
     >
-      <div className="absolute inset-0 bg-[#070e1a]" />
+      {/* Background Image with smooth Ken Burns entry scale effect */}
       <motion.div
-        className="splash-aurora absolute inset-0"
-        initial={{ opacity: 0, scale: 1.12 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
-      />
+        className="absolute inset-0 select-none overflow-hidden"
+        initial={{ scale: 1.12, filter: "blur(6px)" }}
+        animate={{ scale: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <Image
+          src="/splash-bg.jpg"
+          alt="Splash Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Sleek dark gradient overlays to ensure text and logo contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.85)_100%)]" />
+      </motion.div>
+
+      {/* Decorative ambient tri-color glow to reinforce brand identity */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 0.55, 0.4] }}
-        transition={{ duration: 2, ease: "easeOut" }}
+        animate={{ opacity: 0.35 }}
+        transition={{ delay: 0.5, duration: 1.5 }}
         style={{
           background:
-            "radial-gradient(ellipse 55% 45% at 50% 42%, rgba(245,166,35,0.28), transparent 70%)",
-        }}
-      />
-      <motion.div
-        className="absolute inset-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ delay: 0.3, duration: 1.1 }}
-        style={{
-          background:
-            "radial-gradient(ellipse 40% 35% at 50% 55%, rgba(29,131,72,0.22), transparent 65%)",
+            "radial-gradient(ellipse 50% 50% at 50% 55%, rgba(245,166,35,0.15) 0%, rgba(29,131,72,0.1) 60%, transparent 100%)",
         }}
       />
 
-      <div className="splash-noise absolute inset-0 opacity-[0.07]" />
+      <div className="splash-noise absolute inset-0 opacity-[0.05]" />
       <SplashParticles active={phase === "play"} />
 
       <svg
@@ -202,7 +206,7 @@ function SplashScreen({ onComplete, audio }: SplashScreenProps) {
           stroke="url(#splashLine)"
           strokeWidth="0.08"
           initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: [0, 0.9, 0.35] }}
+          animate={{ pathLength: 1, opacity: [0, 0.5, 0.15] }}
           transition={{ delay: 0.4, duration: 1.05, ease: [0.16, 1, 0.3, 1] }}
         />
         <motion.line
@@ -213,7 +217,7 @@ function SplashScreen({ onComplete, audio }: SplashScreenProps) {
           stroke="url(#splashLineV)"
           strokeWidth="0.06"
           initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: [0, 0.55, 0.2] }}
+          animate={{ pathLength: 1, opacity: [0, 0.35, 0.1] }}
           transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
         />
         <defs>
@@ -320,16 +324,43 @@ function SplashScreen({ onComplete, audio }: SplashScreenProps) {
         >
           Together · Growing · Building · Bharat
         </motion.p>
-      </div>
 
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.55) 100%)",
-        }}
-      />
+        {/* Loading Indicator */}
+        <motion.div
+          className="mt-8 flex flex-col items-center gap-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
+        >
+          <div className="relative h-1 w-48 overflow-hidden rounded-full bg-white/10 backdrop-blur-sm sm:w-56">
+            <motion.div
+              className="absolute left-0 top-0 h-full bg-gradient-to-r from-marigold via-white to-success"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{
+                duration: 1.8,
+                ease: "easeInOut",
+                delay: 0.2,
+              }}
+            />
+            {/* Glowing tracer shine */}
+            <motion.div
+              className="absolute top-0 h-full w-12 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+              animate={{
+                left: ["-20%", "120%"],
+              }}
+              transition={{
+                duration: 1.4,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+          </div>
+          <span className="font-sans text-[8px] font-bold tracking-[0.3em] text-white/40 uppercase">
+            Loading
+          </span>
+        </motion.div>
+      </div>
     </motion.div>
   );
 }
