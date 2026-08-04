@@ -22,7 +22,6 @@ import {
   useTransform,
 } from "framer-motion";
 import {
-  Cog,
   Handshake,
   MessageCircle,
   Phone,
@@ -39,7 +38,6 @@ const phoneHref = `tel:${site.phoneNumber}`;
 
 const navIcons: Record<(typeof navigation)[number]["icon"], LucideIcon> = {
   rocket: Rocket,
-  cog: Cog,
   handshake: Handshake,
   trending: TrendingUp,
   shield: ShieldCheck,
@@ -48,7 +46,7 @@ const navIcons: Record<(typeof navigation)[number]["icon"], LucideIcon> = {
 const sectionIds = navigation.map((item) => item.section);
 
 /** Wider arc so labels clear each other on narrow phones */
-const RADIAL_ANGLES = [-78, -39, 0, 39, 78] as const;
+const RADIAL_ANGLES = [-75, -25, 25, 75] as const;
 const RADIAL_RADIUS = 152;
 
 function MagLink({

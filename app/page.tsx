@@ -9,7 +9,6 @@ import MissionTrees from "@/components/MissionTrees";
 import Network from "@/components/Network";
 import Passbook from "@/components/Passbook";
 import Resources from "@/components/Resources";
-import Schemes from "@/components/Schemes";
 import Services from "@/components/Services";
 import SiteChrome from "@/components/SiteChrome";
 import StartupStats from "@/components/StartupStats";
@@ -31,7 +30,6 @@ export default function Home() {
       <About />
       <Services />
       <HowItWorks />
-      <Schemes />
       <CaseStudies />
       <Testimonials />
       <Resources />

@@ -34,7 +34,6 @@ export const site = {
   resources: [
     { label: "MSME / Udyam guide", href: "/services/registration" },
     { label: "GST registration help", href: "/services/registration" },
-    { label: "Mudra Loan explainer", href: "/schemes/mudra" },
     { label: "FSSAI licence path", href: "/services/certificate" },
   ] as const,
   disclaimer:
@@ -43,7 +42,6 @@ export const site = {
 
 export const navigation = [
   { label: "Startup", href: "/#services", icon: "rocket", section: "services" },
-  { label: "MSME", href: "/#schemes", icon: "cog", section: "schemes" },
   { label: "Support", href: "/#how-it-works", icon: "handshake", section: "how-it-works" },
   { label: "Growth", href: "/#stories", icon: "trending", section: "stories" },
   { label: "Sustain", href: "/#resources", icon: "shield", section: "resources" },
@@ -657,161 +655,6 @@ export const howItWorks = {
     },
   ],
 } as const;
-
-export const schemes = {
-  eyebrow: "Sarkari Yojana",
-  heading: "Free paisa, jo aapka haq hai.",
-  sub: "Central and popular schemes explained with amounts, eligibility, documents, and timelines — not PDF walls.",
-  link: "Sabhi schemes dekho →",
-  categories: [
-    { label: "Collateral-light loans", count: "Mudra · Stand-Up" },
-    { label: "Subsidy / cost share", count: "PMEGP · state packs" },
-    { label: "Startup grants", count: "Seed Fund · DPIIT paths" },
-  ],
-  items: [
-    {
-      name: "Mudra Loan",
-      tag: "Loan",
-      amount: "Up to ₹20 Lakh",
-      description: "No collateral needed.",
-      longDescription:
-        "Mudra supports micro and small non-farm businesses with Shishu, Kishor, and Tarun tickets. Ideal for traders, manufacturers, and service units that need working capital or equipment without heavy collateral.",
-      image: photos.schemeMudra,
-      slug: "mudra",
-      benefits: [
-        "Collateral-free in most eligible cases",
-        "Ticket sizes for early and growing units",
-        "Works with many public & private banks",
-      ],
-      documents: [
-        "KYC + business proof",
-        "Bank statements",
-        "Quotations / stock details",
-      ],
-      timeline: "2–6 weeks after complete file",
-      eligibility: [
-        { label: "Small / micro business", icon: "briefcase" as const },
-        { label: "No collateral needed", icon: "shield" as const },
-        { label: "Indian citizen / resident", icon: "user" as const },
-      ],
-      faqs: [
-        {
-          q: "Is Mudra only for first-time borrowers?",
-          a: "No — existing micro units can also apply, subject to bank underwriting.",
-        },
-      ],
-    },
-    {
-      name: "PMEGP",
-      tag: "Subsidy",
-      amount: "Up to ₹50 Lakh",
-      description: "Govt. pays part of your cost.",
-      longDescription:
-        "PMEGP helps new manufacturing and service units with margin money subsidy. You bring a viable project; the subsidy reduces the effective loan burden after approval.",
-      image: photos.schemePmegp,
-      slug: "pmegp",
-      benefits: [
-        "Subsidy on eligible project cost",
-        "Support for manufacturing & services",
-        "Works via implementing agencies & banks",
-      ],
-      documents: [
-        "Project report",
-        "Educational / skill proofs where asked",
-        "Own contribution proof",
-      ],
-      timeline: "6–12 weeks typical",
-      eligibility: [
-        { label: "New unit or expansion", icon: "briefcase" as const },
-        { label: "Project cost ready", icon: "landmark" as const },
-        { label: "Own contribution ready", icon: "check" as const },
-      ],
-      faqs: [
-        {
-          q: "Can existing large companies apply?",
-          a: "PMEGP targets new micro enterprises — we screen fit before you invest time.",
-        },
-      ],
-    },
-    {
-      name: "Stand-Up India",
-      tag: "Loan",
-      amount: "₹10L – ₹1 Cr",
-      description: "For women & SC/ST founders.",
-      longDescription:
-        "Stand-Up India finances greenfield enterprises led by women or SC/ST entrepreneurs, typically for manufacturing, services, or trading with a bankable plan.",
-      image: photos.schemeStandup,
-      slug: "standup",
-      benefits: [
-        "Higher ticket sizes for serious projects",
-        "Focus on women & SC/ST founders",
-        "Composite loan structures via banks",
-      ],
-      documents: [
-        "Category certificate where applicable",
-        "Detailed project report",
-        "Collateral / guarantee discussion with bank",
-      ],
-      timeline: "4–10 weeks",
-      eligibility: [
-        { label: "Women or SC/ST founder", icon: "users" as const },
-        { label: "Greenfield project", icon: "sparkles" as const },
-        { label: "Bankable business plan", icon: "briefcase" as const },
-      ],
-      faqs: [
-        {
-          q: "Is trading allowed?",
-          a: "Yes in many cases — bank policy and project quality decide final eligibility.",
-        },
-      ],
-    },
-    {
-      name: "Startup India Seed Fund",
-      tag: "Grant",
-      amount: "Up to ₹20 Lakh",
-      description: "No repayment for eligible startups.",
-      longDescription:
-        "Seed support for DPIIT-recognised startups through incubators — suited to prototype, market entry, and early validation rather than traditional kirana working capital. As of DPIIT Gazette Notification 108(E) dated 4 February 2026, the turnover threshold for Startup recognition is ₹200 crore (revised from ₹100 crore). Recognised startups should download their updated certificate from the Startup India portal.",
-      image: photos.schemeSeed,
-      slug: "seedfund",
-      benefits: [
-        "Grant-style support (no classic EMI)",
-        "Incubator-led diligence",
-        "Useful for product & tech-enabled startups",
-        "Aligned with DPIIT recognition up to ₹200 Cr turnover",
-      ],
-      documents: [
-        "DPIIT recognition certificate (updated)",
-        "Pitch / product proof",
-        "Incubator application pack",
-      ],
-      timeline: "Varies by incubator cohort",
-      eligibility: [
-        { label: "DPIIT-recognised startup", icon: "sparkles" as const },
-        { label: "Turnover within ₹200 Cr", icon: "briefcase" as const },
-        { label: "No repayment if eligible", icon: "check" as const },
-      ],
-      faqs: [
-        {
-          q: "Can a local shop apply?",
-          a: "Seed Fund is for recognised startups — traditional shops usually fit Mudra / PMEGP better.",
-        },
-        {
-          q: "What changed in Feb 2026?",
-          a: "DPIIT raised the Startup recognition turnover threshold from ₹100 crore to ₹200 crore. Log in to Startup India and download your updated recognition certificate.",
-        },
-      ],
-    },
-  ],
-} as const;
-
-export function getSchemeBySlug(slug: string) {
-  return schemes.items.find((item) => item.slug === slug);
-}
-
-export function getAllSchemeSlugs() {
-  return schemes.items.map((item) => item.slug);
-}
 
 export const caseStudies = {
   eyebrow: "Case Studies",

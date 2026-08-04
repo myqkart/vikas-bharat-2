@@ -234,7 +234,7 @@ export default function Hero({
             >
               {[
                 { icon: Building2, label: "Registration", sub: "Company · GST · Udyam" },
-                { icon: ShieldCheck, label: "Schemes", sub: "Mudra · PMEGP · more" },
+                { icon: Sparkles, label: "Growth", sub: "Funding · Scale · Advisory" },
               ].map((card, i) => (
                 <motion.div
                   key={card.label}
