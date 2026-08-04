@@ -41,6 +41,7 @@
 
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-handwriting: var(--font-caveat), cursive;
 
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
