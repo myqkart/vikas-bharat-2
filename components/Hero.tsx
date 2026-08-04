@@ -9,11 +9,10 @@ import {
   Phone,
   ShieldCheck,
   Sparkles,
-  Star,
   TrendingUp,
 } from "lucide-react";
 import { useRef } from "react";
-import { hero as homeHero, site, trustBadges } from "@/lib/content";
+import { hero as homeHero, site } from "@/lib/content";
 import { photos } from "@/lib/photos";
 import TextReveal from "@/components/motion/TextReveal";
 import FloatingOrbs from "@/components/motion/FloatingOrbs";
@@ -160,49 +159,6 @@ export default function Hero({
               {homeHero.microcopy.join(" · ")}
             </motion.p>
 
-            {/* Rating + trust row */}
-            <motion.div
-              variants={fadeUp}
-              className="mt-8 flex flex-wrap items-center gap-4"
-            >
-              <div className="flex items-center gap-2 rounded-[14px] border border-white/60 bg-white/75 px-3 py-2 shadow-card backdrop-blur-md">
-                <div className="flex -space-x-2">
-                  {[photos.personRitu, photos.personManoj, photos.personAsha].map(
-                    (src) => (
-                      <span
-                        key={src}
-                        className="relative h-8 w-8 overflow-hidden rounded-full ring-2 ring-white"
-                      >
-                        <Image src={src} alt="" fill sizes="32px" className="object-cover" />
-                      </span>
-                    )
-                  )}
-                </div>
-                <div>
-                  <div className="flex gap-0.5">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star
-                        key={i}
-                        size={12}
-                        className="fill-marigold text-marigold"
-                        aria-hidden
-                      />
-                    ))}
-                  </div>
-                  <p className="text-[11px] font-bold text-ink">5.0 · 12,000+ founders</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {trustBadges.slice(0, 3).map((b) => (
-                  <span
-                    key={b.label}
-                    className="rounded-full bg-ink/90 px-3 py-1 text-[11px] font-bold text-paper"
-                  >
-                    {b.label}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Visual composition */}
@@ -307,49 +263,7 @@ export default function Hero({
         </div>
       </Spotlight>
 
-      {/* Bottom highlight strip */}
-      <div className="relative border-t border-border/60 bg-white/50 backdrop-blur-md">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-px sm:grid-cols-4">
-          {homeHero.highlights.map((h, i) => (
-            <motion.div
-              key={h.label}
-              className="px-5 py-5"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.08 * i }}
-            >
-              <p className="font-display text-2xl font-bold text-ink lg:text-3xl">
-                {h.value}
-              </p>
-              <p className="mt-1 text-sm font-semibold text-slate">{h.label}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
-      {/* Benefit cards */}
-      <div className="relative mx-auto max-w-[1240px] px-5 py-10 lg:px-8">
-        <motion.ul
-          className="grid grid-cols-1 gap-4 md:grid-cols-3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-        >
-          {homeHero.benefits.map((b) => (
-            <motion.li
-              key={b.title}
-              variants={fadeUp}
-              whileHover={{ y: -6 }}
-              className="rounded-[18px] border border-white/70 bg-white/75 p-5 shadow-card backdrop-blur-xl"
-            >
-              <p className="font-display text-lg font-semibold text-ink">{b.title}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate">{b.text}</p>
-            </motion.li>
-          ))}
-        </motion.ul>
-      </div>
     </section>
   );
 }
