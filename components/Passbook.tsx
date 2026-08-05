@@ -67,36 +67,96 @@ export default function Passbook() {
         <div className="hidden lg:block relative w-full aspect-[2.4/1] max-w-5xl mx-auto mb-16">
           {/* SVG Orbits */}
           <div className="absolute inset-0 w-full h-full pointer-events-none select-none flex items-center justify-center">
-            <svg className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Concentric ellipses using CSS percentage values to lock alignment */}
-              <motion.ellipse 
+            <svg className="w-full h-full" viewBox="0 0 1000 417" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="orbit-outer" d="M 120,208.5 A 380,92 0 1,0 880,208.5 A 380,92 0 1,0 120,208.5" />
+                <path id="orbit-middle" d="M 220,208.5 A 280,63 0 1,0 780,208.5 A 280,63 0 1,0 220,208.5" />
+                <path id="orbit-inner" d="M 320,208.5 A 180,33 0 1,0 680,208.5 A 180,33 0 1,0 320,208.5" />
+              </defs>
+
+              {/* Concentric ellipses drawn as path strokes */}
+              <motion.path 
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: 0.25 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
-                cx="50%" cy="50%" rx="38%" ry="22%" stroke="#cbd5e1" strokeWidth="1" 
+                d="M 120,208.5 A 380,92 0 1,0 880,208.5 A 380,92 0 1,0 120,208.5" 
+                stroke="#cbd5e1" 
+                strokeWidth="1" 
               />
-              <motion.ellipse 
+              <motion.path 
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: 0.25 }}
                 transition={{ duration: 1.2, ease: "easeInOut", delay: 0.2 }}
-                cx="50%" cy="50%" rx="28%" ry="15%" stroke="#cbd5e1" strokeWidth="1" 
+                d="M 220,208.5 A 280,63 0 1,0 780,208.5 A 280,63 0 1,0 220,208.5" 
+                stroke="#cbd5e1" 
+                strokeWidth="1" 
               />
-              <motion.ellipse 
+              <motion.path 
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: 0.25 }}
                 transition={{ duration: 0.9, ease: "easeInOut", delay: 0.4 }}
-                cx="50%" cy="50%" rx="18%" ry="8%" stroke="#cbd5e1" strokeWidth="1" 
+                d="M 320,208.5 A 180,33 0 1,0 680,208.5 A 180,33 0 1,0 320,208.5" 
+                stroke="#cbd5e1" 
+                strokeWidth="1" 
               />
               
-              {/* Decorative Nodes on Orbits */}
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.8 }} cx="44%" cy="35.4%" r="4.5" fill="#f97316" />
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.9 }} cx="30%" cy="60.5%" r="4.5" fill="#22c55e" />
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.0 }} cx="41%" cy="56.9%" r="4.5" fill="#22c55e" />
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.1 }} cx="59%" cy="56.9%" r="4.5" fill="#22c55e" />
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.2 }} cx="70%" cy="60.5%" r="4.5" fill="#3b82f6" />
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.3 }} cx="76%" cy="66%" r="4.5" fill="#a855f7" />
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.4 }} cx="13%" cy="45%" r="4.5" fill="#cbd5e1" />
-              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.5 }} cx="87%" cy="45%" r="4.5" fill="#cbd5e1" />
+              {/* Rotating Decorative Nodes along Orbits */}
+              
+              {/* Orange dot: middle orbit, starts at 35% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.8 }} r="4.5" fill="#f97316">
+                <animateMotion dur="25s" repeatCount="indefinite" keyPoints="0.35;1;0;0.35" keyTimes="0;0.65;0.65;1" calcMode="linear">
+                  <mpath href="#orbit-middle" />
+                </animateMotion>
+              </motion.circle>
+
+              {/* Green dot 1: middle orbit, starts at 65% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.9 }} r="4.5" fill="#22c55e">
+                <animateMotion dur="25s" repeatCount="indefinite" keyPoints="0.65;1;0;0.65" keyTimes="0;0.35;0.35;1" calcMode="linear">
+                  <mpath href="#orbit-middle" />
+                </animateMotion>
+              </motion.circle>
+
+              {/* Green dot 2: inner orbit, starts at 60% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.0 }} r="4.5" fill="#22c55e">
+                <animateMotion dur="20s" repeatCount="indefinite" keyPoints="0.60;1;0;0.60" keyTimes="0;0.40;0.40;1" calcMode="linear">
+                  <mpath href="#orbit-inner" />
+                </animateMotion>
+              </motion.circle>
+
+              {/* Green dot 3: inner orbit, starts at 90% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.1 }} r="4.5" fill="#22c55e">
+                <animateMotion dur="20s" repeatCount="indefinite" keyPoints="0.90;1;0;0.90" keyTimes="0;0.10;0.10;1" calcMode="linear">
+                  <mpath href="#orbit-inner" />
+                </animateMotion>
+              </motion.circle>
+
+              {/* Blue dot: middle orbit, starts at 85% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.2 }} r="4.5" fill="#3b82f6">
+                <animateMotion dur="25s" repeatCount="indefinite" keyPoints="0.85;1;0;0.85" keyTimes="0;0.15;0.15;1" calcMode="linear">
+                  <mpath href="#orbit-middle" />
+                </animateMotion>
+              </motion.circle>
+
+              {/* Purple dot: outer orbit, starts at 80% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.3 }} r="4.5" fill="#a855f7">
+                <animateMotion dur="30s" repeatCount="indefinite" keyPoints="0.80;1;0;0.80" keyTimes="0;0.20;0.20;1" calcMode="linear">
+                  <mpath href="#orbit-outer" />
+                </animateMotion>
+              </motion.circle>
+
+              {/* Grey dot 1: outer orbit, starts at 50% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.4 }} r="4.5" fill="#cbd5e1">
+                <animateMotion dur="30s" repeatCount="indefinite" keyPoints="0.50;1;0;0.50" keyTimes="0;0.50;0.50;1" calcMode="linear">
+                  <mpath href="#orbit-outer" />
+                </animateMotion>
+              </motion.circle>
+
+              {/* Grey dot 2: outer orbit, starts at 0% */}
+              <motion.circle initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.5 }} r="4.5" fill="#cbd5e1">
+                <animateMotion dur="30s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+                  <mpath href="#orbit-outer" />
+                </animateMotion>
+              </motion.circle>
             </svg>
           </div>
 
