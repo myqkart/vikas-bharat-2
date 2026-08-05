@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/motion/Reveal";
 import { staggerContainer } from "@/lib/motion";
+import FloatingOrbs from "@/components/motion/FloatingOrbs";
 
 // Custom animation variant matching the requested 20px upward fade-in stagger
 const cardFadeUp: Variants = {
@@ -21,8 +22,27 @@ const cardFadeUp: Variants = {
   },
 };
 
-// Mock data for bento grid cards matching the specifications
-const bentoBlogs = [
+interface BentoBlogItem {
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  date: string;
+  image: string;
+  slug: string;
+  featured: boolean;
+  background: string;
+  badgeBg: string;
+  textColors: {
+    title: string;
+    meta: string;
+    arrow: string;
+  };
+  svgDecoration?: React.ReactNode;
+}
+
+// Mock data for bento grid cards matching the specifications, decorated with custom SVGs
+const bentoBlogs: BentoBlogItem[] = [
   {
     id: 1,
     title: "Loan options every MSME should know",
@@ -39,6 +59,22 @@ const bentoBlogs = [
       meta: "text-purple-200/80",
       arrow: "text-white border-white/30 hover:border-white/60 hover:bg-white/10",
     },
+    svgDecoration: (
+      <svg
+        className="absolute -right-6 -bottom-6 w-36 h-36 text-white/5 pointer-events-none z-10 group-hover:scale-105 group-hover:rotate-12 transition-transform duration-700 ease-out"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.75"
+        aria-hidden="true"
+      >
+        <circle cx="50" cy="50" r="15" />
+        <circle cx="50" cy="50" r="30" />
+        <circle cx="50" cy="50" r="45" />
+        <line x1="0" y1="50" x2="100" y2="50" strokeDasharray="3 3" />
+        <line x1="50" y1="0" x2="50" y2="100" strokeDasharray="3 3" />
+      </svg>
+    ),
   },
   {
     id: 2,
@@ -56,6 +92,20 @@ const bentoBlogs = [
       meta: "text-slate",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
+    svgDecoration: (
+      <svg
+        className="absolute left-6 bottom-20 w-24 h-24 text-emerald-800/10 pointer-events-none z-10 opacity-60 group-hover:translate-x-1 transition-transform duration-500"
+        viewBox="0 0 100 100"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern id="dot-grid-mint" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="100" height="100" fill="url(#dot-grid-mint)" />
+      </svg>
+    ),
   },
   {
     id: 3,
@@ -73,6 +123,19 @@ const bentoBlogs = [
       meta: "text-slate",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
+    svgDecoration: (
+      <svg
+        className="absolute left-6 bottom-28 w-24 h-16 text-amber-800/10 pointer-events-none z-10 opacity-70 group-hover:rotate-3 transition-transform duration-500"
+        viewBox="0 0 100 50"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        aria-hidden="true"
+      >
+        <path d="M 0 25 Q 25 10 50 25 T 100 25" />
+        <path d="M 0 35 Q 25 20 50 35 T 100 35" strokeDasharray="2 2" />
+      </svg>
+    ),
   },
   {
     id: 4,
@@ -90,6 +153,20 @@ const bentoBlogs = [
       meta: "text-slate",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
+    svgDecoration: (
+      <svg
+        className="absolute left-6 bottom-28 w-24 h-24 text-blue-800/10 pointer-events-none z-10 opacity-60 group-hover:scale-105 transition-transform duration-500"
+        viewBox="0 0 100 100"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern id="grid-blue" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+            <path d="M 16 0 L 0 0 0 16" fill="none" stroke="currentColor" strokeWidth="0.75" />
+          </pattern>
+        </defs>
+        <rect width="100" height="100" fill="url(#grid-blue)" />
+      </svg>
+    ),
   },
   {
     id: 5,
@@ -107,6 +184,19 @@ const bentoBlogs = [
       meta: "text-slate",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
+    svgDecoration: (
+      <svg
+        className="absolute left-6 bottom-28 w-20 h-20 text-purple-800/10 pointer-events-none z-10 opacity-70 group-hover:-translate-y-1 transition-transform duration-500"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        aria-hidden="true"
+      >
+        <circle cx="50" cy="50" r="25" />
+        <circle cx="50" cy="50" r="40" strokeDasharray="3 3" />
+      </svg>
+    ),
   },
 ];
 
@@ -201,7 +291,8 @@ function FeaturedBlogCard({
   background,
   badgeBg,
   textColors,
-}: (typeof bentoBlogs)[0]) {
+  svgDecoration,
+}: BentoBlogItem) {
   return (
     <motion.div variants={cardFadeUp} className="md:col-span-7 h-full">
       <Link
@@ -212,8 +303,11 @@ function FeaturedBlogCard({
         {/* Subtle white highlight overlay to brighten bg on hover */}
         <div className="absolute inset-0 bg-white/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
 
+        {/* Custom SVG Decoration */}
+        {svgDecoration}
+
         {/* Card Upper Half: Large Rounded Image */}
-        <div className="relative aspect-[2.4/1] w-full overflow-hidden rounded-[14px] bg-indigo-950/40">
+        <div className="relative aspect-[2.4/1] w-full overflow-hidden rounded-[14px] bg-indigo-950/40 z-20">
           <Image
             src={image}
             alt={title}
@@ -225,7 +319,7 @@ function FeaturedBlogCard({
         </div>
 
         {/* Card Lower Half: Text & Meta */}
-        <div className="mt-4 flex flex-1 flex-col justify-between">
+        <div className="mt-4 flex flex-1 flex-col justify-between z-20">
           <div>
             <div className="mb-2">
               <CategoryBadge category={category} badgeBg={badgeBg} />
@@ -254,12 +348,12 @@ function BlogCard({
   heightClass,
   imagePosition,
 }: {
-  card: (typeof bentoBlogs)[0];
+  card: BentoBlogItem;
   colSpan: string;
   heightClass: string;
   imagePosition: "side" | "bottom" | "side-lamp";
 }) {
-  const { title, category, date, readTime, slug, image, background, badgeBg, textColors } = card;
+  const { title, category, date, readTime, slug, image, background, badgeBg, textColors, svgDecoration } = card;
 
   // Check if button belongs to bottom left or bottom right
   const isArrowLeft = imagePosition === "bottom" || imagePosition === "side-lamp";
@@ -273,6 +367,9 @@ function BlogCard({
       >
         {/* Subtle white highlight overlay to brighten bg on hover */}
         <div className="absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none z-10" />
+
+        {/* Custom SVG Decoration */}
+        {svgDecoration}
 
         {/* Card Background Image (Illustration) */}
         <div className="absolute inset-0 w-full h-full">
@@ -310,15 +407,14 @@ function BlogCard({
   );
 }
 
-
 // Left side Editorial Block Component
 function HeroContent() {
   return (
     <div className="flex flex-col justify-between h-full lg:sticky lg:top-28">
       <div>
-        {/* Eyebrow styled exactly like other landing page sections */}
+        {/* Eyebrow styled exactly like other landing page sections with custom marigold dot */}
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate">
-          <span className="h-2.5 w-2.5 rounded-full bg-marigold" aria-hidden />
+          <span className="h-2.5 w-2.5 rounded-full bg-marigold animate-pulse" aria-hidden />
           Latest Insights
         </div>
 
@@ -331,7 +427,26 @@ function HeroContent() {
           <br />
           businesses
           <br />
-          <span className="text-marigold font-serif italic lowercase">forward.</span>
+          <span className="relative inline-block text-marigold font-serif italic lowercase">
+            forward.
+            <svg
+              className="absolute left-0 bottom-[-4px] w-full h-2 text-marigold pointer-events-none"
+              viewBox="0 0 100 8"
+              fill="none"
+              aria-hidden="true"
+            >
+              <motion.path
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, duration: 0.8 }}
+                d="M5 6 C 30 3, 70 7, 95 2"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
         </h2>
 
         {/* Subheading styled exactly like other landing page sections */}
@@ -391,8 +506,17 @@ function BentoGrid() {
 
 export default function Resources() {
   return (
-    <section id="resources" className="px-5 py-12 lg:px-8 lg:py-16 overflow-hidden bg-paper-deep/15">
-      <div className="mx-auto max-w-[1200px]">
+    <section
+      id="resources"
+      className="relative px-5 py-12 lg:px-8 lg:py-16 overflow-hidden bg-paper-deep/15"
+    >
+      {/* Background Floating Orbs and glow to match other sections */}
+      <FloatingOrbs className="opacity-[0.22]" />
+      
+      {/* Abstract Noise Grid overlay for added texture */}
+      <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.035]" />
+
+      <div className="relative z-10 mx-auto max-w-[1200px]">
         <motion.div
           initial="hidden"
           whileInView="visible"
