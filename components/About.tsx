@@ -337,7 +337,7 @@ export default function About() {
                 <Users size={20} strokeWidth={2.25} />
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-bold text-ink tracking-tight">12,000+</div>
+                <div className="text-xl sm:text-2xl font-bold text-ink tracking-tight">3,000+</div>
                 <div className="text-xs sm:text-sm text-slate font-semibold leading-tight mt-0.5">Businesses Helped</div>
               </div>
             </div>

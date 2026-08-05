@@ -198,7 +198,7 @@ const progressColors: Record<string, { track: string; dot: string }> = {
 export default function Passbook() {
   const statsConfig = [
     {
-      to: 480,
+      to: 100,
       decimal: 0,
       prefix: "₹",
       suffix: "Cr+",
@@ -207,7 +207,7 @@ export default function Passbook() {
       illustration: <WalletIllustration />
     },
     {
-      to: 12000,
+      to: 3000,
       decimal: 0,
       suffix: "+",
       label: "Businesses helped",

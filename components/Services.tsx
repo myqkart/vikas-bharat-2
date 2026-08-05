@@ -190,7 +190,7 @@ export default function Services() {
             <div className="hidden lg:block mt-10 max-w-lg rounded-[16px] border border-border bg-white/40 backdrop-blur-sm p-6 shadow-card">
               <div className="grid grid-cols-3 divide-x divide-border">
                 <div className="px-4 text-center first:pl-0">
-                  <p className="text-2xl font-extrabold text-ink lg:text-3xl">12,000+</p>
+                  <p className="text-2xl font-extrabold text-ink lg:text-3xl">3,000+</p>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate">Businesses helped</p>
                 </div>
                 <div className="px-4 text-center">
@@ -375,7 +375,7 @@ export default function Services() {
               <div className="mt-8 rounded-[16px] border border-border bg-white/40 backdrop-blur-sm p-5 shadow-card">
                 <div className="grid grid-cols-3 divide-x divide-border">
                   <div className="px-2 text-center first:pl-0">
-                    <p className="text-xl font-extrabold text-ink">12,000+</p>
+                    <p className="text-xl font-extrabold text-ink">3,000+</p>
                     <p className="mt-1 text-[9px] font-bold uppercase tracking-wider text-slate">Businesses helped</p>
                   </div>
                   <div className="px-2 text-center">

@@ -62,7 +62,7 @@ export const hero = {
     src: photos.heroMeeting,
     alt: "Consultant reviewing loan and scheme documents with a business owner",
   },
-  floatingProof: "12,000+ businesses helped",
+  floatingProof: "3,000+ businesses helped",
   microcopy: [
     "No fees for the first call",
     "Hindi & English support",
@@ -119,8 +119,8 @@ export const passbook = {
     "Real outcomes from registrations, loans, and scheme filings — stamped in plain numbers so you can trust the desk before you dial.",
   body: "We track every rupee sanctioned, every licence issued, and every first reply. These figures update from live case work across Ahmedabad, Jaipur, Delhi NCR, and Hyderabad.",
   stats: [
-    { value: "₹480Cr+", label: "Money delivered", stamp: "PAID" },
-    { value: "12,000+", label: "Businesses helped", stamp: "DONE" },
+    { value: "₹100Cr+", label: "Money delivered", stamp: "PAID" },
+    { value: "3,000+", label: "Businesses helped", stamp: "DONE" },
     { value: "48 hrs", label: "First reply time", stamp: "FAST" },
     { value: "95%", label: "Applications approved", stamp: "OK" },
   ],
@@ -334,7 +334,7 @@ export const about = {
     { year: "2018", text: "Help desk opens in Ahmedabad for MSME filings." },
     { year: "2020", text: "Scheme matching desk screens 50+ central & state schemes." },
     { year: "2023", text: "Crossed ₹300Cr cumulative funding facilitated." },
-    { year: "2026", text: "Four-city presence; 12,000+ businesses supported." },
+    { year: "2026", text: "Four-city presence; 3,000+ businesses supported." },
   ],
   images: {
     team: {

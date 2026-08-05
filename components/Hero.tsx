@@ -206,7 +206,7 @@ export default function Hero({
                   Money delivered
                 </span>
               </div>
-              <p className="mt-1 font-display text-3xl font-bold text-ink">₹480Cr+</p>
+              <p className="mt-1 font-display text-3xl font-bold text-ink">₹100Cr+</p>
               <p className="text-xs font-semibold text-slate">Across loans & subsidies</p>
             </motion.div>
 

@@ -8,7 +8,7 @@ type CountUpProps = {
   className?: string;
 };
 
-/** Animates numeric portion of strings like "₹480Cr+", "12,000+", "95%", "48 hrs" */
+/** Animates numeric portion of strings like "₹100Cr+", "3,000+", "95%", "48 hrs" */
 export default function CountUp({ value, className }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.6 });
