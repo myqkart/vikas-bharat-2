@@ -89,7 +89,7 @@ const bentoBlogs: BentoBlogItem[] = [
     badgeBg: "bg-white text-emerald-800 border border-emerald-100/80 shadow-[0_1px_2px_rgba(29,131,72,0.06)]",
     textColors: {
       title: "text-ink font-display",
-      meta: "text-slate",
+      meta: "text-ink/75 font-semibold",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
     svgDecoration: (
@@ -120,7 +120,7 @@ const bentoBlogs: BentoBlogItem[] = [
     badgeBg: "bg-white text-amber-800 border border-amber-100/80 shadow-[0_1px_2px_rgba(217,140,15,0.06)]",
     textColors: {
       title: "text-ink font-display",
-      meta: "text-slate",
+      meta: "text-ink/75 font-semibold",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
     svgDecoration: (
@@ -150,7 +150,7 @@ const bentoBlogs: BentoBlogItem[] = [
     badgeBg: "bg-white text-blue-800 border border-blue-100/80 shadow-[0_1px_2px_rgba(30,62,114,0.06)]",
     textColors: {
       title: "text-ink font-display",
-      meta: "text-slate",
+      meta: "text-ink/75 font-semibold",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
     svgDecoration: (
@@ -181,7 +181,7 @@ const bentoBlogs: BentoBlogItem[] = [
     badgeBg: "bg-white text-purple-800 border border-purple-100/80 shadow-[0_1px_2px_rgba(124,58,237,0.06)]",
     textColors: {
       title: "text-ink font-display",
-      meta: "text-slate",
+      meta: "text-ink/75 font-semibold",
       arrow: "text-ink border-ink/15 hover:border-ink/30 hover:bg-ink/5",
     },
     svgDecoration: (
@@ -378,7 +378,7 @@ function BlogCard({
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover object-right-bottom transition-transform duration-700 ease-out group-hover:scale-105"
+            className="object-cover object-right-bottom transition-all duration-700 ease-out group-hover:scale-105 opacity-65 group-hover:opacity-85"
           />
         </div>
 
