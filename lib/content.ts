@@ -119,13 +119,13 @@ export const passbook = {
     "Real outcomes from registrations, loans, and scheme filings — stamped in plain numbers so you can trust the desk before you dial.",
   body: "We track every rupee sanctioned, every licence issued, and every first reply. These figures update from live case work across Ahmedabad, Jaipur, Delhi NCR, and Hyderabad.",
   stats: [
-    { value: "₹100Cr+", label: "Money delivered", stamp: "PAID" },
-    { value: "3,000+", label: "Businesses helped", stamp: "DONE" },
-    { value: "48 hrs", label: "First reply time", stamp: "FAST" },
-    { value: "95%", label: "Applications approved", stamp: "OK" },
+    { value: "₹480Cr+", label: "Money Delivered", stamp: "PAID" },
+    { value: "12,000+", label: "Businesses Helped", stamp: "DONE" },
+    { value: "48 hrs", label: "First Reply Time", stamp: "FAST" },
+    { value: "95%", label: "Applications Approved", stamp: "OK" },
   ],
   extras: [
-    { label: "DPIIT-recognised startups", value: "2,45,430" },
+    { label: "DPIT-recognised startups", value: "2,45,430" },
     { label: "PAN India 80 IAC tax exemption", value: "4,567" },
     { label: "Startup turnover threshold", value: "₹200 Cr" },
   ],
