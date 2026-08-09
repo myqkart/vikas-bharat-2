@@ -3,6 +3,7 @@ import AboutHero from "@/components/AboutHero";
 import CompanyMission from "@/components/CompanyMission";
 import CoreValues from "@/components/CoreValues";
 import AboutServices from "@/components/AboutServices";
+import AboutJourney from "@/components/AboutJourney";
 
 export default function AboutPage() {
   return (
@@ -11,8 +12,10 @@ export default function AboutPage() {
       <CompanyMission />
       <CoreValues />
       <AboutServices />
+      <AboutJourney />
     </SiteChrome>
   );
 }
+
 
 
