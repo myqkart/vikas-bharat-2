@@ -46,4 +46,12 @@ export const photos = {
   credentialShop: u("photo-1556740738-b6a63e27c4df", 1000), // retail entrepreneur
   credentialTeam: u("photo-1600880292089-90a7e086ee0c", 1000), // advisory desk meeting
   credentialGrowth: u("photo-1521791136064-7986c2920216", 1000), // partnership / growth
+  /** Customer success stories — documentary business environments */
+  storyFoodPrep: u("photo-1606787366850-de6330128bfc", 1200), // food prep / kitchen work
+  storyFoodMarket: u("photo-1517248135467-4c7edcad34c4", 1200), // marketplace / listing ready
+  storyHardwareShop: u("photo-1504917595217-d4dc5ebe6122", 1200), // tools / hardware context
+  storyHardwareMachine: u("photo-1565043589221-1a6fd9ae45c7", 1200), // machinery / upgrade
+  storyTailorWork: u("photo-1558171813-4c088753af8f", 1200), // sewing / garments
+  storyTailorDetail: u("photo-1594938298603-c8148c4dae35", 800), // fabric / craft detail
+  storyConsult: u("photo-1556761175-5973dc0f32e7", 1000), // walk-in consult energy
 } as const;
