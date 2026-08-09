@@ -5,7 +5,6 @@ import {
   useEffect,
   useRef,
   useState,
-  type PointerEvent as ReactPointerEvent,
 } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,20 +13,21 @@ import {
   LayoutGroup,
   motion,
   useMotionTemplate,
-  useMotionValue,
   useMotionValueEvent,
   useReducedMotion,
   useScroll,
   useSpring,
   useTransform,
 } from "framer-motion";
+import { usePathname } from "next/navigation";
 import {
-  Handshake,
+  BookOpen,
+  Briefcase,
+  Landmark,
+  Mail,
   MessageCircle,
   Phone,
-  Rocket,
-  ShieldCheck,
-  TrendingUp,
+  Users,
   X,
   type LucideIcon,
 } from "lucide-react";
@@ -37,19 +37,18 @@ const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 const phoneHref = `tel:${site.phoneNumber}`;
 
 const navIcons: Record<(typeof navigation)[number]["icon"], LucideIcon> = {
-  rocket: Rocket,
-  handshake: Handshake,
-  trending: TrendingUp,
-  shield: ShieldCheck,
+  users: Users,
+  briefcase: Briefcase,
+  landmark: Landmark,
+  book: BookOpen,
+  mail: Mail,
 };
 
-const sectionIds = navigation.map((item) => item.section);
-
 /** Wider arc so labels clear each other on narrow phones */
-const RADIAL_ANGLES = [-75, -25, 25, 75] as const;
-const RADIAL_RADIUS = 152;
+const RADIAL_ANGLES = [-80, -40, 0, 40, 80] as const;
+const RADIAL_RADIUS = 158;
 
-function MagLink({
+function NavLink({
   href,
   active,
   compact,
@@ -62,30 +61,10 @@ function MagLink({
   label: string;
   icon: LucideIcon;
 }) {
-  const ref = useRef<HTMLAnchorElement>(null);
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const x = useSpring(mx, { stiffness: 300, damping: 20, mass: 0.32 });
-  const y = useSpring(my, { stiffness: 300, damping: 20, mass: 0.32 });
-
-  const onMove = (e: ReactPointerEvent<HTMLAnchorElement>) => {
-    const el = ref.current;
-    if (!el) return;
-    const r = el.getBoundingClientRect();
-    mx.set((e.clientX - r.left - r.width / 2) * 0.3);
-    my.set((e.clientY - r.top - r.height / 2) * 0.3);
-  };
-
   return (
-    <motion.div style={{ x, y }} className="relative">
+    <div className="relative">
       <Link
-        ref={ref}
         href={href}
-        onPointerMove={onMove}
-        onPointerLeave={() => {
-          mx.set(0);
-          my.set(0);
-        }}
         className={`relative z-10 flex items-center justify-center gap-2 rounded-full outline-offset-2 transition-colors ${
           compact ? "h-10 min-w-10 px-3" : "h-11 px-3.5"
         } ${active ? "text-ink" : "text-slate hover:text-ink"}`}
@@ -114,7 +93,7 @@ function MagLink({
           {label}
         </span>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 
@@ -232,10 +211,13 @@ function BeaconAura({ dense = false }: { dense?: boolean }) {
 
 export default function Header() {
   const reduce = useReducedMotion();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [compact, setCompact] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [active, setActive] = useState<string>(navigation[0].href);
+  const active =
+    navigation.find((item) => pathname === item.href || pathname.startsWith(`${item.href}/`))
+      ?.href ?? "";
   const { scrollY } = useScroll();
   const lastY = useRef(0);
   const openRef = useRef(open);
@@ -283,29 +265,6 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [open]);
-
-  useEffect(() => {
-    const elements = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => Boolean(el));
-    if (!elements.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        const top = visible[0];
-        if (!top?.target.id) return;
-        const match = navigation.find((n) => n.section === top.target.id);
-        if (match) setActive(match.href);
-      },
-      { rootMargin: "-28% 0px -55% 0px", threshold: [0, 0.2, 0.45, 0.7] },
-    );
-
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -363,7 +322,7 @@ export default function Header() {
                     aria-label="Primary"
                   >
                     {navigation.map((item) => (
-                      <MagLink
+                      <NavLink
                         key={item.href}
                         href={item.href}
                         active={active === item.href}
@@ -399,7 +358,7 @@ export default function Header() {
                   >
                     <BeaconAura />
                     {navigation.map((item) => (
-                      <MagLink
+                      <NavLink
                         key={item.href}
                         href={item.href}
                         active={active === item.href}

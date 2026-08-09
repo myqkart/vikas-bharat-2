@@ -41,10 +41,11 @@ export const site = {
 } as const;
 
 export const navigation = [
-  { label: "Startup", href: "/#services", icon: "rocket", section: "services" },
-  { label: "Support", href: "/#how-it-works", icon: "handshake", section: "how-it-works" },
-  { label: "Growth", href: "/#stories", icon: "trending", section: "stories" },
-  { label: "Sustain", href: "/#resources", icon: "shield", section: "resources" },
+  { label: "About Us", href: "/about", icon: "users" },
+  { label: "Service", href: "/service", icon: "briefcase" },
+  { label: "Scheme", href: "/scheme", icon: "landmark" },
+  { label: "Blogs", href: "/blogs", icon: "book" },
+  { label: "Contact us", href: "/contact", icon: "mail" },
 ] as const;
 
 export const hero = {
@@ -305,41 +306,262 @@ export const missionTrees = {
 
 export const about = {
   id: "about",
-  eyebrow: "About Bharosa",
-  heading: "Built for dukaan owners, not dashboards.",
-  body: "Bharosa Business Suvidha started as a walk-in help desk for first-time entrepreneurs who were stuck between bank queues, portal logins, and Hindi-English form language. Today we are a multi-city consultancy covering company incorporation, MSME/Udyam, GST, government schemes, loans, licences, and growth advisory — still explained with pictures and phone calls, not jargon.",
+  eyebrow: "01 / Company Introduction",
+  heading: "Who we are. What we do. Who we help.",
+  body: "Vikas Bharat is a pan-India business help desk for startups and MSMEs — registration, funding, certifications, and growth support explained in clear Hindi and English.",
+  whoWeAre: {
+    title: "Who We Are",
+    text: "A walk-in consultancy built for founders and shop owners who need capital, licences, and compliance without portal jargon.",
+  },
+  whatWeDo: {
+    title: "What We Do",
+    text: "We map the right grant, loan, registration, or certification path — then handle documentation, filing, and follow-up until the outcome is stamped.",
+  },
+  whoWeHelp: {
+    title: "Who We Help",
+    text: "First-time entrepreneurs, MSMEs, retailers, manufacturers, and growing startups across India who want one accountable desk.",
+  },
   mission:
     "Make capital, compliance, and licences reachable for every serious small business in India.",
   vision:
     "A Bharat where opening a shop or startup never fails because of paperwork confusion.",
   values: [
     {
-      title: "Clear speech",
-      text: "We explain eligibility in Hindi and English before we ask for a single document.",
+      title: "Trust",
+      text: "Clear advice before any document is collected — eligibility first, paperwork second.",
     },
     {
-      title: "Proof over promises",
-      text: "Stamped outcomes, case timelines, and WhatsApp updates you can forward to family.",
+      title: "Transparency",
+      text: "Fees, timelines, and next steps shared in writing on WhatsApp so nothing stays hidden.",
     },
     {
-      title: "No hidden desks",
-      text: "One accountable team from first call to money-in-account or licence-in-hand.",
+      title: "Customer First",
+      text: "Your business type and city drive the plan — not a one-size template.",
     },
     {
-      title: "Respect for small scale",
-      text: "Kirana, tailoring, hardware, food, and first-time founders get the same care as larger MSMEs.",
+      title: "Integrity",
+      text: "Private consultancy honesty: we never claim to be a government office.",
+    },
+    {
+      title: "Excellence",
+      text: "Filings screened for compliance so you do not file twice or miss a query.",
+    },
+    {
+      title: "Growth",
+      text: "Every case aims at the next stage — sanction, licence live, or expansion-ready.",
     },
   ],
-  milestones: [
-    { year: "2018", text: "Help desk opens in Ahmedabad for MSME filings." },
-    { year: "2020", text: "Scheme matching desk screens 50+ central & state schemes." },
-    { year: "2023", text: "Crossed ₹300Cr cumulative funding facilitated." },
-    { year: "2026", text: "Four-city presence; 3,000+ businesses supported." },
+  servicesOverview: [
+    {
+      title: "Grants",
+      text: "Central and state subsidy pathways matched to your profile.",
+      imageKey: "aboutServiceGrants" as const,
+    },
+    {
+      title: "Business Registration",
+      text: "Company, LLP, proprietorship, MSME/Udyam, and GST setup.",
+      imageKey: "aboutServiceRegistration" as const,
+    },
+    {
+      title: "Certification & Compliance",
+      text: "ISO, BIS/CRS, FSSAI, ZED, and related compliance filings.",
+      imageKey: "aboutServiceCerts" as const,
+    },
+    {
+      title: "Loans & Funding",
+      text: "Bank and NBFC credit products with document-ready files.",
+      imageKey: "aboutServiceLoans" as const,
+    },
+    {
+      title: "Marketing & Branding",
+      text: "Brand basics and go-to-market support for growing desks.",
+      imageKey: "aboutServiceMarketing" as const,
+    },
+    {
+      title: "Legal Consultancy",
+      text: "Agreements, compliance reviews, and founder legal guidance.",
+      imageKey: "aboutServiceLegal" as const,
+    },
+    {
+      title: "NBF / Financial Solutions",
+      text: "NBFC pathways and structured financial solutions for MSMEs.",
+      imageKey: "aboutServiceNbf" as const,
+    },
+  ],
+  process: [
+    {
+      title: "Consultation",
+      text: "Share your business need on a free discovery call.",
+    },
+    {
+      title: "Solution Mapping",
+      text: "We shortlist realistic grants, loans, or licences for you.",
+    },
+    {
+      title: "Documentation",
+      text: "WhatsApp checklist — only the papers that matter.",
+    },
+    {
+      title: "Application / Execution",
+      text: "We prepare and file; you review and sign.",
+    },
+    {
+      title: "Follow-Up",
+      text: "Portal and bank queries tracked until progress is clear.",
+    },
+    {
+      title: "Results",
+      text: "Sanction, licence, or registration — outcome in your hands.",
+    },
+  ],
+  certifications: [
+    {
+      title: "ISO Certifications",
+      text: "Quality and process certifications for business credibility.",
+      imageKey: "aboutCertIso" as const,
+    },
+    {
+      title: "BIS / CRS",
+      text: "Bureau of Indian Standards and CRS compliance support.",
+      imageKey: "aboutCertBis" as const,
+    },
+    {
+      title: "FSSAI",
+      text: "Food business licences with clear document paths.",
+      imageKey: "aboutCertFssai" as const,
+    },
+    {
+      title: "Tax Exemption – Section 80-IAC",
+      text: "Startup tax exemption pathway guidance where eligible.",
+      imageKey: "aboutCertTax" as const,
+    },
+    {
+      title: "ZED Certification",
+      text: "Zero Defect Zero Effect certification support for MSMEs.",
+      imageKey: "aboutCertZed" as const,
+    },
+    {
+      title: "Other Certifications",
+      text: "Additional trade and industry certifications as needed.",
+      imageKey: "aboutCertOther" as const,
+    },
+  ],
+  whyChoose: [
+    {
+      title: "Expert Guidance",
+      text: "Scheme and funding advisors who explain options in plain language.",
+    },
+    {
+      title: "End-to-End Support",
+      text: "From first call to stamped outcome — one accountable team.",
+    },
+    {
+      title: "Transparent Process",
+      text: "Clear steps, written fee summaries, and weekly status updates.",
+    },
+    {
+      title: "Multiple Business Solutions",
+      text: "Grants, loans, registration, certifications, legal, and more — one desk.",
+    },
+    {
+      title: "Dedicated Support",
+      text: "WhatsApp-first follow-ups so you always know what happens next.",
+    },
+    {
+      title: "Growth-Focused Approach",
+      text: "Every filing is aimed at unlocking the next stage of your business.",
+    },
+  ],
+  faqCategories: [
+    {
+      id: "general",
+      title: "General Questions",
+      items: [
+        {
+          q: "What does Vikas Bharat do?",
+          a: "We help startups and MSMEs with registration, funding, certifications, compliance, and growth support under one desk.",
+        },
+        {
+          q: "Are you a government office?",
+          a: "No. We are a private consultancy. We work with you on forms, banks, and portals — we are not a government department.",
+        },
+      ],
+    },
+    {
+      id: "funding",
+      title: "Funding Questions",
+      items: [
+        {
+          q: "Can I get a loan without collateral?",
+          a: "Often yes under Mudra and select NBFC products — eligibility depends on business vintage and cash flows.",
+        },
+        {
+          q: "How long does funding usually take?",
+          a: "Most funding cases take about 4–8 weeks depending on the product, bank queries, and document readiness.",
+        },
+      ],
+    },
+    {
+      id: "registration",
+      title: "Registration Questions",
+      items: [
+        {
+          q: "Do I need Udyam if I already have GST?",
+          a: "Yes for most MSME schemes and many bank products — Udyam is key eligibility proof.",
+        },
+        {
+          q: "Which structure should I choose?",
+          a: "Proprietorship is often faster for a single-owner shop. Private limited suits fundraising and larger contracts.",
+        },
+      ],
+    },
+    {
+      id: "certification",
+      title: "Certification Questions",
+      items: [
+        {
+          q: "Which certifications do you support?",
+          a: "ISO, BIS/CRS, FSSAI, ZED, Section 80-IAC pathways, and other trade certifications as needed.",
+        },
+        {
+          q: "How do I know which certificate I need?",
+          a: "A short consultation maps your industry and sales channel to the right licence set — no guesswork filing.",
+        },
+      ],
+    },
+    {
+      id: "digital",
+      title: "Digital Solution Questions",
+      items: [
+        {
+          q: "Do you help with digital / branding needs?",
+          a: "Yes — marketing and branding support sits alongside registration and funding so growth is not left for later.",
+        },
+        {
+          q: "Can updates happen on WhatsApp?",
+          a: "Yes. Checklists, fee summaries, and status updates are shared on WhatsApp by default.",
+        },
+      ],
+    },
+    {
+      id: "process",
+      title: "Process Questions",
+      items: [
+        {
+          q: "What are the steps after I contact you?",
+          a: "Consultation → solution mapping → documentation → application/execution → follow-up → results.",
+        },
+        {
+          q: "Is the first consultation free?",
+          a: "Yes. The first call is free with no obligation — we clarify fit before any paid work begins.",
+        },
+      ],
+    },
   ],
   images: {
     team: {
       src: photos.aboutTeam,
-      alt: "Bharosa consultants with small business clients",
+      alt: "Vikas Bharat consultants with small business clients",
     },
     office: {
       src: photos.aboutOffice,
@@ -350,12 +572,6 @@ export const about = {
       alt: "Mission visual — growth for Indian MSMEs",
     },
   },
-  certifications: [
-    "ISO 9001:2015 process quality",
-    "MSME registered consultancy",
-    "Bank & NBFC partner desk",
-    "Scheme documentation specialists",
-  ],
 } as const;
 
 /** About page — Certifications & Recognition (real credentials only) */

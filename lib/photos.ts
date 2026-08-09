@@ -71,4 +71,32 @@ export const photos = {
   faqDocuments: u("photo-1554224154-26032ffc0d07", 1000), // paperwork / forms
   faqFounder: u("photo-1556155092-490a1ba16284", 1000), // founder deciding
   faqShop: u("photo-1556742049-0cfed4f6a45d", 1000), // small retail energy
+  /** About page — services overview */
+  aboutServiceGrants: u("photo-1553729459-efe14ef6055d", 1100),
+  aboutServiceRegistration: u("photo-1454165804606-c3d57bc86b40", 1100),
+  aboutServiceCerts: u("photo-1589829545856-d10d557cf95f", 1100),
+  aboutServiceLoans: u("photo-1554224155-6726b3ff858f", 1100),
+  aboutServiceMarketing: u("photo-1552664730-d307ca884978", 1100),
+  aboutServiceLegal: u("photo-1507679799987-c73779587ccf", 1100),
+  aboutServiceNbf: u("photo-1579621970795-87facc2f976d", 1100),
+  /** About page — certifications */
+  aboutCertIso: u("photo-1563986768609-322da13575f3", 900),
+  aboutCertBis: u("photo-1450101499163-c8848c66ca85", 900),
+  aboutCertFssai: u("photo-1414235077428-338989a2e8c0", 900),
+  aboutCertTax: u("photo-1554224154-26032ffc0d07", 900),
+  aboutCertZed: u("photo-1581092160562-40aa08e78837", 900),
+  aboutCertOther: u("photo-1521791136064-7986c2920216", 900),
+  /** About page — process / why choose */
+  aboutProcessConsult: u("photo-1598257006458-087169a1f08d", 1000),
+  aboutProcessMap: u("photo-1551836022-d5d88e9218df", 1000),
+  aboutProcessDocs: u("photo-1568992687947-868a62a9f521", 1000),
+  aboutProcessFile: u("photo-1454165804606-c3d57bc86b40", 1000),
+  aboutProcessFollow: u("photo-1556761175-5973dc0f32e7", 1000),
+  aboutProcessResult: u("photo-1556745757-8d76bdb6984b", 1000),
+  aboutWhyDesk: u("photo-1600880292089-90a7e086ee0c", 1200),
+  aboutWhyShop: u("photo-1556740738-b6a63e27c4df", 1000),
+  aboutWhyCity: u("photo-1587474260584-136574528ed5", 1000),
+  aboutIntroCrowd: u("photo-1529156069898-49953e39b3ac", 1100),
+  aboutIntroWork: u("photo-1600880292203-757bb62b4baf", 1000),
+  aboutIntroPortrait: u("photo-1573497019940-1c28c88b4f3e", 1000),
 } as const;
