@@ -2,11 +2,8 @@ import SiteChrome from "@/components/SiteChrome";
 import AboutHero from "@/components/AboutHero";
 import CompanyMission from "@/components/CompanyMission";
 import CoreValues from "@/components/CoreValues";
-import AboutServices from "@/components/AboutServices";
-import AboutJourney from "@/components/AboutJourney";
-import AboutCertifications from "@/components/AboutCertifications";
-import AboutStories from "@/components/AboutStories";
-import AboutFAQ from "@/components/AboutFAQ";
+import AboutMilestones from "@/components/AboutMilestones";
+import FinalCTA from "@/components/FinalCTA";
 
 export default function AboutPage() {
   return (
@@ -14,14 +11,8 @@ export default function AboutPage() {
       <AboutHero />
       <CompanyMission />
       <CoreValues />
-      <AboutServices />
-      <AboutJourney />
-      <AboutCertifications />
-      <AboutStories />
-      <AboutFAQ />
+      <AboutMilestones />
+      <FinalCTA />
     </SiteChrome>
   );
 }
-
-
-
