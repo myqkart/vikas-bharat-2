@@ -4,7 +4,6 @@ import CompanyMission from "@/components/CompanyMission";
 import CoreValues from "@/components/CoreValues";
 import AboutServices from "@/components/AboutServices";
 import AboutJourney from "@/components/AboutJourney";
-import AboutProof from "@/components/AboutProof";
 
 export default function AboutPage() {
   return (
@@ -14,7 +13,6 @@ export default function AboutPage() {
       <CoreValues />
       <AboutServices />
       <AboutJourney />
-      <AboutProof />
     </SiteChrome>
   );
 }
