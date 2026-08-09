@@ -6,6 +6,7 @@ import AboutServices from "@/components/AboutServices";
 import AboutJourney from "@/components/AboutJourney";
 import AboutCertifications from "@/components/AboutCertifications";
 import AboutStories from "@/components/AboutStories";
+import AboutFAQ from "@/components/AboutFAQ";
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,7 @@ export default function AboutPage() {
       <AboutJourney />
       <AboutCertifications />
       <AboutStories />
+      <AboutFAQ />
     </SiteChrome>
   );
 }

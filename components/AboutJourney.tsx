@@ -13,7 +13,6 @@ import {
   Building,
   BadgeAlert,
   Coins,
-  ArrowDown,
   ArrowUpRight,
   Plus,
   Check
@@ -30,7 +29,6 @@ interface JourneyStep {
   emotion: string;
   image: string;
   detailImage: string;
-  coords: string;
   status: string;
   progress: string;
   icon: React.ComponentType<any>;
@@ -48,7 +46,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Uncertainty",
     image: photos.stepCall,
     detailImage: photos.aboutOffice,
-    coords: "23° 01' 44\" N / 72° 34' 47\" E",
     status: "STATUS / INITIALIZING",
     progress: "12.5%",
     icon: PhoneCall,
@@ -63,7 +60,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Discovery",
     image: photos.heroMeeting,
     detailImage: photos.badgeRating,
-    coords: "18° 32' 13\" N / 73° 51' 24\" E",
     status: "STATUS / SCHEME_MATCH",
     progress: "25.0%",
     icon: Compass,
@@ -78,7 +74,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Structure",
     image: photos.badgeMsme,
     detailImage: photos.seoTrademark,
-    coords: "26° 54' 44\" N / 75° 47' 11\" E",
     status: "STATUS / AUDIT_READY",
     progress: "37.5%",
     icon: FolderOpen,
@@ -93,7 +88,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Clarity",
     image: photos.stepMatch,
     detailImage: photos.seoUdyam,
-    coords: "22° 43' 11\" N / 75° 51' 28\" E",
     status: "STATUS / CHECKING_FIT",
     progress: "50.0%",
     icon: Search,
@@ -108,7 +102,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Progress",
     image: photos.serviceLoan,
     detailImage: photos.stepPaperwork,
-    coords: "12° 58' 23\" N / 77° 35' 45\" E",
     status: "STATUS / FILING_ACTIVE",
     progress: "62.5%",
     icon: FileCheck2,
@@ -123,7 +116,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Verification",
     image: photos.stepPaperwork,
     detailImage: photos.seoCompany,
-    coords: "19° 04' 33\" N / 72° 52' 39\" E",
     status: "STATUS / LIASON_STAGE",
     progress: "75.0%",
     icon: Building,
@@ -138,7 +130,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Confidence",
     image: photos.badgeGovt,
     detailImage: photos.heroGlow,
-    coords: "17° 22' 31\" N / 78° 28' 27\" E",
     status: "STATUS / SANCTIONED_OK",
     progress: "87.5%",
     icon: BadgeAlert,
@@ -153,7 +144,6 @@ const journeySteps: JourneyStep[] = [
     emotion: "Outcome",
     image: photos.stepMoney,
     detailImage: photos.serviceGrowth,
-    coords: "28° 36' 36\" N / 77° 13' 48\" E",
     status: "STATUS / DISBURSED_PAID",
     progress: "100%",
     icon: Coins,
@@ -266,20 +256,16 @@ export default function AboutJourney() {
               >
                 <div className="flex items-center gap-2.5 text-xs font-mono font-bold uppercase tracking-widest text-indigo">
                   <span className="h-2 w-2 rounded-full bg-marigold animate-pulse" />
-                  SECTION 05 // ACTION MAP
+                  ACTION MAP
                 </div>
                 <h2 className="mt-6 font-display text-[48px] xl:text-[58px] font-black text-ink leading-[1.1] tracking-tight">
                   Possibility to <br />
                   <span className="font-serif italic text-marigold-dark font-normal">Realized Outcome.</span>
                 </h2>
                 <p className="mt-6 text-slate text-sm xl:text-base leading-relaxed font-semibold">
-                  A custom business filing is not a single transaction. It is a path of validation. 
-                  Scroll down to traverse the exact milestones from your first question to money in hand.
+                  A custom business filing is not a single transaction. It is a path of validation —
+                  from your first question to money in hand.
                 </p>
-                <div className="mt-12 flex items-center gap-3 text-[10px] font-mono tracking-widest text-slate/50">
-                  <span>SCROLL DOWN TO INITIATE YATRA</span>
-                  <ArrowDown size={11} className="animate-bounce" />
-                </div>
               </motion.div>
             </div>
 
@@ -330,8 +316,8 @@ export default function AboutJourney() {
                     {/* Step HUD Micro-details */}
                     <div className="grid grid-cols-2 border border-border/70 rounded-xl bg-white/40 backdrop-blur-md overflow-hidden mt-6 text-[10px] text-ink font-mono font-bold divide-x divide-border/60 shadow-sm">
                       <div className="p-3 flex flex-col justify-between">
-                        <div className="text-[8px] font-semibold text-slate/50 mb-1">COORDINATES</div>
-                        <span className="leading-tight text-[9px] tracking-tight">{step.coords}</span>
+                        <div className="text-[8px] font-semibold text-slate/50 mb-1">PHASE</div>
+                        <span className="leading-tight text-[9px] tracking-tight">{step.emotion}</span>
                       </div>
                       <div className="p-3 flex flex-col justify-between">
                         <div className="text-[8px] font-semibold text-slate/50 mb-1">SYSTEM STATE</div>
@@ -447,7 +433,7 @@ export default function AboutJourney() {
 
                     {/* Active Step HUD Micro Label */}
                     <div className="absolute -bottom-4 left-4 font-mono text-[9px] font-bold text-slate/40 flex items-center gap-2 pointer-events-none">
-                      <span>LAT: {step.coords.split("/")[0].trim()}</span>
+                      <span>PHASE: {step.emotion.toUpperCase()}</span>
                       <span>•</span>
                       <span>INDEX: {step.progress}</span>
                     </div>
@@ -531,7 +517,7 @@ export default function AboutJourney() {
           <div className="mb-20">
             <div className="flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-widest text-indigo">
               <span className="h-1.5 w-1.5 rounded-full bg-marigold animate-pulse" />
-              SECTION 05 // ACTION MAP
+              ACTION MAP
             </div>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl font-black text-ink leading-tight">
               Possibility to <br />
@@ -581,7 +567,7 @@ export default function AboutJourney() {
                   {/* Content details block */}
                   <div className="flex flex-col items-start px-1">
                     <div className="text-[9px] font-mono font-bold tracking-wider text-slate/50 mb-1">
-                      {step.coords}
+                      {step.emotion.toUpperCase()} · {step.progress}
                     </div>
                     <h3 className="font-display text-xl sm:text-2xl font-black text-ink leading-tight">
                       {step.title}

@@ -487,12 +487,6 @@ export default function AboutHero() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="mt-16 flex flex-col items-center justify-center text-center opacity-80 pointer-events-none animate-bounce">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate">Scroll to Explore</span>
-          <span className="text-marigold text-xs mt-1">↓</span>
-        </div>
-
       </div>
 
       {/* SVG Wave separator bottom border */}

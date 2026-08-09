@@ -822,7 +822,7 @@ export default function AboutStories() {
 
       {/* Micro corner details */}
       <div className="absolute top-16 left-8 text-[9px] font-mono tracking-widest text-slate/35 pointer-events-none select-none hidden lg:block">
-        [ IMPACT FIELD · {aboutStories.section} ]
+        [ IMPACT FIELD ]
       </div>
       <div className="absolute top-16 right-12 text-marigold/30 text-lg font-bold font-mono pointer-events-none select-none hidden lg:block">
         +
@@ -1019,7 +1019,7 @@ export default function AboutStories() {
             </span>
             <span>03</span>
             <span className="text-border">·</span>
-            <span className="text-indigo/60">HUMAN IMPACT CONTINUES →</span>
+            <span className="text-indigo/60">PEOPLE → CLARITY →</span>
           </div>
         </div>
       </footer>

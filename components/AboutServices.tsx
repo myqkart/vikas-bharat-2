@@ -13,7 +13,6 @@ import {
   TrendingUp,
   Handshake,
   Scale,
-  ArrowDown,
   ArrowUpRight,
   ShieldAlert,
 } from "lucide-react";
@@ -135,7 +134,7 @@ export default function AboutServices() {
         <div className="max-w-[1200px] mx-auto text-center relative z-10 flex flex-col items-center">
           <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-indigo">
             <span className="h-2 w-2 rounded-full bg-marigold animate-pulse" />
-            SECTION 04 // THE GROWTH BLUEPRINT
+            THE GROWTH BLUEPRINT
           </div>
           <h2 className="mt-6 font-display text-4xl sm:text-6xl font-black text-ink leading-tight max-w-4xl tracking-tight">
             The Infrastructure of <span className="font-serif italic text-marigold-dark font-normal">Bharat's Ambition.</span>
@@ -143,10 +142,6 @@ export default function AboutServices() {
           <p className="mt-6 text-slate max-w-2xl text-base lg:text-lg leading-relaxed font-medium">
             From a single registration to a central grant match, we clear the paperwork pathways so founders can build. No hidden desks, no legal jargon.
           </p>
-          <div className="mt-12 flex items-center gap-2 text-[9px] font-mono tracking-widest text-slate/50 animate-bounce">
-            <span>SCROLL TO TRAVERSE SERVICES</span>
-            <ArrowDown size={10} />
-          </div>
         </div>
       </section>
 
@@ -277,11 +272,11 @@ export default function AboutServices() {
                         </div>
                       </div>
 
-                      {/* Micro Coordinate label stamp */}
+                      {/* Micro label stamp */}
                       <div className="absolute -bottom-8 left-4 font-mono text-[8px] tracking-widest text-slate/40 flex items-center gap-2">
-                        <span>LATITUDE: 23.0144° N</span>
+                        <span>DESK · AHMEDABAD</span>
                         <span>•</span>
-                        <span>LONGITUDE: 72.3447° E</span>
+                        <span>EST. 2016</span>
                       </div>
                     </div>
                   );
@@ -296,7 +291,7 @@ export default function AboutServices() {
                         key={item.slug}
                         onClick={() => handleScrollToPanel(idx)}
                         className="flex items-center gap-3 text-left transition-all duration-300 group cursor-pointer outline-none border-0 bg-transparent py-1"
-                        aria-label={`Scroll to ${item.title}`}
+                        aria-label={item.title}
                       >
                         <span className={`w-2 h-2 rounded-full border border-marigold transition-all duration-300 ${
                           isCurrent ? "bg-marigold scale-150" : "bg-transparent scale-100 group-hover:bg-marigold/40"

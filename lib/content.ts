@@ -244,7 +244,7 @@ export const missionTrees = {
   id: "vision",
   eyebrow: "The Ink Compass",
   heading: "Spin the seal. Lock a mandate.",
-  sub: "Four living mandates orbit the VIKASBHART seal. Scroll to spin the instrument — when a ring locks at the meridian, support blooms outward from the center.",
+  sub: "Four living mandates orbit the VIKASBHART seal. When a ring locks at the meridian, support blooms outward from the center.",
   hubLabel: "VIKASBHART",
   hubTagline: "Sapno Se Safalta Tak",
   trees: [
@@ -362,7 +362,7 @@ export const about = {
 export const aboutCredentials = {
   id: "credentials",
   section: "06",
-  eyebrow: "SECTION 06 // CREDENTIALS",
+  eyebrow: "CREDENTIALS",
   headingLead: "Proof that travels",
   headingAccent: "with every file.",
   hindi: "मान्यता एवं प्रमाण",
@@ -799,7 +799,7 @@ export const caseStudies = {
 export const aboutStories = {
   id: "customer-stories",
   section: "07",
-  eyebrow: "SECTION 07 // HUMAN IMPACT",
+  eyebrow: "HUMAN IMPACT",
   headingLead: "Real people.",
   headingAccent: "Real transform.",
   hindi: "Unki kahani, unki zubaani.",
@@ -986,6 +986,126 @@ export const faq = {
       question: "Documents kaise bheju?",
       answer:
         "WhatsApp par checklist milti hai. Clear photos / PDFs kaafi hain. Originals sirf bank ya department ke demand par.",
+    },
+  ],
+} as const;
+
+/** About page — FAQ (editorial clarity index) */
+export const aboutFaq = {
+  id: "faq",
+  section: "08",
+  eyebrow: "CLARITY",
+  headingLead: "Questions",
+  headingAccent: "before you begin.",
+  hindi: "Sawal jo har founder poochta hai.",
+  sub: "Eligibility, fees, timelines, and small-business fit — answered without legal fog.",
+  continuity: "FROM PEOPLE → CLARITY",
+  indexLabel: "CLARITY INDEX",
+  answerLabel: "ANSWER",
+  questionLabel: "QUESTION",
+  exitLabel: "CLARITY · CONFIDENCE · NEXT STEP",
+  exitLead: "Still unsure?",
+  exitAccent: "Ek free call.",
+  exitSub:
+    "Eligibility, scheme fit, aur next documents — 2 minute mein clear. Koi obligation nahi.",
+  ctaPrimary: "WhatsApp Par Baat Karo",
+  ctaSecondary: "Call an Expert",
+  items: [
+    {
+      id: "eligible",
+      num: "01",
+      tag: "Eligibility",
+      question: "Kya main eligible hoon?",
+      display: ["Kya main", "eligible hoon?"],
+      answer:
+        "Bas 2 minute ka call karo, hum free mein bata denge. Hum business type, city, turnover band, aur documents dekh kar 2–3 realistic options shortlist karte hain — loan, subsidy, ya licence.",
+      note: "FREE CHECK · 2 MIN",
+      image: photos.faqConsult,
+      imageAlt: "Advisor reviewing eligibility with a founder",
+    },
+    {
+      id: "fees",
+      num: "02",
+      tag: "Fees",
+      question: "Kitna paisa lagega hume?",
+      display: ["Kitna paisa", "lagega hume?"],
+      answer:
+        "Pehli baat-cheet bilkul free hai. Koi hidden charge nahi. Agar aap case proceed karte ho to fees clear WhatsApp summary mein likh kar bhejte hain — pehle kaam, phir paisa clarity.",
+      note: "FIRST CALL FREE",
+      image: photos.faqFounder,
+      imageAlt: "Founder reviewing a clear fee summary",
+    },
+    {
+      id: "timeline",
+      num: "03",
+      tag: "Timeline",
+      question: "Kitna time lagega?",
+      display: ["Kitna time", "lagega?"],
+      answer:
+        "Zyadatar funding case mein 4–8 hafte, scheme ke hisaab se. Registration aur FSSAI aksar 1–3 hafte. Portal queries aur bank holidays timeline badha sakte hain — hum weekly status dete hain.",
+      note: "WEEKLY STATUS",
+      image: photos.stepMatch,
+      imageAlt: "Team tracking application timelines",
+    },
+    {
+      id: "small-biz",
+      num: "04",
+      tag: "Fit",
+      question: "Kya mera business chhota hai to bhi help milegi?",
+      display: ["Chhota business", "bhi chalega?"],
+      answer:
+        "Haan! Chhoti dukaan se lekar badi company tak, sabko madad milti hai. Kirana, tailoring, hardware, tiffin, and first-time founders hamare common clients hain.",
+      note: "DUKAAN → COMPANY",
+      image: photos.faqShop,
+      imageAlt: "Small shop owner at their counter",
+    },
+    {
+      id: "govt",
+      num: "05",
+      tag: "Who we are",
+      question: "Kya aap government office ho?",
+      display: ["Kya aap", "government office ho?"],
+      answer:
+        "Nahi. Hum private consultancy hain. Hum forms, banks, aur portals par aapke saath kaam karte hain — kisi bhi sarkari department ka hissa nahi.",
+      note: "PRIVATE CONSULTANCY",
+      image: photos.credentialTeam,
+      imageAlt: "Private consultancy desk at work",
+    },
+    {
+      id: "documents",
+      num: "06",
+      tag: "Documents",
+      question: "Documents kaise bheju?",
+      display: ["Documents", "kaise bheju?"],
+      answer:
+        "WhatsApp par checklist milti hai. Clear photos / PDFs kaafi hain. Originals sirf bank ya department ke demand par.",
+      note: "WHATSAPP CHECKLIST",
+      image: photos.faqDocuments,
+      imageAlt: "Documents and checklist ready to share",
+    },
+    {
+      id: "collateral",
+      num: "07",
+      tag: "Loans",
+      question: "Collateral ke bina loan mil sakta hai?",
+      display: ["Collateral ke bina", "loan mil sakta hai?"],
+      answer:
+        "Often yes under Mudra and select NBFC products — eligibility depends on business vintage and cash flows.",
+      note: "MUDRA · NBFC PATHS",
+      image: photos.serviceLoan,
+      imageAlt: "Loan paperwork review for MSME funding",
+    },
+    {
+      id: "udyam",
+      num: "08",
+      tag: "Registration",
+      question: "GST hai to bhi Udyam chahiye?",
+      display: ["GST hai to bhi", "Udyam chahiye?"],
+      answer:
+        "Yes for most MSME schemes and many bank products — Udyam is the key eligibility proof.",
+      note: "UDYAM UNLOCKS SCHEMES",
+      image: photos.seoUdyam,
+      imageAlt: "MSME Udyam registration desk",
     },
   ],
 } as const;

@@ -705,7 +705,7 @@ export default function MissionTrees() {
                   viewBox="0 0 1000 1000"
                   className="h-full w-full select-none"
                   role="img"
-                  aria-label="Interactive Ink Compass — scroll, drag, or click to lock mandates"
+                  aria-label="Interactive Ink Compass — drag or click to lock mandates"
                 >
                   <defs>
                     <radialGradient id={glowId} cx="50%" cy="50%" r="50%">
@@ -877,7 +877,7 @@ export default function MissionTrees() {
                   })}
                 </div>
                 <p className="mt-1.5 text-[11px] text-slate/65">
-                  Scroll or drag to spin · click a ring to lock
+                  Drag to spin · click a ring to lock
                 </p>
               </aside>
             </div>

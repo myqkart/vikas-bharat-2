@@ -119,10 +119,7 @@ export default function CompanyMission() {
         </svg>
       </motion.div>
 
-      {/* Corner Brackets, Plus marks & GPS Coordinates (Handcrafted micro-details) */}
-      <div className="absolute top-12 left-8 text-[9px] font-mono tracking-widest text-slate/40 pointer-events-none select-none hidden lg:block">
-        [ 23° 01' 44" N / 72° 34' 47" E ] · AHM-HQ
-      </div>
+      {/* Corner marks (handcrafted micro-details) */}
       <div className="absolute bottom-12 left-8 text-[9px] font-mono tracking-widest text-slate/40 pointer-events-none select-none hidden lg:block">
         VIKAS BHARK DESK · EST. 2016
       </div>

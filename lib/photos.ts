@@ -54,4 +54,9 @@ export const photos = {
   storyTailorWork: u("photo-1558171813-4c088753af8f", 1200), // sewing / garments
   storyTailorDetail: u("photo-1594938298603-c8148c4dae35", 800), // fabric / craft detail
   storyConsult: u("photo-1556761175-5973dc0f32e7", 1000), // walk-in consult energy
+  /** About FAQ — clarity / consultation / documents */
+  faqConsult: u("photo-1573164713714-d95e436ab8d6", 1000), // advisor guidance
+  faqDocuments: u("photo-1554224154-26032ffc0d07", 1000), // paperwork / forms
+  faqFounder: u("photo-1556155092-490a1ba16284", 1000), // founder deciding
+  faqShop: u("photo-1556742049-0cfed4f6a45d", 1000), // small retail energy
 } as const;

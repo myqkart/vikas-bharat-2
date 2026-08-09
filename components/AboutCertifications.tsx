@@ -65,11 +65,12 @@ export default function AboutCertifications() {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // Intro (0) + 4 certs (1–4) + recognition band (5)
-    if (latest < 0.12) setActiveIndex(0);
-    else if (latest < 0.28) setActiveIndex(1);
+    // Wider bands so each credential can be read before the next swaps in
+    if (latest < 0.08) setActiveIndex(0);
+    else if (latest < 0.26) setActiveIndex(1);
     else if (latest < 0.44) setActiveIndex(2);
-    else if (latest < 0.6) setActiveIndex(3);
-    else if (latest < 0.76) setActiveIndex(4);
+    else if (latest < 0.62) setActiveIndex(3);
+    else if (latest < 0.80) setActiveIndex(4);
     else setActiveIndex(5);
   });
 
@@ -83,7 +84,7 @@ export default function AboutCertifications() {
       ref={containerRef}
       id="credentials"
       className="relative bg-paper"
-      style={{ height: isDesktop ? "240vh" : "auto" }}
+      style={{ height: isDesktop ? "560vh" : "auto" }}
     >
       {/* Continuity curve from Process → Credentials */}
       <div className="absolute -top-1 left-0 right-0 h-24 pointer-events-none overflow-hidden z-30">
@@ -432,7 +433,7 @@ export default function AboutCertifications() {
           <div className="relative w-[46%] h-full flex flex-col justify-center pr-14 xl:pr-20 pl-6 z-20">
             {/* Intro */}
             <div
-              className="absolute inset-x-6 xl:inset-x-8 top-0 bottom-0 flex flex-col justify-center transition-all duration-700"
+              className="absolute inset-x-6 xl:inset-x-8 top-0 bottom-0 flex flex-col justify-center transition-all duration-1000 ease-out"
               style={{
                 opacity: activeIndex === 0 ? 1 : 0,
                 transform:
@@ -461,10 +462,6 @@ export default function AboutCertifications() {
               <p className="mt-5 text-slate text-sm xl:text-base leading-relaxed font-semibold max-w-md">
                 {aboutCredentials.sub}
               </p>
-              <div className="mt-8 flex items-center gap-3 text-[10px] font-mono tracking-widest text-slate/50">
-                <span>SCROLL TO INSPECT CREDENTIALS</span>
-                <ArrowUpRight size={11} className="rotate-90" />
-              </div>
             </div>
 
             {/* Certification panels */}
@@ -474,7 +471,7 @@ export default function AboutCertifications() {
               return (
                 <div
                   key={cert.id}
-                  className="absolute inset-x-6 xl:inset-x-8 top-0 bottom-0 flex flex-col justify-center transition-all duration-700"
+                  className="absolute inset-x-6 xl:inset-x-8 top-0 bottom-0 flex flex-col justify-center transition-all duration-1000 ease-out"
                   style={{
                     opacity: isActive ? 1 : 0,
                     transform: isActive ? "translateY(0)" : "translateY(20px)",
@@ -536,7 +533,7 @@ export default function AboutCertifications() {
 
             {/* Recognition outro panel */}
             <div
-              className="absolute inset-x-6 xl:inset-x-8 top-0 bottom-0 flex flex-col justify-center transition-all duration-700"
+              className="absolute inset-x-6 xl:inset-x-8 top-0 bottom-0 flex flex-col justify-center transition-all duration-1000 ease-out"
               style={{
                 opacity: activeIndex === 5 ? 1 : 0,
                 transform:

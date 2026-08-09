@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import { Compass, ShieldCheck, Users, CheckCircle, ArrowRight } from "lucide-react";
+import { Compass, ShieldCheck, Users, CheckCircle } from "lucide-react";
 import { photos } from "@/lib/photos";
 
 interface ValueItem {
@@ -12,7 +12,6 @@ interface ValueItem {
   title: string;
   text: string;
   location: string;
-  coords: string;
   image: string;
   glowColor: string;
   icon: React.ComponentType<any>;
@@ -25,7 +24,6 @@ const valueItems: ValueItem[] = [
     title: "Clear speech",
     text: "We explain eligibility in Hindi and English before we ask for a single document.",
     location: "AHMEDABAD HELP DESK",
-    coords: "23° 01' 44\" N / 72° 34' 47\" E",
     image: photos.stepCall,
     glowColor: "rgba(245, 166, 35, 0.12)", // Marigold glow
     icon: Compass,
@@ -36,7 +34,6 @@ const valueItems: ValueItem[] = [
     title: "Proof over promises",
     text: "Stamped outcomes, case timelines, and WhatsApp updates you can forward to family.",
     location: "PUNE HELP DESK",
-    coords: "18° 32' 13\" N / 73° 51' 24\" E",
     image: photos.serviceCertificate,
     glowColor: "rgba(30, 62, 114, 0.12)", // Indigo glow
     icon: ShieldCheck,
@@ -47,7 +44,6 @@ const valueItems: ValueItem[] = [
     title: "No hidden desks",
     text: "One accountable team from first call to money-in-account or licence-in-hand.",
     location: "JAIPUR HELP DESK",
-    coords: "26° 54' 44\" N / 75° 47' 11\" E",
     image: photos.personRitu,
     glowColor: "rgba(29, 131, 72, 0.12)", // Success Green glow
     icon: Users,
@@ -58,7 +54,6 @@ const valueItems: ValueItem[] = [
     title: "Respect for small scale",
     text: "Kirana, tailoring, hardware, food, and first-time founders get the same care as larger MSMEs.",
     location: "INDORE HELP DESK",
-    coords: "22° 43' 11\" N / 75° 51' 28\" E",
     image: photos.heroShopkeeper,
     glowColor: "rgba(217, 140, 15, 0.14)", // Marigold dark glow
     icon: CheckCircle,
@@ -208,22 +203,22 @@ export default function CoreValues() {
           <div className="w-full px-12 flex justify-between items-center pointer-events-none select-none z-20">
             <div className="flex flex-col">
               <span className="text-[10px] font-bold text-slate/50 font-mono tracking-widest">
-                SECTION 03 // BHAROSA CULTURAL CORE
+                BHAROSA CULTURAL CORE
               </span>
               <h2 className="font-display text-lg font-bold text-ink">
                 How We Operate Daily
               </h2>
             </div>
             <div className="text-[10px] font-mono tracking-wider text-slate/50 text-right">
-              EST. 2018 · AHM-HQ · COORDINATE MAP
+              EST. 2018 · HELP DESKS
             </div>
           </div>
 
-          {/* Bottom Panel: Live Coordinate HUD & Scroll Progress Indicator */}
+          {/* Bottom Panel: Status HUD & Progress Indicator */}
           <div className="w-full px-12 flex justify-between items-end pointer-events-none select-none z-20">
-            {/* Live GPS Panel */}
+            {/* Live status panel */}
             <div className="flex flex-col font-mono text-[9px] text-slate/50 bg-paper-deep/40 border border-border/30 backdrop-blur-md px-4 py-3 rounded-lg shadow-sm">
-              <span className="font-bold text-ink mb-1">[ SYSTEM COORDINATE READOUT ]</span>
+              <span className="font-bold text-ink mb-1">[ DESK STATUS ]</span>
               <span className="flex justify-between gap-4">
                 <span>ACTIVE NODE:</span>
                 <span className="text-indigo font-bold">
@@ -234,12 +229,6 @@ export default function CoreValues() {
                 <span>HELP DESK:</span>
                 <span className="text-marigold-dark font-bold">
                   {activeIndex === 0 ? "WAITING FOR INPUT" : valueItems[activeIndex - 1].location}
-                </span>
-              </span>
-              <span className="flex justify-between gap-4">
-                <span>LAT/LONG:</span>
-                <span className="text-ink">
-                  {activeIndex === 0 ? "SCANNING CONTINENT" : valueItems[activeIndex - 1].coords}
                 </span>
               </span>
             </div>
@@ -254,12 +243,6 @@ export default function CoreValues() {
                 />
               </div>
               <span>04 / SCALE</span>
-            </div>
-
-            {/* Instruction hint */}
-            <div className="text-[9px] font-mono text-slate/40 flex items-center gap-1.5 animate-pulse">
-              <span>SCROLL TO TRAVERSE PATHWAY</span>
-              <ArrowRight size={10} />
             </div>
           </div>
 
@@ -289,7 +272,7 @@ export default function CoreValues() {
                 <span className="italic font-normal text-marigold-dark">Weave them in storefronts.</span>
               </h1>
               <p className="text-slate font-sans text-sm font-medium max-w-[420px] leading-relaxed">
-                Scroll down to draw the path of execution. Travel from Ahmedabad to Pune, Jaipur, and Indore to explore our spatial commitments.
+                Travel from Ahmedabad to Pune, Jaipur, and Indore to explore our spatial commitments.
               </p>
             </div>
 
@@ -417,13 +400,6 @@ export default function CoreValues() {
                     <p className="text-slate font-sans text-sm font-medium leading-relaxed">
                       {item.text}
                     </p>
-
-                    {/* Small coordinate metadata details */}
-                    <div className="mt-4 border-t border-border/40 pt-3 flex items-center gap-2 text-[8px] font-mono tracking-wider text-slate/40 justify-start" style={{ justifyContent: currentPos.align === "text-right" ? "flex-end" : "flex-start" }}>
-                      <span>LATITUDE: {item.coords.split(" / ")[0]}</span>
-                      <span className="opacity-50">·</span>
-                      <span>LONGITUDE: {item.coords.split(" / ")[1]}</span>
-                    </div>
                   </div>
 
                 </div>
@@ -501,7 +477,7 @@ export default function CoreValues() {
 
                     <div className="flex flex-col items-start pl-2">
                       <span className="text-[8px] font-mono tracking-widest text-slate/50 mb-1.5 block">
-                        {item.location} // {item.coords}
+                        {item.location}
                       </span>
                       
                       <h3 className="font-display text-xl font-bold text-ink mb-2">
