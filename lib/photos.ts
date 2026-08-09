@@ -42,4 +42,8 @@ export const photos = {
   footerCity: u("photo-1587474260584-136574528ed5", 1200),
   heroGlow: u("photo-1557804506-669a67965ba0", 1800),
   floatingUi: u("photo-1551288049-bebda4e38f71", 800),
+  /** Credentials / recognition — editorial supporting frames */
+  credentialShop: u("photo-1556740738-b6a63e27c4df", 1000), // retail entrepreneur
+  credentialTeam: u("photo-1600880292089-90a7e086ee0c", 1000), // advisory desk meeting
+  credentialGrowth: u("photo-1521791136064-7986c2920216", 1000), // partnership / growth
 } as const;
