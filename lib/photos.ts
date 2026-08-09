@@ -18,6 +18,12 @@ export const photos = {
   aboutHeroCity: u("photo-1587474260584-136574528ed5", 1000), // Indian city / place
   aboutHeroDocs: u("photo-1450101499163-c8848c66ca85", 800), // filings / paperwork
   aboutHeroLeader: u("photo-1573497019940-1c28c88b4f3e", 900), // leadership presence
+  /** About Mission — path story (distinct from Hero collage) */
+  aboutMissionPurpose: u("photo-1540910419892-4a36d2c3266c", 1100), // proud local merchant / purpose
+  aboutMissionServe: u("photo-1578916171728-46686eac8d58", 1000), // local commerce / who we serve
+  aboutMissionAction: u("photo-1600880292089-90a7e086ee0c", 1000), // walk-in guidance in action
+  aboutMissionClear: u("photo-1554224154-26032ffc0d07", 900), // filings / what we clear
+  aboutMissionHorizon: u("photo-1522441815192-d9f04eb0615c", 1200), // forward planning / future
   serviceRegistration: u("photo-1454165804606-c3d57bc86b40", 1000),
   serviceLoan: u("photo-1554224155-6726b3ff858f", 1000),
   serviceGrant: u("photo-1553729459-efe14ef6055d", 1000),
