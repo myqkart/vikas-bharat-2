@@ -1,10 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { about } from "@/lib/content";
 import { photos } from "@/lib/photos";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import {
+  dramaticFadeLeft,
+  dramaticFadeRight,
+  dramaticFadeUp,
+  imageReveal,
+  popIn,
+  staggerDramatic,
+} from "@/lib/motion";
+import FloatingOrbs from "@/components/motion/FloatingOrbs";
+import TextReveal from "@/components/motion/TextReveal";
+import TiltCard from "@/components/motion/TiltCard";
 
 const processImages = [
   photos.aboutProcessConsult,
@@ -16,12 +26,15 @@ const processImages = [
 ] as const;
 
 export default function AboutProcess() {
+  const reduce = useReducedMotion();
+
   return (
     <section
       id="our-process"
       aria-labelledby="our-process-heading"
       className="relative overflow-hidden bg-gradient-to-b from-paper via-[#FFF9F0] to-[#EEF5F0] px-5 py-20 sm:px-8 lg:py-28"
     >
+      {!reduce ? <FloatingOrbs className="opacity-45" /> : null}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.28]"
         style={{
@@ -36,25 +49,24 @@ export default function AboutProcess() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={staggerContainer}
+          viewport={{ once: true, amount: 0.35 }}
+          variants={staggerDramatic}
           className="max-w-2xl"
         >
           <motion.p
-            variants={fadeUp}
+            variants={dramaticFadeUp}
             className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
           >
             06 / Our Process
           </motion.p>
-          <motion.h2
+          <TextReveal
+            as="h2"
             id="our-process-heading"
-            variants={fadeUp}
+            text="Six steps from first call to result"
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
-          >
-            Six steps from first call to result
-          </motion.h2>
+          />
           <motion.p
-            variants={fadeUp}
+            variants={dramaticFadeUp}
             className="mt-4 text-base leading-relaxed text-slate sm:text-lg"
           >
             A clear path — consultation to stamped outcome.
@@ -62,6 +74,15 @@ export default function AboutProcess() {
         </motion.div>
 
         <div className="relative mt-16">
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px origin-top bg-gradient-to-b from-marigold/50 via-indigo/30 to-transparent lg:block"
+            aria-hidden
+          />
+
           <ol className="space-y-10 lg:space-y-14">
             {about.process.map((step, idx) => {
               const reverse = idx % 2 === 1;
@@ -70,29 +91,53 @@ export default function AboutProcess() {
                   key={step.title}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.35 }}
-                  variants={staggerContainer}
-                  className={`grid items-center gap-6 lg:grid-cols-2 lg:gap-14 ${
-                    reverse ? "" : ""
-                  }`}
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={staggerDramatic}
+                  className="grid items-center gap-6 lg:grid-cols-2 lg:gap-14"
+                  style={{ perspective: 1000 }}
                 >
                   <motion.div
-                    variants={fadeUp}
+                    variants={reverse ? dramaticFadeRight : dramaticFadeLeft}
                     className={`relative ${reverse ? "lg:order-2" : ""}`}
                   >
-                    <div className="relative aspect-[5/4] overflow-hidden rounded-[24px] shadow-raised">
-                      <Image
-                        src={processImages[idx]}
-                        alt={step.title}
-                        fill
-                        sizes="(max-width: 1024px) 90vw, 520px"
-                        className="object-cover"
-                      />
-                      <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 font-mono text-[10px] font-bold tracking-[0.18em] text-ink">
-                        STEP {String(idx + 1).padStart(2, "0")}
-                      </div>
-                    </div>
-                    <div
+                    <TiltCard
+                      intensity={reduce ? 0 : 10}
+                      className="relative overflow-hidden rounded-[24px] shadow-raised"
+                    >
+                      <motion.div
+                        variants={imageReveal}
+                        className="relative aspect-[5/4] overflow-hidden"
+                      >
+                        <Image
+                          src={processImages[idx]}
+                          alt={step.title}
+                          fill
+                          sizes="(max-width: 1024px) 90vw, 520px"
+                          className="object-cover"
+                        />
+                        <motion.div
+                          variants={popIn}
+                          className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 font-mono text-[10px] font-bold tracking-[0.18em] text-ink"
+                        >
+                          STEP {String(idx + 1).padStart(2, "0")}
+                        </motion.div>
+                      </motion.div>
+                    </TiltCard>
+                    <motion.div
+                      variants={popIn}
+                      animate={
+                        reduce
+                          ? undefined
+                          : {
+                              y: [0, -8, 0],
+                              rotate: [0, reverse ? -6 : 6, 0],
+                              transition: {
+                                duration: 5 + idx * 0.4,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                              },
+                            }
+                      }
                       className={`absolute -bottom-4 ${
                         reverse ? "-left-4" : "-right-4"
                       } hidden h-20 w-20 overflow-hidden rounded-full border-4 border-paper shadow-raised lg:block`}
@@ -104,12 +149,14 @@ export default function AboutProcess() {
                         sizes="80px"
                         className="object-cover"
                       />
-                    </div>
+                    </motion.div>
                   </motion.div>
 
                   <motion.div
-                    variants={fadeUp}
-                    className={`lg:pl-10 ${reverse ? "lg:order-1 lg:pl-0 lg:pr-10 lg:text-right" : ""}`}
+                    variants={reverse ? dramaticFadeLeft : dramaticFadeRight}
+                    className={`lg:pl-10 ${
+                      reverse ? "lg:order-1 lg:pl-0 lg:pr-10 lg:text-right" : ""
+                    }`}
                   >
                     <p className="font-mono text-[10px] font-bold tracking-[0.2em] text-marigold-dark">
                       PROCESS / {String(idx + 1).padStart(2, "0")}

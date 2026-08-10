@@ -1,7 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useReducedMotion,
+} from "framer-motion";
 import {
   Clock,
   Users,
@@ -15,6 +19,14 @@ import {
 } from "lucide-react";
 import { faq, site } from "@/lib/content";
 import Reveal from "@/components/motion/Reveal";
+import FloatingOrbs from "@/components/motion/FloatingOrbs";
+import TextReveal from "@/components/motion/TextReveal";
+import {
+  dramaticFadeLeft,
+  flipIn,
+  popIn,
+  staggerDramatic,
+} from "@/lib/motion";
 
 const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 
@@ -97,6 +109,7 @@ function getCardIcon(question: string) {
 export default function FAQ() {
   const orderedItems = getOrderedItems();
   const total = orderedItems.length;
+  const reduce = useReducedMotion();
 
   // Initialize with index of "Kya main eligible hoon?" which is index 2 in our ordered list
   const [activeIndex, setActiveIndex] = useState(2);
@@ -285,8 +298,17 @@ export default function FAQ() {
       id="faq"
       className="relative px-6 py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-paper via-[#FAF5EA] to-paper border-t border-border/10"
     >
+      {!reduce ? <FloatingOrbs className="opacity-50" /> : null}
       {/* Background Decorative Blobs & Circles in Theme Colors */}
-      <svg
+      <motion.svg
+        animate={
+          reduce
+            ? undefined
+            : {
+                rotate: [0, 8, -4, 0],
+                transition: { duration: 22, repeat: Infinity, ease: "easeInOut" },
+              }
+        }
         className="absolute -left-20 top-[20%] -z-10 w-96 h-96 opacity-40 text-border/30 pointer-events-none select-none"
         viewBox="0 0 200 200"
         fill="none"
@@ -297,9 +319,17 @@ export default function FAQ() {
         <circle cx="50" cy="100" r="70" strokeWidth="1.5" />
         <circle cx="50" cy="100" r="100" strokeWidth="1" strokeDasharray="4 4" />
         <circle cx="50" cy="100" r="130" strokeWidth="2" />
-      </svg>
+      </motion.svg>
 
-      <svg
+      <motion.svg
+        animate={
+          reduce
+            ? undefined
+            : {
+                rotate: [0, -10, 6, 0],
+                transition: { duration: 26, repeat: Infinity, ease: "easeInOut" },
+              }
+        }
         className="absolute -right-20 bottom-[10%] -z-10 w-80 h-80 opacity-35 text-border/30 pointer-events-none select-none"
         viewBox="0 0 200 200"
         fill="none"
@@ -309,7 +339,7 @@ export default function FAQ() {
         <circle cx="150" cy="100" r="50" strokeWidth="1" strokeDasharray="3 3" />
         <circle cx="150" cy="100" r="80" strokeWidth="1.5" />
         <circle cx="150" cy="100" r="110" strokeWidth="1" strokeDasharray="4 4" />
-      </svg>
+      </motion.svg>
 
       {/* Decorative Dot Grid in Warm Accent Color */}
       <svg
@@ -341,59 +371,96 @@ export default function FAQ() {
             </span>
           </Reveal>
 
-          <Reveal className="mb-4">
-            <h2 className="relative inline-block font-display text-[32px] md:text-[46px] font-semibold leading-[1.15] text-ink px-8">
-              {/* Decorative rays left */}
-              <svg
-                className="absolute -left-4 md:-left-8 top-1 w-6 h-6 text-marigold pointer-events-none select-none"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                aria-hidden="true"
-              >
-                <line x1="20" y1="12" x2="6" y2="7" />
-                <line x1="20" y1="12" x2="4" y2="12" />
-                <line x1="20" y1="12" x2="8" y2="18" />
-              </svg>
+          <div className="mb-4 relative inline-block px-8">
+            <motion.svg
+              animate={
+                reduce
+                  ? undefined
+                  : {
+                      rotate: [0, -12, 8, 0],
+                      scale: [1, 1.1, 1],
+                      transition: {
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      },
+                    }
+              }
+              className="absolute -left-4 md:-left-8 top-1 w-6 h-6 text-marigold pointer-events-none select-none"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              aria-hidden="true"
+            >
+              <line x1="20" y1="12" x2="6" y2="7" />
+              <line x1="20" y1="12" x2="4" y2="12" />
+              <line x1="20" y1="12" x2="8" y2="18" />
+            </motion.svg>
 
-              Sawal jo har{" "}
+            <h2 className="relative inline-block font-display text-[32px] md:text-[46px] font-semibold leading-[1.15] text-ink">
+              <TextReveal
+                as="span"
+                text="Sawal jo har"
+                className="inline"
+              />{" "}
               <span className="relative inline-block font-handwriting text-marigold-dark px-1 italic">
                 founder
-                <svg
+                <motion.svg
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  whileInView={{ pathLength: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                   className="absolute -bottom-2.5 left-0 w-full h-3 text-marigold"
                   viewBox="0 0 100 12"
                   fill="none"
                   preserveAspectRatio="none"
                   aria-hidden="true"
                 >
-                  <path
+                  <motion.path
                     d="M2,8 C30,10 70,8 98,4 C70,6 30,8 2,10"
                     stroke="currentColor"
                     strokeWidth="2.5"
                     strokeLinecap="round"
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: 0.35 }}
                   />
-                </svg>
+                </motion.svg>
               </span>{" "}
-              poochta hai
-
-              {/* Decorative rays right */}
-              <svg
-                className="absolute -right-4 md:-right-8 top-0 w-6 h-6 text-marigold pointer-events-none select-none"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                aria-hidden="true"
-              >
-                <line x1="4" y1="12" x2="18" y2="7" />
-                <line x1="4" y1="12" x2="20" y2="12" />
-                <line x1="4" y1="12" x2="16" y2="18" />
-              </svg>
+              <TextReveal as="span" text="poochta hai" className="inline" />
             </h2>
-          </Reveal>
+
+            <motion.svg
+              animate={
+                reduce
+                  ? undefined
+                  : {
+                      rotate: [0, 12, -8, 0],
+                      scale: [1, 1.1, 1],
+                      transition: {
+                        duration: 4.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.4,
+                      },
+                    }
+              }
+              className="absolute -right-4 md:-right-8 top-0 w-6 h-6 text-marigold pointer-events-none select-none"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="12" x2="18" y2="7" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="12" x2="16" y2="18" />
+            </motion.svg>
+          </div>
 
           <Reveal delay={0.1}>
             <p className="max-w-xl mx-auto text-sm md:text-base lg:text-lg text-slate leading-relaxed">
@@ -405,55 +472,78 @@ export default function FAQ() {
         {/* Content Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column - Feature List */}
-          <div className="lg:col-span-4 flex flex-col gap-6 md:px-12 lg:px-0">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerDramatic}
+            className="lg:col-span-4 flex flex-col gap-6 md:px-12 lg:px-0"
+            style={{ perspective: 900 }}
+          >
             {/* Quick answers feature */}
-            <button
+            <motion.button
+              variants={dramaticFadeLeft}
+              whileHover={reduce ? undefined : { x: 8, scale: 1.02 }}
               onClick={() => eligibleIndex !== -1 && setActiveIndex(eligibleIndex)}
               className="flex items-start gap-4 p-4 rounded-2xl bg-white/20 border border-transparent hover:border-marigold/20 hover:bg-white/60 transition-all duration-300 text-left group shadow-sm/50"
             >
-              <div className="w-12 h-12 shrink-0 rounded-full bg-marigold/[0.04] border border-marigold/20 flex items-center justify-center text-marigold-dark transition-all duration-300 group-hover:bg-marigold group-hover:text-ink group-hover:border-marigold shadow-sm">
+              <motion.div
+                whileHover={reduce ? undefined : { rotate: 18, scale: 1.12 }}
+                className="w-12 h-12 shrink-0 rounded-full bg-marigold/[0.04] border border-marigold/20 flex items-center justify-center text-marigold-dark transition-all duration-300 group-hover:bg-marigold group-hover:text-ink group-hover:border-marigold shadow-sm"
+              >
                 <Zap className="w-6 h-6" />
-              </div>
+              </motion.div>
               <div>
                 <h4 className="text-base font-bold text-ink leading-tight transition-colors group-hover:text-marigold-dark">
                   Quick answers
                 </h4>
                 <p className="text-sm text-slate mt-1">in 2 minutes</p>
               </div>
-            </button>
+            </motion.button>
 
             {/* 100% updated feature */}
-            <button
+            <motion.button
+              variants={flipIn}
+              whileHover={reduce ? undefined : { x: 8, scale: 1.02 }}
               onClick={() => updatedIndex !== -1 && setActiveIndex(updatedIndex)}
               className="flex items-start gap-4 p-4 rounded-2xl bg-white/20 border border-transparent hover:border-marigold/20 hover:bg-white/60 transition-all duration-300 text-left group shadow-sm/50"
+              style={{ transformStyle: "preserve-3d" }}
             >
-              <div className="w-12 h-12 shrink-0 rounded-full bg-marigold/[0.04] border border-marigold/20 flex items-center justify-center text-marigold-dark transition-all duration-300 group-hover:bg-marigold group-hover:text-ink group-hover:border-marigold shadow-sm">
+              <motion.div
+                whileHover={reduce ? undefined : { rotate: -14, scale: 1.12 }}
+                className="w-12 h-12 shrink-0 rounded-full bg-marigold/[0.04] border border-marigold/20 flex items-center justify-center text-marigold-dark transition-all duration-300 group-hover:bg-marigold group-hover:text-ink group-hover:border-marigold shadow-sm"
+              >
                 <ShieldCheck className="w-6 h-6" />
-              </div>
+              </motion.div>
               <div>
                 <h4 className="text-base font-bold text-ink leading-tight transition-colors group-hover:text-marigold-dark">
                   100% updated
                 </h4>
                 <p className="text-sm text-slate mt-1">as per latest rules</p>
               </div>
-            </button>
+            </motion.button>
 
             {/* Still confused feature */}
-            <a
+            <motion.a
+              variants={popIn}
+              whileHover={reduce ? undefined : { x: 8, scale: 1.02 }}
               href="#contact"
               className="flex items-start gap-4 p-4 rounded-2xl bg-white/20 border border-transparent hover:border-marigold/20 hover:bg-white/60 transition-all duration-300 text-left group shadow-sm/50"
             >
-              <div className="w-12 h-12 shrink-0 rounded-full bg-marigold/[0.04] border border-marigold/20 flex items-center justify-center text-marigold-dark transition-all duration-300 group-hover:bg-marigold group-hover:text-ink group-hover:border-marigold shadow-sm">
+              <motion.div
+                whileHover={reduce ? undefined : { rotate: 12, scale: 1.12 }}
+                className="w-12 h-12 shrink-0 rounded-full bg-marigold/[0.04] border border-marigold/20 flex items-center justify-center text-marigold-dark transition-all duration-300 group-hover:bg-marigold group-hover:text-ink group-hover:border-marigold shadow-sm"
+              >
                 <Headphones className="w-6 h-6" />
-              </div>
+              </motion.div>
               <div>
                 <h4 className="text-base font-bold text-ink leading-tight transition-colors group-hover:text-marigold-dark">
                   Still confused?
                 </h4>
                 <p className="text-sm text-slate mt-1">Talk to our experts</p>
               </div>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
           {/* Right Column - 3D Card Fan Deck / Carousel */}
           <div className="lg:col-span-8 relative flex flex-col items-center justify-center min-h-[380px] md:min-h-[480px]">
@@ -461,25 +551,47 @@ export default function FAQ() {
             <div className="absolute inset-0 bg-radial-gradient from-marigold/5 via-transparent to-transparent blur-3xl pointer-events-none -z-10" />
 
             {/* Arrow & Handdrawn Label (desktop only) */}
-            <div className="absolute -top-[12%] right-[10%] hidden xl:flex flex-col items-center select-none pointer-events-none z-20">
-              <span className="font-handwriting text-2xl font-bold text-ink/75 rotate-[10deg] text-center leading-tight mb-1">
-                Your doubts,
-                <br />
-                our clarity!
-              </span>
-              <svg
-                className="w-14 h-14 text-marigold/80 -rotate-[15deg] -translate-x-2"
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                aria-hidden="true"
+            <motion.div
+              initial={{ opacity: 0, y: -20, rotate: 4 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 10 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, type: "spring", stiffness: 120, damping: 14 }}
+              className="absolute -top-[12%] right-[10%] hidden xl:flex flex-col items-center select-none pointer-events-none z-20"
+            >
+              <motion.div
+                animate={
+                  reduce
+                    ? undefined
+                    : {
+                        y: [0, -6, 0],
+                        transition: {
+                          duration: 3.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        },
+                      }
+                }
+                className="flex flex-col items-center"
               >
-                <path d="M70,10 C50,45 25,60 15,65" />
-                <path d="M12,52 C13,57 15,65 15,65 L26,62" />
-              </svg>
-            </div>
+                <span className="font-handwriting text-2xl font-bold text-ink/75 rotate-[10deg] text-center leading-tight mb-1">
+                  Your doubts,
+                  <br />
+                  our clarity!
+                </span>
+                <svg
+                  className="w-14 h-14 text-marigold/80 -rotate-[15deg] -translate-x-2"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M70,10 C50,45 25,60 15,65" />
+                  <path d="M12,52 C13,57 15,65 15,65 L26,62" />
+                </svg>
+              </motion.div>
+            </motion.div>
 
             {/* Active/Carousel Deck Container */}
             <div className="relative w-full max-w-[320px] lg:max-w-none h-[400px] md:h-[440px] flex items-center justify-center">
@@ -604,14 +716,26 @@ export default function FAQ() {
             </div>
 
             {/* Bottom-right Handwritten Slogan & Yellow Highlighter */}
-            <div className="absolute right-[5%] -bottom-16 hidden lg:flex flex-col items-start select-none rotate-[-4deg] z-20">
+            <motion.div
+              initial={{ opacity: 0, x: 40, rotate: -10 }}
+              whileInView={{ opacity: 1, x: 0, rotate: -4 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, type: "spring", stiffness: 100, damping: 14 }}
+              className="absolute right-[5%] -bottom-16 hidden lg:flex flex-col items-start select-none z-20"
+            >
               <span className="relative z-10 font-handwriting text-3xl font-bold text-ink/90">
                 Har sawal ka
                 <br />
                 seedha jawab
-                <span className="absolute -bottom-1 left-0 -right-2 h-4 bg-marigold/25 -z-10 rounded-lg transform skew-x-12 scale-y-75" />
+                <motion.span
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                  className="absolute -bottom-1 left-0 -right-2 h-4 origin-left bg-marigold/25 -z-10 rounded-lg transform skew-x-12 scale-y-75"
+                />
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
