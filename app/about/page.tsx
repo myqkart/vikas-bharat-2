@@ -6,7 +6,7 @@ import AboutServicesOverview from "@/components/AboutServicesOverview";
 import AboutProcess from "@/components/AboutProcess";
 import AboutRecognition from "@/components/AboutRecognition";
 import AboutWhyChoose from "@/components/AboutWhyChoose";
-import AboutFaqSection from "@/components/AboutFaqSection";
+import FAQ from "@/components/FAQ";
 
 export default function AboutPage() {
   return (
@@ -18,7 +18,7 @@ export default function AboutPage() {
       <AboutProcess />
       <AboutRecognition />
       <AboutWhyChoose />
-      <AboutFaqSection />
+      <FAQ />
     </SiteChrome>
   );
 }
