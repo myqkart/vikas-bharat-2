@@ -48,6 +48,77 @@ export const navigation = [
   { label: "Contact us", href: "/contact", icon: "mail" },
 ] as const;
 
+export const servicesMegaMenu = {
+  funding: {
+    title: "Business Funding",
+    items: [
+      {
+        title: "Grants",
+        description: "Government Schemes",
+        href: "/services/grant",
+        icon: "grant" as const,
+      },
+      {
+        title: "Loans",
+        description: "Bank Financing",
+        href: "/services/loan",
+        icon: "loan" as const,
+      },
+      {
+        title: "NBFC",
+        description: "Alternative Funding",
+        href: "/services/loan",
+        icon: "nbfc" as const,
+      },
+    ],
+  },
+  services: {
+    title: "Our Services",
+    items: [
+      {
+        title: "Business Registration",
+        description: "Company & OPC formation",
+        href: "/services/registration",
+        icon: "registration" as const,
+      },
+      {
+        title: "Certifications & Compliance",
+        description: "ISO, BIS CRS & FSSAI",
+        href: "/services/certificate",
+        icon: "certificate" as const,
+      },
+      {
+        title: "Growth Strategy",
+        description: "Business expansion planning",
+        href: "/services/growth",
+        icon: "growth" as const,
+      },
+      {
+        title: "M&A Advisory",
+        description: "Merger & acquisition support",
+        href: "/service",
+        icon: "ma" as const,
+      },
+      {
+        title: "Marketing & Branding",
+        description: "Digital marketing solutions",
+        href: "/services/growth",
+        icon: "marketing" as const,
+      },
+      {
+        title: "Legal Consultancy",
+        description: "Legal advice & documentation",
+        href: "/services/legal",
+        icon: "legal" as const,
+      },
+    ],
+  },
+  cta: {
+    label: "View All Services",
+    href: "/service",
+  },
+} as const;
+
 export const hero = {
   eyebrow: "VIKASBHART",
   headline: "Sapno Se Safalta Tak",

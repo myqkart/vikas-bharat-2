@@ -23,6 +23,7 @@ import { usePathname } from "next/navigation";
 import {
   BookOpen,
   Briefcase,
+  ChevronDown,
   Landmark,
   Mail,
   MessageCircle,
@@ -32,9 +33,11 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { hero, navigation, site } from "@/lib/content";
+import ServicesMegaMenu from "@/components/ServicesMegaMenu";
 
 const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 const phoneHref = `tel:${site.phoneNumber}`;
+const SERVICES_HREF = "/service";
 
 const navIcons: Record<(typeof navigation)[number]["icon"], LucideIcon> = {
   users: Users,
@@ -54,25 +57,41 @@ function NavLink({
   compact,
   label,
   icon: Icon,
+  hasMenu,
+  menuOpen,
+  onMenuEnter,
+  onMenuLeave,
 }: {
   href: string;
   active: boolean;
   compact: boolean;
   label: string;
   icon: LucideIcon;
+  hasMenu?: boolean;
+  menuOpen?: boolean;
+  onMenuEnter?: () => void;
+  onMenuLeave?: () => void;
 }) {
+  const highlighted = active || Boolean(menuOpen);
+
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onMouseEnter={hasMenu ? onMenuEnter : undefined}
+      onMouseLeave={hasMenu ? onMenuLeave : undefined}
+    >
       <Link
         href={href}
-        className={`relative z-10 flex items-center justify-center gap-2 rounded-full outline-offset-2 transition-colors ${
+        className={`relative z-10 flex items-center justify-center gap-1.5 rounded-full outline-offset-2 transition-colors ${
           compact ? "h-10 min-w-10 px-3" : "h-11 px-3.5"
-        } ${active ? "text-ink" : "text-slate hover:text-ink"}`}
+        } ${highlighted ? "text-ink" : "text-slate hover:text-ink"}`}
         aria-current={active ? "page" : undefined}
         aria-label={label}
-        title={label}
+        aria-expanded={hasMenu ? menuOpen : undefined}
+        aria-haspopup={hasMenu ? "menu" : undefined}
+        onFocus={hasMenu ? onMenuEnter : undefined}
       >
-        {active ? (
+        {highlighted ? (
           <motion.span
             layoutId="nav-ink"
             className="absolute inset-0 rounded-full bg-white shadow-[0_2px_14px_rgba(18,41,77,0.14)] ring-1 ring-border/50"
@@ -82,7 +101,7 @@ function NavLink({
         <Icon
           size={compact ? 16 : 15}
           strokeWidth={2.35}
-          className={`relative z-10 shrink-0 ${active ? "text-marigold" : "text-current"}`}
+          className={`relative z-10 shrink-0 ${highlighted ? "text-marigold" : "text-current"}`}
           aria-hidden
         />
         <span
@@ -92,6 +111,16 @@ function NavLink({
         >
           {label}
         </span>
+        {hasMenu ? (
+          <ChevronDown
+            size={compact ? 12 : 13}
+            strokeWidth={2.6}
+            aria-hidden
+            className={`relative z-10 shrink-0 transition-transform duration-200 ${
+              menuOpen ? "rotate-180 text-marigold" : "text-current opacity-70"
+            }`}
+          />
+        ) : null}
       </Link>
     </div>
   );
@@ -215,6 +244,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [compact, setCompact] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const active =
     navigation.find((item) => pathname === item.href || pathname.startsWith(`${item.href}/`))
       ?.href ?? "";
@@ -222,6 +252,9 @@ export default function Header() {
   const lastY = useRef(0);
   const openRef = useRef(open);
   openRef.current = open;
+  const servicesOpenRef = useRef(servicesOpen);
+  servicesOpenRef.current = servicesOpen;
+  const servicesCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const progress = useSpring(0, { stiffness: 140, damping: 28 });
   const shellBlur = useTransform(progress, [0, 1], [12, 28]);
@@ -231,6 +264,31 @@ export default function Header() {
   const shellPadY = useTransform(progress, [0, 1], [6, 5]);
   const shellPadX = useTransform(progress, [0, 1], [8, 6]);
 
+  const openServicesMenu = useCallback(() => {
+    if (servicesCloseTimer.current) {
+      clearTimeout(servicesCloseTimer.current);
+      servicesCloseTimer.current = null;
+    }
+    setServicesOpen(true);
+    setHidden(false);
+  }, []);
+
+  const scheduleCloseServicesMenu = useCallback(() => {
+    if (servicesCloseTimer.current) clearTimeout(servicesCloseTimer.current);
+    servicesCloseTimer.current = setTimeout(() => {
+      setServicesOpen(false);
+      servicesCloseTimer.current = null;
+    }, 200);
+  }, []);
+
+  const closeServicesMenu = useCallback(() => {
+    if (servicesCloseTimer.current) {
+      clearTimeout(servicesCloseTimer.current);
+      servicesCloseTimer.current = null;
+    }
+    setServicesOpen(false);
+  }, []);
+
   useMotionValueEvent(scrollY, "change", (latest) => {
     setCompact(latest > 48);
     progress.set(Math.min(1, latest / 140));
@@ -239,7 +297,7 @@ export default function Header() {
     const delta = latest - prev;
     lastY.current = latest;
 
-    if (openRef.current || latest < 64) {
+    if (openRef.current || servicesOpenRef.current || latest < 64) {
       setHidden(false);
       return;
     }
@@ -267,14 +325,46 @@ export default function Header() {
   }, [open]);
 
   useEffect(() => {
+    closeServicesMenu();
+  }, [pathname, closeServicesMenu]);
+
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        closeServicesMenu();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, [closeServicesMenu]);
+
+  useEffect(() => {
+    return () => {
+      if (servicesCloseTimer.current) clearTimeout(servicesCloseTimer.current);
+    };
   }, []);
 
   const closeMenu = useCallback(() => setOpen(false), []);
+
+  const renderNavLinks = (isCompact: boolean) =>
+    navigation.map((item) => {
+      const isServices = item.href === SERVICES_HREF;
+      return (
+        <NavLink
+          key={item.href}
+          href={item.href}
+          active={active === item.href || (isServices && pathname.startsWith("/services/"))}
+          compact={isCompact}
+          label={item.label}
+          icon={navIcons[item.icon]}
+          hasMenu={isServices}
+          menuOpen={isServices ? servicesOpen : false}
+          onMenuEnter={isServices ? openServicesMenu : undefined}
+          onMenuLeave={isServices ? scheduleCloseServicesMenu : undefined}
+        />
+      );
+    });
 
   return (
     <>
@@ -290,7 +380,7 @@ export default function Header() {
         style={{ pointerEvents: hidden ? "none" : undefined }}
       >
         <div
-          className={`pointer-events-auto mx-auto flex max-w-[1200px] px-5 pt-[max(0.65rem,env(safe-area-inset-top))] sm:px-8 ${
+          className={`pointer-events-auto relative mx-auto flex max-w-[1200px] px-5 pt-[max(0.65rem,env(safe-area-inset-top))] sm:px-8 ${
             compact ? "justify-center" : "justify-between"
           }`}
         >
@@ -321,16 +411,7 @@ export default function Header() {
                     className="relative z-10 flex items-center gap-0.5"
                     aria-label="Primary"
                   >
-                    {navigation.map((item) => (
-                      <NavLink
-                        key={item.href}
-                        href={item.href}
-                        active={active === item.href}
-                        compact
-                        label={item.label}
-                        icon={navIcons[item.icon]}
-                      />
-                    ))}
+                    {renderNavLinks(true)}
                   </nav>
                   <WhatsAppOrb compact />
                 </motion.div>
@@ -357,16 +438,7 @@ export default function Header() {
                     aria-label="Primary"
                   >
                     <BeaconAura />
-                    {navigation.map((item) => (
-                      <NavLink
-                        key={item.href}
-                        href={item.href}
-                        active={active === item.href}
-                        compact={false}
-                        label={item.label}
-                        icon={navIcons[item.icon]}
-                      />
-                    ))}
+                    {renderNavLinks(false)}
                   </motion.nav>
 
                   <div className="flex shrink-0 items-center gap-2.5">
@@ -385,6 +457,23 @@ export default function Header() {
               )}
             </AnimatePresence>
           </LayoutGroup>
+
+          <AnimatePresence>
+            {servicesOpen ? (
+              <motion.div
+                key="services-mega"
+                initial={reduce ? false : { opacity: 0, y: 10, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute top-[calc(100%-0.65rem)] left-1/2 z-[60] w-[min(920px,calc(100vw-2.5rem))] -translate-x-1/2 pt-5"
+                onMouseEnter={openServicesMenu}
+                onMouseLeave={scheduleCloseServicesMenu}
+              >
+                <ServicesMegaMenu onNavigate={closeServicesMenu} />
+              </motion.div>
+            ) : null}
+          </AnimatePresence>
         </div>
       </motion.header>
 
