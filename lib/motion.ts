@@ -140,7 +140,7 @@ export const imageReveal: Variants = {
   visible: {
     opacity: 1,
     scale: 1,
-    clipPath: "inset(0% 0% 0% 0% round 0px)",
+    clipPath: "inset(0% 0% 0% 0% round 32px)",
     transition: { duration: 1.25, ease: [0.16, 1, 0.3, 1] },
   },
 };

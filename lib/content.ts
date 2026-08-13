@@ -119,6 +119,145 @@ export const servicesMegaMenu = {
   },
 } as const;
 
+export const servicePage = {
+  eyebrow: "Services",
+  brand: "VIKASBHART",
+  heading: "Our Services",
+  intro:
+    "We are a business consulting and growth advisory firm dedicated to empowering MSMEs and startups in India. We provide end-to-end support across compliance, strategy, finance, legal, and growth—helping businesses build strong foundations, stay compliant, and scale sustainably.",
+  cta: "Check Your Eligibility",
+  image: photos.serviceRegistration,
+  imageAlt: "Advisor reviewing business registration and funding options with a founder",
+  stats: [
+    { value: "95%+", label: "Success Rate" },
+    { value: "20,000+", label: "Businesses Helped" },
+    { value: "₹500CR+", label: "Funding Secured" },
+    { value: "500+", label: "Funding Schemes" },
+  ] as const,
+  funding: {
+    eyebrow: "Capital Pathways",
+    heading: "Grow With Vikas Bharat",
+    sub: "Access Grants, Loans And NBFC Solutions",
+    items: [
+      {
+        title: "Government Grants",
+        text: "We identify which government grants and subsidies your business qualifies for, prepare the application, file on official portals, and follow through until the money reaches you — with full documentation support.",
+        href: "/services/grant",
+        image: photos.serviceGrant,
+        icon: "grant" as const,
+      },
+      {
+        title: "Business Loan Services",
+        text: "We compare 25+ lenders — banks, NBFCs, and government schemes — to find the right loan for your business, handle the paperwork, and stay with your application through to approval and disbursement.",
+        href: "/services/loan",
+        image: photos.serviceLoan,
+        icon: "loan" as const,
+      },
+      {
+        title: "NBFC Financing Solutions",
+        text: "When you need faster approval or a loan product banks do not offer, we match you to the right NBFC from our network of 25+ partners — working capital, machinery, LAP, or invoice discounting.",
+        href: "/services/loan",
+        image: photos.aboutServiceNbf,
+        icon: "nbfc" as const,
+      },
+    ],
+  },
+  catalog: {
+    eyebrow: "Full Desk",
+    heading: "Our Services",
+    sub: "Everything your business needs under one roof — from first filing to scale.",
+    items: [
+      {
+        title: "Business Registration Services",
+        text: "Business Registration Services for fast, easy and compliant company setup.",
+        href: "/services/registration",
+        icon: "registration" as const,
+        image: photos.serviceRegistration,
+      },
+      {
+        title: "One Person Company Registration",
+        text: "Start a One Person Company with limited liability, nominee handling and end-to-end MCA filings.",
+        href: "/services/registration",
+        icon: "opc" as const,
+        image: photos.aboutServiceRegistration,
+      },
+      {
+        title: "Startup India Certification",
+        text: "DPIIT Startup India recognition — eligibility review, pitch writeup and portal filing support.",
+        href: "/services/registration",
+        icon: "startup" as const,
+        image: photos.schemeSeed,
+      },
+      {
+        title: "Certifications & Compliance",
+        text: "Certifications & Compliance services to ensure legal & regulatory business readiness.",
+        href: "/services/certificate",
+        icon: "certificate" as const,
+        image: photos.serviceCertificate,
+      },
+      {
+        title: "Growth Strategy Services",
+        text: "Growth Strategy to scale revenue, market reach, & profitability fast.",
+        href: "/services/growth",
+        icon: "growth" as const,
+        image: photos.serviceGrowth,
+      },
+      {
+        title: "Mergers & Acquisitions",
+        text: "Expert Mergers & Acquisitions support for seamless business expansion & deals.",
+        href: "/services/growth",
+        icon: "ma" as const,
+        image: photos.credentialGrowth,
+      },
+      {
+        title: "Marketing & Branding Services",
+        text: "Marketing & Branding Services to boost visibility, trust and customer growth fast.",
+        href: "/services/growth",
+        icon: "marketing" as const,
+        image: photos.aboutServiceMarketing,
+      },
+      {
+        title: "Legal Consultancy",
+        text: "Legal Consultancy for reliable compliance & business protection.",
+        href: "/services/legal",
+        icon: "legal" as const,
+        image: photos.serviceLegal,
+      },
+      {
+        title: "Funding Instruments",
+        text: "Match the right funding instrument — equity, debt, grants or hybrids — to your stage and goals.",
+        href: "/services/loan",
+        icon: "funding" as const,
+        image: photos.serviceLoan,
+      },
+    ],
+  },
+  connect: {
+    eyebrow: "Talk To Us",
+    heading: "Connect With Us",
+    sub: "Starting Or Expanding Your Business?",
+    body: "Contact us for expert consultancy on company registration or migration and access India's top MSME funding schemes. We offer personalized services to help you secure the resources needed for growth.",
+    newCustomer: {
+      label: "New To Us?",
+      title: "Request Call Back",
+      text: "We will be happy to address your queries over a call.",
+      cta: "Click Here",
+    },
+    existingCustomer: {
+      label: "Existing Customer?",
+      title: "Request Call Back",
+      text: "We will be happy to address your queries over a call.",
+      cta: "Click Here",
+    },
+    tollFree: {
+      label: "Connect Toll-Free",
+      text: "Connect with us toll-free for expert guidance and support",
+      number: "1800 296 1424",
+      href: "tel:18002961424",
+    },
+  },
+} as const;
+
 export const hero = {
   eyebrow: "VIKASBHART",
   headline: "Sapno Se Safalta Tak",
@@ -1273,6 +1412,53 @@ export const faq = {
       question: "Documents kaise bheju?",
       answer:
         "WhatsApp par checklist milti hai. Clear photos / PDFs kaafi hain. Originals sirf bank ya department ke demand par.",
+    },
+  ],
+} as const;
+
+export const serviceFaq = {
+  heading: "Sawal jo har founder poochta hai",
+  sub: "Common questions about registration, funding, compliance and how Vikas Bharat works.",
+  items: [
+    {
+      question: "Which business structure is best for my startup?",
+      answer:
+        "The ideal business structure depends on factors such as the number of owners, liability protection needs, funding sources and scalability. A Private Limited Company suits startups seeking investment, an LLP works well for professional partnerships and a Proprietorship is ideal for solo consultants.",
+    },
+    {
+      question: "How long does business registration take in India?",
+      answer:
+        "Registration timelines vary by structure — a Private Limited Company typically takes 7–15 working days, an LLP 10–20 days and a One Person Company 5–10 days. With Vikas Bharat's expert guidance, documentation is streamlined for faster, first-time approvals.",
+    },
+    {
+      question: "What are the costs involved in business registration?",
+      answer:
+        "Costs depend on the business structure, state and company type. Government fees range from ₹1,000 to ₹7,000. Vikas Bharat offers transparent, budget-aligned pricing with professional support to minimise errors and ensure smooth approval.",
+    },
+    {
+      question: "Can foreign nationals register a business in India?",
+      answer:
+        "Yes, foreign nationals can register a company in India. At least one Indian resident director is required for a Private Limited Company. Our team handles FDI compliance, RBI regulations and all documentation for seamless foreign-owned business setup.",
+    },
+    {
+      question: "What compliance requirements follow after registration?",
+      answer:
+        "Post-registration businesses must file GST returns, annual ROC filings, income tax returns and maintain statutory books. Vikas Bharat provides ongoing compliance support to ensure your business meets all regulatory obligations without missing deadlines.",
+    },
+    {
+      question: "Can I convert from one business structure to another later?",
+      answer:
+        "Yes — common conversions include Proprietorship to Pvt Ltd, LLP to Pvt Ltd and Pvt Ltd to Public Ltd. Vikas Bharat manages the full conversion process, including legal documentation, ROC filings and regulatory compliance, with minimal disruption to your operations.",
+    },
+    {
+      question: "How do I start the registration or funding process with Vikas Bharat?",
+      answer:
+        "Submit your basic business details through our website for a free eligibility assessment. Our advisors craft a custom action plan — whether for registration, compliance or funding — within 48 hours.",
+    },
+    {
+      question: "Is Vikas Bharat a reliable partner for business advisory?",
+      answer:
+        "DPIIT-recognised since 2023, with a proven track record of ₹500Cr*+ in facilitated funding, 20,000+ businesses supported and transparent client testimonials — Vikas Bharat is India's trusted MSME growth partner.",
     },
   ],
 } as const;

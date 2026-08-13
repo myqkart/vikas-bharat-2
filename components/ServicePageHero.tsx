@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle } from "lucide-react";
-import { about, site } from "@/lib/content";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import { servicePage, site } from "@/lib/content";
 import { photos } from "@/lib/photos";
 import {
   dramaticFadeUp,
@@ -16,16 +16,13 @@ import {
 import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
+import CountUp from "@/components/motion/CountUp";
 
-const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
+const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
+  "Hi, I want to check eligibility for your services.",
+)}`;
 
-const pillars = [
-  { ...about.whoWeAre, num: "01", image: photos.aboutIntroPortrait },
-  { ...about.whatWeDo, num: "02", image: photos.aboutIntroWork },
-  { ...about.whoWeHelp, num: "03", image: photos.aboutIntroCrowd },
-] as const;
-
-export default function AboutHero() {
+export default function ServicePageHero() {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -44,8 +41,8 @@ export default function AboutHero() {
   return (
     <section
       ref={ref}
-      id="company-introduction"
-      aria-labelledby="about-intro-heading"
+      id="services-hero"
+      aria-labelledby="services-hero-heading"
       className="relative overflow-hidden bg-gradient-to-br from-paper via-[#FFF8EE] to-[#EAF1FA] px-5 pt-28 pb-24 sm:px-8 lg:pt-36 lg:pb-32"
     >
       {!reduce ? <FloatingOrbs /> : null}
@@ -80,18 +77,18 @@ export default function AboutHero() {
               variants={dramaticFadeUp}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              {about.eyebrow}
+              {servicePage.eyebrow}
             </motion.p>
             <motion.p
               variants={dramaticFadeUp}
               className="mt-4 font-display text-2xl font-semibold text-ink sm:text-3xl"
             >
-              {site.companyName}
+              {servicePage.brand}
             </motion.p>
             <TextReveal
               as="h1"
-              id="about-intro-heading"
-              text={about.heading}
+              id="services-hero-heading"
+              text={servicePage.heading}
               onMount
               className="mt-3 max-w-xl font-display text-[2.15rem] font-semibold leading-[1.1] tracking-tight text-ink sm:text-[2.8rem] lg:text-[3.25rem]"
             />
@@ -99,19 +96,22 @@ export default function AboutHero() {
               variants={dramaticFadeUp}
               className="mt-6 max-w-lg text-base leading-relaxed text-slate sm:text-lg"
             >
-              {about.body}
+              {servicePage.intro}
             </motion.p>
             <motion.div
               variants={popIn}
               className="mt-8 flex flex-wrap gap-3"
             >
               <motion.a
-                href="#mission-vision"
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={reduce ? undefined : { scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="btn-shine inline-flex min-h-12 items-center justify-center rounded-[14px] bg-ink px-7 py-3.5 text-base font-bold text-paper transition-colors hover:bg-indigo"
+                className="btn-shine inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] bg-ink px-7 py-3.5 text-base font-bold text-paper transition-colors hover:bg-indigo"
               >
-                Mission &amp; Vision
+                {servicePage.cta}
+                <ArrowRight size={18} strokeWidth={2.4} aria-hidden />
               </motion.a>
               <motion.a
                 href={whatsappHref}
@@ -134,8 +134,8 @@ export default function AboutHero() {
               className="absolute right-0 top-0 h-[72%] w-[70%] overflow-hidden rounded-[30px] shadow-raised [transform:translateZ(0)]"
             >
               <Image
-                src={photos.aboutHeroPortrait}
-                alt="Advisor guiding a founder at the desk"
+                src={photos.serviceRegistration}
+                alt={servicePage.imageAlt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 70vw, 380px"
@@ -148,8 +148,8 @@ export default function AboutHero() {
               className="absolute bottom-6 left-0 h-[48%] w-[54%] overflow-hidden rounded-[22px] border-[6px] border-paper shadow-raised [transform:translateZ(0)]"
             >
               <Image
-                src={photos.aboutHeroMarket}
-                alt="Local entrepreneur at their shop"
+                src={photos.serviceGrant}
+                alt="Government grant and subsidy pathway"
                 fill
                 sizes="(max-width: 1024px) 50vw, 280px"
                 className="rounded-[16px] object-cover"
@@ -173,8 +173,8 @@ export default function AboutHero() {
               className="absolute right-4 bottom-28 hidden h-24 w-24 overflow-hidden rounded-full border-4 border-paper shadow-raised sm:block [transform:translateZ(0)]"
             >
               <Image
-                src={photos.aboutHeroCity}
-                alt="City presence across India"
+                src={photos.serviceLoan}
+                alt="Business loan desk"
                 fill
                 sizes="96px"
                 className="rounded-full object-cover"
@@ -184,50 +184,32 @@ export default function AboutHero() {
               variants={flipIn}
               className="absolute -bottom-1 right-2 rotate-[-3deg] font-handwriting text-xl font-bold text-indigo sm:text-2xl"
             >
-              Real desks. Real people.
+              Sapno Se Safalta Tak
             </motion.p>
           </div>
         </motion.div>
 
+        {/* Stats as About-style pillars */}
         <motion.ul
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.25 }}
           variants={staggerDramatic}
-          className="mt-20 grid gap-6 md:grid-cols-3"
+          className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+          style={{ perspective: 1100 }}
         >
-          {pillars.map((pillar, idx) => (
-            <motion.li
-              key={pillar.title}
-              variants={flipIn}
-              style={{ transformStyle: "preserve-3d" }}
-              className={idx === 1 ? "md:-translate-y-4" : ""}
-            >
+          {servicePage.stats.map((stat) => (
+            <motion.li key={stat.label} variants={flipIn}>
               <TiltCard
-                intensity={reduce ? 0 : 14}
-                className="relative overflow-hidden rounded-[24px]"
+                intensity={reduce ? 0 : 10}
+                className="relative h-full overflow-hidden rounded-[22px] border border-border/50 bg-white/90 p-5 shadow-card"
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src={pillar.image}
-                    alt={pillar.title}
-                    fill
-                    sizes="(max-width: 768px) 90vw, 33vw"
-                    className="object-cover transition-transform duration-700 hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-5 text-paper">
-                    <p className="font-mono text-[10px] font-bold tracking-[0.2em] text-marigold">
-                      {pillar.num} / INTRO
-                    </p>
-                    <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight">
-                      {pillar.title}
-                    </h2>
-                    <p className="mt-2 text-sm leading-relaxed text-paper/85">
-                      {pillar.text}
-                    </p>
-                  </div>
-                </div>
+                <p className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-[2.1rem]">
+                  {reduce ? stat.value : <CountUp value={stat.value} />}
+                </p>
+                <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.12em] text-slate">
+                  {stat.label}
+                </p>
               </TiltCard>
             </motion.li>
           ))}

@@ -30,10 +30,18 @@ import {
 
 const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 
+type FaqItem = { question: string; answer: string };
+type FaqData = {
+  heading: string;
+  sub: string;
+  items: readonly FaqItem[];
+};
+
 // Reorder items to match the layout in the reference image when activeIndex is initially set to 2 (Kya main eligible hoon?)
 // Visual order: Kitna time lagega -> Kitna paisa lagega -> Kya main eligible hoon -> Kya mera business chhota -> Documents kaise bheju
-const getOrderedItems = () => {
-  const items = [...faq.items];
+const getOrderedItems = (items: readonly FaqItem[], useLandingOrder: boolean) => {
+  if (!useLandingOrder) return [...items];
+
   const order = [
     "time",      // Kitna time lagega?
     "paisa",     // Kitna paisa lagega hume?
@@ -43,10 +51,11 @@ const getOrderedItems = () => {
     "office",    // Kya aap government office ho?
   ];
 
-  const ordered: typeof faq.items[number][] = [];
-  
+  const ordered: FaqItem[] = [];
+  const pool = [...items];
+
   order.forEach((keyword) => {
-    const found = items.find((item) =>
+    const found = pool.find((item) =>
       item.question.toLowerCase().includes(keyword)
     );
     if (found) {
@@ -55,7 +64,7 @@ const getOrderedItems = () => {
   });
 
   // Append any items that were not matched
-  items.forEach((item) => {
+  pool.forEach((item) => {
     if (!ordered.includes(item)) {
       ordered.push(item);
     }
@@ -67,52 +76,81 @@ const getOrderedItems = () => {
 // Helper to resolve card icons dynamically
 function getCardIcon(question: string) {
   const q = question.toLowerCase();
-  if (q.includes("eligible")) {
+  if (q.includes("eligible") || q.includes("structure") || q.includes("start the")) {
     return {
-      type: "text",
+      type: "text" as const,
       char: "?",
       icon: HelpCircle,
     };
   }
-  if (q.includes("paisa") || q.includes("fee") || q.includes("cost")) {
+  if (
+    q.includes("paisa") ||
+    q.includes("fee") ||
+    q.includes("cost") ||
+    q.includes("costs")
+  ) {
     return {
-      type: "text",
+      type: "text" as const,
       char: "₹",
       icon: null,
     };
   }
-  if (q.includes("time") || q.includes("duration") || q.includes("din")) {
+  if (
+    q.includes("time") ||
+    q.includes("duration") ||
+    q.includes("din") ||
+    q.includes("how long")
+  ) {
     return {
-      type: "lucide",
+      type: "lucide" as const,
       icon: Clock,
     };
   }
-  if (q.includes("chhota") || q.includes("help") || q.includes("chhoti")) {
+  if (
+    q.includes("chhota") ||
+    q.includes("help") ||
+    q.includes("chhoti") ||
+    q.includes("foreign") ||
+    q.includes("convert")
+  ) {
     return {
-      type: "lucide",
+      type: "lucide" as const,
       icon: Users,
     };
   }
-  if (q.includes("document") || q.includes("bheju") || q.includes("check")) {
+  if (
+    q.includes("document") ||
+    q.includes("bheju") ||
+    q.includes("check") ||
+    q.includes("compliance")
+  ) {
     return {
-      type: "lucide",
+      type: "lucide" as const,
       icon: FileText,
     };
   }
+  if (q.includes("reliable") || q.includes("partner")) {
+    return {
+      type: "lucide" as const,
+      icon: ShieldCheck,
+    };
+  }
   return {
-    type: "text",
+    type: "text" as const,
     char: "?",
     icon: HelpCircle,
   };
 }
 
-export default function FAQ() {
-  const orderedItems = getOrderedItems();
+export default function FAQ({ data }: { data?: FaqData }) {
+  const source = data ?? faq;
+  const useLandingOrder = !data;
+  const orderedItems = getOrderedItems(source.items, useLandingOrder);
   const total = orderedItems.length;
   const reduce = useReducedMotion();
 
-  // Initialize with index of "Kya main eligible hoon?" which is index 2 in our ordered list
-  const [activeIndex, setActiveIndex] = useState(2);
+  // Landing FAQ opens on "eligible"; custom sets open on the first card
+  const [activeIndex, setActiveIndex] = useState(useLandingOrder ? 2 : 0);
   const [isMobile, setIsMobile] = useState(true);
 
   // Monitor screen resize to adjust layouts dynamically
@@ -286,12 +324,14 @@ export default function FAQ() {
 
   // Find index of "Kya main eligible hoon?" to route to it on clicking Quick Answers
   const eligibleIndex = orderedItems.findIndex((item) =>
-    item.question.toLowerCase().includes("eligible")
+    item.question.toLowerCase().includes("eligible") ||
+    item.question.toLowerCase().includes("structure")
   );
-  // Find index of paisa/fee card to route on clicking 100% updated
-  const updatedIndex = orderedItems.findIndex((item) =>
-    item.question.toLowerCase().includes("paisa")
-  );
+  // Find index of paisa/fee/cost card to route on clicking 100% updated
+  const updatedIndex = orderedItems.findIndex((item) => {
+    const q = item.question.toLowerCase();
+    return q.includes("paisa") || q.includes("cost") || q.includes("fee");
+  });
 
   return (
     <section
@@ -464,7 +504,7 @@ export default function FAQ() {
 
           <Reveal delay={0.1}>
             <p className="max-w-xl mx-auto text-sm md:text-base lg:text-lg text-slate leading-relaxed">
-              {faq.sub}
+              {source.sub}
             </p>
           </Reveal>
         </div>

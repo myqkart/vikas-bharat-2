@@ -1,17 +1,19 @@
 import SiteChrome from "@/components/SiteChrome";
-import DummyPage from "@/components/DummyPage";
-import { photos } from "@/lib/photos";
+import ServicePageHero from "@/components/ServicePageHero";
+import ServicePageFunding from "@/components/ServicePageFunding";
+import ServicePageCatalog from "@/components/ServicePageCatalog";
+import FAQ from "@/components/FAQ";
+import ServicePageConnect from "@/components/ServicePageConnect";
+import { serviceFaq } from "@/lib/content";
 
 export default function ServicePage() {
   return (
     <SiteChrome>
-      <DummyPage
-        eyebrow="01 / Service"
-        title="Business services, one desk."
-        description="Registration, funding, certifications, marketing, and legal support — full page coming soon."
-        image={photos.serviceRegistration}
-        imageAlt="Consultant reviewing business registration documents"
-      />
+      <ServicePageHero />
+      <ServicePageFunding />
+      <ServicePageCatalog />
+      <FAQ data={serviceFaq} />
+      <ServicePageConnect />
     </SiteChrome>
   );
 }
