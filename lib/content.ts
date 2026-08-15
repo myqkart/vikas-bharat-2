@@ -1470,12 +1470,12 @@ export const loanPage = {
       },
       {
         title: "MUDRA Loans",
-        text: "Government-backed financing for micro and small businesses, with loans available up to ₹10 lakh.",
+        text: "Government-backed financing for micro and small businesses, with loans available up to ₹20 lakh.",
         icon: "seed" as const,
       },
       {
         title: "CGTMSE Loans",
-        text: "Collateral-free financing under the Credit Guarantee Fund Trust for Micro and Small Enterprises, with funding available up to ₹2 crore.",
+        text: "Collateral-free financing under the Credit Guarantee Fund Trust for Micro and Small Enterprises, with funding available up to ₹10 crore.",
         icon: "shield" as const,
       },
       {
