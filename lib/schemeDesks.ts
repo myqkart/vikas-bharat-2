@@ -73,6 +73,10 @@ import {
   loanPage,
   nbfcFaq,
   nbfcPage,
+  taxExemptionCertificateFaq,
+  taxExemptionCertificatePage,
+  startupIndiaEligibilityFaq,
+  startupIndiaEligibilityPage,
   site,
 } from "@/lib/content";
 import { photos } from "@/lib/photos";
@@ -953,6 +957,70 @@ const desks: Record<string, ServiceDesk> = {
       { type: "categories", data: loanPage.schemes, sectionId: "loan-schemes" },
     ],
     faq: loanFaq,
+  },
+  "tax-exemption-certificate": {
+    title: `Tax Exemption Certificate | ${site.companyName}`,
+    description:
+      "Section 80IAC tax exemption for DPIIT-recognised startups — up to 100% tax holiday for three consecutive years within the first decade.",
+    hero: {
+      data: taxExemptionCertificatePage,
+      images: {
+        primary: photos.aboutCertTax,
+        secondary: photos.schemeTax,
+        circle: photos.schemeStartup,
+        secondaryAlt: "Startup tax compliance documentation",
+        circleAlt: "Founders preparing Section 80IAC application",
+      },
+      whatsappText: "Hi, I want to check eligibility for a Tax Exemption Certificate under Section 80IAC.",
+    },
+    unlock: {
+      data: taxExemptionCertificatePage.unlock,
+      image: { src: photos.aboutCertTax, alt: "Tax Exemption Certificate under Section 80IAC" },
+    },
+    sections: [
+      { type: "services", data: taxExemptionCertificatePage.benefits, sectionId: "tax-exemption-benefits" },
+      { type: "categories", data: taxExemptionCertificatePage.eligibility, sectionId: "tax-exemption-eligibility" },
+      { type: "process", data: taxExemptionCertificatePage.process, sectionId: "tax-exemption-process" },
+      {
+        type: "documents",
+        data: taxExemptionCertificatePage.documents,
+        sectionId: "tax-exemption-documents",
+        whatsappText: "Hi, please send me the Tax Exemption Certificate documents checklist.",
+      },
+    ],
+    faq: taxExemptionCertificateFaq,
+  },
+  "startup-india-eligibility": {
+    title: `Startup India Scheme Eligibility | ${site.companyName}`,
+    description:
+      "2026 revised DPIIT Startup India eligibility — ₹200 Cr / ₹300 Cr turnover limits, Deep Tech age extension, and cooperative inclusion.",
+    hero: {
+      data: startupIndiaEligibilityPage,
+      images: {
+        primary: photos.schemeStartup,
+        secondary: photos.schemeSeed,
+        circle: photos.schemePitch,
+        secondaryAlt: "Startup India recognition documentation",
+        circleAlt: "Founders preparing DPIIT application",
+      },
+      whatsappText: "Hi, I want to check Startup India scheme eligibility under the 2026 revised criteria.",
+    },
+    unlock: {
+      data: startupIndiaEligibilityPage.unlock,
+      image: { src: photos.schemeStartup, alt: "Startup India DPIIT recognition eligibility" },
+    },
+    sections: [
+      { type: "services", data: startupIndiaEligibilityPage.benefits, sectionId: "startup-eligibility-benefits" },
+      { type: "categories", data: startupIndiaEligibilityPage.eligibility, sectionId: "startup-eligibility-criteria" },
+      { type: "process", data: startupIndiaEligibilityPage.process, sectionId: "startup-eligibility-process" },
+      {
+        type: "documents",
+        data: startupIndiaEligibilityPage.documents,
+        sectionId: "startup-eligibility-documents",
+        whatsappText: "Hi, please send me the DPIIT recognition documents checklist.",
+      },
+    ],
+    faq: startupIndiaEligibilityFaq,
   },
 };
 

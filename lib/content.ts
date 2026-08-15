@@ -7248,6 +7248,385 @@ export const standupFaq = loanSchemeFaq(
   "Identity and address proof, business plan, category certificate where applicable, KYC, and registration or financial documents if already operating.",
 );
 
+export const taxExemptionCertificatePage = {
+  eyebrow: "Tax & Compliance • Startups • Section 80IAC",
+  heading: "Tax Exemption Certificate",
+  kicker: "Complete Guide for Startups & Businesses",
+  intro:
+    "Get up to 100% tax exemption for three consecutive years under Section 80IAC. Understand eligibility, required documents and the complete application process for DPIIT-recognised startups.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Startup founders reviewing Section 80IAC tax exemption documents",
+  stats: [
+    { value: "100%", label: "Tax Exemption (Section 80IAC)" },
+    { value: "3 Years", label: "Consecutive Holiday Period" },
+    { value: "₹100Cr", label: "Max Annual Turnover Limit" },
+    { value: "0%", label: "Tax on Qualifying Profits" },
+  ] as const,
+  unlock: {
+    eyebrow: "Scheme Overview",
+    heading: "What is a Tax Exemption Certificate?",
+    paragraphs: [
+      "A tax exemption certificate is an official document issued by tax authorities, certifying that an entity or individual is eligible for certain tax exemptions. For businesses and startups, this certificate can drastically reduce the amount of tax owed to the government, particularly in the early stages of growth.",
+      "In India, one of the most beneficial tax exemption schemes for startups is under Section 80IAC of the Income Tax Act, which allows eligible startups to avail up to 100% tax exemption for three consecutive years within the first ten years of incorporation.",
+      "This guide covers everything you need to know about obtaining a tax exemption certificate for your startup or business (Pvt Ltd and LLP), including eligibility, application process, benefits and required documents.",
+    ],
+    benefitsHeading: "Key requirements at a glance",
+    benefits: [
+      "DPIIT-recognised startup — mandatory first step",
+      "Incorporated after 1st April 2016",
+      "Pvt Ltd or LLP entity type",
+      "Annual turnover below ₹100 crore",
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the Section 80IAC Tax Exemption",
+    sub: "Income-tax relief that improves early-stage cash flow and investor readiness.",
+    items: [
+      {
+        title: "100% Tax Holiday",
+        text: "Complete exemption from income tax on profits for any three consecutive years chosen within the first ten years of incorporation.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "No Minimum Alternate Tax (MAT)",
+        text: "Startups recognised under this scheme are also exempt from MAT provisions during the holiday period.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Improves Cash Flow",
+        text: "Tax savings can be reinvested into product development, hiring and scaling — critical in the early growth phase.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Flexible Year Selection",
+        text: "Startups can choose which three consecutive years to apply the exemption within the first decade, allowing strategic financial planning.",
+        icon: "send" as const,
+      },
+      {
+        title: "Enhanced Investor Confidence",
+        text: "DPIIT recognition required for this certificate signals credibility to VCs, angels and institutional investors.",
+        icon: "users" as const,
+      },
+      {
+        title: "Stacks with Other Schemes",
+        text: "The tax exemption can be combined with CGTMSE collateral-free loans, SISFS grants and other government support schemes.",
+        icon: "rocket" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria for Section 80IAC",
+    sub: "To qualify for a tax exemption certificate under Section 80IAC, the following conditions must be fulfilled:",
+    leftHeading: "Recognition & Entity",
+    rightHeading: "Limits & Structure",
+    items: [
+      {
+        title: "DPIIT Recognition",
+        text: "The startup must be recognised by DPIIT. Recognition must be obtained before claiming the exemption.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Incorporation Date",
+        text: "The startup must have been incorporated after 1st April 2016. Businesses incorporated before this date are not eligible under Section 80IAC.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Eligible Entity Types",
+        text: "Only Private Limited Companies and LLPs are eligible. Partnership firms, sole proprietorships and public companies do not qualify.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Annual Turnover Limit",
+        text: "The business must not exceed ₹100 crore in annual turnover in any financial year since incorporation.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Tax Holiday Period",
+        text: "The exemption covers any three consecutive years within the first ten years from the year of incorporation.",
+        icon: "zap" as const,
+      },
+      {
+        title: "No Splitting of Business",
+        text: "The startup must not have been formed by splitting up or reconstruction of an existing business. It must be a genuinely new enterprise.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for a Tax Exemption Certificate",
+    sub: "From DPIIT recognition to IMB approval and claiming the exemption in your ITR.",
+    steps: [
+      {
+        title: "Obtain DPIIT Recognition",
+        text: "Register on the Startup India portal and get your DPIIT recognition number — this is mandatory before applying for Section 80IAC.",
+      },
+      {
+        title: "Prepare Your Documents",
+        text: "Compile MoA/LLP Deed, audited financials, ITR acknowledgments and the startup video as per DPIIT guidelines.",
+      },
+      {
+        title: "Submit Application",
+        text: "File the application through the Startup India portal. The Inter-Ministerial Board (IMB) reviews applications for eligibility.",
+      },
+      {
+        title: "IMB Review",
+        text: "The Inter-Ministerial Board evaluates the application based on innovation, scalability and job creation potential.",
+      },
+      {
+        title: "Certificate Issued",
+        text: "On approval, the IMB issues a certificate of eligibility, after which you can claim the exemption in your Income Tax Return.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Required Documents",
+    note: "Vikas Bharat can help organise a complete DPIIT and Section 80IAC documentation file.",
+    items: [
+      "DPIIT recognition certificate and Certificate of Incorporation",
+      "Memorandum of Association (MoA) or LLP Deed",
+      "Audited financial statements for all years since incorporation",
+      "Income Tax Return (ITR) acknowledgment for relevant assessment years",
+      "Board resolution authorizing the application",
+      "A short video (up to 2 minutes) describing your startup's product, innovation and business model",
+      "Shareholding pattern confirming ≥51% Indian promoter ownership",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const taxExemptionCertificateFaq = {
+  heading: "Frequently Asked Questions",
+  sub: "Section 80IAC eligibility, documents, validity and common filing mistakes.",
+  items: [
+    {
+      question: "What is a tax exemption certificate?",
+      answer:
+        "A tax exemption certificate is a document issued by tax authorities, allowing an entity to be exempt from paying certain taxes. For startups, Section 80IAC offers tax exemptions for up to three consecutive years.",
+    },
+    {
+      question: "Who is eligible for a tax-exempt certificate?",
+      answer:
+        "Eligibility includes startups recognised by DPIIT, incorporated after 1 April 2016 and operating as Pvt Ltd or LLP entities with turnover under ₹100 crore.",
+    },
+    {
+      question: "How do I apply for a tax exemption certificate?",
+      answer:
+        "Obtain DPIIT recognition, prepare necessary documents (MoA, audited reports and related proofs), and submit the application via the Startup India portal for Inter-Ministerial Board review.",
+    },
+    {
+      question: "What documents do I need for a tax-exempt certificate?",
+      answer:
+        "You will need your company's MoA/LLP Deed, audited financial statements, ITR acknowledgment, DPIIT recognition, shareholding pattern and a short video describing your startup.",
+    },
+    {
+      question: "How long is a tax exemption certificate valid?",
+      answer:
+        "The certificate covers any three consecutive years within the first ten years of incorporation, after which no renewal is allowed under Section 80IAC.",
+    },
+    {
+      question: "Are there different types of exemption certificates?",
+      answer:
+        "Yes, there are various exemption certificates including those for resale, nonprofit organisations and manufacturing. Section 80IAC specifically covers income tax exemption for eligible startups.",
+    },
+    {
+      question: "What are common mistakes when using tax exemption certificates?",
+      answer:
+        "Common mistakes include incorrect documentation, missing the filing deadline in the ITR, using the exemption in a year when the startup crossed the ₹100 crore turnover limit, and not maintaining audited records.",
+    },
+  ],
+} as const;
+
+export const startupIndiaEligibilityPage = {
+  eyebrow: "Startup Schemes • DPIIT Recognition",
+  heading: "Startup India Scheme Eligibility",
+  kicker: "2026 Revised Criteria",
+  intro:
+    "The Government of India has revised the Startup India recognition framework to be more inclusive and future-ready. Understand who qualifies, what has changed and how the revised criteria benefit startups across sectors.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Founders reviewing Startup India DPIIT recognition eligibility",
+  stats: [
+    { value: "₹200Cr", label: "New Turnover Limit (Regular Startups)" },
+    { value: "₹300Cr", label: "Turnover Limit for Deep Tech" },
+    { value: "20 Years", label: "Age Limit for Deep Tech Startups" },
+    { value: "10 Years", label: "Age Limit for Regular Startups" },
+  ] as const,
+  unlock: {
+    eyebrow: "Scheme Overview",
+    heading: "What is Startup India Scheme Eligibility?",
+    paragraphs: [
+      "Startup India scheme eligibility refers to the specific criteria defined by the Government of India for an entity to be recognised as a 'Startup' under the Startup India initiative, administered by the Department for Promotion of Industry and Internal Trade (DPIIT).",
+      "Recognition under Startup India enables businesses to access tax exemptions under Section 80IAC, collateral-free loans through CGTMSE and CGSS, government procurement preferences, faster IP support and a simplified compliance environment.",
+      "The revised framework expands eligibility to support businesses at different maturity levels — especially research-heavy deep tech startups and cooperative-led innovation models, reflecting how the ecosystem has matured.",
+    ],
+    benefitsHeading: "Key requirements at a glance",
+    benefits: [
+      "Incorporated as Pvt Ltd, LLP, Partnership Firm or Cooperative",
+      "Annual turnover below ₹200 crore (₹300 crore for Deep Tech)",
+      "Age ≤10 years (≤20 years for Deep Tech from incorporation)",
+      "Working on innovation, improvement or a scalable model",
+    ],
+  },
+  benefits: {
+    eyebrow: "What Changed",
+    heading: "Why the 2026 Revision Matters",
+    sub: "Higher limits, Deep Tech recognition and cooperative inclusion unlock longer access to Startup India benefits.",
+    items: [
+      {
+        title: "Higher Turnover Ceiling",
+        text: "Annual turnover limit raised from ₹100 crore to ₹200 crore for regular startups, and ₹300 crore for Deep Tech — allowing fast-growing startups to retain recognition longer.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Deep Tech Category",
+        text: "A dedicated Deep Tech category for startups working on advanced science and R&D-intensive technologies with long development cycles — up to 20 years age and ₹300 crore turnover.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Cooperative Entities Included",
+        text: "Both Multi-State and State-registered Cooperative Societies are now eligible, promoting grassroots innovation, rural entrepreneurship and agri-business models.",
+        icon: "users" as const,
+      },
+      {
+        title: "Extended Age Limit",
+        text: "Deep Tech startups can now be up to 20 years old from incorporation, acknowledging longer gestation before commercial scale.",
+        icon: "send" as const,
+      },
+      {
+        title: "Access to Collateral-Free Loans",
+        text: "DPIIT recognition is the gateway to CGTMSE and CGSS collateral-free credit — making it easier to access business loans without security.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Tax Holiday Eligibility",
+        text: "Recognition enables application for Section 80IAC — up to 100% income tax exemption for three consecutive years within the first decade of incorporation.",
+        icon: "landmark" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Who Can Apply Under the Revised Framework",
+    sub: "The 2026 revision expanded who qualifies. Here are the updated criteria:",
+    leftHeading: "Entity & Limits",
+    rightHeading: "Innovation & Structure",
+    items: [
+      {
+        title: "Entity Type",
+        text: "Private Limited Companies, LLPs, Partnership Firms and Multi-State or State-registered Cooperative Societies are all eligible.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Annual Turnover",
+        text: "Must not exceed ₹200 crore in any financial year since incorporation. For Deep Tech startups, the limit is ₹300 crore.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Age Limit",
+        text: "Must not be older than 10 years from incorporation. For Deep Tech startups working on science-based, R&D-intensive technologies, the limit is extended to 20 years.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Innovation Focus",
+        text: "The startup must work towards innovation, improvement of existing products/services, or a scalable business model with high employment or wealth-creation potential.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Not Formed by Splitting",
+        text: "Must not have been formed by splitting up or reconstruction of an existing business — it must be a genuinely new enterprise.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Deep Tech Qualification",
+        text: "Startups working on advanced, science-based, R&D-intensive technologies with long development cycles qualify for the Deep Tech category with extended limits.",
+        icon: "lab" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Get DPIIT Recognition",
+    sub: "Register on the Startup India portal, self-certify eligibility and unlock scheme benefits.",
+    steps: [
+      {
+        title: "Register on Startup India Portal",
+        text: "Create an account at startupindia.gov.in and log in to the recognition application.",
+      },
+      {
+        title: "Fill the Application",
+        text: "Provide entity details, describe your innovation and upload supporting documents.",
+      },
+      {
+        title: "Self-Certify Eligibility",
+        text: "Confirm that you meet the revised eligibility criteria including entity type, turnover, age and innovation-driven model.",
+      },
+      {
+        title: "Submit and Wait",
+        text: "Applications are processed by DPIIT. Recognition is typically granted within a few weeks for straightforward cases.",
+      },
+      {
+        title: "Access Benefits",
+        text: "Use your DPIIT recognition number to apply for Section 80IAC, CGTMSE, SISFS, government procurement preferences and more.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents for DPIIT Recognition",
+    note: "Vikas Bharat can help organise a complete Startup India recognition file.",
+    items: [
+      "Certificate of Incorporation or Registration Certificate",
+      "PAN card of the entity",
+      "Details of directors/partners/promoters with Aadhaar and PAN",
+      "Brief description of the business, product/service and innovation",
+      "Website URL or product demo link (if available)",
+      "Proof of funding received (if any) — angel, VC or government grants",
+      "Audited financial statements (if the entity is more than 1 year old)",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const startupIndiaEligibilityFaq = {
+  heading: "Frequently Asked Questions",
+  sub: "2026 revised turnover and age limits, Deep Tech, cooperatives and recognition benefits.",
+  items: [
+    {
+      question: "What is the new turnover limit under Startup India scheme eligibility?",
+      answer:
+        "The turnover limit has been increased to ₹200 crore for regular startups and ₹300 crore for Deep Tech startups under the 2026 revised framework.",
+    },
+    {
+      question: "What is the age limit for Deep Tech startups?",
+      answer:
+        "Deep Tech startups can be up to 20 years old from incorporation. Regular startups must be within 10 years of incorporation to be eligible.",
+    },
+    {
+      question: "Are cooperative societies eligible under Startup India scheme?",
+      answer:
+        "Yes, both Multi-State and State-registered Cooperative Societies are now eligible under the 2026 revised framework — a significant expansion from the earlier criteria.",
+    },
+    {
+      question: "What qualifies a startup as Deep Tech?",
+      answer:
+        "Startups working on cutting-edge, science-based, R&D-intensive technologies with long development cycles qualify as Deep Tech under the revised framework.",
+    },
+    {
+      question: "Can I get a collateral-free business loan after getting recognized?",
+      answer:
+        "Yes, DPIIT recognition is the key requirement for applying for a collateral-free loan through the CGTMSE or CGSS schemes.",
+    },
+    {
+      question: "Does recognition under Startup India give tax benefits?",
+      answer:
+        "Yes, DPIIT recognition is the prerequisite for applying for Section 80IAC — 100% income tax exemption for three consecutive years within the first ten years of incorporation.",
+    },
+  ],
+} as const;
+
 export const hero = {
   eyebrow: "VIKASBHART",
   headline: "Sapno Se Safalta Tak",

@@ -63,7 +63,18 @@ const iconMap: Record<SchemeItem["icon"], LucideIcon> = {
   trophy: Trophy,
 };
 
+const SCHEME_SERVICE_REDIRECTS: Record<string, string> = {
+  "msme-certification": "/services/certificate",
+  "certs-compliance": "/services/certificate",
+  "iso-certification": "/services/certificate",
+  "tax-exemption": "/services/certificate",
+  "business-registration": "/services/registration",
+  "startup-india-cert": "/services/startup",
+};
+
 function schemeHref(item: SchemeItem) {
+  const serviceHref = SCHEME_SERVICE_REDIRECTS[item.id];
+  if (serviceHref) return serviceHref;
   if (getSchemeDesk(item.id)) return `/scheme/${item.id}`;
   return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
     `Hi, I want to know more about the ${item.title}.`,
