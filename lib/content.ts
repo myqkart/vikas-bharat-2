@@ -468,6 +468,16 @@ export const schemePage = {
         icon: "cpu" as const,
       },
       {
+        id: "venture-tech",
+        title: "Venture Tech Funding",
+        text: "Chiratae Sonic Venture Tech Funding for early-stage disruptive tech startups — seed investment up to ₹18 Crore with 48-hour initial response, Demo Day and mentorship.",
+        filters: ["Equity"] as const,
+        featured: false,
+        filterOnly: true,
+        image: photos.schemeLab,
+        icon: "cpu" as const,
+      },
+      {
         id: "marine-venture",
         title: "Marine Venture",
         text: "Apply for Marine Venture 2026 to get equity funding, mentorship, and incubation support for innovative maritime startups in AI, automation, decarbonization, and blockchain solutions.",
@@ -536,6 +546,56 @@ export const schemePage = {
         filterOnly: true,
         image: photos.credentialGrowth,
         icon: "trophy" as const,
+      },
+      {
+        id: "deep-tech",
+        title: "Deep Tech Funding",
+        text: "Explore the Deep Tech Funding scheme by IIT Tirupati TIH, offering up to ₹1 crore for early-stage tech research, prototype development, and commercialization.",
+        filters: ["Equity"] as const,
+        featured: false,
+        filterOnly: true,
+        image: photos.schemeLab,
+        icon: "cpu" as const,
+      },
+      {
+        id: "new-venture",
+        title: "New Venture Program",
+        text: "Explore the New Venture Program 2025 by EmTek in Bhubaneswar. Learn about eligibility, benefits, focus areas, and the application process for early-stage startups in Industry 4.0 technologies.",
+        filters: ["Equity"] as const,
+        featured: false,
+        filterOnly: true,
+        image: photos.schemeStartup,
+        icon: "rocket" as const,
+      },
+      {
+        id: "ratan-funding",
+        title: "Ratan Funding",
+        text: "Discover the Ratan Funding Scheme 2026 by Ratan Tata Innovation Hub. Learn about funding up to ₹30 Lakhs, eligibility criteria, mentorship, and application documents.",
+        filters: ["Equity"] as const,
+        featured: false,
+        filterOnly: true,
+        image: photos.schemePitch,
+        icon: "wallet" as const,
+      },
+      {
+        id: "investment-readiness",
+        title: "Investment Readiness Accelerator (IRA) 2.0",
+        text: "ISB I-Venture's IRA 2.0 prepares Seed to Series A startups for investor meetings through pitch coaching, financial modelling, and VC network access.",
+        filters: ["Equity"] as const,
+        featured: false,
+        filterOnly: true,
+        image: photos.schemeVc,
+        icon: "compass" as const,
+      },
+      {
+        id: "technovibe",
+        title: "TechnoVibe Funding",
+        text: "Unlock up to ₹10 Lakhs in tiered grants for your blockchain startup. Explore focus areas in governance, supply chain, and healthcare.",
+        filters: ["Equity"] as const,
+        featured: false,
+        filterOnly: true,
+        image: photos.schemeTech,
+        icon: "circuit" as const,
       },
       {
         id: "act-grant",
@@ -5535,6 +5595,1129 @@ export const rdifFaq = {
     },
   ],
 } as const;
+
+export const sssPage = {
+  eyebrow: "SSS • Startup Support Scheme",
+  heading: "Startup Support Scheme (SSS)",
+  kicker: "How To Apply, Benefits & Eligibility",
+  intro:
+    "Apply for the Startup Support Scheme (SSS) and get financial assistance of ₹25 Lakh to ₹1 Crore — plus mentorship and market connections for technology-driven startups.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Founders preparing a Startup Support Scheme equity funding application",
+  stats: [
+    { value: "₹25L", label: "Min Funding Support" },
+    { value: "₹1 Cr", label: "Max Funding Support" },
+    { value: "10 Yrs", label: "Max Business Age" },
+    { value: "DPIIT", label: "Recognition Required" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the Startup Support Scheme (SSS)?",
+    paragraphs: [
+      "The Startup Support Scheme (SSS) provides financial backing and mentorship for startups in technology and innovation domains. Unlike a purely debt-based unsecured business loan, SSS focuses on a longer-term partnership with the innovator.",
+      "It assists early-stage startups from idea through scale-up. With funding from ₹25 lakh to ₹1 crore, SSS gives technology-driven startups the capital, mentorship and connections they need to build products and bring them to market.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Equity, debt or equity-linked support up to ₹1 crore",
+      "Structured mentorship and growth advisory",
+      "Support from idea / PoC through scale-up stages",
+      "Networking with investors and industry partners",
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the Startup Support Scheme (SSS)",
+    sub: "Capital plus mentorship, product support and market pathways — not just a cheque.",
+    items: [
+      {
+        title: "Funding Support",
+        text: "Startups can avail up to ₹1 crore in equity-based investment, debt or equity-linked instruments.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Mentorship & Advisory",
+        text: "Access structured mentorship and growth advisory sessions with industry experts and investors.",
+        icon: "users" as const,
+      },
+      {
+        title: "Product Development",
+        text: "Support for product development, including testing, trials and market-entry strategies.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Business Growth",
+        text: "Accelerate growth through collaborations, market access and commercialisation pathways.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Networking",
+        text: "Build relationships with venture funding partners and industry professionals.",
+        icon: "send" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria for SSS",
+    sub: "DPIIT recognition, age, stage and an innovation-led model in tech-focused sectors.",
+    leftHeading: "Entity & Registration",
+    rightHeading: "Stage & Focus",
+    items: [
+      {
+        title: "Business Type",
+        text: "Proprietorship, Partnership, LLP, Private Limited Company, NGO or Individual.",
+        icon: "factory" as const,
+      },
+      {
+        title: "DPIIT Recognition",
+        text: "Must have Startup India recognition via DPIIT.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Business Age",
+        text: "Incorporated within the last 10 years from the date of registration.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Stage of Business",
+        text: "Idea, PoC, Prototype, MVP or Scale-up stage.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Focus Areas",
+        text: "Technology or innovation-driven sectors such as healthcare, fintech, IoT and more.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Innovation Factor",
+        text: "Must have an innovative technology idea or a disruptive business model.",
+        icon: "tech" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for the Startup Support Scheme (SSS)",
+    sub: "Five steps from eligibility check to acceptance and funding initiation.",
+    steps: [
+      {
+        title: "Check Eligibility",
+        text: "Verify whether your startup falls under the eligible business, registration and stage criteria.",
+      },
+      {
+        title: "Gather Documents",
+        text: "Collect incorporation, DPIIT, pitch deck, financial records and innovation-proof documents.",
+      },
+      {
+        title: "Submit the Application",
+        text: "Submit your filled application with the complete set of required documents.",
+      },
+      {
+        title: "Evaluation",
+        text: "Your application is reviewed and evaluated as per the scheme guidelines.",
+      },
+      {
+        title: "Acceptance & Funding",
+        text: "Upon approval, acceptance is processed and funding support is initiated for eligible startups.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for SSS",
+    note: "Keep these ready for submission and verification. Vikas Bharat sends a file-specific SSS checklist after eligibility.",
+    items: [
+      "Incorporation proof — Certificate of Incorporation, Partnership Deed or LLP Agreement",
+      "DPIIT certificate — mandatory Startup India recognition",
+      "Startup pitch deck or business plan outlining goals and milestones",
+      "Financial records — audited balance sheets, P&L and bank statements for 1–2 years (as applicable)",
+      "Technology description — MVP demo, photos or technical whitepapers as evidence of innovation",
+      "Founder profiles — bios and CVs of core team members",
+      "MSME details — copy of Udyam / MSME certification (if available)",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const sssFaq = {
+  heading: "SSS questions, answered",
+  sub: "What SSS is, who qualifies, how much funding you can get, and which documents matter.",
+  items: [
+    {
+      question: "What is the Startup Support Scheme (SSS)?",
+      answer:
+        "The SSS scheme provides seed-style funding of up to ₹1 crore, mentorship and business development support for early-stage startups in India.",
+    },
+    {
+      question: "What are the eligibility criteria for the SSS?",
+      answer:
+        "The startup must be technology or innovation-driven, incorporated within the last 10 years, and recognised by DPIIT. Eligible stages range from idea and PoC through MVP and scale-up.",
+    },
+    {
+      question: "How much funding is available under the SSS?",
+      answer:
+        "The scheme offers support from about ₹25 lakh up to ₹1 crore in equity-based investment, debt or equity-linked / milestone-linked instruments.",
+    },
+    {
+      question: "What documents are required for the SSS application?",
+      answer:
+        "DPIIT certificate, incorporation documents, financial statements, a pitch deck or business plan, and technical proof of concept or innovation evidence.",
+    },
+  ],
+} as const;
+
+export const equityLinkedSeedPage = {
+  eyebrow: "Equity Linked Seed Fund Guide",
+  heading: "Equity Linked Seed Fund",
+  kicker: "Eligibility, Benefits, and How to Apply",
+  intro:
+    "Discover everything you need to know about the Equity Linked Seed Fund — eligibility, benefits, focus sectors and documents required to apply for funding for your innovative startup.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Founders preparing an Equity Linked Seed Fund application",
+  stats: [
+    { value: "₹30L", label: "Max Grant Support" },
+    { value: "10%", label: "Max Equity Stake" },
+    { value: "₹3 Cr", label: "Pre-Series A Pathway" },
+    { value: "5 Yrs", label: "Max Startup Age" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the Equity Linked Seed Fund?",
+    paragraphs: [
+      "The Equity Linked Seed Fund is a government-backed initiative designed to support early-stage startups with innovative technologies. It helps founders overcome initial financial challenges and move from concept to commercialisation.",
+      "Support comes as equity or equity-linked investments, so startups can grow and develop products while retaining meaningful ownership. The fund targets breakthrough solutions across sectors such as biotech, agritech, healthcare and food processing.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Up to ₹30 lakh in grant support for early-stage startups",
+      "Equity or equity-linked investment with max ~10% stake",
+      "Pathway to up to ₹3 crore pre-Series A funding",
+      "Mentorship, networking and market access",
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the Equity Linked Seed Fund",
+    sub: "Grant capital, capped equity participation, pre-Series A pathways and hands-on guidance.",
+    items: [
+      {
+        title: "Grant Support",
+        text: "Up to ₹30 lakhs in grant support for early-stage startups.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Equity-Based Investment",
+        text: "Investment via equity or equity-linked instruments, with equity stake typically capped at about 10%.",
+        icon: "users" as const,
+      },
+      {
+        title: "Pre-Series A Funding",
+        text: "Pathway to up to ₹3 crore in pre-Series A funding from investors and venture capitalists.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Financial Flexibility",
+        text: "Funds can be used for product development, testing, marketing, team building and more.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Mentorship & Guidance",
+        text: "Access to industry experts, investors and mentors who guide startups in scaling operations.",
+        icon: "mic" as const,
+      },
+      {
+        title: "Networking & Market Access",
+        text: "Opportunities to connect with customers, investors and partners for market expansion.",
+        icon: "send" as const,
+      },
+    ],
+  },
+  objectives: {
+    eyebrow: "Purpose",
+    heading: "Key Objectives of the Fund",
+    sub: "Bridge early-stage capital gaps and accelerate tech-led innovation toward market scale.",
+    leftHeading: "Innovation & Capital",
+    rightHeading: "Scale & Ecosystem",
+    items: [
+      {
+        title: "Sector Innovation",
+        text: "Support innovation in biotechnology, agriculture, healthcare and environmental sustainability.",
+        icon: "lab" as const,
+      },
+      {
+        title: "Early-Stage Capital",
+        text: "Fund startups not yet ready to attract angel investors or venture capital on their own.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Product Scale-Up",
+        text: "Enable startups to scale products and services to meet market demand.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Funding Bridge",
+        text: "Act as a bridge between early-stage funding and larger investments in the startup ecosystem.",
+        icon: "landmark" as const,
+      },
+    ],
+  },
+  focus: {
+    eyebrow: "Sectors",
+    heading: "Focus Sectors",
+    sub: "Technology-driven solutions across biotech, agri, health, food, cleantech and fintech.",
+    leftHeading: "Life & Agri",
+    rightHeading: "Health & Digital",
+    items: [
+      {
+        title: "Biotech",
+        text: "Drug discovery, biosimilars, regenerative medicine and biopharma innovations.",
+        icon: "lab" as const,
+      },
+      {
+        title: "Agritech",
+        text: "Precision farming, farm management tools and agri-value chains.",
+        icon: "agri" as const,
+      },
+      {
+        title: "HealthTech",
+        text: "Medical devices, digital health, telemedicine, IoT healthcare and remote monitoring.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Food Processing",
+        text: "Sustainable food processing, packaging and food-security innovations.",
+        icon: "seed" as const,
+      },
+      {
+        title: "CleanTech",
+        text: "Renewable energy, waste management and environmental sustainability technologies.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Fintech",
+        text: "Financial technologies, payments systems and digital banking solutions.",
+        icon: "wallet" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria",
+    sub: "Private limited, DPIIT-recognised, Indian-owned startups with innovative tech and early-stage economics.",
+    leftHeading: "Entity & Ownership",
+    rightHeading: "Stage & Economics",
+    items: [
+      {
+        title: "Business Type",
+        text: "Must be a Private Limited Company registered under the Companies Act, 2013.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Indian Ownership",
+        text: "At least 51% Indian ownership (excluding OCI/PIO).",
+        icon: "users" as const,
+      },
+      {
+        title: "DPIIT Recognition",
+        text: "Must be DPIIT-recognised as a Startup India entity.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Technology & Innovation",
+        text: "Focus on innovative technologies and commercialisation of new products.",
+        icon: "tech" as const,
+      },
+      {
+        title: "Age of Startup",
+        text: "In existence for up to 5 years from the date of incorporation.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Turnover Cap",
+        text: "Annual turnover must not exceed ₹25 crore in any financial year.",
+        icon: "wallet" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for the Equity Linked Seed Fund",
+    sub: "Five steps from document prep to disbursement — applications typically run on a rolling basis.",
+    steps: [
+      {
+        title: "Prepare Documents",
+        text: "Gather incorporation papers, DPIIT proof, pitch deck, financials, founder profiles and innovation evidence.",
+      },
+      {
+        title: "Submit Application",
+        text: "Apply through the official fund channel with a complete, compliance-ready file.",
+      },
+      {
+        title: "Evaluation Process",
+        text: "Your innovation, market readiness and financials are reviewed against scheme guidelines.",
+      },
+      {
+        title: "Interview & Pitch",
+        text: "Shortlisted teams present to the evaluation panel or investment committee.",
+      },
+      {
+        title: "Disbursement & Support",
+        text: "On approval, funding is disbursed and mentorship / market-access support begins.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Prepare a complete equity-ready file. Vikas Bharat sends a checklist tailored to your sector after eligibility.",
+    items: [
+      "Company registration documents — Certificate of Incorporation, MoA and AoA",
+      "DPIIT recognition proof as a Startup India entity",
+      "Pitch deck or business plan with market opportunity and growth strategy",
+      "Financial statements — balance sheet, P&L and fund utilisation breakdown",
+      "Founders’ information — resumes and background of the core team",
+      "Innovation proof — technology, IP or market-readiness evidence",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const equityLinkedSeedFaq = {
+  heading: "Equity Linked Seed Fund questions, answered",
+  sub: "What the fund is, how much you can raise, who qualifies, and which documents matter.",
+  items: [
+    {
+      question: "What is the Equity Linked Seed Fund?",
+      answer:
+        "It is a government-backed initiative that provides early-stage startups with innovative technologies funding through equity or equity-linked instruments, plus mentorship and market support.",
+    },
+    {
+      question: "What is the maximum funding available under the Equity Linked Seed Fund?",
+      answer:
+        "Startups can receive up to ₹30 lakhs in grant / equity-linked support under the scheme, with pathways toward larger pre-Series A capital of up to about ₹3 crore.",
+    },
+    {
+      question: "Who is eligible to apply for the Equity Linked Seed Fund?",
+      answer:
+        "DPIIT-recognised Private Limited Companies with at least 51% Indian ownership, up to 5 years old, turnover not exceeding ₹25 crore, and a focus on innovative technology commercialisation.",
+    },
+    {
+      question: "What documents are required to apply?",
+      answer:
+        "Company registration documents, DPIIT proof, pitch deck or business plan, financials, founder profiles, and proof of technology or innovation.",
+    },
+    {
+      question: "Is there a deadline to apply?",
+      answer:
+        "The fund generally operates on a rolling application basis. Specific windows may be announced periodically — check the official portal or ask Vikas Bharat for the latest cycle dates.",
+    },
+  ],
+} as const;
+
+const equityFundingFaq = (
+  name: string,
+  funding: string,
+  eligibility: string,
+  documents: string,
+) => ({
+  heading: `${name} questions, answered`,
+  sub: "Funding, eligibility, documents and the application process.",
+  items: [
+    {
+      question: `What is ${name}?`,
+      answer: `${name} provides equity-led capital and strategic support to qualifying innovation-driven startups.`,
+    },
+    {
+      question: "What funding support is available?",
+      answer: funding,
+    },
+    {
+      question: "Who is eligible to apply?",
+      answer: eligibility,
+    },
+    {
+      question: "What documents are required?",
+      answer: documents,
+    },
+  ],
+});
+
+export const horizonFundPage = {
+  eyebrow: "Startup Funding • Horizon Fund",
+  heading: "Horizon Fund",
+  kicker: "Equity Funding for Revenue-Generating Startups",
+  intro:
+    "Growth-stage, revenue-generating startups can access equity investment, mentorship and global network support to scale their next milestone.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Growth-stage startup founders presenting to Horizon Fund investors",
+  stats: [
+    { value: "USD 100K", label: "Initial Investment" },
+    { value: "USD 250K", label: "Follow-Up Potential" },
+    { value: "₹2 Cr", label: "Approx. Total Scale Capital" },
+    { value: "Rolling", label: "Application Basis" },
+  ],
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the Horizon Fund?",
+    paragraphs: [
+      "The Horizon Fund is an equity investment initiative for revenue-generating startups at growth stage. It is sector-agnostic, with a preference for technology-driven, scalable solutions.",
+      "Initial investment can reach USD 100,000 (about ₹83 lakh), with follow-up investment up to USD 250,000 based on progress and achieved milestones.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Equity capital without EMI pressure",
+      "Initial and follow-up growth funding",
+      "Mentorship from industry leaders",
+      "Access to global investors and corporate partners",
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the Horizon Fund",
+    sub: "Capital, mentor support and investor access for startups that have moved beyond the earliest stage.",
+    items: [
+      { title: "Seed-to-Scale Capital", text: "Potential investment of up to about ₹2 crore across initial and follow-up rounds.", icon: "wallet" as const },
+      { title: "No Debt Burden", text: "Equity funding avoids monthly repayment pressure and supports reinvestment.", icon: "shield" as const },
+      { title: "Expert Mentorship", text: "Guidance from industry leaders and growth advisors.", icon: "users" as const },
+      { title: "Global Network", text: "Access to international investors and corporate partners.", icon: "send" as const },
+      { title: "Tax Benefits", text: "Potential access to relevant state-level startup incentives.", icon: "landmark" as const },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Horizon Fund Eligibility",
+    sub: "Evidence of revenue, market traction, compliance and a credible growth plan are central to review.",
+    leftHeading: "Business & Traction",
+    rightHeading: "Compliance & Execution",
+    items: [
+      { title: "Registered Entity", text: "Partnership, LLP or Private Limited Company.", icon: "factory" as const },
+      { title: "Revenue Generation", text: "Demonstrable market traction and active revenue.", icon: "wallet" as const },
+      { title: "Growth Stage", text: "A scalable venture focused on expansion and viability.", icon: "rocket" as const },
+      { title: "India Operations", text: "Operating in India, with valid MSME certification where applicable.", icon: "landmark" as const },
+      { title: "Compliance", text: "Up-to-date financial records and tax compliance.", icon: "shield" as const },
+      { title: "Use of Funds", text: "Capital allocated toward product expansion, commercialisation or scale.", icon: "zap" as const },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply",
+    sub: "Prepare an investor-ready file, submit, and progress through review and selection.",
+    steps: [
+      { title: "Prepare Documents", text: "Compile financials, traction evidence, pitch deck and business plan." },
+      { title: "Submit Application", text: "Share a complete application through the designated channel." },
+      { title: "Review & Evaluation", text: "The team reviews market potential, execution readiness and compliance." },
+      { title: "Interview & Selection", text: "Shortlisted founders discuss the business with the investment team." },
+      { title: "Funding & Mentorship", text: "Selected ventures receive investment support and strategic guidance." },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Vikas Bharat provides a funding-readiness checklist after the initial eligibility review.",
+    items: [
+      "Company registration documents and DPIIT recognition",
+      "Professional pitch deck and comprehensive business plan",
+      "Latest audited financials and projections",
+      "Technology description, PoC and customer-traction evidence",
+      "Founder CVs and MSME certificate, where applicable",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const gvflPage = {
+  eyebrow: "GVFL • Equity & Quasi-Equity",
+  heading: "GVFL Scheme",
+  kicker: "Equity & Quasi-Equity for Growth-Stage Businesses",
+  intro: "GVFL supports innovative growth-stage businesses with equity and quasi-equity capital, investor readiness and strategic execution guidance.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Founders preparing a GVFL equity investment proposal",
+  stats: [
+    { value: "Equity", label: "Investment Route" },
+    { value: "Quasi", label: "Equity-Linked Options" },
+    { value: "Growth", label: "Stage Focus" },
+    { value: "India", label: "Innovation-Led Entities" },
+  ],
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is GVFL?",
+    paragraphs: [
+      "GVFL (Gujarat Venture Finance Limited) supports growth-stage businesses through equity and quasi-equity investments.",
+      "The programme backs innovation, expansion plans and scalable execution with suitable capital support, evaluation and long-term partnership.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: ["Equity and quasi-equity structures", "Investor-readiness support", "Growth-stage focus", "Strategic execution guidance"],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of GVFL Equity Support",
+    sub: "Investor readiness and flexible capital structures for businesses with measurable scale potential.",
+    items: [
+      { title: "Equity / Quasi-Equity", text: "Support through equity-linked and quasi-equity structures based on evaluation.", icon: "wallet" as const },
+      { title: "Investor Readiness", text: "Guidance to articulate traction, business narrative and growth plans.", icon: "clipboard" as const },
+      { title: "Growth Stage Focus", text: "Support for businesses with clear milestones and expansion potential.", icon: "rocket" as const },
+      { title: "Strategic Guidance", text: "Mentorship that improves commercialisation and operational planning.", icon: "users" as const },
+      { title: "Long-Term Partnership", text: "Capital support designed for sustainable growth, not short-term fixes.", icon: "landmark" as const },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "GVFL Eligibility Criteria",
+    sub: "Innovation, scale potential, compliance and an execution-ready team guide investment review.",
+    leftHeading: "Business & Growth",
+    rightHeading: "Execution & Compliance",
+    items: [
+      { title: "Innovation-Led Entity", text: "A registered company or entity with an innovative product or service.", icon: "factory" as const },
+      { title: "Scalable Stage", text: "Growth-stage venture with measurable milestones and expansion potential.", icon: "rocket" as const },
+      { title: "Clear Differentiator", text: "Technology, business-model innovation or market validation.", icon: "tech" as const },
+      { title: "Legal Compliance", text: "Relevant registrations and legal requirements for fundraising.", icon: "shield" as const },
+      { title: "Team Capability", text: "Founding team ready to execute the stated milestones.", icon: "users" as const },
+      { title: "Growth Use", text: "Capital allocated toward product expansion, commercialisation or scale.", icon: "zap" as const },
+    ],
+  },
+  process: horizonFundPage.process,
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for GVFL",
+    note: "Prepare an investor-ready file; Vikas Bharat can share a tailored GVFL checklist.",
+    items: ["Pitch deck / executive summary", "Business plan and growth strategy", "Incorporation / registration proof", "Financial statements", "Cap table / shareholding details", "Product, technology or market-validation proof", "Founder and team bios"],
+    cta: "Download For More",
+  },
+} as const;
+
+export const evolveTechPage = {
+  eyebrow: "Evolve-Tech Funding 2.0",
+  heading: "Evolve-Tech Funding 2.0",
+  kicker: "Equity Funding & Mentorship for Tech Startups",
+  intro: "A structured entry point for technology-enabled startups with an MVP to secure seed capital, expert feedback and investor readiness.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Technology founders preparing an Evolve-Tech Funding pitch",
+  stats: [
+    { value: "₹25L", label: "Seed Investment" },
+    { value: "5%", label: "Typical Equity Exchange" },
+    { value: "7–8 Wks", label: "Evaluation Cycle" },
+    { value: "MVP", label: "Minimum Product Stage" },
+  ],
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is Evolve-Tech Funding 2.0?",
+    paragraphs: [
+      "Evolve-Tech Funding 2.0 is an equity-based programme for technology-enabled startups. Instead of immediate debt, investors take a small ownership stake in exchange for capital and long-term support.",
+      "It helps founders bridge the gap between early traction and larger Series A rounds through professional evaluation, seed funding and high-level mentorship.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: ["Up to ₹25 lakh seed investment", "Typically around 5% equity", "7–8 week structured evaluation", "Sector-agnostic technology focus"],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of Evolve-Tech Funding 2.0",
+    sub: "Seed capital, investor-readiness feedback and mentor access for MVP-stage startups.",
+    items: [
+      { title: "Immediate Capital", text: "Up to ₹25 lakh for team expansion, product refinement and early marketing.", icon: "wallet" as const },
+      { title: "Investor Readiness", text: "Feedback on pitch decks, valuation and unit economics for future rounds.", icon: "clipboard" as const },
+      { title: "Expert Mentorship", text: "Guidance to refine growth strategy and navigate market-entry hurdles.", icon: "users" as const },
+      { title: "Global Exposure", text: "Visibility and introductions to potential B2B and ecosystem partners.", icon: "send" as const },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Evolve-Tech Eligibility",
+    sub: "Legally compliant, technology-enabled startups with a working prototype or MVP.",
+    leftHeading: "Entity & Product",
+    rightHeading: "Stage & Commitment",
+    items: [
+      { title: "Legal Structure", text: "Private Limited Company, LLP or Partnership.", icon: "factory" as const },
+      { title: "Startup India", text: "Valid Startup India registration certificate.", icon: "rocket" as const },
+      { title: "Technology Startup", text: "Technology-enabled business seeking private equity funding.", icon: "tech" as const },
+      { title: "MVP / Prototype", text: "Pre-revenue or early-revenue venture with a working product sample.", icon: "chip" as const },
+      { title: "Founder Commitment", text: "Founders available for the 7–8 week evaluation process.", icon: "users" as const },
+      { title: "Compliance", text: "Adherence to applicable MSME guidelines for small and micro units.", icon: "shield" as const },
+    ],
+  },
+  process: {
+    eyebrow: "Evaluation Journey",
+    heading: "How the Evaluation Process Works",
+    sub: "A milestone-based selection journey from initial screening to equity agreement.",
+    steps: [
+      { title: "Initial Screening", text: "Submit a pitch deck and basic application documents." },
+      { title: "Detailed Review", text: "The team evaluates technical architecture, market validation and founders." },
+      { title: "Expert Interaction", text: "Domain specialists stress-test the business and execution plan." },
+      { title: "Investment Committee Pitch", text: "Shortlisted founders present to the final decision panel." },
+      { title: "Disbursement", text: "Successful startups sign an equity agreement and receive funds." },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Vikas Bharat sends a focused Evolve-Tech funding file checklist after eligibility.",
+    items: ["Company deck, website link and product demo/photos", "Startup India / DPIIT certificate", "Founder CVs and role details", "Audited financials, P&L and cash-flow reports", "Cap table / shareholding pattern", "Udyam / MSME certificate and latest audit / MIS reports"],
+    cta: "Download For More",
+  },
+} as const;
+
+export const marineVenturePage = {
+  eyebrow: "Marine Venture • USHUS Program",
+  heading: "Marine Venture",
+  kicker: "Funding, Mentorship & Incubation for Maritime Startups",
+  intro: "Marine Venture supports maritime innovators with equity-led capital, specialist mentorship and structured incubation to commercialise ocean-tech solutions.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Maritime technology founders preparing a Marine Venture proposal",
+  stats: [
+    { value: "24 Mo", label: "Incubation Roadmap" },
+    { value: "₹1 Cr", label: "Related Hub Grant Potential" },
+    { value: "51%", label: "Minimum Indian Ownership" },
+    { value: "MVP", label: "Minimum Product Stage" },
+  ],
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is Marine Venture?",
+    paragraphs: [
+      "Marine Venture 2026, under the USHUS Program, is a collaboration between IIMK LIVE and Cochin Shipyard Ltd. for technology-driven startups in maritime and allied sectors.",
+      "It connects high-potential founders with industrial scale, equity-led partnerships, incubation and specialised mentorship for digital transformation and decarbonisation.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: ["Equity investment based on startup readiness", "24-month structured incubation", "Shipyard pilot opportunities", "Investor demo days and mentorship"],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of Marine Venture",
+    sub: "Capital, incubation and real-world maritime testing support for ocean-tech innovators.",
+    items: [
+      { title: "Financial Support", text: "Equity investment based on startup readiness and related prototyping-grant pathways.", icon: "wallet" as const },
+      { title: "24-Month Incubation", text: "A long-term, structured roadmap delivered through IIMK LIVE.", icon: "map" as const },
+      { title: "Elite Mentorship", text: "Guidance from maritime veterans and growth-advisory experts.", icon: "users" as const },
+      { title: "Shipyard Collaboration", text: "Opportunity to pilot technology in real-world shipyard environments.", icon: "landmark" as const },
+      { title: "Investor Demo Days", text: "Direct pitching opportunities to VCs and angel investors in venture tech.", icon: "send" as const },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Marine Venture Eligibility",
+    sub: "DPIIT-recognised maritime innovators with an MVP, Indian control and a technology-centred model.",
+    leftHeading: "Entity & Ownership",
+    rightHeading: "Sector & Product",
+    items: [
+      { title: "DPIIT Startup", text: "DPIIT-recognised startup registered in India.", icon: "rocket" as const },
+      { title: "Indian Ownership", text: "Indian promoters must hold at least 51% ownership at application.", icon: "users" as const },
+      { title: "Legal Entity", text: "Registered as a Private Limited Company or LLP.", icon: "factory" as const },
+      { title: "Maritime Focus", text: "Maritime, shipping, logistics or allied ocean-tech sector.", icon: "landmark" as const },
+      { title: "MVP Stage", text: "Functional MVP or post-MVP product stage.", icon: "chip" as const },
+      { title: "Technology Central", text: "Technology is central to the product, service or business model.", icon: "tech" as const },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "Marine Venture Application Process",
+    sub: "A structured USHUS submission journey from documentation through onboarding.",
+    steps: [
+      { title: "Documentation", text: "Prepare the technical, legal and commercial application file." },
+      { title: "Portal Submission", text: "Submit the complete proposal through the designated programme channel." },
+      { title: "Preliminary Screening", text: "The team assesses eligibility, sector fit and startup readiness." },
+      { title: "Technical Evaluation", text: "Experts review technology, TRL, maritime relevance and pilot potential." },
+      { title: "Final Pitch", text: "Shortlisted founders present to the programme and industry panel." },
+      { title: "Onboarding", text: "Selected ventures begin incubation, mentorship and funding discussions." },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Vikas Bharat can help prepare the technical and compliance file needed for Marine Venture review.",
+    items: ["Certificate of Incorporation, MoA and AoA", "DPIIT / Startup India certificate", "CS/CA-certified ownership proof showing ≥51% Indian ownership", "Maritime pitch deck and technical whitepaper / TRL proof", "Audited financials and cap table", "Pilot MoUs or customer-interest letters", "MSME certificate, where applicable"],
+    cta: "Download For More",
+  },
+} as const;
+
+export const matrixCapitalPage = {
+  eyebrow: "Matrix Capital Fellowship",
+  heading: "Matrix Capital Fellowship",
+  kicker: "Elite Global Funding & Founder Mentorship",
+  intro: "An ultra-selective, borderless fellowship for ambitious technology founders, combining bespoke mentorship with access to significant global capital.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Global technology founders preparing a Matrix Capital Fellowship application",
+  stats: [
+    { value: "₹4.52 Cr", label: "Potential Capital Support" },
+    { value: "0.1%", label: "Acceptance Rate" },
+    { value: "€2M", label: "Max Traction-Track ARR" },
+    { value: "Global", label: "Borderless Fellowship" },
+  ],
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the Matrix Capital Fellowship?",
+    paragraphs: [
+      "The Matrix Capital Fellowship, also known as the EWOR Fellowship, is an elite acceleration initiative combining direct financial investment and bespoke mentorship for globally scalable technology ventures.",
+      "Rather than a rigid curriculum, fellows have intensive weekly sparring sessions with experienced builders to stress-test the business model and growth strategy.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: ["Ideation and traction tracks", "Potential capital up to ₹4.52 crore", "Weekly sparring with unicorn founders", "Global investor-network access"],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the Matrix Capital Fellowship",
+    sub: "Founder-favourable capital, high-touch mentorship and exposure to global investors.",
+    items: [
+      { title: "Capital Support", text: "Potential direct investment up to ₹4.52 crore through EWOR and affiliate funds.", icon: "wallet" as const },
+      { title: "Unicorn-Founder Mentorship", text: "Weekly one-to-one sparring sessions with experienced global operators.", icon: "users" as const },
+      { title: "Grand Pitch", text: "Exposure to hundreds of active global investors through the fellowship network.", icon: "send" as const },
+      { title: "Platform Perks", text: "Potential cloud credits and access to talent and founder networks.", icon: "zap" as const },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Fellowship Eligibility",
+    sub: "A borderless programme for exceptional builders at ideation or early-traction stage.",
+    leftHeading: "Founder & Stage",
+    rightHeading: "Scope & Readiness",
+    items: [
+      { title: "Founder Quality", text: "Exceptional execution ability and ambition to build a global technology venture.", icon: "users" as const },
+      { title: "Ideation to Traction", text: "From no formal company through startups with up to €2M ARR.", icon: "rocket" as const },
+      { title: "Legal Status", text: "Open to individuals, teams and registered Private Limited Companies or LLPs.", icon: "factory" as const },
+      { title: "Growth Mindset", text: "Resilience and commitment to a globally scalable high-growth model.", icon: "zap" as const },
+      { title: "Borderless", text: "Founders from India, Europe and the US can apply.", icon: "landmark" as const },
+      { title: "Startup Recognition", text: "Startup India recognition is advisable for Indian applicants.", icon: "clipboard" as const },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "Matrix Fellowship Application Process",
+    sub: "Select a track and progress through a highly selective assessment journey.",
+    steps: [
+      { title: "Track Selection", text: "Choose Ideation Mode or Traction Mode based on venture maturity." },
+      { title: "Documentation", text: "Prepare founder portfolio, video introduction and venture materials." },
+      { title: "Portal Application", text: "Submit a complete application through the fellowship portal." },
+      { title: "Preliminary Assessment", text: "The team evaluates founder profile, ambition and venture potential." },
+      { title: "Interview Rounds", text: "Shortlisted founders participate in high-intensity interview and sparring rounds." },
+      { title: "Funding & Sparring", text: "Selected fellows access capital pathways and ongoing mentor sessions." },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Your application must demonstrate an exceptional founder profile and a globally scalable opportunity.",
+    items: ["Founder portfolio, GitHub repository, personal site or professional profile", "Pitch deck with MVP validation and three-year projections for Traction Mode", "Short video introduction", "Incorporation and MSME documents, if applicable", "Financials, cap table and ARR proof for Traction Mode", "Technical whitepaper for deep-tech ventures"],
+    cta: "Download For More",
+  },
+} as const;
+
+export const horizonFundFaq = equityFundingFaq("Horizon Fund", "Initial investment can reach USD 100,000, followed by up to USD 250,000 based on milestones.", "Revenue-generating growth-stage startups registered as a Partnership, LLP or Private Limited Company with strong traction and compliance readiness.", "Pitch deck, business plan, audited financials, customer-traction proof, founder CVs and company registration papers.");
+export const gvflFaq = equityFundingFaq("GVFL", "GVFL assesses equity and quasi-equity support based on business readiness and evaluation outcomes.", "Registered innovation-led businesses at a scalable stage with a compliant legal structure and credible execution plan.", "Pitch deck, business plan, registration proof, financial statements, cap table and market-validation evidence.");
+export const evolveTechFaq = equityFundingFaq("Evolve-Tech Funding 2.0", "The programme offers seed investment up to ₹25 lakh, typically in exchange for about 5% equity, subject to committee terms.", "Technology-enabled startups with Startup India recognition, a working prototype or MVP, and founders available for the 7–8 week review.", "Company deck, DPIIT certificate, founder CVs, financial records, cap table, MSME certificate and product demo.");
+export const marineVentureFaq = equityFundingFaq("Marine Venture", "Support is equity-led and linked to startup readiness, with related hub initiatives offering prototyping grant pathways.", "DPIIT-recognised Indian maritime, shipping, logistics or ocean-tech startups with an MVP and at least 51% Indian ownership.", "DPIIT certificate, ownership proof, maritime pitch deck, technical whitepaper, financials, cap table and pilot letters.");
+export const matrixCapitalFaq = equityFundingFaq("Matrix Capital Fellowship", "Fellows may access up to ₹4.52 crore in investment support, subject to programme and investment terms.", "Exceptional global founders from ideation stage through ventures with up to €2M ARR; Indian applicants may apply.", "Founder portfolio, pitch deck, video introduction, financials and cap table for traction-stage applicants, plus technical whitepaper for deep-tech.");
+
+const createEquityProgramme = (config: {
+  name: string;
+  eyebrow: string;
+  kicker: string;
+  intro: string;
+  funding: string;
+  eligibility: string;
+  benefits: readonly string[];
+  documents: readonly string[];
+  process: readonly { title: string; text: string }[];
+}) => ({
+  eyebrow: config.eyebrow,
+  heading: config.name,
+  kicker: config.kicker,
+  intro: config.intro,
+  cta: "Check Your Eligibility",
+  imageAlt: `${config.name} founders preparing an investment application`,
+  stats: [
+    { value: config.funding, label: "Funding Potential" },
+    { value: "Equity", label: "Investment Route" },
+    { value: "Startup", label: "Stage Focus" },
+    { value: "India", label: "Application Access" },
+  ],
+  unlock: {
+    eyebrow: "Programme Overview",
+    heading: `What is ${config.name}?`,
+    paragraphs: [
+      config.intro,
+      "The programme combines capital support with founder guidance, investor readiness and a structured review process for qualifying ventures.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: config.benefits,
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: `Benefits of ${config.name}`,
+    sub: "Capital and strategic support to help innovative ventures build, validate and scale.",
+    items: config.benefits.map((title, index) => ({
+      title,
+      text: [
+        "Investment support aligned to startup readiness and programme evaluation.",
+        "Specialist guidance to sharpen the business model and execution plan.",
+        "Access to relevant founder, mentor and investor networks.",
+        "Structured support for product validation and commercialisation.",
+      ][index % 4],
+      icon: (["wallet", "users", "send", "rocket"][index % 4]) as "wallet" | "users" | "send" | "rocket",
+    })),
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: `${config.name} Eligibility`,
+    sub: config.eligibility,
+    leftHeading: "Entity & Stage",
+    rightHeading: "Readiness & Compliance",
+    items: [
+      { title: "Registered Entity", text: "A legally registered startup or business structure specified by the programme.", icon: "factory" as const },
+      { title: "Innovation", text: "A technology-led, scalable or high-impact solution.", icon: "tech" as const },
+      { title: "Product Readiness", text: "A PoC, prototype, MVP or early market traction, as applicable.", icon: "chip" as const },
+      { title: "Founder Commitment", text: "A committed team ready to engage throughout the selection process.", icon: "users" as const },
+      { title: "Compliance", text: "Complete registrations, financial records and applicable statutory compliance.", icon: "shield" as const },
+      { title: "Growth Plan", text: "A credible use-of-funds plan and a pathway to scale.", icon: "rocket" as const },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: `${config.name} Application Process`,
+    sub: "Prepare a complete investor-ready file and progress through review, pitch and selection.",
+    steps: config.process,
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Vikas Bharat can help organise a complete, application-ready documentation file.",
+    items: config.documents,
+    cta: "Download For More",
+  },
+} as const);
+
+export const techEquityPage = createEquityProgramme({
+  name: "Tech Equity Program",
+  eyebrow: "Global Startup Accelerator",
+  kicker: "Global Acceleration for Web3, Blockchain & AI",
+  intro: "Alliance's Tech Equity Program supports early-stage technical founders building in blockchain, Web3 and AI through a hybrid 10-week acceleration journey, capital and international exposure.",
+  funding: "Up to ₹4.15 Cr",
+  eligibility: "Early-stage global startups, including Indian entities, with technical or visionary founders building in Blockchain, Web3 or AI. Teams should be working full-time and may apply from ideation through pre-revenue stages.",
+  benefits: ["Up to ₹4.15 crore funding", "Web3 and AI specialist mentorship", "Global Demo Day exposure", "International investor network", "Regulatory and tokenomics guidance"],
+  documents: ["Startup profile and product vision", "Founder CVs demonstrating technical expertise", "Company incorporation proof", "Startup India certificate, where applicable", "Burn rate, runway and prior-funding snapshot", "Technology roadmap, TRL proof or MVP demo"],
+  process: [
+    { title: "Preparation", text: "Refine the technology narrative, product roadmap and founder profile." },
+    { title: "Online Submission", text: "Submit the application and supporting documents through the programme channel." },
+    { title: "Interview", text: "Shortlisted founders discuss vision, technical depth and execution potential." },
+    { title: "Acceptance", text: "Selected teams receive cohort confirmation and investment terms." },
+    { title: "Scaling", text: "Join hybrid acceleration, mentorship and global Demo Day preparation." },
+  ],
+});
+
+export const udyogFundingPage = createEquityProgramme({
+  name: "Udyog Funding",
+  eyebrow: "Global Startup Competition",
+  kicker: "SAFE Investment for Global Startup Growth",
+  intro: "Udyog Funding is a global startup competition that helps high-potential ventures progress from regional innovation to international market access through founder-friendly SAFE investment.",
+  funding: "Up to $1M",
+  eligibility: "Pre-Seed, Seed or Series A startups with at least one full-time founder, a working MVP and early traction. Prior external funding should not exceed $3 million.",
+  benefits: ["Regional SAFE investment up to $50,000", "Global SAFE investment up to $1 million", "Global mentor and investor network", "Startup tool and cloud-credit perks", "International brand visibility"],
+  documents: ["Founder CVs and profiles", "Certificate of Incorporation and PAN", "DPIIT / Startup India certificate", "Comprehensive pitch deck", "MVP traction, user or pilot evidence", "Burn rate, runway and prior-funding snapshot", "Product demo and MSME certificate, where applicable"],
+  process: [
+    { title: "Preparation", text: "Complete registration, confirm eligibility and prepare an investor-ready pitch." },
+    { title: "Online Registration", text: "Submit the application through the designated competition portal." },
+    { title: "Regional Evaluation", text: "Experts review the product, traction and global expansion potential." },
+    { title: "Regional Finals", text: "Shortlisted startups pitch for regional SAFE investment." },
+    { title: "Global Finale", text: "Regional winners compete for the global investment opportunity." },
+  ],
+});
+
+export const vcFundStPage = createEquityProgramme({
+  name: "VC Fund for ST",
+  eyebrow: "Tribal Entrepreneurship • Venture Capital",
+  kicker: "Institutional Capital for Scheduled Tribe Entrepreneurs",
+  intro: "The Ministry of Tribal Affairs' VC Fund for ST supports Scheduled Tribe entrepreneurs through equity and debt-linked capital, incubation support and long-term growth guidance.",
+  funding: "₹10L–₹5 Cr",
+  eligibility: "The lead applicant must be an Indian Scheduled Tribe entrepreneur, with at least 51% ST ownership and control in a DPIIT-recognised Private Limited Company. The venture must meet applicable operating-history and compliance conditions.",
+  benefits: ["Funding from ₹10 lakh to ₹5 crore", "Up to 75% project-cost support", "4% coupon rate; 3.75% for eligible women and differently-abled founders", "Up to 10-year tenure and 36-month moratorium", "Incubation and prototype-refinement support"],
+  documents: ["Aadhaar, PAN and valid ST certificate", "Certificate of Incorporation, MoA and AoA", "DPIIT recognition certificate", "CA-certified shareholding proof showing ≥51% ST ownership", "Detailed Project Report and three-year projections", "Audited financials and bank statements", "TBI selection letter, if applicable", "Udyam / MSME certificate"],
+  process: [
+    { title: "Self-Audit", text: "Verify ST ownership, entity structure, operating history and eligibility." },
+    { title: "Technical Drafting", text: "Prepare a bankable DPR with social impact, innovation and financial projections." },
+    { title: "Portal Submission", text: "Submit a complete application through official IFCI or Ministry channels." },
+    { title: "Preliminary Review", text: "The committee assesses financial viability, innovation and compliance." },
+    { title: "Investment Committee Pitch", text: "Shortlisted founders present their venture and funding plan." },
+    { title: "Due Diligence", text: "The fund verifies legal, tax, financial and ownership records." },
+  ],
+});
+
+export const ventureFundMahaPage = createEquityProgramme({
+  name: "Venture Fund (MH)",
+  eyebrow: "Venture Fund • Maharashtra",
+  kicker: "Maharashtra Startup Equity Funding",
+  intro: "Managed by IDBI Capital with Maharashtra State Innovation Society, Venture Fund (MH) provides equity capital and institutional guidance to innovative Maharashtra startups.",
+  funding: "Up to ₹5 Cr",
+  eligibility: "DPIIT-recognised Private Limited Companies headquartered and primarily operating in Maharashtra, with a proven MVP or early revenue, clean financial records and an innovation-led scalable model.",
+  benefits: ["Up to ₹5 crore equity investment", "No monthly EMI burden", "IDBI Capital mentorship and investor readiness", "Corporate and institutional network access", "Follow-on funding potential"],
+  documents: ["Certificate of Incorporation, MoA and AoA", "DPIIT Startup Recognition certificate", "Investor-ready pitch deck", "Audited financials, where applicable", "Innovation and scalability project proposal", "Founder and key-team profiles", "Udyam / MSME certificate", "Patent or trademark documentation, where applicable"],
+  process: [
+    { title: "Self-Audit", text: "Confirm Maharashtra headquarters, Private Limited structure and DPIIT status." },
+    { title: "Technical Drafting", text: "Prepare a detailed investment narrative and use-of-funds plan." },
+    { title: "Portal Submission", text: "Submit the completed funding application and supporting file." },
+    { title: "Preliminary Screening", text: "The investment team assesses fit, traction and potential." },
+    { title: "Due Diligence", text: "Financial, legal and commercial details are reviewed." },
+    { title: "Investment Committee Pitch", text: "Shortlisted founders present to the investment panel." },
+  ],
+});
+
+export const ventureFundingChallengePage = createEquityProgramme({
+  name: "Venture Funding Challenge",
+  eyebrow: "Shiv Nadar AIC • Startup Acceleration",
+  kicker: "Seed Funding & Hybrid Incubation for Innovation-Led Startups",
+  intro: "The Venture Funding Challenge by Shiv Nadar AIC provides seed-stage capital, expert mentorship and a nine-month hybrid incubation programme for high-potential technology ventures.",
+  funding: "₹5L–₹1 Cr",
+  eligibility: "Early-stage or scaling Indian startups incorporated as a Private Limited Company, LLP or Partnership, with at least a PoC or working prototype, a committed founding team and a scalable technology or research-led solution.",
+  benefits: ["Funding from ₹5 lakh to ₹1 crore", "Nine-month hybrid incubation", "One-to-one founder and academic mentorship", "University lab and ecosystem access", "Curated investor Demo Days", "Market-validation support"],
+  documents: ["Certificate of Incorporation, MoA and AoA", "DPIIT / Startup India recognition", "Comprehensive pitch deck", "Prototype, PoC or TRL evidence", "Current financials and three-year projections", "Founder and technical-team CVs", "Udyam / MSME certificate", "Patent or trademark documents, if applicable"],
+  process: [
+    { title: "Self-Audit", text: "Confirm entity eligibility, prototype readiness and founder commitment." },
+    { title: "Technical Preparation", text: "Prepare a concise technical narrative, pitch and validation evidence." },
+    { title: "Online Submission", text: "Submit the application and complete supporting file." },
+    { title: "Preliminary Review", text: "The programme evaluates innovation, market potential and readiness." },
+    { title: "Interview & Presentation", text: "Shortlisted founders present their technology and scale plan." },
+    { title: "Selection & Funding", text: "Selected startups enter hybrid incubation and funding discussions." },
+  ],
+});
+
+export const equityElevatorPage = createEquityProgramme({
+  name: "Equity Elevator",
+  eyebrow: "Global Tech Accelerator",
+  kicker: "International Equity Funding & Silicon Valley Mentorship",
+  intro: "Equity Elevator is an international equity-based acceleration programme offering up to ₹4 crore for early- and growth-stage tech startups, with one-to-one mentorship from San Francisco industry leaders.",
+  funding: "Up to ₹4 Cr",
+  eligibility: "Registered Private Limited Companies, LLPs or Partnerships building tech-driven solutions with high IP potential, Startup India eligibility, and a clear global or multi-regional scaling strategy. At least one founder must join all 1:1 sessions.",
+  benefits: ["Equity investment up to ₹4 crore", "1:1 San Francisco mentorship", "Global networking and ecosystem access", "No debt burden", "Support across DeepTech, HealthTech, GreenTech, FinTech and mobility"],
+  documents: ["Company profile or website overview", "Detailed pitch deck", "Product demo video (up to 2 minutes)", "Founder vision video (about 1 minute)", "Auditor-certified cap table and 12-month projections", "Certificate of Incorporation and MSME certificate", "TRL proof (TRL 4+ preferred)"],
+  process: [
+    { title: "Preparation", text: "Assemble the pitch, product narrative, videos and financial file." },
+    { title: "Portal Submission", text: "Submit a complete application through the programme channel." },
+    { title: "Preliminary Screening", text: "Reviewers assess innovation quality, team velocity and scale potential." },
+    { title: "Technical Due Diligence", text: "Technology, market and compliance details are examined in depth." },
+    { title: "Selection & Funding", text: "Selected startups receive investment terms and mentorship onboarding." },
+  ],
+});
+
+export const deepTechPage = createEquityProgramme({
+  name: "Deep Tech Funding",
+  eyebrow: "IIT Tirupati TIH • NM-ICPS",
+  kicker: "Up to ₹1 Crore for Research-to-Prototype Deep Tech",
+  intro: "Deep Tech Funding under IIT Tirupati TIH supports academia–industry–startup collaborations advancing technologies from TRL 2–4 to TRL 5–6 in PNT, Earth Observation, Digital Twin and subsurface intelligence.",
+  funding: "Up to ₹1 Cr",
+  eligibility: "Indian nationals with a Principal Investigator affiliated to a recognised Indian academic or research institution. Startup-only proposals are not allowed — academia–industry–startup collaboration is required, with a 12–18 month project timeline aligned to focus domains.",
+  benefits: ["Grant support up to ₹1 crore", "Milestone-linked tranche release", "DST and industry mentorship", "IP and commercialisation assistance", "Access to elite research labs and validation facilities"],
+  documents: ["Detailed project proposal with TRL entry and exit points", "Prototype roadmap and timeline", "IP filing strategy", "Commercial deployment pathway", "PI and startup team CVs", "MSME certification for the industrial partner", "Collaboration letters or MoUs from partners"],
+  process: [
+    { title: "Partner Up", text: "Secure an academic PI and industry or startup collaboration partners." },
+    { title: "Technical Drafting", text: "Prepare the TRL narrative, roadmap and collaboration file." },
+    { title: "Portal Submission", text: "Submit the complete proposal through the official TIH channel." },
+    { title: "Evaluation", text: "Experts assess technical feasibility, impact and delivery readiness." },
+    { title: "Funding Disbursement", text: "Approved projects receive milestone-linked grant support." },
+    { title: "Execution & Monitoring", text: "Teams execute over 12–18 months with progress reviews." },
+  ],
+});
+
+export const newVenturePage = createEquityProgramme({
+  name: "New Venture Program",
+  eyebrow: "EmTek CoE • Industry 4.0",
+  kicker: "Up to ₹30 Lakh for Early-Stage Industry 4.0 Startups",
+  intro: "The New Venture Program by EmTek’s Centre of Excellence in Industry 4.0, Bhubaneswar, accelerates early-stage startups working on AI, blockchain, robotics, cybersecurity and related deep-tech solutions with funding, lab access and mentorship.",
+  funding: "Up to ₹30L",
+  eligibility: "Indian entrepreneurs and DPIIT-recognised startups registered as Private Limited Companies, LLPs, Partnerships or MSMEs, building scalable Industry 4.0 solutions across ideation to early scaling stages.",
+  benefits: ["Grants up to ₹30 lakh", "Industry and academic mentorship", "CoE lab and incubation infrastructure", "Business-model and GTM refinement", "Prototype-to-product assistance", "Investor and stakeholder networking", "IP patent advisory"],
+  documents: ["Completed application form", "Project proposal or business plan", "Business model and market analysis", "Prototype or demo, if available", "Company registration and eligibility proof"],
+  process: [
+    { title: "Prepare Documents", text: "Gather the proposal, business model, demo and registration proofs." },
+    { title: "Submit Application", text: "Apply through the official New Venture Program portal." },
+    { title: "Review & Shortlisting", text: "Experts assess innovation fit, feasibility and commercial potential." },
+    { title: "Interview / Pitch", text: "Shortlisted teams present to the selection panel." },
+    { title: "Final Selection", text: "Selected startups enrol for funding, lab access and mentorship." },
+  ],
+});
+
+export const ratanFundingPage = createEquityProgramme({
+  name: "Ratan Funding",
+  eyebrow: "Ratan Tata Innovation Hub",
+  kicker: "Up to ₹30 Lakh Seed Support for Validated Prototypes",
+  intro: "Ratan Funding is a flagship incubation and acceleration initiative for early-stage startups with validated prototypes or MVPs, helping founders reach investor readiness with founder-friendly capital and mentorship.",
+  funding: "Up to ₹30L",
+  eligibility: "Startups with a validated prototype or functional MVP, registered as Private Limited, LLP or OPC, holding Startup India recognition, with a full-time founding team and a scalable technology-driven solution.",
+  benefits: ["Seed support up to ₹30 lakh", "One-to-one industry mentorship", "Investor Demo Day access", "Global exposure pathways", "Regulatory and compliance guidance"],
+  documents: ["Certificate of Incorporation and MSME certificate", "GST and tax documents, if applicable", "Pitch deck covering problem, solution, market and traction", "Audited statements or six months of bank statements", "TRL or prototype evidence", "Founder bios and portfolios", "Patent or trademark documents, if any"],
+  process: [
+    { title: "Documentation", text: "Assemble incorporation, pitch, TRL and financial proofs." },
+    { title: "Portal Entry", text: "Create or complete the application on the programme portal." },
+    { title: "Document Upload", text: "Upload the full supporting file for screening." },
+    { title: "Preliminary Screening", text: "The team reviews readiness, innovation and founder commitment." },
+    { title: "Pitch Session", text: "Shortlisted founders present to mentors and evaluators." },
+    { title: "Funding & Mentorship", text: "Selected startups receive capital pathways and ongoing guidance." },
+  ],
+});
+
+export const investmentReadinessPage = createEquityProgramme({
+  name: "Investment Readiness Accelerator (IRA) 2.0",
+  eyebrow: "ISB I-Venture Accelerator",
+  kicker: "Prepare Seed to Series A Startups for Investor Meetings",
+  intro: "IRA 2.0 by ISB I-Venture helps early-to-growth startups become investor-ready through pitch coaching, financial modelling, one-to-one mentorship, compliance gap closure and a curated Demo Day with VC and angel networks.",
+  funding: "Accelerator",
+  eligibility: "DPIIT-recognised Private Limited Companies or LLPs at early-to-growth stage with a deployed product or MVP, measurable traction, active fundraising intent within 6–12 months, and at least one full-time founder participating.",
+  benefits: ["Pitch-deck refinement with investor feedback", "Financial model and valuation workshops", "One-to-one domain mentorship", "Demo Day and warm investor introductions", "Compliance and legal gap closure", "Open across FinTech, HealthTech, DeepTech, SaaS and more"],
+  documents: ["Company Incorporation Certificate (Pvt Ltd / LLP)", "DPIIT Recognition Certificate", "Pitch deck with problem, solution, market, traction and team", "Three-year financial projections and current statements", "Cap table", "Founder and leadership biographies", "MVP or product proof", "Udyam / MSME certificate"],
+  process: [
+    { title: "Eligibility Verification", text: "Confirm stage, traction, DPIIT status and documentation readiness." },
+    { title: "Document Preparation", text: "Finalise pitch deck, financial model, cap table and certificates." },
+    { title: "Online Application", text: "Submit the complete application through the IRA 2.0 portal." },
+    { title: "Screening & Shortlisting", text: "ISB I-Venture evaluates innovation, market potential and fundraising readiness." },
+    { title: "Program Participation", text: "Attend workshops, mentoring and financial modelling clinics." },
+    { title: "Investor Connection", text: "Pitch at Demo Day and begin active fundraising conversations." },
+  ],
+});
+
+export const technovibePage = createEquityProgramme({
+  name: "TechnoVibe Funding",
+  eyebrow: "Blockchain India Challenge",
+  kicker: "Tiered Grants up to ₹10 Lakh for Blockchain Startups",
+  intro: "TechnoVibe Funding supports blockchain-based solutions for governance, supply chains, healthcare, education and sustainability through non-dilutive, stage-wise grants from prototype to deployment.",
+  funding: "Up to ₹10L",
+  eligibility: "DPIIT-recognised or early-stage Indian-majority Private Limited Companies or LLPs with a proprietary blockchain solution at prototype, MVP or pilot-ready stage. Individual innovators may apply but must incorporate during the programme.",
+  benefits: ["Prototype grant of ₹1.5 lakh", "MVP grant of ₹4 lakh", "Deployment grant of ₹10 lakh", "Government pilot collaboration pathways", "Blockchain specialist mentorship", "VC and ecosystem visibility"],
+  documents: ["DPIIT Recognition Certificate", "Technical whitepaper on blockchain architecture", "Comprehensive pitch deck", "Team CVs highlighting blockchain expertise", "Six months of bank statements and ITR, if applicable", "Prototype or MVP proof (demo or repository)", "Certificate of Incorporation, MoA and AoA"],
+  process: [
+    { title: "Portal Registration", text: "Register on the official TechnoVibe application channel." },
+    { title: "Prepare the Pitch", text: "Finalise the whitepaper, pitch deck and stage-fit narrative." },
+    { title: "Document Upload", text: "Upload incorporation, DPIIT and technical evidence." },
+    { title: "Technical Screening", text: "Experts review architecture quality, originality and public-use fit." },
+    { title: "Presentation", text: "Shortlisted teams present to the evaluation panel." },
+    { title: "Grant Approval", text: "Selected startups receive stage-linked grant disbursement." },
+  ],
+});
+
+export const ventureTechPage = createEquityProgramme({
+  name: "Venture Tech Funding",
+  eyebrow: "Chiratae Sonic Programme",
+  kicker: "Up to ₹18 Crore Seed Capital for Disruptive Tech Startups",
+  intro: "Venture Tech Funding through Chiratae Sonic provides rapid seed and growth capital for early-stage technology startups with a valid prototype or market validation, covering AI, climate-tech, biotech, robotics, quantum and space.",
+  funding: "Up to ₹18 Cr",
+  eligibility: "Early-stage technology startups registered under the Companies Act 2013, with a valid prototype or market validation, committed founders, and a focus on disruptive domains such as AI/ML, biotech, energy, quantum, robotics or space tech.",
+  benefits: ["Seed funding up to USD 2 million (~₹18 crore)", "Initial application response within 48 hours", "Demo Day and curated investor visibility", "Mentorship and networking from Chiratae partners", "Expert-led go-to-market strategy support"],
+  documents: ["Executive summary / pitch deck", "Business plan with financial projections", "Product or technology description with prototype or MVP proof", "Founding team bios", "Market and competitor analysis", "Current traction metrics, if available", "Incorporation certificate, tax filings and IP documents, if applicable"],
+  process: [
+    { title: "Prepare Documents", text: "Assemble the pitch deck, business plan, product proof and compliance file." },
+    { title: "Submit Application", text: "Apply through the Chiratae Sonic / Venture Tech Funding channel." },
+    { title: "Evaluation Process", text: "The team reviews technology depth, market potential and founder readiness." },
+    { title: "Interview & Pitch", text: "Shortlisted startups present to investors and programme partners." },
+    { title: "Funding & Mentorship", text: "Selected ventures receive investment terms and ongoing ecosystem support." },
+  ],
+});
+
+export const techEquityFaq = equityFundingFaq("Tech Equity Program", "Selected participants may receive up to $500,000 (about ₹4.15 crore), subject to programme terms.", "Early-stage global Blockchain, Web3 and AI startups with technical or visionary founders; existing traction is not mandatory.", "Startup profile, founder backgrounds, incorporation proof, funding snapshot and product roadmap or MVP demo.");
+export const udyogFundingFaq = equityFundingFaq("Udyog Funding", "Regional winners may receive up to $50,000 and the global champion up to $1 million through SAFE investment.", "Pre-Seed to Series A startups with a full-time founder, working MVP, early traction and less than $3 million in prior external funding.", "Founder profiles, incorporation proof, pitch deck, traction evidence, financial snapshot and product demo.");
+export const vcFundStFaq = equityFundingFaq("VC Fund for ST", "The fund provides ₹10 lakh to ₹5 crore, subject to project evaluation and fund terms.", "DPIIT-recognised Private Limited Companies with at least 51% ownership and control by Scheduled Tribe entrepreneurs.", "ST certificate, incorporation documents, DPIIT proof, shareholding certificate, DPR, financials and bank statements.");
+export const ventureFundMahaFaq = equityFundingFaq("Venture Fund (MH)", "Eligible startups can receive up to ₹5 crore in equity financing.", "DPIIT-recognised Private Limited Companies headquartered and operating primarily in Maharashtra, with an MVP or early revenue.", "Pitch deck, DPIIT certificate, financials, founder bios, innovation proposal and relevant IP documents.");
+export const ventureFundingChallengeFaq = equityFundingFaq("Venture Funding Challenge", "Selected startups may receive ₹5 lakh to ₹1 crore based on project maturity and technical evaluation.", "Early-stage Indian startups with a PoC or working prototype, scalable technology or research solution and committed founders.", "Incorporation papers, DPIIT proof, pitch deck, prototype evidence, financial projections and team profiles.");
+export const equityElevatorFaq = equityFundingFaq("Equity Elevator", "Selected startups can receive an equity investment of up to ₹4 crore (about $500,000).", "Early- or growth-stage tech startups registered as Private Limited, LLP or Partnership with MVP or early-revenue traction and a global scaling vision.", "Company profile, pitch deck, founder and product videos, financials and TRL evidence.");
+export const deepTechFaq = equityFundingFaq("Deep Tech Funding", "Selected projects can receive up to ₹1 crore in grant-in-aid support.", "Indian collaborative proposals with an academic Principal Investigator; startup-only applications are not eligible.", "Project proposal, prototype roadmap, IP plan and collaboration letters from partners.");
+export const newVentureFaq = equityFundingFaq("New Venture Program", "Selected startups may receive up to ₹30 lakh to support prototype development and scaling.", "Indian Industry 4.0 startups registered as Private Limited, LLP, Partnership or MSME entities.", "Application form, project proposal, business model, registration proof and prototype or demo if available.");
+export const ratanFundingFaq = equityFundingFaq("Ratan Funding", "Selected startups can receive up to ₹30 lakh in milestone-linked grants or seed capital.", "DPIIT / Startup India recognised startups with a validated prototype or MVP and a full-time founding team.", "Incorporation papers, pitch deck, TRL evidence, financials and founder profiles.");
+export const investmentReadinessFaq = equityFundingFaq("Investment Readiness Accelerator (IRA) 2.0", "IRA 2.0 does not invest capital directly — it prepares startups to raise Seed to Series A funding from external investors.", "DPIIT-recognised Pvt Ltd or LLP startups with a deployed product or MVP, traction and fundraising intent within 6–12 months.", "Pitch deck, financial model, cap table, DPIIT certificate, incorporation papers and product proof.");
+export const technovibeFaq = equityFundingFaq("TechnoVibe Funding", "Startups can access up to ₹10 lakh across Prototype (₹1.5L), MVP (₹4L) and Deployment (₹10L) stages.", "DPIIT-recognised or early-stage Indian blockchain startups (Pvt Ltd or LLP) with proprietary technology at prototype to pilot stage.", "DPIIT certificate, technical whitepaper, pitch deck, TRL proof and incorporation documents.");
+export const ventureTechFaq = equityFundingFaq("Venture Tech Funding", "Selected startups may receive seed funding up to USD 2 million (about ₹18 crore), subject to evaluation and investment terms.", "Early-stage Companies Act startups with a prototype or market validation in disruptive tech domains such as AI, biotech, energy, quantum, robotics or space.", "Pitch deck, business plan, product description, founder bios, market analysis, traction proof and incorporation papers.");
 
 export const hero = {
   eyebrow: "VIKASBHART",
