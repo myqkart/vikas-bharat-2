@@ -1883,6 +1883,238 @@ export const nbfcFaq = {
   ],
 } as const;
 
+export const registrationPage = {
+  eyebrow: "Business Incorporation • Legal Entity",
+  heading: "Business Registration Services",
+  kicker: "Private Limited • LLP • OPC • Partnership",
+  intro:
+    "Get your business legally registered with Vikas Bharat’s end-to-end business registration services, offering quick and efficient processes for various business types. We provide expert documentation, compliance support, and post-registration assistance to help you establish your business identity properly.",
+  cta: "Start Registration",
+  imageAlt: "Advisor preparing company incorporation documents with a founder",
+  stats: [
+    { value: "48HRS", label: "Average Processing" },
+    { value: "100%", label: "Online Process" },
+    { value: "95%", label: "Success Rate" },
+    { value: "20K+", label: "Businesses Registered" },
+  ] as const,
+  unlock: {
+    eyebrow: "Why It Matters",
+    heading: "Why the Right Registration Matters",
+    paragraphs: [
+      "Registering your business is the first real step from idea to operation. A registered company can open a current account, sign contracts, hire employees on a payroll, apply for government schemes and loans, and raise funding from investors. An unregistered business cannot do most of these things legally.",
+      "The structure you choose — Private Limited Company, LLP, OPC, or partnership — determines your tax treatment, how much personal liability you carry, what compliance you are required to file every year, and how easy it is to bring in investors later. Getting this right from day one saves significant cost and paperwork down the road.",
+      "Vikas Bharat handles the entire process — name reservation, DSC, MCA filing, Certificate of Incorporation, PAN, GST registration, and Udyam registration if applicable. You get a complete, operational business entity with a compliance calendar so nothing falls through the cracks.",
+    ],
+    benefitsHeading: "Key Benefits",
+    benefits: [
+      "Legal recognition & credibility",
+      "Asset protection",
+      "Access to funding",
+      "Compliance & tax benefits",
+    ],
+  },
+  categories: {
+    eyebrow: "Entity Desk",
+    heading: "Our Business Registration Services",
+    sub: "A range of registration options so your business is legally recognised, protected, and ready for growth.",
+    leftHeading: "Company & LLP",
+    rightHeading: "Simpler structures & MSME",
+    items: [
+      {
+        title: "Private Limited Company",
+        text: "Ideal for scalable businesses with limited liability protection, offering easier access to funding.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Limited Liability Partnership (LLP)",
+        text: "Combines the flexibility of a partnership with corporate liability protection and tax benefits.",
+        icon: "shield" as const,
+      },
+      {
+        title: "One Person Company (OPC)",
+        text: "Perfect for solopreneurs to gain corporate identity and limited liability while maintaining full control.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Sole Proprietorship",
+        text: "The simplest business structure for individual entrepreneurs looking to operate with minimal regulatory requirements.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Partnership Firm",
+        text: "Traditional structure for multiple owners with shared responsibility, suitable for service-based businesses.",
+        icon: "factory" as const,
+      },
+      {
+        title: "MSME Registration",
+        text: "Official Udyam registration for micro, small and medium enterprises to access schemes, subsidies and priority sector lending.",
+        icon: "rocket" as const,
+      },
+    ],
+  },
+  services: {
+    eyebrow: "What We File",
+    heading: "What Vikas Bharat Handles for You",
+    sub: "Name to DSC, MCA filing, and post-incorporation setup — in one engagement.",
+    items: [
+      {
+        title: "Name & Digital Signature",
+        text: "Company name search, reservation on the MCA portal, and DSC (Digital Signature Certificate) for all directors.",
+        icon: "search" as const,
+      },
+      {
+        title: "Incorporation Filing",
+        text: "MOA, AOA, SPICe+ form preparation and MCA submission. We track the application and respond to queries from the Registrar of Companies.",
+        icon: "file" as const,
+      },
+      {
+        title: "Post-Incorporation Setup",
+        text: "Certificate of Incorporation, PAN, TAN, current account opening kit, and a compliance calendar covering annual ROC filings and board meetings.",
+        icon: "folder" as const,
+      },
+      {
+        title: "Add-On Registrations",
+        text: "GST registration, Udyam (MSME) registration, DPIIT Startup recognition, and IEC (Import Export Code) — handled together.",
+        icon: "clipboard" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Can Apply",
+    heading: "Eligibility Criteria for Business Registration",
+    sub: "To apply for any of the business structures mentioned, you must meet the following criteria.",
+    leftHeading: "By structure",
+    rightHeading: "Common requirements",
+    items: [
+      {
+        title: "Private Limited Company",
+        text: "At least two directors (one Indian resident) and two shareholders.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "LLP",
+        text: "Two designated partners with at least one Indian resident.",
+        icon: "shield" as const,
+      },
+      {
+        title: "OPC",
+        text: "Single director and shareholder with Indian citizenship and residency.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Sole Proprietorship",
+        text: "Any individual over 18 years with a valid Indian address.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Partnership Firm",
+        text: "Minimum two partners with no upper limit on the maximum number.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Valid Identity & Address",
+        text: "PAN, Aadhaar, etc. for all directors and partners.",
+        icon: "file" as const,
+      },
+      {
+        title: "Registered Office Proof",
+        text: "Utility bill, rent agreement, or NOC.",
+        icon: "tech" as const,
+      },
+      {
+        title: "DSC",
+        text: "Digital Signature Certificate for all directors/partners (except sole proprietorships).",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Business Name",
+        text: "Unique name that does not infringe on existing trademarks.",
+        icon: "chip" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We File",
+    heading: "Simple Application Process",
+    sub: "Five steps from structure advice to a live, compliant entity.",
+    steps: [
+      {
+        title: "Business Structure Consultation",
+        text: "We analyze your business needs and recommend the most suitable legal structure.",
+      },
+      {
+        title: "Name Reservation",
+        text: "We assist in selecting and registering a unique business name.",
+      },
+      {
+        title: "Documentation Preparation",
+        text: "We prepare all required documents like MOA, AOA, LLP Agreement, or Partnership Deed.",
+      },
+      {
+        title: "Government Filing",
+        text: "We handle the submission of all paperwork to relevant authorities for successful registration.",
+      },
+      {
+        title: "Post-Registration Support",
+        text: "Assistance with PAN/TAN registration, bank account opening, GST registration, and other compliance requirements.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Required Documents for Registration",
+    note: "Exact papers depend on the structure you choose. After the consultation we send a checklist so you only collect what MCA or the registrar actually needs.",
+    items: [
+      "PAN Card & Aadhaar Card of all directors/partners/proprietors",
+      "Passport-size photographs of all directors/partners",
+      "Director Identification Number (DIN) for company directors",
+      "LLP Agreement for Limited Liability Partnerships",
+      "Proof of registered office (utility bill, rent agreement, or NOC)",
+      "Digital Signature Certificate (DSC) for all directors/partners",
+      "MOA & AOA for companies",
+      "Bank statements / utility bills as address proof",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const registrationFaq = {
+  heading: "Registration questions, answered",
+  sub: "Structure choice, timelines, cost, foreign founders, compliance and conversion.",
+  items: [
+    {
+      question: "Which business structure is best for my startup?",
+      answer:
+        "The ideal business structure depends on the number of owners, liability protection needs, funding sources, and scalability. For small businesses or solo entrepreneurs, a Sole Proprietorship or One Person Company (OPC) might be suitable. For scalable ventures seeking funding, a Private Limited Company or Limited Liability Partnership (LLP) is usually the better fit.",
+    },
+    {
+      question: "How long does business registration take in India?",
+      answer:
+        "The business registration process in India typically takes 7 to 15 days. This includes document verification, name approval, and the final filing with the Registrar of Companies or relevant authority. First-structure consultancy is usually turned around within 48 hours so the file can start moving.",
+    },
+    {
+      question: "What are the costs involved in business registration?",
+      answer:
+        "Costs vary by structure and state. Private Limited Company registration typically ranges from ₹6,000 to ₹30,000 depending on the filing path. LLP and Sole Proprietorship registrations are usually less expensive. Additional costs may include stamp duty, GST registration, and documentation charges. We share a clear fee summary before any filing starts.",
+    },
+    {
+      question: "Can foreign nationals register a business in India?",
+      answer:
+        "Yes. Foreign nationals can set up a Private Limited Company or an LLP in India, but they must have a minimum of one Indian resident director or partner.",
+    },
+    {
+      question: "What compliance requirements follow after registration?",
+      answer:
+        "After registering, you typically need to file annual returns with the Registrar of Companies (ROC), complete GST registration and returns where applicable, maintain financial records and file income tax returns, and obtain licences based on activity (for example FSSAI for food businesses, ISO for manufacturing). We issue a compliance calendar with the incorporation pack.",
+    },
+    {
+      question: "Can I convert from one business structure to another later?",
+      answer:
+        "Yes. For example, you can convert a Sole Proprietorship into a Private Limited Company or an LLP if the business grows and needs a more formal structure and liability protection. The conversion path depends on the target structure and involves specific legal procedures — we map that before you file.",
+    },
+  ],
+} as const;
+
 export const hero = {
   eyebrow: "VIKASBHART",
   headline: "Sapno Se Safalta Tak",
@@ -2760,9 +2992,7 @@ export function getServiceBySlug(slug: string) {
 }
 
 export function getAllServiceSlugs() {
-  return services.items
-    .map((item) => item.slug)
-    .filter((slug) => slug !== "grant" && slug !== "loan");
+  return services.items.map((item) => item.slug);
 }
 
 export const howItWorks = {

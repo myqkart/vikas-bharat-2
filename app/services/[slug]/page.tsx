@@ -4,24 +4,37 @@ import FinalCTA from "@/components/FinalCTA";
 import Hero from "@/components/Hero";
 import ImageChecklist from "@/components/ImageChecklist";
 import SiteChrome from "@/components/SiteChrome";
+import ServiceDeskPage from "@/components/ServiceDeskPage";
 import {
   getAllServiceSlugs,
   getServiceBySlug,
   site,
 } from "@/lib/content";
+import {
+  getAllServiceDeskSlugs,
+  getServiceDesk,
+} from "@/lib/serviceDesks";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return getAllServiceSlugs().map((slug) => ({ slug }));
+  const slugs = new Set([
+    ...getAllServiceSlugs(),
+    ...getAllServiceDeskSlugs(),
+  ]);
+  return [...slugs].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  const desk = getServiceDesk(slug);
+  if (desk) {
+    return { title: desk.title, description: desk.description };
+  }
   const service = getServiceBySlug(slug);
   if (!service) return { title: site.companyName };
   return {
@@ -32,6 +45,15 @@ export async function generateMetadata({
 
 export default async function ServiceDetailPage({ params }: PageProps) {
   const { slug } = await params;
+  const desk = getServiceDesk(slug);
+  if (desk) {
+    return (
+      <SiteChrome>
+        <ServiceDeskPage desk={desk} />
+      </SiteChrome>
+    );
+  }
+
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
