@@ -13,18 +13,32 @@ import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
 
-const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-  "Hi, please send me the government grant documents checklist.",
-)}`;
+type DocumentsData = {
+  eyebrow: string;
+  heading: string;
+  note: string;
+  items: readonly string[];
+  cta: string;
+};
 
-export default function GrantPageDocuments() {
+export default function GrantPageDocuments({
+  data = grantPage.documents,
+  whatsappText = "Hi, please send me the government grant documents checklist.",
+  sectionId = "grant-documents",
+}: {
+  data?: DocumentsData;
+  whatsappText?: string;
+  sectionId?: string;
+}) {
+  const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
+    whatsappText,
+  )}`;
   const reduce = useReducedMotion();
-  const { documents } = grantPage;
 
   return (
     <section
-      id="grant-documents"
-      aria-labelledby="grant-documents-heading"
+      id={sectionId}
+      aria-labelledby={`${sectionId}-heading`}
       className="relative overflow-hidden bg-[#FEFCF7] px-5 py-20 sm:px-8 lg:py-28"
     >
       {!reduce ? <FloatingOrbs className="opacity-45" /> : null}
@@ -49,12 +63,12 @@ export default function GrantPageDocuments() {
             variants={dramaticFadeUp}
             className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
           >
-            {documents.eyebrow}
+            {data.eyebrow}
           </motion.p>
           <TextReveal
             as="h2"
-            id="grant-documents-heading"
-            text={documents.heading}
+            id={`${sectionId}-heading`}
+            text={data.heading}
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
           />
           <motion.p
@@ -62,7 +76,7 @@ export default function GrantPageDocuments() {
             className="mt-4 rounded-[16px] border border-marigold/25 bg-marigold/8 px-4 py-3 text-sm leading-relaxed text-ink sm:text-base"
           >
             <span className="font-bold">Important: </span>
-            {documents.note}
+            {data.note}
           </motion.p>
         </motion.div>
 
@@ -74,7 +88,7 @@ export default function GrantPageDocuments() {
           className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2"
           style={{ perspective: 1000 }}
         >
-          {documents.items.map((item) => (
+          {data.items.map((item) => (
             <motion.li key={item} variants={flipIn}>
               <TiltCard
                 intensity={reduce ? 0 : 6}
@@ -107,7 +121,7 @@ export default function GrantPageDocuments() {
             whileTap={{ scale: 0.97 }}
             className="btn-shine inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] bg-ink px-7 py-3.5 text-base font-bold text-paper transition-colors hover:bg-indigo"
           >
-            {documents.cta}
+            {data.cta}
             <ArrowDownToLine size={18} strokeWidth={2.4} aria-hidden />
           </motion.a>
         </motion.div>

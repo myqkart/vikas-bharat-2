@@ -18,9 +18,25 @@ import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
 
-export default function GrantPageUnlock() {
+type UnlockData = {
+  eyebrow: string;
+  heading: string;
+  paragraphs: readonly string[];
+  benefitsHeading: string;
+  benefits: readonly string[];
+};
+
+export default function GrantPageUnlock({
+  data = grantPage.unlock,
+  image = {
+    src: photos.aboutServiceGrants,
+    alt: "Founder reviewing non-repayable grant options",
+  },
+}: {
+  data?: UnlockData;
+  image?: { src: string; alt: string };
+}) {
   const reduce = useReducedMotion();
-  const { unlock } = grantPage;
 
   return (
     <section
@@ -50,15 +66,15 @@ export default function GrantPageUnlock() {
               variants={dramaticFadeLeft}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              {unlock.eyebrow}
+              {data.eyebrow}
             </motion.p>
             <TextReveal
               as="h2"
               id="unlock-heading"
-              text={unlock.heading}
+              text={data.heading}
               className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
             />
-            {unlock.paragraphs.map((paragraph) => (
+            {data.paragraphs.map((paragraph) => (
               <motion.p
                 key={paragraph.slice(0, 40)}
                 variants={dramaticFadeUp}
@@ -72,8 +88,8 @@ export default function GrantPageUnlock() {
               className="relative mt-10 hidden aspect-[16/10] max-w-lg overflow-hidden rounded-[28px] shadow-raised lg:block"
             >
               <Image
-                src={photos.aboutServiceGrants}
-                alt="Founder reviewing non-repayable grant options"
+                src={image.src}
+                alt={image.alt}
                 fill
                 sizes="(max-width: 1024px) 90vw, 520px"
                 className="object-cover"
@@ -92,10 +108,10 @@ export default function GrantPageUnlock() {
               variants={dramaticFadeRight}
               className="text-[11px] font-bold uppercase tracking-[0.16em] text-marigold-dark"
             >
-              {unlock.benefitsHeading}
+              {data.benefitsHeading}
             </motion.p>
             <ul className="mt-5 space-y-4" style={{ perspective: 1000 }}>
-              {unlock.benefits.map((benefit, idx) => (
+              {data.benefits.map((benefit, idx) => (
                 <motion.li
                   key={benefit}
                   variants={idx % 2 === 0 ? dramaticFadeRight : flipIn}

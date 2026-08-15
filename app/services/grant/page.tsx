@@ -8,7 +8,8 @@ import GrantPageProcess from "@/components/GrantPageProcess";
 import GrantPageDocuments from "@/components/GrantPageDocuments";
 import FAQ from "@/components/FAQ";
 import ServicePageConnect from "@/components/ServicePageConnect";
-import { grantFaq, site } from "@/lib/content";
+import { grantFaq, grantPage, site } from "@/lib/content";
+import { photos } from "@/lib/photos";
 
 export const metadata: Metadata = {
   title: `Government Grants | ${site.companyName}`,
@@ -19,12 +20,21 @@ export const metadata: Metadata = {
 export default function GrantPage() {
   return (
     <SiteChrome>
-      <GrantPageHero />
-      <GrantPageUnlock />
-      <GrantPageCategories />
-      <GrantPageServices />
-      <GrantPageProcess />
-      <GrantPageDocuments />
+      <GrantPageHero
+        data={grantPage}
+        images={{
+          primary: photos.serviceGrant,
+          secondary: photos.schemeSeed,
+          circle: photos.schemePmegp,
+          secondaryAlt: "Startup seed and grant documentation",
+          circleAlt: "Manufacturing unit eligible for grant support",
+        }}
+      />
+      <GrantPageUnlock data={grantPage.unlock} />
+      <GrantPageCategories data={grantPage.categories} />
+      <GrantPageServices data={grantPage.services} />
+      <GrantPageProcess data={grantPage.process} />
+      <GrantPageDocuments data={grantPage.documents} />
       <FAQ data={grantFaq} />
       <ServicePageConnect />
     </SiteChrome>

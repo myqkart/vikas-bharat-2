@@ -10,8 +10,10 @@ import {
   Microscope,
   Network,
   Scissors,
+  Shield,
   Sparkles,
   Sprout,
+  Wallet,
   type LucideIcon,
 } from "lucide-react";
 import { grantPage } from "@/lib/content";
@@ -24,10 +26,7 @@ import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
 
-const iconMap: Record<
-  (typeof grantPage.categories.items)[number]["icon"],
-  LucideIcon
-> = {
+const iconMap: Record<string, LucideIcon> = {
   seed: Lightbulb,
   tech: Cog,
   factory: Briefcase,
@@ -38,12 +37,11 @@ const iconMap: Record<
   rocket: Network,
   agri: Sprout,
   textile: Scissors,
+  wallet: Wallet,
+  shield: Shield,
 };
 
-const iconTone: Record<
-  (typeof grantPage.categories.items)[number]["icon"],
-  string
-> = {
+const iconTone: Record<string, string> = {
   seed: "bg-marigold/12 text-marigold-dark",
   tech: "bg-success/12 text-success",
   factory: "bg-[#FFF4E0] text-marigold-dark",
@@ -54,21 +52,33 @@ const iconTone: Record<
   rocket: "bg-indigo/10 text-indigo",
   agri: "bg-success/12 text-success",
   textile: "bg-marigold/12 text-marigold-dark",
+  wallet: "bg-success/12 text-success",
+  shield: "bg-indigo/10 text-indigo",
+};
+
+type CategoryItem = { title: string; text: string; icon: string };
+type CategoriesData = {
+  eyebrow: string;
+  heading: string;
+  sub: string;
+  leftHeading: string;
+  rightHeading: string;
+  items: readonly CategoryItem[];
 };
 
 function SchemeList({
   items,
 }: {
-  items: (typeof grantPage.categories.items)[number][];
+  items: readonly CategoryItem[];
 }) {
   return (
     <ul className="mt-8 space-y-6">
       {items.map((item) => {
-        const Icon = iconMap[item.icon];
+        const Icon = iconMap[item.icon] ?? Sparkles;
         return (
           <li key={item.title} className="flex items-start gap-4">
             <span
-              className={`mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${iconTone[item.icon]}`}
+              className={`mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${iconTone[item.icon] ?? "bg-marigold/12 text-marigold-dark"}`}
             >
               <Icon size={18} strokeWidth={2.2} aria-hidden />
             </span>
@@ -87,26 +97,31 @@ function SchemeList({
   );
 }
 
-export default function GrantPageCategories() {
+export default function GrantPageCategories({
+  data = grantPage.categories,
+  sectionId = "grant-categories",
+}: {
+  data?: CategoriesData;
+  sectionId?: string;
+}) {
   const reduce = useReducedMotion();
-  const { categories } = grantPage;
   const columns = [
     {
-      heading: categories.leftHeading,
+      heading: data.leftHeading,
       icon: Lightbulb,
-      items: categories.items.slice(0, 5),
+      items: data.items.slice(0, Math.ceil(data.items.length / 2)),
     },
     {
-      heading: categories.rightHeading,
+      heading: data.rightHeading,
       icon: Sparkles,
-      items: categories.items.slice(5),
+      items: data.items.slice(Math.ceil(data.items.length / 2)),
     },
   ] as const;
 
   return (
     <section
-      id="grant-categories"
-      aria-labelledby="grant-categories-heading"
+      id={sectionId}
+      aria-labelledby={`${sectionId}-heading`}
       className="relative overflow-hidden bg-gradient-to-b from-paper via-[#FFF9F0] to-[#EEF5F0] px-5 py-20 sm:px-8 lg:py-28"
     >
       {!reduce ? <FloatingOrbs className="opacity-45" /> : null}
@@ -140,19 +155,19 @@ export default function GrantPageCategories() {
             variants={dramaticFadeUp}
             className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
           >
-            {categories.eyebrow}
+            {data.eyebrow}
           </motion.p>
           <TextReveal
             as="h2"
-            id="grant-categories-heading"
-            text={categories.heading}
+            id={`${sectionId}-heading`}
+            text={data.heading}
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
           />
           <motion.p
             variants={dramaticFadeUp}
             className="mt-4 text-base leading-relaxed text-slate sm:text-lg"
           >
-            {categories.sub}
+            {data.sub}
           </motion.p>
         </motion.div>
 

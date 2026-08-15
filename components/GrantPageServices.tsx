@@ -10,6 +10,9 @@ import {
   Search,
   Send,
   ShieldCheck,
+  Users,
+  Wallet,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { grantPage } from "@/lib/content";
@@ -18,10 +21,7 @@ import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
 
-const iconMap: Record<
-  (typeof grantPage.services.items)[number]["icon"],
-  LucideIcon
-> = {
+const iconMap: Record<string, LucideIcon> = {
   search: Search,
   clipboard: ClipboardCheck,
   map: Map,
@@ -30,16 +30,31 @@ const iconMap: Record<
   send: Send,
   mic: Mic,
   shield: ShieldCheck,
+  wallet: Wallet,
+  zap: Zap,
+  users: Users,
 };
 
-export default function GrantPageServices() {
+type ServicesData = {
+  eyebrow: string;
+  heading: string;
+  sub: string;
+  items: readonly { title: string; text: string; icon: string }[];
+};
+
+export default function GrantPageServices({
+  data = grantPage.services,
+  sectionId = "grants-consultancy",
+}: {
+  data?: ServicesData;
+  sectionId?: string;
+}) {
   const reduce = useReducedMotion();
-  const { services } = grantPage;
 
   return (
     <section
-      id="grants-consultancy"
-      aria-labelledby="grants-consultancy-heading"
+      id={sectionId}
+      aria-labelledby={`${sectionId}-heading`}
       className="relative overflow-hidden bg-gradient-to-b from-paper via-[#FFF9F0] to-[#EEF5F0] px-5 py-20 sm:px-8 lg:py-28"
     >
       {!reduce ? <FloatingOrbs className="opacity-45" /> : null}
@@ -65,19 +80,19 @@ export default function GrantPageServices() {
             variants={dramaticFadeUp}
             className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
           >
-            {services.eyebrow}
+            {data.eyebrow}
           </motion.p>
           <TextReveal
             as="h2"
-            id="grants-consultancy-heading"
-            text={services.heading}
+            id={`${sectionId}-heading`}
+            text={data.heading}
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
           />
           <motion.p
             variants={dramaticFadeUp}
             className="mt-4 text-base leading-relaxed text-slate sm:text-lg"
           >
-            {services.sub}
+            {data.sub}
           </motion.p>
         </motion.div>
 
@@ -89,8 +104,8 @@ export default function GrantPageServices() {
           className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
           style={{ perspective: 1200 }}
         >
-          {services.items.map((item, idx) => {
-            const Icon = iconMap[item.icon];
+          {data.items.map((item, idx) => {
+            const Icon = iconMap[item.icon] ?? Search;
             return (
               <motion.li
                 key={item.title}

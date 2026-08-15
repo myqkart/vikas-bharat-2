@@ -16,22 +16,37 @@ import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
 
-const processImages = [
+type ProcessData = {
+  eyebrow: string;
+  heading: string;
+  sub: string;
+  steps: readonly { title: string; text: string }[];
+};
+
+const defaultProcessImages = [
   photos.aboutProcessConsult,
   photos.aboutProcessMap,
   photos.aboutProcessDocs,
   photos.aboutProcessFile,
   photos.aboutProcessFollow,
+  photos.aboutProcessResult,
 ] as const;
 
-export default function GrantPageProcess() {
+export default function GrantPageProcess({
+  data = grantPage.process,
+  images = defaultProcessImages,
+  sectionId = "grant-process",
+}: {
+  data?: ProcessData;
+  images?: readonly string[];
+  sectionId?: string;
+}) {
   const reduce = useReducedMotion();
-  const { process } = grantPage;
 
   return (
     <section
-      id="grant-process"
-      aria-labelledby="grant-process-heading"
+      id={sectionId}
+      aria-labelledby={`${sectionId}-heading`}
       className="relative overflow-hidden bg-gradient-to-b from-paper via-[#FFF9F0] to-[#EEF5F0] px-5 py-20 sm:px-8 lg:py-28"
     >
       {!reduce ? <FloatingOrbs className="opacity-45" /> : null}
@@ -57,19 +72,19 @@ export default function GrantPageProcess() {
             variants={dramaticFadeUp}
             className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
           >
-            {process.eyebrow}
+            {data.eyebrow}
           </motion.p>
           <TextReveal
             as="h2"
-            id="grant-process-heading"
-            text={process.heading}
+            id={`${sectionId}-heading`}
+            text={data.heading}
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
           />
           <motion.p
             variants={dramaticFadeUp}
             className="mt-4 text-base leading-relaxed text-slate sm:text-lg"
           >
-            {process.sub}
+            {data.sub}
           </motion.p>
         </motion.div>
 
@@ -84,7 +99,7 @@ export default function GrantPageProcess() {
           />
 
           <ol className="space-y-10 lg:space-y-14">
-            {process.steps.map((step, idx) => {
+            {data.steps.map((step, idx) => {
               const reverse = idx % 2 === 1;
               return (
                 <motion.li
@@ -109,7 +124,7 @@ export default function GrantPageProcess() {
                         className="relative aspect-[5/4] overflow-hidden"
                       >
                         <Image
-                          src={processImages[idx]}
+                          src={images[idx % images.length]}
                           alt={step.title}
                           fill
                           sizes="(max-width: 1024px) 90vw, 520px"

@@ -5,7 +5,6 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { useRef } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { grantPage, site } from "@/lib/content";
-import { photos } from "@/lib/photos";
 import {
   dramaticFadeUp,
   flipIn,
@@ -18,11 +17,36 @@ import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
 import CountUp from "@/components/motion/CountUp";
 
-const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-  "Hi, I want to start my government grant funding journey.",
-)}`;
+type HeroData = {
+  eyebrow: string;
+  heading: string;
+  kicker: string;
+  intro: string;
+  cta: string;
+  imageAlt: string;
+  stats: readonly { value: string; label: string }[];
+};
 
-export default function GrantPageHero() {
+type HeroImages = {
+  primary: string;
+  secondary: string;
+  circle: string;
+  secondaryAlt: string;
+  circleAlt: string;
+};
+
+export default function GrantPageHero({
+  data = grantPage,
+  images,
+  whatsappText = "Hi, I want to start my government grant funding journey.",
+}: {
+  data?: HeroData;
+  images: HeroImages;
+  whatsappText?: string;
+}) {
+  const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
+    whatsappText,
+  )}`;
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -77,12 +101,12 @@ export default function GrantPageHero() {
               variants={dramaticFadeUp}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              {grantPage.eyebrow}
+              {data.eyebrow}
             </motion.p>
             <TextReveal
               as="h1"
               id="grants-hero-heading"
-              text={grantPage.heading}
+              text={data.heading}
               onMount
               className="mt-4 max-w-xl font-display text-[2.15rem] font-semibold leading-[1.1] tracking-tight text-ink sm:text-[2.8rem] lg:text-[3.25rem]"
             />
@@ -90,13 +114,13 @@ export default function GrantPageHero() {
               variants={dramaticFadeUp}
               className="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-success"
             >
-              {grantPage.kicker}
+              {data.kicker}
             </motion.p>
             <motion.p
               variants={dramaticFadeUp}
               className="mt-6 max-w-lg text-base leading-relaxed text-slate sm:text-lg"
             >
-              {grantPage.intro}
+              {data.intro}
             </motion.p>
             <motion.div variants={popIn} className="mt-8 flex flex-wrap gap-3">
               <motion.a
@@ -107,7 +131,7 @@ export default function GrantPageHero() {
                 whileTap={{ scale: 0.97 }}
                 className="btn-shine inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] bg-ink px-7 py-3.5 text-base font-bold text-paper transition-colors hover:bg-indigo"
               >
-                {grantPage.cta}
+                {data.cta}
                 <ArrowRight size={18} strokeWidth={2.4} aria-hidden />
               </motion.a>
               <motion.a
@@ -131,8 +155,8 @@ export default function GrantPageHero() {
               className="absolute right-0 top-0 h-[72%] w-[70%] overflow-hidden rounded-[30px] shadow-raised [transform:translateZ(0)]"
             >
               <Image
-                src={photos.serviceGrant}
-                alt={grantPage.imageAlt}
+                src={images.primary}
+                alt={data.imageAlt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 70vw, 380px"
@@ -145,8 +169,8 @@ export default function GrantPageHero() {
               className="absolute bottom-6 left-0 h-[48%] w-[54%] overflow-hidden rounded-[22px] border-[6px] border-paper shadow-raised [transform:translateZ(0)]"
             >
               <Image
-                src={photos.schemeSeed}
-                alt="Startup seed and grant documentation"
+                src={images.secondary}
+                alt={images.secondaryAlt}
                 fill
                 sizes="(max-width: 1024px) 50vw, 280px"
                 className="rounded-[16px] object-cover"
@@ -170,8 +194,8 @@ export default function GrantPageHero() {
               className="absolute right-4 bottom-28 hidden h-24 w-24 overflow-hidden rounded-full border-4 border-paper shadow-raised sm:block [transform:translateZ(0)]"
             >
               <Image
-                src={photos.schemePmegp}
-                alt="Manufacturing unit eligible for grant support"
+                src={images.circle}
+                alt={images.circleAlt}
                 fill
                 sizes="96px"
                 className="rounded-full object-cover"
@@ -194,7 +218,7 @@ export default function GrantPageHero() {
           className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
           style={{ perspective: 1100 }}
         >
-          {grantPage.stats.map((stat) => (
+          {data.stats.map((stat) => (
             <motion.li key={stat.label} variants={flipIn}>
               <TiltCard
                 intensity={reduce ? 0 : 10}

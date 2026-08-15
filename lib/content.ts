@@ -1412,6 +1412,240 @@ export const grantFaq = {
   ],
 } as const;
 
+export const loanPage = {
+  eyebrow: "Business Loans • Bank & NBFC Financing",
+  heading: "Business Loans",
+  kicker: "MSME • Startup • Working Capital • Equipment Financing",
+  intro:
+    "Get access to government-backed loans, funding options, and expert financial guidance to grow your business.",
+  cta: "Start Your Funding Journey",
+  imageAlt: "Advisor reviewing business loan options with a founder",
+  stats: [
+    { value: "₹500Cr+", label: "Funding Facilitated" },
+    { value: "20,000+", label: "Businesses Supported" },
+    { value: "25+", label: "Banks & NBFCs" },
+    { value: "100%", label: "Expert Guidance" },
+  ] as const,
+  unlock: {
+    eyebrow: "Funding Highlights",
+    heading: "MSME financing, under one desk",
+    paragraphs: [
+      "Vikas Bharat is built around funding experience and MSME financing — government-backed loans, bank products and NBFC options matched to your stage and cash-flow need.",
+      "We evaluate your profile, shortlist lenders, prepare the file, and stay with the application through verification until disbursement.",
+    ],
+    benefitsHeading: "What you get",
+    benefits: [
+      "Access to multiple financing options",
+      "Expert funding guidance",
+      "Government-backed schemes",
+      "Bank and NBFC financing",
+    ],
+  },
+  categories: {
+    eyebrow: "Loan Map",
+    heading: "Business Financing Solutions",
+    sub: "Multiple forms of business financing for MSMEs and growing businesses.",
+    leftHeading: "Core Loan Products",
+    rightHeading: "Government-Backed Products",
+    items: [
+      {
+        title: "Term Loans",
+        text: "Business loans designed for long-term investments, expansion, infrastructure and other major business requirements.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Working Capital Loans",
+        text: "Financing to manage day-to-day business expenses, inventory, salaries, supplier payments and cash-flow requirements.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Equipment Financing",
+        text: "Funding for purchasing machinery, equipment and technology required for business expansion or modernization.",
+        icon: "tech" as const,
+      },
+      {
+        title: "Government Scheme Loans",
+        text: "Access financing through government-supported programs designed specifically for MSMEs, startups and entrepreneurs.",
+        icon: "factory" as const,
+      },
+      {
+        title: "MUDRA Loans",
+        text: "Government-backed financing for micro and small businesses, with loans available up to ₹10 lakh.",
+        icon: "seed" as const,
+      },
+      {
+        title: "CGTMSE Loans",
+        text: "Collateral-free financing under the Credit Guarantee Fund Trust for Micro and Small Enterprises, with funding available up to ₹2 crore.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Sector-Specific Loans",
+        text: "Specialized financing options designed around specific industries, business models and government priorities.",
+        icon: "rocket" as const,
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Why This Desk",
+    heading: "Why Choose Vikas Bharat for Business Loans?",
+    sub: "From eligibility to disbursement — a file that is matched, prepared and followed.",
+    items: [
+      {
+        title: "Multiple Funding Options",
+        text: "Access financing from banks, NBFCs and government-backed schemes based on your business requirements.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Better Loan Matching",
+        text: "We evaluate your business profile and identify financing options that match your eligibility and funding needs.",
+        icon: "search" as const,
+      },
+      {
+        title: "Documentation Support",
+        text: "Assistance with preparing financial statements, business documents, applications and other lender requirements.",
+        icon: "folder" as const,
+      },
+      {
+        title: "Faster Processing",
+        text: "Structured documentation and application support helps reduce unnecessary delays during the loan process.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Expert Financial Guidance",
+        text: "Professional guidance throughout the funding journey, from eligibility assessment to loan disbursement.",
+        icon: "users" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We File",
+    heading: "Our Business Loan Process",
+    sub: "A structured path from first assessment to money in the account.",
+    steps: [
+      {
+        title: "Business Assessment",
+        text: "Understand your business, financial position, funding requirement and growth objectives.",
+      },
+      {
+        title: "Eligibility Analysis",
+        text: "Evaluate your business against available loan programs, lender requirements and government schemes.",
+      },
+      {
+        title: "Loan Selection",
+        text: "Identify suitable banks, NBFCs and government financing options based on your profile.",
+      },
+      {
+        title: "Documentation",
+        text: "Prepare and organize the required financial, business and compliance documentation.",
+      },
+      {
+        title: "Application Submission",
+        text: "Submit the loan application to the appropriate lender with the required supporting information.",
+      },
+      {
+        title: "Verification & Approval",
+        text: "Coordinate with lenders during verification, clarification and approval stages.",
+      },
+      {
+        title: "Loan Disbursement",
+        text: "Complete the final formalities and facilitate disbursement of the approved funding.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Typical documentation is listed below. Our team sends a lender-specific checklist after the eligibility assessment so you only collect what is actually required.",
+    items: [
+      "Business registration documents",
+      "PAN and GST registration",
+      "Udyam/MSME registration",
+      "Bank statements",
+      "Income tax returns",
+      "Audited financial statements",
+      "Profit & loss statements",
+      "Balance sheets",
+      "Business plan/project report",
+      "KYC documents",
+      "Address proof",
+      "Details of existing loans",
+      "Collateral documents where applicable",
+    ],
+    cta: "Download For More",
+  },
+  schemes: {
+    eyebrow: "Scheme Desk",
+    heading: "Government-Backed Loan Schemes",
+    sub: "Financing programs available to Indian MSMEs and businesses.",
+    leftHeading: "Micro & MSME",
+    rightHeading: "Startup & Sector",
+    items: [
+      {
+        title: "MUDRA / PMMY",
+        text: "Loans for micro enterprises and small businesses, with financing available up to ₹10 lakh.",
+        icon: "seed" as const,
+      },
+      {
+        title: "CGTMSE",
+        text: "Collateral-free credit support for eligible MSMEs, with coverage for loans up to ₹2 crore.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Startup India Schemes",
+        text: "Funding assistance and financing opportunities designed for eligible startups.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "SIDBI Financing",
+        text: "Specialized financial assistance for MSMEs and businesses through SIDBI programs.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Sector-Specific Government Schemes",
+        text: "Financing programs designed for businesses operating in priority sectors.",
+        icon: "factory" as const,
+      },
+    ],
+  },
+} as const;
+
+export const loanFaq = {
+  heading: "Loan questions, answered",
+  sub: "Product types, timelines, rates, collateral and eligibility for MSME financing.",
+  items: [
+    {
+      question: "What types of business loans are available for MSMEs in India?",
+      answer:
+        "MSMEs in India can access multiple financing options including term loans, working capital loans, equipment financing, MUDRA loans up to ₹10 lakhs, collateral-free financing under CGTMSE schemes up to ₹2 crores and specialized sector-specific loan schemes.",
+    },
+    {
+      question: "How long does the business loan approval process take?",
+      answer:
+        "Small-ticket working capital loans through NBFCs can be approved within 2–3 days. Standard bank term loans typically require 2–4 weeks. Government scheme loans such as PMMY may require 3–5 weeks because of additional verification processes.",
+    },
+    {
+      question: "What interest rates can I expect for business loans?",
+      answer:
+        "Current business loan interest rates typically range from 9–18%. Banks: approximately 9–14% for secured loans. NBFCs: approximately 12–18%. Government schemes such as PMMY: approximately 8–11% for eligible businesses.",
+    },
+    {
+      question: "What collateral is required for business loans?",
+      answer:
+        "Small working-capital loans under ₹10 lakhs are often available without collateral. Loans under CGTMSE can be availed up to ₹2 crores without collateral. For standard term loans, lenders typically require collateral coverage of approximately 100–125% of the loan value.",
+    },
+    {
+      question: "How can I improve my business loan eligibility?",
+      answer:
+        "Maintain a credit score above 700, keep business documentation and registrations up to date, demonstrate steady revenue growth, maintain audited financial statements, keep a clean banking history, and prepare a detailed business plan.",
+    },
+    {
+      question: "Can startups and new businesses get loans without significant operating history?",
+      answer:
+        "Yes, although options are more limited. New businesses can explore Startup India programs, SIDBI startup assistance, and specialized NBFC startup lending. Depending on the lender, collateral, higher equity contribution and personal guarantees may be required.",
+    },
+  ],
+} as const;
+
 export const hero = {
   eyebrow: "VIKASBHART",
   headline: "Sapno Se Safalta Tak",
@@ -2291,7 +2525,7 @@ export function getServiceBySlug(slug: string) {
 export function getAllServiceSlugs() {
   return services.items
     .map((item) => item.slug)
-    .filter((slug) => slug !== "grant");
+    .filter((slug) => slug !== "grant" && slug !== "loan");
 }
 
 export const howItWorks = {
