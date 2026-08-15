@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import {
   BarChart3,
   Briefcase,
+  ClipboardCheck,
   Cog,
   FileText,
   Globe,
@@ -14,7 +15,9 @@ import {
   Shield,
   Sparkles,
   Sprout,
+  Users,
   Wallet,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { grantPage } from "@/lib/content";
@@ -41,6 +44,9 @@ const iconMap: Record<string, LucideIcon> = {
   wallet: Wallet,
   shield: Shield,
   file: FileText,
+  users: Users,
+  zap: Zap,
+  clipboard: ClipboardCheck,
 };
 
 const iconTone: Record<string, string> = {
@@ -57,6 +63,9 @@ const iconTone: Record<string, string> = {
   wallet: "bg-success/12 text-success",
   shield: "bg-indigo/10 text-indigo",
   file: "bg-indigo/8 text-indigo",
+  users: "bg-indigo/10 text-indigo",
+  zap: "bg-[#FFF4E0] text-marigold-dark",
+  clipboard: "bg-success/12 text-success",
 };
 
 type CategoryItem = { title: string; text: string; icon: string };

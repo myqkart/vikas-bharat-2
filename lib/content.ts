@@ -96,13 +96,13 @@ export const servicesMegaMenu = {
       {
         title: "M&A Advisory",
         description: "Merger & acquisition support",
-        href: "/service",
+        href: "/services/ma",
         icon: "ma" as const,
       },
       {
         title: "Marketing & Branding",
         description: "Digital marketing solutions",
-        href: "/services/growth",
+        href: "/services/marketing",
         icon: "marketing" as const,
       },
       {
@@ -177,14 +177,14 @@ export const servicePage = {
       {
         title: "One Person Company Registration",
         text: "Start a One Person Company with limited liability, nominee handling and end-to-end MCA filings.",
-        href: "/services/registration",
+        href: "/services/opc",
         icon: "opc" as const,
         image: photos.aboutServiceRegistration,
       },
       {
         title: "Startup India Certification",
         text: "DPIIT Startup India recognition — eligibility review, pitch writeup and portal filing support.",
-        href: "/services/registration",
+        href: "/services/startup",
         icon: "startup" as const,
         image: photos.schemeSeed,
       },
@@ -205,14 +205,14 @@ export const servicePage = {
       {
         title: "Mergers & Acquisitions",
         text: "Expert Mergers & Acquisitions support for seamless business expansion & deals.",
-        href: "/services/growth",
+        href: "/services/ma",
         icon: "ma" as const,
         image: photos.credentialGrowth,
       },
       {
         title: "Marketing & Branding Services",
         text: "Marketing & Branding Services to boost visibility, trust and customer growth fast.",
-        href: "/services/growth",
+        href: "/services/marketing",
         icon: "marketing" as const,
         image: photos.aboutServiceMarketing,
       },
@@ -226,7 +226,7 @@ export const servicePage = {
       {
         title: "Funding Instruments",
         text: "Match the right funding instrument — equity, debt, grants or hybrids — to your stage and goals.",
-        href: "/services/loan",
+        href: "/services/funding",
         icon: "funding" as const,
         image: photos.serviceLoan,
       },
@@ -2111,6 +2111,1731 @@ export const registrationFaq = {
       question: "Can I convert from one business structure to another later?",
       answer:
         "Yes. For example, you can convert a Sole Proprietorship into a Private Limited Company or an LLP if the business grows and needs a more formal structure and liability protection. The conversion path depends on the target structure and involves specific legal procedures — we map that before you file.",
+    },
+  ],
+} as const;
+
+export const opcPage = {
+  eyebrow: "OPC • Solo Founder",
+  heading: "One Person Company (OPC)",
+  kicker: "Registration – Fast Process in India",
+  intro:
+    "Register your One Person Company (OPC) in India with a fast and simple process. Enjoy limited liability, complete control, and expert support to get started today.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Solo founder completing One Person Company registration",
+  stats: [
+    { value: "1", label: "Director & Member" },
+    { value: "₹1L+", label: "Authorised Capital" },
+    { value: "₹2Cr", label: "Turnover Conversion Cap" },
+    { value: "1", label: "Mandatory Nominee" },
+  ] as const,
+  unlock: {
+    eyebrow: "Why OPC",
+    heading: "What is a One Person Company?",
+    paragraphs: [
+      "OPC gives limited liability while allowing a single shareholder — with a mandatory nominee for continuity. Turnover thresholds trigger mandatory conversion to private limited beyond prescribed limits.",
+      "The concept of a One Person Company was introduced under the Companies Act, 2013, enabling a single individual to establish a company with limited liability protection. As per Section 2(62), an OPC can be formed with only one director and one member — and both roles can be filled by the same individual.",
+    ],
+    benefitsHeading: "Why founders pick OPC",
+    benefits: [
+      "Single promoter + nominee",
+      "Limited liability",
+      "Easier compliance vs Pvt Ltd",
+      "Separate legal entity",
+    ],
+  },
+  services: {
+    eyebrow: "OPC Desk",
+    heading: "OPC Services",
+    sub: "Eligibility, incorporation, compliance and scheme positioning — in one file.",
+    items: [
+      {
+        title: "Eligibility",
+        text: "Citizenship, nominee and sector checks before you file.",
+        icon: "search" as const,
+      },
+      {
+        title: "Incorporation",
+        text: "Name, DSC, SPICe+ and Certificate of Incorporation.",
+        icon: "file" as const,
+      },
+      {
+        title: "Compliance",
+        text: "AGM, filings and conversion triggers once the company is live.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Grants",
+        text: "Positioning for startup schemes post-incorporation.",
+        icon: "wallet" as const,
+      },
+    ],
+  },
+  drawbacks: {
+    eyebrow: "Know The Limits",
+    heading: "Drawbacks of OPC Registration",
+    sub: "OPC is built for a solo founder. These limits matter before you file.",
+    items: [
+      {
+        title: "Limited to Small Businesses",
+        text: "OPCs can only have one member, limiting their ability to raise substantial equity capital from multiple partners.",
+        icon: "users" as const,
+      },
+      {
+        title: "Business Restrictions",
+        text: "Activities like financial investments and charitable endeavours are not permissible.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Taxation",
+        text: "Unlike a proprietorship, an OPC is taxed at corporate rates. However, you can explore tax exemptions for startups.",
+        icon: "landmark" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Can File",
+    heading: "Eligibility Criteria for OPC Registration",
+    sub: "Before you register an OPC online, ensure you meet the following criteria.",
+    leftHeading: "Who can incorporate",
+    rightHeading: "Limits & conversion",
+    items: [
+      {
+        title: "Indian Citizen & NRI",
+        text: "Only a natural person who is an Indian citizen, whether residing in India or abroad, can incorporate an OPC (Companies (Incorporation) 2nd Amendment Rules, 2021).",
+        icon: "seed" as const,
+      },
+      {
+        title: "Minimum Authorised Capital",
+        text: "The OPC must have a minimum authorised capital of ₹1,00,000.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Nominee Requirement",
+        text: "The founder must appoint a nominee during registration who will take over in case of death or incapacity.",
+        icon: "users" as const,
+      },
+      {
+        title: "Exclusions",
+        text: "Banking, insurance and NBFC financial activities cannot be registered as OPCs.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Conversion Requirement",
+        text: "If paid-up capital exceeds ₹50 lakh or annual turnover exceeds ₹2 crore, the OPC must convert into a private limited company.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "One OPC Per Individual",
+        text: "An individual can establish only one OPC, and OPCs cannot have a minor as a member.",
+        icon: "factory" as const,
+      },
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of Registering an OPC",
+    sub: "Corporate advantages of a private company, without a second shareholder.",
+    leftHeading: "Legal & capital",
+    rightHeading: "Control & continuity",
+    items: [
+      {
+        title: "Separate Legal Entity",
+        text: "The promoter is shielded from personal liability.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Easy Access to Funding",
+        text: "Better access to angel investors, venture funding and loans than a proprietorship.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Simplified Compliance",
+        text: "Fewer regulatory requirements compared with a private limited company.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Simple Formation",
+        text: "One member and one nominee — no complex shareholder agreements.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Efficient Management",
+        text: "Decision-making is quick, and management remains conflict-free.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Perpetual Succession",
+        text: "The company continues operations even in the event of the founder’s death.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Credit Eligibility",
+        text: "Easier to apply for collateral-light business loans and Mudra products.",
+        icon: "landmark" as const,
+      },
+    ],
+  },
+  whyChoose: {
+    eyebrow: "Why This Desk",
+    heading: "Why Choose Vikas Bharat for OPC Registration?",
+    sub: "From name reservation to post-incorporation funding — step-by-step, without the MCA fog.",
+    items: [
+      {
+        title: "Expert Guidance",
+        text: "From name reservation to MSME growth advisory, our desk offers step-by-step assistance.",
+        icon: "search" as const,
+      },
+      {
+        title: "Clear Fees",
+        text: "Competitive pricing with a written summary before any MCA filing starts.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Full Compliance",
+        text: "We ensure legal requirements are met so the file does not stall on a query.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "End-to-End Support",
+        text: "Help raising funds in India after incorporation — schemes, loans and NBFC paths.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  postIncorporation: {
+    eyebrow: "After COI",
+    heading: "Post-Incorporation Formalities for OPC",
+    sub: "After your OPC is registered, these legal formalities keep the company in good standing.",
+    items: [
+      {
+        title: "Bank Account",
+        text: "Open a corporate current account with the incorporation kit.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Auditor Appointment",
+        text: "Appoint a statutory auditor within 30 days of incorporation.",
+        icon: "users" as const,
+      },
+      {
+        title: "MSME Registration",
+        text: "File Udyam / MSME certification for scheme and subsidy eligibility.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Annual Filings",
+        text: "File annual returns and financial statements with the MCA.",
+        icon: "file" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We File",
+    heading: "OPC Registration Steps",
+    sub: "Six steps from DSC to Certificate of Incorporation, PAN and TAN.",
+    steps: [
+      {
+        title: "Obtain Digital Signature Certificate (DSC)",
+        text: "Get DSC for the director and nominee.",
+      },
+      {
+        title: "Apply for Director Identification Number (DIN)",
+        text: "Apply for DIN through the MCA portal.",
+      },
+      {
+        title: "Name Reservation",
+        text: "Reserve a unique company name via RUN (Reserve Unique Name) on MCA.",
+      },
+      {
+        title: "Draft the MOA and AOA",
+        text: "Prepare the Memorandum and Articles of Association.",
+      },
+      {
+        title: "Submit SPICe+ Forms",
+        text: "File the SPICe+ form with all required documents on the MCA portal.",
+      },
+      {
+        title: "Receive Certificate of Incorporation",
+        text: "Receive the COI, PAN and TAN from the Registrar of Companies.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for One Person Company",
+    note: "Director and nominee papers are both required. After eligibility we send a file-specific checklist so you only collect what MCA needs.",
+    items: [
+      "PAN Card & Aadhaar Card of the director and nominee",
+      "Address proof — latest bank statement, electricity bill or telephone bill",
+      "Office proof — rental agreement or ownership proof (NOC from owner)",
+      "MOA & AOA — Memorandum of Association and Articles of Association",
+      "Declaration by director (INC-9) and nominee consent (DIR-2)",
+      "Professional declaration by a CA / CS / Advocate",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const opcFaq = {
+  heading: "OPC questions, answered",
+  sub: "How OPC differs from proprietorship, capital, NRIs, documents, grants and conversion.",
+  items: [
+    {
+      question: "What is an OPC, and how does it differ from a proprietorship?",
+      answer:
+        "An OPC is a separate legal entity with limited liability, whereas in a sole proprietorship the owner and business are the same, leading to unlimited personal liability.",
+    },
+    {
+      question: "What is the primary objective of OPC registration?",
+      answer:
+        "To encourage individual entrepreneurs to enter the organised sector with the protection of limited liability.",
+    },
+    {
+      question: "What is the minimum capital for one person company registration?",
+      answer:
+        "The minimum authorised capital is ₹1,00,000, though there is no mandatory minimum paid-up capital requirement currently.",
+    },
+    {
+      question: "Can an NRI register an OPC?",
+      answer:
+        "Yes. As per the 2021 amendments, NRIs are eligible to register a One Person Company in India.",
+    },
+    {
+      question: "How many OPCs can an individual establish?",
+      answer:
+        "An individual can be a member/director of only one OPC at a time.",
+    },
+    {
+      question: "What are the key documents required for one person company?",
+      answer:
+        "PAN, Aadhaar, proof of registered office, MoA, AoA, and nominee consent.",
+    },
+    {
+      question: "Can an OPC apply for government grants?",
+      answer:
+        "Yes. Once incorporated, you can apply for programmes such as MeitY Genesis EIR and NIDHI PRAYAS, subject to scheme eligibility.",
+    },
+    {
+      question: "What happens if the turnover exceeds ₹2 Crores?",
+      answer:
+        "The OPC must mandatorily convert into a Private Limited Company or a Public Limited Company.",
+    },
+  ],
+} as const;
+
+export const startupPage = {
+  eyebrow: "Startup India • DPIIT Recognition",
+  heading: "Startup India Certification",
+  kicker: "How to Apply • Benefits • Eligibility",
+  intro:
+    "DPIIT recognition is the gateway to tax holidays, compliance relaxations, and government funding schemes like SISFS. Vikas Bharat prepares your application and handles the portal filing end-to-end.",
+  cta: "Contact Us",
+  imageAlt: "Founder reviewing DPIIT Startup India recognition documents",
+  stats: [
+    { value: "3 Years", label: "Income Tax Holiday" },
+    { value: "80-IAC", label: "Tax Exemption Section" },
+    { value: "₹945Cr", label: "SISFS Corpus Unlocked" },
+    { value: "10 Days", label: "Typical Recognition Time" },
+  ] as const,
+  unlock: {
+    eyebrow: "What You Unlock",
+    heading: "What DPIIT Startup Recognition Gives You",
+    paragraphs: [
+      "DPIIT Startup India recognition is an official certificate from the Department for Promotion of Industry and Internal Trade that confirms your business qualifies as a startup under India's Startup India policy. It is free to apply for and unlocks a significant set of benefits that are not available to ordinary registered companies.",
+      "The most valuable benefit is the Section 80-IAC income tax exemption — recognised startups can claim a 100% tax holiday for any 3 consecutive years out of their first 10 years of operation. DPIIT recognition is also the prerequisite for the Startup India Seed Fund Scheme (SISFS), which provides up to ₹20 lakh in grants and ₹50 lakh in convertible debt to early-stage startups.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "3-year income tax holiday under Section 80-IAC",
+      "50% patent fee rebate and fast-track IPR examination",
+      "Access to SISFS and government procurement programs",
+      "Self-certification under labour and environmental laws",
+    ],
+  },
+  services: {
+    eyebrow: "Recognition Desk",
+    heading: "How Vikas Bharat Helps You Get Recognised",
+    sub: "Eligibility, innovation narrative, portal filing and post-recognition orientation — in one file.",
+    items: [
+      {
+        title: "Eligibility Assessment",
+        text: "We check your entity age (must be under 10 years), legal structure (Pvt Ltd, LLP, or Partnership), annual turnover, and whether your product or service can be described as innovative — the key DPIIT criterion.",
+        icon: "search" as const,
+      },
+      {
+        title: "Innovation Narrative",
+        text: "DPIIT assesses your innovation, scalability, and social or employment impact. We help you frame your business in language that aligns with DPIIT's evaluation criteria — without misrepresenting what you do.",
+        icon: "file" as const,
+      },
+      {
+        title: "Portal Filing & Tracking",
+        text: "We complete your application on the Startup India portal (startupindia.gov.in), upload all required documents, and track the application status. Most applications receive recognition within 7–10 working days.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Post-Recognition Orientation",
+        text: "After recognition, we walk you through the 80-IAC tax exemption application, Angel Tax exemption under 56(2)(viib), and how to apply for SISFS through an approved incubator.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  features: {
+    eyebrow: "Certificate Highlights",
+    heading: "Key Features of the Startup India Certificate",
+    sub: "Tax, funding, IPR, a faster exit path, and lighter compliance — once DPIIT recognises you.",
+    items: [
+      {
+        title: "Income Tax Exemptions",
+        text: "Tax-free operations for up to 3 consecutive years.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Funding Access",
+        text: "Priority access to the ₹10,000 crore Fund of Funds managed by SIDBI.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Faster Exit",
+        text: "A 90-day fast-track insolvency process for startups to wind up operations if needed.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Intellectual Property (IPR)",
+        text: "Fast-tracked patent applications and an 80% rebate on filing fees.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Regulatory Ease",
+        text: "Self-certification under labour and environmental laws.",
+        icon: "clipboard" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria for Startup India Registration",
+    sub: "To qualify, your business must meet DPIIT parameters so the ecosystem stays focused on high-impact ventures.",
+    leftHeading: "Entity & age",
+    rightHeading: "Innovation & scale",
+    items: [
+      {
+        title: "Business Type",
+        text: "Private Limited Company, LLP, or Partnership Firm.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Business Age",
+        text: "Must be less than 10 years old from the date of incorporation or registration.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Annual Turnover",
+        text: "Must not have exceeded ₹200 crore in any previous financial year (revised from ₹100 crore under DPIIT Gazette Notification 108(E) dated 4 February 2026).",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Innovation Stage",
+        text: "Working toward innovation, development, or improvement of products or services.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Scalability",
+        text: "Must have high potential for employment generation or wealth creation.",
+        icon: "rocket" as const,
+      },
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of Startup India Registration",
+    sub: "The certificate is a strategic advantage — tax, capital, IP, tenders and lighter compliance.",
+    leftHeading: "Tax & capital",
+    rightHeading: "IP, tenders & compliance",
+    items: [
+      {
+        title: "Tax Exemptions",
+        text: "Eligible for exemption from income tax under Section 80-IAC for 3 years within the first 10 years of incorporation.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Funding Support",
+        text: "Access to seed-stage funding through schemes like SISFS, NIDHI PRAYAS and related startup programmes.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "IPR Benefits",
+        text: "Fast-track processing of patent applications and an 80% rebate, along with a 50% rebate on trademark filings.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Self-certification",
+        text: "Startups can self-certify compliance for labour and environmental laws for a period of 3 to 5 years.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Easier Public Procurement",
+        text: "Exemption from prior experience and earlier turnover requirements when bidding for government tenders.",
+        icon: "file" as const,
+      },
+      {
+        title: "Debt Access",
+        text: "Easier access to collateral-light credit via guarantee schemes such as CGTMSE.",
+        icon: "seed" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How DPIIT Recognition Works",
+    heading: "How DPIIT Recognition Works",
+    sub: "Four steps from eligibility check to certificate — then 80-IAC, SISFS and procurement.",
+    steps: [
+      {
+        title: "Eligibility Check",
+        text: "We verify your incorporation date, legal structure, turnover, and innovation angle to confirm you qualify before applying.",
+      },
+      {
+        title: "Application Preparation",
+        text: "We prepare the startup description, supporting documents, and pitch materials aligned with DPIIT's evaluation criteria.",
+      },
+      {
+        title: "Portal Submission",
+        text: "We file your application on the Startup India portal and handle any queries or additional document requests from DPIIT.",
+      },
+      {
+        title: "Certificate & Next Steps",
+        text: "You receive your DPIIT recognition certificate. We then guide you through 80-IAC filing, SISFS application, and any relevant government procurement registrations.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for Startup India Registration",
+    note: "There is no fixed deadline — the window stays open year-round. The sooner you file, the sooner tax holidays and scheme access can start. After eligibility we send a file-specific checklist.",
+    items: [
+      "Certificate of Incorporation — proof of formation (Pvt Ltd, LLP, or Partnership)",
+      "Pitch deck — problem, solution, and innovation factor",
+      "Detailed project report — scalability and employment generation",
+      "MSME / Udyam certificate, if already obtained",
+      "Financial records — ITR for the last two years or audited balance sheets (if applicable)",
+      "Founder profiles — resumes showing technical and managerial expertise",
+      "Patent / trademark filings, if already applied for",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const startupFaq = {
+  heading: "Startup India questions, answered",
+  sub: "Recognition, documents, tax holidays, timelines and what happens if DPIIT asks for more papers.",
+  items: [
+    {
+      question: "What is the Startup India Registration?",
+      answer:
+        "Startup India Registration is a government certification from DPIIT that lets eligible startups access financial benefits, tax exemptions, and regulatory ease.",
+    },
+    {
+      question: "How do I apply for the Startup India Registration?",
+      answer:
+        "You apply through the official Startup India portal by filling out the application and submitting the necessary documents. Vikas Bharat prepares the file and handles portal filing end-to-end.",
+    },
+    {
+      question: "What are the benefits of the Startup India Registration?",
+      answer:
+        "Benefits include tax exemptions, funding opportunities, intellectual property (IPR) support, self-certification, and public procurement opportunities.",
+    },
+    {
+      question: "What documents are required for the Startup India Registration?",
+      answer:
+        "Typically incorporation documents, a pitch deck, a detailed project report, financials (ITR or audited statements where applicable), founder profiles, Udyam if available, and IPR filings if you already have them.",
+    },
+    {
+      question: "How long does it take to get the Startup India Registration?",
+      answer:
+        "Most applications receive recognition within 7–10 working days, though it can take a few weeks depending on documents submitted and any DPIIT queries.",
+    },
+    {
+      question: "How can Vikas Bharat help with my Startup India Registration?",
+      answer:
+        "We check eligibility, frame the innovation narrative, prepare documents, file on the Startup India portal, and guide you on 80-IAC, SISFS and related next steps after recognition.",
+    },
+    {
+      question: "What are the tax benefits available under the Startup India scheme?",
+      answer:
+        "Recognised startups can claim a 100% income tax holiday under Section 80-IAC for any 3 consecutive years out of the first 10 years of incorporation, subject to a separate 80-IAC application.",
+    },
+    {
+      question: "What if my application for Startup India Registration is rejected?",
+      answer:
+        "If the application is rejected, our team helps you understand the reasons, correct the file, and re-submit.",
+    },
+  ],
+} as const;
+
+export const certificatePage = {
+  eyebrow: "ISO · BIS CRS · FSSAI",
+  heading: "Certifications & Compliance",
+  kicker: "ISO 9001/14001/27001 • BIS CRS • FSSAI",
+  intro:
+    "End-to-end support for ISO certification, BIS Compulsory Registration Scheme for electronics/IT products, and FSSAI registration/licenses for food businesses with accredited audits, BIS lab coordination, and portal filings.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Advisor preparing ISO, BIS CRS and FSSAI certification files",
+  stats: [
+    { value: "3 Years", label: "ISO Certificate Validity" },
+    { value: "3 Tracks", label: "ISO • BIS CRS • FSSAI" },
+    { value: "₹12L", label: "FSSAI Basic Threshold" },
+    { value: "1–5 Yrs", label: "FSSAI Licence Validity" },
+  ] as const,
+  unlock: {
+    eyebrow: "What's Covered",
+    heading: "What certifications are covered?",
+    paragraphs: [
+      "ISO certification helps organizations demonstrate conformity to international management system standards such as ISO 9001 (QMS), ISO 14001 (EMS), ISO 27001 (ISMS), ISO 45001 (OHSMS), and ISO 22000 (FSMS), issued by accredited certification bodies after audits.",
+      "BIS CRS is mandatory registration for notified electronics and IT products, requiring product testing in BIS-recognized laboratories and issuance of a unique R-number. FSSAI licensing is mandatory for food businesses, with Basic registration up to ₹12 lakh turnover and State/Central licenses based on higher turnover or multi-state operations.",
+    ],
+    benefitsHeading: "Three tracks, one desk",
+    benefits: [
+      "ISO audits by accredited bodies for recognized certificates",
+      "BIS CRS for notified electronics/IT with BIS lab testing",
+      "FSSAI Basic/State/Central mapped to turnover and scope",
+      "Digital filings via official portals for faster compliance",
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria",
+    sub: "Who can apply, and the conditions that keep a certificate or licence valid.",
+    leftHeading: "Who Can Apply?",
+    rightHeading: "Conditions",
+    items: [
+      {
+        title: "ISO",
+        text: "Any organization implementing the required management system and seeking accredited certification. Internal processes must meet the standard before external audits.",
+        icon: "seed" as const,
+      },
+      {
+        title: "BIS CRS",
+        text: "Manufacturer of a product notified under CRS; foreign manufacturers require an Authorized Indian Representative. Testing must be done in BIS-recognized laboratories before registration.",
+        icon: "chip" as const,
+      },
+      {
+        title: "FSSAI",
+        text: "All food business operators — Basic up to ₹12 lakh turnover, State or Central above thresholds or for multi-state operations.",
+        icon: "agri" as const,
+      },
+      {
+        title: "ISO Audit Path",
+        text: "Certification typically follows internal audit and management review before Stage 1 and Stage 2 audits. Certificates are issued by accredited registrars and are generally valid for three years with surveillance.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "BIS R-Number",
+        text: "BIS CRS grants an R-number after lab testing and document scrutiny; only notified products are covered.",
+        icon: "factory" as const,
+      },
+      {
+        title: "FSSAI Validity",
+        text: "Licence category depends on turnover and scope; validity is 1–5 years with prescribed fee slabs. Continuous adherence is mandatory for certificate and licence validity.",
+        icon: "wallet" as const,
+      },
+    ],
+  },
+  whyChoose: {
+    eyebrow: "Why This Desk",
+    heading: "Why Choose Vikas Bharat for Certification Support?",
+    sub: "Accredited ISO path, BIS lab coordination, and FSSAI FoSCoS filings — without juggling three vendors.",
+    items: [
+      {
+        title: "Accredited ISO Path",
+        text: "Guidance for ISO 9001/14001/27001/45001/22000 through Stage 1 and Stage 2 audits by accredited registrars.",
+        icon: "shield" as const,
+      },
+      {
+        title: "BIS CRS Registrations",
+        text: "End-to-end BIS CRS support including BIS-recognized lab testing and registration for notified electronics/IT products.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "FSSAI Licensing",
+        text: "Correct license mapping (Basic/State/Central) based on turnover and business model with FoSCoS filings.",
+        icon: "file" as const,
+      },
+      {
+        title: "Efficient Workflows",
+        text: "Structured gap analysis, documentation toolkits, and coordinated filings across ISO, BIS, and FSSAI.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Scalable Coverage",
+        text: "From single-site ISO scope to multi-product BIS CRS and multi-state FSSAI operations.",
+        icon: "map" as const,
+      },
+      {
+        title: "Post-Approval Support",
+        text: "Surveillance audit planning, renewals, scope additions, and labeling/marking compliance.",
+        icon: "users" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We File",
+    heading: "Simple Application Process",
+    sub: "Structured steps across ISO, BIS CRS, and FSSAI for smooth certification.",
+    steps: [
+      {
+        title: "Assessment",
+        text: "Select the applicable path (ISO/BIS/FSSAI), perform gap analysis, and finalise scope and standards, products or licenses.",
+      },
+      {
+        title: "Documentation",
+        text: "Prepare ISO policies/SOPs and records; compile the BIS CRS dossier and product samples; assemble FSSAI KYC and forms.",
+      },
+      {
+        title: "Audit / Testing & Filing",
+        text: "Undergo ISO Stage 1/2 audits; conduct BIS lab testing and submit the CRS application; file the FSSAI application on FoSCoS.",
+      },
+      {
+        title: "Approval / Certification",
+        text: "Receive the ISO certificate, BIS CRS registration with R-number, and FSSAI licence as applicable; plan surveillance and renewals.",
+      },
+      {
+        title: "Compliance Maintenance",
+        text: "Maintain ongoing compliance, handle surveillance audits, regulatory updates, product changes, and timely renewals.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Required Documents",
+    note: "ISO, BIS and FSSAI can run in parallel. After eligibility we send a file-specific checklist so you only collect what the auditor, BIS lab or FoSCoS portal needs.",
+    items: [
+      "ISO: quality / environmental / information security policies, SOPs, records, internal audit and management review",
+      "BIS CRS: test reports from BIS-recognized labs, manufacturer details, product labels/markings, conformity documents",
+      "FSSAI: entity proof, premises proof, KYC, product/category details, and supplementary documents per activity",
+      "Authorizations: Authorized Indian Representative (for foreign BIS applicants) and board resolutions as required",
+      "Operational proofs: process flow, layout (as applicable), prior approvals for specific categories",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const certificateFaq = {
+  heading: "Certification questions, answered",
+  sub: "Which ISO to pick, who needs BIS CRS, FSSAI thresholds, validity and whether you can file all three together.",
+  items: [
+    {
+      question: "Which ISO standard should be chosen?",
+      answer:
+        "ISO 9001 for quality (QMS), ISO 14001 for environment (EMS), ISO 27001 for information security (ISMS), ISO 45001 for OH&S, and ISO 22000 for food safety (FSMS) are commonly selected based on business priorities and regulatory needs.",
+    },
+    {
+      question: "Who needs BIS CRS registration?",
+      answer:
+        "Manufacturers of electronics/IT products notified under the Compulsory Registration Scheme must test in BIS-recognized labs and obtain BIS registration; foreign manufacturers must appoint an Authorized Indian Representative.",
+    },
+    {
+      question: "FSSAI registration vs license thresholds?",
+      answer:
+        "Basic registration applies up to ₹12 lakh turnover; State license applies above ₹12 lakh up to state thresholds; Central license applies to larger or multi-state operations and certain categories such as importers.",
+    },
+    {
+      question: "How long is ISO certification valid?",
+      answer:
+        "ISO certificates are typically valid for three years with periodic surveillance audits, after successful Stage 1 and Stage 2 certification audits by an accredited registrar.",
+    },
+    {
+      question: "Can ISO, BIS, and FSSAI be pursued together?",
+      answer:
+        "Yes. Parallel tracks are feasible: ISO management system implementation and audits can run alongside BIS CRS testing/registration and FSSAI filings through their respective digital portals.",
+    },
+  ],
+} as const;
+
+export const growthPage = {
+  eyebrow: "Strategic Growth • Business Scaling",
+  heading: "Growth Strategy Services",
+  kicker: "Market Expansion • Revenue Optimization • Business Scaling",
+  intro:
+    "Transform your business trajectory with Vikas Bharat's data-driven growth strategy services designed to boost your market position, identify new revenue opportunities, and create practical, scalable roadmaps. Our growth strategy consulting helps MSMEs and startups achieve sustainable expansion through targeted interventions and measurable outcomes.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Advisor mapping a growth strategy with an MSME founder",
+  stats: [
+    { value: "40%", label: "Avg. Revenue Growth" },
+    { value: "12mo", label: "Implementation Plan" },
+    { value: "3X", label: "Customer Acquisition" },
+    { value: "85%", label: "Success Rate" },
+  ] as const,
+  unlock: {
+    eyebrow: "Why Growth Strategy",
+    heading: "Accelerate Your Business Growth",
+    paragraphs: [
+      "Growth strategy in strategic management is the backbone of long-term business success. A solid growth plan helps expand your market reach, optimise revenue streams, and strengthen operational capacity. Effective growth strategy management requires deep market analysis, competitive benchmarking, and identification of sustainable growth paths.",
+      "Vikas Bharat's growth strategy consulting blends market insights with operational expertise to create clear, actionable roadmaps tailored for startups and MSMEs. Our approach focuses on scalable expansion aligned with your business vision, financial strength, and current market opportunities.",
+    ],
+    benefitsHeading: "What the engagement covers",
+    benefits: [
+      "Market expansion planning",
+      "Revenue optimization",
+      "Operational scaling",
+      "Implementation roadmaps",
+    ],
+  },
+  eligibility: {
+    eyebrow: "Fit Check",
+    heading: "Is Growth Strategy Service Right for You?",
+    sub: "Built for founders who have a live business and are ready to commit time, data and decisions.",
+    leftHeading: "Who Can Apply?",
+    rightHeading: "Conditions",
+    items: [
+      {
+        title: "Established businesses",
+        text: "12+ months of revenue history and a working operating rhythm.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Validated startups",
+        text: "Startups with validated business models, not still hunting for product-market fit.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Growth plateau",
+        text: "Companies stuck in a growth plateau who need a structured next move.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Funding-ready",
+        text: "Businesses preparing for funding rounds who need a defensible growth plan.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Scale-minded founders",
+        text: "Entrepreneurs wanting to scale operations sustainably, not just spend more on ads.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Time & resources",
+        text: "Willingness to commit time and resources to the engagement.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Data access",
+        text: "Access to financial data and customer metrics so recommendations are grounded.",
+        icon: "file" as const,
+      },
+      {
+        title: "Decision-makers",
+        text: "Support from key decision-makers who can approve and execute the plan.",
+        icon: "users" as const,
+      },
+      {
+        title: "Realistic timelines",
+        text: "Realistic expectations on timelines and outcomes — typical implementation is 6–12 months.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Open to adjustment",
+        text: "Openness to feedback and strategic adjustments as results come in.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Growth Desk",
+    heading: "Our Growth Strategy Services",
+    sub: "From market opportunity to an implementation roadmap you can actually run.",
+    items: [
+      {
+        title: "Market Opportunity Analysis",
+        text: "Identify untapped segments, emerging trends, and potential expansion areas using in-depth market research.",
+        icon: "search" as const,
+      },
+      {
+        title: "Strategic Direction Planning",
+        text: "Define growth objectives, build core strategies, and design initiatives aligned with your long-term business capabilities.",
+        icon: "map" as const,
+      },
+      {
+        title: "Revenue Optimization",
+        text: "Improve your business model using pricing strategies, monetization methods, customer retention, and new revenue streams.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Market Expansion Planning",
+        text: "Create effective strategies for entering new markets, geographical expansion, and wider customer reach.",
+        icon: "send" as const,
+      },
+      {
+        title: "Operational Scaling Framework",
+        text: "Develop systems and processes that help your business scale efficiently while maintaining quality and cost control.",
+        icon: "users" as const,
+      },
+      {
+        title: "Growth Implementation Roadmap",
+        text: "Turn strategy into execution with timelines, milestones, responsibilities, budgets, and performance indicators.",
+        icon: "clipboard" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We Work",
+    heading: "Our Growth Strategy Process",
+    sub: "A structured approach to accelerate your business growth.",
+    steps: [
+      {
+        title: "Discovery & Analysis",
+        text: "Comprehensive business assessment, market research, competitor analysis, and identification of growth opportunities.",
+      },
+      {
+        title: "Strategy Development",
+        text: "Creation of custom growth strategies with objectives, market approach, revenue models, and resource needs.",
+      },
+      {
+        title: "Implementation Planning",
+        text: "Detailed action plans including timelines, responsibilities, KPIs, and budgets.",
+      },
+      {
+        title: "Execution Support",
+        text: "Hands-on support during implementation with check-ins, adjustments, and strategic guidance.",
+      },
+      {
+        title: "Performance Tracking",
+        text: "Establish monitoring systems, measure results, and refine strategy based on insights.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "What We'll Need From You",
+    heading: "What We'll Need From You",
+    note: "Share what you already have. After the fit check we send a file-specific list so you are not rebuilding a data room from scratch.",
+    items: [
+      "Business profile (vision, mission, offerings)",
+      "Marketing materials and customer acquisition channels",
+      "Team structure and resource allocation",
+      "Market information and competitive landscape",
+      "Customer data (segments, retention, feedback)",
+      "Financial statements (1–3 years)",
+      "Product/service portfolio with pricing",
+      "Current business challenges and growth objectives",
+      "Previous growth initiatives and outcomes",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const growthFaq = {
+  heading: "Growth strategy questions, answered",
+  sub: "What the engagement covers, who it is for, how it fits strategic management, and how long implementation takes.",
+  items: [
+    {
+      question: "What are growth strategy services?",
+      answer:
+        "Growth strategy services help businesses identify new market opportunities, optimize revenue, and scale operations using structured strategic management frameworks.",
+    },
+    {
+      question: "Why do businesses need growth strategy consulting?",
+      answer:
+        "Consulting helps businesses overcome stagnation, plan expansion, improve profitability, and build long-term competitive advantage.",
+    },
+    {
+      question: "How does growth strategy fit into strategic management?",
+      answer:
+        "Growth strategy in strategic management focuses on creating long-term plans that expand market share, increase revenue, and strengthen operational capacity.",
+    },
+    {
+      question: "What industries can benefit from growth strategy management?",
+      answer:
+        "All industries including manufacturing, retail, technology, services, D2C, and MSMEs can benefit from structured growth strategy management.",
+    },
+    {
+      question: "How long does it take to implement a growth strategy?",
+      answer:
+        "Implementation typically takes 6–12 months depending on the industry, business model, and strategic goals.",
+    },
+  ],
+} as const;
+
+export const maPage = {
+  eyebrow: "M&A • Transactions",
+  heading: "Mergers & Acquisitions",
+  kicker: "Advisory for MSMEs & Startups",
+  intro:
+    "Whether you are looking to acquire a competitor, sell your business to a strategic buyer, or bring in a financial investor — Vikas Bharat provides structured advisory from target identification through to deal closing.",
+  cta: "Contact Us",
+  imageAlt: "Advisors reviewing an MSME merger and acquisition file",
+  stats: [
+    { value: "2 Sides", label: "Buy-Side & Sell-Side" },
+    { value: "3–8x", label: "Typical EBITDA Multiple" },
+    { value: "3–6 mo", label: "Typical Close Timeline" },
+    { value: "100-Day", label: "Integration Plan" },
+  ] as const,
+  unlock: {
+    eyebrow: "Not Just Corporates",
+    heading: "M&A for Businesses That Are Not Large Corporates",
+    paragraphs: [
+      "Mergers and acquisitions are not just for large companies. MSMEs and growing startups increasingly use M&A to acquire a competitor or supplier, bring in a strategic investor who adds distribution or technology, exit a business they have built, or merge with a complementary business to grow faster together.",
+      "The challenge for MSMEs is that M&A is complex and unfamiliar. Most founders do not know how to value a business, what due diligence involves, how to structure a deal so it is tax-efficient, or what a Share Purchase Agreement (SPA) should cover. Getting these details wrong can make an otherwise good deal very expensive.",
+      "Vikas Bharat provides advisory at each stage of the M&A process — helping you decide whether to buy or build, identifying and approaching targets or buyers, coordinating financial and legal due diligence, structuring the deal, and supporting post-deal integration planning.",
+    ],
+    benefitsHeading: "What a mandate can cover",
+    benefits: [
+      "Buy-side and sell-side advisory",
+      "Valuation and due diligence",
+      "SHA / SPA deal documents",
+      "100-day integration plan",
+    ],
+  },
+  services: {
+    eyebrow: "M&A Desk",
+    heading: "What Vikas Bharat's M&A Advisory Covers",
+    sub: "From buy-vs-build to closing and a 100-day integration plan — without treating you like a large corporate.",
+    items: [
+      {
+        title: "Buy vs Build Analysis",
+        text: "We help you decide whether acquiring a business makes more sense than building the capability yourself — with a clear financial case and risk assessment for both options.",
+        icon: "search" as const,
+      },
+      {
+        title: "Financial Due Diligence",
+        text: "We review the target's financials, tax position, contracts, and operational risks to identify red flags before you commit. For sell-side mandates, we prepare your business for buyer due diligence.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Valuation",
+        text: "We provide valuation analysis using revenue multiples, EBITDA multiples, and DCF approaches — giving you a realistic price range to negotiate from, whether buying or selling.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Deal Structuring",
+        text: "We advise on share purchase vs asset purchase, slump sale, earn-outs, and share swap structures — choosing the most tax-efficient approach for your situation.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Documentation Support",
+        text: "We coordinate with legal counsel on the term sheet, Share Purchase Agreement (SPA), representations and warranties, and conditions precedent.",
+        icon: "file" as const,
+      },
+      {
+        title: "Integration Planning",
+        text: "For acquisitions, we help build a 100-day integration plan covering team, systems, customers, and compliance — so the deal value is not lost in a messy transition.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How a Mandate Runs",
+    heading: "How an M&A Engagement Works",
+    sub: "Four steps from mandate and goals through identification, diligence, structuring and close.",
+    steps: [
+      {
+        title: "Mandate & Goals",
+        text: "We understand whether you are buying or selling, your sector, ticket size, and what a successful outcome looks like for you.",
+      },
+      {
+        title: "Target / Buyer Identification",
+        text: "We identify and shortlist acquisition targets or potential acquirers/investors aligned with your strategic goals.",
+      },
+      {
+        title: "Due Diligence & Valuation",
+        text: "We coordinate financial, tax, and operational due diligence and provide a valuation range to anchor your negotiations.",
+      },
+      {
+        title: "Structuring & Closing",
+        text: "We advise on deal structure, support documentation with legal counsel, and help manage conditions precedent through to closing.",
+      },
+    ],
+  },
+} as const;
+
+export const maFaq = {
+  heading: "M&A questions, answered",
+  sub: "Valuation, due diligence, share vs asset purchase, and how long a typical MSME deal takes to close.",
+  items: [
+    {
+      question: "How is a business valued for an M&A deal?",
+      answer:
+        "Business valuation depends on the sector and stage. Profitable MSMEs are typically valued at 3–8x EBITDA (earnings before interest, tax, depreciation, and amortisation). Revenue-stage startups are valued at 1–5x annual revenue depending on growth rate and sector. Asset-heavy businesses (manufacturing, real estate) may also use net asset value. Vikas Bharat provides a valuation range based on comparable transactions and your business's specific financials.",
+    },
+    {
+      question: "What is due diligence and why does it matter?",
+      answer:
+        "Due diligence is the process of verifying everything the seller claims about their business before you agree to buy. It covers financial statements, tax history, contracts, liabilities, legal disputes, intellectual property ownership, and customer concentration. Skipping due diligence or doing it poorly is the most common way buyers end up overpaying or inheriting problems they did not know about.",
+    },
+    {
+      question: "Should I do a share purchase or asset purchase?",
+      answer:
+        "A share purchase means you buy the company itself — including all its liabilities, contracts, and history. An asset purchase means you buy specific assets (machinery, customer list, brand, IP) without taking on the company entity. Asset purchases are cleaner for the buyer (you only take what you want) but may have tax disadvantages for the seller. The right structure depends on your specific situation — Vikas Bharat advises based on both parties' tax and legal positions.",
+    },
+    {
+      question: "How long does an M&A deal take to close?",
+      answer:
+        "MSME M&A deals typically take 3–6 months from initial agreement in principle to final closing. This covers due diligence (4–8 weeks), negotiation and documentation (4–6 weeks), regulatory approvals if required, and closing formalities. Complex deals, those requiring NCLT approval, or those with multiple acquirers can take longer.",
+    },
+  ],
+} as const;
+
+export const marketingPage = {
+  eyebrow: "Digital Marketing • Brand Development",
+  heading: "Marketing & Branding Services",
+  kicker: "Identity Development • Digital Strategy • Content Marketing • Growth Solutions",
+  intro:
+    "Establish a powerful market presence with Vikas Bharat's comprehensive marketing and branding services designed specifically for MSMEs and startups to build recognition, engage audiences, and drive sustainable business growth through strategic marketing initiatives.",
+  cta: "Get Started",
+  imageAlt: "Advisor reviewing a brand and digital marketing plan with a founder",
+  stats: [
+    { value: "₹100+", label: "Brand Identities" },
+    { value: "300%", label: "Avg. Traffic Growth" },
+    { value: "40%", label: "Lead Conversion" },
+    { value: "ROI+", label: "Measurable Results" },
+  ] as const,
+  unlock: {
+    eyebrow: "Why Marketing",
+    heading: "Strategic Marketing for Business Growth",
+    paragraphs: [
+      "Effective marketing and branding are critical differentiators that help businesses stand out in competitive markets. From establishing a compelling brand identity to implementing targeted digital campaigns, strategic marketing builds credibility, attracts customers, and drives business growth.",
+      "Vikas Bharat provides tailored marketing and branding solutions that align with your business objectives and budget constraints. Our approach combines creative brand development with data-driven marketing strategies to create meaningful connections with your target audience and generate measurable business results.",
+    ],
+    benefitsHeading: "What the engagement covers",
+    benefits: [
+      "Brand identity development",
+      "Digital strategy and content",
+      "Performance campaigns",
+      "Analytics and reporting",
+    ],
+  },
+  eligibility: {
+    eyebrow: "Fit Check",
+    heading: "Is Our Marketing Service Right For You?",
+    sub: "Built for founders who want a marketing system, not one-off posts.",
+    leftHeading: "Who Can Apply?",
+    rightHeading: "Conditions",
+    items: [
+      {
+        title: "Brand refresh or launch",
+        text: "Startups and MSMEs looking to establish or refresh their brand identity in the market.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Digital presence & leads",
+        text: "Businesses seeking to increase their digital presence and generate quality leads online.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Growth plateau",
+        text: "Companies experiencing growth plateaus that need strategic marketing interventions.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "New products or markets",
+        text: "Organizations looking to launch new products or enter new market segments.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Sustainable systems",
+        text: "Businesses ready to invest in sustainable marketing systems rather than ad-hoc efforts.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Clear objectives",
+        text: "Clear business objectives and target audience understanding (or willingness to develop these).",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Realistic budget",
+        text: "Realistic budget allocation for marketing activities based on business stage and goals.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "3–6 month commitment",
+        text: "Commitment to consistent marketing efforts over at least 3–6 months for measurable results.",
+        icon: "users" as const,
+      },
+      {
+        title: "Collaboration",
+        text: "Capacity to collaborate on strategy development and provide timely feedback.",
+        icon: "file" as const,
+      },
+      {
+        title: "Measure what matters",
+        text: "Willingness to measure and track performance metrics to evaluate marketing effectiveness.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Marketing Desk",
+    heading: "Our Marketing & Branding Services",
+    sub: "Identity, messaging, SEO, social, paid, web, collaterals and reporting — in one desk.",
+    items: [
+      {
+        title: "Brand Identity Development",
+        text: "Create compelling brand identities including logo design, color schemes, typography, and visual guidelines that reflect your business values.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Brand Messaging & Positioning",
+        text: "Develop clear brand messaging, unique value propositions, and market positioning strategies that resonate with target audiences.",
+        icon: "mic" as const,
+      },
+      {
+        title: "SEO & Content Marketing",
+        text: "Improve online visibility through search engine optimization, keyword research, and strategic content creation that drives organic traffic.",
+        icon: "search" as const,
+      },
+      {
+        title: "Social Media Marketing",
+        text: "Build engaging social presence through platform-specific strategies, content calendars, community management, and targeted campaigns.",
+        icon: "send" as const,
+      },
+      {
+        title: "Performance Marketing",
+        text: "Drive conversions with targeted paid campaigns across Google, social platforms, and display networks with ROI-focused optimization.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Website Development & UX",
+        text: "Create responsive, conversion-optimized websites with user-friendly interfaces, clear information architecture, and compelling visuals.",
+        icon: "file" as const,
+      },
+      {
+        title: "Marketing Collaterals",
+        text: "Design professional business materials including brochures, presentations, product catalogs, and sales enablement tools.",
+        icon: "folder" as const,
+      },
+      {
+        title: "Analytics & Reporting",
+        text: "Track marketing performance with customized dashboards and regular reports highlighting key metrics, insights, and optimization opportunities.",
+        icon: "clipboard" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We Work",
+    heading: "Our Marketing & Branding Process",
+    sub: "A structured approach to build your brand and grow your market presence.",
+    steps: [
+      {
+        title: "Discovery & Analysis",
+        text: "Understand your business objectives, analyse current market position, and identify target audiences and competitive landscape.",
+      },
+      {
+        title: "Strategy Development",
+        text: "Create comprehensive marketing strategy with channel selection, messaging framework, and tactical implementation plans.",
+      },
+      {
+        title: "Content Creation",
+        text: "Produce high-quality content assets including website copy, blogs, social media content, videos, and marketing collaterals.",
+      },
+      {
+        title: "Campaign Implementation",
+        text: "Execute multi-channel marketing campaigns across selected platforms with continuous optimisation for performance.",
+      },
+      {
+        title: "Measurement & Optimisation",
+        text: "Track key performance indicators, analyse results, and refine strategies for improved ROI and business impact.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "What We'll Need From You",
+    heading: "What We'll Need From You",
+    note: "Share what you already have. After the fit check we send a file-specific list so you are not rebuilding a brand kit from scratch.",
+    items: [
+      "Business profile and overview including vision, mission, and core offerings",
+      "Current brand materials and marketing assets (if available)",
+      "Information about target audience and ideal customer profiles",
+      "Details about competitors and current market positioning",
+      "Marketing objectives, priorities, and key performance indicators",
+      "Budget parameters and timeline expectations",
+      "Product/service information and unique selling propositions",
+      "Access to existing analytics platforms (Google Analytics, social media insights, etc.)",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const marketingFaq = {
+  heading: "Marketing questions, answered",
+  sub: "Timelines, budgets, in-house vs partner work, collaborating with your team, and how we measure performance.",
+  items: [
+    {
+      question: "How long does it take to see results from marketing efforts?",
+      answer:
+        "The timeline for marketing results varies by channel and objective. Brand development typically requires 4–6 weeks for completion. SEO efforts generally show initial improvements in 3–4 months with significant results in 6–12 months. Social media marketing can generate engagement within weeks but building substantial followings takes 3–6 months. Paid campaigns can deliver immediate traffic but conversion optimization typically requires 1–2 months of testing and refinement.",
+    },
+    {
+      question: "What makes Vikas Bharat's marketing services different?",
+      answer:
+        "Our approach is specifically tailored for Indian MSMEs and startups, focusing on cost-effective strategies with measurable business impact. Unlike agencies that provide generic solutions, we create customized marketing frameworks based on your specific growth stage, industry dynamics, and budget considerations. We combine creative brand development with data-driven marketing execution, providing both strategic guidance and tactical implementation support.",
+    },
+    {
+      question: "How much should my business budget for marketing?",
+      answer:
+        "Effective marketing budgets typically range from 5–15% of revenue depending on business stage, industry, and growth objectives. Early-stage startups often allocate higher percentages (10–15%) to establish market presence, while established businesses may operate at 5–8%. We develop scalable marketing plans with options for different budget levels, prioritizing high-impact activities and gradually expanding as results generate returns.",
+    },
+    {
+      question: "Do you handle all marketing activities in-house?",
+      answer:
+        "We manage strategy development, campaign planning, and performance analysis in-house with our core team. For specialized execution like advanced video production or niche industry content, we collaborate with vetted partners while maintaining project management and quality control. This hybrid approach ensures expertise across all channels while keeping overall costs manageable for our clients.",
+    },
+    {
+      question: "Can you work with our existing marketing team?",
+      answer:
+        "Yes, we frequently collaborate with in-house marketing resources. Our services can range from strategic guidance and planning to filling specific capability gaps or handling complete execution. We adapt our involvement based on your existing team's strengths, providing training and knowledge transfer to build internal capabilities while delivering immediate marketing results.",
+    },
+    {
+      question: "How do you measure marketing performance?",
+      answer:
+        "We establish clear KPIs aligned with your business objectives before beginning any marketing activities. These typically include metrics across the full marketing funnel — from awareness (traffic, impressions, reach) to engagement (click rates, time on site, social interactions) to conversion (leads, sales, ROI). We provide regular performance reports with actionable insights and optimization recommendations.",
+    },
+  ],
+} as const;
+
+export const legalPage = {
+  eyebrow: "Legal • Compliance",
+  heading: "Legal Consultancy",
+  kicker: "For MSMEs & Startups",
+  intro:
+    "Navigating the legal landscape can be complex, but with Vikas Bharat's legal consultancy services, you can get the right advice for business registration, compliance, contracts, and intellectual property protection.",
+  cta: "Talk to Us",
+  imageAlt: "Advisor reviewing contracts and compliance papers with a founder",
+  stats: [
+    { value: "5000+", label: "Legal Consultations" },
+    { value: "100%", label: "Compliance Assurance" },
+    { value: "24/7", label: "Legal Support" },
+    { value: "98%", label: "Client Satisfaction" },
+  ] as const,
+  unlock: {
+    eyebrow: "Why Legal Support",
+    heading: "Why Legal Support Matters for Small Businesses",
+    paragraphs: [
+      "Most MSMEs and startups run on informal agreements, verbal understandings, and templates downloaded from the internet. This works fine until it doesn't — a client disputes a payment, a vendor defaults, a co-founder leaves, or an investor asks to see your legal house in order before writing a cheque.",
+      "Good legal documentation does three things: it prevents disputes from happening, it makes disputes easier to resolve when they do happen, and it makes your business look credible to banks, investors, and enterprise clients. A vendor contract that clearly states payment terms, deliverables, and penalty clauses saves far more money than the legal cost of drafting it.",
+      "Vikas Bharat coordinates with experienced partner counsel across commercial contracts, corporate governance, HR and labour compliance, and fundraising documentation. We manage the process — you don't need to find or brief a lawyer yourself.",
+    ],
+    benefitsHeading: "What we put in order",
+    benefits: [
+      "Commercial contracts",
+      "Corporate governance",
+      "HR and labour compliance",
+      "Fundraising documents",
+    ],
+  },
+  cover: {
+    eyebrow: "Legal Desk",
+    heading: "Legal Services We Cover",
+    sub: "The contracts and compliance files MSMEs actually need — drafted clearly, not in legalese.",
+    items: [
+      {
+        title: "Commercial Contracts",
+        text: "Customer agreements, vendor MSAs, SaaS/service terms, NDA templates, and platform agreements — drafted clearly so both parties know exactly what is agreed.",
+        icon: "file" as const,
+      },
+      {
+        title: "Corporate & Governance",
+        text: "Board resolutions, shareholder agreements, cap table documentation, ROC compliance, and corporate secretarial work for Private Limited companies and LLPs.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "HR & Labour Compliance",
+        text: "Employment contracts, POSH (Prevention of Sexual Harassment) policy and compliance, state shop and establishment registrations, and PF/ESIC compliance.",
+        icon: "users" as const,
+      },
+      {
+        title: "Fundraising Documents",
+        text: "Term sheets, Shareholder Agreements (SHA), SAFE notes, due diligence preparation, and representation letters for investors and grant committees.",
+        icon: "wallet" as const,
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Full Scope",
+    heading: "Our Comprehensive Legal Consultancy Services",
+    sub: "Structure, compliance, contracts, IP and filings — coordinated with partner counsel.",
+    items: [
+      {
+        title: "Business Structure Advisory",
+        text: "Choosing the right business structure is crucial for future growth. We offer expert guidance on the most suitable structure for your needs — whether it's a Private Limited, LLP, OPC, or Sole Proprietorship.",
+        icon: "search" as const,
+      },
+      {
+        title: "Regulatory Compliance Management",
+        text: "Stay compliant with industry regulations and avoid costly penalties. Our business compliance services cover licenses, permits, filings, and ongoing regulatory adherence.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Contract Development and Negotiation",
+        text: "We help you draft, review, and negotiate business contracts, including agreements with vendors, partners, and employees — clear, legally-binding documents that mitigate risk.",
+        icon: "file" as const,
+      },
+      {
+        title: "Intellectual Property Protection",
+        text: "Secure your brand and ideas with trademark registration, copyright protection, and patent filings. We help you prevent infringement and safeguard your business assets.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Legal Due Diligence",
+        text: "We assist in registering your firm with comprehensive documentation support and smooth coordination with the approving authorities.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who It's For",
+    heading: "Who Should Seek Legal Consultancy?",
+    sub: "Founders who need a legal foundation — and are ready to implement it.",
+    leftHeading: "Who should apply",
+    rightHeading: "Conditions",
+    items: [
+      {
+        title: "Startups and Early-Stage Businesses",
+        text: "Establishing a solid legal foundation for growth.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Growing MSMEs",
+        text: "Facing new compliance requirements, expansion challenges, or regulatory changes.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Negotiating with Clients/Vendors",
+        text: "Engaged in contracts, deals, or partnerships that need to be watertight.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Protecting Intellectual Property",
+        text: "Safeguarding brand names and inventions.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Facing Regulatory Issues",
+        text: "Needing assistance with industry-specific compliance.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Clear Business Objectives",
+        text: "Clear business objectives and legal priorities to enable focused legal advice.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Complete Documentation",
+        text: "Complete business documentation for assessment and strategy development.",
+        icon: "file" as const,
+      },
+      {
+        title: "Willingness to Implement",
+        text: "Willingness to implement recommended legal protections and compliance practices.",
+        icon: "users" as const,
+      },
+      {
+        title: "Ongoing Compliance Commitment",
+        text: "Commitment to maintaining ongoing legal compliance and transparency about potential legal concerns.",
+        icon: "wallet" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We Work",
+    heading: "Our Legal Consultancy Process",
+    sub: "From first conversation to implementation, training and ongoing advisory.",
+    steps: [
+      {
+        title: "Initial Consultation",
+        text: "Discuss your business model, objectives, and legal needs to tailor the consultancy process.",
+      },
+      {
+        title: "Legal Assessment",
+        text: "Review your current legal framework, documents, and practices to identify potential gaps or risks.",
+      },
+      {
+        title: "Strategy Development",
+        text: "Create customized legal strategies to address immediate concerns and establish long-term compliance.",
+      },
+      {
+        title: "Implementation",
+        text: "Execute legal strategies, including drafting necessary documents and filings for business formation.",
+      },
+      {
+        title: "Review & Training",
+        text: "Provide training on legal compliance practices to ensure your business stays aligned with ongoing legal obligations.",
+      },
+      {
+        title: "Ongoing Support",
+        text: "Offer continuous advisory services, updates on regulatory changes, and proactive legal management.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Required Documents for Legal Services",
+    note: "When engaging in legal consultancy, have these ready for review. After the first call we send a file-specific list so you only share what the matter needs.",
+    items: [
+      "Business registration documents — MOA, AOA, Certificate of Incorporation, etc.",
+      "Existing contracts and agreements — vendor and partnership agreements, employment contracts",
+      "Operational licenses and permits — business licenses, GST registration",
+      "Intellectual property documentation — trademark, patent, or copyright filings",
+      "Employment contracts and HR policies — for labour-law compliance",
+      "Compliance filings and regulatory submissions — tax filings, regulatory filings",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const legalFaq = {
+  heading: "Legal questions, answered",
+  sub: "How this desk differs from a law firm, when to stay on a retainer, industry rules, disputes and cross-border work.",
+  items: [
+    {
+      question: "What makes Vikas Bharat's legal services different from traditional law firms?",
+      answer:
+        "Vikas Bharat offers business-focused legal advice tailored for startups and MSMEs, without the use of complex legal jargon, making it more accessible and actionable. We coordinate with experienced partner counsel — you don't need to find or brief a lawyer yourself.",
+    },
+    {
+      question: "How can proper legal consultation save my business money?",
+      answer:
+        "Proper legal consultation helps prevent costly mistakes and ensures that your business stays compliant, avoiding penalties and lawsuits that could drain resources.",
+    },
+    {
+      question: "Do I need ongoing legal services or just one-time consultation?",
+      answer:
+        "While one-time consultations are available, ongoing legal services are often crucial for continuous compliance and for dealing with evolving regulations.",
+    },
+    {
+      question: "How do you handle specialized industry regulations?",
+      answer:
+        "We provide industry-specific legal services, ensuring compliance with the latest regulations in your sector, whether it's food safety or manufacturing standards.",
+    },
+    {
+      question: "What is your approach to dispute resolution?",
+      answer:
+        "Our approach includes mediation, negotiation, and arbitration, and we only opt for litigation when necessary to resolve legal disputes effectively.",
+    },
+    {
+      question: "Can you help with international business legal considerations?",
+      answer:
+        "Yes, we provide international business law services that help businesses navigate cross-border operations, ensuring compliance with global trade regulations.",
+    },
+  ],
+} as const;
+
+export const fundingPage = {
+  eyebrow: "Funding Guide • Capital Options",
+  heading: "Funding Instruments",
+  kicker: "for Startups & Businesses",
+  intro:
+    "Government grants, business loans, investor funding, and international capital — explained by business type and growth stage, so you know exactly which options are right for your situation.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Advisor mapping grants, loans and investor options for a founder",
+  stats: [
+    { value: "3", label: "Funding Categories" },
+    { value: "₹490Cr+", label: "Genesis Fund" },
+    { value: "50+", label: "Schemes Covered" },
+    { value: "100%", label: "Expert Guidance" },
+  ] as const,
+  unlock: {
+    eyebrow: "The Basics",
+    heading: "What Are Funding Instruments?",
+    paragraphs: [
+      "Funding instruments are financial tools that businesses use to raise capital. They fall into two broad categories: debt-based funding, where you borrow money and repay it over time, typically with interest; and equity-based funding, where you offer ownership shares in exchange for capital.",
+      "These sources can come from government schemes, private investors, or international funding routes, depending on the nature and stage of the business. Vikas Bharat maps the options by structure (Pvt Ltd vs LLP) and growth stage so you are not applying to the wrong desk.",
+    ],
+    benefitsHeading: "Three source types",
+    benefits: [
+      "Government funding",
+      "Private funding",
+      "International funding",
+      "Matched to stage and structure",
+    ],
+  },
+  types: {
+    eyebrow: "At a Glance",
+    heading: "Types of Funding Instruments",
+    sub: "Grants, bank debt, VC, angels, NBFCs and international capital — each with a different fit.",
+    items: [
+      {
+        title: "Government Grants",
+        text: "Non-repayable funding from central and state schemes — SISFS, RKVY, Genesis Fund (₹490Cr for tech startups), MSME subsidies.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "MSME & Bank Loans",
+        text: "Term loans and working capital from scheduled banks with CGTMSE or MUDRA collateral-free options for eligible businesses.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Venture Capital",
+        text: "Equity investment from registered VCFs and AIFs for startups that can grow fast and are targeting large markets.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Angel Investment",
+        text: "Early-stage equity from HNIs and angel networks — ideal for pre-revenue or seed-stage businesses needing mentorship alongside capital.",
+        icon: "users" as const,
+      },
+      {
+        title: "NBFC Financing",
+        text: "Flexible debt options from NBFCs for businesses that may not meet traditional bank criteria — faster processing with competitive rates.",
+        icon: "send" as const,
+      },
+      {
+        title: "International Funding",
+        text: "Foreign venture capital and institutional investor routes for startups targeting global markets, subject to FEMA and RBI regulations.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  government: {
+    eyebrow: "Government Funding",
+    heading: "1. Government Funding Instruments",
+    sub: "Non-refundable grants, bank debt, and government-backed equity — with different rules for Pvt Ltd vs LLP.",
+    items: [
+      {
+        title: "Non-Refundable Grants",
+        text: "Financial assistance from government bodies that does not need to be repaid — typically for innovation, R&D, green energy or export promotion. Both Private Ltd and LLP companies can apply if the project matches the scheme. Grants come with strict compliance and reporting requirements.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Debt-Based Funding (Banking)",
+        text: "Loans and credit facilities from public sector banks or financial institutions. Both Pvt Ltd and LLP companies qualify; the bank assesses creditworthiness, collateral and the business plan. Examples: term loans, overdraft, cash credit, Mudra loans.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Equity-Based Funding (Investors)",
+        text: "Government-backed Fund of Funds that invest via VC or PE rather than directly. Primarily for Private Ltd companies that can issue equity. LLPs cannot issue equity and are typically excluded from pure equity schemes.",
+        icon: "file" as const,
+      },
+    ],
+  },
+  access: {
+    eyebrow: "Structure Matters",
+    heading: "Funding Source Access for Pvt Ltd vs LLPs",
+    sub: "The instrument you can use often depends on whether you can issue equity.",
+    leftHeading: "Equity & debt",
+    rightHeading: "Grants",
+    items: [
+      {
+        title: "Equity Funding (VC, Angel, PE)",
+        text: "Private Ltd: excellent access (can issue shares). LLP: none or extremely limited — cannot issue equity.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Debt Funding (Bank Loans, NBFCs)",
+        text: "Private Ltd: good access based on credit score and collateral. LLP: good access on the same basis.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Grants / Government Schemes",
+        text: "Private Ltd: good access based on project and innovation. LLP: good access on the same basis.",
+        icon: "seed" as const,
+      },
+    ],
+  },
+  private: {
+    eyebrow: "Private Funding",
+    heading: "2. Private Funding Instruments",
+    sub: "Non-government, domestic debt and equity — from friends and family through to professional VCs.",
+    items: [
+      {
+        title: "Private Loan",
+        text: "Typically from friends, family or HNIs who are not professional lenders — often trust-based with flexible terms. Both Pvt Ltd and LLP can use this; Pvt Ltd companies must comply with Company Law on loans from directors/shareholders, while LLPs often receive loans from partners.",
+        icon: "users" as const,
+      },
+      {
+        title: "Institutional Loan",
+        text: "Debt from private sector banks, NBFCs or specialised institutions. Available to both Pvt Ltd and LLP — similar to government debt, often processed faster and potentially at higher interest rates.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Venture Capital (VC)",
+        text: "Equity from professional firms investing in high-growth startups in exchange for a stake, expecting a large return on sale or IPO. Exclusively for Private Ltd companies. LLPs cannot raise funding directly from VCs.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Angel Investors",
+        text: "Affluent individuals who provide seed capital for convertible debt or equity, often with mentorship. Usually invest in Private Ltd companies. LLPs may receive loans but not equity investments.",
+        icon: "search" as const,
+      },
+    ],
+  },
+  international: {
+    eyebrow: "Cross-Border Capital",
+    heading: "3. International Funding Instruments",
+    sub: "Capital from outside India for companies with high scalability — FEMA and RBI rules apply.",
+    items: [
+      {
+        title: "Foreign Venture Capital",
+        text: "Foreign VC funds invest in high-growth Private Ltd companies, bringing global networks as well as capital. Strictly for Private Ltd. Raising from international VCs requires FEMA and FDI compliance.",
+        icon: "map" as const,
+      },
+      {
+        title: "Institutional Investors & ECB",
+        text: "PE funds, pension funds or sovereign wealth funds invest in established Private Ltd companies. External Commercial Borrowings (ECB) are also available to both LLPs and Pvt Ltd companies, subject to regulatory compliance.",
+        icon: "landmark" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We Match You",
+    heading: "How We Match You to the Right Instrument",
+    sub: "Share your business stage and capital need — we map the most suitable instruments and follow through.",
+    steps: [
+      {
+        title: "Profile Assessment",
+        text: "Evaluate your business stage, sector, structure (Pvt Ltd vs LLP) and capital requirement.",
+      },
+      {
+        title: "Instrument Mapping",
+        text: "Identify eligible grants, loan schemes and investor categories — with pros and cons for each.",
+      },
+      {
+        title: "Documentation",
+        text: "Prepare applications, business plan, financials and any required compliance documents.",
+      },
+      {
+        title: "Application & Follow-through",
+        text: "Submit to the right portals and stakeholders, track status and respond to queries.",
+      },
+    ],
+  },
+} as const;
+
+export const fundingFaq = {
+  heading: "Funding instrument questions, answered",
+  sub: "Debt vs equity, VC vs angels, convertible notes, crowdfunding, and what startups can actually access.",
+  items: [
+    {
+      question: "What are funding instruments?",
+      answer:
+        "Funding instruments are financial tools used by businesses to acquire capital, including debt-based (loans) and equity-based (shares) funding options.",
+    },
+    {
+      question: "What are the different types of funding instruments?",
+      answer:
+        "The main types are government funding, private funding, and international funding, each with its own set of tools like grants, loans, venture capital, and angel investments.",
+    },
+    {
+      question: "What is the difference between debt and equity funding instruments?",
+      answer:
+        "Debt funding involves borrowing money that must be repaid with interest. Equity funding involves selling a portion of the company in exchange for capital.",
+    },
+    {
+      question: "How do venture capital and angel investment instruments work?",
+      answer:
+        "Both involve providing equity in exchange for capital, but VCs typically invest larger sums and require clear exit strategies, while angel investors often invest smaller amounts in the early stages and provide mentorship.",
+    },
+    {
+      question: "What is a convertible note and how does it work as a funding instrument?",
+      answer:
+        "A convertible note is a form of short-term debt that converts into equity when the company raises a subsequent round of funding.",
+    },
+    {
+      question: "How does crowdfunding work as a funding instrument?",
+      answer:
+        "Crowdfunding allows businesses to raise small amounts of money from a large number of people, typically via online platforms.",
+    },
+    {
+      question: "What funding instruments are available for startups and small businesses?",
+      answer:
+        "Startups and small businesses can access government grants, bank loans, venture capital, angel investments, and more.",
     },
   ],
 } as const;
