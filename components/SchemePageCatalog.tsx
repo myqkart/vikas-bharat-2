@@ -28,6 +28,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { schemePage, site } from "@/lib/content";
+import { getSchemeDesk } from "@/lib/schemeDesks";
 import { dramaticFadeUp, flipIn, popIn, staggerDramatic } from "@/lib/motion";
 import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
@@ -62,9 +63,10 @@ const iconMap: Record<SchemeItem["icon"], LucideIcon> = {
   trophy: Trophy,
 };
 
-function schemeHref(title: string) {
+function schemeHref(item: SchemeItem) {
+  if (getSchemeDesk(item.id)) return `/scheme/${item.id}`;
   return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-    `Hi, I want to know more about the ${title}.`,
+    `Hi, I want to know more about the ${item.title}.`,
   )}`;
 }
 
@@ -524,15 +526,18 @@ function SchemeCard({
   reduce: boolean;
   query: string;
 }) {
+  const href = schemeHref(item);
+  const internal = href.startsWith("/");
+
   return (
     <TiltCard
       intensity={reduce ? 0 : 12}
       className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-border/50 bg-white shadow-card"
     >
       <a
-        href={schemeHref(item.title)}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={href}
+        target={internal ? undefined : "_blank"}
+        rel={internal ? undefined : "noopener noreferrer"}
         className="flex h-full flex-col outline-offset-4"
       >
         <div className="relative aspect-[16/10] overflow-hidden">

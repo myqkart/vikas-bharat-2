@@ -1132,7 +1132,7 @@ export const schemePage = {
       {
         title: "NAIFF Funding",
         text: "Government-backed funding support to scale MSMEs and startups",
-        href: "/services/loan",
+        href: "/scheme/naif",
         image: photos.schemeAgri,
         icon: "naiff" as const,
       },
@@ -1146,7 +1146,7 @@ export const schemePage = {
       {
         title: "Seed Funding",
         text: "Early-stage capital support for innovative startups",
-        href: "/services/grant",
+        href: "/scheme/seed-fund",
         image: photos.schemeSeed,
         icon: "seed" as const,
       },
@@ -3838,6 +3838,1700 @@ export const fundingFaq = {
       question: "What funding instruments are available for startups and small businesses?",
       answer:
         "Startups and small businesses can access government grants, bank loans, venture capital, angel investments, and more.",
+    },
+  ],
+} as const;
+
+export const naifPage = {
+  eyebrow: "Agriculture Infrastructure Fund • AIF / NAIF",
+  heading: "NAIF Scheme (AIF)",
+  kicker: "Loan, Eligibility & How to Apply",
+  intro:
+    "The Agriculture Infrastructure Fund (AIF), also called NAIF, funds post-harvest infrastructure like cold storage, warehouses and processing units. Loans up to ₹2 Crore per project at an effective ~9% rate, 3% interest subvention for 7 years, and 100% credit guarantee via CGTMSE — so no collateral required.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Agri infrastructure project eligible for AIF / NAIF financing",
+  stats: [
+    { value: "₹2 Cr", label: "Max Loan Per Project" },
+    { value: "3%", label: "Interest Subvention p.a." },
+    { value: "7 Yrs", label: "Subvention Duration" },
+    { value: "1.5L+", label: "Projects Sanctioned" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the Agriculture Infrastructure Fund (AIF / NAIF Scheme)?",
+    paragraphs: [
+      "The Agriculture Infrastructure Fund (AIF) — referred to as NAIF in some government documents — is a central sector scheme of the Ministry of Agriculture & Farmers Welfare, launched in May 2020 with a total corpus of ₹1 Lakh Crore. It provides medium to long-term debt financing for post-harvest management infrastructure and community farming assets.",
+      "As of January 2026, over 1,50,431 projects have been sanctioned with ₹80,224 crore in loans, and ₹49,841 crore has already been disbursed across more than 1.13 lakh projects — mobilising a total investment of ₹1,27,508 crore across India. The scheme runs through FY 2032–33.",
+      "What makes AIF different from most government loan schemes is the combination: the government pays the full CGTMSE guarantee fee on your behalf, so lenders need no collateral on loans up to ₹2 Crore, and the 3% subvention directly reduces your EMI burden for seven years.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Loan up to ₹2 Crore per project; can borrow more without subvention",
+      "3% interest subvention for 7 years — effective rate ~9% p.a.",
+      "100% credit guarantee by CGTMSE — no collateral required",
+      "Moratorium on principal: 6 months to 2 years",
+    ],
+  },
+  benefits: {
+    eyebrow: "Key Benefits",
+    heading: "Key Benefits of the AIF / NAIF Scheme",
+    sub: "Subvention, CGTMSE cover, a principal moratorium, and a 60-day lender decision — on the agriinfra portal.",
+    items: [
+      {
+        title: "3% Interest Subvention for 7 Years",
+        text: "The government credits 3% subvention directly against your loan account, reducing the effective borrowing cost to approximately 9% per annum for the full 7-year duration. Interest is charged from disbursement day one — including during the moratorium period.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "100% Collateral-Free Guarantee via CGTMSE",
+        text: "Credit guarantee for loans up to ₹2 Crore is provided by CGTMSE with 100% coverage. The government bears the guarantee fee. FPOs additionally qualify for guarantee through NABSanrakshan (post August 2024).",
+        icon: "shield" as const,
+      },
+      {
+        title: "Moratorium of 6 Months to 2 Years",
+        text: "Principal repayment is deferred for 6 months to 2 years from first disbursement, aligned with the project's cash flow ramp-up. Interest, including the subvention component, applies from disbursement date.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Up to 25 Projects Per Applicant",
+        text: "A single entity can avail AIF benefits for up to 25 individual projects across different locations. State agencies, national/state federations of cooperatives, FPO federations and SHG federations are exempt from this cap.",
+        icon: "users" as const,
+      },
+      {
+        title: "Online Application with 60-Day Decision",
+        text: "Applications are submitted entirely online through agriinfra.dac.gov.in — no physical forms or branch visits needed. Lenders must communicate their sanction decision within 60 days of application.",
+        icon: "search" as const,
+      },
+      {
+        title: "Broad Project Coverage — Expanded August 2024",
+        text: "The Union Cabinet expanded eligible project types in August 2024 to include integrated primary-and-secondary processing units, PM-KUSUM solar convergence, and a broader set of community farming assets including precision farming equipment and renewable energy infrastructure.",
+        icon: "zap" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Can Apply",
+    heading: "Who Can Apply for the AIF / NAIF Scheme?",
+    sub: "AIF covers 17 entity types. The project must be a viable agriculture-sector activity, and a minimum promoter contribution of 10% of total project cost is required.",
+    leftHeading: "Farmers, FPOs & groups",
+    rightHeading: "Enterprises & public bodies",
+    items: [
+      {
+        title: "Farmers & Agri-Entrepreneurs",
+        text: "Individual farmers with land ownership or a registered lease of at least 7 years, and agri-entrepreneurs setting up eligible infrastructure, can apply directly through the portal.",
+        icon: "agri" as const,
+      },
+      {
+        title: "FPOs & Federations",
+        text: "Registered FPOs and their federations are a primary target group. FPOs also benefit from the NABSanrakshan guarantee (in addition to CGTMSE).",
+        icon: "seed" as const,
+      },
+      {
+        title: "Cooperatives & PACS",
+        text: "Primary Agricultural Credit Societies, marketing cooperatives, multipurpose cooperatives, and their state and national federations are eligible. State federations are exempt from the 25-project cap.",
+        icon: "factory" as const,
+      },
+      {
+        title: "SHGs",
+        text: "Women-led SHGs and SHG federations engaged in agri-linked activities can access AIF loans for community-level post-harvest and processing infrastructure.",
+        icon: "users" as const,
+      },
+      {
+        title: "MSMEs, Startups & Companies",
+        text: "MSME-registered agri-processing and cold chain businesses, DPIIT-recognised agri startups, and private limited companies or LLPs with agriculture-sector projects are eligible.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "APMCs, State Agencies & PPP",
+        text: "Agricultural Produce Market Committees (added February 2021), state agencies, and projects under central or state government PPP frameworks qualify, and are exempt from the 25-project ceiling.",
+        icon: "landmark" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for the AIF / NAIF Scheme",
+    sub: "Five steps from agriinfra.dac.gov.in to disbursement and 3% subvention on your loan account.",
+    steps: [
+      {
+        title: "Register on agriinfra.dac.gov.in",
+        text: "Create an account on the official Agriculture Infrastructure Fund portal. The entire application process — from submission to sanction communication — is online.",
+      },
+      {
+        title: "Prepare a Detailed Project Report (DPR)",
+        text: "Draft a DPR covering the project type, location, technical design, cost breakup, land details, revenue model and cash flow projections. This is the lender's primary basis for appraisal.",
+      },
+      {
+        title: "Submit Application with Supporting Documents",
+        text: "Upload the DPR, KYC, entity registration, land/lease papers and financial statements. The Project Management Unit (PMU) reviews and forwards to the lending institution.",
+      },
+      {
+        title: "Lender Appraisal — 60-Day Decision",
+        text: "The lender conducts a site visit plus technical and financial appraisal, and must communicate a decision within 60 days. CGTMSE cover applies automatically for loans up to ₹2 Crore.",
+      },
+      {
+        title: "Loan Sanction, Disbursement & Subvention",
+        text: "The sanctioned loan is disbursed in tranches linked to project milestones. The 3% interest subvention is credited by the government directly to your loan account.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for AIF Loan Application",
+    note: "Most AIF rejections and delays come down to a weak DPR or missing documents — not the project itself. Vikas Bharat helps agri-entrepreneurs and FPOs structure the DPR, identify the right lending partner, and move through the CGTMSE guarantee process. After eligibility we send a file-specific checklist.",
+    items: [
+      "Detailed Project Report (DPR) — technical specifications, location, cost estimates, revenue projections and operational plan",
+      "KYC — Aadhaar and PAN of all promoters, directors or authorised signatories",
+      "Entity registration — incorporation, partnership deed, FPO/cooperative certificate, Udyam, or equivalent",
+      "Land ownership or a registered lease of at least 7 years covering the project site",
+      "Financial statements — audited last 2–3 years, or projected financials for new entities",
+      "Bank statements — last 6–12 months for the entity and promoters",
+      "GST certificate (if applicable) and latest ITRs of the entity and key promoters",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const naifFaq = {
+  heading: "AIF / NAIF questions, answered",
+  sub: "NAIF vs AIF, the ₹2 Crore cap, moratorium interest, collateral, project limits, August 2024 changes and why files stall.",
+  items: [
+    {
+      question: "What is the difference between NAIF and AIF?",
+      answer:
+        "They refer to the same scheme. AIF is the official name — Agriculture Infrastructure Fund. NAIF (National Agri Infra Financing Facility) is an alternate abbreviation used in some government communications and media. The portal is agriinfra.dac.gov.in and the administering ministry is the Ministry of Agriculture & Farmers Welfare.",
+    },
+    {
+      question: "Can I take a loan larger than ₹2 Crore under this scheme?",
+      answer:
+        "Yes. The scheme does not cap the loan amount — borrowers can apply for whatever the project requires. However, the 3% interest subvention and the CGTMSE credit guarantee both apply only on the portion up to ₹2 Crore. The amount above ₹2 Crore is financed at the lender's standard rate with normal collateral requirements.",
+    },
+    {
+      question: "Is interest charged during the moratorium period?",
+      answer:
+        "Yes, interest is payable from the date of first disbursement — including during the moratorium period. The moratorium applies only to principal repayment. The 3% subvention does apply to this interest during the moratorium phase.",
+    },
+    {
+      question: "Do I need to arrange collateral for an AIF loan?",
+      answer:
+        "For loans up to ₹2 Crore, no collateral is required. CGTMSE provides 100% credit guarantee and the government pays the guarantee fee on your behalf. The lender cannot ask for third-party collateral or guarantors for this portion of the loan.",
+    },
+    {
+      question: "How many projects can a single entity apply for?",
+      answer:
+        "A single entity can avail AIF benefits for up to 25 projects across different locations — each eligible for its own ₹2 Crore loan with the 3% subvention. This cap does not apply to state agencies, national/state federations of cooperatives, federations of FPOs, or federations of SHGs.",
+    },
+    {
+      question: "What changed after the August 2024 Cabinet expansion?",
+      answer:
+        "The Union Cabinet approved significant changes in August 2024: integrated primary-plus-secondary processing units became eligible as a single project; the PM-KUSUM Component-A solar scheme was made convergent with AIF; Panchayats were added as eligible beneficiaries; and the range of community farming assets was broadened to include more precision farming and renewable energy infrastructure. Standalone secondary processing units remain ineligible.",
+    },
+    {
+      question: "How long does the loan approval process take?",
+      answer:
+        "The AIF guidelines require lenders to communicate their sanction decision within 60 days of application. In practice, having a complete DPR and clean documentation significantly reduces the actual turnaround. The PMU verification step typically runs in parallel during the first 30 days.",
+    },
+    {
+      question: "What is the most common reason applications get delayed?",
+      answer:
+        "An incomplete or poorly structured Detailed Project Report. Lenders cannot appraise the loan without credible technical specifications, realistic cost estimates and a clear revenue model. The second most common issue is unclear land documents — make sure land ownership or lease tenure covers at least 7 years from application date.",
+    },
+  ],
+} as const;
+
+export const cgtmsePage = {
+  eyebrow: "CGTMSE • Collateral-Free Credit",
+  heading: "CGTMSE Loan Scheme",
+  kicker: "Eligibility, Benefits and How to Apply",
+  intro:
+    "Apply for the CGTMSE Loan Scheme and get up to ₹500 Lakhs in collateral-free funding. Learn about eligibility, benefits, interest rates, and documents required for the CGTMSE loan.",
+  cta: "Apply Now",
+  imageAlt: "Advisor reviewing a collateral-free CGTMSE loan file with an MSME founder",
+  stats: [
+    { value: "₹5 Cr", label: "Max Loan Cover" },
+    { value: "75–85%", label: "Guarantee Cover" },
+    { value: "0", label: "Collateral Needed" },
+    { value: "1%", label: "Interest Subsidy (eligible)" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the CGTMSE Loan Scheme?",
+    paragraphs: [
+      "CGTMSE stands for Credit Guarantee Fund Trust for Micro and Small Enterprises. It was established to facilitate collateral-free loans to Micro and Small Enterprises (MSEs), enabling them to grow, scale, and overcome financial barriers in their early stages.",
+      "The scheme is managed by a trust which is a joint initiative of the Government of India and the Small Industries Development Bank of India (SIDBI). Banks and financial institutions receive a credit guarantee for the loans they offer to MSEs — which reduces lender risk and helps founders access a without-security business loan.",
+      "The scheme is a permanent government initiative and operates on a rolling basis. You can apply at any time through a scheduled commercial bank, RRB, or NSIC.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "No need to pledge property or machinery",
+      "Cover up to ₹500 Lakhs through eligible banks",
+      "Guarantee cover ranging from 75% to 85%",
+      "Hybrid security — partial collateral plus CGTMSE for the rest",
+    ],
+  },
+  features: {
+    eyebrow: "Key Features",
+    heading: "Key Features of the CGTMSE Loan Scheme",
+    sub: "Collateral-free limits, government-backed norms, and guarantee cover for manufacturing, services and trading.",
+    items: [
+      {
+        title: "Collateral-free loans",
+        text: "No need to pledge property or machinery.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Loan Limits",
+        text: "Up to ₹500 Lakhs for public and private sector banks.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "CGTMSE guidelines",
+        text: "Follows government-backed norms so MSEs can actually access the cover.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Broad Scope",
+        text: "Includes manufacturing, services and trading businesses.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Security",
+        text: "The trust provides a guarantee cover ranging from 75% to 85% of the loan amount.",
+        icon: "users" as const,
+      },
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the CGTMSE Loan Scheme",
+    sub: "Built for owners who lack assets to pledge — with extra cover for micro units and women-led businesses.",
+    leftHeading: "Amount & rate",
+    rightHeading: "Cover & flexibility",
+    items: [
+      {
+        title: "Loan Amount",
+        text: "Access up to ₹500 Lakhs for a CGTMSE loan, including new businesses.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "No Collateral",
+        text: "A without-security business loan, easing the entry barrier for innovators.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Interest Rate",
+        text: "Highly competitive bank rates, often including an interest subsidy of up to 1% for eligible MSMEs.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Guarantee Coverage",
+        text: "The trust guarantees up to 85% for Micro Enterprises (up to ₹5 Lakhs) and 75% for others.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Support for Women",
+        text: "Higher guarantee coverage for women-led startups.",
+        icon: "users" as const,
+      },
+      {
+        title: "Hybrid Security",
+        text: "Startups can provide partial collateral and use CGTMSE for the remaining portion.",
+        icon: "seed" as const,
+      },
+    ],
+  },
+  focus: {
+    eyebrow: "Sectors",
+    heading: "Focus Areas of the CGTMSE Loan Scheme",
+    sub: "Open to a wide range of sectors. Women entrepreneurs can also combine CGTMSE with other women-focused schemes.",
+    leftHeading: "Industry & trade",
+    rightHeading: "Services & social",
+    items: [
+      {
+        title: "Manufacturing",
+        text: "Units producing goods, including those needing ISO certification.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Services",
+        text: "IT services, logistics, consulting, and legal consultancy firms.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Trading",
+        text: "Retail or wholesale trading, e-commerce, and supply chain distribution.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Agriculture",
+        text: "Agri-businesses, food processing, and allied agri services.",
+        icon: "agri" as const,
+      },
+      {
+        title: "Education & Healthcare",
+        text: "Private schools, medical service providers, and diagnostic centres.",
+        icon: "lab" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria for the CGTMSE Loan Scheme",
+    sub: "Meet these requirements so the file reaches an eligible lender in the right shape.",
+    leftHeading: "Entity & age",
+    rightHeading: "Sector & lender",
+    items: [
+      {
+        title: "Business Type",
+        text: "Private Limited Companies, Partnerships, LLPs and MSMEs.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Startup Age",
+        text: "The business should ideally be less than 10 years old.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Target Sector",
+        text: "Manufacturing, services and trading (retail/wholesale).",
+        icon: "landmark" as const,
+      },
+      {
+        title: "MSME Status",
+        text: "Must have valid MSME / Udyam certification.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Lender Type",
+        text: "Must apply through scheduled commercial banks, RRBs, or NSIC.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Business Stage",
+        text: "Early-stage or growth-stage businesses with a viable business plan.",
+        icon: "rocket" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for the CGTMSE Loan Scheme",
+    sub: "Five steps from documents to disbursement through your bank — there is no fixed application deadline.",
+    steps: [
+      {
+        title: "Gather Required Documents",
+        text: "Compile KYC, MSME registration, project report and financial statements.",
+      },
+      {
+        title: "Submit Your Application",
+        text: "Apply through your scheduled commercial bank or eligible lender under CGTMSE.",
+      },
+      {
+        title: "Review & Evaluation",
+        text: "The lender assesses creditworthiness with guarantee cover from CGTMSE.",
+      },
+      {
+        title: "Interview & Selection",
+        text: "Additional diligence or interviews as per bank policy.",
+      },
+      {
+        title: "Loan Disbursement",
+        text: "Sanction and disbursement to your business account upon approval.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for the CGTMSE Loan Application",
+    note: "There is no application deadline — CGTMSE runs year-round. After eligibility we send a file-specific checklist. Vikas Bharat helps you structure the DPR and choose an eligible lender.",
+    items: [
+      "Business registration — Certificate of Incorporation, Partnership Deed, or LLP Agreement",
+      "DPIIT recognition certificate, if available, for faster processing",
+      "Udyam / MSME registration certificate",
+      "Pitch deck / DPR explaining the business model and growth strategy",
+      "Financial statements — audited balance sheets and P&L for the past 2 years (if applicable)",
+      "Bank statements — last 6–12 months of the primary business account",
+      "KYC — PAN and Aadhaar of all directors and partners",
+      "Technology description / roadmap for tech-driven startups",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const cgtmseFaq = {
+  heading: "CGTMSE questions, answered",
+  sub: "Full form, loan limit, interest, new businesses, and the papers lenders ask for first.",
+  items: [
+    {
+      question: "What is the CGTMSE Loan Scheme?",
+      answer:
+        "The CGTMSE Loan Scheme provides collateral-free loans to MSEs, where the government trust acts as a guarantor for the borrower.",
+    },
+    {
+      question: "What is the CGTMSE loan full form?",
+      answer:
+        "It stands for Credit Guarantee Fund Trust for Micro and Small Enterprises.",
+    },
+    {
+      question: "How much funding is available?",
+      answer:
+        "Eligible MSMEs can secure up to ₹500 Lakhs through scheduled commercial banks.",
+    },
+    {
+      question: "What is the CGTMSE loan interest rate?",
+      answer:
+        "The interest rate depends on the bank's base rate, but often includes a 1% subsidy for eligible businesses under the CGTMSE scheme for MSMEs.",
+    },
+    {
+      question: "Are new businesses eligible?",
+      answer:
+        "Yes. CGTMSE loans for new businesses are a primary focus of the trust to encourage entrepreneurship.",
+    },
+    {
+      question: "What documents are required for a CGTMSE loan?",
+      answer:
+        "KYC, business registration, MSME / Udyam certification, a project report (DPR) and financial statements.",
+    },
+  ],
+} as const;
+
+export const pmegpPage = {
+  eyebrow: "PMEGP • Credit-Linked Subsidy",
+  heading: "PMEGP Scheme",
+  kicker: "Eligibility, Subsidy and How to Apply",
+  intro:
+    "The Prime Minister's Employment Generation Programme (PMEGP) provides up to 35% government subsidy on project costs for new manufacturing and service enterprises. Learn who qualifies and how to apply.",
+  cta: "Check Your Eligibility",
+  imageAlt: "New micro-enterprise founder reviewing a PMEGP subsidy application",
+  stats: [
+    { value: "₹25L", label: "Max Loan (Mfg)" },
+    { value: "₹10L", label: "Max Loan (Service)" },
+    { value: "35%", label: "Max Subsidy" },
+    { value: "18+", label: "Minimum Age" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the PMEGP Scheme?",
+    paragraphs: [
+      "The Prime Minister's Employment Generation Programme (PMEGP) is a credit-linked subsidy scheme implemented by the Ministry of MSME through the Khadi and Village Industries Commission (KVIC). It aims to generate employment by helping individuals set up new micro-enterprises.",
+      "Under PMEGP, new manufacturing units can avail of project funding up to ₹25 Lakhs and service-sector enterprises up to ₹10 Lakhs. The government provides a subsidy of 15% to 35% of the project cost depending on the applicant category and location, while the applicant contributes 5% to 10% as their own margin money.",
+      "PMEGP is available across all states and union territories of India and is administered through KVIC, State Khadi and Village Industries Boards (KVIBs), and District Industries Centres (DICs). It does not support expansion of existing units — only new enterprises qualify.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Up to 35% subsidy for rural special categories",
+      "Own contribution of only 5–10%",
+      "New manufacturing up to ₹25 Lakhs, services up to ₹10 Lakhs",
+      "Implemented by KVIC, KVIBs and DICs nationwide",
+    ],
+  },
+  benefits: {
+    eyebrow: "Key Benefits",
+    heading: "Key Benefits of PMEGP",
+    sub: "Rural and urban subsidy slabs, low margin money, and government-backed bank credit for new units.",
+    items: [
+      {
+        title: "High Subsidy for Rural Areas",
+        text: "Rural applicants from general categories get 25% subsidy; SC/ST/Women/Minorities/Ex-servicemen and Differently Abled in rural areas get 35% subsidy.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Urban Subsidies Available",
+        text: "Urban general category applicants receive 15% subsidy; special categories (SC/ST/Women etc.) get 25% subsidy.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Low Own Contribution",
+        text: "General category beneficiaries contribute only 10% of the project cost; special categories contribute just 5%.",
+        icon: "users" as const,
+      },
+      {
+        title: "No Collateral for Small Loans",
+        text: "Projects up to ₹10 Lakhs under manufacturing and ₹5 Lakhs under service sector typically don't require collateral.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Wide Sector Coverage",
+        text: "Covers manufacturing, food processing, textile, handicrafts, agro-based industries, bio-technology and service sectors.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Government-Backed Credit",
+        text: "Bank loan component is backed by the government subsidy, improving approval chances significantly.",
+        icon: "clipboard" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "PMEGP Eligibility Criteria",
+    sub: "Only new enterprises are eligible — existing businesses cannot apply for PMEGP expansion.",
+    leftHeading: "Applicant rules",
+    rightHeading: "Category & exclusions",
+    items: [
+      {
+        title: "Age",
+        text: "Minimum 18 years of age at the time of application.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Education",
+        text: "8th standard pass is mandatory for projects costing above ₹10 Lakhs.",
+        icon: "file" as const,
+      },
+      {
+        title: "New Units Only",
+        text: "Only new businesses qualify. Existing units, upgrades or expansions are not eligible.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Special Categories",
+        text: "SC/ST, Women, Ex-servicemen, Differently Abled, NER residents, Minorities and Hill/Border area residents get higher subsidies.",
+        icon: "users" as const,
+      },
+      {
+        title: "Institutions",
+        text: "Self Help Groups (SHGs), Charitable Trusts, and Institutions registered under Societies Registration Act 1860 are also eligible.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "No Prior Beneficiary",
+        text: "Applicants who have already availed of government subsidy under any other scheme are not eligible.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for PMEGP",
+    sub: "Six steps from the KVIC e-portal to bank sanction and subsidy credit after production starts.",
+    steps: [
+      {
+        title: "Register on PMEGP Portal",
+        text: "Create an account on the official PMEGP e-Portal (kviconline.gov.in) and fill in your personal and enterprise details.",
+      },
+      {
+        title: "Prepare Your Project Report",
+        text: "Draft a detailed project report covering business plan, investment plan, employment projection and market feasibility.",
+      },
+      {
+        title: "Submit Application Online",
+        text: "Upload all required documents and submit your application online through the PMEGP portal.",
+      },
+      {
+        title: "Interview by Task Force",
+        text: "A Task Force committee (KVIC/KVIB/DIC) reviews your application and conducts an interview or field visit.",
+      },
+      {
+        title: "Bank Sanction & Margin Money",
+        text: "After committee approval, the bank sanctions the loan. You deposit your margin money contribution.",
+      },
+      {
+        title: "Subsidy Credited",
+        text: "Once the unit starts production, the subsidy amount is credited to your loan account by the bank within 3 years.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for PMEGP",
+    note: "Have these ready before applying on kviconline.gov.in. Vikas Bharat guides you from document preparation to bank sanction so the subsidy file does not stall on a weak DPR.",
+    items: [
+      "Identity proof — Aadhaar, PAN, or Voter ID",
+      "Address proof — bank passbook, electricity bill, or Aadhaar",
+      "Detailed Project Report with cost estimates, revenue projections and market analysis",
+      "Educational certificate — 8th standard or higher (mandatory for projects above ₹10 Lakhs)",
+      "Caste/category certificate if claiming special category subsidy",
+      "Udyam registration or proof of new enterprise intent",
+      "Recent passport-size photographs of the applicant",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const pmegpFaq = {
+  heading: "PMEGP questions, answered",
+  sub: "Who implements it, new units only, margin money, and how long approval usually takes.",
+  items: [
+    {
+      question: "What is PMEGP?",
+      answer:
+        "PMEGP (Prime Minister's Employment Generation Programme) is a government subsidy scheme that helps new businesses get funding of up to ₹25 Lakhs (manufacturing) or ₹10 Lakhs (service) with 15–35% government subsidy.",
+    },
+    {
+      question: "Who implements PMEGP?",
+      answer:
+        "PMEGP is implemented at the national level by KVIC (Khadi and Village Industries Commission) and at the state/district level by KVIBs and DICs.",
+    },
+    {
+      question: "Can an existing business apply for PMEGP?",
+      answer:
+        "No. PMEGP is only for new enterprises. Existing units looking to expand or upgrade are not eligible for PMEGP funding.",
+    },
+    {
+      question: "What is the margin money contribution?",
+      answer:
+        "General category applicants must contribute 10% of the project cost as margin money. Special category beneficiaries (SC/ST, women, minorities etc.) contribute only 5%.",
+    },
+    {
+      question: "How long does PMEGP approval take?",
+      answer:
+        "Typically 30–90 days from the date of complete application submission, subject to document verification, task force interview and bank processing.",
+    },
+  ],
+} as const;
+
+export const ahidfPage = {
+  eyebrow: "AHIDF • Animal Husbandry Infrastructure",
+  heading: "AHIDF Scheme",
+  kicker: "Eligibility, Subsidy & How to Apply",
+  intro:
+    "Get up to 90% loan coverage with 3% interest subvention for dairy, meat processing, feed manufacturing, and allied infrastructure projects.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Dairy and animal-husbandry infrastructure eligible for AHIDF financing",
+  stats: [
+    { value: "90%", label: "Loan Coverage" },
+    { value: "3%", label: "Interest Subvention" },
+    { value: "25%", label: "NABARD Guarantee" },
+    { value: "2 Yrs", label: "Principal Moratorium" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the AHIDF Scheme?",
+    paragraphs: [
+      "India's animal husbandry sector is evolving rapidly, and AHIDF — the Animal Husbandry Infrastructure Development Fund — aims to create modern infrastructure in dairy, meat processing, feed manufacturing and allied sectors.",
+      "Eligible entities can access loan plus subsidy support, including startups, MSMEs, FPOs, private companies, Section 8 companies and individual entrepreneurs. MSMEs can also avail 25% credit guarantee support via NABARD, so collateral is not mandatory for all applicants.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Up to 90% of project cost as loan cover",
+      "3% interest subvention for up to 8 years",
+      "25% credit guarantee through NABARD",
+      "2-year moratorium on principal",
+    ],
+  },
+  benefits: {
+    eyebrow: "Key Benefits",
+    heading: "Key Benefits & Subsidy Breakdown",
+    sub: "Loan cover, subvention, NABARD guarantee and a principal holiday — for dairy, meat, feed and allied units.",
+    items: [
+      {
+        title: "Loan Coverage",
+        text: "Up to 90% of project cost.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Interest Subvention",
+        text: "3% interest subvention for up to 8 years.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Credit Guarantee",
+        text: "25% guarantee through NABARD. Collateral is not mandatory for all applicants.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Moratorium",
+        text: "2 years on principal repayment.",
+        icon: "clipboard" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "AHIDF Scheme Eligibility",
+    sub: "Applicant types on the left; the project categories AHIDF typically covers on the right.",
+    leftHeading: "Applicant types",
+    rightHeading: "Projects covered",
+    items: [
+      {
+        title: "FPOs",
+        text: "Farmer Producer Organisations setting up dairy, feed or processing infrastructure.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Private Companies & MSMEs",
+        text: "Private limited companies and Udyam-registered MSMEs in animal husbandry value chains.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Startups, Section 8 & Individuals",
+        text: "Startups, Section 8 companies and individual entrepreneurs are eligible to apply.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Dairy & Ice Cream",
+        text: "Dairy plants and ice cream units.",
+        icon: "agri" as const,
+      },
+      {
+        title: "Meat, Feed & Fodder",
+        text: "Meat processing units, feed plants and fodder plants.",
+        icon: "lab" as const,
+      },
+      {
+        title: "Vaccines & By-products",
+        text: "Veterinary vaccine units and by-product conversion units.",
+        icon: "chip" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for AHIDF Scheme",
+    sub: "Six steps from project-type check to bank sanction and interest subvention approval.",
+    steps: [
+      {
+        title: "Check Eligibility & Project Type",
+        text: "Verify if your project falls under eligible categories.",
+      },
+      {
+        title: "Prepare DPR & Financial Model",
+        text: "Create a detailed project report with financial projections.",
+      },
+      {
+        title: "Register on AHIDF Portal",
+        text: "Create an account on the official AHIDF application portal.",
+      },
+      {
+        title: "Upload Documents & Submit Application",
+        text: "Fill the application form and upload all required documents.",
+      },
+      {
+        title: "Bank Appraisal",
+        text: "The bank conducts technical and financial appraisal.",
+      },
+      {
+        title: "Loan Sanction & Interest Subvention Approval",
+        text: "Final loan sanction with AHIDF benefits.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for AHIDF Loan",
+    note: "Keep these ready before portal filing. Vikas Bharat sends a file-specific AHIDF checklist so lender review goes smoothly.",
+    items: [
+      "Detailed Project Report (DPR)",
+      "Machinery layout and process flow",
+      "Project viability and financial projections",
+      "SWOT analysis",
+      "Land title or lease agreement",
+      "Applicant Aadhaar and PAN",
+      "Incorporation or partnership documents",
+      "Udyam registration (if MSME)",
+      "Audited accounts and financial statements",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const ahidfFaq = {
+  heading: "AHIDF questions, answered",
+  sub: "Who can apply, what the subsidy actually is, collateral, covered projects and whether individuals qualify.",
+  items: [
+    {
+      question: "Who is eligible for the AHIDF scheme?",
+      answer:
+        "FPOs, private companies, MSMEs, startups, Section 8 companies, and individual entrepreneurs.",
+    },
+    {
+      question: "What subsidy is available under AHIDF?",
+      answer:
+        "The support is 3% interest subvention, plus credit guarantee coverage and a reduced margin contribution.",
+    },
+    {
+      question: "Is collateral required under AHIDF?",
+      answer:
+        "Not mandatory for all applicants. MSMEs can avail 25% credit guarantee support via NABARD.",
+    },
+    {
+      question: "What projects are covered?",
+      answer:
+        "Dairy plants, ice cream units, feed plants, meat processing units, veterinary vaccine units, fodder plants, and by-product conversion units.",
+    },
+    {
+      question: "Can individuals apply for AHIDF?",
+      answer:
+        "Yes. Individual entrepreneurs and startups are eligible.",
+    },
+  ],
+} as const;
+
+export const cgssPage = {
+  eyebrow: "CGSS • Credit Guarantee for Startups",
+  heading: "CGSS Scheme",
+  kicker: "Eligibility, Benefits, and How To Apply For Startups",
+  intro:
+    "Learn about the CGSS Scheme — a government-backed initiative that offers collateral-free loans to startups in India. Get details on eligibility, loan limits, focus areas, and documents required to apply.",
+  cta: "Apply Now",
+  imageAlt: "DPIIT-recognised startup reviewing a CGSS collateral-free loan file",
+  stats: [
+    { value: "₹20 Cr", label: "Max Loan Cover" },
+    { value: "85%", label: "Guarantee up to ₹10 Cr" },
+    { value: "75%", label: "Guarantee ₹10–20 Cr" },
+    { value: "10 Yrs", label: "Max Startup Age" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the CGSS Scheme?",
+    paragraphs: [
+      "The Credit Guarantee Scheme for Startups (CGSS) is a government-backed initiative that offers collateral-free loans to recognised startups. Under this scheme, the government acts as a guarantor for a significant portion of the loan amount.",
+      "This reduces the risk for lenders — including banks and NBFCs — making them more willing to provide large-scale capital to young companies. The loan can go up to ₹20 crore, making it one of the most substantial debt-based schemes available for entrepreneurs today.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Collateral-free — no land, property or inventory pledge",
+      "Cover up to ₹20 crore with NCGTC backing",
+      "85% guarantee up to ₹10 crore; 75% between ₹10–20 crore",
+      "Debt route — no equity dilution",
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the CGSS Scheme",
+    sub: "High-ticket startup debt with NCGTC cover, so you can scale without giving up equity.",
+    items: [
+      {
+        title: "Large-Scale Debt",
+        text: "High-ticket startup loan coverage under a government-backed structure.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "NCGTC Guarantee",
+        text: "Guarantee support lowers lender risk and improves sanction probability.",
+        icon: "shield" as const,
+      },
+      {
+        title: "No Equity Dilution",
+        text: "The debt route allows founders to retain ownership.",
+        icon: "users" as const,
+      },
+      {
+        title: "Growth Support",
+        text: "Use for expansion, working capital, and market entry.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Mentorship Ecosystem",
+        text: "Access to startup advisory and support channels.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  features: {
+    eyebrow: "Key Features",
+    heading: "Key Features of the CGSS Scheme",
+    sub: "Limits, guarantee slabs, sector breadth, and extra priority for women-led and North-East startups.",
+    leftHeading: "Cover & limits",
+    rightHeading: "Who it favours",
+    items: [
+      {
+        title: "Collateral-free",
+        text: "No need to pledge land, property, or inventory.",
+        icon: "shield" as const,
+      },
+      {
+        title: "High Loan Limits",
+        text: "Funding available up to ₹20 crore.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Guarantee Coverage",
+        text: "85% guarantee on loans up to ₹10 crore and 75% for loans between ₹10 crore and ₹20 crore.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Broad Eligibility",
+        text: "Open to a wide array of sectors, including tech and manufacturing.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Special Priority",
+        text: "Additional support for women-led startups and startups in the North-East.",
+        icon: "users" as const,
+      },
+    ],
+  },
+  focus: {
+    eyebrow: "Champion Sectors",
+    heading: "Focus Areas of the CGSS Scheme",
+    sub: "CGSS is inclusive, with a tailored push for certain champion sectors.",
+    leftHeading: "Tech & climate",
+    rightHeading: "Health & manufacturing",
+    items: [
+      {
+        title: "Technology & Innovation",
+        text: "Cutting-edge domains such as AI, blockchain, and IoT.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Agri-tech & Clean-tech",
+        text: "Sustainable agriculture and resource management solutions.",
+        icon: "agri" as const,
+      },
+      {
+        title: "Healthcare & Biotech",
+        text: "Innovations in medical technology and pharmaceuticals.",
+        icon: "lab" as const,
+      },
+      {
+        title: "Renewable Energy",
+        text: "Solar, wind, and sustainable power generation.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Manufacturing",
+        text: "Small and medium-scale units looking to adopt modern production techniques.",
+        icon: "factory" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria for the CGSS Scheme",
+    sub: "Startups must meet defined legal, innovation, and compliance conditions.",
+    leftHeading: "Entity & recognition",
+    rightHeading: "Age, turnover & credit",
+    items: [
+      {
+        title: "Business Type",
+        text: "Private Limited Companies, LLPs, or Partnerships.",
+        icon: "factory" as const,
+      },
+      {
+        title: "DPIIT Recognition",
+        text: "A valid DPIIT Startup Recognition Certificate is required.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Startup Age",
+        text: "Company age should be below 10 years from incorporation.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Revenue Limit",
+        text: "Annual turnover should not exceed ₹100 crore.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Innovation Factor",
+        text: "Technology-driven, innovative, or scalable business model.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Credit Standing",
+        text: "No default history with banks or financial institutions.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply for the CGSS Loan Scheme",
+    sub: "Five steps through an eligible bank or NBFC. There is no fixed deadline — CGSS runs on a rolling basis.",
+    steps: [
+      {
+        title: "Prepare Your Documents",
+        text: "Compile DPIIT recognition, incorporation papers, pitch deck, DPR, financials and founder KYC.",
+      },
+      {
+        title: "Submit Your Application",
+        text: "Apply through a Member Lending Institution (scheduled bank or eligible NBFC) under CGSS.",
+      },
+      {
+        title: "Evaluation & Review",
+        text: "The lender assesses creditworthiness with NCGTC guarantee cover.",
+      },
+      {
+        title: "Interview & Selection",
+        text: "Additional diligence or founder interviews as per lender policy.",
+      },
+      {
+        title: "Loan Disbursement",
+        text: "Sanction and disbursement to your business account upon approval.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for the CGSS Loan Application",
+    note: "There is no fixed deadline, but banks have quarterly CGSS disbursement targets. After eligibility we send a file-specific checklist. Vikas Bharat helps you make the file bank-ready.",
+    items: [
+      "DPIIT Recognition Certificate — proof of recognised startup status",
+      "Incorporation documents — entity registration and constitutional records",
+      "MSME / Udyam certificate where applicable",
+      "Professional pitch deck — problem, solution, and growth roadmap",
+      "Audited financials — balance sheet and P&L",
+      "Detailed Project Report — 3–5 year strategy and forecast",
+      "Founder KYC — Aadhaar, PAN, and address proof",
+      "Technology readiness proof — evidence of product or prototype maturity",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const cgssFaq = {
+  heading: "CGSS questions, answered",
+  sub: "Guarantee slabs, who qualifies, documents, and how CGSS differs from CGTMSE.",
+  items: [
+    {
+      question: "What is the CGSS Loan Scheme?",
+      answer:
+        "It is a credit guarantee program where the government guarantees loans up to ₹20 crore for startups, allowing them to borrow without collateral.",
+    },
+    {
+      question: "What are the CGSS scheme details regarding guarantee cover?",
+      answer:
+        "The scheme provides an 85% guarantee for loans up to ₹10 crore and a 75% guarantee for loans between ₹10 crore and ₹20 crore.",
+    },
+    {
+      question: "Who is eligible for CGSS scheme?",
+      answer:
+        "DPIIT-recognized startups that are less than 10 years old with a turnover of less than ₹100 crore and have no history of default.",
+    },
+    {
+      question: "What documents are required for CGSS scheme?",
+      answer:
+        "DPIIT certificate, MSME certificate, audited financials, pitch deck, detailed project report, and KYC of founders.",
+    },
+    {
+      question: "How is this different from a CGTMSE loan?",
+      answer:
+        "While both are collateral-free, the CGTMSE loan scheme is for all MSMEs up to ₹5 crore, whereas the CGSS loan is specifically for recognised startups up to ₹20 crore.",
+    },
+  ],
+} as const;
+
+export const sisfsPage = {
+  eyebrow: "SISFS • Startup India Seed Fund",
+  heading: "Startup India Seed Fund (SISFS)",
+  kicker: "Grants up to ₹20L • Investment up to ₹50L",
+  intro:
+    "Access milestone-based grants for proof of concept and debt/convertible funding for market entry and scale through DPIIT’s incubator-led Startup India Seed Fund Scheme.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Early-stage founders preparing a Startup India Seed Fund application",
+  stats: [
+    { value: "₹20L", label: "Max Grant (PoC / Prototype / Trials)" },
+    { value: "₹50L", label: "Max Debt / Convertible" },
+    { value: "60d", label: "First Grant Instalment Window" },
+    { value: "0%", label: "Collateral / Guarantee Required" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is SISFS?",
+    paragraphs: [
+      "The Startup India Seed Fund Scheme provides early-stage startups with financial assistance for proof of concept, prototype development, product trials, market entry and commercialisation via an incubator-driven process administered by DPIIT.",
+      "Startups may receive up to ₹20 lakh as a grant for PoC, prototype and product trials, and up to ₹50 lakh as investment through convertible debentures or debt/debt-linked instruments for market entry and scaling.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "DPIIT-recognised startup and ≤2 years at application",
+      "≤₹10 lakh prior government funding (certain supports excluded)",
+      "≥51% shareholding by Indian promoters at application",
+      "Milestone-based disbursement and incubator agreement",
+    ],
+  },
+  whyChoose: {
+    eyebrow: "SISFS Desk",
+    heading: "Why Choose Our SISFS Support?",
+    sub: "Incubator selection, milestone structure and a compliance-ready file — so the first instalment is not stuck on paperwork.",
+    items: [
+      {
+        title: "Non-Dilutive Grants",
+        text: "Milestone-based grants up to ₹20 lakh for PoC, prototyping and product trials via empanelled incubators.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Unsecured Debt / Convertibles",
+        text: "Up to ₹50 lakh with interest not exceeding the repo rate, tenure ≤60 months, up to 12 months moratorium and no promoter or third-party guarantee.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Time-Bound Release",
+        text: "First grant instalment to selected startups within 60 days from application receipt, subject to incubator milestones.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Sector Priorities",
+        text: "Preference for tech-led innovations in impact sectors like healthcare, agri/food, energy, mobility and more.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Incubator-Led Execution",
+        text: "Selection, agreements, milestone tracking and fund release are executed by recognised incubators.",
+        icon: "users" as const,
+      },
+      {
+        title: "Compliance-Ready",
+        text: "Support for utilisation certificates, progress reporting and adherence to scheme conditions.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Eligibility Criteria",
+    sub: "DPIIT recognition, age, shareholding and prior-funding caps — plus the conditions that govern how money can be used.",
+    leftHeading: "Who Can Apply?",
+    rightHeading: "Conditions",
+    items: [
+      {
+        title: "DPIIT & Age",
+        text: "DPIIT-recognised startup incorporated not more than 2 years before the application date.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Technology in Core",
+        text: "Technology used in the core product, service, business model or delivery methodology.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Priority Sectors",
+        text: "Preference for solutions in listed priority sectors such as healthcare, agri/food, energy and mobility.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Prior Funding Cap",
+        text: "Not received more than ₹10 lakh monetary support from other Central/State schemes (with specified exceptions).",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Indian Shareholding",
+        text: "At least 51% shareholding by Indian promoters at the time of application.",
+        icon: "users" as const,
+      },
+      {
+        title: "Grant Use",
+        text: "Grant strictly for PoC, prototype and trials — not for creation of facilities.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Debt / Convertible Terms",
+        text: "Interest ≤ repo rate, tenure ≤60 months, moratorium up to 12 months, unsecured, no guarantees.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Milestone Agreement",
+        text: "Milestone-based disbursement under a legal agreement with the incubator.",
+        icon: "file" as const,
+      },
+      {
+        title: "Company Account",
+        text: "Funds are credited to the company bank account with periodic utilisation reporting.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Once Per Category",
+        text: "Seed support can be availed once in each category (grant and debt/convertible) as per the scheme.",
+        icon: "factory" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "Simple Application Process",
+    sub: "Five steps from the SISFS portal to milestone disbursement and utilisation reporting.",
+    steps: [
+      {
+        title: "Apply on Portal",
+        text: "Submit the application on the Startup India Seed Fund portal and select preferred incubators.",
+      },
+      {
+        title: "Evaluation",
+        text: "Incubators assess eligibility, tech readiness, market fit and alignment with sector priorities.",
+      },
+      {
+        title: "Agreement & Milestones",
+        text: "If selected, sign a legal agreement defining milestones and permitted use of funds.",
+      },
+      {
+        title: "Disbursement & Reporting",
+        text: "Receive milestone-linked tranches; submit progress updates and utilisation certificates.",
+      },
+      {
+        title: "Follow-up & Support",
+        text: "After disbursement, regular follow-ups help ensure milestones are met and challenges are addressed.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Required Documents",
+    note: "Prepare a compliant application, select aligned incubators and structure milestones so disbursement is not delayed. Vikas Bharat sends a file-specific SISFS checklist after eligibility.",
+    items: [
+      "DPIIT recognition proof and Certificate of Incorporation",
+      "Company bank account details for fund receipt",
+      "Declaration on prior government funding within the ₹10 lakh limit, as applicable",
+      "Shareholding details evidencing ≥51% Indian promoter ownership at application",
+      "Interim/final utilisation certificates and progress reports as per milestones",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const sisfsFaq = {
+  heading: "SISFS questions, answered",
+  sub: "Grant vs debt, collateral, who can apply, how money is released, and whether you can apply twice.",
+  items: [
+    {
+      question: "How much funding is available under SISFS?",
+      answer:
+        "Up to ₹20 lakh as a grant for PoC/prototype/product trials and up to ₹50 lakh as investment via convertible debentures or debt/debt-linked instruments for market entry and scaling.",
+    },
+    {
+      question: "Is equity or collateral required?",
+      answer:
+        "Grants are non-dilutive and debt/convertible funding is unsecured with no promoter or third-party guarantees. Interest is capped at not more than the prevailing repo rate, with tenure up to 60 months and a possible moratorium up to 12 months.",
+    },
+    {
+      question: "Who can apply to SISFS?",
+      answer:
+        "DPIIT-recognized startups incorporated not more than 2 years before application that use technology in their core and meet shareholding and prior-funding conditions are eligible to apply via the portal.",
+    },
+    {
+      question: "How are funds disbursed?",
+      answer:
+        "Funds are released by incubators in milestone-based tranches to the company’s bank account. The first grant instalment must be released within 60 days from receipt of application, followed by progress and utilization reporting.",
+    },
+    {
+      question: "What compliance requirements follow after registration?",
+      answer:
+        "Startups must maintain utilization certificates, milestone evidence and reporting as stipulated by DPIIT and the empanelled incubator.",
+    },
+    {
+      question: "Can a startup receive support more than once?",
+      answer:
+        "A startup can receive seed support once in each category — once as a grant and once as debt/convertible — subject to selections and scheme provisions.",
+    },
+  ],
+} as const;
+
+export const ublPage = {
+  eyebrow: "Business Financing • Unsecured Loans",
+  heading: "Unsecured Business Loans",
+  kicker: "Collateral-Free Funding for MSMEs",
+  intro:
+    "Access up to ₹50 Lakhs in collateral-free business loans for your MSME or startup. Vikas Bharat helps you identify the right lender, prepare documentation and secure fast approval without putting your assets at risk.",
+  cta: "Check Your Eligibility",
+  imageAlt: "MSME owner reviewing a collateral-free unsecured business loan file",
+  stats: [
+    { value: "₹50L", label: "Loan Up To" },
+    { value: "0", label: "Collateral Required" },
+    { value: "48hrs", label: "Approval Target" },
+    { value: "50+", label: "Lender Network" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What are Unsecured Business Loans?",
+    paragraphs: [
+      "An unsecured business loan is financing where the borrower does not need to pledge collateral — such as property, machinery or inventory. Approval is based on creditworthiness, cash flow, profitability and overall financial health.",
+      "These loans suit MSMEs and startups with steady revenue or a strong plan but limited assets to pledge. They are offered by commercial banks, NBFCs and fintech lenders. Typical amounts range from ₹1 Lakh to ₹50 Lakhs with tenures of 12 to 60 months.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "No pledge of property, machinery or inventory",
+      "Approvals often within 48–72 hours with complete docs",
+      "Use for working capital, inventory, equipment or expansion",
+      "Debt route — no equity dilution",
+    ],
+  },
+  whyChoose: {
+    eyebrow: "Loan Desk",
+    heading: "Why Choose an Unsecured Business Loan?",
+    sub: "Speed, flexibility and asset protection — matched to the right bank, NBFC or fintech lender.",
+    items: [
+      {
+        title: "No Collateral Required",
+        text: "Your personal and business assets remain fully protected — no pledge of property, machinery or inventory.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Fast Processing",
+        text: "Documentation is minimal and approvals are typically faster than secured loans — often within 48–72 hours.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Flexible Usage",
+        text: "Use the loan for working capital, inventory purchase, equipment, marketing, salary or business expansion.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Preserves Equity",
+        text: "Unlike equity financing, unsecured loans do not dilute ownership — you retain full control of your business.",
+        icon: "users" as const,
+      },
+      {
+        title: "Multiple Lender Options",
+        text: "Access a wide network of public banks, private banks, NBFCs and fintech lenders with competitive interest rates.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Builds Credit Profile",
+        text: "Timely repayment helps establish or improve your business credit score for future financing.",
+        icon: "clipboard" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "Unsecured Business Loan Eligibility",
+    sub: "Criteria vary by lender, but these are common requirements across most banks and NBFCs.",
+    leftHeading: "Business Profile",
+    rightHeading: "Credit & Compliance",
+    items: [
+      {
+        title: "Business Age",
+        text: "Minimum 1–3 years of operation (varies by lender; some fintechs accept 6 months).",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Annual Turnover",
+        text: "Minimum annual turnover of ₹5–10 Lakhs required by most lenders.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Business Type",
+        text: "Proprietorships, partnerships, LLPs, Private Limited Companies and MSMEs are all eligible.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Credit Score",
+        text: "A CIBIL score of 700+ is preferred; some NBFCs accept scores from 650.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "GST Registration",
+        text: "Active GST registration and regular filing history is typically required.",
+        icon: "file" as const,
+      },
+      {
+        title: "No Active Default",
+        text: "No current NPA status or recent loan defaults with any financial institution.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply with Vikas Bharat",
+    sub: "Five steps from a free eligibility check to disbursement in your business account.",
+    steps: [
+      {
+        title: "Free Eligibility Check",
+        text: "Submit your basic business details. Our advisors assess eligibility across 50+ lenders within 24 hours.",
+      },
+      {
+        title: "Document Collection",
+        text: "We guide you through the exact documents required and help you prepare a strong financial profile.",
+      },
+      {
+        title: "Lender Matching",
+        text: "We match you with the best lender based on your profile, loan requirement and competitive interest rates.",
+      },
+      {
+        title: "Application Filing",
+        text: "Our team files the application on your behalf, reducing errors and improving approval chances.",
+      },
+      {
+        title: "Approval & Disbursement",
+        text: "Once approved, funds are disbursed directly to your business account — typically within 48–72 hours.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Keep these ready for a smooth application. Vikas Bharat sends a lender-specific checklist after eligibility.",
+    items: [
+      "Identity proof — PAN and Aadhaar of all directors, partners or proprietor",
+      "Business proof — Udyam Registration, GST certificate or incorporation certificate",
+      "Bank statements — last 6–12 months of business bank statements",
+      "ITR & financials — last 1–2 years of ITR, balance sheet and profit & loss statement",
+      "Address proof — office lease agreement, utility bill or property documents",
+      "Business vintage proof — trade license, shop establishment certificate or registration showing business age",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const ublFaq = {
+  heading: "Unsecured loan questions, answered",
+  sub: "Loan limits, interest rates, startups, fees and how long approval usually takes.",
+  items: [
+    {
+      question: "What is the maximum loan amount for an unsecured business loan?",
+      answer:
+        "Most lenders offer unsecured business loans up to ₹50 Lakhs. Some fintech NBFCs can go higher depending on your business profile and revenue.",
+    },
+    {
+      question: "What interest rate can I expect on an unsecured business loan?",
+      answer:
+        "Interest rates typically range from 12% to 24% per annum depending on your credit score, business vintage, turnover and lender type. Banks generally offer lower rates than NBFCs.",
+    },
+    {
+      question: "Can a startup get an unsecured business loan?",
+      answer:
+        "Yes, some NBFCs and fintech lenders offer unsecured loans to startups with as little as 6 months of operation, provided they show adequate monthly revenue.",
+    },
+    {
+      question: "Does Vikas Bharat charge a fee for loan assistance?",
+      answer:
+        "Vikas Bharat works on a transparent advisory model. Our fee structure is shared upfront before any service begins. There are no hidden charges.",
+    },
+    {
+      question: "How long does it take to get an unsecured business loan?",
+      answer:
+        "With complete documentation, approvals typically happen in 48–72 hours from bank/NBFC submission. Vikas Bharat’s pre-checks further reduce processing time.",
+    },
+  ],
+} as const;
+
+export const rdifPage = {
+  eyebrow: "RDIF • Research Development & Innovation Fund",
+  heading: "RDIF Scheme",
+  kicker: "Eligibility, Benefits, Funding & How to Apply",
+  intro:
+    "India’s Research Development and Innovation Fund — long-term, concessional capital for startups and MSMEs building strategic and deep-tech innovations.",
+  cta: "Check Your Eligibility",
+  imageAlt: "Researchers and founders reviewing an RDIF deep-tech funding proposal",
+  stats: [
+    { value: "₹1L Cr", label: "Total Fund Size" },
+    { value: "50%", label: "Max Project Cost Cover" },
+    { value: "3–4%", label: "Concessional Interest" },
+    { value: "15 Yrs", label: "Max Repayment Tenure" },
+  ] as const,
+  unlock: {
+    eyebrow: "What It Is",
+    heading: "What is the RDIF?",
+    paragraphs: [
+      "The RDIF (Research Development and Innovation Fund) is a flagship Department of Science and Technology (DST) initiative to strengthen India’s research ecosystem. It is a central pillar of Atmanirbhar Bharat, aimed at increasing private-sector investment in R&D.",
+      "Managed by Focused Research Organisations such as the Technology Development Board (TDB), the fund supports technology-intensive projects that traditional banks may consider too risky — with lower interest rates and longer tenures than a typical unsecured business loan. The overall outlay is ₹1 lakh crore over six years.",
+    ],
+    benefitsHeading: "Why founders apply",
+    benefits: [
+      "Up to 50% of assessed project cost as funding support",
+      "Concessional interest typically 3%–4% per annum",
+      "Repayment horizon of 12–15 years",
+      "Implemented through TDB and DST",
+    ],
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: "Benefits of the RDIF Scheme",
+    sub: "Patient capital, lower interest burden and government validation for deep-tech and strategic R&D.",
+    items: [
+      {
+        title: "Patient Capital",
+        text: "Repayment periods up to 15 years allow startups to focus on R&D without immediate cash-flow pressure.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Low Interest Burden",
+        text: "Interest rates are significantly lower than private NBFC or typical unsecured business loans.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Validation Seal",
+        text: "Government backing acts as a quality signal that can improve attractiveness for further venture funding.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Global Market Entry",
+        text: "Facilitation pathways aligned with export and international deployment of Indian tech.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Technical Support",
+        text: "Access to government labs and the wider incubation-centre network in India.",
+        icon: "users" as const,
+      },
+    ],
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: "RDIF Eligibility Criteria",
+    sub: "Capital is directed toward legally sound entities with high technical potential and strategic focus.",
+    leftHeading: "Entity & Location",
+    rightHeading: "Tech & Ownership",
+    items: [
+      {
+        title: "Entity Status",
+        text: "Must be a registered Private Limited Company, LLP or Partnership.",
+        icon: "factory" as const,
+      },
+      {
+        title: "HQ in India",
+        text: "Registered global headquarters and principal place of business must be in India.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Startup / MSME",
+        text: "Must hold a valid Startup India registration certificate or be a registered MSME.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Technology Readiness",
+        text: "Proposed technology must generally be at TRL 4 or higher (prototype validation).",
+        icon: "lab" as const,
+      },
+      {
+        title: "Indian Control",
+        text: "Entity must be controlled by resident Indian citizens as per FDI policies.",
+        icon: "users" as const,
+      },
+      {
+        title: "Strategic Focus",
+        text: "Projects must align with national priorities such as AI, deep tech or climate energy.",
+        icon: "chip" as const,
+      },
+    ],
+  },
+  focus: {
+    eyebrow: "Sectors",
+    heading: "Strategic Focus Areas for Funding",
+    sub: "Sectors critical for national growth and economic resilience — prime candidates for RDIF support.",
+    leftHeading: "Deep Tech & Climate",
+    rightHeading: "AI, Bio & Strategic",
+    items: [
+      {
+        title: "Deep Technology",
+        text: "Robotics, semiconductor-related designs and quantum computing.",
+        icon: "chip" as const,
+      },
+      {
+        title: "Energy & Climate",
+        text: "Solar innovations, green hydrogen and battery storage.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Artificial Intelligence",
+        text: "AI for healthcare, agriculture and smart infrastructure.",
+        icon: "tech" as const,
+      },
+      {
+        title: "Biotechnology",
+        text: "Biopharmaceuticals, medical devices and genomics.",
+        icon: "lab" as const,
+      },
+      {
+        title: "Digital Economy",
+        text: "Fintech, agri-tech platforms and SaaS for digital public infrastructure.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Strategic Tech",
+        text: "Technologies for national security and import substitution.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  funding: {
+    eyebrow: "How Money Flows",
+    heading: "Funding Structure Under RDIF",
+    sub: "Three flexible modes of support to suit different business stages.",
+    leftHeading: "Debt-Led",
+    rightHeading: "Hybrid",
+    items: [
+      {
+        title: "Long-Term R&D Loan",
+        text: "Soft loan covering up to 50% of project cost, tenure 12–15 years, interest as low as about 3%.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Loan + Equity",
+        text: "For high-growth ventures, TDB can mix debt and equity — equity typically capped at 25% shareholding.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Venture Debt + Deferred Equity",
+        text: "Debt that can convert to equity later, helping founders keep higher ownership in early growth stages.",
+        icon: "rocket" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: "How to Apply: Step-by-Step",
+    sub: "A rigorous technical and financial evaluation from self-audit to milestone-based sanction.",
+    steps: [
+      {
+        title: "Self-Audit",
+        text: "Verify your entity meets RDIF eligibility for TRL level and sector focus.",
+      },
+      {
+        title: "Technical Drafting",
+        text: "Prepare your Detailed Project Report (DPR) and TRL assessment.",
+      },
+      {
+        title: "Online Submission",
+        text: "Submit your proposal via the official TDB or DST innovation portal.",
+      },
+      {
+        title: "Technical Screening",
+        text: "A committee of scientists and industry experts reviews technological novelty.",
+      },
+      {
+        title: "Due Diligence",
+        text: "Financial and legal audits of the startup are conducted.",
+      },
+      {
+        title: "Sanction",
+        text: "Funding is approved and tranches are released based on R&D milestones.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required for RDIF",
+    note: "Prepare a comprehensive professional file for evaluation. Vikas Bharat sends a file-specific RDIF checklist after eligibility.",
+    items: [
+      "Incorporation proof — Certificate of Incorporation, MoA and AoA",
+      "DPIIT / Startup India recognition certificate (or MSME registration, as applicable)",
+      "Detailed Project Report (DPR) covering R&D scope, TRL level and startup health",
+      "Audited financials — balance sheets and P&L for the last 3 years (as applicable)",
+      "TRL assessment — independent or self-certified proof of TRL 4 or above",
+      "Business plan with financial projections",
+      "IP documentation — patents filed or trademarks obtained (if any)",
+      "Promoter KYC — Aadhaar, PAN and DIN of primary directors",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const rdifFaq = {
+  heading: "RDIF questions, answered",
+  sub: "Fund size, loan vs grant, eligibility, documents, Mudra overlap and repayment tenure.",
+  items: [
+    {
+      question: "What is the RDIF Scheme?",
+      answer:
+        "It is a ₹1 Lakh Crore government fund (Research Development and Innovation Fund) aimed at providing long-term, low-interest funding for tech-led innovation in India.",
+    },
+    {
+      question: "Is the RDIF a grant or a loan?",
+      answer:
+        "It primarily offers long-term soft loans, though it can include equity participation. It is not a direct grant like NIDHI PRAYAS.",
+    },
+    {
+      question: "What is the RDIF eligibility for startups?",
+      answer:
+        "DPIIT-recognised Indian companies with technology generally at TRL 4 or above, HQ in India, and alignment with strategic focus sectors are eligible, subject to scheme guidelines.",
+    },
+    {
+      question: "What are the key documents required for RDIF?",
+      answer:
+        "Detailed Project Report (DPR), TRL assessment, audited financials, and Startup India / DPIIT certificate (or MSME registration where applicable).",
+    },
+    {
+      question: "Can I apply for the RDIF if I already have a Mudra loan?",
+      answer:
+        "Yes, but RDIF is intended for high-value research projects that typically exceed the limits of the Mudra loan scheme.",
+    },
+    {
+      question: "How long is the repayment tenure?",
+      answer:
+        "Repayment can be spread over 12 to 15 years, providing significant financial flexibility for R&D-heavy ventures.",
     },
   ],
 } as const;
