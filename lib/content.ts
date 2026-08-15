@@ -1110,7 +1110,7 @@ export const schemePage = {
       {
         id: "twees",
         title: "TWEES Scheme",
-        text: "Technology-driven Women Entrepreneurs Empowerment Scheme designed to support women-led startups with financial assistance, mentorship, and business growth resources.",
+        text: "Tamil Nadu Women Employment and Entrepreneurship Scheme — loans up to ₹10 Lakh with 25% subsidy (max ₹2 Lakh) for women and transgender entrepreneurs.",
         filters: ["Subsidy"] as const,
         featured: false,
         filterOnly: true,
@@ -6718,6 +6718,535 @@ export const ratanFundingFaq = equityFundingFaq("Ratan Funding", "Selected start
 export const investmentReadinessFaq = equityFundingFaq("Investment Readiness Accelerator (IRA) 2.0", "IRA 2.0 does not invest capital directly — it prepares startups to raise Seed to Series A funding from external investors.", "DPIIT-recognised Pvt Ltd or LLP startups with a deployed product or MVP, traction and fundraising intent within 6–12 months.", "Pitch deck, financial model, cap table, DPIIT certificate, incorporation papers and product proof.");
 export const technovibeFaq = equityFundingFaq("TechnoVibe Funding", "Startups can access up to ₹10 lakh across Prototype (₹1.5L), MVP (₹4L) and Deployment (₹10L) stages.", "DPIIT-recognised or early-stage Indian blockchain startups (Pvt Ltd or LLP) with proprietary technology at prototype to pilot stage.", "DPIIT certificate, technical whitepaper, pitch deck, TRL proof and incorporation documents.");
 export const ventureTechFaq = equityFundingFaq("Venture Tech Funding", "Selected startups may receive seed funding up to USD 2 million (about ₹18 crore), subject to evaluation and investment terms.", "Early-stage Companies Act startups with a prototype or market validation in disruptive tech domains such as AI, biotech, energy, quantum, robotics or space.", "Pitch deck, business plan, product description, founder bios, market analysis, traction proof and incorporation papers.");
+
+const subsidySchemeFaq = (
+  name: string,
+  funding: string,
+  eligibility: string,
+  documents: string,
+) => ({
+  heading: `${name} questions, answered`,
+  sub: "Subsidy support, eligibility, documents and the application process.",
+  items: [
+    {
+      question: `What is ${name}?`,
+      answer: `${name} provides government-backed subsidy or incentive support to qualifying applicants under its guidelines.`,
+    },
+    {
+      question: "What subsidy or financial support is available?",
+      answer: funding,
+    },
+    {
+      question: "Who is eligible to apply?",
+      answer: eligibility,
+    },
+    {
+      question: "What documents are required?",
+      answer: documents,
+    },
+  ],
+});
+
+const createSubsidyProgramme = (config: {
+  name: string;
+  eyebrow: string;
+  kicker: string;
+  intro: string;
+  funding: string;
+  routeLabel?: string;
+  eligibility: string;
+  benefits: readonly string[];
+  documents: readonly string[];
+  process: readonly { title: string; text: string }[];
+}) => ({
+  eyebrow: config.eyebrow,
+  heading: config.name,
+  kicker: config.kicker,
+  intro: config.intro,
+  cta: "Check Your Eligibility",
+  imageAlt: `${config.name} applicants preparing a subsidy application`,
+  stats: [
+    { value: config.funding, label: "Subsidy Potential" },
+    { value: config.routeLabel ?? "Subsidy", label: "Support Route" },
+    { value: "Eligible", label: "Applicant Focus" },
+    { value: "India", label: "Application Access" },
+  ],
+  unlock: {
+    eyebrow: "Scheme Overview",
+    heading: `What is ${config.name}?`,
+    paragraphs: [
+      config.intro,
+      "Vikas Bharat helps you check fit, prepare documents and structure a complete subsidy-ready application file.",
+    ],
+    benefitsHeading: "Why applicants apply",
+    benefits: config.benefits,
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: `Benefits of ${config.name}`,
+    sub: "Capital support and incentives that reduce project cost and improve bankability.",
+    items: config.benefits.map((title, index) => ({
+      title,
+      text: [
+        "Subsidy or incentive support aligned to scheme guidelines and project evaluation.",
+        "Lower effective project cost through capital or interest benefits.",
+        "Structured documentation support for banks, boards and implementing agencies.",
+        "Guidance to keep the file compliant through approval and disbursement.",
+      ][index % 4],
+      icon: (["wallet", "zap", "shield", "send"][index % 4]) as "wallet" | "zap" | "shield" | "send",
+    })),
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: `${config.name} Eligibility`,
+    sub: config.eligibility,
+    leftHeading: "Applicant Profile",
+    rightHeading: "Project & Compliance",
+    items: [
+      { title: "Eligible Applicant", text: "Individuals, enterprises or organisations covered under the scheme guidelines.", icon: "users" as const },
+      { title: "Project Fit", text: "A project aligned to the scheme’s sector, capacity and end-use requirements.", icon: "factory" as const },
+      { title: "Location / Domicile", text: "Location or domicile conditions as specified for the scheme or component.", icon: "landmark" as const },
+      { title: "Financial Closure", text: "Bank or NBFC sanction and promoter contribution where required.", icon: "wallet" as const },
+      { title: "Compliance", text: "Registrations, land, tax and statutory clearances as applicable.", icon: "shield" as const },
+      { title: "Documentation", text: "A complete DPR and supporting file ready for agency and lender review.", icon: "chip" as const },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: `${config.name} Application Process`,
+    sub: "Prepare a complete file, submit through the official channel and progress through review to subsidy release.",
+    steps: config.process,
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Vikas Bharat can help organise a complete, subsidy-ready documentation file.",
+    items: config.documents,
+    cta: "Download For More",
+  },
+} as const);
+
+export const coldStorageSubsidyPage = createSubsidyProgramme({
+  name: "Cold Storage Subsidy Scheme",
+  eyebrow: "NHB • MIDH • Agro Infrastructure",
+  kicker: "Capital Subsidy & Interest Support for Cold Storage Units",
+  intro: "The Cold Storage Subsidy Scheme, implemented through NHB and MIDH, supports construction and modernisation of multi-chamber, energy-efficient cold storage for fruits, vegetables, spices and onions — typically from 251 MT to 20,000 MT capacity.",
+  funding: "Up to 50%",
+  eligibility: "Individual entrepreneurs, farmers, FPOs, cooperatives and MSMEs registered as Private Limited, LLP or Partnership, with land ownership or a registered lease of at least 15 years, term-loan financial closure, and primary use for horticulture commodities within 251–20,000 MT capacity.",
+  benefits: [
+    "Capital subsidy of 35–50% of project cost (higher in Gujarat and hilly/scheduled areas)",
+    "3% interest subvention on term loans up to ₹2 crore",
+    "100% CGTMSE-style guarantee cover pathways for eligible loans up to ₹2 crore",
+    "State incentives such as electricity bill reimbursement in select states",
+    "Support for energy-efficient and multi-commodity storage designs",
+  ],
+  documents: [
+    "Detailed Project Report (DPR) with technical and financial plans",
+    "Land ownership title or registered long-term lease",
+    "Bank or NBFC sanction letter for financial closure",
+    "Civil drawings, site plan and machinery layout",
+    "Aadhaar and PAN of promoters or directors",
+    "Certificate of Incorporation, MoA and AoA",
+    "GST registration and Udyam / MSME certificate",
+    "Pollution control and electricity department NOCs",
+  ],
+  process: [
+    { title: "Technical Planning", text: "Finalise capacity, technology (RCS/PEB), commodity mix and cost estimates." },
+    { title: "Secure Funding", text: "Obtain term-loan sanction and close promoter contribution." },
+    { title: "Online Registration", text: "Submit the application with DPR and supporting documents on the official portal." },
+    { title: "In-Principle Approval", text: "Implementing agency reviews technical and financial eligibility." },
+    { title: "Inspection & Release", text: "After verification and commissioning milestones, subsidy is released as per guidelines." },
+  ],
+});
+
+export const pmKusumPage = createSubsidyProgramme({
+  name: "PM KUSUM Scheme",
+  eyebrow: "MNRE • Solar Agriculture",
+  kicker: "Solar Pumps, Decentralised Plants & Grid Solarisation",
+  intro: "PM KUSUM (Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan) helps farmers shift to solar power through decentralised plants on barren land (Component A), standalone solar pumps (Component B), and solarisation of grid-connected pumps (Component C).",
+  funding: "Up to 60–80%",
+  eligibility: "Eligibility varies by component: individual farmers, FPOs, cooperatives, panchayats and water user associations for Component A; farmers in off-grid or weak-grid areas for Component B; and farmers with existing grid-connected pumps for Component C, as per state policy.",
+  benefits: [
+    "Subsidy up to 60% (30% Central + 30% State) in most regions, and up to 80% in special regions",
+    "Component A: decentralised solar plants on barren land (target 10,000 MW)",
+    "Component B: standalone off-grid solar agricultural pumps",
+    "Component C: solarisation of existing grid-connected pumps",
+    "Income opportunity by selling surplus power to the grid under Components A and C",
+  ],
+  documents: [
+    "Aadhaar and identity proof",
+    "Land ownership proof (especially for Component A)",
+    "Bank account details (passbook or cancelled cheque)",
+    "Detailed Project Report for larger plants",
+    "Consent letter from the concerned DISCOM",
+    "State portal registration and application forms",
+  ],
+  process: [
+    { title: "Portal Registration", text: "Register on the state renewable energy / PM KUSUM portal." },
+    { title: "Proposal Submission", text: "Upload documents, technical details and component selection." },
+    { title: "Technical Evaluation", text: "DISCOM and MNRE-linked agencies verify feasibility and policy fit." },
+    { title: "Installation", text: "Commissioning is completed through approved vendors." },
+    { title: "Subsidy Disbursement", text: "Subsidy is released after successful installation and verification." },
+  ],
+});
+
+export const tweesPage = createSubsidyProgramme({
+  name: "TWEES Scheme",
+  eyebrow: "Tamil Nadu • Women & Transgender Entrepreneurs",
+  kicker: "Loans up to ₹10 Lakh with 25% Government Subsidy",
+  intro: "TWEES (Tamil Nadu Women Employment and Entrepreneurship Scheme) provides collateral-free loan support up to ₹10 lakh with a 25% government subsidy (capped at ₹2 lakh) for women and transgender entrepreneurs setting up or expanding micro and small businesses.",
+  funding: "25% / ₹2L",
+  routeLabel: "Loan + Subsidy",
+  eligibility: "Women and transgender residents of Tamil Nadu aged 18–55 with a valid ration card, proposing manufacturing, service or trading projects (large agriculture projects are excluded), and able to contribute at least 5% of project cost. Priority is given to SC/ST, BPL, widows and differently-abled applicants.",
+  benefits: [
+    "Loan assistance up to ₹10 lakh through empanelled banks",
+    "25% subsidy on project cost, capped at ₹2 lakh",
+    "No collateral or asset security requirement",
+    "Interest-free or low-interest terms as per government norms",
+    "Support for manufacturing, services and trading micro-enterprises",
+  ],
+  documents: [
+    "Aadhaar Card",
+    "Ration Card",
+    "Bank passbook (first page)",
+    "Passport-size photographs",
+    "Detailed Project Report",
+    "Vendor quotations with GST",
+    "Community / caste certificate, if applicable",
+    "Educational certificates, if applicable",
+    "BPL, widow or disability certificate for priority categories",
+  ],
+  process: [
+    { title: "Project Planning", text: "Define the business activity, cost estimates and market plan." },
+    { title: "Document Compilation", text: "Assemble identity, domicile, DPR and quotation files." },
+    { title: "Bank Submission", text: "Submit the application through an empanelled nationalised or cooperative bank." },
+    { title: "Verification & Interview", text: "Bank and scheme authorities verify eligibility and project viability." },
+    { title: "Loan & Subsidy Release", text: "Approved cases receive loan disbursement with subsidy credit as per norms." },
+  ],
+});
+
+export const semiconductorPage = createSubsidyProgramme({
+  name: "Semiconductor Scheme",
+  eyebrow: "India Semiconductor Mission • Deep Tech",
+  kicker: "Fab, Packaging, Design & Accelerator Incentives",
+  intro: "India’s Semiconductor Scheme ecosystem — anchored by the India Semiconductor Mission — supports chip manufacturing, display fabs, compound semiconductors, packaging, design-linked incentives and accelerator programmes such as Semiconductor Future 2025 (Bharat Byte) with Cadence, AIC IIT Delhi, FITT-IIT Delhi and AIM–NITI Aayog.",
+  funding: "Up to 50%",
+  eligibility: "Manufacturing companies, packaging units, design startups, early-stage deep-tech ventures, student teams, researchers and individual innovators applying under relevant ISM tracks or accelerator windows such as Semiconductor Future 2025.",
+  benefits: [
+    "Up to 50% capital subsidy for semiconductor and display fabs",
+    "30–50% incentives for compound semiconductors and packaging",
+    "Design Linked Incentive (DLI) support up to ₹30 crore per company",
+    "Access to EDA tools, mentorship and incubation under accelerator tracks",
+    "Milestone-linked disbursement for approved projects",
+  ],
+  documents: [
+    "Detailed Project Report with capex and technical architecture",
+    "Company incorporation and promoter KYC",
+    "Technology roadmap and product or design plan",
+    "Financial projections and funding plan",
+    "IP, team profiles and prior work evidence for design / startup tracks",
+    "Declarations and forms required by the official ISM or accelerator portal",
+  ],
+  process: [
+    { title: "Check Programme Fit", text: "Identify the relevant ISM track or accelerator and confirm category eligibility." },
+    { title: "Prepare DPR", text: "Build the project report, capex plan, architecture and milestones." },
+    { title: "Submit Application", text: "Apply through official channels with complete documentation." },
+    { title: "Evaluation & Review", text: "Expert committees complete technical and financial review." },
+    { title: "Approval & Disbursement", text: "Receive sanction and milestone-linked incentive support." },
+  ],
+});
+
+export const maharashtraGovtPage = createSubsidyProgramme({
+  name: "Maharashtra Government Schemes",
+  eyebrow: "State Funding • Grants, Equity & Loans",
+  kicker: "Agri-Sure, Startup Agro, Venture Fund & Cluster Support",
+  intro: "Maharashtra Government Schemes are state-backed grants, equity and loan instruments for Maharashtra-based startups and MSMEs — including Agri-Sure Fund, Startup Agro Fund, Venture Fund (MH) and Cluster Development Program pathways.",
+  funding: "Up to ₹5 Cr+",
+  routeLabel: "Grant / Equity",
+  eligibility: "Maharashtra-based Private Limited Companies, LLPs and other eligible organisations — typically with MVP or early-stage readiness — applying to sector-aligned programmes such as AgriTech, clean energy, healthcare and industrial clusters. Specific funds may require DPIIT recognition, operating history or self-contribution.",
+  benefits: [
+    "Agri-Sure Fund support up to ₹1 crore for AgriTech startups",
+    "Startup Agro Fund grants from ₹20 lakh to ₹1 crore for sustainable agriculture ventures",
+    "Venture Fund (MH) equity investment up to ₹5 crore for priority-sector startups",
+    "Cluster Development Program equity pathways from ₹25 lakh upward",
+    "Mentorship, networking and market-readiness support across programmes",
+  ],
+  documents: [
+    "Certificate of Incorporation (Pvt Ltd / LLP)",
+    "Pitch deck covering business model, traction and problem–solution fit",
+    "Audited financial statements, ITR and revenue projections",
+    "Business plan",
+    "DPIIT / Startup India recognition certificate, where required",
+    "GST registration and Udyam / MSME certificate",
+  ],
+  process: [
+    { title: "Prepare Documents", text: "Assemble incorporation, pitch, financials and compliance proofs." },
+    { title: "Validate Eligibility", text: "Match your venture to the right Maharashtra fund or programme." },
+    { title: "Submit Application", text: "Apply through the relevant state or partner portal." },
+    { title: "Evaluation", text: "Programme teams assess innovation fit, readiness and scale potential." },
+    { title: "Selection & Support", text: "Selected applicants receive grant, equity or advisory support as applicable." },
+  ],
+});
+
+export const coldStorageSubsidyFaq = subsidySchemeFaq(
+  "Cold Storage Subsidy Scheme",
+  "Capital subsidy typically ranges from 35% to 50% of project cost depending on capacity and location, with interest subvention of about 3% on eligible term loans up to ₹2 crore.",
+  "Entrepreneurs, farmers, FPOs, cooperatives and MSMEs with eligible cold-storage projects of 251–20,000 MT, land rights and bank financial closure.",
+  "DPR, land documents, bank sanction letter, civil drawings, KYC, incorporation papers, GST/MSME proofs and statutory NOCs.",
+);
+
+export const pmKusumFaq = subsidySchemeFaq(
+  "PM KUSUM Scheme",
+  "Most regions offer up to 60% subsidy (30% Central + 30% State) for solar pumps, rising to about 80% in special regions as per prevailing guidelines.",
+  "Farmers, FPOs, cooperatives, panchayats and water user associations — depending on Component A, B or C and state policy.",
+  "Aadhaar, land ownership proof, bank details, DPR for larger plants and DISCOM consent where required.",
+);
+
+export const tweesFaq = subsidySchemeFaq(
+  "TWEES Scheme",
+  "Loans up to ₹10 lakh with 25% subsidy on project cost, capped at ₹2 lakh, generally without collateral.",
+  "Women and transgender residents of Tamil Nadu aged 18–55 with a valid ration card and a manufacturing, service or trading project.",
+  "Aadhaar, ration card, bank passbook, photographs, DPR, vendor quotations and category certificates if applicable.",
+);
+
+export const semiconductorFaq = subsidySchemeFaq(
+  "Semiconductor Scheme",
+  "Fab and display projects may receive up to 50% capital subsidy; packaging and compound semiconductor incentives often range 30–50%; Design Linked Incentive support can reach up to ₹30 crore per company.",
+  "Manufacturers, packaging units, design startups, researchers and deep-tech innovators applying under relevant ISM or accelerator tracks.",
+  "DPR, incorporation and KYC, technology roadmap, financial plan, team or IP evidence and portal-specific declarations.",
+);
+
+export const maharashtraGovtFaq = subsidySchemeFaq(
+  "Maharashtra Government Schemes",
+  "Support ranges by programme — for example Agri-Sure up to ₹1 crore, Startup Agro grants ₹20 lakh–₹1 crore, and Venture Fund (MH) equity up to ₹5 crore.",
+  "Maharashtra-based startups and eligible entities meeting the specific fund’s stage, sector and registration requirements.",
+  "Incorporation certificate, pitch deck, financials, business plan, DPIIT proof where required, and GST/MSME documents.",
+);
+
+const loanSchemeFaq = (
+  name: string,
+  funding: string,
+  eligibility: string,
+  documents: string,
+) => ({
+  heading: `${name} questions, answered`,
+  sub: "Loan amount, eligibility, documents and the application process.",
+  items: [
+    {
+      question: `What is ${name}?`,
+      answer: `${name} provides debt financing for qualifying micro, small or growing businesses under lender and scheme guidelines.`,
+    },
+    {
+      question: "What loan support is available?",
+      answer: funding,
+    },
+    {
+      question: "Who is eligible to apply?",
+      answer: eligibility,
+    },
+    {
+      question: "What documents are required?",
+      answer: documents,
+    },
+  ],
+});
+
+const createLoanProgramme = (config: {
+  name: string;
+  eyebrow: string;
+  kicker: string;
+  intro: string;
+  funding: string;
+  routeLabel?: string;
+  eligibility: string;
+  benefits: readonly string[];
+  documents: readonly string[];
+  process: readonly { title: string; text: string }[];
+}) => ({
+  eyebrow: config.eyebrow,
+  heading: config.name,
+  kicker: config.kicker,
+  intro: config.intro,
+  cta: "Check Your Eligibility",
+  imageAlt: `${config.name} applicants preparing a loan application`,
+  stats: [
+    { value: config.funding, label: "Loan Potential" },
+    { value: config.routeLabel ?? "Loan", label: "Support Route" },
+    { value: "MSME", label: "Business Focus" },
+    { value: "India", label: "Application Access" },
+  ],
+  unlock: {
+    eyebrow: "Scheme Overview",
+    heading: `What is ${config.name}?`,
+    paragraphs: [
+      config.intro,
+      "Vikas Bharat helps you check fit, prepare documents and structure a lender-ready loan file.",
+    ],
+    benefitsHeading: "Why applicants apply",
+    benefits: config.benefits,
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: `Benefits of ${config.name}`,
+    sub: "Affordable credit and structured support to start, expand or stabilise your business.",
+    items: config.benefits.map((title, index) => ({
+      title,
+      text: [
+        "Loan support aligned to scheme or lender guidelines and business readiness.",
+        "Faster, clearer documentation for bank or NBFC underwriting.",
+        "Guidance on collateral-free or government-backed pathways where available.",
+        "Support through appraisal, sanction and disbursement follow-up.",
+      ][index % 4],
+      icon: (["wallet", "zap", "shield", "send"][index % 4]) as "wallet" | "zap" | "shield" | "send",
+    })),
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: `${config.name} Eligibility`,
+    sub: config.eligibility,
+    leftHeading: "Applicant Profile",
+    rightHeading: "Business & Compliance",
+    items: [
+      { title: "Eligible Borrower", text: "Individuals or businesses covered under the loan scheme or lender policy.", icon: "users" as const },
+      { title: "Business Activity", text: "A viable manufacturing, service, trading or allied activity as permitted.", icon: "factory" as const },
+      { title: "Credit Standing", text: "Clean repayment history with no active defaults, as required by lenders.", icon: "shield" as const },
+      { title: "Financial Capacity", text: "Turnover, vintage or cash-flow profile matching the loan product.", icon: "wallet" as const },
+      { title: "Registrations", text: "Udyam, GST and entity documents as applicable to the loan type.", icon: "landmark" as const },
+      { title: "Documentation", text: "A complete KYC, DPR and financial file ready for lender review.", icon: "chip" as const },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: `${config.name} Application Process`,
+    sub: "Prepare a complete file, submit to the right lender channel and progress through appraisal to disbursement.",
+    steps: config.process,
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Vikas Bharat can help organise a complete, lender-ready documentation file.",
+    items: config.documents,
+    cta: "Download For More",
+  },
+} as const);
+
+export const mudraPage = createLoanProgramme({
+  name: "Mudra Loans (PMMY)",
+  eyebrow: "Pradhan Mantri Mudra Yojana",
+  kicker: "Collateral-Free Micro Loans up to ₹20 Lakh",
+  intro: "Mudra Loans under Pradhan Mantri Mudra Yojana (PMMY) provide collateral-free credit to micro and small businesses through banks, RRBs, small finance banks and NBFCs — across Shishu (up to ₹50,000), Kishore (₹50,001–₹5 lakh) and Tarun (₹5–₹20 lakh) categories.",
+  funding: "Up to ₹20L",
+  eligibility: "Indian citizens running or proposing non-farm micro enterprises as Proprietorship, Partnership, LLP or Private Limited, typically under about 7 years old with turnover generally not exceeding ₹25 lakh, and with no default history at any bank or financial institution.",
+  benefits: [
+    "Collateral-free loans up to ₹20 lakh",
+    "Three staged categories: Shishu, Kishore and Tarun",
+    "Competitive interest versus informal credit",
+    "Generally no processing fee for Shishu category",
+    "Mudra Card for flexible working-capital withdrawals",
+    "Coverage across manufacturing, services, trading, transport and agri-allied activities",
+  ],
+  documents: [
+    "Identity proof — Aadhaar, PAN or Voter ID",
+    "Address proof — bank statement, electricity bill or Aadhaar",
+    "Detailed Project Report / business profile",
+    "Udyam registration and entity documents (Partnership Deed / Incorporation)",
+    "Latest ITR, balance sheet and P&L for Kishore and Tarun",
+    "Caste certificate if applying under special category pathways",
+    "Quotations for machinery or assets to be financed",
+  ],
+  process: [
+    { title: "Prepare Documents", text: "Compile KYC, business plan, registration and financials for your Mudra category." },
+    { title: "Choose Lender Channel", text: "Apply via the Mudra portal or an authorised bank, MFI or NBFC branch." },
+    { title: "Submit Application", text: "Complete the form and attach the supporting document file." },
+    { title: "Loan Review", text: "The lender evaluates creditworthiness and business viability." },
+    { title: "Disbursement", text: "On approval, funds are credited to your business account." },
+  ],
+});
+
+export const msmeLoanPage = createLoanProgramme({
+  name: "MSME Loan",
+  eyebrow: "Bank & NBFC Credit for MSMEs",
+  kicker: "Loans from ₹50,000 to ₹5 Crore with CGTMSE Pathways",
+  intro: "MSME Loans help micro, small and medium enterprises fund expansion, equipment and working capital through banks and NBFCs — often at rates from about 7–12% p.a., with collateral-free options under CGTMSE and related government-backed programmes.",
+  funding: "₹50K–₹5 Cr",
+  eligibility: "Udyam-registered MSMEs and eligible new or expanding units in manufacturing, services or trading that meet lender turnover, vintage and credit norms. New businesses can also access pathways such as Mudra Shishu and PMEGP where eligible.",
+  benefits: [
+    "Loan amounts typically from ₹50,000 to ₹5 crore depending on product",
+    "Collateral-free options under CGTMSE for eligible units",
+    "Interest rates often in the 7–12% p.a. band by lender",
+    "Working capital, term loan and equipment finance coverage",
+    "Links to subsidy-backed routes such as PMEGP where applicable",
+    "Faster digital and 59-minute loan products at select lenders",
+  ],
+  documents: [
+    "Identity proof of directors / partners / proprietor",
+    "Address proof — utility bills, rent agreement or bank statement",
+    "Udyam registration, GST certificate and Startup India proof if applicable",
+    "Last 6–12 months bank statements, ITR and audited financials",
+    "Detailed Project Report or growth plan",
+    "Founder / promoter profiles and CVs",
+  ],
+  process: [
+    { title: "Eligibility Check", text: "Confirm Udyam status, loan purpose and lender fit." },
+    { title: "Prepare File", text: "Assemble KYC, financials, DPR and registration proofs." },
+    { title: "Lender Matching", text: "Shortlist bank or NBFC products aligned to amount and tenure." },
+    { title: "Application & Appraisal", text: "Submit the file and complete credit evaluation." },
+    { title: "Sanction & Disbursement", text: "Accept terms and receive funds as per sanctioned structure." },
+  ],
+});
+
+export const standupPage = createLoanProgramme({
+  name: "Stand-Up India",
+  eyebrow: "Women & SC/ST Entrepreneurship",
+  kicker: "Bank Loans from ₹10 Lakh to ₹1 Crore",
+  intro: "Stand-Up India facilitates bank loans for women entrepreneurs and SC/ST borrowers to set up greenfield enterprises or expand existing businesses through scheduled commercial banks, with structured appraisal and documentation support.",
+  funding: "₹10L–₹1 Cr",
+  eligibility: "Women entrepreneurs and SC/ST borrowers with a viable greenfield or expansion plan, applying through participating scheduled commercial banks and meeting KYC, category and bank appraisal requirements.",
+  benefits: [
+    "Bank loans typically from ₹10 lakh to ₹1 crore",
+    "Focus on women and SC/ST entrepreneurs",
+    "Supports both new enterprises and expansion cases",
+    "Government-backed facilitation through commercial banks",
+    "Clear documentation pathway for faster bank processing",
+  ],
+  documents: [
+    "Identity proof (Aadhaar / PAN) of applicant(s)",
+    "Address proof",
+    "Business plan / project report for greenfield or expansion",
+    "Caste / category proof for eligible SC/ST applicants",
+    "Bank account details and KYC documents",
+    "Business registration documents, if applicable",
+    "Financial statements for existing businesses, if applicable",
+  ],
+  process: [
+    { title: "Prepare Business Plan", text: "Define the enterprise objective, cost and funding need." },
+    { title: "Choose Eligible Bank", text: "Apply through a scheduled commercial bank participating in Stand-Up India." },
+    { title: "Submit Application", text: "Provide identity, KYC, category proof and project documents." },
+    { title: "Bank Appraisal", text: "The bank evaluates viability, compliance and repayment capacity." },
+    { title: "Sanction & Disbursement", text: "On approval, funds are released as per sanctioned terms." },
+  ],
+});
+
+export const mudraFaq = loanSchemeFaq(
+  "Mudra Loans (PMMY)",
+  "Collateral-free loans up to ₹20 lakh across Shishu (up to ₹50,000), Kishore (₹50,001–₹5 lakh) and Tarun (₹5–₹20 lakh).",
+  "Indian micro and small non-farm businesses — typically Proprietorship, Partnership, LLP or Pvt Ltd — with clean credit history and activity in manufacturing, services, trading or allied sectors.",
+  "KYC, address proof, DPR/business profile, Udyam or entity documents, financials for higher categories, and asset quotations where needed.",
+);
+
+export const msmeLoanFaq = loanSchemeFaq(
+  "MSME Loan",
+  "Typical ticket sizes range from ₹50,000 to ₹5 crore depending on the bank/NBFC product, with many collateral-free options under CGTMSE.",
+  "Udyam-registered MSMEs and eligible new or expanding units that meet lender credit, vintage and financial norms.",
+  "KYC, address proof, Udyam/GST documents, bank statements, ITR/financials, DPR and promoter profiles.",
+);
+
+export const standupFaq = loanSchemeFaq(
+  "Stand-Up India",
+  "Eligible borrowers can typically access bank loans from ₹10 lakh to ₹1 crore for greenfield or expansion projects.",
+  "Women entrepreneurs and SC/ST borrowers with a viable business plan applying through participating scheduled commercial banks.",
+  "Identity and address proof, business plan, category certificate where applicable, KYC, and registration or financial documents if already operating.",
+);
 
 export const hero = {
   eyebrow: "VIKASBHART",
