@@ -1193,6 +1193,225 @@ export const schemeFaq = {
   ],
 } as const;
 
+export const grantPage = {
+  eyebrow: "Government Schemes • Non-Repayable Funding",
+  heading: "Government Grants",
+  kicker: "MSME • Startup India • DPIIT • Sector-Specific Schemes",
+  intro:
+    "Access non-repayable government funding with Vikas Bharat’s specialized grants consultancy — scheme identification, eligibility assessment, application development, documentation support and follow-up to maximise your chances of securing government financial assistance.",
+  cta: "Start Funding Journey",
+  imageAlt: "Advisor preparing a government grant application with a founder",
+  stats: [
+    { value: "₹500Cr+", label: "Grants Secured" },
+    { value: "50+", label: "Schemes Covered" },
+    { value: "85%", label: "Success Rate" },
+    { value: "100%", label: "Documentation Support" },
+  ] as const,
+  unlock: {
+    eyebrow: "Non-Repayable Capital",
+    heading: "Unlock Government Funding for Your Business",
+    paragraphs: [
+      "Government grants are an excellent source of non-repayable funding that can help businesses grow without incurring debt. These grants cover a wide range of areas, including research and development, manufacturing and export promotion, providing crucial support to startups and MSMEs.",
+      "Vikas Bharat specialises in connecting businesses with suitable government funding programs, streamlining the complex application process and developing proposals that align with the goals of each scheme. Our expertise boosts your chances of approval while ensuring full compliance with grant requirements.",
+    ],
+    benefitsHeading: "Key Benefits",
+    benefits: [
+      "Non-repayable funding",
+      "Targeted sector support",
+      "Subsidies for capital expenditure and tech upgrades",
+      "Focus on job creation and export promotion",
+    ],
+  },
+  categories: {
+    eyebrow: "Grant Map",
+    heading: "Major Grant Categories We Cover",
+    sub: "Central and sector programs we screen against your business model, location and stage.",
+    leftHeading: "Who Can Apply?",
+    rightHeading: "What Makes Us Different",
+    items: [
+      {
+        title: "Startup India Seed Fund",
+        text: "Financial assistance for early-stage startups for proof of concept, prototype development, product trials.",
+        icon: "seed" as const,
+      },
+      {
+        title: "MSME Technology Upgradation Schemes",
+        text: "Capital subsidies for modernization and technology enhancement of manufacturing units.",
+        icon: "tech" as const,
+      },
+      {
+        title: "PMEGP (Prime Minister's Employment Generation Programme)",
+        text: "Subsidies for new manufacturing, services, or trading micro-enterprises.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Export Promotion Capital Goods (EPCG)",
+        text: "Duty exemptions for capital goods imports for export-oriented businesses.",
+        icon: "export" as const,
+      },
+      {
+        title: "Biotechnology Industry Research Assistance Council (BIRAC) Grants",
+        text: "Funding for biotech startups and innovation projects.",
+        icon: "lab" as const,
+      },
+      {
+        title: "Design-Led Manufacturing Scheme",
+        text: "Support for domestic manufacturing of telecom and networking products.",
+        icon: "chip" as const,
+      },
+      {
+        title: "SIDBI Funds",
+        text: "Special focus on MSMEs in priority sectors including manufacturing and service enterprises.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "National Initiative for Developing and Harnessing Innovations (NIDHI)",
+        text: "Support for tech-based startups and innovation.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Agriculture Processing and Rural Development Grants",
+        text: "Funding for food processing and agribusiness ventures.",
+        icon: "agri" as const,
+      },
+      {
+        title: "Textile Sector Schemes",
+        text: "Support for technical textiles, apparel manufacturing and textile park development.",
+        icon: "textile" as const,
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Grants Desk",
+    heading: "Our Grants Consultancy Services",
+    sub: "End-to-end support from first scheme match to post-approval reporting.",
+    items: [
+      {
+        title: "Scheme Identification",
+        text: "Research and identify relevant grant programs aligned with your business model, industry, location and growth objectives.",
+        icon: "search" as const,
+      },
+      {
+        title: "Eligibility Assessment",
+        text: "Conduct thorough evaluation of your business against scheme criteria to determine qualification and prepare a compliance roadmap.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Strategic Application Planning",
+        text: "Develop application strategies that highlight alignment between your business objectives and scheme priorities.",
+        icon: "map" as const,
+      },
+      {
+        title: "Proposal Development",
+        text: "Create compelling proposals including project plans, impact assessments and implementation roadmaps tailored to scheme requirements.",
+        icon: "file" as const,
+      },
+      {
+        title: "Documentation Support",
+        text: "Prepare comprehensive documentation packages including business plans, financial projections and supporting evidence.",
+        icon: "folder" as const,
+      },
+      {
+        title: "Application Submission",
+        text: "Handle timely submission with proper formatting, organisation and adherence to all procedural requirements.",
+        icon: "send" as const,
+      },
+      {
+        title: "Interview & Presentation Support",
+        text: "Prepare for and participate in evaluation interviews, presentations and clarification sessions with funding authorities.",
+        icon: "mic" as const,
+      },
+      {
+        title: "Post-Approval Compliance",
+        text: "Ensure adherence to grant terms, reporting requirements and utilisation guidelines to prevent complications.",
+        icon: "shield" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We File",
+    heading: "Our Grant Application Process",
+    sub: "A structured approach to maximise your grant approval chances.",
+    steps: [
+      {
+        title: "Initial Consultation",
+        text: "Understand your business model, objectives and funding requirements through comprehensive discussion.",
+      },
+      {
+        title: "Scheme Research",
+        text: "Identify all relevant government schemes and grants matching your business profile and requirements.",
+      },
+      {
+        title: "Eligibility Analysis",
+        text: "Assess qualification potential for identified schemes and determine documentation needs.",
+      },
+      {
+        title: "Application Strategy",
+        text: "Develop compelling narratives that align your business with scheme objectives and highlight potential impact.",
+      },
+      {
+        title: "Documentation Preparation",
+        text: "Create comprehensive application packages with all required forms, business plans and supporting documents.",
+      },
+    ],
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Required Documents",
+    note: "Documentation requirements vary significantly between grant schemes. Our team provides customised checklists specific to your target schemes after initial assessment.",
+    items: [
+      "Business registration certificates (Incorporation Certificate, MSME Registration, etc.)",
+      "Financial statements for the past 2–3 years (as applicable)",
+      "Cost estimates and quotations for proposed expenditures",
+      "Industry-specific certifications and licenses",
+      "Bank statements and existing financing documentation",
+      "PAN, GST registration and other tax-related documents",
+      "Detailed project report with implementation plan and timelines",
+      "Land and building ownership/lease documents (where applicable)",
+      "Promoter profiles with identification and address proofs",
+      "Employment and skill development plans (for relevant schemes)",
+    ],
+    cta: "Download For More",
+  },
+} as const;
+
+export const grantFaq = {
+  heading: "Grant questions, answered",
+  sub: "Eligibility, timelines, coverage and what happens after a grant is sanctioned.",
+  items: [
+    {
+      question: "Which businesses qualify for government grants in India?",
+      answer:
+        "Grant eligibility varies by scheme, but generally focuses on registered entities including MSMEs, startups recognised by DPIIT, manufacturing units, export-oriented businesses and innovative enterprises.",
+    },
+    {
+      question: "How long does the government grant application process take?",
+      answer:
+        "The total process from initiation to fund receipt generally spans 4–9 months, with smaller grants having faster processing times than larger funding programs.",
+    },
+    {
+      question: "What costs are typically covered by government grants?",
+      answer:
+        "Grant coverage typically includes capital expenditure, infrastructure development, R&D activities, technology acquisition, quality certification, marketing and export promotion, and skill development.",
+    },
+    {
+      question: "What are the common reasons for grant application rejection?",
+      answer:
+        "Common rejection factors include incomplete documentation, misalignment between project and scheme objectives, unrealistic financial projections, insufficient innovation, and lack of promoter experience.",
+    },
+    {
+      question: "Are there any obligations after receiving a government grant?",
+      answer:
+        "Yes. Post-approval obligations typically include maintaining specific business operations for a minimum period, implementing the project according to the approved plan, and submitting periodic progress and financial reports.",
+    },
+    {
+      question: "Can Vikas Bharat guarantee grant approval?",
+      answer:
+        "We cannot guarantee approval — final decisions rest with government authorities. Our specialised desk is built to improve success probability. The grants practice cites an 85% success rate on files we prepare and follow through.",
+    },
+  ],
+} as const;
+
 export const hero = {
   eyebrow: "VIKASBHART",
   headline: "Sapno Se Safalta Tak",
@@ -2070,7 +2289,9 @@ export function getServiceBySlug(slug: string) {
 }
 
 export function getAllServiceSlugs() {
-  return services.items.map((item) => item.slug);
+  return services.items
+    .map((item) => item.slug)
+    .filter((slug) => slug !== "grant");
 }
 
 export const howItWorks = {
