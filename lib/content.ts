@@ -2451,6 +2451,8 @@ export const startupPage = {
       "50% patent fee rebate and fast-track IPR examination",
       "Access to SISFS and government procurement programs",
       "Self-certification under labour and environmental laws",
+      "₹200 Cr turnover cap and 10-year recognition for regular startups; ₹300 Cr and 20 years for deep tech",
+      "GeM seller registration with relaxations in prior experience, turnover and EMD",
     ],
   },
   services: {
