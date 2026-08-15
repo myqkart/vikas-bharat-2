@@ -30,7 +30,7 @@ export default function CountUp({ value, className }: CountUpProps) {
     return spring.on("change", (v) => setDisplay(Math.round(v)));
   }, [spring]);
 
-  if (numeric === null) {
+  if (numeric === null || (value.match(/\d+/g)?.length ?? 0) !== 1) {
     return (
       <span ref={ref} className={className}>
         {value}

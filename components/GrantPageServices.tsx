@@ -5,6 +5,7 @@ import {
   ClipboardCheck,
   FileText,
   FolderOpen,
+  Landmark,
   Map,
   Mic,
   Search,
@@ -33,6 +34,7 @@ const iconMap: Record<string, LucideIcon> = {
   wallet: Wallet,
   zap: Zap,
   users: Users,
+  landmark: Landmark,
 };
 
 type ServicesData = {

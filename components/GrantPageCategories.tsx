@@ -5,6 +5,7 @@ import {
   BarChart3,
   Briefcase,
   Cog,
+  FileText,
   Globe,
   Lightbulb,
   Microscope,
@@ -39,6 +40,7 @@ const iconMap: Record<string, LucideIcon> = {
   textile: Scissors,
   wallet: Wallet,
   shield: Shield,
+  file: FileText,
 };
 
 const iconTone: Record<string, string> = {
@@ -54,6 +56,7 @@ const iconTone: Record<string, string> = {
   textile: "bg-marigold/12 text-marigold-dark",
   wallet: "bg-success/12 text-success",
   shield: "bg-indigo/10 text-indigo",
+  file: "bg-indigo/8 text-indigo",
 };
 
 type CategoryItem = { title: string; text: string; icon: string };

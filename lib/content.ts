@@ -67,7 +67,7 @@ export const servicesMegaMenu = {
       {
         title: "NBFC",
         description: "Alternative Funding",
-        href: "/services/loan",
+        href: "/services/nbfc",
         icon: "nbfc" as const,
       },
     ],
@@ -156,7 +156,7 @@ export const servicePage = {
       {
         title: "NBFC Financing Solutions",
         text: "When you need faster approval or a loan product banks do not offer, we match you to the right NBFC from our network of 25+ partners — working capital, machinery, LAP, or invoice discounting.",
-        href: "/services/loan",
+        href: "/services/nbfc",
         image: photos.aboutServiceNbf,
         icon: "nbfc" as const,
       },
@@ -1642,6 +1642,243 @@ export const loanFaq = {
       question: "Can startups and new businesses get loans without significant operating history?",
       answer:
         "Yes, although options are more limited. New businesses can explore Startup India programs, SIDBI startup assistance, and specialized NBFC startup lending. Depending on the lender, collateral, higher equity contribution and personal guarantees may be required.",
+    },
+  ],
+} as const;
+
+export const nbfcPage = {
+  eyebrow: "Alternative Financing • Flexible Funding",
+  heading: "NBFC Financing Solutions",
+  kicker: "Quick Disbursement • Flexible Eligibility • Specialized Products",
+  intro:
+    "Banks said no — or just too slow? NBFCs offer faster approvals, flexible eligibility, and loan products that banks don’t provide. Vikas Bharat finds the right NBFC for your business and handles everything from application to disbursement.",
+  cta: "Get NBFC Loan Options",
+  imageAlt: "Advisor matching a founder to NBFC financing partners",
+  stats: [
+    { value: "24–72hrs", label: "Disbursement Time" },
+    { value: "₹1Cr+", label: "Funding Available" },
+    { value: "25+", label: "NBFC Partners" },
+    { value: "Flexible", label: "Eligibility Criteria" },
+  ] as const,
+  unlock: {
+    eyebrow: "Faster Capital",
+    heading: "NBFC Financing Solutions",
+    paragraphs: [
+      "When you need faster approval or a loan product banks do not offer, we match you to the right NBFC from our network of 25+ partners — working capital, machinery, LAP, or invoice discounting.",
+      "Vikas Bharat helps businesses identify suitable financing based on their business model, financial profile and funding requirements — across banks, NBFCs, government schemes and specialised products.",
+    ],
+    benefitsHeading: "Why Choose NBFC Financing?",
+    benefits: [
+      "Faster approval compared with traditional banks",
+      "Flexible eligibility criteria",
+      "Specialized loan products",
+      "Customized financing solutions",
+      "Faster disbursement",
+      "Financing for businesses that may not fit traditional bank criteria",
+    ],
+  },
+  categories: {
+    eyebrow: "Product Desk",
+    heading: "NBFC Loan Products",
+    sub: "Specialised financing products that banks often do not offer — matched to your purpose and cash flow.",
+    leftHeading: "Working Capital & Growth",
+    rightHeading: "Asset & Invoice Finance",
+    items: [
+      {
+        title: "Working Capital Loans",
+        text: "Short-term financing to manage operational expenses, inventory, payroll, supplier payments and cash-flow requirements.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Business Term Loans",
+        text: "Structured financing for business expansion, equipment purchases, infrastructure and long-term investments.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Loan Against Property",
+        text: "Financing against residential or commercial property for businesses requiring larger-ticket funding.",
+        icon: "factory" as const,
+      },
+      {
+        title: "Invoice Discounting",
+        text: "Convert outstanding invoices into immediate working capital instead of waiting for customers to make payments.",
+        icon: "file" as const,
+      },
+      {
+        title: "Machinery Finance",
+        text: "Funding specifically designed for purchasing machinery, equipment and business assets.",
+        icon: "tech" as const,
+      },
+    ],
+  },
+  audience: {
+    eyebrow: "Fit Check",
+    heading: "Who Can Benefit From NBFC Financing?",
+    sub: "NBFC financing is positioned for businesses that need speed, flexibility, or a product banks do not underwrite.",
+    leftHeading: "When banks are too slow",
+    rightHeading: "When the product must fit",
+    items: [
+      {
+        title: "Faster loan approval",
+        text: "Need a sanction without the typical bank queue and committee cycle.",
+        icon: "rocket" as const,
+      },
+      {
+        title: "Urgent working capital",
+        text: "Inventory, payroll or supplier payments that cannot wait on a 2–4 week bank file.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Bank eligibility gaps",
+        text: "Difficulty meeting traditional bank criteria — vintage, collateral or CIBIL band.",
+        icon: "shield" as const,
+      },
+      {
+        title: "Unconventional cash flows",
+        text: "Inconsistent or seasonal revenue that cash-flow underwriting can still support.",
+        icon: "seed" as const,
+      },
+      {
+        title: "Specialized products",
+        text: "Invoice discounting, machinery finance or LAP structured around the actual use of funds.",
+        icon: "tech" as const,
+      },
+      {
+        title: "Larger-ticket financing",
+        text: "Bigger tickets where property-backed or specialised NBFC products are a better match.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "Invoice-based financing",
+        text: "Unlock cash against receivables instead of waiting on customer payment cycles.",
+        icon: "file" as const,
+      },
+      {
+        title: "Flexible repayment",
+        text: "Structures that can flex with seasonality, collections and growth plans.",
+        icon: "factory" as const,
+      },
+    ],
+  },
+  services: {
+    eyebrow: "Why This Desk",
+    heading: "Benefits of Choosing Vikas Bharat",
+    sub: "A 25+ NBFC network, product matching, and a file that is prepared and followed to disbursement.",
+    items: [
+      {
+        title: "25+ NBFC Network",
+        text: "Access a network of more than 25 NBFC partners to find a suitable financing option.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Faster Processing",
+        text: "NBFCs can provide faster approvals and disbursement compared with traditional bank financing.",
+        icon: "zap" as const,
+      },
+      {
+        title: "Product Matching",
+        text: "We match businesses with appropriate products such as working capital, machinery finance, LAP and invoice discounting.",
+        icon: "search" as const,
+      },
+      {
+        title: "Documentation Support",
+        text: "Assistance throughout the documentation and application process.",
+        icon: "folder" as const,
+      },
+      {
+        title: "Better Financing Structure",
+        text: "Support in selecting and structuring financing according to the business requirement.",
+        icon: "map" as const,
+      },
+    ],
+  },
+  ecosystem: {
+    eyebrow: "Financing Desk",
+    heading: "Business Financing Support",
+    sub: "We help you identify suitable financing based on your business model, financial profile and funding requirements.",
+    items: [
+      {
+        title: "Banks",
+        text: "Term loans, working capital and scheme-linked bank products when the file fits a branch underwriting path.",
+        icon: "landmark" as const,
+      },
+      {
+        title: "NBFCs",
+        text: "Faster, more flexible partners for cash-flow, invoice, machinery and property-backed tickets.",
+        icon: "wallet" as const,
+      },
+      {
+        title: "Government schemes",
+        text: "MUDRA, CGTMSE and other backed programs where eligibility and documentation can unlock cheaper capital.",
+        icon: "clipboard" as const,
+      },
+      {
+        title: "Specialized products",
+        text: "Invoice discounting, LAP and machinery finance structured around the actual use of funds.",
+        icon: "zap" as const,
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How We File",
+    heading: "Our NBFC Financing Process",
+    sub: "From first assessment to funds in the account — matched, documented and followed.",
+    steps: [
+      {
+        title: "Business Assessment",
+        text: "Understand your business profile, financial position, funding requirement and purpose of the loan.",
+      },
+      {
+        title: "Eligibility Evaluation",
+        text: "Assess your financials, credit profile, revenue, business vintage and funding requirements.",
+      },
+      {
+        title: "NBFC Matching",
+        text: "Match your business with suitable NBFC partners and financing products.",
+      },
+      {
+        title: "Documentation",
+        text: "Collect and organize financial, business, KYC and supporting documents.",
+      },
+      {
+        title: "Application & Verification",
+        text: "Submit the application and coordinate with the NBFC during verification and underwriting.",
+      },
+      {
+        title: "Approval",
+        text: "Complete lender requirements and obtain the final sanction.",
+      },
+      {
+        title: "Disbursement",
+        text: "Complete the final formalities and receive the approved funds.",
+      },
+    ],
+  },
+} as const;
+
+export const nbfcFaq = {
+  heading: "NBFC questions, answered",
+  sub: "How NBFC loans differ from banks, what happens after a rejection, products and disbursement speed.",
+  items: [
+    {
+      question: "What is the difference between an NBFC loan and a bank loan?",
+      answer:
+        "Both are business loans, but NBFCs are faster to approve, more flexible on eligibility, and offer products like invoice discounting that most banks don't. The trade-off is interest rates that are typically 1–4% higher than PSU bank rates.",
+    },
+    {
+      question: "Can I get an NBFC loan if my bank loan application was rejected?",
+      answer:
+        "Yes, in many cases. NBFCs use different credit models. Some focus more on your cash flows than your CIBIL score, while others accept lower scores such as 650+ that banks would reject.",
+    },
+    {
+      question: "What NBFC loan products are available for MSMEs?",
+      answer:
+        "Common NBFC products for MSMEs include working capital loans, term loans, Loan Against Property (LAP), invoice discounting and machinery finance. Vikas Bharat matches businesses with the appropriate product based on their funding purpose.",
+    },
+    {
+      question: "How long does it take to get an NBFC loan disbursed?",
+      answer:
+        "Most NBFC loans disburse within 24–72 hours after complete documentation. Some fintechs in our network can disburse working-capital loans the same day for pre-approved profiles.",
     },
   ],
 } as const;
