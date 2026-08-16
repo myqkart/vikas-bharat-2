@@ -7248,6 +7248,1063 @@ export const standupFaq = loanSchemeFaq(
   "Identity and address proof, business plan, category certificate where applicable, KYC, and registration or financial documents if already operating.",
 );
 
+
+const grantSchemeFaq = (
+  name: string,
+  funding: string,
+  eligibility: string,
+  documents: string,
+) => ({
+  heading: `${name} questions, answered`,
+  sub: "Grant support, eligibility, documents and the application process.",
+  items: [
+    {
+      question: `What is ${name}?`,
+      answer: `${name} provides non-dilutive or grant-linked support to qualifying innovators, startups or organisations under its programme guidelines.`,
+    },
+    {
+      question: "What funding support is available?",
+      answer: funding,
+    },
+    {
+      question: "Who is eligible to apply?",
+      answer: eligibility,
+    },
+    {
+      question: "What documents are required?",
+      answer: documents,
+    },
+  ],
+});
+
+const createGrantProgramme = (config: {
+  name: string;
+  eyebrow: string;
+  kicker: string;
+  intro: string;
+  funding: string;
+  routeLabel?: string;
+  eligibility: string;
+  benefits: readonly string[];
+  documents: readonly string[];
+  process: readonly { title: string; text: string }[];
+}) => ({
+  eyebrow: config.eyebrow,
+  heading: config.name,
+  kicker: config.kicker,
+  intro: config.intro,
+  cta: "Check Your Eligibility",
+  imageAlt: `${config.name} applicants preparing a grant application`,
+  stats: [
+    { value: config.funding, label: "Grant Potential" },
+    { value: config.routeLabel ?? "Grant", label: "Support Route" },
+    { value: "Startup", label: "Applicant Focus" },
+    { value: "India", label: "Application Access" },
+  ],
+  unlock: {
+    eyebrow: "Scheme Overview",
+    heading: `What is ${config.name}?`,
+    paragraphs: [
+      config.intro,
+      "Vikas Bharat helps you check fit, prepare documents and structure a complete grant-ready application file.",
+    ],
+    benefitsHeading: "Why applicants apply",
+    benefits: config.benefits,
+  },
+  benefits: {
+    eyebrow: "What You Unlock",
+    heading: `Benefits of ${config.name}`,
+    sub: "Grant support and guidance to help innovators build, validate and scale.",
+    items: config.benefits.map((title, index) => ({
+      title,
+      text: [
+        "Grant or incentive support aligned to scheme guidelines and project evaluation.",
+        "Mentorship and ecosystem guidance to sharpen the execution plan.",
+        "Structured documentation support for portals and implementing agencies.",
+        "Pathways to pilots, market access and follow-on opportunities.",
+      ][index % 4],
+      icon: (["wallet", "users", "send", "shield"][index % 4]) as "wallet" | "users" | "send" | "shield",
+    })),
+  },
+  eligibility: {
+    eyebrow: "Who Qualifies",
+    heading: `${config.name} Eligibility`,
+    sub: config.eligibility,
+    leftHeading: "Applicant Profile",
+    rightHeading: "Project & Compliance",
+    items: [
+      { title: "Eligible Applicant", text: "Individuals, startups or organisations covered under the scheme guidelines.", icon: "users" as const },
+      { title: "Project Fit", text: "A project aligned to the scheme sector, stage and impact requirements.", icon: "factory" as const },
+      { title: "Innovation Focus", text: "A technology-led, scalable or high-impact solution where required.", icon: "chip" as const },
+      { title: "Stage Readiness", text: "Idea, prototype, MVP or early traction as specified by the programme.", icon: "rocket" as const },
+      { title: "Compliance", text: "Registrations, KYC and statutory documents as applicable.", icon: "shield" as const },
+      { title: "Documentation", text: "A complete proposal and supporting file ready for agency review.", icon: "clipboard" as const },
+    ],
+  },
+  process: {
+    eyebrow: "How to Apply",
+    heading: `${config.name} Application Process`,
+    sub: "Prepare a complete file, submit through the official channel and progress through review to grant support.",
+    steps: config.process,
+  },
+  documents: {
+    eyebrow: "Paperwork",
+    heading: "Documents Required",
+    note: "Vikas Bharat can help organise a complete, grant-ready documentation file.",
+    items: config.documents,
+    cta: "Download For More",
+  },
+} as const);
+
+export const actGrantPage = createGrantProgramme({
+  name: "ACT Grants",
+  eyebrow: "Social Innovation Grant",
+  kicker: "Non-Repayable Grants for Social Entrepreneurs",
+  intro: "The ACT Grant programme supports social entrepreneurs who are building technology-led solutions to real social problems — in areas like education, health, climate action, and women's entrepreneurship. Unlike a business loan, this is a grant — the money does not have to be repaid and you do not give up any ownership of your organisation in exchange.",
+  funding: "₹5L–₹50L",
+  eligibility: "Gender Eligibility: Open to women entrepreneurs and gender-diverse leadership teams.; Target Sectors: Education, Health, Environment, or Women Entrepreneurship.; Stage of Startup: Primarily early-stage with a viable MVP (Minimum Viable Product).; Technology Focus: Technology-driven solution with potential for large-scale impact.; Geography: Targeted towards Indian startups solving Indian social challenges.",
+  benefits: ["Non-Repayable Financial Assistance", "Seed Funding", "Elite Mentorship", "Networking", "Demo Day Exposure", "MSME Support"],
+  documents: ["Business Profile — Company website link, product/service details and pitch deck.", "Founder & Team Details — CVs highlighting experience and roles.", "Financial Proof — Last 6 months of bank statements and ITR (if applicable).", "Registration Proof — MSME Certification and DPIIT Recognition.", "Innovation Narrative — Proof of Concept (PoC) or working prototype demo.", "Compliance Docs — Proof of business registration (Pvt Ltd/LLP)."],
+  process: [
+    { title: "Drafting the Plan", text: "2" },
+    { title: "Document Compilation", text: "3" },
+    { title: "Portal Submission", text: "4" },
+    { title: "Selection & Mentorship", text: "5" },
+    { title: "Technical Evaluation", text: "1" },
+    { title: "Drafting the Plan", text: "2" },
+  ],
+});
+export const actGrantFaq = grantSchemeFaq(
+  "ACT Grants",
+  "Selected applicants may receive support of about ₹5L–₹50L, subject to evaluation and scheme guidelines.",
+  "Gender Eligibility: Open to women entrepreneurs and gender-diverse leadership teams.; Target Sectors: Education, Health, Environment, or Women Entrepreneurship.; Stage of Startup: Primarily early-stage with a viable MVP (Minimum Viable Product).; Technology Focus: Technology-driv",
+  "Business Profile — Company website link, product/service details and pitch deck., Founder & Team Details — CVs highlighting experience and roles., Financial Proof — Last 6 months of bank statements and ITR (if applicable)., Registration Proof — MSME Certification and DPIIT Recognition..",
+);
+
+export const mahilaEmpowermentPage = createGrantProgramme({
+  name: "Mahila Empowerment Scheme",
+  eyebrow: "Women Entrepreneurship",
+  kicker: "Grants for Women-Led Startups",
+  intro: "Grant funding up to INR 15 Lakhs to help with operational costs, product development, marketing and scaling activities. Work out of fully-equipped incubation centres and co-working spaces, with access to shared resources and a community of other founders.",
+  funding: "Up to ₹15L",
+  eligibility: "The Mahila Empowerment Scheme is open to women entrepreneurs across India. Here is who qualifies:; Women Entrepreneurs: The scheme gives priority to women-led startups across India.; Business Types: Private Limited Companies (PVT LTD), Limited Liability Partnerships (LLP), Partnership Firms and individuals running entrepreneurial ventures are all eligible.; Clear Business Model: Applicants should have a clear busines",
+  benefits: ["Grant or incentive support under scheme guidelines", "Mentorship and ecosystem guidance", "Structured application and documentation support", "Market access and incubation pathways"],
+  documents: ["Incorporation / registration proof", "KYC of founders or promoters", "Pitch deck or detailed project proposal", "Financial statements where applicable", "DPIIT / Udyam certificate if required"],
+  process: [
+    { title: "Register Online", text: "Create an account on the Startup Yogdan portal and complete your basic profile." },
+    { title: "Submit Business Plan", text: "Upload a detailed business plan including your vision, mission, market analysis and financial projections." },
+    { title: "Provide Documentation", text: "Submit necessary documents including business registration, PAN, Aadhar and other relevant certificates." },
+    { title: "Preliminary Screening", text: "Your application will undergo an initial screening to ensure eligibility criteria are met." },
+    { title: "Final Selection & Grant Disbursement", text: "Shortlisted candidates will be invited for a pitch presentation, followed by final selection and grant disbursement." },
+    { title: "Register Online", text: "Create an account on the Startup Yogdan portal and complete your basic profile." },
+  ],
+});
+export const mahilaEmpowermentFaq = grantSchemeFaq(
+  "Mahila Empowerment Scheme",
+  "Selected applicants may receive support of about Up to ₹15L, subject to evaluation and scheme guidelines.",
+  "The Mahila Empowerment Scheme is open to women entrepreneurs across India. Here is who qualifies:; Women Entrepreneurs: The scheme gives priority to women-led startups across India.; Business Types: Private Limited Companies (PVT LTD), Limited Liability Partnerships (LLP), Partne",
+  "Incorporation / registration proof, KYC of founders or promoters, Pitch deck or detailed project proposal, Financial statements where applicable.",
+);
+
+export const sparkGrantPage = createGrantProgramme({
+  name: "Spark Grant",
+  eyebrow: "Women Founders",
+  kicker: "Innovation Grants for Women Entrepreneurs",
+  intro: "If you are a woman entrepreneur or a startup with an innovative idea, the Spark Grant is a government-backed, equity-free funding scheme that provides up to ₹88 Lakhs to help you build and grow your business in high-growth sectors like AI, SaaS, HealthTech and more. With the Spark Grant, you keep full ownership of your business while getting the financial support you need to grow further.",
+  funding: "Up to ₹88L",
+  eligibility: "The Spark Grant is open to a wide range of entrepreneurs, provided they meet the following requirements:; Registered Business: Must be a registered for-profit entity, such as a Proprietorship, LLP, Pvt Ltd, Partnership, etc.; At Least One Woman Founder: The business must have at least one woman founder or co-founder. Individual women entrepreneurs planning to start a venture can also apply.; Innovative and Scalable I",
+  benefits: ["Non-Dilutive Funding", "Eligibility for All for-Profit Entities", "Sector Agnostic", "Equity-Free Funding", "Women Empowerment", "Diverse Sectors"],
+  documents: ["Keep the following ready before you apply (as typically requested for incubator-led grants):", "-   Certificate of incorporation / partnership deed and business registration proof", "-   Proof of women founder/co-founder identity and shareholding — -   Pitch deck, business plan and financial projections", "-   Bank account details and KYC for the applying entity — -   Sector-specific technical or product roadmap (where applicable)"],
+  process: [
+    { title: "Ensure Eligibility", text: "Confirm sector fit, women-founder requirement and registration status." },
+    { title: "Prepare Your Application", text: "Compile business plan, traction metrics and funding ask." },
+    { title: "Provide References or Testimonials", text: "Add credible references that support your application." },
+    { title: "Submit Your Application", text: "Submit through the designated incubator or portal as announced." },
+    { title: "Grant Selection Process", text: "Evaluation, interviews and milestone-based disbursement as per program rules." },
+    { title: "Ensure Eligibility", text: "Confirm sector fit, women-founder requirement and registration status." },
+  ],
+});
+export const sparkGrantFaq = grantSchemeFaq(
+  "Spark Grant",
+  "Selected applicants may receive support of about Up to ₹88L, subject to evaluation and scheme guidelines.",
+  "The Spark Grant is open to a wide range of entrepreneurs, provided they meet the following requirements:; Registered Business: Must be a registered for-profit entity, such as a Proprietorship, LLP, Pvt Ltd, Partnership, etc.; At Least One Woman Founder: The business must have at ",
+  "Keep the following ready before you apply (as typically requested for incubator-led grants):, -   Certificate of incorporation / partnership deed and business registration proof, -   Proof of women founder/co-founder identity and shareholding — -   Pitch deck, business plan and financial projections, -   Bank account details and KYC for the applying entity — -   Sector-specific technical or product roadmap (where applicable).",
+);
+
+export const tide2Page = createGrantProgramme({
+  name: "TIDE 2.0 Scheme",
+  eyebrow: "MeitY • Tech Incubation",
+  kicker: "Technology Incubation for Tech Startups",
+  intro: "TIDE 2.0 (Technology Incubation and Development of Entrepreneurs) is a flagship program under MeitY. The scheme aims to promote technology-driven innovation and entrepreneurship in India by providing a structured framework for growth. Through this program, startups in technology-related sectors get access to funding, mentorship, incubation, and networking support to scale their tech solutions.",
+  funding: "Up to ₹7L",
+  eligibility: "Startup Stage: Revenue stage or market-ready prototype/MVP with traction.; Entity Type: Private Limited Company, LLP, Partnership, or Sole Proprietorship.; Registration: Indian-incorporated entity with Startup India recognition.; Founder’s Commitment: Founders/co-founders must work full-time on the business.; Tech Focus: Deep-tech or emerging sectors.",
+  benefits: ["Financial Grant Support", "Expert Mentoring", "Lab and Workspace Access", "Market Access"],
+  documents: ["-   Company Profile", "-   Founders’ Information — -   DPIIT / Startup India Recognition Certificate", "-   Business Plan", "-   TRL Evidence", "-   Financial Documents", "-   IP Documents"],
+  process: [
+    { title: "Portal Entry", text: "2" },
+    { title: "Fill Application", text: "3" },
+    { title: "Document Upload", text: "4" },
+    { title: "Funding & Onboarding", text: "5" },
+    { title: "Pitch Session", text: "1" },
+    { title: "Portal Entry", text: "2" },
+  ],
+});
+export const tide2Faq = grantSchemeFaq(
+  "TIDE 2.0 Scheme",
+  "Selected applicants may receive support of about Up to ₹7L, subject to evaluation and scheme guidelines.",
+  "Startup Stage: Revenue stage or market-ready prototype/MVP with traction.; Entity Type: Private Limited Company, LLP, Partnership, or Sole Proprietorship.; Registration: Indian-incorporated entity with Startup India recognition.; Founder’s Commitment: Founders/co-founders must wo",
+  "-   Company Profile, -   Founders’ Information — -   DPIIT / Startup India Recognition Certificate, -   Business Plan, -   TRL Evidence.",
+);
+
+export const rkvyRaftaarPage = createGrantProgramme({
+  name: "RKVY RAFTAAR",
+  eyebrow: "Agri Innovation",
+  kicker: "Agri-Startup Incubation & Grants",
+  intro: "The RKVY RAFTAAR scheme is a flagship initiative to foster agri-entrepreneurship and commercialization of agricultural innovations. For founders exploring startup funding in India, it provides grants, mentorship, and networking at different growth stages.",
+  funding: "Up to ₹25L",
+  eligibility: "Applicants must meet the specific RKVY RAFTAAR eligibility requirements, with priority for startups beyond concept stage.; Startup Type: Must be a DPIIT-recognized Indian startup under Startup India.; Prototype Requirement: Minimum Viable Product (MVP) or working prototype is required.; Focus Areas: Startup should work in agriculture or allied sectors.; Business Stage: Idea-stage innovators or seed-stage startups wit",
+  benefits: ["Grant Support", "Milestone-linked Funding", "Mentorship & Training", "Networking Opportunities", "Waste to Wealth", "Market Access & Visibility"],
+  documents: ["Preparing your file correctly is essential. Here are the mandatory documents for submission:", "Company Registration — Certificate of Incorporation (Pvt Ltd or LLP).", "DPIIT Recognition — Startup India recognition status.", "MSME Certificate — MSME certificate for additional government support.", "Pitch Deck — Technology, TRL level, and market potential details.", "TRL Proof — Prototype photos, demo videos, or test reports.", "Founders' CVs — Relevant founder and core team credentials.", "Financials — Bank statements and tax filings, where applicable."],
+  process: [
+    { title: "Prepare Documents", text: "2" },
+    { title: "Submit Application", text: "3" },
+    { title: "Evaluation Process", text: "4" },
+    { title: "Funding & Support", text: "5" },
+    { title: "Interview & Selection", text: "1" },
+    { title: "Prepare Documents", text: "2" },
+  ],
+});
+export const rkvyRaftaarFaq = grantSchemeFaq(
+  "RKVY RAFTAAR",
+  "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
+  "Applicants must meet the specific RKVY RAFTAAR eligibility requirements, with priority for startups beyond concept stage.; Startup Type: Must be a DPIIT-recognized Indian startup under Startup India.; Prototype Requirement: Minimum Viable Product (MVP) or working prototype is req",
+  "Preparing your file correctly is essential. Here are the mandatory documents for submission:, Company Registration — Certificate of Incorporation (Pvt Ltd or LLP)., DPIIT Recognition — Startup India recognition status., MSME Certificate — MSME certificate for additional government support..",
+);
+
+export const nidhiPrayasPage = createGrantProgramme({
+  name: "NIDHI PRAYAS Grant",
+  eyebrow: "DST • Prototype Support",
+  kicker: "Convert Ideas into Prototypes",
+  intro: "The NIDHI PRAYAS (National Initiative for Developing and Harnessing Innovations - PRomoting and Accelerating Young and Aspiring technology entrepreneurs) scheme is an initiative under the Department of Science & Technology (DST). It is a key pillar of startup funding in India, aimed at supporting innovators who are still in the early stages of development.",
+  funding: "Up to ₹10L",
+  eligibility: "Applicants must meet defined innovation, age, and compliance criteria before applying through an authorized PRAYAS center.; Applicant Type: Individuals, Proprietorships, Partnerships, LLPs, or Private Limited companies.; Business Stage: Early stage with a validated PoC or MVP.; Company Age: Up to 7 years old (10 years for biotech).; Annual Turnover: Should not exceed ₹25 Lakhs in any prior financial year.",
+  benefits: ["Seed Capital", "Technical Mentorship", "Incubation Support", "Networking", "Commercialization"],
+  documents: ["Prepare a complete, compliant file before submission to improve review speed and approval likelihood.", "Pitch Deck — A detailed deck explaining the problem, solution, and roadmap. (Refer to grant for ventures for structure).", "DPIIT Recognition Certificate — Copy of the Startup India recognition certificate.", "MSME Certificate — MSME Certification for additional credibility.", "Technology Description and PoC evidence — Proof of concept (PoC) and technical whitepaper.", "Financial Statements — Audited statements or self-certified balance sheets for the past year.", "Founder Profiles/CVs — Detailed CVs highlighting technical expertise.", "IP/Patent details (if any) — Details of patents or IP filings (if any)."],
+  process: [
+    { title: "Prepare the Documents", text: "2" },
+    { title: "Submit Your Application", text: "3" },
+    { title: "Application Review", text: "4" },
+    { title: "Interview & Selection", text: "5" },
+    { title: "Funding & Support", text: "1" },
+    { title: "Prepare the Documents", text: "2" },
+  ],
+});
+export const nidhiPrayasFaq = grantSchemeFaq(
+  "NIDHI PRAYAS Grant",
+  "Selected applicants may receive support of about Up to ₹10L, subject to evaluation and scheme guidelines.",
+  "Applicants must meet defined innovation, age, and compliance criteria before applying through an authorized PRAYAS center.; Applicant Type: Individuals, Proprietorships, Partnerships, LLPs, or Private Limited companies.; Business Stage: Early stage with a validated PoC or MVP.; C",
+  "Prepare a complete, compliant file before submission to improve review speed and approval likelihood., Pitch Deck — A detailed deck explaining the problem, solution, and roadmap. (Refer to grant for ventures for structure)., DPIIT Recognition Certificate — Copy of the Startup India recognition certificate., MSME Certificate — MSME Certification for additional credibility..",
+);
+
+export const meityGenesisEirPage = createGrantProgramme({
+  name: "MeitY GENESIS EIR",
+  eyebrow: "Deep-Tech EIR",
+  kicker: "Entrepreneur-in-Residence Support",
+  intro: "The Genesis EiR (Entrepreneur-in-Residence) program is a MeitY initiative that supports early-stage innovators in Deeptech, ICT, or ESDM to move from idea to market-ready prototype with structured funding and mentorship. With the launch of Genesis EiR 2.0, the Ministry of Electronics and Information Technology (MeitY) has increased its support for the Indian startup ecosystem.",
+  funding: "Up to ₹10L",
+  eligibility: "To qualify for the GENESIS EiR 2.0 program, applicants must meet the following criteria:; Who Can Apply?: - Indian Citizenship: Applicants must be Indian nationals and at least 18 years old.; - Students or DPIIT-Registered Founders: Full-time students (UG/PG) or founders/co-founders of DPIIT-registered startups, generally less than 2 years old.; - Innovation Stage: Startups should be at ideation, validation, or proto",
+  benefits: ["Grant or incentive support under scheme guidelines", "Mentorship and ecosystem guidance", "Structured application and documentation support", "Market access and incubation pathways"],
+  documents: ["-   DPIIT Registration Certificate (if applicable) — -   Educational Certificates for students", "-   Business Plan or Pitch Deck detailing your vision, technology, market potential, and projections", "-   Proof of Indian Citizenship (Aadhaar or Passport) — -   Prototype or Ideation Details outlining your current stage and roadmap"],
+  process: [
+    { title: "Check fit", text: "Review deeptech / ICT / ESDM fit for your startup idea." },
+    { title: "Prepare deck", text: "Prepare your innovation concept, market validation and MVP plan." },
+    { title: "Compile documents", text: "Gather all required documents and proof points." },
+    { title: "Submit application", text: "Apply under the Genesis EiR 2.0 call with complete details." },
+    { title: "Evaluation & onboarding", text: "Move through screening, mentorship onboarding and grant release." },
+    { title: "Check fit", text: "Review deeptech / ICT / ESDM fit for your startup idea." },
+  ],
+});
+export const meityGenesisEirFaq = grantSchemeFaq(
+  "MeitY GENESIS EIR",
+  "Selected applicants may receive support of about Up to ₹10L, subject to evaluation and scheme guidelines.",
+  "To qualify for the GENESIS EiR 2.0 program, applicants must meet the following criteria:; Who Can Apply?: - Indian Citizenship: Applicants must be Indian nationals and at least 18 years old.; - Students or DPIIT-Registered Founders: Full-time students (UG/PG) or founders/co-found",
+  "-   DPIIT Registration Certificate (if applicable) — -   Educational Certificates for students, -   Business Plan or Pitch Deck detailing your vision, technology, market potential, and projections, -   Proof of Indian Citizenship (Aadhaar or Passport) — -   Prototype or Ideation Details outlining your current stage and roadmap.",
+);
+
+export const agriBusinessGrantsPage = createGrantProgramme({
+  name: "Agri Business Grants",
+  eyebrow: "Maharashtra Agri Value Chain",
+  kicker: "Agri Processing & Rural Enterprise Grants",
+  intro: "India's central and state governments fund agri-businesses through more than 15 active grant and subsidy schemes — covering agri-tech, food processing, cold chain infrastructure, and farming inputs. Most of these schemes give money you do not have to repay, offer loans at subsidised interest rates, or reimburse part of your input costs directly. This page covers the major agri business grants available in 2026 — who can apply, how much funding is on offer, where to apply, and what documents you ",
+  funding: "Up to ₹40L",
+  eligibility: "Eligibility varies by track. Broadly, the following entities are eligible:; Track 1 – Innovators & Early-Stage Startups: Individual innovators, early-stage startups, researchers working on AI-based solutions for agriculture at concept, prototype, PoC, or MVP stage with a clear problem statement and expected impact.; Track 2 – Registered Startups & FPOs: Registered startups, FPOs, NGOs, and research teams with a worki",
+  benefits: ["Grant or incentive support under scheme guidelines", "Mentorship and ecosystem guidance", "Structured application and documentation support", "Market access and incubation pathways"],
+  documents: ["Below is a general document checklist applicable to most agri business grant applications:", "-   Registration certificate, PAN, GST (if applicable), Udyam/MSME registration — -   Aadhaar and PAN of founders/directors, photograph, basic CV/profile", "-   Detailed Project Report (DPR), business plan or project proposal, master pitch deck", "-   Problem-solution summary, revenue model and pricing strategy — -   Description of product/service, PoC/MVP details, screenshots, demos, pilot data (if any)", "-   Estimated project cost, 3–5 year projections, fund requirement and utilization plan", "-   Bank statements and basic financials (if applicable) — -   For Track 2: Working prototype or tested solution documentation"],
+  process: [
+    { title: "Identify Relevant Scheme", text: "Map your project to central/state agri grant categories and track conditions. We help you shortlist the most suitable schemes based on your business profile." },
+    { title: "Stage 1 \u2013 Application Documentation", text: "We coordinate with your team to collect all required documents, prepare the master pitch deck, scheme-specific PPT, company/startup profile, and detailed project proposal (DPR-styl" },
+    { title: "Stage 2 \u2013 Incubator Requirements (If Applicable)", text: "If the application goes through an incubator or accelerator, we help fill detailed application forms, tailor your pitch deck to highlight innovation and scalability, and prepare th" },
+    { title: "Stage 3 \u2013 Screening & Virtual Meetings", text: "We prepare you for mock Q&A, script practice, and presentation flow. We provide tips on what incubators look for in agri business grants and AI-based models, and refine the deck ba" },
+    { title: "Sanction and Utilization", text: "Receive sanction, execute milestones and maintain compliant utilization reports." },
+    { title: "Identify Relevant Scheme", text: "Map your project to central/state agri grant categories and track conditions. We help you shortlist the most suitable schemes based on your business profile." },
+  ],
+});
+export const agriBusinessGrantsFaq = grantSchemeFaq(
+  "Agri Business Grants",
+  "Selected applicants may receive support of about Up to ₹40L, subject to evaluation and scheme guidelines.",
+  "Eligibility varies by track. Broadly, the following entities are eligible:; Track 1 – Innovators & Early-Stage Startups: Individual innovators, early-stage startups, researchers working on AI-based solutions for agriculture at concept, prototype, PoC, or MVP stage with a clear pr",
+  "Below is a general document checklist applicable to most agri business grant applications:, -   Registration certificate, PAN, GST (if applicable), Udyam/MSME registration — -   Aadhaar and PAN of founders/directors, photograph, basic CV/profile, -   Detailed Project Report (DPR), business plan or project proposal, master pitch deck, -   Problem-solution summary, revenue model and pricing strategy — -   Description of product/service, PoC/MVP details, screenshots, demos, pilot data (if any).",
+);
+
+export const socialImpactPage = createGrantProgramme({
+  name: "Social Impact Innovation Scheme",
+  eyebrow: "Community Innovation",
+  kicker: "Grants for Social Welfare Solutions",
+  intro: "The Social Impact Innovation Scheme is a transformative program aimed at bridging the gap between social innovation and real-world implementation. It addresses pressing challenges in sectors such as green energy, waste management, healthcare, and education. By offering structured grants and ecosystem support, the foundation ensures that young innovators are empowered to create measurable societal impact. The Social Impact Innovation Scheme details highlight that this is more than just a governme",
+  funding: "Up to ₹5L",
+  eligibility: "The Social Impact Innovation Scheme eligibility is tailored to identify high-potential innovators at the very beginning of their journey. Meeting these requirements is essential before initiating the business registration process or submitting a proposal. Social Impact Innovation Scheme Eligibility Table; Applicant Age: Must be an Indian citizen between 18 and 35 years of age.; Entity Type: Open to Individual Innovat",
+  benefits: ["Direct Financial Assistance:", "Elite Mentorship:", "Incubation Support:", "Networking & Visibility:", "Market Readiness:"],
+  documents: ["Proof of Identity: — Valid PAN Card of the primary applicant.", "Address Proof: — Aadhaar Card or Voter ID.", "Project Proposal: — A detailed document outlining the venture's problem statement, impact metrics, and scaling roadmap. (See our guide on how government grants ", "Incorporation Docs: — If registered, provide the Certificate of Incorporation and PAN of the startup.", "Innovation Proof: — Photos, videos, or early concept designs of the prototype/MVP.", "MSME Certification: — Valid MSME certification (Udyam) for startups."],
+  process: [
+    { title: "Verify Status", text: "2" },
+    { title: "Technical Drafting", text: "3" },
+    { title: "Online Submission", text: "4" },
+    { title: "Screening", text: "5" },
+    { title: "Interaction", text: "6" },
+    { title: "Grant Allocation", text: "1" },
+  ],
+});
+export const socialImpactFaq = grantSchemeFaq(
+  "Social Impact Innovation Scheme",
+  "Selected applicants may receive support of about Up to ₹5L, subject to evaluation and scheme guidelines.",
+  "The Social Impact Innovation Scheme eligibility is tailored to identify high-potential innovators at the very beginning of their journey. Meeting these requirements is essential before initiating the business registration process or submitting a proposal. Social Impact Innovation",
+  "Proof of Identity: — Valid PAN Card of the primary applicant., Address Proof: — Aadhaar Card or Voter ID., Project Proposal: — A detailed document outlining the venture's problem statement, impact metrics, and scaling roadmap. (See our guide on how government grants , Incorporation Docs: — If registered, provide the Certificate of Incorporation and PAN of the startup..",
+);
+
+export const mobilityInnovationPage = createGrantProgramme({
+  name: "Mobility Innovation Program",
+  eyebrow: "EV • Smart Mobility",
+  kicker: "Funding for Next-Gen Mobility Startups",
+  intro: "The Mobility Innovation Program Scheme (MIP) is a 2-year incubation initiative designed to accelerate road safety innovation by empowering startups and innovators. It is a collaboration between AIC IIT Delhi and Honda India, aimed at building breakthrough solutions for the mobility sector with a special focus on AI, IoT, and sensor-driven technologies.",
+  funding: "Up to ₹10L",
+  eligibility: "Early-Stage Startups: Entrepreneurs working on innovative mobility solutions in road safety, EV technology, and smart transportation.; Student Teams & Developers: Individuals or teams developing tech solutions in road safety, mobility, or traffic management.; Researchers & Innovators: Those with research-based solutions for mobility, rider safety, or traffic management.",
+  benefits: ["Funding", "Incubation", "Mentorship", "Technical Support", "Networking Opportunities", "Workshops & Bootcamps"],
+  documents: ["Incorporation / registration proof", "KYC of founders or promoters", "Pitch deck or detailed project proposal", "Financial statements where applicable", "DPIIT / Udyam certificate if required"],
+  process: [
+    { title: "Prepare Your Documents", text: "Gather your business plan, pitch deck, technical specifications, and proof of concept or prototype." },
+    { title: "Submit Your Application", text: "Complete the application through the official MIP portal with all required documents." },
+    { title: "Review of Applications", text: "The review committee evaluates your application for alignment and innovation potential." },
+    { title: "Interview & Selection", text: "Shortlisted startups present their ideas in interviews and final selections are made." },
+    { title: "Program Onboarding", text: "Selected applicants receive timelines, resources, and next-step onboarding details." },
+    { title: "Prepare Your Documents", text: "Gather your business plan, pitch deck, technical specifications, and proof of concept or prototype." },
+  ],
+});
+export const mobilityInnovationFaq = grantSchemeFaq(
+  "Mobility Innovation Program",
+  "Selected applicants may receive support of about Up to ₹10L, subject to evaluation and scheme guidelines.",
+  "Early-Stage Startups: Entrepreneurs working on innovative mobility solutions in road safety, EV technology, and smart transportation.; Student Teams & Developers: Individuals or teams developing tech solutions in road safety, mobility, or traffic management.; Researchers & Innova",
+  "Incorporation / registration proof, KYC of founders or promoters, Pitch deck or detailed project proposal, Financial statements where applicable.",
+);
+
+export const greatSchemePage = createGrantProgramme({
+  name: "GREAT Scheme",
+  eyebrow: "Research & Entrepreneurship",
+  kicker: "Support for Research-Driven Tech Projects",
+  intro: "The GREAT Scheme 2025 (Government Research and Enterprise Accelerator for Technical Textiles) is designed to support individuals and startups that are working on the development of innovative technical textiles The scheme is an excellent opportunity for those in the technical textiles space to gain financial support, mentorship, and networking opportunities to scale their innovations.",
+  funding: "Up to ₹50L",
+  eligibility: "The GREAT Scheme 2025 is open to a diverse range of individuals and startups involved in technical textiles innovation. Here's who can apply:; Individual Applicants: Indian citizen, at least 21 years old. The primary applicant must be the Project Leader.; Startups: Registered as a company with a minimum 51% Indian ownership. The startup must be represented by a qualified Project Leader.; Incubation Requirement: Appli",
+  benefits: ["Initial Funding up to ₹50 Lakhs", "Follow-on Funding up to ₹1 Crore", "3-4 Months Structured Guidance", "400+ Investor Network", "Incubation Support", "Long-term Post-program Support"],
+  documents: ["Company Registration — Proof of registration (Private Limited or LLP)", "Project Proposal — Detailed proposal outlining objectives, milestones, and Project Leader role", "Proof of Incubation — Certificate from approved incubator facility", "Proof of Product Readiness — Customer feedback, sales reports, or product/service validation", "Financial Statements — Financial statements for the last fiscal year", "IP Documents — Legal documentation related to IP and business ownership"],
+  process: [
+    { title: "Prepare Your Documents", text: "Gather all required documents including registration, proposal, and financial statements." },
+    { title: "Submit Your Application", text: "Submit through the official scheme portal with pitch deck and project details." },
+    { title: "Evaluation Process", text: "Applications are reviewed for technical feasibility and market viability." },
+    { title: "Shortlisting & Interview", text: "Shortlisted teams present their innovations to the program selection panel." },
+    { title: "Final Selection & Fund Disbursement", text: "Selected startups receive funding and begin their incubation journey." },
+    { title: "Prepare Your Documents", text: "Gather all required documents including registration, proposal, and financial statements." },
+  ],
+});
+export const greatSchemeFaq = grantSchemeFaq(
+  "GREAT Scheme",
+  "Selected applicants may receive support of about Up to ₹50L, subject to evaluation and scheme guidelines.",
+  "The GREAT Scheme 2025 is open to a diverse range of individuals and startups involved in technical textiles innovation. Here's who can apply:; Individual Applicants: Indian citizen, at least 21 years old. The primary applicant must be the Project Leader.; Startups: Registered as ",
+  "Company Registration — Proof of registration (Private Limited or LLP), Project Proposal — Detailed proposal outlining objectives, milestones, and Project Leader role, Proof of Incubation — Certificate from approved incubator facility, Proof of Product Readiness — Customer feedback, sales reports, or product/service validation.",
+);
+
+export const uyegpPage = createGrantProgramme({
+  name: "UYEGP Scheme",
+  eyebrow: "Tamil Nadu Youth Employment",
+  kicker: "Financial Assistance for Unemployed Youth",
+  intro: "The UYEGP Scheme (Unemployed Youth Employment Generation Programme) is a flagship initiative by the Tamil Nadu Government to tackle unemployment and promote self-employment among socially and economically backward youth. By offering financial assistance and support for setting up manufacturing, service, and business enterprises, this scheme empowers unemployed individuals to create their own livelihood.",
+  funding: "Up to ₹15L",
+  eligibility: "To apply for the UYEGP Scheme, applicants need to meet specific eligibility criteria. The key requirements are as follows:; Educational Qualification: Must have passed at least the 8th standard.; Annual Household Income: Should not exceed ₹5 Lakhs per year.; Age Limit: Minimum age: 18 years - Maximum age: 45 years for general category - Maximum age: 55 years for SC/ST, BC, MBC, Minorities, Women, Ex-Servicemen, Diffe",
+  benefits: ["Capital Subsidy", "Loan Assistance", "Repayment Terms", "Promoter's Contribution", "Training & Mentorship", "Bank Support"],
+  documents: ["To apply for the UYEGP Scheme, you must submit the following documents:", "Aadhaar Card — Proof of identity for the applicant.", "Ration Card — Proof of residence (or nativity certificate if the Ration card is unavailable).", "Educational Certificates — Transfer certificate or school record sheet copy.", "Community Certificate — SC/ST, BC, or MBC certificate (if applicable).", "Project Report — Detailed business plan or project report covering the total cost, objectives, and milestones.", "Bank Passbook — Bank account details for funding disbursement.", "Photographs — Passport-sized photographs of the applicant."],
+  process: [
+    { title: "Prepare Your Documents", text: "2" },
+    { title: "Submit Application", text: "3" },
+    { title: "Application Evaluation", text: "4" },
+    { title: "Interview & Shortlisting", text: "5" },
+    { title: "Grant & Loan Disbursement", text: "1" },
+    { title: "Prepare Your Documents", text: "2" },
+  ],
+});
+export const uyegpFaq = grantSchemeFaq(
+  "UYEGP Scheme",
+  "Selected applicants may receive support of about Up to ₹15L, subject to evaluation and scheme guidelines.",
+  "To apply for the UYEGP Scheme, applicants need to meet specific eligibility criteria. The key requirements are as follows:; Educational Qualification: Must have passed at least the 8th standard.; Annual Household Income: Should not exceed ₹5 Lakhs per year.; Age Limit: Minimum ag",
+  "To apply for the UYEGP Scheme, you must submit the following documents:, Aadhaar Card — Proof of identity for the applicant., Ration Card — Proof of residence (or nativity certificate if the Ration card is unavailable)., Educational Certificates — Transfer certificate or school record sheet copy..",
+);
+
+export const cybersecurityFundPage = createGrantProgramme({
+  name: "Cybersecurity Fund 2.0",
+  eyebrow: "Cybersecurity Startups",
+  kicker: "Funding for Digital Security Innovations",
+  intro: "The Cybersecurity Fund 2.0 is a government-backed scheme aimed at promoting the growth of startups and MSMEs in the cybersecurity sector. The scheme provides funding support to companies that develop innovative cybersecurity solutions to address challenges in data protection, cybercrime prevention, and network security.",
+  funding: "Up to ₹30L",
+  eligibility: "To access the benefits of this program, startups must meet specific deep-tech and defence eligibility requirements:; Company Types: Private Limited Company - LLP - Registered Partnership - MSMEs (Proprietorship); Focus Areas: Organizations developing solutions in cybersecurity, such as AI-powered tools, malware analysis, and fraud detection.; Industry Sectors: AI, IoT, Robotics - Companies focused on cyber risk evalu",
+  benefits: ["Funding", "Mentorship", "Incubation Support", "Investor Access", "Long-Term Support"],
+  documents: ["To apply for the Cybersecurity Fund 2.0, you will need to submit the following documents:", "Company Registration Documents — Proof of company registration (Private Limited Company, LLP, Partnership).", "GST Registration — Proof of GST registration (for applicable businesses).", "PAN Card — PAN card of the applicant.", "Project Proposal / Business Plan — Detailed business plan outlining your project goals, milestones, and funding needs.", "Financial Statements — Balance Sheet, Profit & Loss Account for the previous fiscal year.", "Technology / Innovation Description — Description of the technology or cybersecurity solution you are developing.", "Tax Clearance — Income Tax Returns or Tax Clearance Certificates (if applicable)."],
+  process: [
+    { title: "Ensure Eligibility", text: "2" },
+    { title: "Prepare Required Documents", text: "3" },
+    { title: "Submit Application", text: "4" },
+    { title: "Evaluation and Selection", text: "5" },
+    { title: "Funding Disbursement", text: "1" },
+    { title: "Ensure Eligibility", text: "2" },
+  ],
+});
+export const cybersecurityFundFaq = grantSchemeFaq(
+  "Cybersecurity Fund 2.0",
+  "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
+  "To access the benefits of this program, startups must meet specific deep-tech and defence eligibility requirements:; Company Types: Private Limited Company - LLP - Registered Partnership - MSMEs (Proprietorship); Focus Areas: Organizations developing solutions in cybersecurity, s",
+  "To apply for the Cybersecurity Fund 2.0, you will need to submit the following documents:, Company Registration Documents — Proof of company registration (Private Limited Company, LLP, Partnership)., GST Registration — Proof of GST registration (for applicable businesses)., PAN Card — PAN card of the applicant..",
+);
+
+export const artProgramPage = createGrantProgramme({
+  name: "ART Program",
+  eyebrow: "Accelerator for Research & Tech",
+  kicker: "Accelerator Support Across Industries",
+  intro: "The ART Program (Accelerated Research & Transformation) is an initiative designed to support the translation of academic research into commercially viable products. The program aims to provide funding, mentorship, and business support for research projects that are poised to make a significant impact in industries such as healthcare, agriculture, water, and environmental sciences.",
+  funding: "Up to ₹30L",
+  eligibility: "To apply for the ART Program, the applicant must meet the following eligibility criteria:; Applicant Type: Academic Institutes (e.g., universities, research organizations) or Startups focused on Bio-CPS innovations.; Principal Investigator (PI): Must hold a regular position within an academic institute or research establishment (e.g., ISRO, DRDO, CSIR).; Technology Readiness Level (TRL): Projects must be at a TRL of ",
+  benefits: ["Funding Support (Up to ₹30 Lakhs)", "Mentorship and Technical Guidance", "Networking and Market Access"],
+  documents: ["To apply for the ART Program, you will need to submit the following documents:", "Proof of Concept — Image or prototype showing the working model of your technology or product.", "Project Proposal — A detailed business plan or project proposal outlining the objectives, milestones, and expected outcomes.", "Proof of Employment (PI) — Proof of regular employment for the Principal Investigator at an eligible academic institution or research establishment.", "Partnership Details — Any existing partnerships (e.g., MoUs with universities, research organizations, or companies).", "Clinical Trial Evidence — If applicable, evidence of clinical trials or testing results for medical-related projects.", "Product Certifications — Relevant certifications for your product or technology (if applicable).", "Licensing Deals — If applicable, proof of any licensing agreements for your innovation."],
+  process: [
+    { title: "Prepare Your Documents", text: "2" },
+    { title: "Submit Your Application", text: "3" },
+    { title: "Review and Evaluation", text: "4" },
+    { title: "Shortlisting and Interviews", text: "5" },
+    { title: "Selection and Funding Disbursement", text: "1" },
+    { title: "Prepare Your Documents", text: "2" },
+  ],
+});
+export const artProgramFaq = grantSchemeFaq(
+  "ART Program",
+  "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
+  "To apply for the ART Program, the applicant must meet the following eligibility criteria:; Applicant Type: Academic Institutes (e.g., universities, research organizations) or Startups focused on Bio-CPS innovations.; Principal Investigator (PI): Must hold a regular position withi",
+  "To apply for the ART Program, you will need to submit the following documents:, Proof of Concept — Image or prototype showing the working model of your technology or product., Project Proposal — A detailed business plan or project proposal outlining the objectives, milestones, and expected outcomes., Proof of Employment (PI) — Proof of regular employment for the Principal Investigator at an eligible academic institution or research establishment..",
+);
+
+export const agriSureFundPage = createGrantProgramme({
+  name: "Agri-Sure Fund",
+  eyebrow: "MoA&FW • NABARD",
+  kicker: "Funding for Agricultural Startups",
+  intro: "The Agri-Sure Fund is a government-backed initiative designed to support early-stage startups that are focused on solving critical challenges in the agriculture and rural sectors of India The scheme is jointly sponsored by the Ministry of Agriculture and Farmers Welfare (MoA&FW), the Government of India (GOI), and NABARD, and is managed by NABVENTURES Ltd.",
+  funding: "Up to ₹25L",
+  eligibility: "To apply for the Agri-Sure Fund, your startup must meet the following eligibility criteria:; Startup Type: LLP, Private Limited Company, or Registered Partnership; Geographical Focus: The startup must be based and registered in India.; Technology Readiness: Startups must be in the early-stage with TRL 5+ (Technology Readiness Level) and have proof of concept.; Innovation: The startup must focus on innovative technolo",
+  benefits: ["Financial Support", "Funding Options", "Reinvestment Opportunity", "Sustained Growth Support", "Pre-Series A Funding", "Interest Subsidy"],
+  documents: ["To apply, you must ensure your startup health program metrics and documents are ready. The Documents required for Agri-Sure Fund include:", "Company Registration — Certificate of Incorporation, MoA, and AoA (Pvt Ltd or LLP).", "DPIIT Recognition — Recognition certificate confirming eligibility under Startup India.", "MSME Certificate — Obtain MSME Certification for additional government benefits.", "Pitch Deck — A detailed deck explaining the solution and traction.", "Technology Description — Roadmap showing TRL 5+ progress.", "Founders' CVs — Highlighting experience in the agri-domain.", "Financials — Audited statements, tax exemption status, and fund utilization plans (if any, check tax exemptions)."],
+  process: [
+    { title: "Prepare Required Documents", text: "2" },
+    { title: "Submit Your Application", text: "3" },
+    { title: "Application Review", text: "4" },
+    { title: "Interviews & Selection", text: "5" },
+    { title: "Investment & Mentorship", text: "1" },
+    { title: "Prepare Required Documents", text: "2" },
+  ],
+});
+export const agriSureFundFaq = grantSchemeFaq(
+  "Agri-Sure Fund",
+  "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
+  "To apply for the Agri-Sure Fund, your startup must meet the following eligibility criteria:; Startup Type: LLP, Private Limited Company, or Registered Partnership; Geographical Focus: The startup must be based and registered in India.; Technology Readiness: Startups must be in th",
+  "To apply, you must ensure your startup health program metrics and documents are ready. The Documents required for Agri-Sure Fund include:, Company Registration — Certificate of Incorporation, MoA, and AoA (Pvt Ltd or LLP)., DPIIT Recognition — Recognition certificate confirming eligibility under Startup India., MSME Certificate — Obtain MSME Certification for additional government benefits..",
+);
+
+export const grantForVenturesPage = createGrantProgramme({
+  name: "Grant for Ventures",
+  eyebrow: "Early-Stage Ventures",
+  kicker: "Grants for Innovative Business Ideas",
+  intro: "The Grant for Ventures scheme is part of the Kotak BizLabs Accelerator Programme, a government-backed initiative designed to help early-stage startups refine their business models, gain market traction, and scale their operations. This program targets startups with innovative ideas in sectors like EV/Mobility, AgriTech, HealthTech, and ClimateTech.",
+  funding: "Up to ₹30L",
+  eligibility: "To apply for the Grant for Ventures program, startups must meet the following eligibility criteria:; Startup Type: Must be a Private Limited Company, LLP, or Partnership registered in India.; DPIIT Recognition: Must be DPIIT-recognized under the Startup India scheme.; Revenue: Must have an existing customer base and monthly revenue.; Stage of Development: Must be in the ideation, validation, or early traction stage.",
+  benefits: ["Grant Support", "Equity-Free Funding", "Mentorship & Training", "Market Access", "Networking Opportunities", "Bank Support"],
+  documents: ["To apply for the Grant for Ventures scheme, you will need to submit the following documents:", "Pitch Deck — A comprehensive pitch deck covering the problem, solution, market opportunity, and growth strategy.", "Executive Summary — A brief summary of your startup's mission, vision, and business goals.", "Business Plan — A detailed business plan outlining your market analysis, financial projections, and growth strategy.", "Proof of DPIIT Registration — Proof of recognition under Startup India (DPIIT).", "Revenue Proof — Evidence of monthly revenue and customer base.", "Product Demo or Video — A demo video or product introduction video (optional but recommended)."],
+  process: [
+    { title: "Prepare Documents", text: "Gather all necessary documents, including pitch deck, executive summary, business plan, DPIIT registration proof, revenue proof, and product demo/video." },
+    { title: "Submit Application", text: "Complete and submit your application online through the official Grant for Ventures portal." },
+    { title: "Evaluation Process", text: "Your application will be reviewed by the Kotak BizLabs team for eligibility and potential." },
+    { title: "Interview & Pitch", text: "Shortlisted startups will be invited for an interview or pitch presentation." },
+    { title: "Funding Disbursement", text: "Upon successful evaluation, funding will be disbursed to your startup, along with ongoing support." },
+    { title: "Prepare Documents", text: "Gather all necessary documents, including pitch deck, executive summary, business plan, DPIIT registration proof, revenue proof, and product demo/video." },
+  ],
+});
+export const grantForVenturesFaq = grantSchemeFaq(
+  "Grant for Ventures",
+  "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
+  "To apply for the Grant for Ventures program, startups must meet the following eligibility criteria:; Startup Type: Must be a Private Limited Company, LLP, or Partnership registered in India.; DPIIT Recognition: Must be DPIIT-recognized under the Startup India scheme.; Revenue: Mu",
+  "To apply for the Grant for Ventures scheme, you will need to submit the following documents:, Pitch Deck — A comprehensive pitch deck covering the problem, solution, market opportunity, and growth strategy., Executive Summary — A brief summary of your startup's mission, vision, and business goals., Business Plan — A detailed business plan outlining your market analysis, financial projections, and growth strategy..",
+);
+
+export const growthGrantPage = createGrantProgramme({
+  name: "Growth Grant",
+  eyebrow: "Scale-Up Funding",
+  kicker: "Financial Assistance to Accelerate Growth",
+  intro: "The Growth Grant is a unique funding program that supports young entrepreneurs, typically under 22 years of age, who have innovative ideas and are working towards creating meaningful change. This program is designed to help early-stage founders who may not have the resources to continue their entrepreneurial journey while still pursuing formal education.",
+  funding: "Up to ₹1.7Cr",
+  eligibility: "The Growth Grant targets young, innovative entrepreneurs who are ready to take their ventures to the next stage. It is important to understand the Growth Grant eligibility before preparing your business registration documents.; Age Limit: Applicants must be 22 years or younger at the time of application.; Educational Status: Must not hold a university degree; must be willing to defer or drop out.; Business Stage: Hig",
+  benefits: ["Grant Support", "Mentorship", "Global Exposure", "Networking Opportunities", "Creative Freedom"],
+  documents: ["Pitch Deck — A detailed presentation of the problem, solution, and market size.", "Executive Summary — A one-page overview of your vision.", "Business Plan — Comprehensive roadmap including financial projections.", "Technology Description — Details of the MVP or working prototype.", "Founders' CVs — Proof of technical capability and founder-market fit.", "Legal Documents — Business registration and MSME certification (if applicable).", "Traction Metrics — User base, revenue, or partnership letters."],
+  process: [
+    { title: "Prepare Your Documents", text: "2" },
+    { title: "Submit Your Application", text: "3" },
+    { title: "Evaluation Process", text: "4" },
+    { title: "Interview & Pitch", text: "5" },
+    { title: "Funding Disbursement & Mentorship", text: "1" },
+    { title: "Prepare Your Documents", text: "2" },
+  ],
+});
+export const growthGrantFaq = grantSchemeFaq(
+  "Growth Grant",
+  "Selected applicants may receive support of about Up to ₹1.7Cr, subject to evaluation and scheme guidelines.",
+  "The Growth Grant targets young, innovative entrepreneurs who are ready to take their ventures to the next stage. It is important to understand the Growth Grant eligibility before preparing your business registration documents.; Age Limit: Applicants must be 22 years or younger at",
+  "Pitch Deck — A detailed presentation of the problem, solution, and market size., Executive Summary — A one-page overview of your vision., Business Plan — Comprehensive roadmap including financial projections., Technology Description — Details of the MVP or working prototype..",
+);
+
+export const brightpathVenturesPage = createGrantProgramme({
+  name: "BrightPath Ventures",
+  eyebrow: "High-Potential Startups",
+  kicker: "Mentorship, Funding Access & Guidance",
+  intro: "BrightPath Ventures is an intensive 12-week accelerator program designed to empower early-stage tech startups across the Middle East and North African (MENA) region. With a focus on startups that have early traction and a working prototype (Minimum Viable Product - MVP), the program helps them scale rapidly by offering expert-led mentorship, workshops focused on growth strategy, and connections to investors and ecosystem partners.",
+  funding: "Up to ₹18Cr",
+  eligibility: "To be eligible for the BrightPath Ventures program, startups must meet specific criteria focused on tech innovation and regional presence.; Tech-Focused Startup: Must be a tech-focused startup with a working MVP or product; Location: Startups must be based and operating in the MENA region; Early Traction: Must have early traction, such as market interest or customer adoption; Founders: The startup must have founders ",
+  benefits: ["Seed Funding", "Fast-Track Application", "Demo Day Access", "Global Network Access", "Ongoing Support", "Investor Exposure"],
+  documents: ["To apply for BrightPath Ventures, you need to submit comprehensive documentation that showcases your startup's potential, traction, and business model.", "Pitch Deck — A comprehensive pitch deck covering your problem, solution, market potential, and growth strategy", "Executive Summary — A brief summary of your startup's objectives, market opportunity, and vision", "Business Plan & Financial Projections — A detailed business plan with financial projections and growth milestones", "Product/Technology Description — Description of your product or technology, including market validation and proof of concept", "Founders' CVs — Resumes of the founders outlining their experience and role in the startup", "Market Analysis — A comprehensive market analysis covering competitors, target market, and customer segments", "Current Traction Metrics — Evidence of traction, such as user numbers, revenue, or partnerships (if applicable)"],
+  process: [
+    { title: "Prepare Documents", text: "Gather all required documents including pitch deck, business plan, and founder information." },
+    { title: "Submit Application", text: "Submit your complete application through the BrightPath Ventures online portal." },
+    { title: "Application Review", text: "Initial review of your application and documents by the selection committee." },
+    { title: "Interview & Pitch", text: "Present your startup to the selection committee through interviews and pitch sessions." },
+    { title: "Funding & Mentorship", text: "Selected startups receive funding and begin the 12-week accelerator program." },
+    { title: "Prepare Documents", text: "Gather all required documents including pitch deck, business plan, and founder information." },
+  ],
+});
+export const brightpathVenturesFaq = grantSchemeFaq(
+  "BrightPath Ventures",
+  "Selected applicants may receive support of about Up to ₹18Cr, subject to evaluation and scheme guidelines.",
+  "To be eligible for the BrightPath Ventures program, startups must meet specific criteria focused on tech innovation and regional presence.; Tech-Focused Startup: Must be a tech-focused startup with a working MVP or product; Location: Startups must be based and operating in the ME",
+  "To apply for BrightPath Ventures, you need to submit comprehensive documentation that showcases your startup's potential, traction, and business model., Pitch Deck — A comprehensive pitch deck covering your problem, solution, market potential, and growth strategy, Executive Summary — A brief summary of your startup's objectives, market opportunity, and vision, Business Plan & Financial Projections — A detailed business plan with financial projections and growth milestones.",
+);
+
+export const healthAcceleratorPage = createGrantProgramme({
+  name: "Health Accelerator",
+  eyebrow: "Healthcare & MedTech",
+  kicker: "Support for Healthcare Innovators",
+  intro: "The Health Accelerator Scheme (Samvardhan 2026) is an initiative designed to support hardware healthcare startups in their growth journey. The program specifically targets startups that have a working prototype and are looking for assistance in moving from the development phase to commercialization. The goal is to accelerate product deployment, enhance market visibility, and help these startups scale rapidly. Samvardhan 2026 is a partnership between PIEDS and Studio Carbon and has been tailored ",
+  funding: "Up to ₹10L",
+  eligibility: "To apply for the program, startups must meet specific health accelerator eligibility requirements to ensure they are ready for the intensive scaling process.; Startup Type: Must be a Private Limited Company.; Prototype Requirement: Must have a working prototype or a Minimum Viable Product (MVP).; Stage of Startup: Early-stage with some market traction or customer adoption.; Commitment: Founders must demonstrate commi",
+  benefits: ["Seed Funding", "Expert Mentorship", "Ecosystem Access", "Demo Day Exposure", "Growth Strategy"],
+  documents: ["To ensure a smooth application process, prepare the following documents required for health accelerator submission:", "Company Registration Documents — Certificate of Incorporation, MoA, and AoA.", "Pitch Deck — Outlining the problem, solution, business model, and market traction.", "Technology Description — Proof of MVP or working prototype.", "Founders' CVs — Resumes outlining the experience of the core team.", "Market Analysis — Detailed go-to-market strategy.", "Compliance Documents — Tax filings and ISO certifications if applicable."],
+  process: [
+    { title: "Prepare Your Documents", text: "2" },
+    { title: "Submit Your Application", text: "3" },
+    { title: "Review and Evaluation", text: "4" },
+    { title: "Interview & Selection", text: "5" },
+    { title: "Funding & Mentorship", text: "1" },
+    { title: "Prepare Your Documents", text: "2" },
+  ],
+});
+export const healthAcceleratorFaq = grantSchemeFaq(
+  "Health Accelerator",
+  "Selected applicants may receive support of about Up to ₹10L, subject to evaluation and scheme guidelines.",
+  "To apply for the program, startups must meet specific health accelerator eligibility requirements to ensure they are ready for the intensive scaling process.; Startup Type: Must be a Private Limited Company.; Prototype Requirement: Must have a working prototype or a Minimum Viabl",
+  "To ensure a smooth application process, prepare the following documents required for health accelerator submission:, Company Registration Documents — Certificate of Incorporation, MoA, and AoA., Pitch Deck — Outlining the problem, solution, business model, and market traction., Technology Description — Proof of MVP or working prototype..",
+);
+
+export const startupAcceleratorPage = createGrantProgramme({
+  name: "Startup Accelerator Scheme",
+  eyebrow: "Early-Stage Acceleration",
+  kicker: "Mentorship & Market Expansion Support",
+  intro: "A startup accelerator scheme is a program that helps early-stage startups accelerate their growth by providing access to investment, mentorship, networking opportunities, and resources. These schemes are typically designed for pre-seed and early-stage startups that are ready to scale and expand their operations. The Marwari Catalysts Startup Accelerator Scheme 2025 is specifically aimed at supporting startups in India by providing both financial and strategic guidance to help them scale rapidly.",
+  funding: "Up to ₹25L",
+  eligibility: "The Marwari Catalysts Startup Accelerator Scheme is open to early-stage startups that meet the following criteria:; Pre-seed & Early-stage Startups: Startups that are in the idea or product development phase. Those looking for seed funding or initial investment to bring their products or services to market. Getting [DPIIT startup recognition](/services/startup-india-certification-registration) in place early keeps th",
+  benefits: ["₹25 Lakhs Initial Investment", "₹75 Lakhs to ₹1 Crore Follow-on Funding", "3–4 Months of Guidance", "Access to a Network of 400+ Investors", "Post-program Long-term Support"],
+  documents: ["Ensure your application is complete and error-free by preparing the following documents:", "Company Registration", "Founder Profiles — Background and experience of the founder/co-founders", "Business Plan / Pitch Deck — Outline of the startup's objectives, target market, and scalability", "Financial Projections — 3–5 year financial projections", "Product / Service Traction — Proof of product readiness or customer feedback", "IP Documents"],
+  process: [
+    { title: "Check Eligibility", text: "Confirm entity fit, stage and documentation readiness." },
+    { title: "Prepare Documents", text: "Assemble proposal, KYC, financials and registration proofs." },
+    { title: "Submit Application", text: "Apply through the official portal or implementing agency." },
+    { title: "Evaluation", text: "Experts review innovation, impact and delivery readiness." },
+    { title: "Grant Support", text: "Selected applicants receive milestone-linked grant support." },
+  ],
+});
+export const startupAcceleratorFaq = grantSchemeFaq(
+  "Startup Accelerator Scheme",
+  "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
+  "The Marwari Catalysts Startup Accelerator Scheme is open to early-stage startups that meet the following criteria:; Pre-seed & Early-stage Startups: Startups that are in the idea or product development phase. Those looking for seed funding or initial investment to bring their pro",
+  "Ensure your application is complete and error-free by preparing the following documents:, Company Registration, Founder Profiles — Background and experience of the founder/co-founders, Business Plan / Pitch Deck — Outline of the startup's objectives, target market, and scalability.",
+);
+
+export const startupSparkPage = createGrantProgramme({
+  name: "Startup Spark Scheme",
+  eyebrow: "Idea-to-Venture",
+  kicker: "Transform Ideas into Viable Businesses",
+  intro: "The Startup Spark Scheme is an intensive 12-week accelerator initiative. Its primary goal is to accelerate the commercialization of cutting-edge technology solutions. Unlike a traditional unsecured business loan, this program provides equity-free, milestone-linked grants that do not need to be repaid.",
+  funding: "Up to ₹50L",
+  eligibility: "To ensure your application is successful, you must meet the specific Startup Spark eligibility requirements. These criteria are designed to identify startups that are past the basic ideation phase and ready for market deployment.; Technology Focus: Must be a tech-driven venture with an existing MVP.; Recognition: Startups must be DPIIT-recognized. If you haven't done this yet, our business registration services can h",
+  benefits: ["Grant Support", "Expert Mentorship", "SINE Ecosystem", "Investor Visibility", "Global Access"],
+  documents: ["To apply for the Startup Spark Program, you will need to submit the following documents:", "Detailed Pitch Deck — Explaining the problem, solution, and market opportunity.", "Business Plan — A comprehensive roadmap with financial projections.", "Technology Description — Evidence of TRL (Technology Readiness Level).", "Traction Metrics — Proof of user base, revenue, or existing partnerships.", "Legal Documents — Incorporation certificates, MSME Certification, and tax filings.", "Founders’ CVs — Highlighting domain expertise."],
+  process: [
+    { title: "Prepare Your Documents", text: "2" },
+    { title: "Submit Your Application", text: "3" },
+    { title: "Evaluation Process", text: "4" },
+    { title: "Interview & Pitch", text: "5" },
+    { title: "Funding & Mentorship", text: "1" },
+    { title: "Prepare Your Documents", text: "2" },
+  ],
+});
+export const startupSparkFaq = grantSchemeFaq(
+  "Startup Spark Scheme",
+  "Selected applicants may receive support of about Up to ₹50L, subject to evaluation and scheme guidelines.",
+  "To ensure your application is successful, you must meet the specific Startup Spark eligibility requirements. These criteria are designed to identify startups that are past the basic ideation phase and ready for market deployment.; Technology Focus: Must be a tech-driven venture w",
+  "To apply for the Startup Spark Program, you will need to submit the following documents:, Detailed Pitch Deck — Explaining the problem, solution, and market opportunity., Business Plan — A comprehensive roadmap with financial projections., Technology Description — Evidence of TRL (Technology Readiness Level)..",
+);
+
+export const leapFundSchemePage = createGrantProgramme({
+  name: "Leap Fund Scheme",
+  eyebrow: "Biotech & Deep Tech",
+  kicker: "Equity Funding for Biotech Startups",
+  intro: "The Leap Fund is a government-backed initiative supporting innovative businesses, especially in biotechnology and allied sectors. The fund is aimed at early-stage companies looking for how to raise funds for a startup in India to scale their operations and successfully take their products to market.",
+  funding: "Up to ₹1Cr",
+  eligibility: "Leap Fund eligibility prioritizes high-potential startups with commercialization readiness and strong technical basis.; Business Type: Private Limited Companies, LLPs, or Partnerships.; Company Age: Up to 10 years from date of incorporation (DPIIT preferred).; Focus Sector: Biotech, Agriculture, Health, Energy, and Environment.; Technology Readiness: TRL 5 or above with advanced testing/development.",
+  benefits: ["Equity Investment", "Milestone-based Funding", "Expert Mentorship", "Strategic Networking", "Industry Credibility"],
+  documents: ["Prepare these documents in advance to streamline review and improve application quality.", "Company registration docs and MSME certification", "Detailed pitch deck", "Comprehensive business plan and projections", "Technology description with TRL proof", "Founders' CVs", "Market analysis and TAM", "Legal compliance records (GST/ITR/IP)"],
+  process: [
+    { title: "Prepare Your Documents", text: "2" },
+    { title: "Submit Your Application", text: "3" },
+    { title: "Application Review", text: "4" },
+    { title: "Funding & Mentorship", text: "5" },
+    { title: "Interview & Pitch", text: "1" },
+    { title: "Prepare Your Documents", text: "2" },
+  ],
+});
+export const leapFundSchemeFaq = grantSchemeFaq(
+  "Leap Fund Scheme",
+  "Selected applicants may receive support of about Up to ₹1Cr, subject to evaluation and scheme guidelines.",
+  "Leap Fund eligibility prioritizes high-potential startups with commercialization readiness and strong technical basis.; Business Type: Private Limited Companies, LLPs, or Partnerships.; Company Age: Up to 10 years from date of incorporation (DPIIT preferred).; Focus Sector: Biote",
+  "Prepare these documents in advance to streamline review and improve application quality., Company registration docs and MSME certification, Detailed pitch deck, Comprehensive business plan and projections.",
+);
+
+export const hpUdgamPage = createGrantProgramme({
+  name: "HP Udgam Scheme",
+  eyebrow: "Himachal Pradesh",
+  kicker: "Clean Energy & Entrepreneurship Support",
+  intro: "The HP Udgam Scheme is a funding and mentorship initiative by HPCL (Hindustan Petroleum Corporation Limited) designed to support startups working in areas such as renewable energy, e-mobility, energy storage, biofuels, and digital solutions. It provides equity funding of up to ₹2.5 crore to help startups scale and commercialize their solutions.",
+  funding: "Up to ₹2.5Cr",
+  eligibility: "HP Udgam eligibility emphasizes startup maturity, sector relevance, and operational readiness.; Business Type: Private Limited Company preferred for equity participation.; DPIIT Recognition: Valid startup recognition is generally expected.; Company Age: Typically below 10 years from incorporation.; Business Stage: Working prototype or early market traction.",
+  benefits: ["High-Value Equity Funding", "Mentorship", "Infrastructure", "Market Validation", "Regulatory Support"],
+  documents: ["Build a complete application file before submission for better review quality and turnaround.", "Startup recognition certificate — Proof of startup india certificate and Registration.", "Company incorporation documents — Certificate of Incorporation, MoA, and AoA.", "Professional pitch deck — Detailing the problem, energy solution, and market size.", "Financial records — Audited balance sheets and P&L statements.", "Technology roadmap — Detailed description of the technology and TRL level.", "Founder profiles — Resumes of the core team showcasing domain expertise.", "MSME details — Copy of MSME Certification."],
+  process: [
+    { title: "Ensure Eligibility", text: "2" },
+    { title: "Submit Application", text: "3" },
+    { title: "Evaluation and Selection", text: "4" },
+    { title: "Fund Disbursement", text: "5" },
+    { title: "Interview/Discussion", text: "1" },
+    { title: "Ensure Eligibility", text: "2" },
+  ],
+});
+export const hpUdgamFaq = grantSchemeFaq(
+  "HP Udgam Scheme",
+  "Selected applicants may receive support of about Up to ₹2.5Cr, subject to evaluation and scheme guidelines.",
+  "HP Udgam eligibility emphasizes startup maturity, sector relevance, and operational readiness.; Business Type: Private Limited Company preferred for equity participation.; DPIIT Recognition: Valid startup recognition is generally expected.; Company Age: Typically below 10 years f",
+  "Build a complete application file before submission for better review quality and turnaround., Startup recognition certificate — Proof of startup india certificate and Registration., Company incorporation documents — Certificate of Incorporation, MoA, and AoA., Professional pitch deck — Detailing the problem, energy solution, and market size..",
+);
+
+export const defenceSchemePage = createGrantProgramme({
+  name: "iDEX Defence Innovation Scheme",
+  eyebrow: "Defence Tech",
+  kicker: "Funding for Defence & Dual-Use Startups",
+  intro: "Innovations for Defence Excellence (iDEX) is an initiative launched by the Ministry of Defence (MoD) under the Defence Innovation Organisation (DIO). It aims to create a self-reliant and innovative defence ecosystem in India by engaging startups, MSMEs and innovators to develop technology solutions for defence and aerospace challenges. Under iDEX, the Ministry of Defence, Indian Army, Indian Navy and Indian Air Force publish specific technology 'problems' called DISC (Defence India Startup Chall",
+  funding: "Up to ₹1.5Cr",
+  eligibility: "iDEX is open to a range of innovators and organisations working in defence and aerospace technology domains:; DPIIT-Recognised Startups: Startups officially recognised by DPIIT under the Startup India initiative are the primary target beneficiaries.; MSMEs: Micro, Small and Medium Enterprises with relevant technology capabilities in defence or aerospace domains.; Individual Innovators: Individual technology innovator",
+  benefits: ["Up to ₹1.5 Crore Grant", "Direct Government Procurement", "Access to Defence Facilities", "Mentorship & Hand-holding", "IP Rights Retained", "Market Validation"],
+  documents: ["Prepare the following to apply for an iDEX DISC challenge:", "DPIIT Certificate — DPIIT startup recognition certificate (mandatory for startups).", "Company Registration — Certificate of Incorporation, LLP agreement or equivalent.", "Technical Proposal — Detailed solution proposal addressing the specific DISC challenge requirements.", "Team Profile — CVs of key technical and management team members demonstrating relevant expertise.", "IP Documentation — Patents, patent applications or other IP documentation relevant to the proposed solution.", "Financial Statements — Last 1–2 years of audited accounts or projected financials for early-stage startups."],
+  process: [
+    { title: "Monitor Active Challenges", text: "Visit idex.gov.in to browse currently active DISC challenges posted by the Army, Navy, Air Force and MoD." },
+    { title: "Register on iDEX Portal", text: "Create your innovator profile on the iDEX portal and ensure your DPIIT recognition is current." },
+    { title: "Submit Your Proposal", text: "Prepare a technical proposal addressing the challenge requirements and submit within the specified deadline." },
+    { title: "Evaluation & Shortlisting", text: "A technical committee evaluates submissions. Shortlisted applicants may be called for a presentation." },
+    { title: "Grant Agreement & Kickoff", text: "Selected startups sign a grant agreement with DIO, receive initial funding tranche and begin prototype development." },
+    { title: "Milestone Reviews & Final Assessment", text: "Funding is released in tranches based on milestone achievement. Successful prototypes are evaluated for procurement." },
+  ],
+});
+export const defenceSchemeFaq = grantSchemeFaq(
+  "iDEX Defence Innovation Scheme",
+  "Selected applicants may receive support of about Up to ₹1.5Cr, subject to evaluation and scheme guidelines.",
+  "iDEX is open to a range of innovators and organisations working in defence and aerospace technology domains:; DPIIT-Recognised Startups: Startups officially recognised by DPIIT under the Startup India initiative are the primary target beneficiaries.; MSMEs: Micro, Small and Mediu",
+  "Prepare the following to apply for an iDEX DISC challenge:, DPIIT Certificate — DPIIT startup recognition certificate (mandatory for startups)., Company Registration — Certificate of Incorporation, LLP agreement or equivalent., Technical Proposal — Detailed solution proposal addressing the specific DISC challenge requirements..",
+);
+
+export const aditiDefencePage = createGrantProgramme({
+  name: "Aditi Defence 4.0 Challenge",
+  eyebrow: "DIO • Ministry of Defence",
+  kicker: "Grant Funding for Advanced Defence Tech",
+  intro: "The Aditi Defence 4.0 Challenge is a government-backed initiative supported by the Defence Innovation Organisation (DIO) and the Ministry of Defence, aligned with India's Atmanirbhar Bharat vision. It provides milestone-linked grant funding of up to ₹25 Crore to Indian startups, MSMEs, and private companies developing innovative defence and dual-use technologies. Beyond funding, selected participants gain access to DRDO and Armed Forces testing facilities for technology validation, mentorship fr",
+  funding: "Up to ₹25Cr",
+  eligibility: "Aditi Defence 4.0 is open to Indian entities with proven technological capabilities in defence or dual-use innovation areas.; Entity Type: Registered Indian startups, MSMEs, or private companies. Foreign entities are not eligible.; Technology Domain: Innovative defence or dual-use technology solution across autonomous systems, munitions, cybersecurity, AI, or space tech.; Technology Readiness: High Technology Readine",
+  benefits: ["Grant up to ₹25 Crore", "DRDO Testing Facilities", "Defence Expert Mentorship", "Government Contract Pathway", "Export Opportunities", "Genesis Fund Access"],
+  documents: ["-   DPIIT Registration Certificate — -   Company Incorporation Certificate", "-   Pitch deck with technology description and market application — -   Technology Readiness Level (TRL) evidence and test data", "-   Financial model with cap table and 3-year projections — -   MVP evidence or pilot deployment proof", "-   Team CVs highlighting technical and leadership experience — -   Valid MSME (Udyam) Certification"],
+  process: [
+    { title: "Online Registration", text: "Register on the Aditi Defence 4.0 portal and create your startup profile with basic entity details." },
+    { title: "Document Submission", text: "Upload DPIIT certificate, incorporation documents, pitch deck, TRL evidence, and financial projections." },
+    { title: "Selection Process", text: "DIO evaluates applications on technology merit, feasibility, defence relevance, and team capability." },
+    { title: "Interview & Pitching", text: "Shortlisted startups present to a panel of defence experts, DRDO scientists, and DIO officials." },
+    { title: "Fund Allocation", text: "Approved startups receive milestone-linked grant disbursements with defined testing and development milestones." },
+    { title: "Online Registration", text: "Register on the Aditi Defence 4.0 portal and create your startup profile with basic entity details." },
+  ],
+});
+export const aditiDefenceFaq = grantSchemeFaq(
+  "Aditi Defence 4.0 Challenge",
+  "Selected applicants may receive support of about Up to ₹25Cr, subject to evaluation and scheme guidelines.",
+  "Aditi Defence 4.0 is open to Indian entities with proven technological capabilities in defence or dual-use innovation areas.; Entity Type: Registered Indian startups, MSMEs, or private companies. Foreign entities are not eligible.; Technology Domain: Innovative defence or dual-us",
+  "-   DPIIT Registration Certificate — -   Company Incorporation Certificate, -   Pitch deck with technology description and market application — -   Technology Readiness Level (TRL) evidence and test data, -   Financial model with cap table and 3-year projections — -   MVP evidence or pilot deployment proof, -   Team CVs highlighting technical and leadership experience — -   Valid MSME (Udyam) Certification.",
+);
+
+export const aerospaceDefencePage = createGrantProgramme({
+  name: "Aerospace Defence Fund",
+  eyebrow: "Aerospace & Dual-Use",
+  kicker: "Funding & Mentorship for Defence Startups",
+  intro: "The Aerospace Defence Fund is a high-impact incubation and acceleration initiative designed to identify and scale the next generation of Indian aerospace and defence leaders. Managed as part of the Boeing BUILD (Boeing University Innovation Leadership Development) 5.0 framework, it focuses on bridging the gap between a brilliant lab concept and a field-ready solution. Unlike a standard without security business loan, which focuses on debt repayment, the Aerospace Defence Fund Scheme is designed ",
+  funding: "Up to ₹25Cr",
+  eligibility: "The Aerospace Defence Fund eligibility framework is strictly defined to ensure that resources are directed toward serious innovators who have a clear legal and technical foundation. Understanding these criteria is essential before initiating the business registration or application process. Aerospace Defence Fund Eligibility Table; Startup Stage: Early-stage entrepreneurs, including pre-seed, idea, or concept-stage v",
+  benefits: ["Financial Support:", "Structured Mentorship:", "Industry Incubation:", "Networking & Visibility:", "Investor Readiness:"],
+  documents: ["DPIIT Recognition Certificate: — Proof of being a recognized startup under the Startup India certificate program.", "Company Incorporation Proof: — COI, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "Project Proposal: — A detailed whitepaper explaining the problem statement, technical solution, and defence relevance.", "TRL Description: — Evidence of the current Technology Readiness Level (photos, videos, or test reports).", "Founder CVs: — Resumes highlighting the technical and managerial expertise of the founding team.", "Financial Statements: — Balance sheets and P&L for the last 2 years (if applicable).", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  process: [
+    { title: "Online Registration", text: "2" },
+    { title: "Submit Proposal", text: "3" },
+    { title: "Regional Screening", text: "4" },
+    { title: "Bootcamp Selection", text: "5" },
+    { title: "National Finale (Demo Day)", text: "6" },
+    { title: "Selection & Funding", text: "1" },
+  ],
+});
+export const aerospaceDefenceFaq = grantSchemeFaq(
+  "Aerospace Defence Fund",
+  "Selected applicants may receive support of about Up to ₹25Cr, subject to evaluation and scheme guidelines.",
+  "The Aerospace Defence Fund eligibility framework is strictly defined to ensure that resources are directed toward serious innovators who have a clear legal and technical foundation. Understanding these criteria is essential before initiating the business registration or applicati",
+  "DPIIT Recognition Certificate: — Proof of being a recognized startup under the Startup India certificate program., Company Incorporation Proof: — COI, MoA, and AoA. (Refer to minimum capital requirement for LLP)., Project Proposal: — A detailed whitepaper explaining the problem statement, technical solution, and defence relevance., TRL Description: — Evidence of the current Technology Readiness Level (photos, videos, or test reports)..",
+);
+
+export const agriStartupShitijPage = createGrantProgramme({
+  name: "Agri Startup Fund (SHITIJ 2.0)",
+  eyebrow: "Agri-Tech Incubation",
+  kicker: "Incubation, Mentoring & Market Access",
+  intro: "The Agri Startup Fund is offered through SHITIJ 2.0, a flagship incubation programme that supports startups working in agriculture and allied sectors. Unlike a traditional without security business loan, which focuses on debt, this initiative focuses on the entire lifecycle of a startup—from ideation to commercialization. The Agri Startup Fund Scheme provides access to the Indian Council of Agricultural Research (ICAR) experts and elite research infrastructure. It functions similarly to high-tec",
+  funding: "Incubation",
+  eligibility: "The Agri Startup Fund eligibility framework ensures that support is directed toward legally recognized and technically capable innovators. Meeting these standards is the first step in your business registration and funding journey. Agri Startup Fund Eligibility Table; Applicant Nationality: Must be an Indian Citizen.; Sector Focus: Innovation must be in Agriculture or Allied Sectors (Fisheries, Dairy, etc.).; Stage o",
+  benefits: ["1\\. Structured Training & Mentorship", "2\\. Laboratory and Infrastructure Access", "3\\. Intellectual Property (IP) Support", "4\\. Market Linkages and Pilot Testing", "5\\. Funding Facilitation"],
+  documents: ["Startup India Certificate — Proof of Startup India recognition.", "Company Incorporation — COI, MoA, and AoA for Pvt Ltd or LLP.", "Innovation Proposal — Detailed explanation of the technical solution and farmer impact.", "Business Pitch Deck — Outlining market size, problem-solution fit, and startup health.", "Founder Profiles — Comprehensive CVs showing domain and technical expertise.", "Financial Statements — Previous 2 years' financials (if applicable) or financial projections.", "TRL Proof — Evidence of the prototype or MVP stage (photos/videos).", "MSME Certificate — Valid MSME Certification (Udyam)."],
+  process: [
+    { title: "Registration", text: "Create a profile on the official Accubate / SHITIJ 2.0 portal." },
+    { title: "Technical Preparation", text: "Refine your innovation proposal and Pitch Deck." },
+    { title: "Document Upload", text: "Submit all mandatory Documents required for Agri Startup Fund." },
+    { title: "Screening", text: "ICAR experts review the technical feasibility and scalability of your project." },
+    { title: "Selection Pitch", text: "Shortlisted applicants present their roadmap to an expert jury." },
+    { title: "Training & Onboarding", text: "Winners enter the 2-month mandatory training cycle before formal incubation begins." },
+  ],
+});
+export const agriStartupShitijFaq = grantSchemeFaq(
+  "Agri Startup Fund (SHITIJ 2.0)",
+  "Selected applicants may receive support of about Incubation, subject to evaluation and scheme guidelines.",
+  "The Agri Startup Fund eligibility framework ensures that support is directed toward legally recognized and technically capable innovators. Meeting these standards is the first step in your business registration and funding journey. Agri Startup Fund Eligibility Table; Applicant N",
+  "Startup India Certificate — Proof of Startup India recognition., Company Incorporation — COI, MoA, and AoA for Pvt Ltd or LLP., Innovation Proposal — Detailed explanation of the technical solution and farmer impact., Business Pitch Deck — Outlining market size, problem-solution fit, and startup health..",
+);
+
+export const agriTechFundPage = createGrantProgramme({
+  name: "Agri-Tech Fund Assistance",
+  eyebrow: "SmartAgri CoE",
+  kicker: "Funding & Incubation for Agri-Tech",
+  intro: "The Agri-Tech Fund Assistance Scheme is a strategic initiative designed to identify, incubate, and financially support startups developing technology-based solutions for agriculture and allied sectors. Operated out of the SmartAgri CoE at Bhilai, Chhattisgarh, the program is a collaboration between STPI, MeitY, the Department of Agriculture Development & Farmer Welfare, and CSVTU. The Agri-Tech Fund Assistance details highlight that this is more than just a government grant for MSME. Selected st",
+  funding: "Up to ₹35L",
+  eligibility: "The Agri-Tech Fund Assistance eligibility framework is designed to prioritize startups with a proven \"Proof of Concept\" and a clear path to market entry. Meeting these requirements is a prerequisite before initiating the startup registration process. Agri-Tech Fund Assistance Eligibility Table; Legal Structure: Must be registered as a Private Limited Company, LLP, or Partnership.; Startup Age: The entity must be inco",
+  benefits: ["Financial Seed Support:", "World-Class Incubation:", "Advanced Research Labs:", "Strategic Mentorship:", "Go-to-Market Support:"],
+  documents: ["Incorporation Proof: — Certificate of Incorporation and PAN card of the entity.", "DPIIT Recognition: — Mandatory Startup India certificate.", "Detailed Project Proposal: — Outlining the innovation, TRL level, and startup health metrics.", "Pitch Deck: — A high-quality presentation detailing the market opportunity and problem-solution fit. (See Grants for Ventures).", "Founder Profiles: — Detailed CVs highlighting technical and domain expertise.", "Financial Statements: — 12-month financial projections or audited statements.", "IP Documentation: — Details of any patents filed or trademarks obtained (if any).", "MSME Certification: — Valid MSME certification (Udyam)."],
+  process: [
+    { title: "Self-Audit", text: "Ensure your startup meets the Agri-Tech Fund Assistance eligibility norms." },
+    { title: "Technical Drafting", text: "Prepare your innovation proposal focusing on scalability and impact." },
+    { title: "Online Submission", text: "Apply through the official STPI SmartAgri CoE portal and upload all Documents required for Agri-Tech Fund Assistance." },
+    { title: "Technical Evaluation", text: "A committee of agronomists and tech experts evaluates your solution's feasibility." },
+    { title: "Business Review", text: "The committee assesses your revenue model and growth strategy." },
+    { title: "Selection & Funding", text: "Shortlisted founders present at Demo Day, followed by selection and milestone-based fund release." },
+  ],
+});
+export const agriTechFundFaq = grantSchemeFaq(
+  "Agri-Tech Fund Assistance",
+  "Selected applicants may receive support of about Up to ₹35L, subject to evaluation and scheme guidelines.",
+  "The Agri-Tech Fund Assistance eligibility framework is designed to prioritize startups with a proven \"Proof of Concept\" and a clear path to market entry. Meeting these requirements is a prerequisite before initiating the startup registration process. Agri-Tech Fund Assistance Eli",
+  "Incorporation Proof: — Certificate of Incorporation and PAN card of the entity., DPIIT Recognition: — Mandatory Startup India certificate., Detailed Project Proposal: — Outlining the innovation, TRL level, and startup health metrics., Pitch Deck: — A high-quality presentation detailing the market opportunity and problem-solution fit. (See Grants for Ventures)..",
+);
+
+export const agrinextPage = createGrantProgramme({
+  name: "AgriNext",
+  eyebrow: "Kerala Agri-Tech",
+  kicker: "Grant & Incubation for Agri-Tech Startups",
+  intro: "AgriNext is a strategic innovation-focused initiative designed by KSUM to fund, mentor, and incubate 150 agri‑tech startups. The program targets startups that can drive real impact for small and marginal farmers, Farmer Producer Organizations (FPOs), and allied enterprises. Unlike a standard without security business loan, which focuses on debt repayment, the AgriNext Scheme provides non-refundable grant money to fuel research, development, and initial market pilots. The initiative works in syne",
+  funding: "Up to ₹25L",
+  eligibility: "The AgriNext eligibility framework is strictly defined to identify startups with high technical feasibility and market scalability. Meeting these requirements is the first step before initiating the startup registration process in the state. AgriNext Eligibility Table; Entity Type: Must be a registered Private Limited Company, LLP, or Partnership.; Sector Focus: Must be an active Agri-Tech Startup impacting farmers, ",
+  benefits: ["1\\. Substantial Financial Grant Support", "2\\. Structured Incubation & Mentorship", "3\\. Real-World Field Validation", "4\\. Global Ecosystem Access"],
+  documents: ["Incorporation Documents: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "Startup Recognition: — Mandatory Startup India certificate or KSUM ID.", "Pitch Deck: — A high-quality presentation detailing the problem, technical solution, pilot plan, and startup health. (See our guide on Grants for Ventures).", "Financial Records: — Audited statements or ITRs for the last 1-2 years (for existing units).", "TRL Proof: — Evidence of existing prototype, pilot results, or farmer testimonials (videos/photos).", "Founder KYC: — Aadhaar and PAN of all directors/partners.", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  process: [
+    { title: "Self-Audit", text: "Ensure your entity meets the AgriNext eligibility norms for registration and stage." },
+    { title: "Technical Preparation", text: "Refine your pitch deck to highlight farmer-centric impact and technical novelty." },
+    { title: "Online Submission", text: "Apply through the official Kerala Startup Mission portal and upload all Documents required for AgriNext." },
+    { title: "Preliminary Review", text: "A technical committee reviews the innovation's feasibility and TRL level." },
+    { title: "Selection Pitch", text: "Shortlisted founders present their scalability plan to an expert jury of agronomists and investors." },
+    { title: "Onboarding", text: "Winners sign the grant agreement and begin their structured incubation journey." },
+  ],
+});
+export const agrinextFaq = grantSchemeFaq(
+  "AgriNext",
+  "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
+  "The AgriNext eligibility framework is strictly defined to identify startups with high technical feasibility and market scalability. Meeting these requirements is the first step before initiating the startup registration process in the state. AgriNext Eligibility Table; Entity Typ",
+  "Incorporation Documents: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP)., Startup Recognition: — Mandatory Startup India certificate or KSUM ID., Pitch Deck: — A high-quality presentation detailing the problem, technical solution, pilot plan, and startup health. (See our guide on Grants for Ventures)., Financial Records: — Audited statements or ITRs for the last 1-2 years (for existing units)..",
+);
+
+export const lorealGreenPage = createGrantProgramme({
+  name: "L'Oréal Green Sciences Incubator",
+  eyebrow: "Green Beauty • Biotech",
+  kicker: "Equity-Free Funding for Sustainable Beauty",
+  intro: "The L'Oréal Green Sciences Incubator, run by L'Oréal Research & Innovation (R&I) in partnership with Genopole, supports entrepreneurs building sustainable beauty and personal care products using green chemistry and biotechnology. It connects early-stage science with real market opportunities. Selected startups receive equity-free funding up to €100,000 (~₹90 Lakhs), access to Genopole's biotech laboratories, direct mentorship from L'Oréal R&I scientists, and exposure to global beauty industry di",
+  funding: "Up to €100K",
+  eligibility: "The incubator targets technology-driven innovators in the beauty and personal care space with sustainable, science-backed solutions.; Innovation Focus: Technology-driven innovation in green chemistry, biotechnology, or sustainable sourcing applicable to cosmetics and personal care.; Development Stage: Early or growth-stage venture with a functional prototype at Technology Readiness Level (TRL) 5 or above.; Business R",
+  benefits: ["Equity-Free Grant", "Genopole Lab Access", "L'Oréal Expert Mentorship", "Global Distribution Network", "Sustainability Credibility", "International Connections"],
+  documents: ["-   Company Incorporation Certificate — -   Professional pitch deck outlining problem, solution, market, and traction", "-   Product demonstration or prototype materials (videos, photos, test data) — -   Founder and team biographical information", "-   Financial snapshots or funding history — -   Market entry and growth roadmap", "-   MSME (Udyam) certification — recommended for Indian applicants"],
+  process: [
+    { title: "Verify Eligibility", text: "Confirm your innovation is in green chemistry, biotech, or sustainable beauty at TRL 5 or above." },
+    { title: "Prepare Documentation", text: "Assemble your pitch deck, prototype evidence, team bios, and financial overview." },
+    { title: "Submit Application", text: "Apply through the program portal with all required documents and a clear technology description." },
+    { title: "Screening Process", text: "L'Or\u00e9al R&I evaluates submissions on innovation merit, sustainability impact, and commercial applicability." },
+    { title: "Selection & Onboarding", text: "Selected startups are notified and onboarded into the incubator with lab access, funding, and mentorship assignments." },
+    { title: "Verify Eligibility", text: "Confirm your innovation is in green chemistry, biotech, or sustainable beauty at TRL 5 or above." },
+  ],
+});
+export const lorealGreenFaq = grantSchemeFaq(
+  "L'Oréal Green Sciences Incubator",
+  "Selected applicants may receive support of about Up to €100K, subject to evaluation and scheme guidelines.",
+  "The incubator targets technology-driven innovators in the beauty and personal care space with sustainable, science-backed solutions.; Innovation Focus: Technology-driven innovation in green chemistry, biotechnology, or sustainable sourcing applicable to cosmetics and personal car",
+  "-   Company Incorporation Certificate — -   Professional pitch deck outlining problem, solution, market, and traction, -   Product demonstration or prototype materials (videos, photos, test data) — -   Founder and team biographical information, -   Financial snapshots or funding history — -   Market entry and growth roadmap, -   MSME (Udyam) certification — recommended for Indian applicants.",
+);
+
+export const csrFundPage = createGrantProgramme({
+  name: "CSR Fund",
+  eyebrow: "Social Impact Grants",
+  kicker: "Grants & Mentorship for Mission-Driven Orgs",
+  intro: "The CSR Fund is a long-term support program intended for early-stage but post-pilot organizations. Unlike a traditional without security business loan, which creates debt, this fund provides equity-free capital. The CSR Fund Scheme and the CSR Fund work together to provide:",
+  funding: "Up to ₹2.63Cr",
+  eligibility: "The CSR Fund eligibility and the CSR Fund Scheme requirements are specifically tailored for organizations that have moved past the ideation phase and have a proven \"proof of concept.\" This ensures that the capital is deployed toward ventures that have already demonstrated a measurable social or environmental impact and are ready for professional scaling. Before you apply for CSR fund support, ensure your organization",
+  benefits: ["Significant Non-Refundable Capital", "Strategic Capacity Building", "Elite Mentorship", "Global Networking", "Credibility"],
+  documents: ["To successfully apply for the CSR Fund Scheme, organizations must ensure the following Documents required for CSR Fund are professionally prepared:", "Executive Summary — A clear overview of the organization’s mission, operational strategy, and impact.", "Professional Pitch Deck — Detailing the approach, scalability potential, and social/environmental goals.", "Team Profiles — CVs of the leadership team highlighting relevant experience.", "Financial Projections — A 3-year budget and long-term sustainability plan.", "Impact Data — Audited evidence of past pilot programs and measurable outcomes.", "Registration Proof — Startup India registration certificate or NGO Registration papers (Trust/Society/Section 8).", "Tax Documents — Valid 12A and 80G certificates (for nonprofits)."],
+  process: [
+    { title: "Check Eligibility", text: "2" },
+    { title: "Prepare Documents", text: "3" },
+    { title: "Submit Online", text: "4" },
+    { title: "Evaluation", text: "5" },
+    { title: "Due Diligence", text: "6" },
+    { title: "Selection", text: "1" },
+  ],
+});
+export const csrFundFaq = grantSchemeFaq(
+  "CSR Fund",
+  "Selected applicants may receive support of about Up to ₹2.63Cr, subject to evaluation and scheme guidelines.",
+  "The CSR Fund eligibility and the CSR Fund Scheme requirements are specifically tailored for organizations that have moved past the ideation phase and have a proven \"proof of concept.\" This ensures that the capital is deployed toward ventures that have already demonstrated a measu",
+  "To successfully apply for the CSR Fund Scheme, organizations must ensure the following Documents required for CSR Fund are professionally prepared:, Executive Summary — A clear overview of the organization’s mission, operational strategy, and impact., Professional Pitch Deck — Detailing the approach, scalability potential, and social/environmental goals., Team Profiles — CVs of the leadership team highlighting relevant experience..",
+);
+
+export const cybersecurityKarnatakaPage = createGrantProgramme({
+  name: "Cybersecurity Incentive Policy Karnataka",
+  eyebrow: "Karnataka Cybersecurity",
+  kicker: "Internship Incentives & R&D Funding",
+  intro: "The Cybersecurity Incentive Policy is a strategic government framework designed to bridge the gap between academic learning and industry requirements. By providing financial incentives for hiring interns and direct grants for research and development, Karnataka aims to create a world-class cybersecurity ecosystem. This policy works in tandem with national initiatives such as the MSME Act and Startup India, offering specialized benefits that help startups mitigate the high costs of specialized ta",
+  funding: "Up to ₹50L",
+  eligibility: "To ensure the incentives reach the right companies, the state has established specific criteria. These standards ensure that only legally recognized, innovation-led entities are part of the program. Cybersecurity Incentive Policy Eligibility Table; Geography: Must be registered and headquartered in the state of Karnataka.; Business Type: Open to Startups, MSMEs, MNCs, and SMEs with active operations.; Registration: M",
+  benefits: ["Manpower Scalability:", "Innovation Fuel:", "Institutional Credibility:", "Academic-Industry Linkage:", "Audit Readiness:"],
+  documents: ["To successfully apply for Cybersecurity Incentive Policy, you must prepare a comprehensive set of documents depending on the sub-program:", "For Internship Claims: — -   KITS Registration: Proof of enrollment with the state IT department.", "-   Intern Details: List of interns with their Karnataka-based college certificates.", "-   Stipend Proof: CA-certified statement of stipends paid and bank transaction records.", "-   Completion Certificate: Issued by the company to the intern.", "-   Statutory Declaration: Confirming the internship activities were strictly in the cybersecurity domain.", "For R&D Funding: — -   Project Proposal: Detailed DPR outlining objectives and TRL (Technology Readiness Level). (See Grants for Ventures).", "-   DPIIT Recognition: Mandatory Startup India certificate."],
+  process: [
+    { title: "Registration", text: "Register your entity on the KITS (Karnataka Innovation and Technology Society) portal." },
+    { title: "Selection of Program", text: "Choose between Internship, R&D, or Audit reimbursement." },
+    { title: "Document Upload", text: "Attach all Documents required for Cybersecurity Incentive Policy." },
+    { title: "Technical Evaluation", text: "A committee of cybersecurity experts reviews the technical merit of your R&D or intern work." },
+    { title: "Tranche Approval", text: "For R&D, a phased release plan is agreed upon based on milestones." },
+    { title: "Disbursement", text: "Funds are released directly to the business account after CA verification." },
+  ],
+});
+export const cybersecurityKarnatakaFaq = grantSchemeFaq(
+  "Cybersecurity Incentive Policy Karnataka",
+  "Selected applicants may receive support of about Up to ₹50L, subject to evaluation and scheme guidelines.",
+  "To ensure the incentives reach the right companies, the state has established specific criteria. These standards ensure that only legally recognized, innovation-led entities are part of the program. Cybersecurity Incentive Policy Eligibility Table; Geography: Must be registered a",
+  "To successfully apply for Cybersecurity Incentive Policy, you must prepare a comprehensive set of documents depending on the sub-program:, For Internship Claims: — -   KITS Registration: Proof of enrollment with the state IT department., -   Intern Details: List of interns with their Karnataka-based college certificates., -   Stipend Proof: CA-certified statement of stipends paid and bank transaction records..",
+);
+
+export const earlyStageGrantPage = createGrantProgramme({
+  name: "Early-Stage Startup Grant",
+  eyebrow: "Incubation & Mentorship",
+  kicker: "Funding to Grow Early-Stage Startups",
+  intro: "The Early-Stage Startup Grant is a financial assistance initiative aimed at nurturing and scaling startups that possess innovative ideas but lack the capital for execution. Unlike a traditional without security business loan, which is a debt-based instrument requiring repayment, a grant is typically non-repayable and equity-free. The Early-Stage Startup Grant Scheme focuses on \"high-risk, high-reward\" innovations—those that might be too early for venture tech funding but have a high potential fo",
+  funding: "₹5L–₹1Cr",
+  eligibility: "The Early-Stage Startup Grant eligibility framework is strictly defined to identify the most promising ventures. Whether you are building an AI tool or a new medical device, meeting these standards is a prerequisite for any business registration seeking institutional support. Early-Stage Startup Grant Eligibility Table; Startup Stage: Early-stage: Must have at least a Proof of Concept (PoC) or a validated MVP.; Legal",
+  benefits: ["1\\. Substantial Financial Support", "2\\. Elite Mentorship", "3\\. Structured Incubation", "4\\. Investor Networking", "5\\. Global Visibility"],
+  documents: ["DPIIT Recognition Certificate: — Proof of being a recognized \"Startup\" by the Government of India.", "Incorporation Proof: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "MSME Certificate: — Valid MSME certification (Udyam).", "Comprehensive Pitch Deck: — Must detail the problem, solution, market size, business model, and startup health.", "Technical Whitepaper: — Detailing the TRL (Technology Readiness Level) and proof of concept.", "Financial Statements: — Balance sheets and P&L for the last year (if applicable) or a 12-month financial projection.", "Team Profiles: — Bios of founders and core technical leads highlighting expertise.", "IP Documentation: — Copies of patents filed or trademarks obtained (if any)."],
+  process: [
+    { title: "Self-Assessment", text: "Ensure your entity meets the Early-Stage Startup Grant eligibility norms for age and sector." },
+    { title: "Technical Preparation", text: "Refine your pitch deck and record a product demo video." },
+    { title: "Online Submission", text: "Apply through the official Startup India portal or the specific hub website (e.g., NIDHI PRAYAS Grant)." },
+    { title: "Preliminary Screening", text: "A committee reviews your tech-led solution and business eligibility." },
+    { title: "Pitching & Interaction", text: "Shortlisted founders present their roadmap to an expert jury." },
+    { title: "Selection & Funding", text: "Once approved, grant tranches are released based on achieved technical milestones." },
+  ],
+});
+export const earlyStageGrantFaq = grantSchemeFaq(
+  "Early-Stage Startup Grant",
+  "Selected applicants may receive support of about ₹5L–₹1Cr, subject to evaluation and scheme guidelines.",
+  "The Early-Stage Startup Grant eligibility framework is strictly defined to identify the most promising ventures. Whether you are building an AI tool or a new medical device, meeting these standards is a prerequisite for any business registration seeking institutional support. Ear",
+  "DPIIT Recognition Certificate: — Proof of being a recognized \"Startup\" by the Government of India., Incorporation Proof: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP)., MSME Certificate: — Valid MSME certification (Udyam)., Comprehensive Pitch Deck: — Must detail the problem, solution, market size, business model, and startup health..",
+);
+
+export const elevateNxtPage = createGrantProgramme({
+  name: "ELEVATE NxT",
+  eyebrow: "Karnataka Startup Accelerator",
+  kicker: "Grant & Accelerator Support in Karnataka",
+  intro: "The ELEVATE NxT program is a structured acceleration and investment vehicle aimed at nurturing startups that have moved beyond the ideation phase. Managed by the Department of Electronics, IT, Bt, and S&T, the program provides a comprehensive framework that includes financial investment, strategic mentorship, and elite ecosystem access. The ELEVATE NxT details highlight a focus on commercializing emerging technologies. Unlike a traditional without security business loan, which focuses on debt, t",
+  funding: "Up to ₹1Cr",
+  eligibility: "The ELEVATE NxT eligibility framework is strictly defined to ensure that the government grants for MSME and startups reach entities with demonstrable innovation and scalability. Meeting these standards is the first step in the startup registration process. ELEVATE NxT Eligibility Table; Entity Status: Must be a registered Private Limited Company, LLP, or Partnership.; Geography: Must be registered and headquartered i",
+  benefits: ["1\\. Financial Benefits", "2\\. Strategic Mentorship", "3\\. Ecosystem & Market Access"],
+  documents: ["To successfully apply for ELEVATE NxT, you must prepare a comprehensive professional file. The following Documents required for ELEVATE NxT are mandatory:", "Pitch Deck: — A detailed presentation covering the problem, technology, market fit, and traction. (See our guide on Grants for Ventures).", "Startup Affidavit: — Declaration on INR 100 stamped paper confirming eligibility.", "Incorporation Proof: — Certificate of Incorporation, MoA, and AoA.", "Revenue Certificate: — CA-certified revenue certificate for the previous financial year.", "DPIIT Recognition: — Mandatory Startup India registration certificate.", "IP Proof: — Copies of patents filed or trademarks obtained (if applicable).", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  process: [
+    { title: "Document Prep", text: "2" },
+    { title: "Online Registration", text: "3" },
+    { title: "Portal Submission", text: "4" },
+    { title: "Preliminary Screening", text: "5" },
+    { title: "Final Pitch", text: "6" },
+    { title: "Acceleration & Funding", text: "1" },
+  ],
+});
+export const elevateNxtFaq = grantSchemeFaq(
+  "ELEVATE NxT",
+  "Selected applicants may receive support of about Up to ₹1Cr, subject to evaluation and scheme guidelines.",
+  "The ELEVATE NxT eligibility framework is strictly defined to ensure that the government grants for MSME and startups reach entities with demonstrable innovation and scalability. Meeting these standards is the first step in the startup registration process. ELEVATE NxT Eligibility",
+  "To successfully apply for ELEVATE NxT, you must prepare a comprehensive professional file. The following Documents required for ELEVATE NxT are mandatory:, Pitch Deck: — A detailed presentation covering the problem, technology, market fit, and traction. (See our guide on Grants for Ventures)., Startup Affidavit: — Declaration on INR 100 stamped paper confirming eligibility., Incorporation Proof: — Certificate of Incorporation, MoA, and AoA..",
+);
+
+export const empowerspherePage = createGrantProgramme({
+  name: "EmpowerSphere Skilling & Livelihood Futures",
+  eyebrow: "Social Impact Skilling",
+  kicker: "Grants for Skilling & Livelihood Startups",
+  intro: "The EmpowerSphere Skilling & Livelihood Futures initiative is designed to support both for-profit and non-profit ventures that aim to transform livelihoods and skill pathways. Unlike a traditional without security business loan, which focuses on commercial debt, this scheme provides non-dilutive grant capital to ensure that innovators can focus on deep-rooted social problems. The EmpowerSphere Skilling & Livelihood Futures Scheme emphasizes:",
+  funding: "Up to ₹12.5L",
+  eligibility: "The EmpowerSphere Skilling & Livelihood Futures eligibility framework is strictly defined to ensure that the grant reaches ventures with high potential for measurable impact. These standards ensure that only the most viable, innovation-driven projects are selected for the government grants for MSME. EmpowerSphere Eligibility Table; Legal Status: Must be a registered entity as a Private Limited, LLP, or Trust/Society/",
+  benefits: ["1\\. Financial Support", "2\\. Mentorship & Advisory", "3\\. Ecosystem Access"],
+  documents: ["Incorporation Proof: — Certificate of Incorporation or Trust Deed and PAN card.", "DPIIT Recognition: — Mandatory Startup India certificate (for startups).", "MSME Certificate: — Valid MSME certification (Udyam).", "Pitch Deck: — A detailed PDF outlining the problem, technology-driven solution, and business model. (See Grants for Ventures).", "Financial Statements: — Revenue statements, bank statements, or audited P&L accounts for the last 1 year.", "Team Profiles: — CVs of founders and key leadership highlighting technical and social impact expertise.", "Proof of Traction: — Letters of support from beneficiaries, partner MoUs, or existing revenue proofs.", "Technical roadmap: — Description of the Technology Readiness Level (TRL) for your platform."],
+  process: [
+    { title: "Self-Audit", text: "2" },
+    { title: "Documentation", text: "3" },
+    { title: "Portal Submission", text: "4" },
+    { title: "Screening", text: "5" },
+    { title: "Interview", text: "6" },
+    { title: "Funding", text: "1" },
+  ],
+});
+export const empowersphereFaq = grantSchemeFaq(
+  "EmpowerSphere Skilling & Livelihood Futures",
+  "Selected applicants may receive support of about Up to ₹12.5L, subject to evaluation and scheme guidelines.",
+  "The EmpowerSphere Skilling & Livelihood Futures eligibility framework is strictly defined to ensure that the grant reaches ventures with high potential for measurable impact. These standards ensure that only the most viable, innovation-driven projects are selected for the governm",
+  "Incorporation Proof: — Certificate of Incorporation or Trust Deed and PAN card., DPIIT Recognition: — Mandatory Startup India certificate (for startups)., MSME Certificate: — Valid MSME certification (Udyam)., Pitch Deck: — A detailed PDF outlining the problem, technology-driven solution, and business model. (See Grants for Ventures)..",
+);
+
+export const fintechChallengePage = createGrantProgramme({
+  name: "Fintech Startup Challenge",
+  eyebrow: "Fintech Innovation",
+  kicker: "Funding & Mentorship for Fintech Solutions",
+  intro: "The Fintech Startup Challenge is a competition designed to support early-stage fintech startups in India. The initiative provides funding, mentorship, and business support to startups working on innovative solutions in various fintech sectors.",
+  funding: "Challenge",
+  eligibility: "Company Type: DPIIT-recognized startups across India. - Private Limited Company, LLP, Partnership, or MSME (Proprietorship).; Innovation Focus: Startups must offer scalable, innovative solutions in fintech.; Stages of Development: Startups at Ideation, Validation, Early Traction, or Scaling stages.; Sector Focus: Startups focused on fintech, such as payments, digital lending, cybersecurity, blockchain, AI, etc.; Othe",
+  benefits: ["Fiscal Incentives", "Follow-on Funding", "Mentorship", "Networking Opportunities", "Pilot Programs"],
+  documents: ["Pitch Deck — A detailed presentation of your product, market opportunity, business model, and growth plans.", "Founders' Details — Background information, qualifications, and experience of the founding team.", "Registration Documents — Proof of DPIIT recognition, startup registration, and other legal documents.", "Financials — Balance Sheet, Profit & Loss account, and fund utilization breakdown.", "Proof of Innovation — Evidence of the scalability and technological aspect of your fintech solution."],
+  process: [
+    { title: "Prepare Documents", text: "Gather all necessary documents, including pitch deck, founder details, registration documents, financials, and proof of innovation." },
+    { title: "Submit Application", text: "Fill out the online application form on the official portal and upload all prepared documents." },
+    { title: "Application Review", text: "Your application will undergo an initial screening and evaluation by experts." },
+    { title: "Shortlisting & Interviews", text: "If selected, you will receive funding and access to mentorship and support." },
+    { title: "Final Selection & Funding", text: "Shortlisted applicants will be invited for an interview or pitch presentation." },
+    { title: "Prepare Documents", text: "Gather all necessary documents, including pitch deck, founder details, registration documents, financials, and proof of innovation." },
+  ],
+});
+export const fintechChallengeFaq = grantSchemeFaq(
+  "Fintech Startup Challenge",
+  "Selected applicants may receive support of about Challenge, subject to evaluation and scheme guidelines.",
+  "Company Type: DPIIT-recognized startups across India. - Private Limited Company, LLP, Partnership, or MSME (Proprietorship).; Innovation Focus: Startups must offer scalable, innovative solutions in fintech.; Stages of Development: Startups at Ideation, Validation, Early Traction,",
+  "Pitch Deck — A detailed presentation of your product, market opportunity, business model, and growth plans., Founders' Details — Background information, qualifications, and experience of the founding team., Registration Documents — Proof of DPIIT recognition, startup registration, and other legal documents., Financials — Balance Sheet, Profit & Loss account, and fund utilization breakdown..",
+);
+
+export const fundScYouthPage = createGrantProgramme({
+  name: "Fund for SC Youth 2.0",
+  eyebrow: "SC Entrepreneurship",
+  kicker: "Grants & Incubation for SC Entrepreneurs",
+  intro: "The Fund for SC Youth 2.0 is a government-backed initiative aimed at fostering innovation and high-impact entrepreneurship among SC youth. Executed through Sathyabama Technology Business Incubator (TBI), the program focuses on supporting early-stage startups and individual innovators who are committed to solving real-world problems.",
+  funding: "Up to ₹30L",
+  eligibility: "The Fund for SC Youth 2.0 eligibility has specific criteria that must be met to apply for funding and support. These standards ensure that the resources are channeled toward legally compliant and innovation-driven ventures led by the SC community. Fund for SC Youth 2.0 Eligibility Table; Applicant Profile: Must be an Indian citizen belonging to the Scheduled Caste (SC) category.; Shareholding: The startup must have a",
+  benefits: ["1\\. Substantial Financial Support", "2\\. Elite Incubation & Mentorship", "3\\. Investor Readiness & Networking", "4\\. Impact Amplification"],
+  documents: ["Identity Proof: — Aadhaar Card of the founders.", "Caste Certificate: — Valid certificate proving the lead applicant's SC status.", "Incorporation Docs: — Certificate of Incorporation, MoA, and AoA.", "DPIIT Recognition: — Mandatory Startup India certificate.", "Ownership Proof: — Shareholding pattern document showing at least 51% SC ownership.", "Pitch Deck: — A detailed presentation covering the problem, solution, and market traction (See our guide on Grants for Ventures).", "Financial Projections: — 3-year revenue forecast and financial statements.", "TRL Proof: — Description or video of the working prototype/MVP."],
+  process: [
+    { title: "Verify Eligibility", text: "2" },
+    { title: "Prepare the Pitch", text: "3" },
+    { title: "Online Submission", text: "4" },
+    { title: "Preliminary Screening", text: "5" },
+    { title: "Final Interview", text: "6" },
+    { title: "Grant Approval.", text: "1" },
+  ],
+});
+export const fundScYouthFaq = grantSchemeFaq(
+  "Fund for SC Youth 2.0",
+  "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
+  "The Fund for SC Youth 2.0 eligibility has specific criteria that must be met to apply for funding and support. These standards ensure that the resources are channeled toward legally compliant and innovation-driven ventures led by the SC community. Fund for SC Youth 2.0 Eligibilit",
+  "Identity Proof: — Aadhaar Card of the founders., Caste Certificate: — Valid certificate proving the lead applicant's SC status., Incorporation Docs: — Certificate of Incorporation, MoA, and AoA., DPIIT Recognition: — Mandatory Startup India certificate..",
+);
+
+export const fundForUpPage = createGrantProgramme({
+  name: "Fund for UP",
+  eyebrow: "StartInUP",
+  kicker: "Seed Grant & Marketing Capital for UP Startups",
+  intro: "The Fund for UP is an equity-free funding program aimed at nurturing early-stage startups registered within the state. Unlike a traditional without security business loan, which creates immediate debt repayment pressure, this initiative provides non-repayable grant capital. The Fund for UP Scheme utilizes a milestone-linked disbursement model. This means that funds are released progressively as the startup achieves predetermined technical and operational objectives. This structure ensures that c",
+  funding: "Up to ₹7.5L",
+  eligibility: "The Fund for UP eligibility framework is strictly defined to identify startups that are legally compliant and have a high potential for commercialization. Meeting these standards is a prerequisite for any business registration seeking state support. Fund for UP Eligibility Table; Entity Status: Must be registered as a Private Limited Company or LLP.; Geography: Headquartered and primarily operating within Uttar Prade",
+  benefits: ["1\\. Financial Benefits", "Women Founders:", "Special Regions:", "Priority Sectors:", "2\\. Non-Financial Benefits", "Elite Mentorship:"],
+  documents: ["StartInUP Certificate: — Proof of startup recognition on the state portal.", "Incorporation Documents: — Certificate of Incorporation, MoA, and AoA (or Partnership Deed for LLPs).", "Incubation Proof: — Agreement with a recognized incubator or an official association letter.", "Detailed Project Report (DPR): — A technical whitepaper outlining milestones, KPIs, and fund utilization.", "Pitch Deck: — A high-quality presentation detailing the innovation and scalability. (See Grants for Ventures).", "Financial Projections: — 3-year roadmap showing how the grant will fuel growth.", "Founder Identity Proof: — Aadhaar and PAN cards of all primary founders.", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  process: [
+    { title: "Portal Registration", text: "2" },
+    { title: "Incubator Affiliation", text: "3" },
+    { title: "Define Milestones", text: "4" },
+    { title: "Online Submission", text: "5" },
+    { title: "Preliminary Screening", text: "6" },
+    { title: "Technical Pitch", text: "1" },
+  ],
+});
+export const fundForUpFaq = grantSchemeFaq(
+  "Fund for UP",
+  "Selected applicants may receive support of about Up to ₹7.5L, subject to evaluation and scheme guidelines.",
+  "The Fund for UP eligibility framework is strictly defined to identify startups that are legally compliant and have a high potential for commercialization. Meeting these standards is a prerequisite for any business registration seeking state support. Fund for UP Eligibility Table;",
+  "StartInUP Certificate: — Proof of startup recognition on the state portal., Incorporation Documents: — Certificate of Incorporation, MoA, and AoA (or Partnership Deed for LLPs)., Incubation Proof: — Agreement with a recognized incubator or an official association letter., Detailed Project Report (DPR): — A technical whitepaper outlining milestones, KPIs, and fund utilization..",
+);
+
 export const taxExemptionCertificatePage = {
   eyebrow: "Tax & Compliance • Startups • Section 80IAC",
   heading: "Tax Exemption Certificate",

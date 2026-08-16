@@ -70,6 +70,8 @@ const SCHEME_SERVICE_REDIRECTS: Record<string, string> = {
   "tax-exemption": "/services/certificate",
   "business-registration": "/services/registration",
   "startup-india-cert": "/services/startup",
+  "government-grants": "/services/grant",
+  "government-grants-guide": "/services/grant",
 };
 
 function schemeHref(item: SchemeItem) {
