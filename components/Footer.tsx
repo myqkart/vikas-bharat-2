@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle, Phone, Mail } from "lucide-react";
+import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import { gmailComposeHref, navigation, site } from "@/lib/content";
 
 const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
@@ -149,6 +149,15 @@ export default function Footer() {
                 <p className="mt-5 text-[13px] leading-relaxed text-slate font-semibold">
                   Your trusted partner for startup registration, loans, schemes & business growth.
                 </p>
+                <a
+                  href={site.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-start gap-2 text-[13px] font-semibold leading-relaxed text-slate hover:text-indigo transition-colors group"
+                >
+                  <MapPin size={16} strokeWidth={2} className="mt-0.5 shrink-0 text-indigo group-hover:scale-110 transition-transform" />
+                  <span>{site.offices[0].address}</span>
+                </a>
               </div>
             </div>
 

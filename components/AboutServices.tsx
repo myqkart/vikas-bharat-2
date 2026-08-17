@@ -516,7 +516,7 @@ export default function AboutServices() {
             Your vision deserves a dedicated desk.
           </h3>
           <p className="mt-3 text-slate text-xs sm:text-sm font-medium leading-relaxed max-w-xl mx-auto">
-            We operate in Ahmedabad, Jaipur, Delhi NCR, and Hyderabad — supporting promoters from first query on WhatsApp to money in bank or licence in hand.
+            We operate from Sector 63, Noida — supporting promoters from first query on WhatsApp to money in bank or licence in hand.
           </p>
         </div>
       </section>

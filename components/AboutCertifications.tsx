@@ -553,7 +553,7 @@ export default function AboutCertifications() {
                 </span>
               </h3>
               <p className="mt-3 text-slate text-sm leading-relaxed font-semibold max-w-md">
-                Scheme partnerships, client ratings, walk-in city desks, and the
+                Scheme partnerships, client ratings, our Noida walk-in desk, and the
                 portals we file through every week.
               </p>
 

@@ -14,22 +14,13 @@ export const site = {
     { label: "Information", address: "info@vikas-bharat.com" },
     { label: "Contact", address: "contact@vikas-bharat.com" },
   ] as const,
+  mapsUrl: "https://maps.app.goo.gl/DdMwhQSm3zzrxeTHA?g_st=ic",
   offices: [
     {
-      city: "Ahmedabad",
-      address: "CG Road, Navrangpura — Business desk & walk-ins",
-    },
-    {
-      city: "Jaipur",
-      address: "C-Scheme — Loans, MSME & scheme desk",
-    },
-    {
-      city: "Delhi NCR",
-      address: "Gurugram Sector 44 — Startup & compliance desk",
-    },
-    {
-      city: "Hyderabad",
-      address: "Banjara Hills — South India operations",
+      city: "Noida",
+      address:
+        "1st floor, F-5, C Block, Sector 63, Noida, Hazratpur Wajidpur, Uttar Pradesh 201301",
+      mapsUrl: "https://maps.app.goo.gl/DdMwhQSm3zzrxeTHA?g_st=ic",
     },
   ] as const,
   social: [
@@ -8733,7 +8724,7 @@ export const hero = {
     { value: "2.45L+", label: "DPIIT startups" },
     { value: "4,567", label: "80 IAC Tax Exemption" },
     { value: "₹200 Cr", label: "Startup turnover cap" },
-    { value: "4 cities", label: "Office presence" },
+    { value: "Noida", label: "Walk-in office" },
   ],
 } as const;
 
@@ -8764,7 +8755,7 @@ export const passbook = {
   title: "Our Ledger",
   subtitle:
     "Real outcomes from registrations, loans, and scheme filings — stamped in plain numbers so you can trust the desk before you dial.",
-  body: "We track every rupee sanctioned, every licence issued, and every first reply. These figures update from live case work across Ahmedabad, Jaipur, Delhi NCR, and Hyderabad.",
+  body: "We track every rupee sanctioned, every licence issued, and every first reply. These figures update from live case work at our Noida desk and across India.",
   stats: [
     { value: "₹480Cr+", label: "Money Delivered", stamp: "PAID" },
     { value: "12,000+", label: "Businesses Helped", stamp: "DONE" },
@@ -8820,11 +8811,11 @@ export const network = {
   totalCount: 78_302_882,
   /** SVG coords on @svg-maps/india viewBox (0 0 612 696) */
   metros: [
-    { id: "delhi", name: "Delhi NCR", x: 187, y: 205, office: true, label: "right" },
-    { id: "jaipur", name: "Jaipur", x: 155, y: 235, office: true, label: "right" },
-    { id: "ahmedabad", name: "Ahmedabad", x: 88, y: 300, office: true, label: "right" },
+    { id: "delhi", name: "Noida", x: 187, y: 205, office: true, label: "right" },
+    { id: "jaipur", name: "Jaipur", x: 155, y: 235, office: false, label: "right" },
+    { id: "ahmedabad", name: "Ahmedabad", x: 88, y: 300, office: false, label: "right" },
     { id: "mumbai", name: "Mumbai", x: 118, y: 405, office: false, label: "right" },
-    { id: "hyderabad", name: "Hyderabad", x: 228, y: 455, office: true, label: "right" },
+    { id: "hyderabad", name: "Hyderabad", x: 228, y: 455, office: false, label: "right" },
     { id: "bengaluru", name: "Bengaluru", x: 185, y: 555, office: false, label: "right" },
     { id: "chennai", name: "Chennai", x: 248, y: 585, office: false, label: "left" },
     { id: "kolkata", name: "Kolkata", x: 415, y: 320, office: false, label: "left" },
@@ -9286,13 +9277,13 @@ export const aboutCredentials = {
     {
       id: "rating",
       label: "5.0 Google Rating",
-      text: "Client-reviewed desk presence across our walk-in cities.",
+      text: "Client-reviewed desk presence at our Noida walk-in office.",
       image: photos.badgeRating,
     },
     {
       id: "cities",
-      label: "Four-City Help Desk",
-      text: "Ahmedabad, Jaipur, Delhi NCR, and Hyderabad — real rooms, not call centres only.",
+      label: "Noida Walk-in Desk",
+      text: "1st floor, F-5, C Block, Sector 63, Noida — a real room, not a call centre only.",
       image: photos.aboutOffice,
     },
     {
@@ -9356,7 +9347,7 @@ export const services = {
       generic: "Rare",
     },
     {
-      feature: "Walk-in offices in 4 cities",
+      feature: "Walk-in office in Noida",
       us: true,
       diy: false,
       generic: false,
@@ -10033,5 +10024,5 @@ export const footer = {
     "Pan-India business help desk for registration, GST, MSME/Udyam, loans, government schemes, FSSAI, ISO, and growth advisory — bilingual and WhatsApp-first.",
   offices: site.offices,
   disclaimer: site.disclaimer,
-  map: { src: photos.footerCity, alt: "Map of Bharosa office cities" },
+  map: { src: photos.footerCity, alt: "Noida office location" },
 } as const;

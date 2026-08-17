@@ -418,9 +418,9 @@ const cardsData = [
     to: 5.0,
     decimal: 1,
     suffix: " Google Rating",
-    badge: "4 Cities Desk",
+    badge: "Noida Desk",
     title: "Trusted Support Network",
-    sub: "Direct support desks across Delhi NCR, Hyderabad, Jaipur, and Ahmedabad.",
+    sub: "Walk in at Sector 63, Noida — or connect from anywhere in India.",
     illustration: <NetworkIllustration />,
     cardBg: "from-purple-500/[0.04] to-transparent border-purple-500/10 hover:border-purple-500/20",
     badgeStyles: "border-purple-500/20 bg-purple-500/[0.06] text-purple-600"
@@ -446,7 +446,7 @@ const features = [
   {
     icon: <MapPin className="h-5 w-5 text-indigo shrink-0" />,
     title: "Local Presence",
-    desc: "4 cities. Real support."
+    desc: "Noida walk-in. Pan-India support."
   }
 ];
 

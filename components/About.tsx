@@ -370,8 +370,8 @@ export default function About() {
                 <MapPin size={20} strokeWidth={2.25} />
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-bold text-ink tracking-tight">4 Cities</div>
-                <div className="text-xs sm:text-sm text-slate font-semibold leading-tight mt-0.5">Local Presence</div>
+                <div className="text-xl sm:text-2xl font-bold text-ink tracking-tight">Noida</div>
+                <div className="text-xs sm:text-sm text-slate font-semibold leading-tight mt-0.5">Walk-in office</div>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {
+  ArrowUpRight,
   FileCheck2,
   Handshake,
   Landmark,
@@ -44,7 +45,7 @@ const contactFaq = {
     },
     {
       question: "Can I visit an office in person?",
-      answer: "Yes. Please call ahead so the right specialist can be available for your visit.",
+      answer: "Yes. Walk in at our Noida desk — 1st floor, F-5, C Block, Sector 63. Please call ahead so the right specialist can be available.",
     },
   ],
 } as const;
@@ -185,19 +186,34 @@ export default function ContactPage() {
       <section className="bg-paper px-5 py-16 sm:px-8 lg:py-24">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-marigold-dark">Meet us nearby</p>
-            <h2 className="mt-3 font-display text-4xl font-semibold text-ink">Our office desks</h2>
-            <p className="mt-3 leading-relaxed text-slate">Walk in for a conversation or connect remotely from anywhere in India.</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-marigold-dark">Visit the desk</p>
+            <h2 className="mt-3 font-display text-4xl font-semibold text-ink">Our Noida office</h2>
+            <p className="mt-3 leading-relaxed text-slate">Walk in for a conversation, or connect remotely from anywhere in India.</p>
           </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 mx-auto max-w-xl">
             {site.offices.map((office) => (
-              <article key={office.city} className="rounded-2xl border border-border bg-white p-5 shadow-card">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-indigo/10 text-indigo">
+              <a
+                key={office.city}
+                href={office.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-raised sm:p-8"
+              >
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-indigo/10 text-indigo transition group-hover:bg-indigo group-hover:text-white">
                   <MapPin className="h-5 w-5" />
                 </span>
                 <h3 className="mt-5 font-display text-2xl font-semibold text-ink">{office.city}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate">{office.address}</p>
-              </article>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-ink">
+                  Open in Google Maps
+                  <ArrowUpRight
+                    size={15}
+                    strokeWidth={2.4}
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    aria-hidden
+                  />
+                </span>
+              </a>
             ))}
           </div>
         </div>
