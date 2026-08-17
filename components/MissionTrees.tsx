@@ -451,7 +451,7 @@ function CenterSeal({
           <foreignObject x={CX - 40} y={CY - 40} width={80} height={80}>
             <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white flex items-center justify-center shadow-card ring-1 ring-border/20">
               <Image 
-                src={site.logo} 
+                src={site.logoMark} 
                 alt={site.companyName} 
                 fill 
                 sizes="80px" 

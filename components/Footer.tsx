@@ -130,7 +130,7 @@ export default function Footer() {
                 <div className="flex items-center gap-4">
                   <div className="relative h-16 w-16 overflow-hidden rounded-2xl bg-white border border-border/80 shadow-[0_2px_8px_rgba(18,41,77,0.04)] p-2 flex-shrink-0 transition-transform duration-300 hover:scale-105">
                     <Image
-                      src={site.logo}
+                      src={site.logoMark}
                       alt={site.companyName}
                       fill
                       sizes="64px"

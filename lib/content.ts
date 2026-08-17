@@ -4,6 +4,7 @@ export const site = {
   companyName: "VIKASBHART",
   tagline: "Sapno Se Safalta Tak",
   logo: "/brand/vikas-bharat-logo.png",
+  logoMark: "/brand/vikas-bharat-mark.png",
   whatsappNumber: "919319592924",
   phoneNumber: "+919319592924",
   phoneDisplay: "+91 93195 92924",

@@ -141,7 +141,7 @@ function LogoSeal({ size }: { size: number }) {
         style={{ width: size, height: size }}
       >
         <Image
-          src={site.logo}
+          src={site.logoMark}
           alt={site.companyName}
           fill
           sizes={`${size}px`}
@@ -598,7 +598,7 @@ export default function Header() {
                       style={{ width: 52, height: 52 }}
                     >
                       <Image
-                        src={site.logo}
+                        src={site.logoMark}
                         alt=""
                         fill
                         sizes="52px"
