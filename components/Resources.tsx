@@ -296,7 +296,7 @@ function FeaturedBlogCard({
   return (
     <motion.div variants={cardFadeUp} className="md:col-span-7 h-full">
       <Link
-        href={`/blog/${slug}`}
+        href={`/blogs/${slug}`}
         className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] md:rounded-[32px] p-5 md:p-6 shadow-card transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-raised ${background}`}
         style={{ translate: "0px", rotate: "0deg", scale: 1 }} // Prevent stacking context shift
       >
@@ -361,7 +361,7 @@ function BlogCard({
   return (
     <motion.div variants={cardFadeUp} className={`${colSpan} ${heightClass}`}>
       <Link
-        href={`/blog/${slug}`}
+        href={`/blogs/${slug}`}
         className={`group relative block h-full overflow-hidden rounded-[28px] md:rounded-[32px] p-5 md:p-6 shadow-card transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-raised ${background}`}
         style={{ translate: "0px", rotate: "0deg", scale: 1 }} // Prevent stacking context shift
       >
@@ -457,7 +457,7 @@ function HeroContent() {
 
       <div className="mt-8 lg:mt-12">
         <MagneticButton
-          href="/blog"
+          href="/blogs"
           className="btn-shine inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] bg-indigo hover:bg-ink px-7 py-4 text-base font-bold text-white shadow-raised transition-colors duration-300"
         >
           <span>View All Blogs</span>
