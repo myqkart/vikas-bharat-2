@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FinalCTA from "@/components/FinalCTA";
 import Hero from "@/components/Hero";
 import ImageChecklist from "@/components/ImageChecklist";
+import JsonLd from "@/components/JsonLd";
+import RelatedDesks from "@/components/RelatedDesks";
 import SiteChrome from "@/components/SiteChrome";
 import ServiceDeskPage from "@/components/ServiceDeskPage";
+import { getServiceBySlug, getAllServiceSlugs } from "@/lib/content";
+import { getServiceDesk } from "@/lib/serviceDesks";
 import {
-  getAllServiceSlugs,
-  getServiceBySlug,
-  site,
-} from "@/lib/content";
-import {
-  getAllServiceDeskSlugs,
-  getServiceDesk,
-} from "@/lib/serviceDesks";
+  breadcrumbJsonLd,
+  buildMetadata,
+  faqJsonLd,
+  getIndexableServiceSlugs,
+  getRelatedServiceLinks,
+  jsonLdGraph,
+  metaDescription,
+  serviceJsonLd,
+  servicePath,
+  shortTitle,
+  webPageJsonLd,
+} from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -21,11 +30,13 @@ type PageProps = {
 
 export function generateStaticParams() {
   const slugs = new Set([
+    ...getIndexableServiceSlugs(),
     ...getAllServiceSlugs(),
-    ...getAllServiceDeskSlugs(),
   ]);
   return [...slugs].map((slug) => ({ slug }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -33,23 +44,62 @@ export async function generateMetadata({
   const { slug } = await params;
   const desk = getServiceDesk(slug);
   if (desk) {
-    return { title: desk.title, description: desk.description };
+    return buildMetadata({
+      title: desk.title,
+      description: desk.description,
+      path: servicePath(slug),
+      image: desk.hero.images.primary,
+      imageAlt: desk.hero.data.imageAlt,
+    });
   }
   const service = getServiceBySlug(slug);
-  if (!service) return { title: site.companyName };
-  return {
-    title: `${service.title} | ${site.companyName}`,
+  if (!service) return { title: "Service not found", robots: { index: false } };
+  return buildMetadata({
+    title: service.title,
     description: service.summary,
-  };
+    path: servicePath(slug),
+    image: service.image,
+    imageAlt: `${service.title} — ${service.subtitle}`,
+  });
 }
 
 export default async function ServiceDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const desk = getServiceDesk(slug);
   if (desk) {
+    const title = shortTitle(desk.title);
+    const description = metaDescription(desk.description);
+    const breadcrumbs = [
+      { name: "Home", path: "/" },
+      { name: "Services", path: "/service" },
+      { name: title, path: servicePath(slug) },
+    ];
     return (
       <SiteChrome>
-        <ServiceDeskPage desk={desk} />
+        <JsonLd
+          data={jsonLdGraph([
+            webPageJsonLd({
+              path: servicePath(slug),
+              title: `${title} | VIKASBHART`,
+              description,
+            }),
+            breadcrumbJsonLd(breadcrumbs),
+            serviceJsonLd({
+              slug,
+              name: title,
+              description,
+              image: desk.hero.images.primary,
+            }),
+            faqJsonLd(desk.faq.items),
+          ])}
+        />
+        <Breadcrumbs items={breadcrumbs} />
+        <ServiceDeskPage
+          desk={desk}
+          relatedHeading="Related services"
+          relatedSub="Other desks founders usually combine with this work."
+          relatedItems={getRelatedServiceLinks(slug)}
+        />
       </SiteChrome>
     );
   }
@@ -57,8 +107,39 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
+  const title = service.title;
+  const description = metaDescription(service.summary);
+  const breadcrumbs = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/service" },
+    { name: title, path: servicePath(slug) },
+  ];
+
   return (
     <SiteChrome>
+      <JsonLd
+        data={jsonLdGraph([
+          webPageJsonLd({
+            path: servicePath(slug),
+            title: `${title} | VIKASBHART`,
+            description,
+          }),
+          breadcrumbJsonLd(breadcrumbs),
+          serviceJsonLd({
+            slug,
+            name: title,
+            description,
+            image: service.image,
+          }),
+          faqJsonLd(
+            service.faqs.map((item) => ({
+              question: item.q,
+              answer: item.a,
+            })),
+          ),
+        ])}
+      />
+      <Breadcrumbs items={breadcrumbs} />
       <Hero
         eyebrow="Service"
         headline={service.title}
@@ -131,6 +212,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </div>
       </section>
 
+      <RelatedDesks
+        heading="Related services"
+        items={getRelatedServiceLinks(slug)}
+      />
       <FinalCTA />
     </SiteChrome>
   );

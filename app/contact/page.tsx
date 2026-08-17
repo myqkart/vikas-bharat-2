@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowUpRight,
   FileCheck2,
@@ -12,20 +14,47 @@ import {
   Scale,
   TrendingUp,
 } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactInquiryForm from "@/components/ContactInquiryForm";
 import FAQ from "@/components/FAQ";
+import JsonLd from "@/components/JsonLd";
 import SiteChrome from "@/components/SiteChrome";
 import { photos } from "@/lib/photos";
 import { gmailComposeHref, site } from "@/lib/content";
+import {
+  SITE_URL,
+  absoluteUrl,
+  breadcrumbJsonLd,
+  buildMetadata,
+  faqJsonLd,
+  jsonLdGraph,
+  webPageJsonLd,
+} from "@/lib/seo";
 
 const services = [
-  { title: "Funding & Loans", text: "Schemes, loans and investor readiness", icon: Landmark },
-  { title: "Registrations", text: "Company, GST and Udyam support", icon: FileCheck2 },
-  { title: "Business Growth", text: "Strategy, scale-up and market access", icon: TrendingUp },
-  { title: "Legal & Compliance", text: "Certificates, filings and advisory", icon: Scale },
-  { title: "Startup Support", text: "DPIIT and early-stage guidance", icon: Rocket },
-  { title: "Partnership Advisory", text: "Expert help for your next move", icon: Handshake },
+  { title: "Funding & Loans", text: "Schemes, loans and investor readiness", icon: Landmark, href: "/services/loan" },
+  { title: "Registrations", text: "Company, GST and Udyam support", icon: FileCheck2, href: "/services/registration" },
+  { title: "Business Growth", text: "Strategy, scale-up and market access", icon: TrendingUp, href: "/services/growth" },
+  { title: "Legal & Compliance", text: "Certificates, filings and advisory", icon: Scale, href: "/services/legal" },
+  { title: "Startup Support", text: "DPIIT and early-stage guidance", icon: Rocket, href: "/services/startup" },
+  { title: "Partnership Advisory", text: "Expert help for your next move", icon: Handshake, href: "/contact" },
 ] as const;
+
+const title = "Contact Us";
+const description =
+  "Talk to the Vikas Bharat desk in Noida or remotely — WhatsApp, phone or email for registrations, loans, government schemes and MSME growth support.";
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Contact Us", path: "/contact" },
+];
+
+export const metadata: Metadata = buildMetadata({
+  title,
+  description,
+  path: "/contact",
+  image: photos.storyConsult,
+  imageAlt: "Vikas Bharat advisors in a business consultation",
+});
 
 const contactFaq = {
   heading: "Before you contact us",
@@ -51,8 +80,42 @@ const contactFaq = {
 } as const;
 
 export default function ContactPage() {
+  const office = site.offices[0];
   return (
     <SiteChrome>
+      <JsonLd
+        data={jsonLdGraph([
+          webPageJsonLd({
+            path: "/contact",
+            title: `${title} | VIKASBHART`,
+            description,
+            type: "ContactPage",
+          }),
+          breadcrumbJsonLd(breadcrumbs),
+          faqJsonLd(contactFaq.items),
+          {
+            "@type": "LocalBusiness",
+            "@id": `${SITE_URL}/#noida-office`,
+            name: "Vikas Bharat — Noida desk",
+            url: absoluteUrl("/contact"),
+            telephone: site.phoneNumber,
+            email: site.email,
+            image: photos.storyConsult,
+            address: office
+              ? {
+                  "@type": "PostalAddress",
+                  streetAddress: office.address,
+                  addressLocality: office.city,
+                  addressRegion: "Uttar Pradesh",
+                  postalCode: "201301",
+                  addressCountry: "IN",
+                }
+              : undefined,
+            parentOrganization: { "@id": `${SITE_URL}/#organization` },
+          },
+        ])}
+      />
+      <Breadcrumbs items={breadcrumbs} />
       <section className="relative isolate overflow-hidden border-b border-border bg-paper px-5 py-20 sm:px-8 lg:py-28">
         <Image
           src={photos.heroGlow}
@@ -155,17 +218,18 @@ export default function ContactPage() {
               actions.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {services.map(({ title, text, icon: Icon }) => (
-                <div
-                  key={title}
-                  className="rounded-[16px] border border-[#ebe4d6] bg-white p-4 shadow-[0_4px_16px_rgba(18,41,77,0.04)]"
+              {services.map(({ title: serviceTitle, text, icon: Icon, href }) => (
+                <Link
+                  key={serviceTitle}
+                  href={href}
+                  className="rounded-[16px] border border-[#ebe4d6] bg-white p-4 shadow-[0_4px_16px_rgba(18,41,77,0.04)] transition hover:-translate-y-0.5 hover:shadow-raised"
                 >
                   <span className="grid h-10 w-10 place-items-center rounded-[10px] border border-[#e6dfd0] bg-[#f7f3ea] text-ink">
                     <Icon className="h-[18px] w-[18px]" strokeWidth={1.75} />
                   </span>
-                  <h3 className="mt-3 text-[14px] font-bold text-ink">{title}</h3>
+                  <h3 className="mt-3 text-[14px] font-bold text-ink">{serviceTitle}</h3>
                   <p className="mt-1 text-[12px] leading-snug text-slate">{text}</p>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="mt-6 overflow-hidden rounded-[18px]">

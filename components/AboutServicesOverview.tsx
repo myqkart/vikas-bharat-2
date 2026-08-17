@@ -34,6 +34,16 @@ const imageMap = {
   aboutServiceNbf: photos.aboutServiceNbf,
 } as const;
 
+const overviewLinks: Record<(typeof about.servicesOverview)[number]["title"], string> = {
+  Grants: "/services/grant",
+  "Business Registration": "/services/registration",
+  "Certification & Compliance": "/services/certificate",
+  "Loans & Funding": "/services/loan",
+  "Marketing & Branding": "/services/marketing",
+  "Legal Consultancy": "/services/legal",
+  "NBF / Financial Solutions": "/services/nbfc",
+};
+
 export default function AboutServicesOverview() {
   const reduce = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -119,9 +129,11 @@ export default function AboutServicesOverview() {
                     variants={flipIn}
                     style={{ transformStyle: "preserve-3d" }}
                   >
-                    <motion.button
-                      type="button"
-                      onClick={() => {
+                    <motion.a
+                      href={overviewLinks[item.title]}
+                      onClick={(e) => {
+                        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                        e.preventDefault();
                         const el = containerRef.current;
                         if (!el) return;
                         const top =
@@ -162,7 +174,7 @@ export default function AboutServicesOverview() {
                           </motion.span>
                         ) : null}
                       </AnimatePresence>
-                    </motion.button>
+                    </motion.a>
                   </motion.li>
                 ))}
               </ol>
@@ -301,6 +313,7 @@ export default function AboutServicesOverview() {
                   style={{ transformStyle: "preserve-3d" }}
                   className="overflow-hidden rounded-[22px] bg-white shadow-card"
                 >
+                  <Link href={overviewLinks[item.title]} className="block">
                   <div className="relative aspect-[16/10]">
                     <Image
                       src={imageMap[item.imageKey]}
@@ -320,6 +333,7 @@ export default function AboutServicesOverview() {
                       <p className="mt-1 text-sm text-paper/85">{item.text}</p>
                     </div>
                   </div>
+                  </Link>
                 </motion.li>
               ))}
             </ul>

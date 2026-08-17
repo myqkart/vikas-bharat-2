@@ -171,6 +171,18 @@ export default function Footer() {
                 Explore
               </p>
               <ul className="flex flex-col gap-3">
+                <li>
+                  <Link
+                    href="/"
+                    className="inline-flex items-center text-sm font-semibold text-slate hover:text-indigo transition-colors duration-200 group/link relative"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-marigold mr-2.5 transition-transform duration-200 group-hover/link:scale-125 group-hover/link:bg-marigold-dark" />
+                    <span className="relative">
+                      Home
+                      <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-indigo transition-all duration-300 group-hover/link:w-full" />
+                    </span>
+                  </Link>
+                </li>
                 {navigation.map((item) => (
                   <li key={item.href}>
                     <Link
@@ -178,6 +190,30 @@ export default function Footer() {
                       className="inline-flex items-center text-sm font-semibold text-slate hover:text-indigo transition-colors duration-200 group/link relative"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-marigold mr-2.5 transition-transform duration-200 group-hover/link:scale-125 group-hover/link:bg-marigold-dark" />
+                      <span className="relative">
+                        {item.label}
+                        <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-indigo transition-all duration-300 group-hover/link:w-full" />
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs font-bold text-ink uppercase tracking-wider mb-3 mt-6">
+                Popular desks
+              </p>
+              <ul className="flex flex-col gap-3">
+                {[
+                  { href: "/services/registration", label: "Business registration" },
+                  { href: "/services/loan", label: "Business loans" },
+                  { href: "/services/grant", label: "Government grants" },
+                  { href: "/scheme/mudra", label: "Mudra loans" },
+                ].map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="inline-flex items-center text-sm font-semibold text-slate hover:text-indigo transition-colors duration-200 group/link relative"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-indigo/40 mr-2.5" />
                       <span className="relative">
                         {item.label}
                         <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-indigo transition-all duration-300 group-hover/link:w-full" />

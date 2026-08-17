@@ -130,7 +130,7 @@ export default function ServicePageCatalog() {
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <Image
                         src={item.image}
-                        alt=""
+                        alt={item.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
@@ -148,7 +148,7 @@ export default function ServicePageCatalog() {
                         {item.text}
                       </p>
                       <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-ink">
-                        Know More
+                        Explore {item.title}
                         <ArrowUpRight
                           size={15}
                           strokeWidth={2.4}

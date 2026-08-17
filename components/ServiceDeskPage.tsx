@@ -5,10 +5,22 @@ import GrantPageServices from "@/components/GrantPageServices";
 import GrantPageProcess from "@/components/GrantPageProcess";
 import GrantPageDocuments from "@/components/GrantPageDocuments";
 import FAQ from "@/components/FAQ";
+import RelatedDesks from "@/components/RelatedDesks";
 import ServicePageConnect from "@/components/ServicePageConnect";
+import type { RelatedLink } from "@/lib/seo";
 import type { ServiceDesk } from "@/lib/serviceDesks";
 
-export default function ServiceDeskPage({ desk }: { desk: ServiceDesk }) {
+export default function ServiceDeskPage({
+  desk,
+  relatedHeading,
+  relatedSub,
+  relatedItems = [],
+}: {
+  desk: ServiceDesk;
+  relatedHeading?: string;
+  relatedSub?: string;
+  relatedItems?: RelatedLink[];
+}) {
   return (
     <>
       <GrantPageHero
@@ -55,6 +67,11 @@ export default function ServiceDeskPage({ desk }: { desk: ServiceDesk }) {
         );
       })}
       <FAQ data={desk.faq} />
+      <RelatedDesks
+        heading={relatedHeading ?? "Related desks"}
+        sub={relatedSub}
+        items={relatedItems}
+      />
       <ServicePageConnect />
     </>
   );

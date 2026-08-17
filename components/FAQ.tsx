@@ -338,6 +338,14 @@ export default function FAQ({ data }: { data?: FaqData }) {
       id="faq"
       className="relative px-6 py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-paper via-[#FAF5EA] to-paper border-t border-border/10"
     >
+      <dl className="sr-only">
+        {orderedItems.map((item) => (
+          <div key={item.question}>
+            <dt>{item.question}</dt>
+            <dd>{item.answer}</dd>
+          </div>
+        ))}
+      </dl>
       {!reduce ? <FloatingOrbs className="opacity-50" /> : null}
       {/* Background Decorative Blobs & Circles in Theme Colors */}
       <motion.svg

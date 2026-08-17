@@ -156,6 +156,7 @@ import {
   site,
 } from "@/lib/content";
 import { photos } from "@/lib/photos";
+import { SCHEME_CANONICAL_ALIASES } from "@/lib/canonical-routes";
 import type { ServiceDesk } from "@/lib/serviceDesks";
 
 const desks: Record<string, ServiceDesk> = {
@@ -1746,15 +1747,24 @@ const desks: Record<string, ServiceDesk> = {
   },
 };
 
+export { SCHEME_CANONICAL_ALIASES };
+
 desks["startup-india-seed-debt"] = desks["seed-fund"];
 desks["horizon-fund-scheme"] = desks["horizon-fund"];
 desks["venture-tech-funding"] = desks["venture-tech"];
 
+export function getCanonicalSchemeSlug(slug: string) {
+  return SCHEME_CANONICAL_ALIASES[slug] ?? slug;
+}
 
 export function getSchemeDesk(slug: string) {
-  return desks[slug] ?? null;
+  return desks[getCanonicalSchemeSlug(slug)] ?? desks[slug] ?? null;
 }
 
 export function getAllSchemeDeskSlugs() {
   return Object.keys(desks);
+}
+
+export function getIndexableSchemeSlugs() {
+  return Object.keys(desks).filter((slug) => !SCHEME_CANONICAL_ALIASES[slug]);
 }

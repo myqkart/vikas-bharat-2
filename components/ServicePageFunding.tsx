@@ -152,7 +152,7 @@ export default function ServicePageFunding() {
                       href={item.href}
                       className="group mt-6 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-bold text-paper transition-colors hover:bg-indigo"
                     >
-                      Know More
+                      Know more about {item.title}
                       <ArrowRight
                         size={15}
                         strokeWidth={2.4}

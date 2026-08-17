@@ -14,11 +14,19 @@ export default function SiteChrome({
   return (
     <SplashGate>
       {/* Fixed UI must sit outside PageEntrance — transforms break position:fixed */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[300] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-paper"
+      >
+        Skip to content
+      </a>
       <ScrollReset />
       <ScrollProgress />
       <Header />
       <PageEntrance>
-        <main className="relative flex-1">{children}</main>
+        <main id="main-content" className="relative flex-1" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </PageEntrance>
       <WhatsAppFloat />

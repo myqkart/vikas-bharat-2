@@ -85,14 +85,14 @@ function SplashParticles({ active }: { active: boolean }) {
 
 function BrandName() {
   return (
-    <motion.h1
+    <motion.p
       className="mt-2 text-center text-xl font-bold tracking-[0.25em] text-white uppercase sm:text-2xl font-display"
       initial={{ opacity: 0, y: 12, filter: "blur(8px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ delay: 1.45, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
     >
       {site.companyName}
-    </motion.h1>
+    </motion.p>
   );
 }
 
@@ -166,7 +166,7 @@ function SplashScreen({ onComplete, audio }: SplashScreenProps) {
       >
         <Image
           src="/splash-bg.jpg"
-          alt="Splash Background"
+          alt=""
           fill
           priority
           sizes="100vw"
@@ -365,27 +365,28 @@ function SplashScreen({ onComplete, audio }: SplashScreenProps) {
   );
 }
 
+const BOT_UA =
+  /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternalhit|twitterbot|linkedinbot|embedly|whatsapp|telegrambot|applebot|bingpreview|gptbot|chatgpt-user|claudebot|anthropic|perplexity|bytespider/i;
+
+function shouldSkipSplash(userAgent: string, reduceMotion: boolean | null) {
+  return Boolean(reduceMotion) || BOT_UA.test(userAgent);
+}
+
 export default function SplashGate({ children }: { children: React.ReactNode }) {
   const reduce = useReducedMotion();
   const [showSplash, setShowSplash] = useState(() => {
     if (typeof window === "undefined") return true;
     return !splashDoneThisRuntime;
   });
-  const [contentVisible, setContentVisible] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return splashDoneThisRuntime;
-  });
 
   useEffect(() => {
-    if (reduce) {
+    if (shouldSkipSplash(window.navigator.userAgent, reduce)) {
       splashDoneThisRuntime = true;
       setShowSplash(false);
-      setContentVisible(true);
       return;
     }
     if (splashDoneThisRuntime) {
       setShowSplash(false);
-      setContentVisible(true);
     }
   }, [reduce]);
 
@@ -400,37 +401,18 @@ export default function SplashGate({ children }: { children: React.ReactNode }) 
 
   const handleComplete = useCallback(() => {
     splashDoneThisRuntime = true;
-    // Reveal content first (still under fading splash), then drop splash
-    setContentVisible(true);
-    window.requestAnimationFrame(() => {
-      setShowSplash(false);
-    });
+    setShowSplash(false);
   }, []);
 
   return (
     <>
-      {/* Content stays fully hidden until splash finishes — no mid-intro fade races */}
-      <div
-        className="flex min-h-full flex-1 flex-col"
-        style={{
-          opacity: contentVisible ? 1 : 0,
-          visibility: contentVisible ? "visible" : "hidden",
-        }}
-        aria-hidden={!contentVisible}
-      >
-        {children}
-      </div>
+      <div className="flex min-h-full flex-1 flex-col">{children}</div>
 
       <AnimatePresence>
         {showSplash ? (
           <SplashScreen key="vb-splash" onComplete={handleComplete} />
         ) : null}
       </AnimatePresence>
-
-      {/* Solid cover until first paint decides — prevents main-content flash */}
-      {!contentVisible && !showSplash ? (
-        <div className="fixed inset-0 z-[199] bg-[#070e1a]" aria-hidden />
-      ) : null}
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
@@ -28,7 +29,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { schemePage, site } from "@/lib/content";
-import { getSchemeDesk } from "@/lib/schemeDesks";
+import { getSchemePageHref } from "@/lib/seo";
 import { dramaticFadeUp, flipIn, popIn, staggerDramatic } from "@/lib/motion";
 import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
@@ -63,24 +64,13 @@ const iconMap: Record<SchemeItem["icon"], LucideIcon> = {
   trophy: Trophy,
 };
 
-const SCHEME_SERVICE_REDIRECTS: Record<string, string> = {
-  "msme-certification": "/services/certificate",
-  "certs-compliance": "/services/certificate",
-  "iso-certification": "/services/certificate",
-  "tax-exemption": "/services/certificate",
-  "business-registration": "/services/registration",
-  "startup-india-cert": "/services/startup",
-  "government-grants": "/services/grant",
-  "government-grants-guide": "/services/grant",
-};
-
 function schemeHref(item: SchemeItem) {
-  const serviceHref = SCHEME_SERVICE_REDIRECTS[item.id];
-  if (serviceHref) return serviceHref;
-  if (getSchemeDesk(item.id)) return `/scheme/${item.id}`;
-  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-    `Hi, I want to know more about the ${item.title}.`,
-  )}`;
+  return (
+    getSchemePageHref(item.id) ??
+    `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
+      `Hi, I want to know more about the ${item.title}.`,
+    )}`
+  );
 }
 
 function isFilterOnly(item: SchemeItem) {
@@ -541,22 +531,24 @@ function SchemeCard({
 }) {
   const href = schemeHref(item);
   const internal = href.startsWith("/");
+  const CardTag = internal ? Link : "a";
 
   return (
     <TiltCard
       intensity={reduce ? 0 : 12}
       className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-border/50 bg-white shadow-card"
     >
-      <a
+      <CardTag
         href={href}
-        target={internal ? undefined : "_blank"}
-        rel={internal ? undefined : "noopener noreferrer"}
+        {...(internal
+          ? {}
+          : { target: "_blank", rel: "noopener noreferrer" })}
         className="flex h-full flex-col outline-offset-4"
       >
         <div className="relative aspect-[16/10] overflow-hidden">
           <Image
             src={item.image}
-            alt=""
+            alt={`${item.title} — ${item.text}`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
@@ -579,7 +571,7 @@ function SchemeCard({
             <Highlighted text={item.text} query={query} />
           </p>
           <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-ink">
-            Know More
+            {internal ? `Explore ${item.title}` : `Ask about ${item.title}`}
             <ArrowUpRight
               size={15}
               strokeWidth={2.4}
@@ -588,7 +580,7 @@ function SchemeCard({
             />
           </span>
         </div>
-      </a>
+      </CardTag>
     </TiltCard>
   );
 }
