@@ -299,7 +299,7 @@ export default function AboutServices() {
                         <span className={`tracking-widest transition-all duration-300 ${
                           isCurrent ? "text-ink font-bold translate-x-0 opacity-100" : "opacity-0 -translate-x-2 group-hover:opacity-60 group-hover:translate-x-0"
                         }`}>
-                          0{idx + 1} / {item.title.toUpperCase()}
+                          {item.title.toUpperCase()}
                         </span>
                       </button>
                     );
@@ -331,7 +331,7 @@ export default function AboutServices() {
                     >
                       {/* Micro-UI section number */}
                       <span className="text-[10px] font-mono font-bold tracking-[0.25em] text-indigo/60 block mb-2 border-l border-marigold pl-3">
-                        SERVICE / 0{idx + 1}
+                        SERVICE
                       </span>
 
                       {/* Main Typography Title */}

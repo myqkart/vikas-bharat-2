@@ -147,7 +147,7 @@ export default function GrantPageProcess({
                     }`}
                   >
                     <p className="font-mono text-[10px] font-bold tracking-[0.2em] text-marigold-dark">
-                      PROCESS / {String(idx + 1).padStart(2, "0")}
+                      PROCESS
                     </p>
                     <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
                       {step.title}

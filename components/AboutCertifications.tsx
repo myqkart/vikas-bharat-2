@@ -392,10 +392,10 @@ export default function AboutCertifications() {
                   <span>ACTIVE:</span>
                   <span className="text-indigo font-bold">
                     {activeIndex === 0
-                      ? "00 / INTRO"
+                      ? "INTRO"
                       : activeIndex === 5
                         ? "RECOGNITION"
-                        : `${activeCert.num} / ${activeCert.tag}`}
+                        : activeCert.tag}
                   </span>
                 </span>
                 <span className="flex justify-between gap-6">

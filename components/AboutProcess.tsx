@@ -57,7 +57,7 @@ export default function AboutProcess() {
             variants={dramaticFadeUp}
             className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
           >
-            06 / Our Process
+            Our Process
           </motion.p>
           <TextReveal
             as="h2"
@@ -159,7 +159,7 @@ export default function AboutProcess() {
                     }`}
                   >
                     <p className="font-mono text-[10px] font-bold tracking-[0.2em] text-marigold-dark">
-                      PROCESS / {String(idx + 1).padStart(2, "0")}
+                      PROCESS
                     </p>
                     <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
                       {step.title}

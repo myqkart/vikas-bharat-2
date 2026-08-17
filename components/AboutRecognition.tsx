@@ -55,7 +55,7 @@ export default function AboutRecognition() {
               variants={dramaticFadeUp}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              07 / Certifications &amp; Recognition
+              Certifications &amp; Recognition
             </motion.p>
             <TextReveal
               as="h2"
@@ -109,7 +109,7 @@ export default function AboutRecognition() {
                     variants={popIn}
                     className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/15 px-3 py-1 font-mono text-[10px] font-bold tracking-[0.16em] text-white backdrop-blur-sm"
                   >
-                    {String(idx + 1).padStart(2, "0")} / CERT
+                    CERT
                   </motion.span>
                 </div>
                 <div className="p-5">

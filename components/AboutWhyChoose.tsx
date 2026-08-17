@@ -49,7 +49,7 @@ export default function AboutWhyChoose() {
               variants={dramaticFadeLeft}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              08 / Why Choose Vikas Bharat
+              Why Choose Vikas Bharat
             </motion.p>
             <TextReveal
               as="h2"

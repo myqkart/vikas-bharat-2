@@ -8951,7 +8951,7 @@ export const missionTrees = {
 
 export const about = {
   id: "about",
-  eyebrow: "01 / Company Introduction",
+  eyebrow: "Company Introduction",
   heading: "Who we are. What we do. Who we help.",
   body: "Vikas Bharat is a pan-India business help desk for startups and MSMEs — registration, funding, certifications, and growth support explained in clear Hindi and English.",
   whoWeAre: {

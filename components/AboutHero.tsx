@@ -20,9 +20,9 @@ import TiltCard from "@/components/motion/TiltCard";
 const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 
 const pillars = [
-  { ...about.whoWeAre, num: "01", image: photos.aboutIntroPortrait },
-  { ...about.whatWeDo, num: "02", image: photos.aboutIntroWork },
-  { ...about.whoWeHelp, num: "03", image: photos.aboutIntroCrowd },
+  { ...about.whoWeAre, image: photos.aboutIntroPortrait },
+  { ...about.whatWeDo, image: photos.aboutIntroWork },
+  { ...about.whoWeHelp, image: photos.aboutIntroCrowd },
 ] as const;
 
 export default function AboutHero() {
@@ -217,10 +217,7 @@ export default function AboutHero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5 text-paper">
-                    <p className="font-mono text-[10px] font-bold tracking-[0.2em] text-marigold">
-                      {pillar.num} / INTRO
-                    </p>
-                    <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight">
+                    <h2 className="font-display text-2xl font-semibold tracking-tight">
                       {pillar.title}
                     </h2>
                     <p className="mt-2 text-sm leading-relaxed text-paper/85">

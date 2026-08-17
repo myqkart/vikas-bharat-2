@@ -48,7 +48,7 @@ export default function AboutFaqSection() {
               variants={fadeUp}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              09 / Frequently Asked Questions
+              Frequently Asked Questions
             </motion.p>
             <motion.h2
               id="about-faq-heading"

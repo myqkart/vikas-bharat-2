@@ -97,7 +97,7 @@ export default function AboutServicesOverview() {
                 variants={dramaticFadeLeft}
                 className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
               >
-                05 / Services Overview
+                Services Overview
               </motion.p>
               <TextReveal
                 as="h2"
@@ -257,7 +257,7 @@ export default function AboutServicesOverview() {
                     className="absolute inset-x-0 bottom-0 p-7 text-paper"
                   >
                     <p className="font-mono text-[10px] font-bold tracking-[0.2em] text-marigold">
-                      SERVICE / {String(active + 1).padStart(2, "0")}
+                      SERVICE
                     </p>
                     <h3 className="mt-2 font-display text-3xl font-semibold tracking-tight">
                       {current.title}
@@ -285,7 +285,7 @@ export default function AboutServicesOverview() {
               variants={fadeUp}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              05 / Services Overview
+              Services Overview
             </motion.p>
             <TextReveal
               as="h2"

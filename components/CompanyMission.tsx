@@ -69,7 +69,7 @@ export default function CompanyMission() {
               variants={dramaticFadeLeft}
               className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
             >
-              02 / Mission &amp; Vision
+              Mission &amp; Vision
             </motion.p>
             <motion.p
               variants={dramaticFadeLeft}

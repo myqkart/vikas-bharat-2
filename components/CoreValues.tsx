@@ -74,7 +74,7 @@ export default function CoreValues() {
             variants={dramaticFadeUp}
             className="text-xs font-bold uppercase tracking-[0.2em] text-slate"
           >
-            03 / Core Values
+            Core Values
           </motion.p>
           <TextReveal
             as="h2"
