@@ -4,9 +4,15 @@ export const site = {
   companyName: "VIKASBHART",
   tagline: "Sapno Se Safalta Tak",
   logo: "/brand/vikas-bharat-logo.png",
-  whatsappNumber: "91XXXXXXXXXX",
-  phoneNumber: "1800-XXX-XXXX",
-  email: "hello@vikasbhart.in",
+  whatsappNumber: "919319592924",
+  phoneNumber: "+919319592924",
+  phoneDisplay: "+91 93195 92924",
+  email: "contact@vikas-bharat.com",
+  emails: [
+    { label: "Support", address: "support@vikas-bharat.com" },
+    { label: "Information", address: "info@vikas-bharat.com" },
+    { label: "Contact", address: "contact@vikas-bharat.com" },
+  ] as const,
   offices: [
     {
       city: "Ahmedabad",
@@ -26,10 +32,9 @@ export const site = {
     },
   ] as const,
   social: [
-    { label: "WhatsApp", href: "https://wa.me/91XXXXXXXXXX" },
-    { label: "Instagram", href: "#" },
-    { label: "YouTube", href: "#" },
-    { label: "LinkedIn", href: "#" },
+    { label: "WhatsApp", href: "https://wa.me/919319592924" },
+    { label: "Instagram", href: "https://www.instagram.com/vikasbharatservice/" },
+    { label: "Facebook", href: "https://www.facebook.com/vikasbharatconsulting" },
   ] as const,
   resources: [
     { label: "MSME / Udyam guide", href: "/services/registration" },
@@ -39,6 +44,10 @@ export const site = {
   disclaimer:
     "We are a private consultancy and are not affiliated with any Government department or agency. All payments must be made only to our official company account.",
 } as const;
+
+export function gmailComposeHref(email: string) {
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+}
 
 export const navigation = [
   { label: "About Us", href: "/about", icon: "users" },
@@ -250,10 +259,10 @@ export const servicePage = {
       cta: "Click Here",
     },
     tollFree: {
-      label: "Connect Toll-Free",
-      text: "Connect with us toll-free for expert guidance and support",
-      number: "1800 296 1424",
-      href: "tel:18002961424",
+      label: "Call or WhatsApp",
+      text: "Connect with us on call or WhatsApp for expert guidance and support",
+      number: site.phoneDisplay,
+      href: `tel:${site.phoneNumber}`,
     },
   },
 } as const;
@@ -10013,7 +10022,7 @@ export const finalCta = {
   heading: "Aaj hi shuru karo.",
   sub: "Ek free call. Koi obligation nahi. Eligibility, scheme fit, aur next documents — 2 minute mein clear.",
   primary: "WhatsApp Par Baat Karo",
-  secondary: "1800-XXX-XXXX",
+  secondary: site.phoneDisplay,
 } as const;
 
 export const footer = {

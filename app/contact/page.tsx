@@ -5,6 +5,7 @@ import {
   Landmark,
   Mail,
   MapPin,
+  MessageCircle,
   Phone,
   Rocket,
   Scale,
@@ -14,7 +15,7 @@ import ContactInquiryForm from "@/components/ContactInquiryForm";
 import FAQ from "@/components/FAQ";
 import SiteChrome from "@/components/SiteChrome";
 import { photos } from "@/lib/photos";
-import { site } from "@/lib/content";
+import { gmailComposeHref, site } from "@/lib/content";
 
 const services = [
   { title: "Funding & Loans", text: "Schemes, loans and investor readiness", icon: Landmark },
@@ -75,17 +76,19 @@ export default function ContactPage() {
             compliance to funding and growth, the Vikas Bharat desk will help
             you find a clear next step.
           </p>
-          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
             <a
-              href={`mailto:${site.email}`}
+              href={`https://wa.me/${site.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 rounded-2xl border border-border bg-white px-5 py-4 text-left shadow-card transition hover:-translate-y-1 hover:shadow-raised"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-indigo/10 text-indigo transition group-hover:bg-indigo group-hover:text-white">
-                <Mail className="h-5 w-5" />
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-success/15 text-success transition group-hover:bg-success group-hover:text-white">
+                <MessageCircle className="h-5 w-5" />
               </span>
               <span>
-                <span className="block text-xs font-bold uppercase tracking-wider text-slate">Email us</span>
-                <span className="block text-sm font-semibold text-ink">{site.email}</span>
+                <span className="block text-xs font-bold uppercase tracking-wider text-slate">WhatsApp</span>
+                <span className="block text-sm font-semibold text-ink">{site.phoneDisplay}</span>
               </span>
             </a>
             <a
@@ -96,10 +99,42 @@ export default function ContactPage() {
                 <Phone className="h-5 w-5" />
               </span>
               <span>
-                <span className="block text-xs font-bold uppercase tracking-wider text-slate">Call the desk</span>
-                <span className="block text-sm font-semibold text-ink">{site.phoneNumber}</span>
+                <span className="block text-xs font-bold uppercase tracking-wider text-slate">Call</span>
+                <span className="block text-sm font-semibold text-ink">{site.phoneDisplay}</span>
               </span>
             </a>
+            {site.emails.map((item) => (
+              <a
+                key={item.address}
+                href={gmailComposeHref(item.address)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-3 rounded-2xl border border-border bg-white px-5 py-4 text-left shadow-card transition hover:-translate-y-1 hover:shadow-raised"
+              >
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-indigo/10 text-indigo transition group-hover:bg-indigo group-hover:text-white">
+                  <Mail className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block text-xs font-bold uppercase tracking-wider text-slate">{item.label}</span>
+                  <span className="block text-sm font-semibold text-ink">{item.address}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+            {site.social
+              .filter((item) => item.label !== "WhatsApp")
+              .map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-border bg-white px-4 py-2 text-sm font-semibold text-ink shadow-card transition hover:-translate-y-0.5 hover:shadow-raised"
+                >
+                  {item.label}
+                </a>
+              ))}
           </div>
         </div>
       </section>

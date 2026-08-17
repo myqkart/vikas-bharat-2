@@ -24,6 +24,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vikas-bharat.com"),
   title: "VIKASBHART",
   description:
     "Sapno Se Safalta Tak — We help Indian startups and MSMEs grow, succeed, and contribute to an Atmanirbhar Bharat.",

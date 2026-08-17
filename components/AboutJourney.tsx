@@ -18,6 +18,11 @@ import {
   Check
 } from "lucide-react";
 import { photos } from "@/lib/photos";
+import { site } from "@/lib/content";
+
+const journeyWhatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
+  "Hello, I have reviewed the process and want to consult an expert.",
+)}`;
 
 // Step structure definition
 interface JourneyStep {
@@ -349,7 +354,7 @@ export default function AboutJourney() {
 
                 <div className="mt-8 flex flex-col gap-4">
                   <a
-                    href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20have%20reviewed%20the%20process%20and%20want%20to%20consult%20an%20expert."
+                    href={journeyWhatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-between bg-success text-white font-mono text-xs font-bold tracking-wider px-6 py-4 rounded-xl shadow-raised hover:bg-success/90 transition-all group max-w-xs"
@@ -603,7 +608,7 @@ export default function AboutJourney() {
             </p>
 
             <a
-              href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20have%20reviewed%20the%20process%20and%20want%20to%20consult%20an%20expert."
+              href={journeyWhatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-between w-full bg-success text-white font-mono text-xs font-bold tracking-wider px-6 py-4 rounded-xl shadow-raised hover:bg-success/90 transition-all mt-8 group"

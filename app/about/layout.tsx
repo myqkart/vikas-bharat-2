@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Aarohan Finance",
+  title: "About Us | VIKASBHART",
   description:
-    "Founded in 2016, Aarohan Finance is committed to making MSME loans, business funding, and government subsidies accessible and transparent across India.",
+    "Vikas Bharat helps Indian startups and MSMEs with registrations, loans, government schemes, and business growth — Sapno Se Safalta Tak.",
 };
 
 export default function AboutLayout({

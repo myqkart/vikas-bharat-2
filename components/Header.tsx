@@ -447,7 +447,7 @@ export default function Header() {
                       whileHover={{ scale: 1.06, y: -1 }}
                       whileTap={{ scale: 0.95 }}
                       className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border/60 bg-white/75 text-ink shadow-[0_4px_14px_-6px_rgba(18,41,77,0.25)] backdrop-blur-md"
-                      aria-label={`Call ${site.phoneNumber}`}
+                      aria-label={`Call ${site.phoneDisplay}`}
                     >
                       <Phone size={17} strokeWidth={2.25} aria-hidden />
                     </motion.a>

@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Phone, Mail } from "lucide-react";
-import { navigation, site } from "@/lib/content";
+import { gmailComposeHref, navigation, site } from "@/lib/content";
 
 const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 const phoneHref = `tel:${site.phoneNumber}`;
 const year = new Date().getFullYear();
 
 const instagramHref = site.social.find((s) => s.label === "Instagram")?.href || "#";
-const youtubeHref = site.social.find((s) => s.label === "YouTube")?.href || "#";
-const linkedinHref = site.social.find((s) => s.label === "LinkedIn")?.href || "#";
+const facebookHref = site.social.find((s) => s.label === "Facebook")?.href || "#";
 
 const WhatsAppIcon = () => (
   <svg
@@ -36,27 +35,13 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const YoutubeIcon = () => (
+const FacebookIcon = () => (
   <svg
     viewBox="0 0 24 24"
-    className="w-5 h-5 fill-[#FF0000] stroke-[#FF0000] transition-transform duration-300 group-hover/social:scale-110"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    className="w-5 h-5 fill-[#1877F2] transition-transform duration-300 group-hover/social:scale-110"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" className="fill-white stroke-white"></polygon>
-  </svg>
-);
-
-const LinkedinIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    className="w-5 h-5 fill-[#0077B5] stroke-none transition-transform duration-300 group-hover/social:scale-110"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+    <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047v-2.66c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.492 0-1.956.93-1.956 1.887v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
   </svg>
 );
 
@@ -221,18 +206,22 @@ export default function Footer() {
                     className="inline-flex items-center gap-3 text-sm font-semibold text-slate hover:text-indigo transition-colors group"
                   >
                     <Phone size={18} strokeWidth={2} className="text-indigo group-hover:scale-110 transition-all duration-200" />
-                    {site.phoneNumber}
+                    {site.phoneDisplay}
                   </a>
                 </li>
-                <li>
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="inline-flex items-center gap-3 text-sm font-semibold text-slate hover:text-marigold-dark transition-colors group"
-                  >
-                    <Mail size={18} strokeWidth={2} className="text-indigo group-hover:text-marigold-dark group-hover:scale-110 transition-all duration-200" />
-                    {site.email}
-                  </a>
-                </li>
+                {site.emails.map((item) => (
+                  <li key={item.address}>
+                    <a
+                      href={gmailComposeHref(item.address)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 text-sm font-semibold text-slate hover:text-marigold-dark transition-colors group"
+                    >
+                      <Mail size={18} strokeWidth={2} className="text-indigo group-hover:text-marigold-dark group-hover:scale-110 transition-all duration-200" />
+                      {item.address}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -268,26 +257,15 @@ export default function Footer() {
                   <InstagramIcon />
                 </a>
 
-                {/* YouTube */}
+                {/* Facebook */}
                 <a
-                  href={youtubeHref}
+                  href={facebookHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-white shadow-sm hover:scale-110 hover:shadow-md hover:bg-[#FF0000]/8 hover:border-[#FF0000]/40 transition-all duration-300 group/social"
-                  aria-label="YouTube"
+                  className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-white shadow-sm hover:scale-110 hover:shadow-md hover:bg-[#1877F2]/8 hover:border-[#1877F2]/40 transition-all duration-300 group/social"
+                  aria-label="Facebook"
                 >
-                  <YoutubeIcon />
-                </a>
-
-                {/* LinkedIn */}
-                <a
-                  href={linkedinHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-white shadow-sm hover:scale-110 hover:shadow-md hover:bg-[#0077B5]/8 hover:border-[#0077B5]/40 transition-all duration-300 group/social"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedinIcon />
+                  <FacebookIcon />
                 </a>
               </div>
             </div>
