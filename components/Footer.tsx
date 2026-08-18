@@ -86,7 +86,7 @@ const FacebookIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-paper px-4 pb-10 pt-6 sm:px-6 sm:pb-14 lg:px-8">
+    <footer className="w-full bg-paper px-4 pb-28 pt-6 sm:px-6 sm:pb-14 lg:px-8 md:pb-14">
       <div className="mx-auto max-w-[1200px] overflow-hidden rounded-[24px] border border-border/80 bg-white px-6 py-8 shadow-card sm:px-8 sm:py-10 lg:rounded-[28px] lg:px-10 lg:py-12">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-0">
           <div className="sm:col-span-2 lg:col-span-4">

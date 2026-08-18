@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ScrollToTop from "@/components/ScrollToTop";
 import PageEntrance from "@/components/motion/PageEntrance";
 import ScrollProgress from "@/components/motion/ScrollProgress";
 import ScrollReset from "@/components/ScrollReset";
@@ -30,6 +31,7 @@ export default function SiteChrome({
         <Footer />
       </PageEntrance>
       <WhatsAppFloat />
+      <ScrollToTop />
     </SplashGate>
   );
 }

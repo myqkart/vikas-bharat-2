@@ -49,10 +49,6 @@ const navIcons: Record<(typeof navigation)[number]["icon"], LucideIcon> = {
   mail: Mail,
 };
 
-/** Wider arc so labels clear each other on narrow phones */
-const RADIAL_ANGLES = [-88, -53, -18, 18, 53, 88] as const;
-const RADIAL_RADIUS = 158;
-
 function NavLink({
   href,
   active,
@@ -479,105 +475,124 @@ export default function Header() {
         </div>
       </motion.header>
 
-      {/* Mobile — bottom seal constellation (not a hamburger) */}
+      {/* Mobile — dock + sheet */}
       <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 md:hidden">
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-paper via-paper/70 to-transparent"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper via-paper/80 to-transparent"
           aria-hidden
         />
 
-        <div className="relative mx-auto flex w-full max-w-lg items-end justify-center px-3 pb-[max(1rem,env(safe-area-inset-bottom))]">
+        <AnimatePresence>
+          {open ? (
+            <motion.button
+              type="button"
+              aria-label="Close navigation"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="pointer-events-auto fixed inset-0 z-0 bg-ink/45 backdrop-blur-[10px]"
+              onClick={closeMenu}
+            />
+          ) : null}
+        </AnimatePresence>
+
+        <div className="relative mx-auto w-full max-w-lg px-3 pb-[max(0.7rem,env(safe-area-inset-bottom))]">
           <AnimatePresence>
             {open ? (
-              <motion.button
-                type="button"
-                aria-label="Close navigation"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="pointer-events-auto fixed inset-0 z-0 bg-ink/40 backdrop-blur-[8px]"
-                onClick={closeMenu}
-              />
+              <motion.nav
+                id="mobile-nav-sheet"
+                aria-label="Site"
+                initial={reduce ? false : { opacity: 0, y: 28 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 18 }}
+                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                className="pointer-events-auto relative z-10 mb-3 overflow-hidden rounded-[28px] border border-border/70 bg-paper/95 shadow-[0_24px_60px_-24px_rgba(18,41,77,0.45)] backdrop-blur-xl"
+              >
+                <div className="flex justify-center pt-3">
+                  <span className="h-1 w-10 rounded-full bg-ink/15" aria-hidden />
+                </div>
+                <div className="flex items-center justify-between px-5 pt-3">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-marigold-dark">
+                    Explore
+                  </p>
+                  <Link
+                    href="/"
+                    onClick={closeMenu}
+                    className={`rounded-full px-3 py-1.5 text-xs font-bold ${
+                      pathname === "/"
+                        ? "bg-ink text-paper"
+                        : "bg-white text-ink ring-1 ring-border/60"
+                    }`}
+                  >
+                    Home
+                  </Link>
+                </div>
+                <ul className="grid grid-cols-2 gap-2 p-3 pb-4">
+                  {navigation.map((item) => {
+                    const Icon = navIcons[item.icon];
+                    const isActive =
+                      active === item.href ||
+                      (item.href === SERVICES_HREF &&
+                        pathname.startsWith("/services/"));
+                    return (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={closeMenu}
+                          aria-current={isActive ? "page" : undefined}
+                          className={`flex min-h-16 items-center gap-3 rounded-[18px] px-3.5 py-3 ${
+                            isActive
+                              ? "bg-ink text-paper"
+                              : "bg-white text-ink ring-1 ring-border/60"
+                          }`}
+                        >
+                          <span
+                            className={`grid h-10 w-10 shrink-0 place-items-center rounded-[12px] ${
+                              isActive
+                                ? "bg-marigold text-ink"
+                                : "bg-[#f7f3ea] text-ink"
+                            }`}
+                          >
+                            <Icon size={18} strokeWidth={2.2} aria-hidden />
+                          </span>
+                          <span className="text-sm font-bold leading-tight">
+                            {item.label}
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </motion.nav>
             ) : null}
           </AnimatePresence>
 
-          <div className="pointer-events-auto relative z-10 flex w-full items-end justify-center gap-4">
-            {/* Radial stage — tall enough for the bloom */}
+          <div className="pointer-events-auto relative z-20">
             <div
-              className="relative flex items-center justify-center"
+              className="beacon-shell flex items-center justify-between gap-2 rounded-[28px] px-2 py-2"
               style={{
-                width: open ? 300 : 72,
-                height: open ? 210 : 72,
-                transition: "width 0.35s ease, height 0.35s ease",
+                backdropFilter: "blur(22px) saturate(1.4)",
+                WebkitBackdropFilter: "blur(22px) saturate(1.4)",
               }}
             >
-              <AnimatePresence>
-                {open
-                  ? navigation.map((item, i) => {
-                      const angle = RADIAL_ANGLES[i] ?? 0;
-                      const rad = ((angle - 90) * Math.PI) / 180;
-                      const tx = Math.cos(rad) * RADIAL_RADIUS;
-                      const ty = Math.sin(rad) * RADIAL_RADIUS;
-                      // Push labels further out along the same ray so they don't collide
-                      const labelR = 34;
-                      const Icon = navIcons[item.icon];
-                      const isActive = active === item.href;
-                      return (
-                        <motion.div
-                          key={item.href}
-                          initial={{ opacity: 0, x: 0, y: 18, scale: 0.35 }}
-                          animate={{ opacity: 1, x: tx, y: ty, scale: 1 }}
-                          exit={{ opacity: 0, x: 0, y: 18, scale: 0.35 }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 400,
-                            damping: 26,
-                            delay: i * 0.04,
-                          }}
-                          className="absolute bottom-[28px] left-1/2 -ml-7"
-                        >
-                          <Link
-                            href={item.href}
-                            onClick={closeMenu}
-                            className="relative flex h-14 w-14 items-center justify-center"
-                          >
-                            <span
-                              className={`flex h-14 w-14 items-center justify-center rounded-full shadow-[0_12px_32px_-10px_rgba(18,41,77,0.5)] ring-1 ${
-                                isActive
-                                  ? "bg-ink text-marigold ring-ink"
-                                  : "bg-white text-ink ring-border/70"
-                              }`}
-                            >
-                              <Icon size={22} strokeWidth={2.2} aria-hidden />
-                            </span>
-                            <span
-                              className="pointer-events-none absolute whitespace-nowrap rounded-full bg-white px-2.5 py-1 text-[10px] font-bold tracking-[0.06em] text-ink uppercase shadow-[0_6px_16px_-6px_rgba(18,41,77,0.35)] ring-1 ring-border/50"
-                              style={{
-                                left: "50%",
-                                top: "50%",
-                                transform: `translate(-50%, -50%) translate(${Math.cos(rad) * labelR}px, ${Math.sin(rad) * labelR}px)`,
-                              }}
-                            >
-                              {item.label}
-                            </span>
-                          </Link>
-                        </motion.div>
-                      );
-                    })
-                  : null}
-              </AnimatePresence>
+              <BeaconAura dense />
+              <a
+                href={phoneHref}
+                className="relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white text-ink shadow-[0_6px_16px_-8px_rgba(18,41,77,0.35)] ring-1 ring-border/50"
+                aria-label={`Call ${site.phoneDisplay}`}
+              >
+                <Phone size={18} strokeWidth={2.25} aria-hidden />
+              </a>
 
               <motion.button
                 type="button"
                 aria-expanded={open}
-                aria-controls="mobile-radial-nav"
+                aria-controls="mobile-nav-sheet"
                 aria-label={open ? "Close menu" : "Open menu"}
                 onClick={() => setOpen((v) => !v)}
                 whileTap={{ scale: 0.94 }}
-                className="beacon-shell absolute bottom-0 left-1/2 z-20 flex h-16 w-16 -translate-x-1/2 items-center justify-center overflow-hidden rounded-[22px]"
-                style={{ backdropFilter: "blur(18px) saturate(1.35)" }}
+                className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-[18px]"
               >
-                <BeaconAura dense />
                 <AnimatePresence mode="wait" initial={false}>
                   {open ? (
                     <motion.span
@@ -585,8 +600,8 @@ export default function Header() {
                       initial={{ rotate: -50, opacity: 0, scale: 0.8 }}
                       animate={{ rotate: 0, opacity: 1, scale: 1 }}
                       exit={{ rotate: 40, opacity: 0, scale: 0.8 }}
-                      transition={{ duration: 0.22 }}
-                      className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper"
+                      transition={{ duration: 0.2 }}
+                      className="flex h-12 w-12 items-center justify-center rounded-full bg-ink text-paper"
                     >
                       <X size={20} strokeWidth={2.4} aria-hidden />
                     </motion.span>
@@ -596,47 +611,40 @@ export default function Header() {
                       initial={{ scale: 0.85, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0.85, opacity: 0 }}
-                      className="relative z-10 h-13 w-13 overflow-hidden rounded-[16px] bg-white"
-                      style={{ width: 52, height: 52 }}
+                      className="relative h-12 w-12 overflow-hidden rounded-[14px] bg-white ring-1 ring-border/50"
                     >
                       <Image
                         src={site.logoMark}
                         alt=""
                         fill
-                        sizes="52px"
+                        sizes="48px"
                         className="object-contain p-[2px]"
                       />
                     </motion.span>
                   )}
                 </AnimatePresence>
               </motion.button>
+
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-cta btn-shine relative z-10 grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-full text-white"
+                aria-label={hero.primaryCta}
+              >
+                <span
+                  aria-hidden
+                  className="absolute inset-0 bg-[linear-gradient(125deg,#1d8348,#239a56_55%,#1d8348)]"
+                />
+                <MessageCircle
+                  size={20}
+                  strokeWidth={2.3}
+                  className="relative"
+                  aria-hidden
+                />
+              </a>
             </div>
-
-            <motion.a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileTap={{ scale: 0.95 }}
-              className="nav-cta btn-shine absolute right-3 bottom-1 z-20 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full text-white sm:right-5"
-              aria-label={hero.primaryCta}
-            >
-              <span
-                aria-hidden
-                className="absolute inset-0 bg-[linear-gradient(125deg,#1d8348,#239a56_55%,#1d8348)]"
-              />
-              <motion.span
-                aria-hidden
-                className="pointer-events-none absolute -inset-2 rounded-full bg-success/50 blur-md"
-                animate={{ opacity: [0.3, 0.65, 0.3] }}
-                transition={{ duration: 2.4, repeat: Infinity }}
-              />
-              <MessageCircle size={26} strokeWidth={2.3} className="relative" />
-            </motion.a>
           </div>
-
-          <span id="mobile-radial-nav" className="sr-only">
-            Radial navigation
-          </span>
         </div>
       </div>
     </>
