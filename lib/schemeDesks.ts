@@ -156,7 +156,10 @@ import {
   site,
 } from "@/lib/content";
 import { photos } from "@/lib/photos";
-import { SCHEME_CANONICAL_ALIASES } from "@/lib/canonical-routes";
+import {
+  SCHEME_CANONICAL_ALIASES,
+  SCHEME_TO_SERVICE_PATHS,
+} from "@/lib/canonical-routes";
 import type { ServiceDesk } from "@/lib/serviceDesks";
 
 const desks: Record<string, ServiceDesk> = {
@@ -1766,5 +1769,7 @@ export function getAllSchemeDeskSlugs() {
 }
 
 export function getIndexableSchemeSlugs() {
-  return Object.keys(desks).filter((slug) => !SCHEME_CANONICAL_ALIASES[slug]);
+  return Object.keys(desks).filter(
+    (slug) => !SCHEME_CANONICAL_ALIASES[slug] && !SCHEME_TO_SERVICE_PATHS[slug],
+  );
 }

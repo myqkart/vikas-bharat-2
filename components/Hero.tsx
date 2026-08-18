@@ -115,7 +115,9 @@ export default function Hero({
             </motion.div>
 
             <TextReveal
+              as="h1"
               text={headline}
+              onMount
               className="mt-5 font-display text-[40px] font-semibold leading-[1.08] text-ink sm:text-5xl lg:text-[64px]"
             />
 

@@ -6,11 +6,18 @@ import CareerRoleCard from "@/components/CareerRoleCard";
 import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/JsonLd";
 import SiteChrome from "@/components/SiteChrome";
-import { careerFaq, careerRoles, careersOffice, careersPage } from "@/lib/careers";
+import {
+  careerFaq,
+  careerPath,
+  careerRoles,
+  careersOffice,
+  careersPage,
+} from "@/lib/careers";
 import {
   breadcrumbJsonLd,
   buildMetadata,
   faqJsonLd,
+  itemListJsonLd,
   jsonLdGraph,
   webPageJsonLd,
 } from "@/lib/seo";
@@ -50,6 +57,12 @@ export default function CareersPage() {
           }),
           breadcrumbJsonLd(breadcrumbs),
           faqJsonLd(careerFaq.items),
+          itemListJsonLd(
+            careerRoles.map((job) => ({
+              name: job.title,
+              path: careerPath(job.slug),
+            })),
+          ),
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />

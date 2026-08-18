@@ -9,11 +9,15 @@ import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/JsonLd";
 import ServicePageConnect from "@/components/ServicePageConnect";
 import { schemeFaq, schemePage } from "@/lib/content";
+import { getIndexableSchemeSlugs, getSchemeDesk } from "@/lib/schemeDesks";
 import {
   breadcrumbJsonLd,
   buildMetadata,
   faqJsonLd,
+  itemListJsonLd,
   jsonLdGraph,
+  schemePath,
+  shortTitle,
   webPageJsonLd,
 } from "@/lib/seo";
 
@@ -45,6 +49,15 @@ export default function SchemePage() {
           }),
           breadcrumbJsonLd(breadcrumbs),
           faqJsonLd(schemeFaq.items),
+          itemListJsonLd(
+            getIndexableSchemeSlugs()
+              .map((slug) => {
+                const desk = getSchemeDesk(slug);
+                if (!desk) return null;
+                return { name: shortTitle(desk.title), path: schemePath(slug) };
+              })
+              .filter((item): item is { name: string; path: string } => Boolean(item)),
+          ),
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />

@@ -28,6 +28,8 @@ import {
   buildMetadata,
   faqJsonLd,
   jsonLdGraph,
+  metaImage,
+  officePostalAddress,
   webPageJsonLd,
 } from "@/lib/seo";
 
@@ -100,17 +102,9 @@ export default function ContactPage() {
             url: absoluteUrl("/contact"),
             telephone: site.phoneNumber,
             email: site.email,
-            image: photos.storyConsult,
-            address: office
-              ? {
-                  "@type": "PostalAddress",
-                  streetAddress: office.address,
-                  addressLocality: office.city,
-                  addressRegion: "Uttar Pradesh",
-                  postalCode: "201301",
-                  addressCountry: "IN",
-                }
-              : undefined,
+            image: metaImage(photos.storyConsult),
+            hasMap: office?.mapsUrl,
+            address: office ? officePostalAddress() : undefined,
             parentOrganization: { "@id": `${SITE_URL}/#organization` },
           },
         ])}

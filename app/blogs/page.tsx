@@ -6,11 +6,13 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/JsonLd";
 import ServicePageConnect from "@/components/ServicePageConnect";
-import { blogFaq, blogsPage, getFeaturedBlog } from "@/lib/blogs";
+import { blogFaq, blogPosts, blogsPage, getFeaturedBlog } from "@/lib/blogs";
 import {
+  blogPath,
   breadcrumbJsonLd,
   buildMetadata,
   faqJsonLd,
+  itemListJsonLd,
   jsonLdGraph,
   webPageJsonLd,
 } from "@/lib/seo";
@@ -43,6 +45,12 @@ export default function BlogsPage() {
           }),
           breadcrumbJsonLd(breadcrumbs),
           faqJsonLd(blogFaq.items),
+          itemListJsonLd(
+            blogPosts.map((post) => ({
+              name: post.title,
+              path: blogPath(post.slug),
+            })),
+          ),
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />

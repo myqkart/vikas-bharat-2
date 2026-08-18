@@ -20,7 +20,7 @@ export default function TextReveal({
   text,
   className,
   id,
-  as = "h1",
+  as = "p",
   once = true,
   amount = 0.35,
   onMount = false,

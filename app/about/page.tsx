@@ -10,11 +10,9 @@ import AboutWhyChoose from "@/components/AboutWhyChoose";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/JsonLd";
-import { faq } from "@/lib/content";
 import { photos } from "@/lib/photos";
 import {
   buildMetadata,
-  faqJsonLd,
   jsonLdGraph,
   webPageJsonLd,
   breadcrumbJsonLd,
@@ -48,7 +46,6 @@ export default function AboutPage() {
             type: "AboutPage",
           }),
           breadcrumbJsonLd(breadcrumbs),
-          faqJsonLd(faq.items),
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />

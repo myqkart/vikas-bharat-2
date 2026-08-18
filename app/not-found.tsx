@@ -6,7 +6,12 @@ export const metadata: Metadata = {
   title: "Page not found",
   description:
     "This page is not available. Return to Vikas Bharat for services, government schemes and MSME guides.",
-  robots: { index: false, follow: true },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: { index: false, follow: true, noimageindex: true },
+  },
 };
 
 export default function NotFound() {

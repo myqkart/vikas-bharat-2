@@ -8,7 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import RelatedDesks from "@/components/RelatedDesks";
 import SiteChrome from "@/components/SiteChrome";
 import ServiceDeskPage from "@/components/ServiceDeskPage";
-import { getServiceBySlug, getAllServiceSlugs } from "@/lib/content";
+import { getServiceBySlug } from "@/lib/content";
 import { getServiceDesk } from "@/lib/serviceDesks";
 import {
   breadcrumbJsonLd,
@@ -29,11 +29,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  const slugs = new Set([
-    ...getIndexableServiceSlugs(),
-    ...getAllServiceSlugs(),
-  ]);
-  return [...slugs].map((slug) => ({ slug }));
+  return getIndexableServiceSlugs().map((slug) => ({ slug }));
 }
 
 export const dynamicParams = false;

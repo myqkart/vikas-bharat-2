@@ -8,11 +8,16 @@ import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/JsonLd";
 import ServicePageConnect from "@/components/ServicePageConnect";
 import { serviceFaq, servicePage } from "@/lib/content";
+import { getServiceDesk } from "@/lib/serviceDesks";
 import {
   breadcrumbJsonLd,
   buildMetadata,
   faqJsonLd,
+  getIndexableServiceSlugs,
+  itemListJsonLd,
   jsonLdGraph,
+  servicePath,
+  shortTitle,
   webPageJsonLd,
 } from "@/lib/seo";
 
@@ -44,6 +49,15 @@ export default function ServicePage() {
           }),
           breadcrumbJsonLd(breadcrumbs),
           faqJsonLd(serviceFaq.items),
+          itemListJsonLd(
+            getIndexableServiceSlugs()
+              .map((slug) => {
+                const desk = getServiceDesk(slug);
+                if (!desk) return null;
+                return { name: shortTitle(desk.title), path: servicePath(slug) };
+              })
+              .filter((item): item is { name: string; path: string } => Boolean(item)),
+          ),
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />

@@ -13,4 +13,6 @@ export const SCHEME_TO_SERVICE_PATHS: Record<string, string> = {
   "startup-india-cert": "/services/startup",
   "government-grants": "/services/grant",
   "government-grants-guide": "/services/grant",
+  nbfc: "/services/nbfc",
+  "business-loan-services": "/services/loan",
 };

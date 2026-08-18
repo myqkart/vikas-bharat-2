@@ -30,8 +30,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/service/:slug",
+        destination: "/services/:slug",
+        permanent: true,
+      },
+      {
         source: "/schemes",
         destination: "/scheme",
+        permanent: true,
+      },
+      {
+        source: "/schemes/:slug",
+        destination: "/scheme/:slug",
         permanent: true,
       },
       {
@@ -45,7 +55,22 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/about-us",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
         source: "/career",
+        destination: "/careers",
+        permanent: true,
+      },
+      {
+        source: "/jobs",
         destination: "/careers",
         permanent: true,
       },

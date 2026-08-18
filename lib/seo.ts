@@ -14,7 +14,9 @@ import {
 } from "@/lib/schemeDesks";
 import {
   careerPath,
+  careersOffice,
   careersPage,
+  getAllCareerSlugs,
   type CareerRole,
 } from "@/lib/careers";
 
@@ -124,10 +126,47 @@ export function metaImage(src?: string | null): string {
   return DEFAULT_OG_IMAGE;
 }
 
+const MONTH_INDEX: Record<string, number> = {
+  jan: 0,
+  feb: 1,
+  mar: 2,
+  apr: 3,
+  may: 4,
+  jun: 5,
+  jul: 6,
+  aug: 7,
+  sep: 8,
+  oct: 9,
+  nov: 10,
+  dec: 11,
+};
+
 export function parseDisplayDate(value: string): string | undefined {
-  const parsed = Date.parse(value);
-  if (Number.isNaN(parsed)) return undefined;
-  return new Date(parsed).toISOString();
+  const text = value.trim();
+  if (!text) return undefined;
+  const parsed = Date.parse(text);
+  if (!Number.isNaN(parsed)) return new Date(parsed).toISOString();
+
+  const match = text.match(/^(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4})$/);
+  if (!match) return undefined;
+  const day = Number(match[1]);
+  const month = MONTH_INDEX[match[2].slice(0, 3).toLowerCase()];
+  const year = Number(match[3]);
+  if (!day || month == null || !year) return undefined;
+  const date = new Date(Date.UTC(year, month, day));
+  if (Number.isNaN(date.getTime())) return undefined;
+  return date.toISOString();
+}
+
+export function officePostalAddress() {
+  return {
+    "@type": "PostalAddress",
+    streetAddress: careersOffice.streetAddress,
+    addressLocality: careersOffice.city,
+    addressRegion: careersOffice.region,
+    postalCode: careersOffice.postalCode,
+    addressCountry: "IN",
+  };
 }
 
 type BuildMetadataInput = {
@@ -352,6 +391,9 @@ export function getIndexableUrls() {
   for (const post of blogPosts) {
     urls.push(absoluteUrl(blogPath(post.slug)));
   }
+  for (const slug of getAllCareerSlugs()) {
+    urls.push(absoluteUrl(careerPath(slug)));
+  }
   return [...new Set(urls)];
 }
 
@@ -375,16 +417,8 @@ export function organizationJsonLd() {
     telephone: site.phoneNumber,
     sameAs: site.social.map((item) => item.href),
     areaServed: { "@type": "Country", name: "India" },
-    address: office
-      ? {
-          "@type": "PostalAddress",
-          streetAddress: office.address,
-          addressLocality: office.city,
-          addressRegion: "Uttar Pradesh",
-          postalCode: "201301",
-          addressCountry: "IN",
-        }
-      : undefined,
+    hasMap: office?.mapsUrl,
+    address: office ? officePostalAddress() : undefined,
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -417,6 +451,22 @@ export function breadcrumbJsonLd(items: BreadcrumbItem[]) {
       position: index + 1,
       name: item.name,
       item: absoluteUrl(item.path),
+    })),
+  };
+}
+
+export function itemListJsonLd(
+  items: Array<{ name: string; path: string }>,
+) {
+  if (!items.length) return null;
+  return {
+    "@type": "ItemList",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: absoluteUrl(item.path),
     })),
   };
 }
@@ -512,6 +562,11 @@ export function jobPostingJsonLd(role: CareerRole) {
     "@type": "JobPosting",
     title: role.title,
     description: [role.overview, ...role.responsibilities].join(" "),
+    identifier: {
+      "@type": "PropertyValue",
+      name: SITE_NAME,
+      value: role.slug,
+    },
     datePosted: careersPage.datePosted,
     employmentType: "FULL_TIME",
     hiringOrganization: {
@@ -520,7 +575,10 @@ export function jobPostingJsonLd(role: CareerRole) {
       name: SITE_NAME,
       url: SITE_URL,
       sameAs: SITE_URL,
-      logo: absoluteUrl(BRAND_LOGO_PATH),
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl(BRAND_LOGO_PATH),
+      },
     },
     jobLocation: {
       "@type": "Place",
@@ -556,17 +614,28 @@ export function articleJsonLd({
   date?: string;
 }) {
   const iso = date ? parseDisplayDate(date) : undefined;
+  const imageUrl = metaImage(image);
   return {
     "@type": "Article",
     headline: title,
     description,
     url: absoluteUrl(blogPath(slug)),
-    image: metaImage(image),
+    image: {
+      "@type": "ImageObject",
+      url: imageUrl,
+    },
     datePublished: iso,
     dateModified: iso,
-    author: { "@id": `${SITE_URL}/#organization` },
+    author: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+    },
     publisher: { "@id": `${SITE_URL}/#organization` },
-    mainEntityOfPage: absoluteUrl(blogPath(slug)),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${absoluteUrl(blogPath(slug))}#webpage`,
+    },
     inLanguage: DEFAULT_LANGUAGE,
   };
 }
