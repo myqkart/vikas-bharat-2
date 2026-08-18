@@ -12,6 +12,11 @@ import {
   getIndexableSchemeSlugs,
   getSchemeDesk,
 } from "@/lib/schemeDesks";
+import {
+  careerPath,
+  careersPage,
+  type CareerRole,
+} from "@/lib/careers";
 
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://vikas-bharat.com"
@@ -44,6 +49,7 @@ export const STATIC_INDEXABLE_PATHS = [
   "/scheme",
   "/blogs",
   "/contact",
+  "/careers",
 ] as const;
 
 export type BreadcrumbItem = {
@@ -498,6 +504,41 @@ export function schemeServiceJsonLd({
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: "Government scheme advisory",
+  };
+}
+
+export function jobPostingJsonLd(role: CareerRole) {
+  return {
+    "@type": "JobPosting",
+    title: role.title,
+    description: [role.overview, ...role.responsibilities].join(" "),
+    datePosted: careersPage.datePosted,
+    employmentType: "FULL_TIME",
+    hiringOrganization: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      sameAs: SITE_URL,
+      logo: absoluteUrl(BRAND_LOGO_PATH),
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: role.locationStreet,
+        addressLocality: role.locationCity,
+        addressRegion: role.locationRegion,
+        postalCode: role.locationPostalCode,
+        addressCountry: "IN",
+      },
+    },
+    applicantLocationRequirements: {
+      "@type": "Country",
+      name: "India",
+    },
+    url: absoluteUrl(careerPath(role.slug)),
+    directApply: true,
   };
 }
 

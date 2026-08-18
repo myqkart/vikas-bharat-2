@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blogs";
+import { careerPath, getAllCareerSlugs } from "@/lib/careers";
 import {
   STATIC_INDEXABLE_PATHS,
   absoluteUrl,
@@ -42,6 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const post of blogPosts) {
     add(blogPath(post.slug), { changeFrequency: "monthly", priority: 0.7 });
+  }
+
+  for (const slug of getAllCareerSlugs()) {
+    add(careerPath(slug), { changeFrequency: "monthly", priority: 0.7 });
   }
 
   return entries;

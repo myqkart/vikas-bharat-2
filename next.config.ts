@@ -44,6 +44,21 @@ const nextConfig: NextConfig = {
         destination: "/blogs/:slug",
         permanent: true,
       },
+      {
+        source: "/career",
+        destination: "/careers",
+        permanent: true,
+      },
+      {
+        source: "/careers/sales",
+        destination: "/careers/msme-loan-sales-executive",
+        permanent: true,
+      },
+      {
+        source: "/careers/admin",
+        destination: "/careers/loan-processing-sales-operations-executive",
+        permanent: true,
+      },
       ...schemeAliases,
       ...Object.entries(SCHEME_TO_SERVICE_PATHS).map(([from, to]) => ({
         source: `/scheme/${from}`,

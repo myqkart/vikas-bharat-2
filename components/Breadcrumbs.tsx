@@ -28,7 +28,7 @@ export default function Breadcrumbs({
                 />
               ) : null}
               {last ? (
-                <span className="text-ink" aria-current="page">
+                <span className="max-w-[11rem] truncate text-ink sm:max-w-none" aria-current="page">
                   {item.name}
                 </span>
               ) : (

@@ -28,6 +28,7 @@ import {
   Mail,
   MessageCircle,
   Phone,
+  Sparkles,
   Users,
   X,
   type LucideIcon,
@@ -44,11 +45,12 @@ const navIcons: Record<(typeof navigation)[number]["icon"], LucideIcon> = {
   briefcase: Briefcase,
   landmark: Landmark,
   book: BookOpen,
+  sparkles: Sparkles,
   mail: Mail,
 };
 
 /** Wider arc so labels clear each other on narrow phones */
-const RADIAL_ANGLES = [-80, -40, 0, 40, 80] as const;
+const RADIAL_ANGLES = [-88, -53, -18, 18, 53, 88] as const;
 const RADIAL_RADIUS = 158;
 
 function NavLink({

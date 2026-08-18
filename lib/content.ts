@@ -46,6 +46,7 @@ export const navigation = [
   { label: "Service", href: "/service", icon: "briefcase" },
   { label: "Scheme", href: "/scheme", icon: "landmark" },
   { label: "Blogs", href: "/blogs", icon: "book" },
+  { label: "Careers", href: "/careers", icon: "sparkles" },
   { label: "Contact us", href: "/contact", icon: "mail" },
 ] as const;
 
