@@ -24,7 +24,7 @@ import {
 
 const title = "Careers";
 const description =
-  "MSME loan sales, business development and operations openings at the Vikas Bharat Noida desk — apply with your resume for full-time, on-site roles.";
+  "MSME loan sales, relationship, credit, channel-partner, processing and projects-manager openings at the Vikas Bharat Noida desk — full-time, on-site roles across the lending funnel.";
 const breadcrumbs = [
   { name: "Home", path: "/" },
   { name: "Careers", path: "/careers" },
@@ -40,7 +40,8 @@ export const metadata: Metadata = buildMetadata({
     "Vikas Bharat careers",
     "MSME loan jobs Noida",
     "NBFC sales jobs Sector 63",
-    "loan processing jobs Noida",
+    "credit analyst jobs Noida",
+    "MSME project manager jobs Noida",
   ],
 });
 
@@ -124,8 +125,8 @@ export default function CareersPage() {
             MSME loan roles in Noida
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-slate sm:text-base">
-            Three full-time, on-site openings. Apply on a role to send your
-            resume, or open the position for the full brief.
+            Seven full-time, on-site openings across the loan funnel. Apply on a
+            role to send your resume, or open the position for the full brief.
           </p>
 
           <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

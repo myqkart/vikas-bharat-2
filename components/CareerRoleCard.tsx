@@ -3,9 +3,13 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   Building2,
+  ClipboardList,
   Clock3,
   Handshake,
   MapPin,
+  Scale,
+  Share2,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 import { CareerApplyButton } from "@/components/CareerApplyModal";
@@ -14,7 +18,11 @@ import { careerPath, careersOffice, type CareerRole } from "@/lib/careers";
 const departmentIcon: Record<string, LucideIcon> = {
   Sales: Handshake,
   "Business Development": Building2,
+  Relationships: Users,
   "Sales Operations": BriefcaseBusiness,
+  Credit: Scale,
+  Partnerships: Share2,
+  Projects: ClipboardList,
 };
 
 export default function CareerRoleCard({

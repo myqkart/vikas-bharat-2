@@ -25,7 +25,7 @@ export const careersPage = {
   eyebrow: "Join the desk",
   heading: "Work with Vikas Bharat",
   intro:
-    "On-site openings at our Noida desk for people who can talk to MSME founders, build a loan pipeline, and keep applications moving from enquiry to disbursement.",
+    "On-site openings at our Noida desk across the MSME loan funnel — sales, relationships, partners, credit, processing and project delivery, from first lead to disbursement.",
   locationLabel: careersOffice.shortLabel,
   mapsUrl: careersOffice.mapsUrl,
   applyEmail: site.email,
@@ -160,6 +160,55 @@ export const careerRoles: readonly CareerRole[] = [
       "Join Vikas Bharat as a Business Development Executive for MSME loans at our Sector 63, Noida desk. Explore the role, responsibilities, requirements, and career opportunities with our growing financial services team.",
   },
   {
+    slug: "relationship-manager-business-loans",
+    title: "Relationship Manager – Business Loans",
+    department: "Relationships",
+    jobType: "Relationships",
+    type: "Full-time",
+    workMode: "On-site",
+    ...onSiteLocation,
+    experience: "2–5 years",
+    summary:
+      "Own the customer after the first conversation — convert warm MSME leads, keep files moving, and turn disbursed loans into repeat and referral business.",
+    overview:
+      "We are looking for a Relationship Manager for business loans who can take qualified MSME customers from interest to application and stay with them through processing. This is a conversion and portfolio role: you already know how to talk to business owners, you follow up without being asked, and you protect the relationship after disbursement.",
+    responsibilities: [
+      "Take over qualified MSME and business-loan leads and convert them into complete applications.",
+      "Meet or call business owners to understand working capital, expansion, machinery and cash-cycle needs.",
+      "Explain product fit, eligibility, documents, tenure and next steps in plain language.",
+      "Keep the customer informed while credit, operations and lenders review the file.",
+      "Chase pending KYC, bank statements, GST and other documents without dropping the relationship.",
+      "Build a book of MSME customers for top-up, repeat and referral business.",
+      "Coordinate with sales, credit and loan processing so the file does not stall between desks.",
+      "Handle post-disbursement queries and introduce the next suitable product only when it is relevant.",
+      "Maintain accurate CRM notes on conversations, promises and application status.",
+      "Hit conversion and portfolio-quality targets, not just raw meeting counts.",
+    ],
+    requirements: [
+      "2–5 years in relationship management, business-loan sales, banking, NBFC or MSME-facing financial services.",
+      "Comfortable owning a customer from first meeting through disbursement.",
+      "Strong follow-up, negotiation and plain-language product explanation.",
+      "Experience with MSME or business loan products is preferred.",
+      "Willingness to meet customers at the Sector 63 desk and, when needed, at their place of business.",
+      "Fluent Hindi and English. Basic Excel and CRM comfort.",
+    ],
+    preferred: [
+      "An existing book of MSME, trader or CA relationships in Noida / NCR.",
+      "Experience handing files to credit and operations without losing the customer.",
+    ],
+    youWillDoWell: [
+      "Convert warm leads without overselling.",
+      "Keep customers informed when a file is pending.",
+      "Earn referrals after a clean disbursement.",
+      "Work with credit and operations as one desk, not as opposing teams.",
+    ],
+    compensation:
+      "Competitive salary + performance-based incentives. Final compensation will depend on experience, skills, and performance.",
+    seoTitle: "Relationship Manager Business Loans Jobs in Noida",
+    seoDescription:
+      "Join Vikas Bharat as a Relationship Manager for business loans at our Sector 63, Noida desk. Convert MSME customers, own the file through processing, and grow repeat loan relationships.",
+  },
+  {
     slug: "loan-processing-sales-operations-executive",
     title: "Loan Processing & Sales Operations Executive",
     department: "Sales Operations",
@@ -208,7 +257,151 @@ export const careerRoles: readonly CareerRole[] = [
       "Competitive salary. Final compensation will depend on experience, skills, and performance.",
     seoTitle: "Loan Processing & Sales Operations Executive Jobs in Noida",
     seoDescription:
-      "Join Vikas Bharat as a Loan Processing & Sales Operations Executive at our Sector 63, Noida desk. Explore the role, responsibilities, requirements, and career opportunities with our growing financial services team.",
+      "Join Vikas Bharat as a Loan Processing & Sales Operations Executive at our Sector 63, Noida desk. Keep MSME loan applications moving from documents through processing and disbursement.",
+  },
+  {
+    slug: "credit-analyst-msme-loans",
+    title: "Credit Analyst – MSME Loans",
+    department: "Credit",
+    jobType: "Credit",
+    type: "Full-time",
+    workMode: "On-site",
+    ...onSiteLocation,
+    experience: "1–4 years",
+    summary:
+      "Read the business, not only the form — assess MSME applications, flag risk, and help the desk decide what can go to a lender with a straight face.",
+    overview:
+      "We are looking for a Credit Analyst for MSME loans who can review applications, bank statements, GST, bureau data and a simple business story, then write a clear view for the team. You are not a sales closer. You protect file quality so that what we send to banks and NBFCs is honest, complete and defensible.",
+    responsibilities: [
+      "Assess MSME and business-loan applications for eligibility, capacity and basic risk.",
+      "Review KYC, Udyam, GST returns, bank statements, bureau reports and use-of-funds notes.",
+      "Identify missing, inconsistent or high-risk information and send a precise query list.",
+      "Prepare a short credit note: strengths, concerns, recommended structure or decline rationale.",
+      "Coordinate with sales, relationship managers and loan processing without delaying the file.",
+      "Stay current on product eligibility, lender grids and scheme-linked loan conditions we actually use.",
+      "Flag cases that need a senior review instead of pushing a weak file forward.",
+      "Maintain confidential, accurate records of assessments and decisions.",
+      "Support the desk with simple portfolio observations — repeat delays, document gaps, common decline reasons.",
+      "Never invent eligibility. If the unit does not fit, say so early.",
+    ],
+    requirements: [
+      "1–4 years in credit, underwriting, loan operations, banking, NBFC or MSME financial analysis.",
+      "Comfort reading bank statements, GST and basic financials for small businesses.",
+      "Strong attention to detail and written English for credit notes.",
+      "Ability to explain a yes/no in plain language to a sales colleague.",
+      "On-site at the Noida desk. Fluent Hindi and English. Strong Excel.",
+    ],
+    preferred: [
+      "Hands-on MSME, working-capital or CGTMSE / bank-loan file experience.",
+      "Familiarity with bureau reports and lender eligibility grids.",
+    ],
+    youWillDoWell: [
+      "Spot a weak file before it wastes a lender slot.",
+      "Write short, usable credit notes.",
+      "Hold the line on risk without blocking every case.",
+      "Work with sales as a partner, not as a wall.",
+    ],
+    compensation:
+      "Competitive salary. Final compensation will depend on experience, skills, and performance.",
+    seoTitle: "Credit Analyst MSME Loans Jobs in Noida",
+    seoDescription:
+      "Join Vikas Bharat as a Credit Analyst for MSME loans at our Sector 63, Noida desk. Assess applications, bank statements and GST, and write a clear credit view before files go to lenders.",
+  },
+  {
+    slug: "channel-partner-executive-msme-loans",
+    title: "Channel Partner Executive – MSME Loans",
+    department: "Partnerships",
+    jobType: "Partnerships",
+    type: "Full-time",
+    workMode: "On-site",
+    ...onSiteLocation,
+    experience: "1–4 years",
+    summary:
+      "Build a partner desk — DSAs, CAs, consultants and referral sources who send MSME loan cases, then keep those relationships active.",
+    overview:
+      "We are looking for a Channel Partner Executive who can find, onboard and run a network of DSAs, chartered accountants, consultants and other referral partners for MSME loans. Direct hunting is a different role. Here you grow a channel: more good files in, fewer dead partners, clear communication on case status.",
+    responsibilities: [
+      "Identify and onboard DSAs, CA firms, consultants, and other MSME referral partners in Noida / NCR.",
+      "Explain products, eligibility, documents and payout process so partners can brief their clients correctly.",
+      "Collect partner-originated leads and convert them into complete applications with the sales and processing desks.",
+      "Keep partners updated on case status, pending documents and lender decisions.",
+      "Track partner productivity: who sends files, who only talks, who needs a refresh.",
+      "Organise periodic partner meetings or desk visits at Sector 63.",
+      "Coordinate with sales, credit and operations so partner cases are not treated as second-class files.",
+      "Maintain partner records, agreements and communication logs.",
+      "Protect compliance: no unofficial fees, no misleading eligibility claims through the channel.",
+      "Hit channel-sourced application and conversion targets.",
+    ],
+    requirements: [
+      "1–4 years in channel sales, DSA management, partner acquisition, banking, NBFC or MSME financial distribution.",
+      "Comfortable meeting CAs, consultants and local business networks.",
+      "Clear Hindi and English. Organised follow-up and CRM habits.",
+      "Willingness to travel locally in Noida / NCR for partner meetings.",
+      "Understanding of MSME or business-loan products is preferred.",
+    ],
+    preferred: [
+      "An existing DSA, CA or consultant network in NCR.",
+      "Experience running partner payouts or channel MIS.",
+    ],
+    youWillDoWell: [
+      "Turn a CA introduction into a complete file.",
+      "Keep partners informed without overpromising.",
+      "Drop inactive partners instead of inflating the list.",
+      "Bring channel cases into the same process as direct sales.",
+    ],
+    compensation:
+      "Competitive salary + performance-based incentives. Final compensation will depend on experience, skills, and performance.",
+    seoTitle: "Channel Partner Executive MSME Loans Jobs in Noida",
+    seoDescription:
+      "Join Vikas Bharat as a Channel Partner Executive for MSME loans at our Sector 63, Noida desk. Build DSA, CA and referral partner relationships that send complete business-loan files.",
+  },
+  {
+    slug: "projects-manager",
+    title: "Projects Manager",
+    department: "Projects",
+    jobType: "Projects",
+    type: "Full-time",
+    workMode: "On-site",
+    ...onSiteLocation,
+    experience: "2–5 years",
+    summary:
+      "Own MSME loan and scheme files as projects — timelines, owners, pending documents, and a clear path from kickoff to disbursement or a documented close.",
+    overview:
+      "We are looking for a Projects Manager to run MSME loan and related scheme files as live projects, not as a loose pile of WhatsApp threads. You sit between sales, relationships, credit and processing: you know who owns the next action, what is pending, and when a file is stuck. This is not a sales closer and not a credit analyst. You keep the desk honest on delivery.",
+    responsibilities: [
+      "Take assigned MSME loan, documentation and scheme files and run them as projects with a start, owners and a target close.",
+      "Build a simple tracker: customer, product, pending documents, credit status, lender, next action and date.",
+      "Run a daily or weekly desk huddle so sales, credit and processing are looking at the same list.",
+      "Escalate stalled files early — missing KYC, silent customer, lender query, internal delay.",
+      "Coordinate with Relationship Managers and Loan Processing so customers hear one status, not three.",
+      "Protect scope: if a case needs a different product or is not eligible, get that written and closed.",
+      "Prepare a short weekly MIS for the desk — inflows, pending, disbursed, declined, ageing.",
+      "Standardise checklists for common file types (working capital, machinery, scheme-linked) without inventing a bureaucracy.",
+      "Keep customer and partner communication professional when chasing pending items.",
+      "Never promise a disbursement date the file cannot support.",
+    ],
+    requirements: [
+      "2–5 years in project coordination, loan operations, case management, banking, NBFC, MSME consulting or a delivery-facing operations role.",
+      "Comfortable running a tracker, chasing owners, and reporting status without drama.",
+      "Strong written and spoken Hindi and English.",
+      "Excel / Google Sheets and basic CRM discipline.",
+      "On-site at the Sector 63, Noida desk. Willing to sit with walk-in files, not only a remote dashboard.",
+    ],
+    preferred: [
+      "Hands-on MSME loan, KYC or government-scheme file experience.",
+      "Experience coordinating across sales, credit and operations in a small team.",
+    ],
+    youWillDoWell: [
+      "Turn a messy file into a dated action list.",
+      "Make pending items visible instead of hoping they move.",
+      "Hold the line on timelines without bullying the customer.",
+      "Leave the desk with fewer surprises at month-end.",
+    ],
+    compensation:
+      "Competitive salary. Final compensation will depend on experience, skills, and performance.",
+    seoTitle: "Projects Manager MSME Loans Jobs in Noida",
+    seoDescription:
+      "Join Vikas Bharat as a Projects Manager at our Sector 63, Noida desk. Run MSME loan and scheme files as projects — owners, pending documents, timelines and a clean close.",
   },
 ];
 
@@ -217,6 +410,10 @@ export type CareerRoleSlug = (typeof careerRoles)[number]["slug"];
 const LEGACY_CAREER_SLUGS: Record<string, CareerRoleSlug> = {
   sales: "msme-loan-sales-executive",
   admin: "loan-processing-sales-operations-executive",
+  relationship: "relationship-manager-business-loans",
+  credit: "credit-analyst-msme-loans",
+  channel: "channel-partner-executive-msme-loans",
+  projects: "projects-manager",
 };
 
 export const careerFaq = {
@@ -231,7 +428,7 @@ export const careerFaq = {
     {
       question: "Do I need prior MSME loan experience?",
       answer:
-        "Loan-product experience is preferred, not mandatory. Banking, NBFC, fintech, insurance or financial-services sales and operations backgrounds are a strong match.",
+        "Loan-product experience is preferred, not mandatory. Banking, NBFC, fintech, insurance, credit, channel, project-delivery or financial-services backgrounds are a strong match.",
     },
     {
       question: "What file should I upload?",
@@ -263,7 +460,7 @@ export function getAllCareerSlugs() {
   return careerRoles.map((role) => role.slug);
 }
 
-export function getRelatedCareerRoles(slug: string, limit = 2) {
+export function getRelatedCareerRoles(slug: string, limit = 3) {
   const resolved = resolveCareerSlug(slug);
   return careerRoles.filter((role) => role.slug !== resolved).slice(0, limit);
 }

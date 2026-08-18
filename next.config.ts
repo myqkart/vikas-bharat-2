@@ -84,6 +84,26 @@ const nextConfig: NextConfig = {
         destination: "/careers/loan-processing-sales-operations-executive",
         permanent: true,
       },
+      {
+        source: "/careers/relationship",
+        destination: "/careers/relationship-manager-business-loans",
+        permanent: true,
+      },
+      {
+        source: "/careers/credit",
+        destination: "/careers/credit-analyst-msme-loans",
+        permanent: true,
+      },
+      {
+        source: "/careers/channel",
+        destination: "/careers/channel-partner-executive-msme-loans",
+        permanent: true,
+      },
+      {
+        source: "/careers/projects",
+        destination: "/careers/projects-manager",
+        permanent: true,
+      },
       ...schemeAliases,
       ...Object.entries(SCHEME_TO_SERVICE_PATHS).map(([from, to]) => ({
         source: `/scheme/${from}`,

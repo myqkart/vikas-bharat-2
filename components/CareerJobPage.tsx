@@ -171,7 +171,7 @@ export default function CareerJobPage({ job }: { job: CareerRole }) {
               More full-time desks in Noida if this role is not the right
               fit.
             </p>
-            <ul className="mt-12 grid gap-6 md:grid-cols-2">
+            <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {related.map((item) => (
                 <CareerRoleCard key={item.slug} job={item} />
               ))}
