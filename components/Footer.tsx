@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import { gmailComposeHref, navigation, site } from "@/lib/content";
 
@@ -7,14 +8,50 @@ const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 const phoneHref = `tel:${site.phoneNumber}`;
 const year = new Date().getFullYear();
 
-const instagramHref = site.social.find((s) => s.label === "Instagram")?.href || "#";
-const facebookHref = site.social.find((s) => s.label === "Facebook")?.href || "#";
+const instagramHref =
+  site.social.find((s) => s.label === "Instagram")?.href || "#";
+const facebookHref =
+  site.social.find((s) => s.label === "Facebook")?.href || "#";
+
+const popularDesks = [
+  { href: "/services/registration", label: "Business registration" },
+  { href: "/services/loan", label: "Business loans" },
+  { href: "/services/grant", label: "Government grants" },
+  { href: "/scheme/mudra", label: "Mudra loans" },
+] as const;
+
+const headingClass =
+  "text-[11px] font-bold uppercase tracking-[0.16em] text-ink";
+
+const linkClass =
+  "inline-flex items-center text-sm font-semibold text-slate transition-colors hover:text-indigo";
+
+function FooterLink({
+  href,
+  children,
+  accent = "marigold",
+}: {
+  href: string;
+  children: ReactNode;
+  accent?: "marigold" | "indigo";
+}) {
+  const dot =
+    accent === "indigo" ? "bg-indigo/45" : "bg-marigold";
+
+  return (
+    <Link href={href} className={linkClass}>
+      <span className={`mr-2.5 h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} />
+      {children}
+    </Link>
+  );
+}
 
 const WhatsAppIcon = () => (
   <svg
     viewBox="0 0 24 24"
-    className="w-5 h-5 fill-[#25D366] transition-transform duration-300 group-hover/social:scale-110"
+    className="h-4 w-4 fill-[#25D366]"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
   >
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.458h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
@@ -23,23 +60,25 @@ const WhatsAppIcon = () => (
 const InstagramIcon = () => (
   <svg
     viewBox="0 0 24 24"
-    className="w-5 h-5 fill-none stroke-[#E1306C] transition-transform duration-300 group-hover/social:scale-110"
+    className="h-4 w-4 fill-none stroke-[#E1306C]"
     strokeWidth="2.25"
     strokeLinecap="round"
     strokeLinejoin="round"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
   >
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
   </svg>
 );
 
 const FacebookIcon = () => (
   <svg
     viewBox="0 0 24 24"
-    className="w-5 h-5 fill-[#1877F2] transition-transform duration-300 group-hover/social:scale-110"
+    className="h-4 w-4 fill-[#1877F2]"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
   >
     <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047v-2.66c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.492 0-1.956.93-1.956 1.887v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
   </svg>
@@ -47,287 +86,149 @@ const FacebookIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-paper px-4 pb-16 pt-4 md:px-6 md:pb-20">
-      <div className="mx-auto max-w-[1200px]">
-        {/* Main Footer Card */}
-        <div className="relative overflow-hidden rounded-[24px] md:rounded-[32px] border border-border/85 bg-gradient-to-br from-[#FFFDF9] to-[#FDFBF7] p-8 md:p-10 lg:p-12 shadow-[0_4px_20px_rgba(18,41,77,0.02)] transition-all duration-300 hover:shadow-[0_10px_35px_rgba(18,41,77,0.05)] hover:border-border group/card">
-          
-          {/* Subtle Radial Glows */}
-          <div className="absolute right-[-10%] top-[-10%] -z-10 w-[350px] h-[350px] rounded-full bg-[radial-gradient(circle,rgba(245,166,35,0.07)_0%,transparent_70%)] blur-2xl pointer-events-none" />
-          <div className="absolute left-[-10%] bottom-[-10%] -z-10 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(30,62,114,0.05)_0%,transparent_70%)] blur-2xl pointer-events-none" />
-
-          {/* Dotted Grid Pattern */}
-          <svg
-            className="absolute top-6 left-6 -z-10 w-32 h-32 opacity-15 text-slate/40 pointer-events-none select-none"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="footer-dot-grid"
-                x="0"
-                y="0"
-                width="16"
-                height="16"
-                patternUnits="userSpaceOnUse"
-              >
-                <circle cx="2" cy="2" r="1.5" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#footer-dot-grid)" />
-          </svg>
-
-          {/* Concentric Circle Orbits (Growth waves) */}
-          <svg
-            className="absolute -right-24 bottom-[-10%] -z-10 w-96 h-96 opacity-25 text-border/40 pointer-events-none select-none transition-transform duration-700 group-hover/card:scale-105"
-            viewBox="0 0 200 200"
-            fill="none"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <circle cx="100" cy="150" r="50" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="100" cy="150" r="85" strokeWidth="1" />
-            <circle cx="100" cy="150" r="120" strokeWidth="1" strokeDasharray="4 4" />
-            <circle cx="100" cy="150" r="155" strokeWidth="1.5" />
-          </svg>
-
-          {/* Abstract Wave Path */}
-          <svg
-            className="absolute left-[30%] top-[-20%] -z-10 w-[400px] h-[200px] opacity-15 text-border/30 pointer-events-none select-none"
-            viewBox="0 0 400 200"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeDasharray="6 6"
-            aria-hidden="true"
-          >
-            <path d="M 0,100 C 120,180 200,20 400,80" />
-          </svg>
-
-          {/* Decorative Sparkle SVGs */}
-          <svg
-            className="absolute left-[28%] bottom-16 w-5 h-5 opacity-25 text-marigold animate-pulse pointer-events-none select-none"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path d="M12,0 L14.5,9.5 L24,12 L14.5,14.5 L12,24 L9.5,14.5 L0,12 L9.5,9.5 Z" />
-          </svg>
-
-          <svg
-            className="absolute right-[40%] top-12 w-4 h-4 opacity-20 text-marigold pointer-events-none select-none"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path d="M12,0 L14.5,9.5 L24,12 L14.5,14.5 L12,24 L9.5,14.5 L0,12 L9.5,9.5 Z" />
-          </svg>
-
-          <div className="relative z-10 flex flex-col lg:flex-row items-stretch gap-8 lg:gap-0">
-            {/* Column 1: Logo & Info */}
-            <div className="lg:w-[32%] lg:pr-8 flex flex-col justify-between">
+    <footer className="w-full bg-paper px-4 pb-10 pt-6 sm:px-6 sm:pb-14 lg:px-8">
+      <div className="mx-auto max-w-[1200px] overflow-hidden rounded-[24px] border border-border/80 bg-white px-6 py-8 shadow-card sm:px-8 sm:py-10 lg:rounded-[28px] lg:px-10 lg:py-12">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-0">
+          <div className="sm:col-span-2 lg:col-span-4">
+            <div className="flex items-center gap-3">
+              <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-[14px] border border-border/80 bg-paper p-1.5">
+                <Image
+                  src={site.logoMark}
+                  alt={site.companyName}
+                  fill
+                  sizes="48px"
+                  className="object-contain p-0.5"
+                />
+              </div>
               <div>
-                <div className="flex items-center gap-4">
-                  <div className="relative h-16 w-16 overflow-hidden rounded-2xl bg-white border border-border/80 shadow-[0_2px_8px_rgba(18,41,77,0.04)] p-2 flex-shrink-0 transition-transform duration-300 hover:scale-105">
-                    <Image
-                      src={site.logoMark}
-                      alt={site.companyName}
-                      fill
-                      sizes="64px"
-                      className="object-contain p-1"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-[22px] font-bold text-ink tracking-wider uppercase leading-none">
-                      {site.companyName}
-                    </h3>
-                    <p className="text-[11px] font-semibold text-slate tracking-wide mt-1.5">
-                      {site.tagline}
-                    </p>
-                  </div>
-                </div>
-                <p className="mt-5 text-[13px] leading-relaxed text-slate font-semibold">
-                  Your trusted partner for startup registration, loans, schemes & business growth.
+                <p className="font-display text-lg font-bold uppercase tracking-wide text-ink">
+                  {site.companyName}
                 </p>
-                <a
-                  href={site.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-start gap-2 text-[13px] font-semibold leading-relaxed text-slate hover:text-indigo transition-colors group"
-                >
-                  <MapPin size={16} strokeWidth={2} className="mt-0.5 shrink-0 text-indigo group-hover:scale-110 transition-transform" />
-                  <span>{site.offices[0].address}</span>
-                </a>
+                <p className="mt-0.5 text-[11px] font-semibold text-slate">
+                  {site.tagline}
+                </p>
               </div>
             </div>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate">
+              Your trusted partner for startup registration, loans, schemes and
+              business growth.
+            </p>
+            <a
+              href={site.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex max-w-sm items-start gap-2 text-sm leading-relaxed text-slate transition-colors hover:text-indigo"
+            >
+              <MapPin
+                size={16}
+                strokeWidth={2}
+                className="mt-0.5 shrink-0 text-indigo"
+              />
+              <span>{site.offices[0].address}</span>
+            </a>
+          </div>
 
-            {/* Divider 1 */}
-            <div className="hidden lg:block w-[1px] bg-gradient-to-b from-transparent via-border/50 to-transparent self-stretch" />
-            <div className="block lg:hidden h-[1px] w-full bg-gradient-to-r from-transparent via-border/50 to-transparent" />
-
-            {/* Column 2: Links */}
-            <div className="lg:w-[28%] lg:px-8 flex flex-col justify-center">
-              <p className="text-xs font-bold text-ink uppercase tracking-wider mb-4">
-                Explore
-              </p>
-              <ul className="flex flex-col gap-3">
-                <li>
-                  <Link
-                    href="/"
-                    className="inline-flex items-center text-sm font-semibold text-slate hover:text-indigo transition-colors duration-200 group/link relative"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-marigold mr-2.5 transition-transform duration-200 group-hover/link:scale-125 group-hover/link:bg-marigold-dark" />
-                    <span className="relative">
-                      Home
-                      <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-indigo transition-all duration-300 group-hover/link:w-full" />
-                    </span>
-                  </Link>
+          <nav className="lg:col-span-2" aria-label="Explore">
+            <p className={headingClass}>Explore</p>
+            <ul className="mt-4 flex flex-col gap-2.5">
+              <li>
+                <FooterLink href="/">Home</FooterLink>
+              </li>
+              {navigation.map((item) => (
+                <li key={item.href}>
+                  <FooterLink href={item.href}>{item.label}</FooterLink>
                 </li>
-                {navigation.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="inline-flex items-center text-sm font-semibold text-slate hover:text-indigo transition-colors duration-200 group/link relative"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-marigold mr-2.5 transition-transform duration-200 group-hover/link:scale-125 group-hover/link:bg-marigold-dark" />
-                      <span className="relative">
-                        {item.label}
-                        <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-indigo transition-all duration-300 group-hover/link:w-full" />
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-xs font-bold text-ink uppercase tracking-wider mb-3 mt-6">
-                Popular desks
-              </p>
-              <ul className="flex flex-col gap-3">
-                {[
-                  { href: "/services/registration", label: "Business registration" },
-                  { href: "/services/loan", label: "Business loans" },
-                  { href: "/services/grant", label: "Government grants" },
-                  { href: "/scheme/mudra", label: "Mudra loans" },
-                ].map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="inline-flex items-center text-sm font-semibold text-slate hover:text-indigo transition-colors duration-200 group/link relative"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo/40 mr-2.5" />
-                      <span className="relative">
-                        {item.label}
-                        <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-indigo transition-all duration-300 group-hover/link:w-full" />
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              ))}
+            </ul>
+          </nav>
 
-            {/* Divider 2 */}
-            <div className="hidden lg:block w-[1px] bg-gradient-to-b from-transparent via-border/50 to-transparent self-stretch" />
-            <div className="block lg:hidden h-[1px] w-full bg-gradient-to-r from-transparent via-border/50 to-transparent" />
-
-            {/* Column 3: Connect with us */}
-            <div className="lg:w-[22%] lg:px-8 flex flex-col justify-center">
-              <p className="text-xs font-bold text-ink uppercase tracking-wider mb-4">
-                Connect with us
-              </p>
-              <ul className="flex flex-col gap-3.5">
-                <li>
-                  <a
-                    href={whatsappHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 text-sm font-semibold text-slate hover:text-[#25D366] transition-colors group"
-                  >
-                    <MessageCircle size={18} strokeWidth={2} className="text-indigo group-hover:text-[#25D366] group-hover:scale-110 transition-all duration-200" />
-                    WhatsApp
-                  </a>
+          <nav className="lg:col-span-3" aria-label="Popular desks">
+            <p className={headingClass}>Popular desks</p>
+            <ul className="mt-4 flex flex-col gap-2.5">
+              {popularDesks.map((item) => (
+                <li key={item.href}>
+                  <FooterLink href={item.href} accent="indigo">
+                    {item.label}
+                  </FooterLink>
                 </li>
-                <li>
-                  <a
-                    href={phoneHref}
-                    className="inline-flex items-center gap-3 text-sm font-semibold text-slate hover:text-indigo transition-colors group"
-                  >
-                    <Phone size={18} strokeWidth={2} className="text-indigo group-hover:scale-110 transition-all duration-200" />
-                    {site.phoneDisplay}
-                  </a>
-                </li>
-                {site.emails.map((item) => (
-                  <li key={item.address}>
-                    <a
-                      href={gmailComposeHref(item.address)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 text-sm font-semibold text-slate hover:text-marigold-dark transition-colors group"
-                    >
-                      <Mail size={18} strokeWidth={2} className="text-indigo group-hover:text-marigold-dark group-hover:scale-110 transition-all duration-200" />
-                      {item.address}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              ))}
+            </ul>
+          </nav>
 
-            {/* Divider 3 */}
-            <div className="hidden lg:block w-[1px] bg-gradient-to-b from-transparent via-border/50 to-transparent self-stretch" />
-            <div className="block lg:hidden h-[1px] w-full bg-gradient-to-r from-transparent via-border/50 to-transparent" />
-
-            {/* Column 4: Follow us */}
-            <div className="lg:w-[18%] lg:pl-8 flex flex-col justify-center">
-              <p className="text-xs font-bold text-ink uppercase tracking-wider mb-4">
-                Follow us
-              </p>
-              <div className="flex flex-wrap items-center gap-3">
-                {/* WhatsApp */}
+          <div className="lg:col-span-3">
+            <p className={headingClass}>Connect</p>
+            <ul className="mt-4 flex flex-col gap-3">
+              <li>
                 <a
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-white shadow-sm hover:scale-110 hover:shadow-md hover:bg-[#25D366]/8 hover:border-[#25D366]/40 transition-all duration-300 group/social"
-                  aria-label="WhatsApp"
+                  className="inline-flex items-center gap-2.5 text-sm font-semibold text-slate transition-colors hover:text-indigo"
                 >
-                  <WhatsAppIcon />
+                  <MessageCircle size={16} strokeWidth={2} className="text-indigo" />
+                  WhatsApp
                 </a>
-
-                {/* Instagram */}
+              </li>
+              <li>
                 <a
-                  href={instagramHref}
+                  href={phoneHref}
+                  className="inline-flex items-center gap-2.5 text-sm font-semibold text-slate transition-colors hover:text-indigo"
+                >
+                  <Phone size={16} strokeWidth={2} className="text-indigo" />
+                  {site.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={gmailComposeHref(site.email)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-white shadow-sm hover:scale-110 hover:shadow-md hover:bg-[#E1306C]/8 hover:border-[#E1306C]/40 transition-all duration-300 group/social"
-                  aria-label="Instagram"
+                  className="inline-flex items-center gap-2.5 text-sm font-semibold text-slate transition-colors hover:text-indigo"
                 >
-                  <InstagramIcon />
+                  <Mail size={16} strokeWidth={2} className="text-indigo" />
+                  {site.email}
                 </a>
+              </li>
+            </ul>
 
-                {/* Facebook */}
-                <a
-                  href={facebookHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-border bg-white shadow-sm hover:scale-110 hover:shadow-md hover:bg-[#1877F2]/8 hover:border-[#1877F2]/40 transition-all duration-300 group/social"
-                  aria-label="Facebook"
-                >
-                  <FacebookIcon />
-                </a>
-              </div>
+            <p className={`${headingClass} mt-8`}>Follow us</p>
+            <div className="mt-4 flex items-center gap-2.5">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-full border border-border bg-paper transition hover:border-[#25D366]/40 hover:bg-[#25D366]/8"
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon />
+              </a>
+              <a
+                href={instagramHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-full border border-border bg-paper transition hover:border-[#E1306C]/40 hover:bg-[#E1306C]/8"
+                aria-label="Instagram"
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href={facebookHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-full border border-border bg-paper transition hover:border-[#1877F2]/40 hover:bg-[#1877F2]/8"
+                aria-label="Facebook"
+              >
+                <FacebookIcon />
+              </a>
             </div>
           </div>
+        </div>
 
-          {/* Bottom Divider */}
-          <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-border/50 to-transparent my-6 md:my-8" />
-
-          {/* Bottom Row */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] md:text-xs font-semibold text-slate">
-            <p>© {year} {site.companyName}. All rights reserved.</p>
-            <p className="flex flex-wrap items-center justify-center gap-2">
-              <span>Private consultancy</span>
-              <span className="text-border/80">•</span>
-              <span>Payments via official company account only</span>
-            </p>
-          </div>
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border/70 pt-6 text-xs font-semibold text-slate sm:flex-row sm:items-center">
+          <p>
+            © {year} {site.companyName}. All rights reserved.
+          </p>
+          <p>Private consultancy · Payments via official company account only</p>
         </div>
       </div>
     </footer>
