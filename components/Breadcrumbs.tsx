@@ -12,7 +12,7 @@ export default function Breadcrumbs({
   return (
     <nav
       aria-label="Breadcrumb"
-      className="pointer-events-none absolute inset-x-0 top-[4.6rem] z-30 px-5 lg:px-8"
+      className="pointer-events-none absolute inset-x-0 top-[5.25rem] z-30 px-5 lg:px-8"
     >
       <ol className="pointer-events-auto mx-auto flex max-w-[1200px] flex-wrap items-center gap-1.5 text-[12px] font-semibold text-slate">
         {items.map((item, index) => {
@@ -28,7 +28,7 @@ export default function Breadcrumbs({
                 />
               ) : null}
               {last ? (
-                <span className="max-w-[11rem] truncate text-ink sm:max-w-none" aria-current="page">
+                <span className="max-w-[14rem] truncate text-ink sm:max-w-[28rem]" aria-current="page">
                   {item.name}
                 </span>
               ) : (

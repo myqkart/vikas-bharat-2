@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  outputFileTracingIncludes: {
+    "/blogs": ["./blogs/*.md"],
+    "/blogs/[slug]": ["./blogs/*.md"],
+    "/sitemap.xml": ["./blogs/*.md"],
+  },
   async redirects() {
     const schemeAliases = Object.entries(SCHEME_CANONICAL_ALIASES).map(
       ([from, to]) => ({

@@ -5,7 +5,7 @@ import SiteChrome from "@/components/SiteChrome";
 import BlogArticlePage from "@/components/BlogArticlePage";
 import FinalCTA from "@/components/FinalCTA";
 import JsonLd from "@/components/JsonLd";
-import { getAllBlogSlugs, getBlogBySlug } from "@/lib/blogs";
+import { getAllBlogSlugs, getBlogBySlug, getRelatedBlogs, toListPost } from "@/lib/blogs";
 import {
   articleJsonLd,
   blogPath,
@@ -33,7 +33,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getBlogBySlug(slug);
   if (!post) return { title: "Guide not found", robots: { index: false } };
-  const published = parseDisplayDate(post.date);
+  const published = parseDisplayDate(post.date) ?? post.dateIso;
   return buildMetadata({
     title: post.title,
     description: post.excerpt,
@@ -53,6 +53,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
 
   const description = metaDescription(post.excerpt);
+  const related = getRelatedBlogs(slug, 3);
   const breadcrumbs = [
     { name: "Home", path: "/" },
     { name: "Blogs & Guides", path: "/blogs" },
@@ -79,7 +80,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />
-      <BlogArticlePage post={post} />
+      <BlogArticlePage post={post} related={related.map(toListPost)} />
       <FinalCTA />
     </SiteChrome>
   );

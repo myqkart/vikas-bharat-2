@@ -6,7 +6,15 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/JsonLd";
 import ServicePageConnect from "@/components/ServicePageConnect";
-import { blogFaq, blogPosts, blogsPage, getFeaturedBlog } from "@/lib/blogs";
+import {
+  blogFaq,
+  blogListingStats,
+  blogPosts,
+  blogsPage,
+  countByCategory,
+  getFeaturedBlog,
+  toListPost,
+} from "@/lib/blogs";
 import {
   blogPath,
   breadcrumbJsonLd,
@@ -33,6 +41,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function BlogsPage() {
+  const featured = getFeaturedBlog();
   return (
     <SiteChrome>
       <JsonLd
@@ -54,8 +63,12 @@ export default function BlogsPage() {
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />
-      <BlogPageHero />
-      <BlogPageCatalog />
+      <BlogPageHero stats={blogListingStats()} />
+      <BlogPageCatalog
+        posts={blogPosts.map(toListPost)}
+        topics={countByCategory()}
+        featured={featured ? toListPost(featured) : undefined}
+      />
       <FAQ data={blogFaq} />
       <ServicePageConnect />
     </SiteChrome>

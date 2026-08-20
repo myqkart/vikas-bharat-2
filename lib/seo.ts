@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { SCHEME_TO_SERVICE_PATHS } from "@/lib/canonical-routes";
-import { blogPosts } from "@/lib/blogs";
 import { servicePage, schemePage, site } from "@/lib/content";
 import { photos } from "@/lib/photos";
 import {
@@ -387,9 +386,6 @@ export function getIndexableUrls() {
   }
   for (const slug of getIndexableSchemeSlugs()) {
     urls.push(absoluteUrl(schemePath(slug)));
-  }
-  for (const post of blogPosts) {
-    urls.push(absoluteUrl(blogPath(post.slug)));
   }
   for (const slug of getAllCareerSlugs()) {
     urls.push(absoluteUrl(careerPath(slug)));

@@ -4,64 +4,66 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import {
-  ArrowUpRight,
-  BookOpen,
-  Search,
-  X,
-} from "lucide-react";
-import {
-  blogCategories,
-  blogPosts,
-  blogsPage,
-  countByCategory,
-  getFeaturedBlog,
-  type BlogCategory,
-  type BlogPost,
-} from "@/lib/blogs";
+import { ArrowUpRight, BookOpen, Search, X } from "lucide-react";
+import { blogsPage } from "@/lib/blogTypes";
+import type { BlogListPost } from "@/lib/blogTypes";
 import { dramaticFadeUp, flipIn, popIn, staggerDramatic } from "@/lib/motion";
 import FloatingOrbs from "@/components/motion/FloatingOrbs";
 import TextReveal from "@/components/motion/TextReveal";
 import TiltCard from "@/components/motion/TiltCard";
 
+const PAGE_SIZE = 9;
+
+type TopicCount = { category: string; count: number };
+
 type BlogPageCatalogProps = {
+  posts: readonly BlogListPost[];
+  topics: readonly TopicCount[];
+  featured?: BlogListPost;
   initialTopic?: string;
 };
 
-function isCategory(value: string | undefined): value is BlogCategory {
-  return Boolean(value && blogCategories.includes(value as BlogCategory));
-}
-
-export default function BlogPageCatalog({ initialTopic }: BlogPageCatalogProps) {
+export default function BlogPageCatalog({
+  posts,
+  topics,
+  featured,
+  initialTopic,
+}: BlogPageCatalogProps) {
   const reduce = useReducedMotion();
-  const featured = getFeaturedBlog();
-  const topics = countByCategory();
   const [query, setQuery] = useState("");
-  const [activeFilter, setActiveFilter] = useState<BlogCategory | null>(
-    isCategory(initialTopic) ? initialTopic : null,
+  const [activeFilter, setActiveFilter] = useState<string | null>(
+    initialTopic && topics.some((topic) => topic.category === initialTopic)
+      ? initialTopic
+      : null,
   );
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   const queryNorm = query.trim().toLowerCase();
   const searching = queryNorm.length > 0;
 
   const matches = useMemo(() => {
-    return blogPosts.filter((post) => {
+    return posts.filter((post) => {
       if (activeFilter && post.category !== activeFilter) return false;
       if (!searching) return true;
       const haystack = `${post.title} ${post.excerpt} ${post.category}`.toLowerCase();
       return haystack.includes(queryNorm);
     });
-  }, [activeFilter, queryNorm, searching]);
+  }, [activeFilter, posts, queryNorm, searching]);
 
   const showFeatured =
-    !searching && !activeFilter && featured && matches.some((post) => post.slug === featured.slug);
+    !searching &&
+    !activeFilter &&
+    featured &&
+    matches.some((post) => post.slug === featured.slug);
 
   const gridPosts = showFeatured
     ? matches.filter((post) => post.slug !== featured.slug)
     : matches;
+  const shown = gridPosts.slice(0, visible);
 
-  function selectFilter(filter: BlogCategory) {
+  function selectFilter(filter: string) {
     setQuery("");
+    setVisible(PAGE_SIZE);
     setActiveFilter((current) => (current === filter ? null : filter));
   }
 
@@ -130,7 +132,7 @@ export default function BlogPageCatalog({ initialTopic }: BlogPageCatalogProps) 
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerDramatic}
-          className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
+          className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
         >
           {topics.map((topic) => {
             const on = activeFilter === topic.category;
@@ -203,6 +205,7 @@ export default function BlogPageCatalog({ initialTopic }: BlogPageCatalogProps) 
               onChange={(e) => {
                 setQuery(e.target.value);
                 setActiveFilter(null);
+                setVisible(PAGE_SIZE);
               }}
               placeholder={blogsPage.catalog.searchPlaceholder}
               autoComplete="off"
@@ -222,21 +225,21 @@ export default function BlogPageCatalog({ initialTopic }: BlogPageCatalogProps) 
           </label>
 
           <ul className="mt-5 flex flex-wrap justify-center gap-2" role="list">
-            {blogCategories.map((filter) => {
-              const on = activeFilter === filter;
+            {topics.map((topic) => {
+              const on = activeFilter === topic.category;
               return (
-                <li key={filter}>
+                <li key={`chip-${topic.category}`}>
                   <button
                     type="button"
                     aria-pressed={on}
-                    onClick={() => selectFilter(filter)}
+                    onClick={() => selectFilter(topic.category)}
                     className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${
                       on
                         ? "bg-ink text-paper"
                         : "border border-border/80 bg-white/80 text-ink hover:border-ink/40 hover:bg-white"
                     }`}
                   >
-                    {filter}
+                    {topic.category}
                   </button>
                 </li>
               );
@@ -251,7 +254,9 @@ export default function BlogPageCatalog({ initialTopic }: BlogPageCatalogProps) 
           ) : null}
         </motion.div>
 
-        {showFeatured ? <FeaturedStory post={featured} reduce={!!reduce} /> : null}
+        {showFeatured && featured ? (
+          <FeaturedStory post={featured} reduce={!!reduce} />
+        ) : null}
 
         <AnimatePresence mode="wait">
           {matches.length === 0 ? (
@@ -273,7 +278,7 @@ export default function BlogPageCatalog({ initialTopic }: BlogPageCatalogProps) 
               className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
               style={{ perspective: 1200 }}
             >
-              {gridPosts.map((post, idx) => (
+              {shown.map((post, idx) => (
                 <motion.li
                   key={post.slug}
                   variants={flipIn}
@@ -287,12 +292,24 @@ export default function BlogPageCatalog({ initialTopic }: BlogPageCatalogProps) 
             </motion.ul>
           )}
         </AnimatePresence>
+
+        {shown.length < gridPosts.length ? (
+          <div className="mt-12 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisible((count) => count + PAGE_SIZE)}
+              className="inline-flex min-h-12 items-center justify-center rounded-[14px] border-2 border-ink/80 bg-white px-7 py-3 text-sm font-bold text-ink transition-colors hover:bg-ink hover:text-white"
+            >
+              Load more guides
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );
 }
 
-function FeaturedStory({ post, reduce }: { post: BlogPost; reduce: boolean }) {
+function FeaturedStory({ post, reduce }: { post: BlogListPost; reduce: boolean }) {
   return (
     <motion.article
       initial="hidden"
@@ -307,7 +324,7 @@ function FeaturedStory({ post, reduce }: { post: BlogPost; reduce: boolean }) {
       >
         <Link
           href={`/blogs/${post.slug}`}
-          className="grid overflow-hidden lg:grid-cols-[1.15fr_0.85fr]"
+          className="group grid overflow-hidden lg:grid-cols-[1.15fr_0.85fr]"
         >
           <div className="relative aspect-[16/11] lg:aspect-auto lg:min-h-[420px]">
             <Image
@@ -350,7 +367,7 @@ function FeaturedStory({ post, reduce }: { post: BlogPost; reduce: boolean }) {
   );
 }
 
-function BlogCard({ post, reduce }: { post: BlogPost; reduce: boolean }) {
+function BlogCard({ post, reduce }: { post: BlogListPost; reduce: boolean }) {
   return (
     <TiltCard
       intensity={reduce ? 0 : 12}
@@ -378,6 +395,7 @@ function BlogCard({ post, reduce }: { post: BlogPost; reduce: boolean }) {
           <p className="mt-2 flex-1 text-sm leading-relaxed text-slate">{post.excerpt}</p>
           <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-ink">
             {post.readTime}
+            <span className="font-medium text-slate">· {post.date}</span>
             <ArrowUpRight
               size={15}
               strokeWidth={2.4}

@@ -5,7 +5,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { useRef } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { site } from "@/lib/content";
-import { blogsPage } from "@/lib/blogs";
+import { blogsPage } from "@/lib/blogTypes";
 import { photos } from "@/lib/photos";
 import {
   dramaticFadeUp,
@@ -23,7 +23,18 @@ const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURICompo
   "Hi, I want a guide for my business — loans, GST or schemes.",
 )}`;
 
-export default function BlogPageHero() {
+const blogsPageStatsFallback = [
+  { value: "40+", label: "Guides on the desk" },
+  { value: "12", label: "Topics covered" },
+  { value: "6 min", label: "Average read" },
+  { value: "Free", label: "First consultation" },
+] as const;
+
+export default function BlogPageHero({
+  stats = blogsPageStatsFallback,
+}: {
+  stats?: readonly { value: string; label: string }[];
+}) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -44,7 +55,7 @@ export default function BlogPageHero() {
       ref={ref}
       id="blogs-hero"
       aria-labelledby="blogs-hero-heading"
-      className="relative overflow-hidden bg-gradient-to-br from-paper via-[#FFF8EE] to-[#EAF1FA] px-5 pt-28 pb-24 sm:px-8 lg:pt-36 lg:pb-32"
+      className="relative overflow-hidden bg-gradient-to-br from-paper via-[#FFF8EE] to-[#EAF1FA] px-5 pt-36 pb-24 sm:px-8 lg:pt-44 lg:pb-32"
     >
       {!reduce ? <FloatingOrbs /> : null}
       <div
@@ -187,7 +198,7 @@ export default function BlogPageHero() {
           className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
           style={{ perspective: 1100 }}
         >
-          {blogsPage.stats.map((stat) => (
+          {stats.map((stat) => (
             <motion.li key={stat.label} variants={flipIn}>
               <TiltCard
                 intensity={reduce ? 0 : 10}
