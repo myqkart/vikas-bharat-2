@@ -43,6 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const post of blogPosts) {
     add(blogPath(post.slug), { changeFrequency: "monthly", priority: 0.7 });
+    const published = new Date(post.dateIso);
+    if (!Number.isNaN(published.getTime())) {
+      entries[entries.length - 1]!.lastModified = published;
+    }
   }
 
   for (const slug of getAllCareerSlugs()) {

@@ -213,7 +213,7 @@ export function buildMetadata({
     openGraph: {
       type,
       locale: DEFAULT_LOCALE,
-      url: canonical,
+      url: absoluteUrl(canonical),
       siteName: SITE_NAME,
       title: ogTitle,
       description: desc,
@@ -602,26 +602,42 @@ export function articleJsonLd({
   description,
   image,
   date,
+  modified,
+  category,
+  keywords,
+  wordCount,
 }: {
   slug: string;
   title: string;
   description: string;
   image?: string;
   date?: string;
+  modified?: string;
+  category?: string;
+  keywords?: readonly string[];
+  wordCount?: number;
 }) {
   const iso = date ? parseDisplayDate(date) : undefined;
+  const modifiedIso = modified ? parseDisplayDate(modified) ?? iso : iso;
   const imageUrl = metaImage(image);
   return {
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: title,
     description,
     url: absoluteUrl(blogPath(slug)),
     image: {
       "@type": "ImageObject",
       url: imageUrl,
+      width: 1200,
+      height: 630,
     },
     datePublished: iso,
-    dateModified: iso,
+    dateModified: modifiedIso,
+    articleSection: category,
+    keywords: keywords?.join(", "),
+    wordCount,
+    inLanguage: DEFAULT_LANGUAGE,
+    isAccessibleForFree: true,
     author: {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
@@ -632,7 +648,6 @@ export function articleJsonLd({
       "@type": "WebPage",
       "@id": `${absoluteUrl(blogPath(slug))}#webpage`,
     },
-    inLanguage: DEFAULT_LANGUAGE,
   };
 }
 

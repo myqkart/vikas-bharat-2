@@ -267,7 +267,9 @@ export default function BlogPageCatalog({
               exit={{ opacity: 0, y: -8 }}
               className="mt-14 text-center text-base text-slate"
             >
-              {blogsPage.catalog.empty}
+              {posts.length === 0
+                ? "Guides are being published. WhatsApp the desk if you need a scheme or loan mapped now."
+                : blogsPage.catalog.empty}
             </motion.p>
           ) : (
             <motion.ul

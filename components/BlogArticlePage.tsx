@@ -1,15 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, BookOpen, MessageCircle } from "lucide-react";
 import { site } from "@/lib/content";
 import type { BlogListPost, BlogPost } from "@/lib/blogTypes";
-import { dramaticFadeUp, popIn, staggerDramatic } from "@/lib/motion";
-import FloatingOrbs from "@/components/motion/FloatingOrbs";
-import TextReveal from "@/components/motion/TextReveal";
-import TiltCard from "@/components/motion/TiltCard";
 import BlogProse from "@/components/BlogProse";
 
 export default function BlogArticlePage({
@@ -19,15 +12,13 @@ export default function BlogArticlePage({
   post: BlogPost;
   related: readonly BlogListPost[];
 }) {
-  const reduce = useReducedMotion();
   const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
     `Hi, I read “${post.title}” and want the next step for my business.`,
   )}`;
 
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-paper via-[#FFF8EE] to-[#EAF1FA] px-5 pt-40 pb-16 sm:px-8 sm:pt-44 lg:pt-48 lg:pb-20">
-        {!reduce ? <FloatingOrbs /> : null}
+      <header className="relative overflow-hidden bg-gradient-to-br from-paper via-[#FFF8EE] to-[#EAF1FA] px-5 pt-40 pb-16 sm:px-8 sm:pt-44 lg:pt-48 lg:pb-20">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.3]"
           style={{
@@ -42,47 +33,29 @@ export default function BlogArticlePage({
           aria-hidden
         />
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={staggerDramatic}
-          className="relative z-10 mx-auto max-w-[1200px]"
-        >
-          <motion.div variants={popIn}>
-            <Link
-              href="/blogs"
-              className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-indigo"
-            >
-              <ArrowLeft size={16} strokeWidth={2.4} aria-hidden />
-              All guides
-            </Link>
-          </motion.div>
-          <motion.p
-            variants={dramaticFadeUp}
-            className="mt-10 text-xs font-bold uppercase tracking-[0.18em] text-marigold-dark sm:mt-12"
+        <div className="relative z-10 mx-auto max-w-[1200px]">
+          <Link
+            href="/blogs"
+            className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-indigo"
           >
+            <ArrowLeft size={16} strokeWidth={2.4} aria-hidden />
+            All guides
+          </Link>
+          <p className="mt-10 text-xs font-bold uppercase tracking-[0.18em] text-marigold-dark sm:mt-12">
             {post.category}
-          </motion.p>
-          <TextReveal
-            as="h1"
-            text={post.title}
-            onMount
-            className="mt-4 max-w-4xl font-display text-[2.1rem] font-semibold leading-[1.15] tracking-tight text-ink sm:mt-5 sm:text-5xl"
-          />
-          <motion.p
-            variants={dramaticFadeUp}
-            className="mt-6 max-w-3xl text-lg leading-relaxed text-slate"
-          >
-            {post.excerpt}
-          </motion.p>
-          <motion.p
-            variants={dramaticFadeUp}
-            className="mt-6 text-sm font-semibold text-slate"
-          >
-            {post.readTime} · {post.date} · Vikas Bharat desk
-          </motion.p>
-        </motion.div>
-      </section>
+          </p>
+          <h1 className="mt-4 max-w-4xl font-display text-[2.1rem] font-semibold leading-[1.15] tracking-tight text-ink sm:mt-5 sm:text-5xl">
+            {post.title}
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate">{post.excerpt}</p>
+          <p className="mt-6 text-sm font-semibold text-slate">
+            <time dateTime={post.dateIso}>{post.date}</time>
+            {" · "}
+            {post.readTime}
+            {" · Vikas Bharat desk"}
+          </p>
+        </div>
+      </header>
 
       <section className="bg-[#FEFCF7] px-5 pt-10 pb-20 sm:px-8 sm:pt-12 lg:pt-14 lg:pb-28">
         <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-14">
@@ -202,43 +175,38 @@ export default function BlogArticlePage({
             <h2 className="mt-2 font-display text-3xl font-semibold text-ink">
               Related guides
             </h2>
-            <ul
-              className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
-              style={{ perspective: 1200 }}
-            >
+            <ul className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((item) => (
                 <li key={item.slug}>
-                  <TiltCard
-                    intensity={reduce ? 0 : 10}
+                  <Link
+                    href={`/blogs/${item.slug}`}
                     className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-border/50 bg-white shadow-card"
                   >
-                    <Link href={`/blogs/${item.slug}`} className="flex h-full flex-col">
-                      <div className="relative aspect-[16/10] overflow-hidden">
-                        <Image
-                          src={item.image}
-                          alt={item.imageAlt}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
-                        />
-                        <span className="absolute left-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-ink">
-                          <BookOpen size={18} strokeWidth={2.2} aria-hidden />
-                        </span>
-                      </div>
-                      <div className="flex flex-1 flex-col p-5">
-                        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-marigold-dark">
-                          {item.category}
-                        </p>
-                        <h3 className="mt-2 font-display text-xl font-bold text-ink">
-                          {item.title}
-                        </h3>
-                        <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-ink">
-                          {item.readTime}
-                          <ArrowUpRight size={14} strokeWidth={2.4} aria-hidden />
-                        </span>
-                      </div>
-                    </Link>
-                  </TiltCard>
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.imageAlt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                      />
+                      <span className="absolute left-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-ink">
+                        <BookOpen size={18} strokeWidth={2.2} aria-hidden />
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-marigold-dark">
+                        {item.category}
+                      </p>
+                      <h3 className="mt-2 font-display text-xl font-bold text-ink">
+                        {item.title}
+                      </h3>
+                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-ink">
+                        {item.readTime}
+                        <ArrowUpRight size={14} strokeWidth={2.4} aria-hidden />
+                      </span>
+                    </div>
+                  </Link>
                 </li>
               ))}
             </ul>

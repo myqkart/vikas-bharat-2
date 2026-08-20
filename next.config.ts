@@ -12,12 +12,13 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+        pathname: "/**",
+      },
     ],
-  },
-  outputFileTracingIncludes: {
-    "/blogs": ["./blogs/*.md"],
-    "/blogs/[slug]": ["./blogs/*.md"],
-    "/sitemap.xml": ["./blogs/*.md"],
+    minimumCacheTTL: 60 * 60 * 24 * 30,
   },
   async redirects() {
     const schemeAliases = Object.entries(SCHEME_CANONICAL_ALIASES).map(

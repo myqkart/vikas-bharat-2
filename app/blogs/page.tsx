@@ -32,6 +32,8 @@ const breadcrumbs = [
   { name: "Blogs & Guides", path: "/blogs" },
 ];
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = buildMetadata({
   title,
   description,

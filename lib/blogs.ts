@@ -1,10 +1,10 @@
-import fs from "node:fs";
-import path from "node:path";
-import { parseBlogMarkdown } from "@/lib/blogParse";
+import generatedPosts from "@/lib/generated/blog-posts.json";
 import type { BlogListPost, BlogPost } from "@/lib/blogTypes";
 
 export type { BlogBlock, BlogFaqItem, BlogListPost, BlogPost } from "@/lib/blogTypes";
 export { blogFaq, blogsPage } from "@/lib/blogTypes";
+
+export const blogPosts: readonly BlogPost[] = generatedPosts as BlogPost[];
 
 export function toListPost(post: BlogPost): BlogListPost {
   return {
@@ -23,29 +23,6 @@ export function toListPost(post: BlogPost): BlogListPost {
     relatedLabel: post.relatedLabel,
   };
 }
-
-const BLOGS_DIR = path.join(process.cwd(), "blogs");
-
-function readBlogDir() {
-  if (!fs.existsSync(BLOGS_DIR)) return [] as BlogPost[];
-  return fs
-    .readdirSync(BLOGS_DIR)
-    .filter((file) => file.endsWith(".md"))
-    .sort()
-    .map((file) => {
-      const raw = fs.readFileSync(path.join(BLOGS_DIR, file), "utf8");
-      return parseBlogMarkdown(file, raw);
-    });
-}
-
-function byNewest(a: BlogPost, b: BlogPost) {
-  return b.dateIso.localeCompare(a.dateIso) || a.title.localeCompare(b.title);
-}
-
-const loaded = readBlogDir().sort(byNewest);
-if (loaded[0]) loaded[0].featured = true;
-
-export const blogPosts: readonly BlogPost[] = loaded;
 
 export const blogCategories = [
   ...new Set(blogPosts.map((post) => post.category)),
@@ -96,4 +73,21 @@ export function blogListingStats() {
     { value: `${avg} min`, label: "Average read" },
     { value: "Free", label: "First consultation" },
   ] as const;
+}
+
+export function blogWordCount(post: BlogPost) {
+  const chunks: string[] = [post.title, post.excerpt, ...post.takeaways];
+  for (const block of post.blocks) {
+    if (block.type === "p" || block.type === "h2" || block.type === "h3") chunks.push(block.text);
+    if (block.type === "ul" || block.type === "ol") chunks.push(...block.items);
+    if (block.type === "steps") {
+      for (const item of block.items) chunks.push(item.title, item.body);
+    }
+    if (block.type === "callout") chunks.push(block.heading, block.text);
+    if (block.type === "table") chunks.push(...block.headers, ...block.rows.flat());
+    if (block.type === "cards") {
+      for (const item of block.items) chunks.push(...Object.values(item));
+    }
+  }
+  return chunks.join(" ").split(/\s+/).filter(Boolean).length;
 }

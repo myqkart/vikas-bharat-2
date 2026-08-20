@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "ingest:blogs": "npx tsx scripts/ingest-blogs.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
