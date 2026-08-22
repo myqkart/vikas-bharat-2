@@ -1,5 +1,10 @@
 import { photos } from "@/lib/photos";
-import type { BlogBlock, BlogFaqItem, BlogPost } from "@/lib/blogTypes";
+import {
+  RELATED_BY_CATEGORY,
+  type BlogBlock,
+  type BlogFaqItem,
+  type BlogPost,
+} from "@/lib/blogTypes";
 
 const MONTHS: Record<string, number> = {
   january: 0,
@@ -29,32 +34,6 @@ const EXCERPT_OVERRIDES: Record<string, string> = {
 const CATEGORY_ALIASES: Record<string, string> = {
   "About Enego": "About Us",
   "About Vikas Bharat": "About Us",
-};
-
-const RELATED_BY_CATEGORY: Record<string, { href: string; label: string }> = {
-  "Government Schemes": { href: "/scheme", label: "Government schemes desk" },
-  "Startup Funding": { href: "/services/startup", label: "Startup India desk" },
-  "Startup India": { href: "/services/startup", label: "Startup India desk" },
-  "Business Loans": { href: "/services/loan", label: "Business loan desk" },
-  "MSME Funding": { href: "/services/loan", label: "Loan desk" },
-  "Business Registration": {
-    href: "/services/registration",
-    label: "Registration desk",
-  },
-  "Business Licensing": {
-    href: "/services/certificate",
-    label: "Certifications desk",
-  },
-  "Business Growth": { href: "/services/growth", label: "Growth desk" },
-  "MSME Growth": { href: "/services/growth", label: "Growth desk" },
-  "MSME Compliance": { href: "/services/legal", label: "Legal consultancy" },
-  "MSME Tax & Compliance": {
-    href: "/services/legal",
-    label: "Legal consultancy",
-  },
-  "Trade Finance": { href: "/services/nbfc", label: "NBFC & invoice finance" },
-  "EV Charging": { href: "/services/grant", label: "Grants desk" },
-  "About Us": { href: "/about", label: "About Vikas Bharat" },
 };
 
 const LINK_MAP: Record<string, string> = {

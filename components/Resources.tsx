@@ -421,14 +421,14 @@ function HeroContent() {
         <h2 className="mt-4 font-display text-[40px] font-semibold leading-[1.08] text-ink sm:text-[44px] lg:text-[54px] xl:text-[60px] tracking-tight">
           Ideas
           <br />
-          that drive
+          That Drive
           <br />
-          small
+          Small
           <br />
-          businesses
+          Businesses
           <br />
-          <span className="relative inline-block text-marigold font-serif italic lowercase">
-            forward.
+          <span className="relative inline-block text-marigold font-serif italic">
+            Forward.
             <svg
               className="absolute left-0 bottom-[-4px] w-full h-2 text-marigold pointer-events-none"
               viewBox="0 0 100 8"

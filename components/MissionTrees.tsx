@@ -612,24 +612,24 @@ export default function MissionTrees() {
         className="relative"
         style={{ height: `${CHAPTER_COUNT * VH_PER_CHAPTER}vh` }}
       >
-        <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden px-3 pt-[max(4.5rem,env(safe-area-inset-top))] pb-[max(0.5rem,env(safe-area-inset-bottom))] sm:px-6 lg:px-8">
+        <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden px-3 pt-[max(1.1rem,env(safe-area-inset-top))] pb-[max(6.25rem,env(safe-area-inset-bottom))] sm:px-6 md:pt-[max(5rem,env(safe-area-inset-top))] md:pb-[max(1.25rem,env(safe-area-inset-bottom))] lg:px-8">
           <Atmosphere
             progress={scrollYProgress}
             activeAccent={active.accent}
           />
 
           <div className="relative z-10 mx-auto flex h-full w-full max-w-[1120px] flex-col">
-            <header className="shrink-0 text-center lg:text-left">
+            <header className="shrink-0 pt-2 text-center lg:pt-0 lg:text-left">
               <p className="text-[11px] font-semibold tracking-[0.2em] text-slate uppercase sm:text-[12px]">
                 {missionTrees.eyebrow}
               </p>
               <h2
                 id="mission-trees-heading"
-                className="mt-1 font-display text-[22px] font-semibold leading-[1.12] text-ink sm:text-[30px] lg:text-[42px]"
+                className="mt-2.5 font-display text-[22px] font-semibold leading-[1.12] text-ink sm:text-[30px] lg:text-[42px]"
               >
                 {missionTrees.heading}
               </h2>
-              <p className="mx-auto mt-1.5 max-w-xl text-[13px] leading-snug text-slate sm:text-[14px] lg:mx-0 lg:text-base">
+              <p className="mx-auto mt-3 max-w-xl text-[13px] leading-snug text-slate sm:text-[14px] lg:mx-0 lg:text-base">
                 {missionTrees.sub}
               </p>
             </header>
@@ -638,7 +638,7 @@ export default function MissionTrees() {
               ref={stageRef}
               onPointerMove={onPointerMove}
               onPointerLeave={onPointerLeave}
-              className="relative mt-1 flex min-h-0 flex-1 flex-col items-center justify-center gap-6 lg:mt-0 lg:grid lg:grid-cols-[240px_minmax(0,1fr)_260px] lg:items-center lg:gap-8 w-full"
+              className="relative mt-5 flex min-h-0 flex-1 flex-col items-center justify-start gap-5 lg:mt-0 lg:grid lg:grid-cols-[240px_minmax(0,1fr)_260px] lg:items-center lg:justify-center lg:gap-8 w-full"
             >
               {/* Left Column - 5-6 points list */}
               <aside className="relative z-10 w-full max-w-xs shrink-0 hidden lg:flex lg:flex-col gap-3">
@@ -687,7 +687,7 @@ export default function MissionTrees() {
 
               {/* Center Column - Compass */}
               <motion.div
-                className="relative mx-auto aspect-square w-full max-w-[min(100%,480px)] lg:max-w-[500px]"
+                className="relative mx-auto aspect-square w-full max-w-[min(68vw,320px)] overflow-hidden sm:max-w-[min(100%,420px)] lg:max-w-[500px]"
                 style={{ transform, transformStyle: "preserve-3d" }}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
@@ -772,7 +772,7 @@ export default function MissionTrees() {
 
                   {/* Lock meridian */}
                   <path
-                    d={`M ${CX} ${CY - R_OUTER - 6} L ${CX - 7} ${CY - R_OUTER + 12} L ${CX + 7} ${CY - R_OUTER + 12} Z`}
+                    d={`M ${CX} ${CY - R_OUTER + 10} L ${CX - 7} ${CY - R_OUTER + 28} L ${CX + 7} ${CY - R_OUTER + 28} Z`}
                     fill={a.hex}
                     opacity={0.9}
                   />

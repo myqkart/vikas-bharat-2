@@ -591,7 +591,7 @@ export default function Header() {
                 aria-label={open ? "Close menu" : "Open menu"}
                 onClick={() => setOpen((v) => !v)}
                 whileTap={{ scale: 0.94 }}
-                className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-[18px]"
+                className="relative z-10 flex h-14 min-w-[4.25rem] shrink-0 flex-col items-center justify-center gap-0.5 overflow-hidden rounded-[18px] bg-white px-2 ring-1 ring-border/50"
               >
                 <AnimatePresence mode="wait" initial={false}>
                   {open ? (
@@ -601,9 +601,14 @@ export default function Header() {
                       animate={{ rotate: 0, opacity: 1, scale: 1 }}
                       exit={{ rotate: 40, opacity: 0, scale: 0.8 }}
                       transition={{ duration: 0.2 }}
-                      className="flex h-12 w-12 items-center justify-center rounded-full bg-ink text-paper"
+                      className="flex flex-col items-center justify-center"
                     >
-                      <X size={20} strokeWidth={2.4} aria-hidden />
+                      <span className="grid h-7 w-7 place-items-center rounded-full bg-ink text-paper">
+                        <X size={16} strokeWidth={2.4} aria-hidden />
+                      </span>
+                      <span className="text-[9px] font-bold uppercase tracking-[0.16em] text-ink">
+                        Close
+                      </span>
                     </motion.span>
                   ) : (
                     <motion.span
@@ -611,15 +616,20 @@ export default function Header() {
                       initial={{ scale: 0.85, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0.85, opacity: 0 }}
-                      className="relative h-12 w-12 overflow-hidden rounded-[14px] bg-white ring-1 ring-border/50"
+                      className="flex flex-col items-center justify-center"
                     >
-                      <Image
-                        src={site.logoMark}
-                        alt=""
-                        fill
-                        sizes="48px"
-                        className="object-contain p-[2px]"
-                      />
+                      <span className="relative h-7 w-7 overflow-hidden rounded-[8px]">
+                        <Image
+                          src={site.logoMark}
+                          alt=""
+                          fill
+                          sizes="28px"
+                          className="object-contain"
+                        />
+                      </span>
+                      <span className="text-[9px] font-bold uppercase tracking-[0.16em] text-ink">
+                        Menu
+                      </span>
                     </motion.span>
                   )}
                 </AnimatePresence>

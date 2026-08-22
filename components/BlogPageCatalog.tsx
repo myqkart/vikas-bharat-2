@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, BookOpen, Search, X } from "lucide-react";
-import { blogsPage } from "@/lib/blogTypes";
+import { blogsPage, RELATED_BY_CATEGORY } from "@/lib/blogTypes";
 import type { BlogListPost } from "@/lib/blogTypes";
 import { dramaticFadeUp, flipIn, popIn, staggerDramatic } from "@/lib/motion";
 import FloatingOrbs from "@/components/motion/FloatingOrbs";
@@ -135,27 +135,29 @@ export default function BlogPageCatalog({
           className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
         >
           {topics.map((topic) => {
-            const on = activeFilter === topic.category;
-            return (
-              <motion.li key={topic.category} variants={popIn}>
-                <button
-                  type="button"
-                  aria-pressed={on}
-                  onClick={() => selectFilter(topic.category)}
-                  className={`flex h-full w-full flex-col items-start rounded-[18px] border px-4 py-4 text-left shadow-card transition-colors ${
-                    on
-                      ? "border-ink bg-ink text-paper"
-                      : "border-border/70 bg-white/90 text-ink hover:border-ink/30"
-                  }`}
-                >
-                  <span className="font-display text-xl font-semibold">{topic.count}</span>
-                  <span className="mt-1 text-[11px] font-bold uppercase tracking-[0.12em] opacity-80">
-                    {topic.category}
-                  </span>
-                </button>
-              </motion.li>
-            );
-          })}
+              const on = activeFilter === topic.category;
+              const dest =
+                RELATED_BY_CATEGORY[topic.category]?.href ??
+                `/blogs?topic=${encodeURIComponent(topic.category)}`;
+              return (
+                <motion.li key={topic.category} variants={popIn}>
+                  <Link
+                    href={dest}
+                    aria-current={on ? "page" : undefined}
+                    className={`flex h-full w-full flex-col items-start rounded-[18px] border px-4 py-4 text-left shadow-card transition-colors ${
+                      on
+                        ? "border-ink bg-ink text-paper"
+                        : "border-border/70 bg-white/90 text-ink hover:border-ink/30"
+                    }`}
+                  >
+                    <span className="font-display text-xl font-semibold">{topic.count}</span>
+                    <span className="mt-1 text-[11px] font-bold uppercase tracking-[0.12em] opacity-80">
+                      {topic.category}
+                    </span>
+                  </Link>
+                </motion.li>
+              );
+            })}
         </motion.ul>
 
         <motion.div

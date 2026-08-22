@@ -59,7 +59,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const contactFaq = {
-  heading: "Before you contact us",
+  heading: "Before You Contact Us",
   sub: "Quick answers on response time, documents, office visits and what to expect.",
   items: [
     {
@@ -77,6 +77,10 @@ const contactFaq = {
     {
       question: "Can I visit an office in person?",
       answer: "Yes. Walk in at our Noida desk — 1st floor, F-5, C Block, Sector 63. Please call ahead so the right specialist can be available.",
+    },
+    {
+      question: "Is the first consultation charged?",
+      answer: "No. The first call or WhatsApp review is free. If you proceed, fees are shared in writing before any paid work starts.",
     },
   ],
 } as const;
@@ -110,7 +114,7 @@ export default function ContactPage() {
         ])}
       />
       <Breadcrumbs items={breadcrumbs} />
-      <section className="relative isolate overflow-hidden border-b border-border bg-paper px-5 py-20 sm:px-8 lg:py-28">
+      <section className="relative isolate overflow-hidden border-b border-border bg-paper px-5 pt-32 pb-28 sm:px-8 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28">
         <Image
           src={photos.heroGlow}
           alt=""

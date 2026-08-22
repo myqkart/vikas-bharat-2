@@ -8774,7 +8774,7 @@ export const passbook = {
 export const startupIndia = {
   id: "startup-india",
   eyebrow: "Startup India · DPIIT",
-  heading: "Recognition numbers that matter.",
+  heading: "Recognition Numbers That Matter.",
   sub: "Live snapshot founders ask about first — recognition scale, tax relief, and the revised turnover ceiling.",
   notice:
     "Pursuant to DPIIT Gazette Notification 108(E) dated 4 February 2026, the turnover threshold for Startup recognition has been revised from ₹100 crore to ₹200 crore. DPIIT-recognised startups should log in to the Startup India portal and download their updated Startup Recognition certificate.",
@@ -8882,7 +8882,7 @@ export const network = {
 export const missionTrees = {
   id: "vision",
   eyebrow: "The Ink Compass",
-  heading: "Spin the seal. Lock a mandate.",
+  heading: "Spin the Seal. Lock a Mandate.",
   sub: "Four living mandates orbit the VIKASBHART seal. When a ring locks at the meridian, support blooms outward from the center.",
   hubLabel: "VIKASBHART",
   hubTagline: "Sapno Se Safalta Tak",
@@ -8945,7 +8945,7 @@ export const missionTrees = {
 export const about = {
   id: "about",
   eyebrow: "Company Introduction",
-  heading: "Who we are. What we do. Who we help.",
+  heading: "Who We Are. What We Do. Who We Help.",
   body: "Vikas Bharat is a pan-India business help desk for startups and MSMEs — registration, funding, certifications, and growth support explained in clear Hindi and English.",
   whoWeAre: {
     title: "Who We Are",
@@ -9310,7 +9310,7 @@ export const aboutCredentials = {
 
 export const services = {
   eyebrow: "What We Do",
-  heading: "Ek jagah, har madad.",
+  heading: "Ek Jagah, Har Madad.",
   sub: "Everything your business needs under one roof — registration, funding, licences, growth, and legal — with bilingual guidance and WhatsApp-first updates.",
   overview:
     "Whether you are registering a private limited company, applying for a Mudra loan, claiming a PMEGP subsidy, or renewing FSSAI, our desk maps the path, collects the right papers, and follows up with banks and portals until the outcome is real.",
@@ -9568,7 +9568,7 @@ export function getAllServiceSlugs() {
 
 export const howItWorks = {
   eyebrow: "The Process",
-  heading: "4 kadam, poora kaam.",
+  heading: "4 Kadam, Poora Kaam.",
   sub: "You just show up. We handle the rest — from a 2-minute discovery call to money or licence in hand.",
   diagram: {
     src: photos.processDiagram,
@@ -9608,7 +9608,7 @@ export const howItWorks = {
 
 export const caseStudies = {
   eyebrow: "Case Studies",
-  heading: "Challenge → solution → paisa.",
+  heading: "Challenge → Solution → Paisa.",
   sub: "Short stories from food, hardware, and tailoring businesses — what blocked them, what we filed, and what landed.",
   items: [
     {
@@ -9727,7 +9727,7 @@ export const aboutStories = {
 
 export const testimonials = {
   eyebrow: "Real People",
-  heading: "Unki kahani, unki zubaani.",
+  heading: "Unki Kahani, Unki Zubaani.",
   sub: "Ratings, business types, and rupee outcomes from founders who look like our visitors — not stock models.",
   items: [
     {
@@ -9765,7 +9765,7 @@ export const testimonials = {
 export const resources = {
   id: "resources",
   eyebrow: "Guides & SEO desk",
-  heading: "Topics founders search for — explained clearly.",
+  heading: "Topics Founders Search For — Explained Clearly.",
   sub: "Deep dives on registration, GST, MSME/Udyam, loans, schemes, and licences so you can learn before you call.",
   topics: [
     {
@@ -9808,7 +9808,7 @@ export const resources = {
 } as const;
 
 export const faq = {
-  heading: "Sawal jo har founder poochta hai",
+  heading: "Sawal Jo Har Founder Poochta Hai",
   sub: "Eligibility, fees, timelines, and small-business fit — answered without legal fog.",
   items: [
     {
@@ -9845,7 +9845,7 @@ export const faq = {
 } as const;
 
 export const serviceFaq = {
-  heading: "Sawal jo har founder poochta hai",
+  heading: "Sawal Jo Har Founder Poochta Hai",
   sub: "Common questions about registration, funding, compliance and how Vikas Bharat works.",
   items: [
     {
@@ -10012,7 +10012,7 @@ export const aboutFaq = {
 } as const;
 
 export const finalCta = {
-  heading: "Aaj hi shuru karo.",
+  heading: "Aaj Hi Shuru Karo.",
   sub: "Ek free call. Koi obligation nahi. Eligibility, scheme fit, aur next documents — 2 minute mein clear.",
   primary: "WhatsApp Par Baat Karo",
   secondary: site.phoneDisplay,

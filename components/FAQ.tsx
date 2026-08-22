@@ -7,12 +7,14 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import {
+  Building2,
   Clock,
-  Users,
   FileText,
-  HelpCircle,
-  Zap,
+  MessageCircle,
   ShieldCheck,
+  Sparkles,
+  Users,
+  Zap,
   Headphones,
   ArrowRight,
   Plus,
@@ -73,16 +75,11 @@ const getOrderedItems = (items: readonly FaqItem[], useLandingOrder: boolean) =>
   return ordered;
 };
 
-// Helper to resolve card icons dynamically
+const CAROUSEL_LIMIT = 5;
+
+// Helper to resolve card icons dynamically — never a question-mark glyph
 function getCardIcon(question: string) {
   const q = question.toLowerCase();
-  if (q.includes("eligible") || q.includes("structure") || q.includes("start the")) {
-    return {
-      type: "text" as const,
-      char: "?",
-      icon: HelpCircle,
-    };
-  }
   if (
     q.includes("paisa") ||
     q.includes("fee") ||
@@ -99,7 +96,9 @@ function getCardIcon(question: string) {
     q.includes("time") ||
     q.includes("duration") ||
     q.includes("din") ||
-    q.includes("how long")
+    q.includes("how long") ||
+    q.includes("quickly") ||
+    q.includes("how soon")
   ) {
     return {
       type: "lucide" as const,
@@ -122,23 +121,45 @@ function getCardIcon(question: string) {
     q.includes("document") ||
     q.includes("bheju") ||
     q.includes("check") ||
-    q.includes("compliance")
+    q.includes("compliance") ||
+    q.includes("file")
   ) {
     return {
       type: "lucide" as const,
       icon: FileText,
     };
   }
-  if (q.includes("reliable") || q.includes("partner")) {
+  if (
+    q.includes("office") ||
+    q.includes("visit") ||
+    q.includes("noida") ||
+    q.includes("walk")
+  ) {
+    return {
+      type: "lucide" as const,
+      icon: Building2,
+    };
+  }
+  if (
+    q.includes("reliable") ||
+    q.includes("partner") ||
+    q.includes("eligible") ||
+    q.includes("structure")
+  ) {
     return {
       type: "lucide" as const,
       icon: ShieldCheck,
     };
   }
+  if (q.includes("more than one") || q.includes("start the")) {
+    return {
+      type: "lucide" as const,
+      icon: Sparkles,
+    };
+  }
   return {
-    type: "text" as const,
-    char: "?",
-    icon: HelpCircle,
+    type: "lucide" as const,
+    icon: MessageCircle,
   };
 }
 
@@ -146,7 +167,8 @@ export default function FAQ({ data }: { data?: FaqData }) {
   const source = data ?? faq;
   const useLandingOrder = !data;
   const orderedItems = getOrderedItems(source.items, useLandingOrder);
-  const total = orderedItems.length;
+  const carouselItems = orderedItems.slice(0, CAROUSEL_LIMIT);
+  const total = carouselItems.length;
   const reduce = useReducedMotion();
 
   // Landing FAQ opens on "eligible"; custom sets open on the first card
@@ -193,33 +215,33 @@ export default function FAQ({ data }: { data?: FaqData }) {
         zIndex = 30;
         opacity = 1;
       } else if (diff === -1) {
-        x = -24;
-        y = 8;
-        rotate = -5;
-        scale = 0.95;
+        x = -72;
+        y = 10;
+        rotate = -7;
+        scale = 0.94;
         zIndex = 25;
-        opacity = 0.9;
+        opacity = 0.92;
       } else if (diff === 1) {
-        x = 24;
-        y = 8;
-        rotate = 5;
-        scale = 0.95;
+        x = 72;
+        y = 10;
+        rotate = 7;
+        scale = 0.94;
         zIndex = 25;
-        opacity = 0.9;
+        opacity = 0.92;
       } else if (diff === -2) {
-        x = -46;
-        y = 16;
-        rotate = -10;
-        scale = 0.9;
+        x = -118;
+        y = 20;
+        rotate = -12;
+        scale = 0.88;
         zIndex = 20;
-        opacity = 0.7;
+        opacity = 0.72;
       } else if (diff === 2) {
-        x = 46;
-        y = 16;
-        rotate = 10;
-        scale = 0.9;
+        x = 118;
+        y = 20;
+        rotate = 12;
+        scale = 0.88;
         zIndex = 20;
-        opacity = 0.7;
+        opacity = 0.72;
       } else {
         // Cards that are hidden behind the stack
         x = 0;
@@ -322,13 +344,21 @@ export default function FAQ({ data }: { data?: FaqData }) {
     setActiveIndex(index);
   };
 
+  const goPrev = () => {
+    setActiveIndex((prev) => (prev - 1 + total) % total);
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => (prev + 1) % total);
+  };
+
   // Find index of "Kya main eligible hoon?" to route to it on clicking Quick Answers
-  const eligibleIndex = orderedItems.findIndex((item) =>
+  const eligibleIndex = carouselItems.findIndex((item) =>
     item.question.toLowerCase().includes("eligible") ||
     item.question.toLowerCase().includes("structure")
   );
   // Find index of paisa/fee/cost card to route on clicking 100% updated
-  const updatedIndex = orderedItems.findIndex((item) => {
+  const updatedIndex = carouselItems.findIndex((item) => {
     const q = item.question.toLowerCase();
     return q.includes("paisa") || q.includes("cost") || q.includes("fee");
   });
@@ -336,7 +366,7 @@ export default function FAQ({ data }: { data?: FaqData }) {
   return (
     <section
       id="faq"
-      className="relative px-6 py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-paper via-[#FAF5EA] to-paper border-t border-border/10"
+      className="relative scroll-mt-8 overflow-hidden border-t border-border/10 bg-gradient-to-b from-paper via-[#FAF5EA] to-paper px-6 py-24 lg:py-28"
     >
       <dl className="sr-only">
         {orderedItems.map((item) => (
@@ -448,37 +478,43 @@ export default function FAQ({ data }: { data?: FaqData }) {
             </motion.svg>
 
             <h2 className="relative inline-block font-display text-[32px] md:text-[46px] font-semibold leading-[1.15] text-ink">
-              <TextReveal
-                as="span"
-                text="Sawal jo har"
-                className="inline"
-              />{" "}
-              <span className="relative inline-block font-handwriting text-marigold-dark px-1 italic">
-                founder
-                <motion.svg
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  whileInView={{ pathLength: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-                  className="absolute -bottom-2.5 left-0 w-full h-3 text-marigold"
-                  viewBox="0 0 100 12"
-                  fill="none"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <motion.path
-                    d="M2,8 C30,10 70,8 98,4 C70,6 30,8 2,10"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.2, delay: 0.35 }}
-                  />
-                </motion.svg>
-              </span>{" "}
-              <TextReveal as="span" text="poochta hai" className="inline" />
+              {useLandingOrder ? (
+                <>
+                  <TextReveal
+                    as="span"
+                    text="Sawal Jo Har"
+                    className="inline"
+                  />{" "}
+                  <span className="relative inline-block font-handwriting text-marigold-dark px-1 italic">
+                    Founder
+                    <motion.svg
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+                      className="absolute -bottom-2.5 left-0 w-full h-3 text-marigold"
+                      viewBox="0 0 100 12"
+                      fill="none"
+                      preserveAspectRatio="none"
+                      aria-hidden="true"
+                    >
+                      <motion.path
+                        d="M2,8 C30,10 70,8 98,4 C70,6 30,8 2,10"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        initial={{ pathLength: 0 }}
+                        whileInView={{ pathLength: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2, delay: 0.35 }}
+                      />
+                    </motion.svg>
+                  </span>{" "}
+                  <TextReveal as="span" text="Poochta Hai" className="inline" />
+                </>
+              ) : (
+                <TextReveal as="span" text={source.heading} className="inline" />
+              )}
             </h2>
 
             <motion.svg
@@ -642,9 +678,9 @@ export default function FAQ({ data }: { data?: FaqData }) {
             </motion.div>
 
             {/* Active/Carousel Deck Container */}
-            <div className="relative w-full max-w-[320px] lg:max-w-none h-[400px] md:h-[440px] flex items-center justify-center">
+            <div className="relative flex h-[400px] w-full max-w-[420px] items-center justify-center overflow-visible md:h-[440px] lg:max-w-none">
               <AnimatePresence initial={false}>
-                {orderedItems.map((item, idx) => {
+                {carouselItems.map((item, idx) => {
                   const diff = getRelativeIndex(idx);
                   const isActive = diff === 0;
                   const cardIcon = getCardIcon(item.question);
@@ -656,16 +692,14 @@ export default function FAQ({ data }: { data?: FaqData }) {
                   return (
                     <motion.div
                       key={item.question}
-                      drag={isMobile ? "x" : false}
+                      drag={isMobile && isActive ? "x" : false}
                       dragConstraints={{ left: 0, right: 0 }}
                       onDragEnd={(_, info) => {
                         const swipeThreshold = 40;
                         if (info.offset.x < -swipeThreshold) {
-                          // Swipe left -> Next card
-                          setActiveIndex((prev) => (prev + 1) % total);
+                          goNext();
                         } else if (info.offset.x > swipeThreshold) {
-                          // Swipe right -> Previous card
-                          setActiveIndex((prev) => (prev - 1 + total) % total);
+                          goPrev();
                         }
                       }}
                       onClick={() => {
@@ -745,11 +779,28 @@ export default function FAQ({ data }: { data?: FaqData }) {
                   );
                 })}
               </AnimatePresence>
+
+              {isMobile && total > 1 ? (
+                <>
+                  <button
+                    type="button"
+                    aria-label="Previous question"
+                    onClick={goPrev}
+                    className="absolute inset-y-10 left-0 z-40 w-[22%] cursor-pointer lg:hidden"
+                  />
+                  <button
+                    type="button"
+                    aria-label="Next question"
+                    onClick={goNext}
+                    className="absolute inset-y-10 right-0 z-40 w-[22%] cursor-pointer lg:hidden"
+                  />
+                </>
+              ) : null}
             </div>
 
             {/* Pagination dots */}
             <div className="flex justify-center items-center gap-3 mt-10 z-20">
-              {orderedItems.map((_, idx) => (
+              {carouselItems.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => handleDotClick(idx)}

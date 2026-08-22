@@ -90,9 +90,9 @@ export default function FinalCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          Aaj hi{" "}
+          Aaj Hi{" "}
           <span className="relative inline-block text-[#e58e26] px-1 font-bold">
-            shuru
+            Shuru
             <svg
               className="absolute -bottom-2.5 left-0 w-full h-2.5 text-[#e58e26]"
               viewBox="0 0 100 10"
@@ -108,7 +108,7 @@ export default function FinalCTA() {
             </svg>
           </span>{" "}
           <span className="relative inline-block">
-            karo.
+            Karo.
             {/* Radiating Sparkles */}
             <svg
               className="absolute -right-7 -top-2 w-6 h-6 text-[#e58e26]"

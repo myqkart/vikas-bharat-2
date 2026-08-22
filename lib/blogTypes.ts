@@ -35,9 +35,35 @@ export type BlogPost = {
 
 export type BlogListPost = Omit<BlogPost, "blocks" | "toc" | "faqs">;
 
+export const RELATED_BY_CATEGORY: Record<string, { href: string; label: string }> = {
+  "Government Schemes": { href: "/scheme", label: "Government schemes desk" },
+  "Startup Funding": { href: "/services/startup", label: "Startup India desk" },
+  "Startup India": { href: "/services/startup", label: "Startup India desk" },
+  "Business Loans": { href: "/services/loan", label: "Business loan desk" },
+  "MSME Funding": { href: "/services/loan", label: "Loan desk" },
+  "Business Registration": {
+    href: "/services/registration",
+    label: "Registration desk",
+  },
+  "Business Licensing": {
+    href: "/services/certificate",
+    label: "Certifications desk",
+  },
+  "Business Growth": { href: "/services/growth", label: "Growth desk" },
+  "MSME Growth": { href: "/services/growth", label: "Growth desk" },
+  "MSME Compliance": { href: "/services/legal", label: "Legal consultancy" },
+  "MSME Tax & Compliance": {
+    href: "/services/legal",
+    label: "Legal consultancy",
+  },
+  "Trade Finance": { href: "/services/nbfc", label: "NBFC & invoice finance" },
+  "EV Charging": { href: "/services/grant", label: "Grants desk" },
+  "About Us": { href: "/about", label: "About Vikas Bharat" },
+};
+
 export const blogsPage = {
   eyebrow: "Knowledge Desk",
-  heading: "Guides for founders & MSMEs",
+  heading: "Guides for Founders & MSMEs",
   intro:
     "Practical articles on registration, loans, GST, schemes and compliance — written the way we explain it on a call. Padho, phir poochho.",
   cta: "Browse articles",
@@ -45,20 +71,20 @@ export const blogsPage = {
   imageAlt: "Advisor reviewing business guides with a founder",
   catalog: {
     eyebrow: "Latest from the desk",
-    heading: "Read what founders actually ask",
+    heading: "Read What Founders Actually Ask",
     sub: "Search a scheme, licence or loan type. Every guide ends with a clear next step — not a maze of links.",
     searchPlaceholder: "Search GST, Mudra, Udyam, FSSAI…",
     empty: "No guides match that search. Try a category, or WhatsApp the desk.",
   },
   topics: {
     eyebrow: "What we write about",
-    heading: "Pick a desk. Start reading.",
+    heading: "Pick a Desk. Start Reading.",
     sub: "Same topics we handle on WhatsApp — explained before you send a document.",
   },
 } as const;
 
 export const blogFaq = {
-  heading: "Before you open a guide",
+  heading: "Before You Open a Guide",
   sub: "Short answers on how we write, what to do after you read, and when to call the desk.",
   items: [
     {

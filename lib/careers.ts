@@ -417,7 +417,7 @@ const LEGACY_CAREER_SLUGS: Record<string, CareerRoleSlug> = {
 };
 
 export const careerFaq = {
-  heading: "Before you apply",
+  heading: "Before You Apply",
   sub: "Short answers on location, interviews and how we review resumes.",
   items: [
     {
@@ -439,6 +439,11 @@ export const careerFaq = {
       question: "How soon will you reply?",
       answer:
         "If your profile matches, we aim to call or email within a few business days. If you do not hear back, the role may have been filled.",
+    },
+    {
+      question: "How do I apply from this page?",
+      answer:
+        "Open the role, tap Apply, and send your resume through the form. You can also WhatsApp the desk if you want to confirm the opening is still live.",
     },
   ],
 } as const;

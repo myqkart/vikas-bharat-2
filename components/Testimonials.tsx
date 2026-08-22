@@ -132,9 +132,9 @@ export default function Testimonials() {
 
           {/* Heading with "unki zubaani." colored in gold */}
           <h2 className="mt-4 font-display text-[28px] font-semibold leading-[1.15] text-ink lg:text-[42px]">
-            {testimonials.heading === "Unki kahani, unki zubaani." ? (
+            {testimonials.heading === "Unki Kahani, Unki Zubaani." ? (
               <>
-                Unki kahani, <span className="text-marigold">unki zubaani.</span>
+                Unki Kahani, <span className="text-marigold">Unki Zubaani.</span>
               </>
             ) : (
               testimonials.heading

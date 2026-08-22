@@ -76,8 +76,73 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/jobs",
-        destination: "/careers",
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/loans",
+        destination: "/services/loan",
+        permanent: true,
+      },
+      {
+        source: "/loan",
+        destination: "/services/loan",
+        permanent: true,
+      },
+      {
+        source: "/grants",
+        destination: "/services/grant",
+        permanent: true,
+      },
+      {
+        source: "/grant",
+        destination: "/services/grant",
+        permanent: true,
+      },
+      {
+        source: "/registration",
+        destination: "/services/registration",
+        permanent: true,
+      },
+      {
+        source: "/udyam",
+        destination: "/services/registration",
+        permanent: true,
+      },
+      {
+        source: "/gst",
+        destination: "/services/registration",
+        permanent: true,
+      },
+      {
+        source: "/startup-india",
+        destination: "/services/startup",
+        permanent: true,
+      },
+      {
+        source: "/funding",
+        destination: "/services/funding",
+        permanent: true,
+      },
+      {
+        source: "/noida",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/office",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/faq",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/jobs/:path*",
+        destination: "/careers/:path*",
         permanent: true,
       },
       {

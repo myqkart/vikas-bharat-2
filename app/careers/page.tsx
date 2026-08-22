@@ -68,7 +68,7 @@ export default function CareersPage() {
       />
       <Breadcrumbs items={breadcrumbs} />
 
-      <section className="relative isolate overflow-hidden border-b border-border bg-paper px-5 py-12 sm:px-8 sm:py-20 lg:py-28">
+      <section className="relative isolate overflow-hidden border-b border-border bg-paper px-5 pt-32 pb-20 sm:px-8 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-28">
         <Image
           src={careersPage.image}
           alt=""
@@ -79,7 +79,7 @@ export default function CareersPage() {
         />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_15%,rgba(245,166,35,0.17),transparent_29%),radial-gradient(circle_at_85%_10%,rgba(30,62,114,0.14),transparent_33%)]" />
         <div className="mx-auto max-w-[900px] text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-marigold/35 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-ink shadow-card">
+          <span className="no-address-detect inline-flex items-center gap-2 rounded-full border border-marigold/35 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-ink shadow-card">
             <span className="h-2 w-2 rounded-full bg-success" />
             {careersPage.locationLabel}
           </span>

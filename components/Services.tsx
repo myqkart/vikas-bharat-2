@@ -117,7 +117,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative px-5 py-16 lg:px-8 lg:py-24 overflow-hidden">
+    <section id="services" className="relative scroll-mt-8 overflow-hidden px-5 py-20 lg:px-8 lg:py-24">
       {/* Background Dot Grid for visual flair matching the screenshot */}
       <div className="absolute right-0 bottom-0 w-80 h-80 opacity-15 pointer-events-none select-none z-0">
         <svg width="100%" height="100%" viewBox="0 0 320 320" fill="none">
@@ -141,8 +141,8 @@ export default function Services() {
 
             {/* Heading */}
             <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.05] text-ink">
-              Ek jagah, <br />
-              har <span className="text-marigold font-serif">madad.</span>
+              Ek Jagah, <br />
+              Har <span className="text-marigold font-serif">Madad.</span>
             </h2>
 
             {/* Description */}

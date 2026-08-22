@@ -98,7 +98,7 @@ export default function Hero({
       <div className="noise-overlay pointer-events-none absolute inset-0" />
 
       <Spotlight>
-        <div className="relative mx-auto grid max-w-[1240px] items-center gap-10 px-5 pt-20 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:pt-24 lg:pb-24">
+        <div className="relative mx-auto grid max-w-[1240px] items-center gap-10 px-5 pt-[max(5.5rem,calc(env(safe-area-inset-top)+3.5rem))] pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:pt-28 lg:pb-24">
           {/* Copy column */}
           <motion.div
             className="min-w-0"

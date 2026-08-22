@@ -115,31 +115,59 @@ export default function BlogArticlePage({
               </div>
             ) : null}
 
-            <div className="mt-14 flex flex-col gap-3 rounded-[24px] border border-border/70 bg-white p-6 shadow-card sm:flex-row sm:items-center sm:justify-between sm:p-8">
-              <div>
-                <p className="font-display text-2xl font-semibold text-ink">
-                  Ready for the next step?
-                </p>
-                <p className="mt-1 text-sm text-slate">
-                  We will map this guide to your unit on a free WhatsApp call.
-                </p>
+            <div className="mt-14 rounded-[24px] border border-border/70 bg-white p-6 shadow-card sm:p-8">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="font-display text-2xl font-semibold text-ink">
+                    Ready for the next step?
+                  </p>
+                  <p className="mt-1 text-sm text-slate">
+                    We will map this guide to your unit on a free WhatsApp call.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-shine inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] bg-success px-6 py-3 text-sm font-bold text-white"
+                  >
+                    <MessageCircle size={16} strokeWidth={2.4} aria-hidden />
+                    WhatsApp the desk
+                  </a>
+                  <Link
+                    href={post.relatedHref}
+                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] border-2 border-ink/80 bg-white px-6 py-3 text-sm font-bold text-ink hover:bg-ink hover:text-white"
+                  >
+                    {post.relatedLabel}
+                    <ArrowUpRight size={15} strokeWidth={2.4} aria-hidden />
+                  </Link>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-shine inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] bg-success px-6 py-3 text-sm font-bold text-white"
-                >
-                  <MessageCircle size={16} strokeWidth={2.4} aria-hidden />
-                  WhatsApp the desk
-                </a>
+              <div className="mt-5 flex flex-wrap gap-2 border-t border-border/60 pt-5">
                 <Link
-                  href={post.relatedHref}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] border-2 border-ink/80 bg-white px-6 py-3 text-sm font-bold text-ink hover:bg-ink hover:text-white"
+                  href="/about"
+                  className="inline-flex min-h-10 items-center rounded-full border border-border bg-[#f7f3ea] px-4 text-sm font-bold text-ink hover:border-ink/40"
                 >
-                  {post.relatedLabel}
-                  <ArrowUpRight size={15} strokeWidth={2.4} aria-hidden />
+                  About Us
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex min-h-10 items-center rounded-full border border-border bg-[#f7f3ea] px-4 text-sm font-bold text-ink hover:border-ink/40"
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="/service"
+                  className="inline-flex min-h-10 items-center rounded-full border border-border bg-[#f7f3ea] px-4 text-sm font-bold text-ink hover:border-ink/40"
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/scheme"
+                  className="inline-flex min-h-10 items-center rounded-full border border-border bg-[#f7f3ea] px-4 text-sm font-bold text-ink hover:border-ink/40"
+                >
+                  Schemes
                 </Link>
               </div>
             </div>

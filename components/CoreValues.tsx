@@ -113,7 +113,7 @@ export default function CoreValues() {
                 >
                   <motion.span
                     variants={popIn}
-                    className="pointer-events-none absolute -right-3 -top-3 font-display text-6xl font-black text-ink/[0.04]"
+                    className="pointer-events-none absolute right-3 top-9 font-display text-6xl font-black text-ink/[0.14] sm:top-11"
                   >
                     {String(idx + 1).padStart(2, "0")}
                   </motion.span>

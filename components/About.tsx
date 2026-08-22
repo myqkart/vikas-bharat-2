@@ -87,7 +87,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative overflow-hidden bg-paper px-6 py-24 sm:px-8 lg:py-32"
+      className="relative scroll-mt-8 overflow-hidden bg-paper px-6 py-24 sm:px-8 lg:py-32"
     >
       {/* Background Soft Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(245,166,35,0.06),transparent_55%)] pointer-events-none -z-30" />

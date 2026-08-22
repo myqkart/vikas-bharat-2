@@ -52,9 +52,9 @@ export default function CareerRoleCard({
         {job.summary}
       </p>
       <ul className="mt-5 flex flex-wrap gap-2">
-        <li className="inline-flex items-center gap-1.5 rounded-full border border-border bg-[#f7f3ea] px-3 py-1.5 text-xs font-semibold text-ink">
+        <li className="inline-flex items-center gap-1.5 rounded-full border border-border bg-[#f7f3ea] px-3 py-1.5 text-xs font-semibold text-ink [text-decoration:none] [&_a]:text-inherit [&_a]:no-underline">
           <MapPin size={13} aria-hidden />
-          {careersOffice.shortLabel}
+          <span className="no-address-detect">{careersOffice.shortLabel}</span>
         </li>
         <li className="inline-flex items-center gap-1.5 rounded-full border border-border bg-[#f7f3ea] px-3 py-1.5 text-xs font-semibold text-ink">
           <BriefcaseBusiness size={13} aria-hidden />

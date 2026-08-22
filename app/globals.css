@@ -70,6 +70,17 @@ body {
   outline-offset: 2px;
 }
 
+/* iOS data-detectors otherwise underline addresses like “Sector 63, Noida”. */
+a[x-apple-data-detectors],
+.x-apple-data-detectors,
+.no-address-detect,
+.no-address-detect a {
+  color: inherit !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border-bottom: 0 !important;
+}
+
 a[href],
 button:not(:disabled),
 [role="button"]:not([aria-disabled="true"]),

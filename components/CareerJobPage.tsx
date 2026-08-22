@@ -51,7 +51,7 @@ export default function CareerJobPage({ job }: { job: CareerRole }) {
   return (
     <>
       <article>
-        <section className="relative isolate overflow-hidden border-b border-border bg-paper px-5 py-12 sm:px-8 sm:py-16 lg:py-24">
+        <section className="relative isolate overflow-hidden border-b border-border bg-paper px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-24">
           <Image
             src={careersPage.image}
             alt=""
@@ -72,9 +72,9 @@ export default function CareerJobPage({ job }: { job: CareerRole }) {
               {job.summary}
             </p>
             <ul className="mt-6 flex flex-wrap gap-2">
-              <li className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-xs font-semibold text-ink">
+              <li className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-xs font-semibold text-ink [text-decoration:none] [&_a]:text-inherit [&_a]:no-underline">
                 <MapPin size={13} aria-hidden />
-                {careersOffice.shortLabel}
+                <span className="no-address-detect">{careersOffice.shortLabel}</span>
               </li>
               <li className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white/80 px-3 py-1.5 text-xs font-semibold text-ink">
                 <BriefcaseBusiness size={13} aria-hidden />

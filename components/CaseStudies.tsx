@@ -151,9 +151,9 @@ export default function CaseStudies() {
               <h2 className="font-display text-4xl lg:text-[48px] font-bold leading-[1.12] text-ink font-serif">
                 Challenge <span className="inline-block">→</span>
                 <br />
-                solution <span className="inline-block">→</span>{" "}
+                Solution <span className="inline-block">→</span>{" "}
                 <span className="relative inline-block text-[#FF7A00]">
-                  paisa.
+                  Paisa.
                   {/* Underline Swoosh SVG */}
                   <svg
                     className="absolute -bottom-3.5 left-0 w-[108%] h-3.5 text-[#FF7A00]"

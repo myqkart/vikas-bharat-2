@@ -48,7 +48,7 @@ export default function TextReveal({
       {words.map((word, i) => (
         <span
           key={`${word}-${i}`}
-          className="inline-block overflow-hidden align-top"
+          className="inline-block overflow-hidden py-[0.14em] align-top"
         >
           <motion.span
             className="inline-block will-change-transform"

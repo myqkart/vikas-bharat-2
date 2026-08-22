@@ -452,7 +452,7 @@ const features = [
 
 export default function TrustStrip() {
   return (
-    <section id="trust-scale" className="relative px-4 py-20 sm:py-24 bg-[#FEFCF7] overflow-hidden">
+    <section id="trust-scale" className="relative scroll-mt-8 overflow-hidden bg-[#FEFCF7] px-4 py-24 sm:py-28">
       {/* Backdrop Radial Gradients */}
       <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-orange-100/25 to-transparent blur-3xl pointer-events-none" />
       <div className="absolute bottom-[-15%] left-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-indigo-50/20 to-transparent blur-3xl pointer-events-none" />

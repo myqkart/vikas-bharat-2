@@ -201,7 +201,7 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <section id="how-it-works" className={`px-5 py-16 lg:px-8 lg:py-24 overflow-hidden relative ${caveat.variable}`}>
+    <section id="how-it-works" className={`relative scroll-mt-8 overflow-hidden px-5 py-20 lg:px-8 lg:py-24 ${caveat.variable}`}>
       {/* Background Subtle Gradient Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,166,35,0.04),transparent_60%)] pointer-events-none" />
 

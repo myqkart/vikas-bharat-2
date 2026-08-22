@@ -102,9 +102,9 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
   },
   formatDetection: {
-    telephone: true,
-    email: true,
-    address: true,
+    telephone: false,
+    email: false,
+    address: false,
   },
 };
 
