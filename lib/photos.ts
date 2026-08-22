@@ -3,6 +3,7 @@ const u = (id: string, w = 1400) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 export const photos = {
+  heroBackground: "/hero/vikas-bharat-growth.png",
   heroShopkeeper: u("photo-1556742049-0cfed4f6a45d", 1600), // retail / shop
   heroMeeting: u("photo-1556761175-b413da4baf72", 1200), // consulting meeting
   badgeMsme: u("photo-1450101499163-c8848c66ca85", 400), // documents

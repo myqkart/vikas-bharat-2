@@ -3,13 +3,9 @@
 import Image from "next/image";
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
 import {
-  Award,
-  Building2,
   MessageCircle,
   Phone,
-  ShieldCheck,
   Sparkles,
-  TrendingUp,
 } from "lucide-react";
 import { useRef } from "react";
 import { hero as homeHero, site } from "@/lib/content";
@@ -43,7 +39,7 @@ function Spotlight({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
       ref={ref}
-      className="relative"
+      className="relative flex min-h-[min(100svh,980px)] items-center"
       style={{ background: bg }}
       onMouseMove={(e) => {
         const r = ref.current?.getBoundingClientRect();
@@ -80,37 +76,36 @@ export default function Hero({
   }
 
   return (
-    <section className="relative min-h-[min(100vh,980px)] overflow-hidden">
-      {/* Full-bleed photo layer */}
+    <section className="relative min-h-[min(100svh,980px)] overflow-hidden">
+      {/* Full-bleed background */}
       <div className="absolute inset-0">
         <Image
-          src={photos.heroGlow}
+          src={photos.heroBackground}
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-40"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-paper via-paper/90 to-indigo/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(245,166,35,0.25),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-paper/95 via-paper/75 to-paper/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.6),transparent_55%)]" />
       </div>
       <FloatingOrbs />
       <div className="noise-overlay pointer-events-none absolute inset-0" />
 
       <Spotlight>
-        <div className="relative mx-auto grid max-w-[1240px] items-center gap-10 px-5 pt-[max(5.5rem,calc(env(safe-area-inset-top)+3.5rem))] pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-8 lg:pt-28 lg:pb-24">
-          {/* Copy column */}
+        <div className="relative mx-auto w-full max-w-[1240px] px-5 py-[max(5.5rem,calc(env(safe-area-inset-top)+3.5rem))] lg:px-8 lg:py-28">
           <motion.div
-            className="min-w-0"
+            className="min-w-0 max-w-2xl lg:max-w-3xl"
             initial={animate ? "hidden" : false}
             animate={animate ? "visible" : undefined}
             variants={staggerContainer}
           >
             <motion.div
               variants={fadeUp}
-              className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-white/70 px-3 py-1.5 text-[12px] font-bold text-ink shadow-card backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-white/70 px-4 py-2 text-[13px] font-bold text-ink shadow-card backdrop-blur-md"
             >
-              <Sparkles size={14} className="text-marigold" aria-hidden />
+              <Sparkles size={15} className="text-marigold" aria-hidden />
               {eyebrow}
             </motion.div>
 
@@ -118,19 +113,19 @@ export default function Hero({
               as="h1"
               text={headline}
               onMount
-              className="mt-5 font-display text-[40px] font-semibold leading-[1.08] text-ink sm:text-5xl lg:text-[64px]"
+              className="mt-7 font-display text-[44px] font-semibold leading-[1.06] text-ink sm:text-5xl lg:mt-8 lg:text-[72px]"
             />
 
             <motion.p
               variants={fadeUp}
-              className="mt-5 max-w-xl text-lg leading-relaxed text-charcoal/90 lg:text-xl"
+              className="mt-6 max-w-xl text-lg leading-relaxed text-charcoal/90 sm:mt-7 sm:text-xl lg:mt-8 lg:max-w-2xl lg:text-2xl lg:leading-relaxed"
             >
               {subhead}
             </motion.p>
 
             <motion.div
               variants={fadeUp}
-              className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
+              className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:mt-12"
             >
               <motion.a
                 href={whatsappHref}
@@ -138,130 +133,39 @@ export default function Hero({
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.04, y: -3 }}
                 whileTap={{ scale: 0.97 }}
-                className="btn-shine inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] bg-success px-7 py-4 text-base font-bold text-white shadow-raised"
+                className="btn-shine inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-[14px] bg-success px-8 py-4 text-base font-bold text-white shadow-raised lg:min-h-14 lg:px-9 lg:text-lg"
               >
-                <MessageCircle size={20} strokeWidth={2.25} aria-hidden />
+                <MessageCircle size={22} strokeWidth={2.25} aria-hidden />
                 {homeHero.primaryCta}
               </motion.a>
               <motion.a
                 href={phoneHref}
                 whileHover={{ scale: 1.04, y: -3 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[14px] border-2 border-ink/90 bg-white/80 px-7 py-4 text-base font-bold text-ink backdrop-blur-md transition-colors hover:bg-ink hover:text-white"
+                className="inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-[14px] border-2 border-ink/90 bg-white/80 px-8 py-4 text-base font-bold text-ink backdrop-blur-md transition-colors hover:bg-ink hover:text-white lg:min-h-14 lg:px-9 lg:text-lg"
               >
-                <Phone size={20} strokeWidth={2.25} aria-hidden />
+                <Phone size={22} strokeWidth={2.25} aria-hidden />
                 {homeHero.secondaryCta}
               </motion.a>
             </motion.div>
 
             <motion.p
               variants={fadeUp}
-              className="mt-4 text-[13px] font-semibold text-slate"
+              className="mt-6 text-sm font-semibold text-slate lg:mt-8 lg:text-[15px]"
             >
               {homeHero.microcopy.join(" · ")}
             </motion.p>
 
-          </motion.div>
-
-          {/* Visual composition */}
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-            <motion.div
-              className="relative aspect-[4/5] overflow-hidden rounded-[28px] shadow-[0_30px_80px_-20px_rgba(18,41,77,0.45)] lg:aspect-[5/6]"
-              initial={{ opacity: 0, scale: 0.92, filter: "blur(12px)" }}
-              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <motion.div
-                className="absolute inset-0"
-                animate={{ scale: [1.08, 1] }}
-                transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 560px"
-                  className="object-cover"
-                />
-              </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-marigold/10" />
-              <motion.div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent"
-                animate={{ x: ["-120%", "120%"] }}
-                transition={{ duration: 3.5, repeat: Infinity, repeatDelay: 4, ease: "easeInOut" }}
-              />
-            </motion.div>
-
-            {/* Floating metric card */}
-            <motion.div
-              className="absolute -left-2 top-8 z-20 w-[min(100%,220px)] rounded-[16px] border border-white/50 bg-white/85 p-4 shadow-raised backdrop-blur-xl sm:-left-6"
-              initial={{ opacity: 0, x: -30, y: 20 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.8 }}
-              whileHover={{ y: -6, rotate: -1 }}
-            >
-              <div className="flex items-center gap-2 text-success">
-                <TrendingUp size={18} aria-hidden />
-                <span className="text-xs font-bold uppercase tracking-wide">
-                  Money delivered
-                </span>
-              </div>
-              <p className="mt-1 font-display text-3xl font-bold text-ink">₹100Cr+</p>
-              <p className="text-xs font-semibold text-slate">Across loans & subsidies</p>
-            </motion.div>
-
-            {/* Floating proof */}
             {floatingProof ? (
-              <motion.div
-                className="absolute right-2 bottom-28 z-20 rounded-[16px] border border-white/50 bg-ink/90 px-4 py-3 text-paper shadow-raised backdrop-blur-md sm:right-0"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.75, duration: 0.7 }}
-                whileHover={{ y: -4, scale: 1.03 }}
+              <motion.p
+                variants={fadeUp}
+                className="mt-8 inline-flex rounded-full border border-border/80 bg-white/70 px-5 py-2.5 text-sm font-semibold text-ink shadow-card backdrop-blur-md lg:mt-10 lg:text-base"
               >
-                <p className="font-display text-sm font-semibold sm:text-base">
-                  {floatingProof}
-                </p>
-              </motion.div>
+                {floatingProof}
+              </motion.p>
             ) : null}
 
-            {/* Service preview cards */}
-            <motion.div
-              className="absolute -bottom-4 left-4 right-4 z-20 grid grid-cols-2 gap-2 sm:left-auto sm:right-0 sm:w-64"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.7 }}
-            >
-              {[
-                { icon: Building2, label: "Registration", sub: "Company · GST · Udyam" },
-                { icon: Sparkles, label: "Growth", sub: "Funding · Scale · Advisory" },
-              ].map((card, i) => (
-                <motion.div
-                  key={card.label}
-                  className="rounded-[14px] border border-white/60 bg-white/90 p-3 shadow-card backdrop-blur-xl"
-                  animate={{ y: [0, i === 0 ? -6 : 6, 0] }}
-                  transition={{ duration: 4 + i, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <card.icon size={18} className="text-marigold" aria-hidden />
-                  <p className="mt-1 text-sm font-bold text-ink">{card.label}</p>
-                  <p className="text-[11px] font-semibold text-slate">{card.sub}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            {/* Award chip */}
-            <motion.div
-              className="absolute top-4 right-4 z-20 flex items-center gap-2 rounded-full bg-marigold px-3 py-1.5 text-ink shadow-raised"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1, type: "spring", stiffness: 200 }}
-            >
-              <Award size={14} aria-hidden />
-              <span className="text-[11px] font-bold">ISO · MSME desk</span>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </Spotlight>
 
