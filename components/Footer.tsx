@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import { gmailComposeHref, navigation, site } from "@/lib/content";
+import { disclaimer, legalPaths } from "@/lib/legal";
 
 const whatsappHref = `https://wa.me/${site.whatsappNumber}`;
 const phoneHref = `tel:${site.phoneNumber}`;
@@ -224,11 +225,36 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border/70 pt-6 text-xs font-semibold text-slate sm:flex-row sm:items-center">
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-border/70 pt-6 text-xs font-semibold text-slate sm:flex-row sm:items-center">
           <p>
             © {year} {site.companyName}. All rights reserved.
           </p>
-          <p>Private consultancy · Payments via official company account only</p>
+          <nav aria-label="Legal" className="flex flex-wrap gap-x-4 gap-y-2">
+            {legalPaths.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="transition-colors hover:text-indigo"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-6 max-w-[1200px] px-1 pb-2 sm:px-2">
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink">
+          {disclaimer.heading}
+        </p>
+        <div className="mt-3 space-y-3 text-[13px] leading-relaxed text-slate">
+          {disclaimer.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          <p>
+            <span className="font-bold text-ink">{disclaimer.paymentHeading}: </span>
+            {disclaimer.payment}
+          </p>
         </div>
       </div>
     </footer>

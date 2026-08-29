@@ -34,7 +34,7 @@ export const site = {
     { label: "FSSAI licence path", href: "/services/certificate" },
   ] as const,
   disclaimer:
-    "We are a private consultancy and are not affiliated with any Government department or agency. All payments must be made only to our official company account.",
+    "Vikas Bharat Advisory PRIVATE LIMITED is a private company that provides startup consulting services in India. We are not connected or associated with any Government or Non-Government Department, Office, Agency, or Organization. All payments must be made only to Vikas Bharat ADVISORY PRIVATE LIMITED.",
 } as const;
 
 export function gmailComposeHref(email: string) {

@@ -51,6 +51,9 @@ export const STATIC_INDEXABLE_PATHS = [
   "/blogs",
   "/contact",
   "/careers",
+  "/privacy-policy",
+  "/refund-policy",
+  "/terms-and-conditions",
 ] as const;
 
 export type BreadcrumbItem = {
