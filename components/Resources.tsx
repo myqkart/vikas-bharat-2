@@ -49,7 +49,7 @@ const bentoBlogs: BentoBlogItem[] = [
     category: "Loans",
     readTime: "6 min read",
     date: "May 20, 2024",
-    image: "/bento/bento-stairs.png",
+    image: "/bento/bento-1.png",
     slug: "loan-options-every-msme-should-know",
     featured: true,
     background: "bg-gradient-to-br from-indigo-950 via-[#3b1c6e] to-[#250d40]",
@@ -82,7 +82,7 @@ const bentoBlogs: BentoBlogItem[] = [
     category: "GST & Tax",
     readTime: "4 min read",
     date: "May 18, 2024",
-    image: "/bento/bento-plant.png",
+    image: "/bento/bento-2.png",
     slug: "gst-compliance-made-simple",
     featured: false,
     background: "bg-[#e3f6ed]", // Mint
@@ -113,7 +113,7 @@ const bentoBlogs: BentoBlogItem[] = [
     category: "Business Setup",
     readTime: "5 min read",
     date: "May 15, 2024",
-    image: "/bento/bento-lamp.png",
+    image: "/bento/bento-3.png",
     slug: "choosing-the-right-business-structure",
     featured: false,
     background: "bg-[#fdf5e2]", // Yellow
@@ -143,7 +143,7 @@ const bentoBlogs: BentoBlogItem[] = [
     category: "MSME Schemes",
     readTime: "5 min read",
     date: "May 13, 2024",
-    image: "/bento/bento-charts.png",
+    image: "/bento/bento-4.png",
     slug: "govt-schemes-for-your-growth",
     featured: false,
     background: "bg-[#eaf4fc]", // Blue
@@ -174,7 +174,7 @@ const bentoBlogs: BentoBlogItem[] = [
     category: "Management",
     readTime: "5 min read",
     date: "May 11, 2024",
-    image: "/bento/bento-chair.png",
+    image: "/bento/bento-5.png",
     slug: "smart-financial-habits-for-msmes",
     featured: false,
     background: "bg-[#f3effa]", // Lavender
