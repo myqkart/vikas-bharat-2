@@ -274,7 +274,7 @@ export default function About() {
               className="absolute top-0 right-[4%] w-[62%] h-[78%] rounded-[28px] overflow-hidden shadow-raised z-10 bg-paper-deep"
             >
               <Image
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80"
+                src="/about/about-top.jpg"
                 alt="Indian business owner crossing arms in front of his shop"
                 fill
                 sizes="(max-width: 768px) 60vw, 400px"
@@ -290,7 +290,7 @@ export default function About() {
               className="absolute bottom-2 left-[4%] w-[54%] h-[48%] rounded-[20px] overflow-hidden shadow-[0_20px_40px_-10px_rgba(18,41,77,0.18)] z-20 bg-paper-deep"
             >
               <Image
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                src="/about/about-bottom.png"
                 alt="Friendly consultation meeting with laptops on table"
                 fill
                 sizes="(max-width: 768px) 50vw, 320px"
