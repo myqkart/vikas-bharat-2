@@ -14,9 +14,9 @@ export const photos = {
   aboutOffice: u("photo-1497366216548-37526070297c", 1200),
   aboutMission: u("photo-1460925895917-afdab827c52f", 1000),
   /** About hero — documentary opening scene (distinct from Mission collage) */
-  aboutHeroPortrait: u("photo-1556761175-5973dc0f32e7", 1400), // walk-in consult energy
-  aboutHeroMarket: u("photo-1556740738-b6a63e27c4df", 1000), // retail entrepreneur at counter
-  aboutHeroCity: u("photo-1587474260584-136574528ed5", 1000), // Indian city / place
+  aboutHeroPortrait: "/about-page/hero-1.jpg", // walk-in consult energy
+  aboutHeroMarket: "/about-page/hero-2.jpg", // retail entrepreneur at counter
+  aboutHeroCity: "/about-page/hero-3.jpg", // Indian city / place
   aboutHeroDocs: u("photo-1450101499163-c8848c66ca85", 800), // filings / paperwork
   aboutHeroLeader: u("photo-1573497019940-1c28c88b4f3e", 900), // leadership presence
   /** About Mission — path story (distinct from Hero collage) */
