@@ -27,22 +27,7 @@ export default function FloatingOrbs({ className }: { className?: string }) {
       aria-hidden
       className={`pointer-events-none absolute inset-0 overflow-hidden ${className ?? ""}`}
     >
-      {orbs.map((orb, i) => (
-        <motion.div
-          key={i}
-          className={`absolute rounded-full blur-3xl ${orb.className}`}
-          animate={{
-            y: [0, -28, 12, 0],
-            x: [0, 18, -12, 0],
-            scale: [1, 1.08, 0.96, 1],
-          }}
-          transition={{
-            duration: orb.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
+
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(245,166,35,0.12),transparent_55%)]" />
       <div className="mesh-gradient absolute inset-0 opacity-60" />
     </div>
