@@ -362,7 +362,7 @@ function BlogCard({
     <motion.div variants={cardFadeUp} className={`${colSpan} ${heightClass}`}>
       <Link
         href={`/blogs/${slug}`}
-        className={`group relative block h-full overflow-hidden rounded-[28px] md:rounded-[32px] p-5 md:p-6 shadow-card transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-raised ${background}`}
+        className={`group relative flex flex-col justify-end h-full overflow-hidden rounded-[28px] md:rounded-[32px] p-5 md:p-6 shadow-card transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-raised ${background}`}
         style={{ translate: "0px", rotate: "0deg", scale: 1 }} // Prevent stacking context shift
       >
         {/* Subtle white highlight overlay to brighten bg on hover */}
@@ -371,33 +371,33 @@ function BlogCard({
         {/* Custom SVG Decoration */}
         {svgDecoration}
 
-        {/* Card Background Image (Illustration) */}
-        <div className="absolute inset-0 w-full h-full">
+        {/* Card Background Image (Illustration) placed in top right */}
+        <div className="absolute -top-4 -right-4 w-[85%] h-[70%] sm:w-[80%] sm:h-[75%] pointer-events-none transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-translate-y-2 group-hover:translate-x-2">
           <Image
             src={image}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover object-right-bottom transition-all duration-700 ease-out group-hover:scale-105 opacity-65 group-hover:opacity-85"
+            className="object-contain object-right-top drop-shadow-2xl opacity-90 group-hover:opacity-100 p-4"
           />
         </div>
 
-        {/* Text Details */}
-        <div className="relative z-20 flex flex-col justify-between h-full w-full pointer-events-none">
+        {/* Text Details at the Bottom */}
+        <div className="relative z-20 flex flex-col pointer-events-none mt-auto pt-24">
           <div className="pointer-events-auto">
             <div className="mb-3">
               <CategoryBadge category={category} badgeBg={badgeBg} />
             </div>
-            <h3 className={`text-lg md:text-xl font-semibold leading-tight text-ink max-w-[65%] md:max-w-[70%] ${textColors.title}`}>
+            <h3 className={`text-lg md:text-xl font-semibold leading-tight text-ink ${textColors.title}`}>
               {title}
             </h3>
           </div>
 
-          <div className={`mt-6 pointer-events-auto ${isArrowLeft ? "flex flex-col gap-4" : "flex items-end justify-between"}`}>
+          <div className="mt-4 pointer-events-auto flex items-center justify-between">
             <span className={`text-xs md:text-sm font-medium ${textColors.meta}`}>
               {readTime} &bull; {date}
             </span>
-            <div className={isArrowLeft ? "self-start" : "self-end"}>
+            <div>
               <ReadMoreButton className={textColors.arrow} />
             </div>
           </div>
