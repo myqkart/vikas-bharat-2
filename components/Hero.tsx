@@ -85,7 +85,7 @@ export default function Hero({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[95%_center] lg:object-[100%_center]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-paper/95 via-paper/75 to-paper/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.6),transparent_55%)]" />
