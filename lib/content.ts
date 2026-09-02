@@ -5,9 +5,9 @@ export const site = {
   tagline: "Sapno Se Safalta Tak",
   logo: "/brand/vikas-bharat-logo.png",
   logoMark: "/brand/vikas-bharat-mark.png",
-  whatsappNumber: "919217404500",
-  phoneNumber: "+919217404500",
-  phoneDisplay: "+91 92174 04500",
+  whatsappNumber: "919217404580",
+  phoneNumber: "+919217404580",
+  phoneDisplay: "+91 92174 04580",
   email: "contact@vikas-bharat.com",
   emails: [
     { label: "Support", address: "support@vikas-bharat.com" },
@@ -24,7 +24,7 @@ export const site = {
     },
   ] as const,
   social: [
-    { label: "WhatsApp", href: "https://wa.me/919217404500" },
+    { label: "WhatsApp", href: "https://wa.me/919217404580" },
     { label: "Instagram", href: "https://www.instagram.com/vikasbharatservice/" },
     { label: "Facebook", href: "https://www.facebook.com/vikasbharatconsulting" },
   ] as const,
