@@ -383,6 +383,7 @@ export default function SplashGate({ children }: { children: React.ReactNode }) 
     if (shouldSkipSplash(window.navigator.userAgent, reduce)) {
       splashDoneThisRuntime = true;
       setShowSplash(false);
+      window.dispatchEvent(new CustomEvent("vb:splash-complete"));
       return;
     }
     if (splashDoneThisRuntime) {
@@ -402,6 +403,7 @@ export default function SplashGate({ children }: { children: React.ReactNode }) 
   const handleComplete = useCallback(() => {
     splashDoneThisRuntime = true;
     setShowSplash(false);
+    window.dispatchEvent(new CustomEvent("vb:splash-complete"));
   }, []);
 
   return (

@@ -638,7 +638,7 @@ export default function MissionTrees() {
               ref={stageRef}
               onPointerMove={onPointerMove}
               onPointerLeave={onPointerLeave}
-              className="relative mt-5 flex min-h-0 flex-1 flex-col items-center justify-start gap-5 lg:mt-0 lg:grid lg:grid-cols-[240px_minmax(0,1fr)_260px] lg:items-center lg:justify-center lg:gap-8 w-full"
+              className="relative mt-5 flex min-h-0 flex-1 flex-col items-center justify-start gap-5 pb-6 lg:mt-0 lg:grid lg:grid-cols-[240px_minmax(0,1fr)_260px] lg:items-center lg:justify-center lg:gap-8 lg:pb-8 w-full"
             >
               {/* Left Column - 5-6 points list */}
               <aside className="relative z-10 w-full max-w-xs shrink-0 hidden lg:flex lg:flex-col gap-3">

@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import PageEntrance from "@/components/motion/PageEntrance";
 import ScrollProgress from "@/components/motion/ScrollProgress";
 import ScrollReset from "@/components/ScrollReset";
+import MarketingLeadModal from "@/components/MarketingLeadModal";
 import SplashGate from "@/components/SplashScreen";
 
 export default function SiteChrome({
@@ -31,6 +32,7 @@ export default function SiteChrome({
         <Footer />
       </PageEntrance>
       <WhatsAppFloat />
+      <MarketingLeadModal />
       <ScrollToTop />
     </SplashGate>
   );
