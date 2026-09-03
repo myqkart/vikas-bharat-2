@@ -41,7 +41,7 @@ export default function AboutPage() {
         data={jsonLdGraph([
           webPageJsonLd({
             path: "/about",
-            title: `${title} | VIKASBHART`,
+            title: `${title} | VIKASBHARAT`,
             description,
             type: "AboutPage",
           }),

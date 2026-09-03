@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   category: "business",
   keywords: [
     "Vikas Bharat",
-    "VIKASBHART",
+    "VIKASBHARAT",
     "MSME consulting",
     "startup India",
     "business registration",

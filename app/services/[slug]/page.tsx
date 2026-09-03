@@ -76,7 +76,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           data={jsonLdGraph([
             webPageJsonLd({
               path: servicePath(slug),
-              title: `${title} | VIKASBHART`,
+              title: `${title} | VIKASBHARAT`,
               description,
             }),
             breadcrumbJsonLd(breadcrumbs),
@@ -117,7 +117,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         data={jsonLdGraph([
           webPageJsonLd({
             path: servicePath(slug),
-            title: `${title} | VIKASBHART`,
+            title: `${title} | VIKASBHARAT`,
             description,
           }),
           breadcrumbJsonLd(breadcrumbs),

@@ -43,7 +43,7 @@ export default function SchemePage() {
         data={jsonLdGraph([
           webPageJsonLd({
             path: "/scheme",
-            title: `${title} | VIKASBHART`,
+            title: `${title} | VIKASBHARAT`,
             description,
             type: "CollectionPage",
           }),

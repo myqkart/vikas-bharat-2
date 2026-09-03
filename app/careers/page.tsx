@@ -52,7 +52,7 @@ export default function CareersPage() {
         data={jsonLdGraph([
           webPageJsonLd({
             path: "/careers",
-            title: `${title} | VIKASBHART`,
+            title: `${title} | VIKASBHARAT`,
             description,
             type: "CollectionPage",
           }),

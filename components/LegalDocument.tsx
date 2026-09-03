@@ -75,7 +75,7 @@ export default function LegalDocument({
         data={jsonLdGraph([
           webPageJsonLd({
             path: document.path,
-            title: `${document.title} | VIKASBHART`,
+            title: `${document.title} | VIKASBHARAT`,
             description: document.description,
           }),
           breadcrumbJsonLd(breadcrumbs),

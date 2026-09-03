@@ -93,7 +93,7 @@ export default function ContactPage() {
         data={jsonLdGraph([
           webPageJsonLd({
             path: "/contact",
-            title: `${title} | VIKASBHART`,
+            title: `${title} | VIKASBHARAT`,
             description,
             type: "ContactPage",
           }),

@@ -67,7 +67,7 @@ export default async function CareerRolePage({ params }: PageProps) {
         data={jsonLdGraph([
           webPageJsonLd({
             path: careerPath(slug),
-            title: `${job.seoTitle} | VIKASBHART`,
+            title: `${job.seoTitle} | VIKASBHARAT`,
             description: job.seoDescription,
           }),
           breadcrumbJsonLd(breadcrumbs),

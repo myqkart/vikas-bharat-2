@@ -43,7 +43,7 @@ export default function ServicePage() {
         data={jsonLdGraph([
           webPageJsonLd({
             path: "/service",
-            title: `${title} | VIKASBHART`,
+            title: `${title} | VIKASBHARAT`,
             description,
             type: "CollectionPage",
           }),

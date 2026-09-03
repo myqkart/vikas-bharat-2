@@ -1,7 +1,7 @@
 import { photos } from "./photos";
 
 export const site = {
-  companyName: "VIKASBHART",
+  companyName: "VIKASBHARAT",
   tagline: "Sapno Se Safalta Tak",
   logo: "/brand/vikas-bharat-logo.png",
   logoMark: "/brand/vikas-bharat-mark.png",
@@ -123,7 +123,7 @@ export const servicesMegaMenu = {
 
 export const servicePage = {
   eyebrow: "Services",
-  brand: "VIKASBHART",
+  brand: "VIKASBHARAT",
   heading: "Our Services",
   intro:
     "We are a business consulting and growth advisory firm dedicated to empowering MSMEs and startups in India. We provide end-to-end support across compliance, strategy, finance, legal, and growth—helping businesses build strong foundations, stay compliant, and scale sustainably.",
@@ -8687,7 +8687,7 @@ export const startupIndiaEligibilityFaq = {
 } as const;
 
 export const hero = {
-  eyebrow: "VIKASBHART",
+  eyebrow: "VIKASBHARAT",
   headline: "Sapno Se Safalta Tak",
   subhead:
     "We help Indian startups and MSMEs grow, succeed, and contribute to an Atmanirbhar Bharat.",
@@ -8883,8 +8883,8 @@ export const missionTrees = {
   id: "vision",
   eyebrow: "The Ink Compass",
   heading: "Spin the Seal. Lock a Mandate.",
-  sub: "Four living mandates orbit the VIKASBHART seal. When a ring locks at the meridian, support blooms outward from the center.",
-  hubLabel: "VIKASBHART",
+  sub: "Four living mandates orbit the VIKASBHARAT seal. When a ring locks at the meridian, support blooms outward from the center.",
+  hubLabel: "VIKASBHARAT",
   hubTagline: "Sapno Se Safalta Tak",
   trees: [
     {

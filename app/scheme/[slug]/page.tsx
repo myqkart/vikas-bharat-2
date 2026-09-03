@@ -70,7 +70,7 @@ export default async function SchemeDetailPage({ params }: PageProps) {
         data={jsonLdGraph([
           webPageJsonLd({
             path: schemePath(slug),
-            title: `${title} | VIKASBHART`,
+            title: `${title} | VIKASBHARAT`,
             description,
           }),
           breadcrumbJsonLd(breadcrumbs),

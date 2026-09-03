@@ -29,7 +29,7 @@ export const DEFAULT_LOCALE = "en_IN";
 export const DEFAULT_LANGUAGE = "en-IN";
 
 export const DEFAULT_TITLE =
-  "VIKASBHART | Startup & MSME Consulting — Sapno Se Safalta Tak";
+  "VIKASBHARAT | Startup & MSME Consulting — Sapno Se Safalta Tak";
 
 export const DEFAULT_DESCRIPTION =
   "Vikas Bharat helps Indian startups and MSMEs with registrations, loans, government schemes, certifications and growth advisory — Sapno Se Safalta Tak.";
@@ -70,7 +70,7 @@ export type RelatedLink = {
 
 const TITLE_SUFFIXES = [
   ` | ${SITE_NAME}`,
-  " | VIKASBHART",
+  " | VIKASBHARAT",
   " | Vikas Bharat",
 ] as const;
 
@@ -402,7 +402,7 @@ export function organizationJsonLd() {
     "@type": "ProfessionalService",
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
-    alternateName: ["Vikas Bharat", "VikasBhart"],
+    alternateName: ["Vikas Bharat", "VikasBharat"],
     legalName: SITE_NAME,
     url: SITE_URL,
     logo: {
