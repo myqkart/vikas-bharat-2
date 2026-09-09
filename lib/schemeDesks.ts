@@ -772,7 +772,7 @@ const desks: Record<string, ServiceDesk> = {
     faq: udyogFundingFaq,
   },
   "vc-fund-st": {
-    title: `VC Fund for ST | ${site.companyName}`,
+    title: `VC Fund For ST | ${site.companyName}`,
     description: "Institutional capital and incubation support for eligible Scheduled Tribe entrepreneurs.",
     hero: { data: vcFundStPage, images: { primary: photos.schemeStandup, secondary: photos.schemePitch, circle: photos.schemeStartup, secondaryAlt: "VC Fund for ST investment pitch", circleAlt: "ST entrepreneur startup team" }, whatsappText: "Hi, I want to check eligibility for VC Fund for ST." },
     unlock: { data: vcFundStPage.unlock, image: { src: photos.schemeStandup, alt: "VC Fund for ST entrepreneur support" } },
@@ -929,7 +929,7 @@ const desks: Record<string, ServiceDesk> = {
     faq: maharashtraGovtFaq,
   },
   mudra: {
-    title: `Mudra Loans (PMMY) | ${site.companyName}`,
+    title: `MUDRA Loans (PMMY) | ${site.companyName}`,
     description: "Pradhan Mantri Mudra Yojana — collateral-free micro loans up to ₹20 lakh across Shishu, Kishore and Tarun.",
     hero: {
       data: mudraPage,
@@ -1358,7 +1358,7 @@ const desks: Record<string, ServiceDesk> = {
     faq: agriSureFundFaq,
   },
   "grant-for-ventures": {
-    title: `Grant for Ventures | ${site.companyName}`,
+    title: `Grant For Ventures | ${site.companyName}`,
     description: "Grant for Ventures — grant support of about Up to ₹30L for qualifying innovators and startups.",
     hero: {
       data: grantForVenturesPage,
@@ -1715,7 +1715,7 @@ const desks: Record<string, ServiceDesk> = {
     faq: fintechChallengeFaq,
   },
   "fund-sc-youth": {
-    title: `Fund for SC Youth 2.0 | ${site.companyName}`,
+    title: `Fund For SC Youth 2.0 | ${site.companyName}`,
     description: "Fund for SC Youth 2.0 — grant support of about Up to ₹30L for qualifying innovators and startups.",
     hero: {
       data: fundScYouthPage,
@@ -1732,7 +1732,7 @@ const desks: Record<string, ServiceDesk> = {
     faq: fundScYouthFaq,
   },
   "fund-for-up": {
-    title: `Fund for UP | ${site.companyName}`,
+    title: `Fund For UP | ${site.companyName}`,
     description: "Fund for UP — grant support of about Up to ₹7.5L for qualifying innovators and startups.",
     hero: {
       data: fundForUpPage,

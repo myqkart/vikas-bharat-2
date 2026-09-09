@@ -73,8 +73,8 @@ export default function BlogsPage() {
         featured={featured ? toListPost(featured) : undefined}
       />
       <RelatedDesks
-        heading="Visit a Desk from These Guides"
-        sub="Every topic we write about maps to a live Vikas Bharat desk — read, then talk to someone."
+        heading="Visit A Desk From These Guides"
+        sub="Every Topic We Write About Maps To A Live Vikas Bharat Desk — Read, Then Talk To Someone."
         items={[
           {
             href: "/about",

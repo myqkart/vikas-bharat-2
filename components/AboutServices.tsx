@@ -134,10 +134,10 @@ export default function AboutServices() {
         <div className="max-w-[1200px] mx-auto text-center relative z-10 flex flex-col items-center">
           <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-indigo">
             <span className="h-2 w-2 rounded-full bg-marigold animate-pulse" />
-            THE GROWTH BLUEPRINT
+            The Growth Blueprint
           </div>
           <h2 className="mt-6 font-display text-4xl sm:text-6xl font-black text-ink leading-tight max-w-4xl tracking-tight">
-            The Infrastructure of <span className="font-serif italic text-marigold-dark font-normal">Bharat's Ambition.</span>
+            The Infrastructure Of <span className="font-serif italic text-marigold-dark font-normal">Bharat&apos;s Ambition.</span>
           </h2>
           <p className="mt-6 text-slate max-w-2xl text-base lg:text-lg leading-relaxed font-medium">
             From a single registration to a central grant match, we clear the paperwork pathways so founders can build. No hidden desks, no legal jargon.

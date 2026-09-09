@@ -144,7 +144,7 @@ export default function Footer() {
           </nav>
 
           <nav className="lg:col-span-3" aria-label="Popular desks">
-            <p className={headingClass}>Popular desks</p>
+            <p className={headingClass}>Popular Desks</p>
             <ul className="mt-4 flex flex-col gap-2.5">
               {popularDesks.map((item) => (
                 <li key={item.href}>
@@ -192,7 +192,7 @@ export default function Footer() {
               </li>
             </ul>
 
-            <p className={`${headingClass} mt-8`}>Follow us</p>
+            <p className={`${headingClass} mt-8`}>Follow Us</p>
             <div className="mt-4 flex items-center gap-2.5">
               <a
                 href={whatsappHref}

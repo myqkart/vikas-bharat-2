@@ -60,7 +60,7 @@ export default function AboutRecognition() {
             <TextReveal
               as="h2"
               id="certifications-heading"
-              text="Credentials that travel with every file"
+              text="Credentials That Travel With Every File"
               className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
             />
           </div>

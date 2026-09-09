@@ -96,7 +96,7 @@ function MarketingLeadForm({ onClose }: { onClose: () => void }) {
       <div className="pt-6 pb-2 text-center">
         <CheckCircle2 className="mx-auto h-11 w-11 text-success" />
         <h3 className="mt-4 font-display text-2xl font-semibold text-ink">
-          You&apos;re on the list!
+          You&apos;re On The List!
         </h3>
         <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-slate">
           Our advisor will call you shortly to walk you through the grants and
@@ -356,13 +356,13 @@ export default function MarketingLeadModal() {
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0 pr-2">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-error">
-                Wait — before you go
+                Wait — Before You Go
               </p>
               <h2
                 id={titleId}
                 className="mt-1.5 font-display text-[1.35rem] font-semibold leading-tight text-ink sm:text-[1.5rem]"
               >
-                Which funding you qualify for?
+                Which Funding You Qualify For?
               </h2>
               <p className="mt-1.5 text-[13px] leading-snug text-slate sm:text-sm sm:leading-relaxed">
                 Leave your number — our advisor will call you back and tell you

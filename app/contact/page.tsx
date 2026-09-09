@@ -60,7 +60,7 @@ export const metadata: Metadata = buildMetadata({
 
 const contactFaq = {
   heading: "Before You Contact Us",
-  sub: "Quick answers on response time, documents, office visits and what to expect.",
+  sub: "Quick Answers On Response Time, Documents, Office Visits And What To Expect.",
   items: [
     {
       question: "How quickly will an advisor contact me?",
@@ -248,8 +248,8 @@ export default function ContactPage() {
       <section className="bg-paper px-5 py-16 sm:px-8 lg:py-24">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-marigold-dark">Visit the desk</p>
-            <h2 className="mt-3 font-display text-4xl font-semibold text-ink">Our Noida office</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-marigold-dark">Visit The Desk</p>
+            <h2 className="mt-3 font-display text-4xl font-semibold text-ink">Our Noida Office</h2>
             <p className="mt-3 leading-relaxed text-slate">Walk in for a conversation, or connect remotely from anywhere in India.</p>
           </div>
           <div className="mt-10 mx-auto max-w-xl">

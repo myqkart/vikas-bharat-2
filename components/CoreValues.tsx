@@ -79,7 +79,7 @@ export default function CoreValues() {
           <TextReveal
             as="h2"
             id="core-values-heading"
-            text="Six commitments we work by"
+            text="Six Commitments We Work By"
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl"
           />
           <motion.p

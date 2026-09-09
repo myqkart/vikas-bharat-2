@@ -62,7 +62,7 @@ export default function AboutProcess() {
           <TextReveal
             as="h2"
             id="our-process-heading"
-            text="Six steps from first call to result"
+            text="Six Steps From First Call To Result"
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
           />
           <motion.p

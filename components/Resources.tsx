@@ -45,7 +45,7 @@ interface BentoBlogItem {
 const bentoBlogs: BentoBlogItem[] = [
   {
     id: 1,
-    title: "Loan options every MSME should know",
+    title: "Loan Options Every MSME Should Know",
     category: "Loans",
     readTime: "6 min read",
     date: "May 20, 2024",
@@ -78,7 +78,7 @@ const bentoBlogs: BentoBlogItem[] = [
   },
   {
     id: 2,
-    title: "GST compliance made simple",
+    title: "GST Compliance Made Simple",
     category: "GST & Tax",
     readTime: "4 min read",
     date: "May 18, 2024",
@@ -109,7 +109,7 @@ const bentoBlogs: BentoBlogItem[] = [
   },
   {
     id: 3,
-    title: "Choosing the right business structure",
+    title: "Choosing The Right Business Structure",
     category: "Business Setup",
     readTime: "5 min read",
     date: "May 15, 2024",
@@ -139,7 +139,7 @@ const bentoBlogs: BentoBlogItem[] = [
   },
   {
     id: 4,
-    title: "Govt schemes for your growth",
+    title: "Govt Schemes For Your Growth",
     category: "MSME Schemes",
     readTime: "5 min read",
     date: "May 13, 2024",
@@ -170,7 +170,7 @@ const bentoBlogs: BentoBlogItem[] = [
   },
   {
     id: 5,
-    title: "Smart financial habits for MSMEs",
+    title: "Smart Financial Habits For MSMEs",
     category: "Management",
     readTime: "5 min read",
     date: "May 11, 2024",
@@ -451,7 +451,7 @@ function HeroContent() {
 
         {/* Subheading styled exactly like other landing page sections */}
         <p className="mt-4 text-base leading-relaxed text-slate max-w-xs lg:text-lg">
-          Actionable insights on MSME loans, GST, registrations and business growth.
+          Actionable Insights On MSME Loans, GST, Registrations And Business Growth.
         </p>
       </div>
 

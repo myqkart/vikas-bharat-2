@@ -415,14 +415,14 @@ export default function Testimonials() {
           
           <div className="flex items-center justify-center mt-2 px-6 py-1 select-none pointer-events-none">
             <Star size={10} className="fill-marigold text-marigold mr-4" />
-            <span className="font-display italic text-base md:text-lg text-slate/80">Real stories.</span>
+            <span className="font-display italic text-base md:text-lg text-slate/80">Real Stories.</span>
             
             {/* Outer white circle with inner gold icon */}
             <div className="mx-4 w-9 h-9 rounded-full bg-white border border-marigold/30 flex items-center justify-center shadow-sm">
               <Users size={16} className="text-marigold" />
             </div>
             
-            <span className="font-display italic text-base md:text-lg text-slate/80">Real impact.</span>
+            <span className="font-display italic text-base md:text-lg text-slate/80">Real Impact.</span>
             <Star size={10} className="fill-marigold text-marigold ml-4" />
           </div>
         </div>

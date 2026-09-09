@@ -29,7 +29,7 @@ export type ChecklistItem = {
 };
 
 export default function ImageChecklist({
-  heading = "What you get",
+  heading = "What You Get",
   items,
 }: {
   heading?: string;

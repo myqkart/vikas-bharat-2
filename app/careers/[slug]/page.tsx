@@ -33,7 +33,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const job = getCareerRole(slug);
-  if (!job) return { title: "Role not found", robots: { index: false } };
+  if (!job) return { title: "Role Not Found", robots: { index: false } };
   return buildMetadata({
     title: job.seoTitle,
     description: job.seoDescription,

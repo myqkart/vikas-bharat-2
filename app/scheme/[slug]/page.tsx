@@ -37,7 +37,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const desk = getSchemeDesk(slug);
-  if (!desk) return { title: "Scheme not found", robots: { index: false } };
+  if (!desk) return { title: "Scheme Not Found", robots: { index: false } };
   return buildMetadata({
     title: desk.title,
     description: desk.description,
@@ -86,7 +86,7 @@ export default async function SchemeDetailPage({ params }: PageProps) {
       <Breadcrumbs items={breadcrumbs} />
       <ServiceDeskPage
         desk={desk}
-        relatedHeading="Related schemes and services"
+        relatedHeading="Related Schemes And Services"
         relatedSub="Other government programs and desks that often sit next to this one."
         relatedItems={related.slice(0, 4)}
       />

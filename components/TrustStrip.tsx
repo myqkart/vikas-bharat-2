@@ -386,7 +386,7 @@ const cardsData = [
     suffix: "L+",
     badge: "MSME Registered",
     title: "Registry & Recognition",
-    sub: "Direct portal integrations for Udyam registration and official DPIIT Startup status.",
+    sub: "Direct Portal Integrations For Udyam Registration And Official DPIIT Startup Status.",
     illustration: <RocketIllustration />,
     cardBg: "from-orange-500/[0.04] to-transparent border-orange-500/10 hover:border-orange-500/20",
     badgeStyles: "border-orange-500/20 bg-orange-500/[0.06] text-orange-600"
@@ -397,7 +397,7 @@ const cardsData = [
     suffix: " Approved",
     badge: "ISO 9001:2015",
     title: "80 IAC Tax Exemption",
-    sub: "Helping businesses secure corporate tax relief and ISO quality systems standards.",
+    sub: "Helping Businesses Secure Corporate Tax Relief And ISO Quality Systems Standards.",
     illustration: <ShieldIllustration />,
     cardBg: "from-blue-500/[0.04] to-transparent border-blue-500/10 hover:border-blue-500/20",
     badgeStyles: "border-blue-500/20 bg-blue-500/[0.06] text-blue-600"
@@ -409,7 +409,7 @@ const cardsData = [
     suffix: " Cr Limit",
     badge: "Govt. Scheme Partner",
     title: "Turnover Subsidy Cap",
-    sub: "Enabling easy access to MUDRA loans, CGTMSE credit, and government grants.",
+    sub: "Enabling Easy Access To MUDRA Loans, CGTMSE Credit, And Government Grants.",
     illustration: <ChartIllustration />,
     cardBg: "from-emerald-500/[0.04] to-transparent border-emerald-500/10 hover:border-emerald-500/20",
     badgeStyles: "border-emerald-500/20 bg-emerald-500/[0.06] text-emerald-600"
@@ -420,7 +420,7 @@ const cardsData = [
     suffix: " Google Rating",
     badge: "Noida Desk",
     title: "Trusted Support Network",
-    sub: "Walk in at Sector 63, Noida — or connect from anywhere in India.",
+    sub: "Walk In At Sector 63, Noida — Or Connect From Anywhere In India.",
     illustration: <NetworkIllustration />,
     cardBg: "from-purple-500/[0.04] to-transparent border-purple-500/10 hover:border-purple-500/20",
     badgeStyles: "border-purple-500/20 bg-purple-500/[0.06] text-purple-600"
@@ -440,7 +440,7 @@ const features = [
   },
   {
     icon: <CheckCircle className="h-5 w-5 text-indigo shrink-0" />,
-    title: "End-to-End Support",
+    title: "End-To-End Support",
     desc: "From registration to growth"
   },
   {

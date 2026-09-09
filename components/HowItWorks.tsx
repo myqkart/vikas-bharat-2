@@ -59,7 +59,7 @@ const stepsData = [
   },
   {
     id: "03",
-    title: "We Do the Paperwork",
+    title: "We Do The Paperwork",
     caption: "You just sign. We handle the rest.",
     detail: "We assemble KYC, statements, quotations, and portal forms. You review and sign.",
     icon: FileText,
@@ -74,7 +74,7 @@ const stepsData = [
   },
   {
     id: "04",
-    title: "Money in Your Account",
+    title: "Money In Your Account",
     caption: "We follow up until it's done.",
     detail: "Sanction, disbursement, licence download, or GST live — we stay on the case.",
     icon: Landmark,
@@ -98,17 +98,17 @@ const trustItems = [
   {
     icon: Eye,
     title: "100% Transparent",
-    subtitle: "Zero hidden charges",
+    subtitle: "Zero Hidden Charges",
   },
   {
     icon: Award,
     title: "Expert Guidance",
-    subtitle: "Verified scheme experts",
+    subtitle: "Verified Scheme Experts",
   },
   {
     icon: MessageSquare,
     title: "WhatsApp Updates",
-    subtitle: "Realtime tracking",
+    subtitle: "Realtime Tracking",
   },
 ];
 

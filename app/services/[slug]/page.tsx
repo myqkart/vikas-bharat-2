@@ -49,7 +49,7 @@ export async function generateMetadata({
     });
   }
   const service = getServiceBySlug(slug);
-  if (!service) return { title: "Service not found", robots: { index: false } };
+  if (!service) return { title: "Service Not Found", robots: { index: false } };
   return buildMetadata({
     title: service.title,
     description: service.summary,
@@ -92,8 +92,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <Breadcrumbs items={breadcrumbs} />
         <ServiceDeskPage
           desk={desk}
-          relatedHeading="Related services"
-          relatedSub="Other desks founders usually combine with this work."
+          relatedHeading="Related Services"
+          relatedSub="Other Desks Founders Usually Combine With This Work."
           relatedItems={getRelatedServiceLinks(slug)}
         />
       </SiteChrome>
@@ -165,7 +165,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             </ul>
           </div>
           <div className="rounded-[14px] bg-ink p-5 text-paper shadow-card">
-            <p className="text-sm font-bold text-marigold">Typical timeline</p>
+            <p className="text-sm font-bold text-marigold">Typical Timeline</p>
             <p className="mt-2 font-display text-xl font-semibold">
               {service.timeline}
             </p>
@@ -209,7 +209,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       <RelatedDesks
-        heading="Related services"
+        heading="Related Services"
         items={getRelatedServiceLinks(slug)}
       />
       <FinalCTA />

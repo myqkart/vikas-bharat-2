@@ -99,7 +99,7 @@ export const privacyPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "Grievance Redressal and Contact",
+      heading: "Grievance Redressal And Contact",
       blocks: [
         {
           type: "p",
@@ -113,7 +113,7 @@ export const privacyPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "Changes to This Privacy Policy",
+      heading: "Changes To This Privacy Policy",
       blocks: [
         {
           type: "p",
@@ -136,7 +136,7 @@ export const refundPolicy: LegalDocument = {
   intro: [],
   sections: [
     {
-      heading: "1. Purpose and Scope",
+      heading: "1. Purpose And Scope",
       blocks: [
         {
           type: "p",
@@ -149,7 +149,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "2. Nature of Professional Fees",
+      heading: "2. Nature Of Professional Fees",
       blocks: [
         {
           type: "p",
@@ -166,7 +166,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "3. Cancellation and Withdrawal by the Client",
+      heading: "3. Cancellation And Withdrawal By The Client",
       blocks: [
         {
           type: "p",
@@ -183,7 +183,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "4. Non-Refundable Fees After Commencement of Services",
+      heading: "4. Non-Refundable Fees After Commencement Of Services",
       blocks: [
         {
           type: "p",
@@ -208,7 +208,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "5. No Guarantee of Outcome",
+      heading: "5. No Guarantee Of Outcome",
       blocks: [
         {
           type: "p",
@@ -293,7 +293,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "8. Review and Refund Processing",
+      heading: "8. Review And Refund Processing",
       blocks: [
         {
           type: "p",
@@ -324,7 +324,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "9. Client Responsibility and Third-Party Delays",
+      heading: "9. Client Responsibility And Third-Party Delays",
       blocks: [
         {
           type: "p",
@@ -341,7 +341,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "10. Limitation of Liability",
+      heading: "10. Limitation Of Liability",
       blocks: [
         {
           type: "p",
@@ -358,7 +358,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "11. Governing Agreement and Order of Precedence",
+      heading: "11. Governing Agreement And Order Of Precedence",
       blocks: [
         {
           type: "p",
@@ -371,7 +371,7 @@ export const refundPolicy: LegalDocument = {
       ],
     },
     {
-      heading: "12. Amendments to the Policy",
+      heading: "12. Amendments To The Policy",
       blocks: [
         {
           type: "p",
@@ -425,7 +425,7 @@ export const termsAndConditions: LegalDocument = {
       ],
     },
     {
-      heading: "2. Eligibility for Refund",
+      heading: "2. Eligibility For Refund",
       blocks: [
         {
           type: "p",
@@ -450,7 +450,7 @@ export const termsAndConditions: LegalDocument = {
       ],
     },
     {
-      heading: "3. Cancellation of Services",
+      heading: "3. Cancellation Of Services",
       blocks: [
         {
           type: "p",
@@ -467,7 +467,7 @@ export const termsAndConditions: LegalDocument = {
       ],
     },
     {
-      heading: "4. Determination of Refund Amount",
+      heading: "4. Determination Of Refund Amount",
       blocks: [
         {
           type: "p",
@@ -573,7 +573,7 @@ export const termsAndConditions: LegalDocument = {
       ],
     },
     {
-      heading: "9. No Guarantee of Outcome",
+      heading: "9. No Guarantee Of Outcome",
       blocks: [
         {
           type: "p",

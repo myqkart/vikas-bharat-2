@@ -134,13 +134,13 @@ export default function CareerJobPage({ job }: { job: CareerRole }) {
             />
             {job.preferred ? (
               <BulletSection
-                heading="Preferred qualifications"
+                heading="Preferred Qualifications"
                 items={job.preferred}
               />
             ) : null}
             {job.youWillDoWell ? (
               <BulletSection
-                heading="What you'll do well"
+                heading="What You'll Do Well"
                 items={job.youWillDoWell}
               />
             ) : null}
@@ -162,10 +162,10 @@ export default function CareerJobPage({ job }: { job: CareerRole }) {
         <section className="bg-paper px-5 py-12 sm:px-8 sm:py-16 lg:py-24">
           <div className="mx-auto max-w-[1100px]">
             <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-marigold-dark">
-              Open roles
+              Open Roles
             </p>
             <h2 className="mt-3 text-center font-display text-[1.75rem] font-semibold text-ink sm:text-4xl">
-              Other openings
+              Other Openings
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-slate sm:text-base">
               More full-time desks in Noida if this role is not the right

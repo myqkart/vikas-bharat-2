@@ -624,7 +624,7 @@ export default function FAQ({ data }: { data?: FaqData }) {
                 <h4 className="text-base font-bold text-ink leading-tight transition-colors group-hover:text-marigold-dark">
                   Still confused?
                 </h4>
-                <p className="text-sm text-slate mt-1">Talk to our experts</p>
+                <p className="text-sm text-slate mt-1">Talk To Our Experts</p>
               </div>
             </motion.a>
           </motion.div>

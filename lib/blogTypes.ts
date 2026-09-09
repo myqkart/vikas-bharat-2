@@ -63,29 +63,29 @@ export const RELATED_BY_CATEGORY: Record<string, { href: string; label: string }
 
 export const blogsPage = {
   eyebrow: "Knowledge Desk",
-  heading: "Guides for Founders & MSMEs",
+  heading: "Guides For Founders & MSMEs",
   intro:
     "Practical articles on registration, loans, GST, schemes and compliance — written the way we explain it on a call. Padho, phir poochho.",
   cta: "Browse articles",
   catalogCta: "Talk on WhatsApp",
   imageAlt: "Advisor reviewing business guides with a founder",
   catalog: {
-    eyebrow: "Latest from the desk",
+    eyebrow: "Latest From The Desk",
     heading: "Read What Founders Actually Ask",
-    sub: "Search a scheme, licence or loan type. Every guide ends with a clear next step — not a maze of links.",
+    sub: "Search A Scheme, Licence Or Loan Type. Every Guide Ends With A Clear Next Step — Not A Maze Of Links.",
     searchPlaceholder: "Search GST, Mudra, Udyam, FSSAI…",
     empty: "No guides match that search. Try a category, or WhatsApp the desk.",
   },
   topics: {
-    eyebrow: "What we write about",
-    heading: "Pick a Desk. Start Reading.",
-    sub: "Same topics we handle on WhatsApp — explained before you send a document.",
+    eyebrow: "What We Write About",
+    heading: "Pick A Desk. Start Reading.",
+    sub: "Same Topics We Handle On WhatsApp — Explained Before You Send A Document.",
   },
 } as const;
 
 export const blogFaq = {
-  heading: "Before You Open a Guide",
-  sub: "Short answers on how we write, what to do after you read, and when to call the desk.",
+  heading: "Before You Open A Guide",
+  sub: "Short Answers On How We Write, What To Do After You Read, And When To Call The Desk.",
   items: [
     {
       question: "Are these official government articles?",

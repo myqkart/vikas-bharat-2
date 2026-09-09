@@ -111,7 +111,7 @@ export default function AboutServicesOverview() {
               </motion.p>
               <TextReveal
                 as="h2"
-                text="Seven desks. One outcome path."
+                text="Seven Desks. One Outcome Path."
                 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink lg:text-5xl"
               />
               <motion.p
@@ -301,7 +301,7 @@ export default function AboutServicesOverview() {
             </motion.p>
             <TextReveal
               as="h2"
-              text="Seven desks. One outcome path."
+              text="Seven Desks. One Outcome Path."
               className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink"
             />
             <ul className="mt-10 space-y-6">

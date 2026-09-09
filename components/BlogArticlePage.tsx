@@ -201,7 +201,7 @@ export default function BlogArticlePage({
               Keep reading
             </p>
             <h2 className="mt-2 font-display text-3xl font-semibold text-ink">
-              Related guides
+              Related Guides
             </h2>
             <ul className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((item) => (

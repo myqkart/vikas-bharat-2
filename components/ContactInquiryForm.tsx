@@ -257,7 +257,7 @@ export default function ContactInquiryForm() {
       <div className="rounded-[24px] border border-success/25 bg-success-bg p-8 text-center shadow-[0_8px_30px_rgba(18,41,77,0.06)] sm:p-10">
         <CheckCircle2 className="mx-auto h-12 w-12 text-success" />
         <h2 className="mt-5 font-display text-3xl font-semibold text-ink">
-          We&apos;ve got your details.
+          We&apos;ve Got Your Details.
         </h2>
         <p className="mx-auto mt-3 max-w-md leading-relaxed text-slate">
           A Vikas Bharat advisor will review your requirement and get in touch
@@ -281,10 +281,10 @@ export default function ContactInquiryForm() {
     >
       <div className="mb-8">
         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-marigold-dark">
-          Tell us about your need
+          Tell Us About Your Need
         </p>
         <h2 className="mt-2 font-display text-[32px] font-semibold leading-tight text-ink">
-          Start your application
+          Start Your Application
         </h2>
         <p className="mt-2 text-[15px] leading-relaxed text-slate">
           Share a few details and we&apos;ll guide you to the right next step.

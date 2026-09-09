@@ -261,10 +261,10 @@ export default function AboutJourney() {
               >
                 <div className="flex items-center gap-2.5 text-xs font-mono font-bold uppercase tracking-widest text-indigo">
                   <span className="h-2 w-2 rounded-full bg-marigold animate-pulse" />
-                  ACTION MAP
+                  Action Map
                 </div>
                 <h2 className="mt-6 font-display text-[48px] xl:text-[58px] font-black text-ink leading-[1.1] tracking-tight">
-                  Possibility to <br />
+                  Possibility To <br />
                   <span className="font-serif italic text-marigold-dark font-normal">Realized Outcome.</span>
                 </h2>
                 <p className="mt-6 text-slate text-sm xl:text-base leading-relaxed font-semibold">
@@ -345,8 +345,8 @@ export default function AboutJourney() {
                   YATRA COMPLETED // DESK READY
                 </div>
                 <h3 className="mt-6 font-display text-[40px] xl:text-[46px] font-black text-ink leading-tight tracking-tight">
-                  No hidden desks. <br />
-                  Just a <span className="font-serif italic text-marigold-dark font-normal">Direct Pathway.</span>
+                  No Hidden Desks. <br />
+                  Just A <span className="font-serif italic text-marigold-dark font-normal">Direct Pathway.</span>
                 </h3>
                 <p className="mt-5 text-slate text-sm leading-relaxed font-semibold">
                   We don't leave you with a packet of forms or a PDF. We stay on the line until the capital enters your ledger or the licence is active on the gateway.
@@ -522,10 +522,10 @@ export default function AboutJourney() {
           <div className="mb-20">
             <div className="flex items-center gap-2 text-[10px] font-mono font-bold uppercase tracking-widest text-indigo">
               <span className="h-1.5 w-1.5 rounded-full bg-marigold animate-pulse" />
-              ACTION MAP
+              Action Map
             </div>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl font-black text-ink leading-tight">
-              Possibility to <br />
+              Possibility To <br />
               <span className="font-serif italic text-marigold-dark font-normal">Realized Outcome.</span>
             </h2>
             <p className="mt-4 text-slate text-xs sm:text-sm font-semibold leading-relaxed">

@@ -68,7 +68,7 @@ export default function ServiceDeskPage({
       })}
       <FAQ data={desk.faq} />
       <RelatedDesks
-        heading={relatedHeading ?? "Related desks"}
+        heading={relatedHeading ?? "Related Desks"}
         sub={relatedSub}
         items={relatedItems}
       />

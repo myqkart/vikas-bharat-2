@@ -182,23 +182,23 @@ export default function About() {
               className="inline-flex items-center gap-2 text-xs lg:text-sm font-bold tracking-widest text-slate uppercase"
             >
               <span className="inline-block w-2.5 h-2.5 rounded-full bg-marigold animate-pulse" />
-              ABOUT BHAROSA
+              About Bharosa
             </motion.div>
 
             <motion.h2
               variants={itemVariants}
               className="mt-4 font-display text-4xl sm:text-5xl lg:text-[52px] font-semibold leading-[1.12] text-ink tracking-tight"
             >
-              Built for dukaan owners,<br className="hidden sm:inline lg:hidden" /> not dashboards.
+              Built For Dukaan Owners,<br className="hidden sm:inline lg:hidden" /> Not Dashboards.
             </motion.h2>
 
             <motion.div
               variants={itemVariants}
               className="mt-6 text-lg sm:text-xl text-slate leading-relaxed font-sans font-medium max-w-md"
             >
-              Simple help. Real results.
+              Simple Help. Real Results.
               <br />
-              Human support.
+              Human Support.
             </motion.div>
 
             <motion.div variants={itemVariants} className="mt-8">
@@ -303,8 +303,8 @@ export default function About() {
               variants={quoteVariants}
               className="absolute bottom-[-32px] right-[4%] rotate-[-4deg] text-right font-handwriting text-2xl sm:text-[28px] text-indigo leading-tight select-none z-30"
             >
-              <p>Your growth.</p>
-              <p className="mt-0.5">Our responsibility.</p>
+              <p>Your Growth.</p>
+              <p className="mt-0.5">Our Responsibility.</p>
               {/* Organic hand-drawn look stroke */}
               <svg className="w-36 h-3 text-marigold mt-1.5 ml-auto" viewBox="0 0 150 12" fill="none">
                 <motion.path

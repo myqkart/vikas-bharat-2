@@ -54,7 +54,7 @@ export default function AboutWhyChoose() {
             <TextReveal
               as="h2"
               id="why-choose-heading"
-              text="One desk. Clear path. Growth-focused."
+              text="One Desk. Clear Path. Growth-Focused."
               className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl lg:text-[2.85rem]"
             />
 

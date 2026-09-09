@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Page not found",
+  title: "Page Not Found",
   description:
     "This page is not available. Return to Vikas Bharat for services, government schemes and MSME guides.",
   robots: {
@@ -22,7 +22,7 @@ export default function NotFound() {
           404
         </p>
         <h1 className="mt-4 font-display text-4xl font-semibold text-ink sm:text-5xl">
-          This page is not on the desk
+          This Page Is Not On The Desk
         </h1>
         <p className="mt-4 max-w-md text-base leading-relaxed text-slate">
           The link may be old or typed incorrectly. Start from a public page

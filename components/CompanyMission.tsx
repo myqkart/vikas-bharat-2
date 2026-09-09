@@ -75,7 +75,7 @@ export default function CompanyMission() {
               variants={dramaticFadeLeft}
               className="mt-4 text-[10px] font-mono font-bold tracking-[0.22em] text-marigold-dark"
             >
-              OUR MISSION
+              Our Mission
             </motion.p>
             <TextReveal
               as="h2"
@@ -177,7 +177,7 @@ export default function CompanyMission() {
               variants={dramaticFadeRight}
               className="text-[10px] font-mono font-bold tracking-[0.22em] text-success"
             >
-              OUR VISION
+              Our Vision
             </motion.p>
             <TextReveal
               as="h3"

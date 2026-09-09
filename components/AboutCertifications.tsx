@@ -809,7 +809,7 @@ export default function AboutCertifications() {
                   EST. {aboutCredentials.founded} · INDIA
                 </div>
                 <div className="font-display text-lg font-bold mt-1">
-                  Credentials that hold with every file.
+                  Credentials That Hold With Every File.
                 </div>
               </div>
             </div>

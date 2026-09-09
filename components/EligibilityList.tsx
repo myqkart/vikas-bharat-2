@@ -25,7 +25,7 @@ export type EligibilityItem = {
 };
 
 export default function EligibilityList({
-  heading = "Who can apply",
+  heading = "Who Can Apply",
   items,
 }: {
   heading?: string;

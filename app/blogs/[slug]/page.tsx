@@ -41,7 +41,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogBySlug(slug);
-  if (!post) return { title: "Guide not found", robots: { index: false } };
+  if (!post) return { title: "Guide Not Found", robots: { index: false } };
   const published = parseDisplayDate(post.date) ?? post.dateIso;
   return {
     ...buildMetadata({

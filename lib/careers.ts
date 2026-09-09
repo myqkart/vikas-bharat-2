@@ -22,8 +22,8 @@ const onSiteLocation = {
 } as const;
 
 export const careersPage = {
-  eyebrow: "Join the desk",
-  heading: "Work with Vikas Bharat",
+  eyebrow: "Join The Desk",
+  heading: "Work With Vikas Bharat",
   intro:
     "On-site openings at our Noida desk across the MSME loan funnel — sales, relationships, partners, credit, processing and project delivery, from first lead to disbursement.",
   locationLabel: careersOffice.shortLabel,
@@ -106,7 +106,7 @@ export const careerRoles: readonly CareerRole[] = [
     ],
     compensation:
       "Competitive salary + performance-based incentives. Final compensation will depend on experience, skills, and performance.",
-    seoTitle: "MSME Loan Sales Executive Jobs in Noida",
+    seoTitle: "MSME Loan Sales Executive Jobs In Noida",
     seoDescription:
       "Join Vikas Bharat as an MSME Loan Sales Executive at our Sector 63, Noida desk. Explore the role, responsibilities, requirements, and career opportunities with our growing financial services team.",
   },
@@ -155,7 +155,7 @@ export const careerRoles: readonly CareerRole[] = [
     ],
     compensation:
       "Competitive salary + performance-based incentives. Final compensation will depend on experience, skills, and performance.",
-    seoTitle: "Business Development Executive MSME Loans Jobs in Noida",
+    seoTitle: "Business Development Executive MSME Loans Jobs In Noida",
     seoDescription:
       "Join Vikas Bharat as a Business Development Executive for MSME loans at our Sector 63, Noida desk. Explore the role, responsibilities, requirements, and career opportunities with our growing financial services team.",
   },
@@ -204,7 +204,7 @@ export const careerRoles: readonly CareerRole[] = [
     ],
     compensation:
       "Competitive salary + performance-based incentives. Final compensation will depend on experience, skills, and performance.",
-    seoTitle: "Relationship Manager Business Loans Jobs in Noida",
+    seoTitle: "Relationship Manager Business Loans Jobs In Noida",
     seoDescription:
       "Join Vikas Bharat as a Relationship Manager for business loans at our Sector 63, Noida desk. Convert MSME customers, own the file through processing, and grow repeat loan relationships.",
   },
@@ -255,7 +255,7 @@ export const careerRoles: readonly CareerRole[] = [
     ],
     compensation:
       "Competitive salary. Final compensation will depend on experience, skills, and performance.",
-    seoTitle: "Loan Processing & Sales Operations Executive Jobs in Noida",
+    seoTitle: "Loan Processing & Sales Operations Executive Jobs In Noida",
     seoDescription:
       "Join Vikas Bharat as a Loan Processing & Sales Operations Executive at our Sector 63, Noida desk. Keep MSME loan applications moving from documents through processing and disbursement.",
   },
@@ -303,7 +303,7 @@ export const careerRoles: readonly CareerRole[] = [
     ],
     compensation:
       "Competitive salary. Final compensation will depend on experience, skills, and performance.",
-    seoTitle: "Credit Analyst MSME Loans Jobs in Noida",
+    seoTitle: "Credit Analyst MSME Loans Jobs In Noida",
     seoDescription:
       "Join Vikas Bharat as a Credit Analyst for MSME loans at our Sector 63, Noida desk. Assess applications, bank statements and GST, and write a clear credit view before files go to lenders.",
   },
@@ -351,7 +351,7 @@ export const careerRoles: readonly CareerRole[] = [
     ],
     compensation:
       "Competitive salary + performance-based incentives. Final compensation will depend on experience, skills, and performance.",
-    seoTitle: "Channel Partner Executive MSME Loans Jobs in Noida",
+    seoTitle: "Channel Partner Executive MSME Loans Jobs In Noida",
     seoDescription:
       "Join Vikas Bharat as a Channel Partner Executive for MSME loans at our Sector 63, Noida desk. Build DSA, CA and referral partner relationships that send complete business-loan files.",
   },
@@ -399,7 +399,7 @@ export const careerRoles: readonly CareerRole[] = [
     ],
     compensation:
       "Competitive salary. Final compensation will depend on experience, skills, and performance.",
-    seoTitle: "Projects Manager MSME Loans Jobs in Noida",
+    seoTitle: "Projects Manager MSME Loans Jobs In Noida",
     seoDescription:
       "Join Vikas Bharat as a Projects Manager at our Sector 63, Noida desk. Run MSME loan and scheme files as projects — owners, pending documents, timelines and a clean close.",
   },
@@ -418,7 +418,7 @@ const LEGACY_CAREER_SLUGS: Record<string, CareerRoleSlug> = {
 
 export const careerFaq = {
   heading: "Before You Apply",
-  sub: "Short answers on location, interviews and how we review resumes.",
+  sub: "Short Answers On Location, Interviews And How We Review Resumes.",
   items: [
     {
       question: "Are these roles only in Noida?",
