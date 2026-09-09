@@ -350,13 +350,13 @@ export default function Services() {
                   const isActive = isNodeActive(node.slug);
                   const IconComponent = node.icon;
                   
+                  if (!isActive) return null;
+
                   return (
                     <Link
                       key={node.slug}
                       href={node.href}
-                      className={`flex items-center gap-4 p-4 rounded-[18px] bg-white border border-border/20 shadow-card transition-all duration-300 ${
-                        isActive ? "opacity-100 scale-100 text-ink" : "opacity-35 scale-95 pointer-events-none text-ink/40"
-                      }`}
+                      className="flex items-center gap-4 p-4 rounded-[18px] bg-white border border-border/20 shadow-card transition-all duration-300 text-ink"
                     >
                       <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${node.colorClass.iconBg}`}>
                         <IconComponent size={18} className="stroke-[2]" />
