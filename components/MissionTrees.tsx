@@ -483,6 +483,330 @@ function CenterSeal({
 
 export default function MissionTrees() {
   const reduce = useReducedMotion();
+  if (reduce) return <InkDossier />;
+
+  return (
+    <div id={missionTrees.id}>
+      {/* Mobile: large HTML seal — SVG compass is unreadable below ~500px */}
+      <div className="lg:hidden">
+        <MobileInkCompass />
+      </div>
+      {/* Desktop: original interactive SVG compass (unchanged) */}
+      <div className="hidden lg:block">
+        <DesktopInkCompass />
+      </div>
+    </div>
+  );
+}
+
+/** Mobile-only compass — big center mark + scroll parallax (sticky spin) */
+function MobileInkCompass() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const jumping = useRef(false);
+  const dragStartX = useRef<number | null>(null);
+  const active = trees[activeIndex];
+  const a = accent[active.accent];
+
+  const { scrollYProgress } = useScroll({
+    target: trackRef,
+    offset: ["start start", "end end"],
+  });
+
+  const rawAngle = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, (CHAPTER_COUNT - 1) * 90],
+  );
+  const systemRot = useSpring(rawAngle, {
+    stiffness: 68,
+    damping: 24,
+    mass: 0.9,
+  });
+  const ringRotA = useTransform(systemRot, (r) => -r * 0.25);
+  const ringRotB = useTransform(systemRot, (r) => r * 0.4);
+
+  const chapterRaw = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, CHAPTER_COUNT - 1],
+  );
+
+  useMotionValueEvent(chapterRaw, "change", (v) => {
+    if (jumping.current) return;
+    const next = clamp(Math.round(v), 0, CHAPTER_COUNT - 1);
+    setActiveIndex((prev) => (next === prev ? prev : next));
+  });
+
+  const scrollToChapter = useCallback((index: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const next = clamp(index, 0, CHAPTER_COUNT - 1);
+    const rect = track.getBoundingClientRect();
+    const trackTop = window.scrollY + rect.top;
+    const scrollable = Math.max(track.offsetHeight - window.innerHeight, 1);
+    const target =
+      trackTop + (scrollable * next) / Math.max(CHAPTER_COUNT - 1, 1);
+
+    jumping.current = true;
+    setActiveIndex(next);
+    window.scrollTo({ top: target, behavior: "smooth" });
+    window.setTimeout(() => {
+      jumping.current = false;
+    }, 900);
+  }, []);
+
+  const orbitPct = 38;
+
+  return (
+    <section
+      aria-labelledby="mission-trees-heading-mobile"
+      className="relative"
+    >
+      <div
+        ref={trackRef}
+        className="relative"
+        style={{ height: `${CHAPTER_COUNT * VH_PER_CHAPTER}vh` }}
+      >
+        <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(6.25rem,env(safe-area-inset-bottom))] sm:px-6">
+          <Atmosphere
+            progress={scrollYProgress}
+            activeAccent={active.accent}
+          />
+
+          <div className="relative z-10 mx-auto flex h-full w-full max-w-lg flex-col">
+            <header className="shrink-0 pt-2 text-center">
+              <p className="text-[11px] font-semibold tracking-[0.2em] text-slate uppercase">
+                {missionTrees.eyebrow}
+              </p>
+              <h2
+                id="mission-trees-heading-mobile"
+                className="mt-2 font-display text-[22px] font-semibold leading-tight text-ink sm:text-[26px]"
+              >
+                {missionTrees.heading}
+              </h2>
+              <p className="mx-auto mt-2 max-w-md text-[12px] leading-snug text-slate sm:text-[13px]">
+                {missionTrees.sub}
+              </p>
+            </header>
+
+            <div className="relative mt-4 flex min-h-0 flex-1 flex-col items-center justify-start gap-3 overflow-hidden pb-2">
+              <div
+                className="relative mx-auto aspect-square w-[min(100%,300px)] shrink-0"
+                onTouchStart={(e) => {
+                  dragStartX.current = e.changedTouches[0]?.clientX ?? null;
+                }}
+                onTouchEnd={(e) => {
+                  if (dragStartX.current == null) return;
+                  const dx =
+                    (e.changedTouches[0]?.clientX ?? 0) - dragStartX.current;
+                  dragStartX.current = null;
+                  if (dx < -40) scrollToChapter(activeIndex + 1);
+                  else if (dx > 40) scrollToChapter(activeIndex - 1);
+                }}
+              >
+                <motion.div
+                  aria-hidden
+                  className="absolute inset-[6%] rounded-full border border-ink/10"
+                  style={{ rotate: ringRotA }}
+                />
+                <motion.div
+                  aria-hidden
+                  className="absolute inset-[14%] rounded-full border border-dashed border-ink/[0.08]"
+                  style={{ rotate: ringRotB }}
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-[22%] rounded-full border"
+                  style={{ borderColor: `${a.hex}55` }}
+                />
+
+                <div
+                  aria-hidden
+                  className="absolute top-[2%] left-1/2 z-[2] -translate-x-1/2"
+                  style={{ color: a.hex }}
+                >
+                  <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor">
+                    <path d="M7 0L12 8H2L7 0Z" />
+                  </svg>
+                </div>
+
+                <div className="absolute inset-0 z-[1] flex items-center justify-center">
+                  <motion.div
+                    key={active.id}
+                    initial={{ scale: 0.9, opacity: 0.6 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ type: "spring", stiffness: 320, damping: 22 }}
+                    className="flex h-[110px] w-[110px] flex-col items-center justify-center rounded-full bg-[#FBF6EC] shadow-raised"
+                    style={{
+                      border: `2.5px solid ${a.hex}`,
+                      boxShadow: `0 12px 28px ${a.glow}`,
+                    }}
+                  >
+                    <div className="relative h-12 w-12 overflow-hidden rounded-2xl bg-white ring-1 ring-border/25">
+                      <img
+                        src={site.logoMark}
+                        alt={site.companyName}
+                        className="h-full w-full object-contain p-1.5"
+                        draggable={false}
+                      />
+                    </div>
+                    <p className="mt-1.5 text-[9px] font-bold tracking-[0.14em] text-ink uppercase">
+                      {missionTrees.hubLabel}
+                    </p>
+                  </motion.div>
+                </div>
+
+                {trees.map((tree, i) => (
+                  <MobileOrbitNode
+                    key={tree.id}
+                    tree={tree}
+                    index={i}
+                    selected={i === activeIndex}
+                    systemRot={systemRot}
+                    orbitPct={orbitPct}
+                    onSelect={() => scrollToChapter(i)}
+                  />
+                ))}
+              </div>
+
+              <aside className="relative z-10 min-h-0 w-full shrink overflow-y-auto overscroll-contain px-1 text-center">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={active.id}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.35 }}
+                  >
+                    <p
+                      className="text-[11px] font-bold tracking-[0.2em] uppercase"
+                      style={{ color: a.ink }}
+                    >
+                      Mandate {String(activeIndex + 1).padStart(2, "0")} · Locked
+                    </p>
+                    <h3 className="mt-1 font-display text-[22px] font-semibold text-ink">
+                      {active.root}
+                    </h3>
+                    <p className="mt-1.5 text-[13px] leading-relaxed text-slate">
+                      {active.blurb}
+                    </p>
+                    <ul className="mx-auto mt-3 max-w-sm space-y-2 text-left">
+                      {active.children.map((leaf) => (
+                        <li
+                          key={leaf}
+                          className="flex items-start gap-2.5 text-[13px] text-charcoal"
+                        >
+                          <span
+                            className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+                            style={{ backgroundColor: a.hex }}
+                          />
+                          <span className="font-semibold leading-tight text-ink/90">
+                            {leaf}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </AnimatePresence>
+
+                <div className="mt-4 flex items-center justify-center gap-2.5">
+                  {trees.map((tree, i) => {
+                    const selected = i === activeIndex;
+                    const ta = accent[tree.accent];
+                    return (
+                      <button
+                        key={tree.id}
+                        type="button"
+                        onClick={() => scrollToChapter(i)}
+                        aria-label={tree.root}
+                        aria-current={selected ? "true" : undefined}
+                        className="flex h-9 w-9 items-center justify-center"
+                      >
+                        <span
+                          className="block rounded-full transition-all duration-300"
+                          style={{
+                            width: selected ? 11 : 6,
+                            height: selected ? 11 : 6,
+                            background: selected
+                              ? ta.hex
+                              : "rgba(18,41,77,0.2)",
+                            boxShadow: selected
+                              ? `0 0 0 4px ${ta.soft}`
+                              : "none",
+                          }}
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+                <p className="mt-1.5 text-[11px] text-slate/65">
+                  Scroll To Spin · Tap A Ring To Lock
+                </p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MobileOrbitNode({
+  tree,
+  index,
+  selected,
+  systemRot,
+  orbitPct,
+  onSelect,
+}: {
+  tree: Tree;
+  index: number;
+  selected: boolean;
+  systemRot: MotionValue<number>;
+  orbitPct: number;
+  onSelect: () => void;
+}) {
+  const a = accent[tree.accent];
+  const Icon = groupIcons[tree.id] ?? Building2;
+  const home = index * 90;
+
+  const x = useTransform(systemRot, (rot) => {
+    const rad = ((home - rot - 90) * Math.PI) / 180;
+    return `${50 + orbitPct * Math.cos(rad)}%`;
+  });
+  const y = useTransform(systemRot, (rot) => {
+    const rad = ((home - rot - 90) * Math.PI) / 180;
+    return `${50 + orbitPct * Math.sin(rad)}%`;
+  });
+
+  return (
+    <motion.button
+      type="button"
+      onClick={onSelect}
+      aria-pressed={selected}
+      aria-label={tree.root}
+      className="absolute z-10 -translate-x-1/2 -translate-y-1/2"
+      style={{ left: x, top: y }}
+    >
+      <span
+        className="flex items-center justify-center rounded-full transition-all duration-300"
+        style={{
+          width: selected ? 56 : 46,
+          height: selected ? 56 : 46,
+          background: selected ? a.hex : "#FBF6EC",
+          border: `1.5px solid ${selected ? a.hex : "rgba(18,41,77,0.22)"}`,
+          boxShadow: selected ? `0 10px 22px ${a.glow}` : "none",
+          color: selected ? "#FBF6EC" : a.hex,
+        }}
+      >
+        <Icon size={selected ? 22 : 18} strokeWidth={2.2} />
+      </span>
+    </motion.button>
+  );
+}
+
+function DesktopInkCompass() {
   const glowId = useId().replace(/:/g, "");
   const trackRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -596,14 +920,11 @@ export default function MissionTrees() {
     return () => mq.removeEventListener("change", sync);
   }, [pointerX, pointerY]);
 
-  if (reduce) return <InkDossier />;
-
   const active = trees[activeIndex];
   const a = accent[active.accent];
 
   return (
     <section
-      id={missionTrees.id}
       aria-labelledby="mission-trees-heading"
       className="relative"
     >
