@@ -64,7 +64,7 @@ export default function AboutCertifications() {
   const connectorDash = useTransform(scrollYProgress, [0, 1], [0, -80]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    // Intro (0) + 4 certs (1–4) + recognition band (5)
+    // Intro (0) + 4 certs (1-4) + recognition band (5)
     // Wider bands so each credential can be read before the next swaps in
     if (latest < 0.08) setActiveIndex(0);
     else if (latest < 0.26) setActiveIndex(1);
@@ -154,7 +154,7 @@ export default function AboutCertifications() {
             PROOF
           </motion.div>
 
-          {/* Concentric ring — process language continued */}
+          {/* Concentric ring - process language continued */}
           <motion.div
             style={{ rotate: prefersReducedMotion ? 0 : ringRotate }}
             className="absolute top-[-60px] left-[-80px] w-[420px] h-[420px] opacity-[0.06] pointer-events-none -z-10 text-indigo"
@@ -197,7 +197,7 @@ export default function AboutCertifications() {
             />
           </svg>
 
-          {/* LEFT — sticky credential canvas */}
+          {/* LEFT - sticky credential canvas */}
           <div className="relative w-[54%] h-full flex flex-col justify-between py-10 pl-14 xl:pl-20 pr-4 z-20">
             {/* Top HUD */}
             <div className="flex justify-between items-start pointer-events-none select-none">
@@ -252,7 +252,7 @@ export default function AboutCertifications() {
                   </div>
                 </motion.div>
 
-                {/* Primary certificate — arch portal language from Process */}
+                {/* Primary certificate - arch portal language from Process */}
                 <motion.div
                   style={{ y: certY1 }}
                   className="absolute left-[18%] top-[4%] w-[58%] h-[78%] z-20 group"
@@ -345,7 +345,7 @@ export default function AboutCertifications() {
                   </div>
                 </motion.div>
 
-                {/* Small third photo — team desk / growth context */}
+                {/* Small third photo - team desk / growth context */}
                 <motion.div
                   style={{ y: certY3 }}
                   className="absolute right-[8%] top-[6%] w-[28%] aspect-square rounded-xl overflow-hidden border border-border/60 bg-paper p-1 shadow-card z-10"
@@ -429,7 +429,7 @@ export default function AboutCertifications() {
             </div>
           </div>
 
-          {/* RIGHT — scrolling narrative panels (via sticky viewport + opacity) */}
+          {/* RIGHT - scrolling narrative panels (via sticky viewport + opacity) */}
           <div className="relative w-[46%] h-full flex flex-col justify-center pr-14 xl:pr-20 pl-6 z-20">
             {/* Intro */}
             <div
@@ -506,7 +506,7 @@ export default function AboutCertifications() {
                   <div className="mt-7 bg-paper-deep/30 border border-border/50 rounded-xl p-4 flex gap-4 items-start shadow-sm max-w-md">
                     <span className="text-marigold text-lg shrink-0 mt-0.5">✦</span>
                     <span className="text-xs font-semibold text-charcoal leading-relaxed">
-                      The same credential language we cite on client WhatsApp updates —
+                      The same credential language we cite on client WhatsApp updates -
                       stamped outcomes you can forward to family and bank desks.
                     </span>
                   </div>
@@ -597,7 +597,7 @@ export default function AboutCertifications() {
                 ))}
               </ul>
 
-              {/* Affiliation ribbon — editorial text, not logo wall */}
+              {/* Affiliation ribbon - editorial text, not logo wall */}
               <div className="mt-6 max-w-md">
                 <div className="text-[8px] font-mono font-bold tracking-[0.25em] text-slate/40 mb-2">
                   PORTAL AFFILIATIONS · FILING PATHWAYS
@@ -618,7 +618,7 @@ export default function AboutCertifications() {
         </div>
       ) : (
         /* ========================================================
-           MOBILE — editorial vertical stack
+           MOBILE - editorial vertical stack
            ======================================================== */
         <div className="px-6 py-20 max-w-[640px] mx-auto flex flex-col">
           {/* Continuity marker */}

@@ -133,7 +133,7 @@ export default function FinalCTA() {
         >
           Ek free call. Koi obligation nahi.
           <br />
-          Eligibility, scheme fit, aur next documents —
+          Eligibility, scheme fit, aur next documents -
           <br />
           2 minute mein clear.
         </motion.p>

@@ -29,10 +29,10 @@ export const DEFAULT_LOCALE = "en_IN";
 export const DEFAULT_LANGUAGE = "en-IN";
 
 export const DEFAULT_TITLE =
-  "VIKASBHARAT | Startup & MSME Consulting — Sapno Se Safalta Tak";
+  "VIKASBHARAT | Startup & MSME Consulting - Sapno Se Safalta Tak";
 
 export const DEFAULT_DESCRIPTION =
-  "Vikas Bharat helps Indian startups and MSMEs with registrations, loans, government schemes, certifications and growth advisory — Sapno Se Safalta Tak.";
+  "Vikas Bharat helps Indian startups and MSMEs with registrations, loans, government schemes, certifications and growth advisory - Sapno Se Safalta Tak.";
 
 export const DEFAULT_OG_IMAGE = photos.seoCompany;
 export const DEFAULT_OG_ALT =

@@ -61,7 +61,7 @@ export default function AboutFaqSection() {
               variants={fadeUp}
               className="mt-4 max-w-lg text-base leading-relaxed text-slate sm:text-lg"
             >
-              Browse by topic — general, funding, registration, certification,
+              Browse by topic - general, funding, registration, certification,
               digital, and process.
             </motion.p>
           </div>
@@ -187,7 +187,7 @@ export default function AboutFaqSection() {
               Still unsure?
             </p>
             <p className="mt-1 text-sm text-slate">
-              Free first call — eligibility and next steps in two minutes.
+              Free first call - eligibility and next steps in two minutes.
             </p>
           </div>
           <a

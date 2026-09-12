@@ -24,7 +24,7 @@ import {
 
 const title = "Careers";
 const description =
-  "MSME loan sales, relationship, credit, channel-partner, processing and projects-manager openings at the Vikas Bharat Noida desk — full-time, on-site roles across the lending funnel.";
+  "MSME loan sales, relationship, credit, channel-partner, processing and projects-manager openings at the Vikas Bharat Noida desk - full-time, on-site roles across the lending funnel.";
 const breadcrumbs = [
   { name: "Home", path: "/" },
   { name: "Careers", path: "/careers" },

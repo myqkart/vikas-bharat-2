@@ -76,7 +76,7 @@ const stepsData = [
     id: "04",
     title: "Money In Your Account",
     caption: "We follow up until it's done.",
-    detail: "Sanction, disbursement, licence download, or GST live — we stay on the case.",
+    detail: "Sanction, disbursement, licence download, or GST live - we stay on the case.",
     icon: Landmark,
     color: "#d98c0f", // marigold-dark
     iconColor: "text-marigold-dark",

@@ -119,7 +119,7 @@ const desks: Record<string, ServiceDesk> = {
   grant: {
     title: `Government Grants | ${site.companyName}`,
     description:
-      "Access non-repayable government funding with specialised grants consultancy — scheme identification, eligibility, proposals, documentation and follow-up for MSMEs and startups.",
+      "Access non-repayable government funding with specialised grants consultancy - scheme identification, eligibility, proposals, documentation and follow-up for MSMEs and startups.",
     hero: {
       data: grantPage,
       images: {
@@ -178,7 +178,7 @@ const desks: Record<string, ServiceDesk> = {
   nbfc: {
     title: `NBFC Financing Solutions | ${site.companyName}`,
     description:
-      "Banks said no — or just too slow? Faster NBFC approvals, flexible eligibility, and specialised products from a 25+ partner network — working capital, machinery, LAP and invoice discounting.",
+      "Banks said no - or just too slow? Faster NBFC approvals, flexible eligibility, and specialised products from a 25+ partner network - working capital, machinery, LAP and invoice discounting.",
     hero: {
       data: nbfcPage,
       images: {
@@ -209,7 +209,7 @@ const desks: Record<string, ServiceDesk> = {
   registration: {
     title: `Business Registration Services | ${site.companyName}`,
     description:
-      "End-to-end business registration for Private Limited, LLP, OPC and Partnership — name reservation, MCA filing, PAN, GST, Udyam and post-incorporation compliance.",
+      "End-to-end business registration for Private Limited, LLP, OPC and Partnership - name reservation, MCA filing, PAN, GST, Udyam and post-incorporation compliance.",
     hero: {
       data: registrationPage,
       images: {
@@ -262,7 +262,7 @@ const desks: Record<string, ServiceDesk> = {
   opc: {
     title: `One Person Company (OPC) | ${site.companyName}`,
     description:
-      "Register a One Person Company in India with limited liability, a mandatory nominee, and end-to-end MCA filing — DSC, SPICe+, COI, PAN and TAN.",
+      "Register a One Person Company in India with limited liability, a mandatory nominee, and end-to-end MCA filing - DSC, SPICe+, COI, PAN and TAN.",
     hero: {
       data: opcPage,
       images: {
@@ -309,7 +309,7 @@ const desks: Record<string, ServiceDesk> = {
   startup: {
     title: `Startup India Certification | ${site.companyName}`,
     description:
-      "DPIIT Startup India recognition — eligibility, innovation narrative, portal filing and post-recognition guidance for 80-IAC, SISFS and government procurement.",
+      "DPIIT Startup India recognition - eligibility, innovation narrative, portal filing and post-recognition guidance for 80-IAC, SISFS and government procurement.",
     hero: {
       data: startupPage,
       images: {
@@ -368,7 +368,7 @@ const desks: Record<string, ServiceDesk> = {
   certificate: {
     title: `Certifications & Compliance | ${site.companyName}`,
     description:
-      "End-to-end ISO 9001/14001/27001, BIS CRS and FSSAI support — accredited audits, BIS lab coordination, FoSCoS filings and post-approval surveillance.",
+      "End-to-end ISO 9001/14001/27001, BIS CRS and FSSAI support - accredited audits, BIS lab coordination, FoSCoS filings and post-approval surveillance.",
     hero: {
       data: certificatePage,
       images: {
@@ -417,7 +417,7 @@ const desks: Record<string, ServiceDesk> = {
   growth: {
     title: `Growth Strategy Services | ${site.companyName}`,
     description:
-      "Data-driven growth strategy for startups and MSMEs — market expansion, revenue optimization, operational scaling and implementation roadmaps.",
+      "Data-driven growth strategy for startups and MSMEs - market expansion, revenue optimization, operational scaling and implementation roadmaps.",
     hero: {
       data: growthPage,
       images: {
@@ -466,7 +466,7 @@ const desks: Record<string, ServiceDesk> = {
   ma: {
     title: `Mergers & Acquisitions Advisory | ${site.companyName}`,
     description:
-      "Structured M&A advisory for MSMEs and startups — buy-side and sell-side, valuation, due diligence, deal structuring and 100-day integration planning.",
+      "Structured M&A advisory for MSMEs and startups - buy-side and sell-side, valuation, due diligence, deal structuring and 100-day integration planning.",
     hero: {
       data: maPage,
       images: {
@@ -495,7 +495,7 @@ const desks: Record<string, ServiceDesk> = {
   marketing: {
     title: `Marketing & Branding Services | ${site.companyName}`,
     description:
-      "Marketing and branding for MSMEs and startups — brand identity, digital strategy, content, performance campaigns, websites and measurable reporting.",
+      "Marketing and branding for MSMEs and startups - brand identity, digital strategy, content, performance campaigns, websites and measurable reporting.",
     hero: {
       data: marketingPage,
       images: {
@@ -544,7 +544,7 @@ const desks: Record<string, ServiceDesk> = {
   legal: {
     title: `Legal Consultancy | ${site.companyName}`,
     description:
-      "Legal consultancy for MSMEs and startups — contracts, corporate governance, HR compliance, IP, fundraising documents and ongoing regulatory support.",
+      "Legal consultancy for MSMEs and startups - contracts, corporate governance, HR compliance, IP, fundraising documents and ongoing regulatory support.",
     hero: {
       data: legalPage,
       images: {
@@ -594,7 +594,7 @@ const desks: Record<string, ServiceDesk> = {
   funding: {
     title: `Funding Instruments | ${site.companyName}`,
     description:
-      "Funding instruments for startups and MSMEs — government grants, bank and NBFC debt, VC, angels and international capital, matched to structure and stage.",
+      "Funding instruments for startups and MSMEs - government grants, bank and NBFC debt, VC, angels and international capital, matched to structure and stage.",
     hero: {
       data: fundingPage,
       images: {

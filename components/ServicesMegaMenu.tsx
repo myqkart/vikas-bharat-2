@@ -90,7 +90,7 @@ export default function ServicesMegaMenu({
       aria-label="Services"
       className="relative overflow-hidden rounded-[22px] border border-border/60 bg-[linear-gradient(165deg,rgba(255,255,255,0.96)_0%,rgba(251,246,236,0.94)_55%,rgba(255,255,255,0.92)_100%)] shadow-[0_1px_0_rgba(255,255,255,0.8)_inset,0_24px_60px_-18px_rgba(18,41,77,0.28)] backdrop-blur-xl"
     >
-      {/* Our Services — top */}
+      {/* Our Services - top */}
       <div className="relative p-4 sm:p-5">
         <div
           aria-hidden
@@ -113,7 +113,7 @@ export default function ServicesMegaMenu({
         </div>
       </div>
 
-      {/* Business Funding — below */}
+      {/* Business Funding - below */}
       <div className="relative border-t border-border/50">
         <div
           aria-hidden
@@ -138,7 +138,7 @@ export default function ServicesMegaMenu({
 
       <div className="flex items-center justify-between gap-3 border-t border-border/50 bg-ink/[0.03] px-4 py-3 sm:px-5">
         <p className="hidden text-[12px] text-slate sm:block">
-          Registration, funding, licences & growth — one desk.
+          Registration, funding, licences & growth - one desk.
         </p>
         <Link
           href={servicesMegaMenu.cta.href}

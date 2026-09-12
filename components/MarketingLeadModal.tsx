@@ -356,7 +356,7 @@ export default function MarketingLeadModal() {
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0 pr-2">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-error">
-                Wait — Before You Go
+                Wait - Before You Go
               </p>
               <h2
                 id={titleId}
@@ -365,7 +365,7 @@ export default function MarketingLeadModal() {
                 Which Funding You Qualify For?
               </h2>
               <p className="mt-1.5 text-[13px] leading-snug text-slate sm:text-sm sm:leading-relaxed">
-                Leave your number — our advisor will call you back and tell you
+                Leave your number - our advisor will call you back and tell you
                 exactly which grants and loans your business is eligible for.
                 Free, no commitment.
               </p>

@@ -25,7 +25,7 @@ export const careersPage = {
   eyebrow: "Join The Desk",
   heading: "Work With Vikas Bharat",
   intro:
-    "On-site openings at our Noida desk across the MSME loan funnel — sales, relationships, partners, credit, processing and project delivery, from first lead to disbursement.",
+    "On-site openings at our Noida desk across the MSME loan funnel - sales, relationships, partners, credit, processing and project delivery, from first lead to disbursement.",
   locationLabel: careersOffice.shortLabel,
   mapsUrl: careersOffice.mapsUrl,
   applyEmail: site.email,
@@ -67,9 +67,9 @@ export const careerRoles: readonly CareerRole[] = [
     type: "Full-time",
     workMode: "On-site",
     ...onSiteLocation,
-    experience: "1–3 years",
+    experience: "1-3 years",
     summary:
-      "Help businesses discover suitable financing — generate leads, explain MSME loan products, and convert qualified prospects into applications.",
+      "Help businesses discover suitable financing - generate leads, explain MSME loan products, and convert qualified prospects into applications.",
     overview:
       "We are looking for an energetic and target-oriented MSME Loan Sales Executive to help businesses discover suitable financing solutions. The candidate will be responsible for generating leads, understanding business funding requirements, explaining loan products, coordinating with customers and internal teams, and converting qualified prospects into successful loan applications.",
     responsibilities: [
@@ -87,7 +87,7 @@ export const careerRoles: readonly CareerRole[] = [
       "Stay updated on MSME loan products, market conditions, and competitor offerings.",
     ],
     requirements: [
-      "1–3 years of experience in sales, banking, NBFC, fintech, financial services, insurance, or a related field.",
+      "1-3 years of experience in sales, banking, NBFC, fintech, financial services, insurance, or a related field.",
       "Experience in business loans, MSME loans, personal loans, or financial products is preferred.",
       "Strong communication and interpersonal skills.",
       "Comfortable speaking with business owners and decision-makers.",
@@ -112,13 +112,13 @@ export const careerRoles: readonly CareerRole[] = [
   },
   {
     slug: "business-development-executive-msme-loans",
-    title: "Business Development Executive – MSME Loans",
+    title: "Business Development Executive - MSME Loans",
     department: "Business Development",
     jobType: "Business Development",
     type: "Full-time",
     workMode: "On-site",
     ...onSiteLocation,
-    experience: "1–4 years",
+    experience: "1-4 years",
     summary:
       "Identify MSME funding opportunities, meet entrepreneurs in the field, and convert relationships into a lasting loan pipeline.",
     overview:
@@ -139,7 +139,7 @@ export const careerRoles: readonly CareerRole[] = [
       "Monitor market trends and competitor activities.",
     ],
     requirements: [
-      "1–4 years of experience in business development, sales, banking, NBFC, fintech, financial services, or related industries.",
+      "1-4 years of experience in business development, sales, banking, NBFC, fintech, financial services, or related industries.",
       "Experience with MSME/business loan products is preferred.",
       "Strong business communication and relationship-building skills.",
       "Confident in meeting and communicating with business owners.",
@@ -161,15 +161,15 @@ export const careerRoles: readonly CareerRole[] = [
   },
   {
     slug: "relationship-manager-business-loans",
-    title: "Relationship Manager – Business Loans",
+    title: "Relationship Manager - Business Loans",
     department: "Relationships",
     jobType: "Relationships",
     type: "Full-time",
     workMode: "On-site",
     ...onSiteLocation,
-    experience: "2–5 years",
+    experience: "2-5 years",
     summary:
-      "Own the customer after the first conversation — convert warm MSME leads, keep files moving, and turn disbursed loans into repeat and referral business.",
+      "Own the customer after the first conversation - convert warm MSME leads, keep files moving, and turn disbursed loans into repeat and referral business.",
     overview:
       "We are looking for a Relationship Manager for business loans who can take qualified MSME customers from interest to application and stay with them through processing. This is a conversion and portfolio role: you already know how to talk to business owners, you follow up without being asked, and you protect the relationship after disbursement.",
     responsibilities: [
@@ -185,7 +185,7 @@ export const careerRoles: readonly CareerRole[] = [
       "Hit conversion and portfolio-quality targets, not just raw meeting counts.",
     ],
     requirements: [
-      "2–5 years in relationship management, business-loan sales, banking, NBFC or MSME-facing financial services.",
+      "2-5 years in relationship management, business-loan sales, banking, NBFC or MSME-facing financial services.",
       "Comfortable owning a customer from first meeting through disbursement.",
       "Strong follow-up, negotiation and plain-language product explanation.",
       "Experience with MSME or business loan products is preferred.",
@@ -216,9 +216,9 @@ export const careerRoles: readonly CareerRole[] = [
     type: "Full-time",
     workMode: "On-site",
     ...onSiteLocation,
-    experience: "1–3 years",
+    experience: "1-3 years",
     summary:
-      "Keep MSME loan files moving — documents, follow-ups, CRM updates, and coordination from submission through processing.",
+      "Keep MSME loan files moving - documents, follow-ups, CRM updates, and coordination from submission through processing.",
     overview:
       "We are looking for a detail-oriented Loan Processing & Sales Operations Executive to support our sales team and ensure that MSME loan applications move smoothly from initial submission to final processing. The role requires strong coordination, documentation, follow-up, and communication skills.",
     responsibilities: [
@@ -239,7 +239,7 @@ export const careerRoles: readonly CareerRole[] = [
       "Maintain confidentiality of customer and financial information.",
     ],
     requirements: [
-      "1–3 years of experience in loan processing, sales coordination, banking, NBFC, fintech, financial services, or related operations.",
+      "1-3 years of experience in loan processing, sales coordination, banking, NBFC, fintech, financial services, or related operations.",
       "Experience with business/MSME loans is preferred.",
       "Strong attention to detail.",
       "Good documentation and organizational skills.",
@@ -261,15 +261,15 @@ export const careerRoles: readonly CareerRole[] = [
   },
   {
     slug: "credit-analyst-msme-loans",
-    title: "Credit Analyst – MSME Loans",
+    title: "Credit Analyst - MSME Loans",
     department: "Credit",
     jobType: "Credit",
     type: "Full-time",
     workMode: "On-site",
     ...onSiteLocation,
-    experience: "1–4 years",
+    experience: "1-4 years",
     summary:
-      "Read the business, not only the form — assess MSME applications, flag risk, and help the desk decide what can go to a lender with a straight face.",
+      "Read the business, not only the form - assess MSME applications, flag risk, and help the desk decide what can go to a lender with a straight face.",
     overview:
       "We are looking for a Credit Analyst for MSME loans who can review applications, bank statements, GST, bureau data and a simple business story, then write a clear view for the team. You are not a sales closer. You protect file quality so that what we send to banks and NBFCs is honest, complete and defensible.",
     responsibilities: [
@@ -281,11 +281,11 @@ export const careerRoles: readonly CareerRole[] = [
       "Stay current on product eligibility, lender grids and scheme-linked loan conditions we actually use.",
       "Flag cases that need a senior review instead of pushing a weak file forward.",
       "Maintain confidential, accurate records of assessments and decisions.",
-      "Support the desk with simple portfolio observations — repeat delays, document gaps, common decline reasons.",
+      "Support the desk with simple portfolio observations - repeat delays, document gaps, common decline reasons.",
       "Never invent eligibility. If the unit does not fit, say so early.",
     ],
     requirements: [
-      "1–4 years in credit, underwriting, loan operations, banking, NBFC or MSME financial analysis.",
+      "1-4 years in credit, underwriting, loan operations, banking, NBFC or MSME financial analysis.",
       "Comfort reading bank statements, GST and basic financials for small businesses.",
       "Strong attention to detail and written English for credit notes.",
       "Ability to explain a yes/no in plain language to a sales colleague.",
@@ -309,15 +309,15 @@ export const careerRoles: readonly CareerRole[] = [
   },
   {
     slug: "channel-partner-executive-msme-loans",
-    title: "Channel Partner Executive – MSME Loans",
+    title: "Channel Partner Executive - MSME Loans",
     department: "Partnerships",
     jobType: "Partnerships",
     type: "Full-time",
     workMode: "On-site",
     ...onSiteLocation,
-    experience: "1–4 years",
+    experience: "1-4 years",
     summary:
-      "Build a partner desk — DSAs, CAs, consultants and referral sources who send MSME loan cases, then keep those relationships active.",
+      "Build a partner desk - DSAs, CAs, consultants and referral sources who send MSME loan cases, then keep those relationships active.",
     overview:
       "We are looking for a Channel Partner Executive who can find, onboard and run a network of DSAs, chartered accountants, consultants and other referral partners for MSME loans. Direct hunting is a different role. Here you grow a channel: more good files in, fewer dead partners, clear communication on case status.",
     responsibilities: [
@@ -333,7 +333,7 @@ export const careerRoles: readonly CareerRole[] = [
       "Hit channel-sourced application and conversion targets.",
     ],
     requirements: [
-      "1–4 years in channel sales, DSA management, partner acquisition, banking, NBFC or MSME financial distribution.",
+      "1-4 years in channel sales, DSA management, partner acquisition, banking, NBFC or MSME financial distribution.",
       "Comfortable meeting CAs, consultants and local business networks.",
       "Clear Hindi and English. Organised follow-up and CRM habits.",
       "Willingness to travel locally in Noida / NCR for partner meetings.",
@@ -363,25 +363,25 @@ export const careerRoles: readonly CareerRole[] = [
     type: "Full-time",
     workMode: "On-site",
     ...onSiteLocation,
-    experience: "2–5 years",
+    experience: "2-5 years",
     summary:
-      "Own MSME loan and scheme files as projects — timelines, owners, pending documents, and a clear path from kickoff to disbursement or a documented close.",
+      "Own MSME loan and scheme files as projects - timelines, owners, pending documents, and a clear path from kickoff to disbursement or a documented close.",
     overview:
       "We are looking for a Projects Manager to run MSME loan and related scheme files as live projects, not as a loose pile of WhatsApp threads. You sit between sales, relationships, credit and processing: you know who owns the next action, what is pending, and when a file is stuck. This is not a sales closer and not a credit analyst. You keep the desk honest on delivery.",
     responsibilities: [
       "Take assigned MSME loan, documentation and scheme files and run them as projects with a start, owners and a target close.",
       "Build a simple tracker: customer, product, pending documents, credit status, lender, next action and date.",
       "Run a daily or weekly desk huddle so sales, credit and processing are looking at the same list.",
-      "Escalate stalled files early — missing KYC, silent customer, lender query, internal delay.",
+      "Escalate stalled files early - missing KYC, silent customer, lender query, internal delay.",
       "Coordinate with Relationship Managers and Loan Processing so customers hear one status, not three.",
       "Protect scope: if a case needs a different product or is not eligible, get that written and closed.",
-      "Prepare a short weekly MIS for the desk — inflows, pending, disbursed, declined, ageing.",
+      "Prepare a short weekly MIS for the desk - inflows, pending, disbursed, declined, ageing.",
       "Standardise checklists for common file types (working capital, machinery, scheme-linked) without inventing a bureaucracy.",
       "Keep customer and partner communication professional when chasing pending items.",
       "Never promise a disbursement date the file cannot support.",
     ],
     requirements: [
-      "2–5 years in project coordination, loan operations, case management, banking, NBFC, MSME consulting or a delivery-facing operations role.",
+      "2-5 years in project coordination, loan operations, case management, banking, NBFC, MSME consulting or a delivery-facing operations role.",
       "Comfortable running a tracker, chasing owners, and reporting status without drama.",
       "Strong written and spoken Hindi and English.",
       "Excel / Google Sheets and basic CRM discipline.",
@@ -401,7 +401,7 @@ export const careerRoles: readonly CareerRole[] = [
       "Competitive salary. Final compensation will depend on experience, skills, and performance.",
     seoTitle: "Projects Manager MSME Loans Jobs In Noida",
     seoDescription:
-      "Join Vikas Bharat as a Projects Manager at our Sector 63, Noida desk. Run MSME loan and scheme files as projects — owners, pending documents, timelines and a clean close.",
+      "Join Vikas Bharat as a Projects Manager at our Sector 63, Noida desk. Run MSME loan and scheme files as projects - owners, pending documents, timelines and a clean close.",
   },
 ];
 
@@ -423,7 +423,7 @@ export const careerFaq = {
     {
       question: "Are these roles only in Noida?",
       answer:
-        "Yes. These openings are on-site at our desk — 1st floor, F-5, C Block, Sector 63, Noida. Remote-only applications are not a fit for these roles.",
+        "Yes. These openings are on-site at our desk - 1st floor, F-5, C Block, Sector 63, Noida. Remote-only applications are not a fit for these roles.",
     },
     {
       question: "Do I need prior MSME loan experience?",

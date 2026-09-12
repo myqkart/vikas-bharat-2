@@ -366,7 +366,7 @@ export default function Header() {
 
   return (
     <>
-      {/* Desktop / tablet — split beacon → fused island */}
+      {/* Desktop / tablet - split beacon → fused island */}
       <motion.header
         initial={reduce ? false : { y: -10, opacity: 0 }}
         animate={{
@@ -475,7 +475,7 @@ export default function Header() {
         </div>
       </motion.header>
 
-      {/* Mobile — dock + sheet */}
+      {/* Mobile - dock + sheet */}
       <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 md:hidden">
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper via-paper/80 to-transparent"

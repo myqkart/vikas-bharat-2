@@ -195,7 +195,7 @@ export default function Network() {
               onComplete={onComplete}
             />
 
-            {/* Overlay chrome — does not constrain the globe */}
+            {/* Overlay chrome - does not constrain the globe */}
             <div className="pointer-events-none absolute inset-x-0 top-[max(3.5rem,env(safe-area-inset-top))] z-20 flex justify-center px-4">
               <AnimatePresence mode="wait">
                 {phase !== "idle" ? (

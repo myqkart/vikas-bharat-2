@@ -68,7 +68,7 @@ export default function AboutRecognition() {
             variants={dramaticFadeUp}
             className="max-w-md text-base leading-relaxed text-slate lg:justify-self-end"
           >
-            ISO, BIS/CRS, FSSAI, tax exemption pathways, ZED, and more — the
+            ISO, BIS/CRS, FSSAI, tax exemption pathways, ZED, and more - the
             stamps founders ask for.
           </motion.p>
         </motion.div>

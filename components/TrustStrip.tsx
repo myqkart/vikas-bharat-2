@@ -420,7 +420,7 @@ const cardsData = [
     suffix: " Google Rating",
     badge: "Noida Desk",
     title: "Trusted Support Network",
-    sub: "Walk In At Sector 63, Noida — Or Connect From Anywhere In India.",
+    sub: "Walk In At Sector 63, Noida - Or Connect From Anywhere In India.",
     illustration: <NetworkIllustration />,
     cardBg: "from-purple-500/[0.04] to-transparent border-purple-500/10 hover:border-purple-500/20",
     badgeStyles: "border-purple-500/20 bg-purple-500/[0.06] text-purple-600"

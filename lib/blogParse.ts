@@ -28,7 +28,7 @@ const TITLE_OVERRIDES: Record<string, string> = {
 
 const EXCERPT_OVERRIDES: Record<string, string> = {
   "truth-about-enego-services":
-    "What a genuine MSME desk actually does — and the checks to run before you send documents or pay a consultancy fee.",
+    "What a genuine MSME desk actually does - and the checks to run before you send documents or pay a consultancy fee.",
 };
 
 const CATEGORY_ALIASES: Record<string, string> = {

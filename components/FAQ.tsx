@@ -77,7 +77,7 @@ const getOrderedItems = (items: readonly FaqItem[], useLandingOrder: boolean) =>
 
 const CAROUSEL_LIMIT = 5;
 
-// Helper to resolve card icons dynamically — never a question-mark glyph
+// Helper to resolve card icons dynamically - never a question-mark glyph
 function getCardIcon(question: string) {
   const q = question.toLowerCase();
   if (

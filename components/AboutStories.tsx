@@ -173,7 +173,7 @@ function StoryPortraitLead({ story }: { story: Story }) {
         <StoryMeta story={story} />
 
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-start">
-          {/* Image collage — left */}
+          {/* Image collage - left */}
           <div className="relative h-[420px] sm:h-[520px] lg:h-[600px]">
             <motion.div
               style={{ y: yMain }}
@@ -182,7 +182,7 @@ function StoryPortraitLead({ story }: { story: Story }) {
               <div className="relative w-full h-full overflow-hidden rounded-[18px]">
                 <Image
                   src={story.businessImage}
-                  alt={`${story.business} — business environment`}
+                  alt={`${story.business} - business environment`}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   sizes="(max-width: 1024px) 90vw, 520px"
@@ -224,7 +224,7 @@ function StoryPortraitLead({ story }: { story: Story }) {
             >
               <Image
                 src={story.challengeImage}
-                alt={`${story.business} — challenge context`}
+                alt={`${story.business} - challenge context`}
                 fill
                 className="object-cover"
                 sizes="140px"
@@ -240,7 +240,7 @@ function StoryPortraitLead({ story }: { story: Story }) {
             </div>
           </div>
 
-          {/* Story copy — right */}
+          {/* Story copy - right */}
           <div className="relative lg:pt-8">
             <div className="absolute -right-4 top-0 font-display text-[120px] lg:text-[160px] font-black text-ink/[0.035] leading-none select-none pointer-events-none hidden lg:block">
               {story.num}
@@ -413,7 +413,7 @@ function StoryBusinessCanvas({ story }: { story: Story }) {
                 >
                   <Image
                     src={story.outcomeImage}
-                    alt={`${story.business} — growth after support`}
+                    alt={`${story.business} - growth after support`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 90vw, 480px"
@@ -972,7 +972,7 @@ export default function AboutStories() {
               </h3>
               <p className="mt-4 text-slate text-sm font-semibold leading-relaxed max-w-md">
                 Credentials prove we can file. These stories prove why it
-                matters — capital, licences, and clarity in the hands of real
+                matters - capital, licences, and clarity in the hands of real
                 founders.
               </p>
             </Reveal>

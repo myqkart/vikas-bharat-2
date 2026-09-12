@@ -24,7 +24,7 @@ function loadFromMarkdown(): BlogPost[] {
 
 const posts = loadFromMarkdown();
 if (posts.length === 0) {
-  console.log("No markdown in blogs/. Skipping ingest — keeping existing JSON.");
+  console.log("No markdown in blogs/. Skipping ingest - keeping existing JSON.");
   process.exit(0);
 }
 

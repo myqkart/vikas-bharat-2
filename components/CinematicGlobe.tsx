@@ -160,7 +160,7 @@ function buildCountryLines(): THREE.LineSegments {
   return new THREE.LineSegments(geo, mat);
 }
 
-/** Filled landmasses (medium gray) — matches reference continent fill. */
+/** Filled landmasses (medium gray) - matches reference continent fill. */
 function buildLandMesh(): THREE.Mesh {
   const topo = landTopo as unknown as Topology<{ land: GeometryCollection }>;
   const fc = feature(topo, topo.objects.land) as FeatureCollection<Geometry>;
@@ -280,7 +280,7 @@ export default function CinematicGlobe({
     const root = new THREE.Group();
     scene.add(root);
 
-    // Ocean — matte light gray / white (no shiny plastic look)
+    // Ocean - matte light gray / white (no shiny plastic look)
     const sphere = new THREE.Mesh(
       new THREE.SphereGeometry(RADIUS, 64, 64),
       new THREE.MeshLambertMaterial({
@@ -291,7 +291,7 @@ export default function CinematicGlobe({
     );
     root.add(sphere);
 
-    // Soft white rim — subtle, not glowing
+    // Soft white rim - subtle, not glowing
     const atmosphere = new THREE.Mesh(
       new THREE.SphereGeometry(RADIUS * 1.028, 64, 64),
       new THREE.MeshBasicMaterial({
@@ -329,7 +329,7 @@ export default function CinematicGlobe({
     markerGlow.scale.setScalar(0.6);
     root.add(markerGlow);
 
-    // Soft, even lighting — avoids hot specular shine
+    // Soft, even lighting - avoids hot specular shine
     const key = new THREE.DirectionalLight(0xffffff, 0.45);
     key.position.set(2.2, 1.8, 3.5);
     scene.add(key);

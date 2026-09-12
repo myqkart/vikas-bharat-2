@@ -75,7 +75,7 @@ const journeySteps: JourneyStep[] = [
     title: "Document Collection",
     titleHindi: "दस्तावेज",
     caption: "Zero-hassle checklist.",
-    detail: "Receive a minimal checklist on WhatsApp. Share basic KYC and financials — our desk screens them for compliance so you don't file twice.",
+    detail: "Receive a minimal checklist on WhatsApp. Share basic KYC and financials - our desk screens them for compliance so you don't file twice.",
     emotion: "Structure",
     image: photos.badgeMsme,
     detailImage: photos.seoTrademark,
@@ -103,7 +103,7 @@ const journeySteps: JourneyStep[] = [
     title: "Application Filing",
     titleHindi: "आवेदन",
     caption: "We compile the file.",
-    detail: "We draft detailed project reports (DPR), assemble bank dossiers, and fill registration forms. You review and sign — we handle portal submissions.",
+    detail: "We draft detailed project reports (DPR), assemble bank dossiers, and fill registration forms. You review and sign - we handle portal submissions.",
     emotion: "Progress",
     image: photos.serviceLoan,
     detailImage: photos.stepPaperwork,
@@ -268,7 +268,7 @@ export default function AboutJourney() {
                   <span className="font-serif italic text-marigold-dark font-normal">Realized Outcome.</span>
                 </h2>
                 <p className="mt-6 text-slate text-sm xl:text-base leading-relaxed font-semibold">
-                  A custom business filing is not a single transaction. It is a path of validation —
+                  A custom business filing is not a single transaction. It is a path of validation -
                   from your first question to money in hand.
                 </p>
               </motion.div>

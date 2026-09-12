@@ -126,7 +126,7 @@ export const servicePage = {
   brand: "VIKASBHARAT",
   heading: "Our Services",
   intro:
-    "We are a business consulting and growth advisory firm dedicated to empowering MSMEs and startups in India. We provide end-to-end support across compliance, strategy, finance, legal, and growth—helping businesses build strong foundations, stay compliant, and scale sustainably.",
+    "We are a business consulting and growth advisory firm dedicated to empowering MSMEs and startups in India. We provide end-to-end support across compliance, strategy, finance, legal, and growth - helping businesses build strong foundations, stay compliant, and scale sustainably.",
   cta: "Check Your Eligibility",
   image: photos.serviceRegistration,
   imageAlt: "Advisor reviewing business registration and funding options with a founder",
@@ -143,21 +143,21 @@ export const servicePage = {
     items: [
       {
         title: "Government Grants",
-        text: "We identify which government grants and subsidies your business qualifies for, prepare the application, file on official portals, and follow through until the money reaches you — with full documentation support.",
+        text: "We identify which government grants and subsidies your business qualifies for, prepare the application, file on official portals, and follow through until the money reaches you - with full documentation support.",
         href: "/services/grant",
         image: photos.serviceGrant,
         icon: "grant" as const,
       },
       {
         title: "Business Loan Services",
-        text: "We compare 25+ lenders — banks, NBFCs, and government schemes — to find the right loan for your business, handle the paperwork, and stay with your application through to approval and disbursement.",
+        text: "We compare 25+ lenders - banks, NBFCs, and government schemes - to find the right loan for your business, handle the paperwork, and stay with your application through to approval and disbursement.",
         href: "/services/loan",
         image: photos.serviceLoan,
         icon: "loan" as const,
       },
       {
         title: "NBFC Financing Solutions",
-        text: "When you need faster approval or a loan product banks do not offer, we match you to the right NBFC from our network of 25+ partners — working capital, machinery, LAP, or invoice discounting.",
+        text: "When you need faster approval or a loan product banks do not offer, we match you to the right NBFC from our network of 25+ partners - working capital, machinery, LAP, or invoice discounting.",
         href: "/services/nbfc",
         image: photos.aboutServiceNbf,
         icon: "nbfc" as const,
@@ -167,7 +167,7 @@ export const servicePage = {
   catalog: {
     eyebrow: "Full Desk",
     heading: "Our Services",
-    sub: "Everything Your Business Needs Under One Roof — From First Filing To Scale.",
+    sub: "Everything Your Business Needs Under One Roof - From First Filing To Scale.",
     items: [
       {
         title: "Business Registration Services",
@@ -185,7 +185,7 @@ export const servicePage = {
       },
       {
         title: "Startup India Certification",
-        text: "DPIIT Startup India recognition — eligibility review, pitch writeup and portal filing support.",
+        text: "DPIIT Startup India recognition - eligibility review, pitch writeup and portal filing support.",
         href: "/services/startup",
         icon: "startup" as const,
         image: photos.schemeSeed,
@@ -227,7 +227,7 @@ export const servicePage = {
       },
       {
         title: "Funding Instruments",
-        text: "Match the right funding instrument — equity, debt, grants or hybrids — to your stage and goals.",
+        text: "Match the right funding instrument - equity, debt, grants or hybrids - to your stage and goals.",
         href: "/services/funding",
         icon: "funding" as const,
         image: photos.serviceLoan,
@@ -394,7 +394,7 @@ export const schemePage = {
       {
         id: "zed",
         title: "ZED Certification",
-        text: "Zero Defect Zero Effect certification with subsidy support — quality, process and export readiness for MSMEs.",
+        text: "Zero Defect Zero Effect certification with subsidy support - quality, process and export readiness for MSMEs.",
         filters: [] as const,
         featured: false,
         image: photos.aboutCertZed,
@@ -403,7 +403,7 @@ export const schemePage = {
       {
         id: "clcss",
         title: "CLCSS Subsidy",
-        text: "Credit Linked Capital Subsidy Scheme — capital support for technology upgradation of micro and small units.",
+        text: "Credit Linked Capital Subsidy Scheme - capital support for technology upgradation of micro and small units.",
         filters: [] as const,
         featured: false,
         image: photos.serviceGrant,
@@ -442,7 +442,7 @@ export const schemePage = {
       {
         id: "equity-elevator",
         title: "Equity Elevator",
-        text: "Progressive equity funding program to elevate startup growth — international equity-based funding up to ₹4 Crore for tech startups with mentorship, networking, and expert guidance.",
+        text: "Progressive equity funding program to elevate startup growth - international equity-based funding up to ₹4 Crore for tech startups with mentorship, networking, and expert guidance.",
         filters: ["Equity"] as const,
         featured: false,
         filterOnly: true,
@@ -472,7 +472,7 @@ export const schemePage = {
       {
         id: "venture-tech",
         title: "Venture Tech Funding",
-        text: "Chiratae Sonic Venture Tech Funding for early-stage disruptive tech startups — seed investment up to ₹18 Crore with 48-hour initial response, Demo Day and mentorship.",
+        text: "Chiratae Sonic Venture Tech Funding for early-stage disruptive tech startups - seed investment up to ₹18 Crore with 48-hour initial response, Demo Day and mentorship.",
         filters: ["Equity"] as const,
         featured: false,
         filterOnly: true,
@@ -872,7 +872,7 @@ export const schemePage = {
       {
         id: "government-grants-guide",
         title: "Government Grants Guide",
-        text: "An overview of how government grants work for startups and MSMEs — eligibility, application process and expert support.",
+        text: "An overview of how government grants work for startups and MSMEs - eligibility, application process and expert support.",
         filters: ["Grant"] as const,
         featured: false,
         filterOnly: true,
@@ -972,7 +972,7 @@ export const schemePage = {
       {
         id: "elevate-nxt",
         title: "ELEVATE NxT",
-        text: "Learn everything about the ELEVATE NxT 2026 scheme in Karnataka – eligibility, benefits, funding support, mentorship, and documents required for startups.",
+        text: "Learn everything about the ELEVATE NxT 2026 scheme in Karnataka - eligibility, benefits, funding support, mentorship, and documents required for startups.",
         filters: ["Grant"] as const,
         featured: false,
         filterOnly: true,
@@ -1082,7 +1082,7 @@ export const schemePage = {
       {
         id: "startup-india-eligibility",
         title: "Startup India Scheme Eligibility",
-        text: "Understand Startup India scheme eligibility, new turnover limits, deep tech startup benefits, cooperative inclusion, and updated DPIIT recognition rules — plus how to apply for funding, tax benefits, and other support programs.",
+        text: "Understand Startup India scheme eligibility, new turnover limits, deep tech startup benefits, cooperative inclusion, and updated DPIIT recognition rules - plus how to apply for funding, tax benefits, and other support programs.",
         filters: ["Certificate"] as const,
         featured: false,
         filterOnly: true,
@@ -1112,7 +1112,7 @@ export const schemePage = {
       {
         id: "twees",
         title: "TWEES Scheme",
-        text: "Tamil Nadu Women Employment and Entrepreneurship Scheme — loans up to ₹10 Lakh with 25% subsidy (max ₹2 Lakh) for women and transgender entrepreneurs.",
+        text: "Tamil Nadu Women Employment and Entrepreneurship Scheme - loans up to ₹10 Lakh with 25% subsidy (max ₹2 Lakh) for women and transgender entrepreneurs.",
         filters: ["Subsidy"] as const,
         featured: false,
         filterOnly: true,
@@ -1230,22 +1230,22 @@ export const schemeFaq = {
     {
       question: "How do I know which scheme I am eligible for?",
       answer:
-        "Share your business type, city, turnover band and existing registrations on WhatsApp. We screen 50+ central and state schemes and shortlist 2–3 realistic options with timelines — usually within 48 hours.",
+        "Share your business type, city, turnover band and existing registrations on WhatsApp. We screen 50+ central and state schemes and shortlist 2-3 realistic options with timelines - usually within 48 hours.",
     },
     {
       question: "Do I need Udyam / MSME registration first?",
       answer:
-        "Yes for most MSME schemes and many bank products — Udyam is the key eligibility proof. If you do not have it yet, we file Udyam first and then map the right loan, subsidy or guarantee scheme.",
+        "Yes for most MSME schemes and many bank products - Udyam is the key eligibility proof. If you do not have it yet, we file Udyam first and then map the right loan, subsidy or guarantee scheme.",
     },
     {
       question: "How long does a scheme application take?",
       answer:
-        "Most funding cases take 4–12 weeks depending on the scheme queue, bank processing and portal queries. Certification schemes are often faster. We send a weekly status so you always know where the file stands.",
+        "Most funding cases take 4-12 weeks depending on the scheme queue, bank processing and portal queries. Certification schemes are often faster. We send a weekly status so you always know where the file stands.",
     },
     {
       question: "Is Vikas Bharat a government office?",
       answer:
-        "No. We are a private consultancy. We prepare documentation, file on official portals and coordinate with banks and agencies — we are not affiliated with any government department.",
+        "No. We are a private consultancy. We prepare documentation, file on official portals and coordinate with banks and agencies - we are not affiliated with any government department.",
     },
     {
       question: "What documents do I need to start?",
@@ -1260,7 +1260,7 @@ export const grantPage = {
   heading: "Government Grants",
   kicker: "MSME • Startup India • DPIIT • Sector-Specific Schemes",
   intro:
-    "Access non-repayable government funding with Vikas Bharat’s specialized grants consultancy — scheme identification, eligibility assessment, application development, documentation support and follow-up to maximise your chances of securing government financial assistance.",
+    "Access non-repayable government funding with Vikas Bharat’s specialized grants consultancy - scheme identification, eligibility assessment, application development, documentation support and follow-up to maximise your chances of securing government financial assistance.",
   cta: "Start Funding Journey",
   imageAlt: "Advisor preparing a government grant application with a founder",
   stats: [
@@ -1423,7 +1423,7 @@ export const grantPage = {
     note: "Documentation requirements vary significantly between grant schemes. Our team provides customised checklists specific to your target schemes after initial assessment.",
     items: [
       "Business registration certificates (Incorporation Certificate, MSME Registration, etc.)",
-      "Financial statements for the past 2–3 years (as applicable)",
+      "Financial statements for the past 2-3 years (as applicable)",
       "Cost estimates and quotations for proposed expenditures",
       "Industry-specific certifications and licenses",
       "Bank statements and existing financing documentation",
@@ -1449,7 +1449,7 @@ export const grantFaq = {
     {
       question: "How long does the government grant application process take?",
       answer:
-        "The total process from initiation to fund receipt generally spans 4–9 months, with smaller grants having faster processing times than larger funding programs.",
+        "The total process from initiation to fund receipt generally spans 4-9 months, with smaller grants having faster processing times than larger funding programs.",
     },
     {
       question: "What costs are typically covered by government grants?",
@@ -1469,7 +1469,7 @@ export const grantFaq = {
     {
       question: "Can Vikas Bharat guarantee grant approval?",
       answer:
-        "We cannot guarantee approval — final decisions rest with government authorities. Our specialised desk is built to improve success probability. The grants practice cites an 85% success rate on files we prepare and follow through.",
+        "We cannot guarantee approval - final decisions rest with government authorities. Our specialised desk is built to improve success probability. The grants practice cites an 85% success rate on files we prepare and follow through.",
     },
   ],
 } as const;
@@ -1492,7 +1492,7 @@ export const loanPage = {
     eyebrow: "Funding Highlights",
     heading: "MSME Financing, Under One Desk",
     paragraphs: [
-      "Vikas Bharat is built around funding experience and MSME financing — government-backed loans, bank products and NBFC options matched to your stage and cash-flow need.",
+      "Vikas Bharat is built around funding experience and MSME financing - government-backed loans, bank products and NBFC options matched to your stage and cash-flow need.",
       "We evaluate your profile, shortlist lenders, prepare the file, and stay with the application through verification until disbursement.",
     ],
     benefitsHeading: "What You Get",
@@ -1550,7 +1550,7 @@ export const loanPage = {
   services: {
     eyebrow: "Why This Desk",
     heading: "Why Choose Vikas Bharat For Business Loans?",
-    sub: "From Eligibility To Disbursement — A File That Is Matched, Prepared And Followed.",
+    sub: "From Eligibility To Disbursement - A File That Is Matched, Prepared And Followed.",
     items: [
       {
         title: "Multiple Funding Options",
@@ -1683,17 +1683,17 @@ export const loanFaq = {
     {
       question: "How long does the business loan approval process take?",
       answer:
-        "Small-ticket working capital loans through NBFCs can be approved within 2–3 days. Standard bank term loans typically require 2–4 weeks. Government scheme loans such as PMMY may require 3–5 weeks because of additional verification processes.",
+        "Small-ticket working capital loans through NBFCs can be approved within 2-3 days. Standard bank term loans typically require 2-4 weeks. Government scheme loans such as PMMY may require 3-5 weeks because of additional verification processes.",
     },
     {
       question: "What interest rates can I expect for business loans?",
       answer:
-        "Current business loan interest rates typically range from 9–18%. Banks: approximately 9–14% for secured loans. NBFCs: approximately 12–18%. Government schemes such as PMMY: approximately 8–11% for eligible businesses.",
+        "Current business loan interest rates typically range from 9-18%. Banks: approximately 9-14% for secured loans. NBFCs: approximately 12-18%. Government schemes such as PMMY: approximately 8-11% for eligible businesses.",
     },
     {
       question: "What collateral is required for business loans?",
       answer:
-        "Small working-capital loans under ₹10 lakhs are often available without collateral. Loans under CGTMSE can be availed up to ₹2 crores without collateral. For standard term loans, lenders typically require collateral coverage of approximately 100–125% of the loan value.",
+        "Small working-capital loans under ₹10 lakhs are often available without collateral. Loans under CGTMSE can be availed up to ₹2 crores without collateral. For standard term loans, lenders typically require collateral coverage of approximately 100-125% of the loan value.",
     },
     {
       question: "How can I improve my business loan eligibility?",
@@ -1713,11 +1713,11 @@ export const nbfcPage = {
   heading: "NBFC Financing Solutions",
   kicker: "Quick Disbursement • Flexible Eligibility • Specialized Products",
   intro:
-    "Banks said no — or just too slow? NBFCs offer faster approvals, flexible eligibility, and loan products that banks don’t provide. Vikas Bharat finds the right NBFC for your business and handles everything from application to disbursement.",
+    "Banks said no - or just too slow? NBFCs offer faster approvals, flexible eligibility, and loan products that banks don’t provide. Vikas Bharat finds the right NBFC for your business and handles everything from application to disbursement.",
   cta: "Get NBFC Loan Options",
   imageAlt: "Advisor matching a founder to NBFC financing partners",
   stats: [
-    { value: "24–72hrs", label: "Disbursement Time" },
+    { value: "24-72hrs", label: "Disbursement Time" },
     { value: "₹1Cr+", label: "Funding Available" },
     { value: "25+", label: "NBFC Partners" },
     { value: "Flexible", label: "Eligibility Criteria" },
@@ -1726,8 +1726,8 @@ export const nbfcPage = {
     eyebrow: "Faster Capital",
     heading: "NBFC Financing Solutions",
     paragraphs: [
-      "When you need faster approval or a loan product banks do not offer, we match you to the right NBFC from our network of 25+ partners — working capital, machinery, LAP, or invoice discounting.",
-      "Vikas Bharat helps businesses identify suitable financing based on their business model, financial profile and funding requirements — across banks, NBFCs, government schemes and specialised products.",
+      "When you need faster approval or a loan product banks do not offer, we match you to the right NBFC from our network of 25+ partners - working capital, machinery, LAP, or invoice discounting.",
+      "Vikas Bharat helps businesses identify suitable financing based on their business model, financial profile and funding requirements - across banks, NBFCs, government schemes and specialised products.",
     ],
     benefitsHeading: "Why Choose NBFC Financing?",
     benefits: [
@@ -1742,7 +1742,7 @@ export const nbfcPage = {
   categories: {
     eyebrow: "Product Desk",
     heading: "NBFC Loan Products",
-    sub: "Specialised Financing Products That Banks Often Do Not Offer — Matched To Your Purpose And Cash Flow.",
+    sub: "Specialised Financing Products That Banks Often Do Not Offer - Matched To Your Purpose And Cash Flow.",
     leftHeading: "Working Capital & Growth",
     rightHeading: "Asset & Invoice Finance",
     items: [
@@ -1787,12 +1787,12 @@ export const nbfcPage = {
       },
       {
         title: "Urgent Working Capital",
-        text: "Inventory, payroll or supplier payments that cannot wait on a 2–4 week bank file.",
+        text: "Inventory, payroll or supplier payments that cannot wait on a 2-4 week bank file.",
         icon: "wallet" as const,
       },
       {
         title: "Bank Eligibility Gaps",
-        text: "Difficulty meeting traditional bank criteria — vintage, collateral or CIBIL band.",
+        text: "Difficulty meeting traditional bank criteria - vintage, collateral or CIBIL band.",
         icon: "shield" as const,
       },
       {
@@ -1884,7 +1884,7 @@ export const nbfcPage = {
   process: {
     eyebrow: "How We File",
     heading: "Our NBFC Financing Process",
-    sub: "From First Assessment To Funds In The Account — Matched, Documented And Followed.",
+    sub: "From First Assessment To Funds In The Account - Matched, Documented And Followed.",
     steps: [
       {
         title: "Business Assessment",
@@ -1925,7 +1925,7 @@ export const nbfcFaq = {
     {
       question: "What is the difference between an NBFC loan and a bank loan?",
       answer:
-        "Both are business loans, but NBFCs are faster to approve, more flexible on eligibility, and offer products like invoice discounting that most banks don't. The trade-off is interest rates that are typically 1–4% higher than PSU bank rates.",
+        "Both are business loans, but NBFCs are faster to approve, more flexible on eligibility, and offer products like invoice discounting that most banks don't. The trade-off is interest rates that are typically 1-4% higher than PSU bank rates.",
     },
     {
       question: "Can I get an NBFC loan if my bank loan application was rejected?",
@@ -1940,7 +1940,7 @@ export const nbfcFaq = {
     {
       question: "How long does it take to get an NBFC loan disbursed?",
       answer:
-        "Most NBFC loans disburse within 24–72 hours after complete documentation. Some fintechs in our network can disburse working-capital loans the same day for pre-approved profiles.",
+        "Most NBFC loans disburse within 24-72 hours after complete documentation. Some fintechs in our network can disburse working-capital loans the same day for pre-approved profiles.",
     },
   ],
 } as const;
@@ -1964,8 +1964,8 @@ export const registrationPage = {
     heading: "Why The Right Registration Matters",
     paragraphs: [
       "Registering your business is the first real step from idea to operation. A registered company can open a current account, sign contracts, hire employees on a payroll, apply for government schemes and loans, and raise funding from investors. An unregistered business cannot do most of these things legally.",
-      "The structure you choose — Private Limited Company, LLP, OPC, or partnership — determines your tax treatment, how much personal liability you carry, what compliance you are required to file every year, and how easy it is to bring in investors later. Getting this right from day one saves significant cost and paperwork down the road.",
-      "Vikas Bharat handles the entire process — name reservation, DSC, MCA filing, Certificate of Incorporation, PAN, GST registration, and Udyam registration if applicable. You get a complete, operational business entity with a compliance calendar so nothing falls through the cracks.",
+      "The structure you choose - Private Limited Company, LLP, OPC, or partnership - determines your tax treatment, how much personal liability you carry, what compliance you are required to file every year, and how easy it is to bring in investors later. Getting this right from day one saves significant cost and paperwork down the road.",
+      "Vikas Bharat handles the entire process - name reservation, DSC, MCA filing, Certificate of Incorporation, PAN, GST registration, and Udyam registration if applicable. You get a complete, operational business entity with a compliance calendar so nothing falls through the cracks.",
     ],
     benefitsHeading: "Key Benefits",
     benefits: [
@@ -2017,7 +2017,7 @@ export const registrationPage = {
   services: {
     eyebrow: "What We File",
     heading: "What Vikas Bharat Handles For You",
-    sub: "Name To DSC, MCA Filing, And Post-Incorporation Setup — In One Engagement.",
+    sub: "Name To DSC, MCA Filing, And Post-Incorporation Setup - In One Engagement.",
     items: [
       {
         title: "Name & Digital Signature",
@@ -2036,7 +2036,7 @@ export const registrationPage = {
       },
       {
         title: "Add-On Registrations",
-        text: "GST registration, Udyam (MSME) registration, DPIIT Startup recognition, and IEC (Import Export Code) — handled together.",
+        text: "GST registration, Udyam (MSME) registration, DPIIT Startup recognition, and IEC (Import Export Code) - handled together.",
         icon: "clipboard" as const,
       },
     ],
@@ -2172,7 +2172,7 @@ export const registrationFaq = {
     {
       question: "Can I convert from one business structure to another later?",
       answer:
-        "Yes. For example, you can convert a Sole Proprietorship into a Private Limited Company or an LLP if the business grows and needs a more formal structure and liability protection. The conversion path depends on the target structure and involves specific legal procedures — we map that before you file.",
+        "Yes. For example, you can convert a Sole Proprietorship into a Private Limited Company or an LLP if the business grows and needs a more formal structure and liability protection. The conversion path depends on the target structure and involves specific legal procedures - we map that before you file.",
     },
   ],
 } as const;
@@ -2180,7 +2180,7 @@ export const registrationFaq = {
 export const opcPage = {
   eyebrow: "OPC • Solo Founder",
   heading: "One Person Company (OPC)",
-  kicker: "Registration – Fast Process in India",
+  kicker: "Registration - Fast Process in India",
   intro:
     "Register your One Person Company (OPC) in India with a fast and simple process. Enjoy limited liability, complete control, and expert support to get started today.",
   cta: "Check Your Eligibility",
@@ -2195,8 +2195,8 @@ export const opcPage = {
     eyebrow: "Why OPC",
     heading: "What Is A One Person Company?",
     paragraphs: [
-      "OPC gives limited liability while allowing a single shareholder — with a mandatory nominee for continuity. Turnover thresholds trigger mandatory conversion to private limited beyond prescribed limits.",
-      "The concept of a One Person Company was introduced under the Companies Act, 2013, enabling a single individual to establish a company with limited liability protection. As per Section 2(62), an OPC can be formed with only one director and one member — and both roles can be filled by the same individual.",
+      "OPC gives limited liability while allowing a single shareholder - with a mandatory nominee for continuity. Turnover thresholds trigger mandatory conversion to private limited beyond prescribed limits.",
+      "The concept of a One Person Company was introduced under the Companies Act, 2013, enabling a single individual to establish a company with limited liability protection. As per Section 2(62), an OPC can be formed with only one director and one member - and both roles can be filled by the same individual.",
     ],
     benefitsHeading: "Why Founders Pick OPC",
     benefits: [
@@ -2209,7 +2209,7 @@ export const opcPage = {
   services: {
     eyebrow: "OPC Desk",
     heading: "OPC Services",
-    sub: "Eligibility, Incorporation, Compliance And Scheme Positioning — In One File.",
+    sub: "Eligibility, Incorporation, Compliance And Scheme Positioning - In One File.",
     items: [
       {
         title: "Eligibility",
@@ -2318,7 +2318,7 @@ export const opcPage = {
       },
       {
         title: "Simple Formation",
-        text: "One member and one nominee — no complex shareholder agreements.",
+        text: "One member and one nominee - no complex shareholder agreements.",
         icon: "seed" as const,
       },
       {
@@ -2341,7 +2341,7 @@ export const opcPage = {
   whyChoose: {
     eyebrow: "Why This Desk",
     heading: "Why Choose Vikas Bharat For OPC Registration?",
-    sub: "From Name Reservation To Post-Incorporation Funding — Step-By-Step, Without The MCA Fog.",
+    sub: "From Name Reservation To Post-Incorporation Funding - Step-By-Step, Without The MCA Fog.",
     items: [
       {
         title: "Expert Guidance",
@@ -2360,7 +2360,7 @@ export const opcPage = {
       },
       {
         title: "End-To-End Support",
-        text: "Help raising funds in India after incorporation — schemes, loans and NBFC paths.",
+        text: "Help raising funds in India after incorporation - schemes, loans and NBFC paths.",
         icon: "map" as const,
       },
     ],
@@ -2429,9 +2429,9 @@ export const opcPage = {
     note: "Director and nominee papers are both required. After eligibility we send a file-specific checklist so you only collect what MCA needs.",
     items: [
       "PAN Card & Aadhaar Card of the director and nominee",
-      "Address proof — latest bank statement, electricity bill or telephone bill",
-      "Office proof — rental agreement or ownership proof (NOC from owner)",
-      "MOA & AOA — Memorandum of Association and Articles of Association",
+      "Address proof - latest bank statement, electricity bill or telephone bill",
+      "Office proof - rental agreement or ownership proof (NOC from owner)",
+      "MOA & AOA - Memorandum of Association and Articles of Association",
       "Declaration by director (INC-9) and nominee consent (DIR-2)",
       "Professional declaration by a CA / CS / Advocate",
     ],
@@ -2505,7 +2505,7 @@ export const startupPage = {
     heading: "What DPIIT Startup Recognition Gives You",
     paragraphs: [
       "DPIIT Startup India recognition is an official certificate from the Department for Promotion of Industry and Internal Trade that confirms your business qualifies as a startup under India's Startup India policy. It is free to apply for and unlocks a significant set of benefits that are not available to ordinary registered companies.",
-      "The most valuable benefit is the Section 80-IAC income tax exemption — recognised startups can claim a 100% tax holiday for any 3 consecutive years out of their first 10 years of operation. DPIIT recognition is also the prerequisite for the Startup India Seed Fund Scheme (SISFS), which provides up to ₹20 lakh in grants and ₹50 lakh in convertible debt to early-stage startups.",
+      "The most valuable benefit is the Section 80-IAC income tax exemption - recognised startups can claim a 100% tax holiday for any 3 consecutive years out of their first 10 years of operation. DPIIT recognition is also the prerequisite for the Startup India Seed Fund Scheme (SISFS), which provides up to ₹20 lakh in grants and ₹50 lakh in convertible debt to early-stage startups.",
     ],
     benefitsHeading: "Why Founders Apply",
     benefits: [
@@ -2520,21 +2520,21 @@ export const startupPage = {
   services: {
     eyebrow: "Recognition Desk",
     heading: "How Vikas Bharat Helps You Get Recognised",
-    sub: "Eligibility, Innovation Narrative, Portal Filing And Post-Recognition Orientation — In One File.",
+    sub: "Eligibility, Innovation Narrative, Portal Filing And Post-Recognition Orientation - In One File.",
     items: [
       {
         title: "Eligibility Assessment",
-        text: "We check your entity age (must be under 10 years), legal structure (Pvt Ltd, LLP, or Partnership), annual turnover, and whether your product or service can be described as innovative — the key DPIIT criterion.",
+        text: "We check your entity age (must be under 10 years), legal structure (Pvt Ltd, LLP, or Partnership), annual turnover, and whether your product or service can be described as innovative - the key DPIIT criterion.",
         icon: "search" as const,
       },
       {
         title: "Innovation Narrative",
-        text: "DPIIT assesses your innovation, scalability, and social or employment impact. We help you frame your business in language that aligns with DPIIT's evaluation criteria — without misrepresenting what you do.",
+        text: "DPIIT assesses your innovation, scalability, and social or employment impact. We help you frame your business in language that aligns with DPIIT's evaluation criteria - without misrepresenting what you do.",
         icon: "file" as const,
       },
       {
         title: "Portal Filing & Tracking",
-        text: "We complete your application on the Startup India portal (startupindia.gov.in), upload all required documents, and track the application status. Most applications receive recognition within 7–10 working days.",
+        text: "We complete your application on the Startup India portal (startupindia.gov.in), upload all required documents, and track the application status. Most applications receive recognition within 7-10 working days.",
         icon: "clipboard" as const,
       },
       {
@@ -2547,7 +2547,7 @@ export const startupPage = {
   features: {
     eyebrow: "Certificate Highlights",
     heading: "Key Features Of The Startup India Certificate",
-    sub: "Tax, Funding, IPR, A Faster Exit Path, And Lighter Compliance — Once DPIIT Recognises You.",
+    sub: "Tax, Funding, IPR, A Faster Exit Path, And Lighter Compliance - Once DPIIT Recognises You.",
     items: [
       {
         title: "Income Tax Exemptions",
@@ -2613,7 +2613,7 @@ export const startupPage = {
   benefits: {
     eyebrow: "What You Unlock",
     heading: "Benefits Of Startup India Registration",
-    sub: "The Certificate Is A Strategic Advantage — Tax, Capital, IP, Tenders And Lighter Compliance.",
+    sub: "The Certificate Is A Strategic Advantage - Tax, Capital, IP, Tenders And Lighter Compliance.",
     leftHeading: "Tax & Capital",
     rightHeading: "IP, Tenders & Compliance",
     items: [
@@ -2652,7 +2652,7 @@ export const startupPage = {
   process: {
     eyebrow: "How DPIIT Recognition Works",
     heading: "How DPIIT Recognition Works",
-    sub: "Four Steps From Eligibility Check To Certificate — Then 80-IAC, SISFS And Procurement.",
+    sub: "Four Steps From Eligibility Check To Certificate - Then 80-IAC, SISFS And Procurement.",
     steps: [
       {
         title: "Eligibility Check",
@@ -2675,14 +2675,14 @@ export const startupPage = {
   documents: {
     eyebrow: "Paperwork",
     heading: "Documents Required For Startup India Registration",
-    note: "There is no fixed deadline — the window stays open year-round. The sooner you file, the sooner tax holidays and scheme access can start. After eligibility we send a file-specific checklist.",
+    note: "There is no fixed deadline - the window stays open year-round. The sooner you file, the sooner tax holidays and scheme access can start. After eligibility we send a file-specific checklist.",
     items: [
-      "Certificate of Incorporation — proof of formation (Pvt Ltd, LLP, or Partnership)",
-      "Pitch deck — problem, solution, and innovation factor",
-      "Detailed project report — scalability and employment generation",
+      "Certificate of Incorporation - proof of formation (Pvt Ltd, LLP, or Partnership)",
+      "Pitch deck - problem, solution, and innovation factor",
+      "Detailed project report - scalability and employment generation",
       "MSME / Udyam certificate, if already obtained",
-      "Financial records — ITR for the last two years or audited balance sheets (if applicable)",
-      "Founder profiles — resumes showing technical and managerial expertise",
+      "Financial records - ITR for the last two years or audited balance sheets (if applicable)",
+      "Founder profiles - resumes showing technical and managerial expertise",
       "Patent / trademark filings, if already applied for",
     ],
     cta: "Download For More",
@@ -2716,7 +2716,7 @@ export const startupFaq = {
     {
       question: "How long does it take to get the Startup India Registration?",
       answer:
-        "Most applications receive recognition within 7–10 working days, though it can take a few weeks depending on documents submitted and any DPIIT queries.",
+        "Most applications receive recognition within 7-10 working days, though it can take a few weeks depending on documents submitted and any DPIIT queries.",
     },
     {
       question: "How can Vikas Bharat help with my Startup India Registration?",
@@ -2748,7 +2748,7 @@ export const certificatePage = {
     { value: "3 Years", label: "ISO Certificate Validity" },
     { value: "3 Tracks", label: "ISO • BIS CRS • FSSAI" },
     { value: "₹12L", label: "FSSAI Basic Threshold" },
-    { value: "1–5 Yrs", label: "FSSAI Licence Validity" },
+    { value: "1-5 Yrs", label: "FSSAI Licence Validity" },
   ] as const,
   unlock: {
     eyebrow: "What's Covered",
@@ -2784,7 +2784,7 @@ export const certificatePage = {
       },
       {
         title: "FSSAI",
-        text: "All food business operators — Basic up to ₹12 lakh turnover, State or Central above thresholds or for multi-state operations.",
+        text: "All food business operators - Basic up to ₹12 lakh turnover, State or Central above thresholds or for multi-state operations.",
         icon: "agri" as const,
       },
       {
@@ -2799,7 +2799,7 @@ export const certificatePage = {
       },
       {
         title: "FSSAI Validity",
-        text: "Licence category depends on turnover and scope; validity is 1–5 years with prescribed fee slabs. Continuous adherence is mandatory for certificate and licence validity.",
+        text: "Licence category depends on turnover and scope; validity is 1-5 years with prescribed fee slabs. Continuous adherence is mandatory for certificate and licence validity.",
         icon: "wallet" as const,
       },
     ],
@@ -2807,7 +2807,7 @@ export const certificatePage = {
   whyChoose: {
     eyebrow: "Why This Desk",
     heading: "Why Choose Vikas Bharat For Certification Support?",
-    sub: "Accredited ISO Path, BIS Lab Coordination, And FSSAI FoSCoS Filings — Without Juggling Three Vendors.",
+    sub: "Accredited ISO Path, BIS Lab Coordination, And FSSAI FoSCoS Filings - Without Juggling Three Vendors.",
     items: [
       {
         title: "Accredited ISO Path",
@@ -2993,7 +2993,7 @@ export const growthPage = {
       },
       {
         title: "Realistic Timelines",
-        text: "Realistic expectations on timelines and outcomes — typical implementation is 6–12 months.",
+        text: "Realistic expectations on timelines and outcomes - typical implementation is 6-12 months.",
         icon: "zap" as const,
       },
       {
@@ -3077,7 +3077,7 @@ export const growthPage = {
       "Team structure and resource allocation",
       "Market information and competitive landscape",
       "Customer data (segments, retention, feedback)",
-      "Financial statements (1–3 years)",
+      "Financial statements (1-3 years)",
       "Product/service portfolio with pricing",
       "Current business challenges and growth objectives",
       "Previous growth initiatives and outcomes",
@@ -3113,7 +3113,7 @@ export const growthFaq = {
     {
       question: "How long does it take to implement a growth strategy?",
       answer:
-        "Implementation typically takes 6–12 months depending on the industry, business model, and strategic goals.",
+        "Implementation typically takes 6-12 months depending on the industry, business model, and strategic goals.",
     },
   ],
 } as const;
@@ -3123,13 +3123,13 @@ export const maPage = {
   heading: "Mergers & Acquisitions",
   kicker: "Advisory for MSMEs & Startups",
   intro:
-    "Whether you are looking to acquire a competitor, sell your business to a strategic buyer, or bring in a financial investor — Vikas Bharat provides structured advisory from target identification through to deal closing.",
+    "Whether you are looking to acquire a competitor, sell your business to a strategic buyer, or bring in a financial investor - Vikas Bharat provides structured advisory from target identification through to deal closing.",
   cta: "Contact Us",
   imageAlt: "Advisors reviewing an MSME merger and acquisition file",
   stats: [
     { value: "2 Sides", label: "Buy-Side & Sell-Side" },
-    { value: "3–8x", label: "Typical EBITDA Multiple" },
-    { value: "3–6 mo", label: "Typical Close Timeline" },
+    { value: "3-8x", label: "Typical EBITDA Multiple" },
+    { value: "3-6 mo", label: "Typical Close Timeline" },
     { value: "100-Day", label: "Integration Plan" },
   ] as const,
   unlock: {
@@ -3138,7 +3138,7 @@ export const maPage = {
     paragraphs: [
       "Mergers and acquisitions are not just for large companies. MSMEs and growing startups increasingly use M&A to acquire a competitor or supplier, bring in a strategic investor who adds distribution or technology, exit a business they have built, or merge with a complementary business to grow faster together.",
       "The challenge for MSMEs is that M&A is complex and unfamiliar. Most founders do not know how to value a business, what due diligence involves, how to structure a deal so it is tax-efficient, or what a Share Purchase Agreement (SPA) should cover. Getting these details wrong can make an otherwise good deal very expensive.",
-      "Vikas Bharat provides advisory at each stage of the M&A process — helping you decide whether to buy or build, identifying and approaching targets or buyers, coordinating financial and legal due diligence, structuring the deal, and supporting post-deal integration planning.",
+      "Vikas Bharat provides advisory at each stage of the M&A process - helping you decide whether to buy or build, identifying and approaching targets or buyers, coordinating financial and legal due diligence, structuring the deal, and supporting post-deal integration planning.",
     ],
     benefitsHeading: "What A Mandate Can Cover",
     benefits: [
@@ -3151,11 +3151,11 @@ export const maPage = {
   services: {
     eyebrow: "M&A Desk",
     heading: "What Vikas Bharat's M&A Advisory Covers",
-    sub: "From Buy-Vs-Build To Closing And A 100-Day Integration Plan — Without Treating You Like A Large Corporate.",
+    sub: "From Buy-Vs-Build To Closing And A 100-Day Integration Plan - Without Treating You Like A Large Corporate.",
     items: [
       {
         title: "Buy Vs Build Analysis",
-        text: "We help you decide whether acquiring a business makes more sense than building the capability yourself — with a clear financial case and risk assessment for both options.",
+        text: "We help you decide whether acquiring a business makes more sense than building the capability yourself - with a clear financial case and risk assessment for both options.",
         icon: "search" as const,
       },
       {
@@ -3165,12 +3165,12 @@ export const maPage = {
       },
       {
         title: "Valuation",
-        text: "We provide valuation analysis using revenue multiples, EBITDA multiples, and DCF approaches — giving you a realistic price range to negotiate from, whether buying or selling.",
+        text: "We provide valuation analysis using revenue multiples, EBITDA multiples, and DCF approaches - giving you a realistic price range to negotiate from, whether buying or selling.",
         icon: "wallet" as const,
       },
       {
         title: "Deal Structuring",
-        text: "We advise on share purchase vs asset purchase, slump sale, earn-outs, and share swap structures — choosing the most tax-efficient approach for your situation.",
+        text: "We advise on share purchase vs asset purchase, slump sale, earn-outs, and share swap structures - choosing the most tax-efficient approach for your situation.",
         icon: "landmark" as const,
       },
       {
@@ -3180,7 +3180,7 @@ export const maPage = {
       },
       {
         title: "Integration Planning",
-        text: "For acquisitions, we help build a 100-day integration plan covering team, systems, customers, and compliance — so the deal value is not lost in a messy transition.",
+        text: "For acquisitions, we help build a 100-day integration plan covering team, systems, customers, and compliance - so the deal value is not lost in a messy transition.",
         icon: "map" as const,
       },
     ],
@@ -3217,7 +3217,7 @@ export const maFaq = {
     {
       question: "How is a business valued for an M&A deal?",
       answer:
-        "Business valuation depends on the sector and stage. Profitable MSMEs are typically valued at 3–8x EBITDA (earnings before interest, tax, depreciation, and amortisation). Revenue-stage startups are valued at 1–5x annual revenue depending on growth rate and sector. Asset-heavy businesses (manufacturing, real estate) may also use net asset value. Vikas Bharat provides a valuation range based on comparable transactions and your business's specific financials.",
+        "Business valuation depends on the sector and stage. Profitable MSMEs are typically valued at 3-8x EBITDA (earnings before interest, tax, depreciation, and amortisation). Revenue-stage startups are valued at 1-5x annual revenue depending on growth rate and sector. Asset-heavy businesses (manufacturing, real estate) may also use net asset value. Vikas Bharat provides a valuation range based on comparable transactions and your business's specific financials.",
     },
     {
       question: "What is due diligence and why does it matter?",
@@ -3227,12 +3227,12 @@ export const maFaq = {
     {
       question: "Should I do a share purchase or asset purchase?",
       answer:
-        "A share purchase means you buy the company itself — including all its liabilities, contracts, and history. An asset purchase means you buy specific assets (machinery, customer list, brand, IP) without taking on the company entity. Asset purchases are cleaner for the buyer (you only take what you want) but may have tax disadvantages for the seller. The right structure depends on your specific situation — Vikas Bharat advises based on both parties' tax and legal positions.",
+        "A share purchase means you buy the company itself - including all its liabilities, contracts, and history. An asset purchase means you buy specific assets (machinery, customer list, brand, IP) without taking on the company entity. Asset purchases are cleaner for the buyer (you only take what you want) but may have tax disadvantages for the seller. The right structure depends on your specific situation - Vikas Bharat advises based on both parties' tax and legal positions.",
     },
     {
       question: "How long does an M&A deal take to close?",
       answer:
-        "MSME M&A deals typically take 3–6 months from initial agreement in principle to final closing. This covers due diligence (4–8 weeks), negotiation and documentation (4–6 weeks), regulatory approvals if required, and closing formalities. Complex deals, those requiring NCLT approval, or those with multiple acquirers can take longer.",
+        "MSME M&A deals typically take 3-6 months from initial agreement in principle to final closing. This covers due diligence (4-8 weeks), negotiation and documentation (4-6 weeks), regulatory approvals if required, and closing formalities. Complex deals, those requiring NCLT approval, or those with multiple acquirers can take longer.",
     },
   ],
 } as const;
@@ -3309,8 +3309,8 @@ export const marketingPage = {
         icon: "wallet" as const,
       },
       {
-        title: "3–6 Month Commitment",
-        text: "Commitment to consistent marketing efforts over at least 3–6 months for measurable results.",
+        title: "3-6 Month Commitment",
+        text: "Commitment to consistent marketing efforts over at least 3-6 months for measurable results.",
         icon: "users" as const,
       },
       {
@@ -3328,7 +3328,7 @@ export const marketingPage = {
   services: {
     eyebrow: "Marketing Desk",
     heading: "Our Marketing & Branding Services",
-    sub: "Identity, Messaging, SEO, Social, Paid, Web, Collaterals And Reporting — In One Desk.",
+    sub: "Identity, Messaging, SEO, Social, Paid, Web, Collaterals And Reporting - In One Desk.",
     items: [
       {
         title: "Brand Identity Development",
@@ -3424,7 +3424,7 @@ export const marketingFaq = {
     {
       question: "How long does it take to see results from marketing efforts?",
       answer:
-        "The timeline for marketing results varies by channel and objective. Brand development typically requires 4–6 weeks for completion. SEO efforts generally show initial improvements in 3–4 months with significant results in 6–12 months. Social media marketing can generate engagement within weeks but building substantial followings takes 3–6 months. Paid campaigns can deliver immediate traffic but conversion optimization typically requires 1–2 months of testing and refinement.",
+        "The timeline for marketing results varies by channel and objective. Brand development typically requires 4-6 weeks for completion. SEO efforts generally show initial improvements in 3-4 months with significant results in 6-12 months. Social media marketing can generate engagement within weeks but building substantial followings takes 3-6 months. Paid campaigns can deliver immediate traffic but conversion optimization typically requires 1-2 months of testing and refinement.",
     },
     {
       question: "What makes Vikas Bharat's marketing services different?",
@@ -3434,7 +3434,7 @@ export const marketingFaq = {
     {
       question: "How much should my business budget for marketing?",
       answer:
-        "Effective marketing budgets typically range from 5–15% of revenue depending on business stage, industry, and growth objectives. Early-stage startups often allocate higher percentages (10–15%) to establish market presence, while established businesses may operate at 5–8%. We develop scalable marketing plans with options for different budget levels, prioritizing high-impact activities and gradually expanding as results generate returns.",
+        "Effective marketing budgets typically range from 5-15% of revenue depending on business stage, industry, and growth objectives. Early-stage startups often allocate higher percentages (10-15%) to establish market presence, while established businesses may operate at 5-8%. We develop scalable marketing plans with options for different budget levels, prioritizing high-impact activities and gradually expanding as results generate returns.",
     },
     {
       question: "Do you handle all marketing activities in-house?",
@@ -3449,7 +3449,7 @@ export const marketingFaq = {
     {
       question: "How do you measure marketing performance?",
       answer:
-        "We establish clear KPIs aligned with your business objectives before beginning any marketing activities. These typically include metrics across the full marketing funnel — from awareness (traffic, impressions, reach) to engagement (click rates, time on site, social interactions) to conversion (leads, sales, ROI). We provide regular performance reports with actionable insights and optimization recommendations.",
+        "We establish clear KPIs aligned with your business objectives before beginning any marketing activities. These typically include metrics across the full marketing funnel - from awareness (traffic, impressions, reach) to engagement (click rates, time on site, social interactions) to conversion (leads, sales, ROI). We provide regular performance reports with actionable insights and optimization recommendations.",
     },
   ],
 } as const;
@@ -3472,9 +3472,9 @@ export const legalPage = {
     eyebrow: "Why Legal Support",
     heading: "Why Legal Support Matters For Small Businesses",
     paragraphs: [
-      "Most MSMEs and startups run on informal agreements, verbal understandings, and templates downloaded from the internet. This works fine until it doesn't — a client disputes a payment, a vendor defaults, a co-founder leaves, or an investor asks to see your legal house in order before writing a cheque.",
+      "Most MSMEs and startups run on informal agreements, verbal understandings, and templates downloaded from the internet. This works fine until it doesn't - a client disputes a payment, a vendor defaults, a co-founder leaves, or an investor asks to see your legal house in order before writing a cheque.",
       "Good legal documentation does three things: it prevents disputes from happening, it makes disputes easier to resolve when they do happen, and it makes your business look credible to banks, investors, and enterprise clients. A vendor contract that clearly states payment terms, deliverables, and penalty clauses saves far more money than the legal cost of drafting it.",
-      "Vikas Bharat coordinates with experienced partner counsel across commercial contracts, corporate governance, HR and labour compliance, and fundraising documentation. We manage the process — you don't need to find or brief a lawyer yourself.",
+      "Vikas Bharat coordinates with experienced partner counsel across commercial contracts, corporate governance, HR and labour compliance, and fundraising documentation. We manage the process - you don't need to find or brief a lawyer yourself.",
     ],
     benefitsHeading: "What We Put In Order",
     benefits: [
@@ -3487,11 +3487,11 @@ export const legalPage = {
   cover: {
     eyebrow: "Legal Desk",
     heading: "Legal Services We Cover",
-    sub: "The Contracts And Compliance Files MSMEs Actually Need — Drafted Clearly, Not In Legalese.",
+    sub: "The Contracts And Compliance Files MSMEs Actually Need - Drafted Clearly, Not In Legalese.",
     items: [
       {
         title: "Commercial Contracts",
-        text: "Customer agreements, vendor MSAs, SaaS/service terms, NDA templates, and platform agreements — drafted clearly so both parties know exactly what is agreed.",
+        text: "Customer agreements, vendor MSAs, SaaS/service terms, NDA templates, and platform agreements - drafted clearly so both parties know exactly what is agreed.",
         icon: "file" as const,
       },
       {
@@ -3514,11 +3514,11 @@ export const legalPage = {
   services: {
     eyebrow: "Full Scope",
     heading: "Our Comprehensive Legal Consultancy Services",
-    sub: "Structure, Compliance, Contracts, IP And Filings — Coordinated With Partner Counsel.",
+    sub: "Structure, Compliance, Contracts, IP And Filings - Coordinated With Partner Counsel.",
     items: [
       {
         title: "Business Structure Advisory",
-        text: "Choosing the right business structure is crucial for future growth. We offer expert guidance on the most suitable structure for your needs — whether it's a Private Limited, LLP, OPC, or Sole Proprietorship.",
+        text: "Choosing the right business structure is crucial for future growth. We offer expert guidance on the most suitable structure for your needs - whether it's a Private Limited, LLP, OPC, or Sole Proprietorship.",
         icon: "search" as const,
       },
       {
@@ -3528,7 +3528,7 @@ export const legalPage = {
       },
       {
         title: "Contract Development And Negotiation",
-        text: "We help you draft, review, and negotiate business contracts, including agreements with vendors, partners, and employees — clear, legally-binding documents that mitigate risk.",
+        text: "We help you draft, review, and negotiate business contracts, including agreements with vendors, partners, and employees - clear, legally-binding documents that mitigate risk.",
         icon: "file" as const,
       },
       {
@@ -3546,7 +3546,7 @@ export const legalPage = {
   eligibility: {
     eyebrow: "Who It's For",
     heading: "Who Should Seek Legal Consultancy?",
-    sub: "Founders Who Need A Legal Foundation — And Are Ready To Implement It.",
+    sub: "Founders Who Need A Legal Foundation - And Are Ready To Implement It.",
     leftHeading: "Who Should Apply",
     rightHeading: "Conditions",
     items: [
@@ -3633,12 +3633,12 @@ export const legalPage = {
     heading: "Required Documents For Legal Services",
     note: "When engaging in legal consultancy, have these ready for review. After the first call we send a file-specific list so you only share what the matter needs.",
     items: [
-      "Business registration documents — MOA, AOA, Certificate of Incorporation, etc.",
-      "Existing contracts and agreements — vendor and partnership agreements, employment contracts",
-      "Operational licenses and permits — business licenses, GST registration",
-      "Intellectual property documentation — trademark, patent, or copyright filings",
-      "Employment contracts and HR policies — for labour-law compliance",
-      "Compliance filings and regulatory submissions — tax filings, regulatory filings",
+      "Business registration documents - MOA, AOA, Certificate of Incorporation, etc.",
+      "Existing contracts and agreements - vendor and partnership agreements, employment contracts",
+      "Operational licenses and permits - business licenses, GST registration",
+      "Intellectual property documentation - trademark, patent, or copyright filings",
+      "Employment contracts and HR policies - for labour-law compliance",
+      "Compliance filings and regulatory submissions - tax filings, regulatory filings",
     ],
     cta: "Download For More",
   },
@@ -3651,7 +3651,7 @@ export const legalFaq = {
     {
       question: "What makes Vikas Bharat's legal services different from traditional law firms?",
       answer:
-        "Vikas Bharat offers business-focused legal advice tailored for startups and MSMEs, without the use of complex legal jargon, making it more accessible and actionable. We coordinate with experienced partner counsel — you don't need to find or brief a lawyer yourself.",
+        "Vikas Bharat offers business-focused legal advice tailored for startups and MSMEs, without the use of complex legal jargon, making it more accessible and actionable. We coordinate with experienced partner counsel - you don't need to find or brief a lawyer yourself.",
     },
     {
       question: "How can proper legal consultation save my business money?",
@@ -3686,7 +3686,7 @@ export const fundingPage = {
   heading: "Funding Instruments",
   kicker: "for Startups & Businesses",
   intro:
-    "Government grants, business loans, investor funding, and international capital — explained by business type and growth stage, so you know exactly which options are right for your situation.",
+    "Government grants, business loans, investor funding, and international capital - explained by business type and growth stage, so you know exactly which options are right for your situation.",
   cta: "Check Your Eligibility",
   imageAlt: "Advisor mapping grants, loans and investor options for a founder",
   stats: [
@@ -3713,11 +3713,11 @@ export const fundingPage = {
   types: {
     eyebrow: "At A Glance",
     heading: "Types Of Funding Instruments",
-    sub: "Grants, Bank Debt, VC, Angels, NBFCs And International Capital — Each With A Different Fit.",
+    sub: "Grants, Bank Debt, VC, Angels, NBFCs And International Capital - Each With A Different Fit.",
     items: [
       {
         title: "Government Grants",
-        text: "Non-repayable funding from central and state schemes — SISFS, RKVY, Genesis Fund (₹490Cr for tech startups), MSME subsidies.",
+        text: "Non-repayable funding from central and state schemes - SISFS, RKVY, Genesis Fund (₹490Cr for tech startups), MSME subsidies.",
         icon: "landmark" as const,
       },
       {
@@ -3732,12 +3732,12 @@ export const fundingPage = {
       },
       {
         title: "Angel Investment",
-        text: "Early-stage equity from HNIs and angel networks — ideal for pre-revenue or seed-stage businesses needing mentorship alongside capital.",
+        text: "Early-stage equity from HNIs and angel networks - ideal for pre-revenue or seed-stage businesses needing mentorship alongside capital.",
         icon: "users" as const,
       },
       {
         title: "NBFC Financing",
-        text: "Flexible debt options from NBFCs for businesses that may not meet traditional bank criteria — faster processing with competitive rates.",
+        text: "Flexible debt options from NBFCs for businesses that may not meet traditional bank criteria - faster processing with competitive rates.",
         icon: "send" as const,
       },
       {
@@ -3750,11 +3750,11 @@ export const fundingPage = {
   government: {
     eyebrow: "Government Funding",
     heading: "1. Government Funding Instruments",
-    sub: "Non-Refundable Grants, Bank Debt, And Government-Backed Equity — With Different Rules For Pvt Ltd Vs LLP.",
+    sub: "Non-Refundable Grants, Bank Debt, And Government-Backed Equity - With Different Rules For Pvt Ltd Vs LLP.",
     items: [
       {
         title: "Non-Refundable Grants",
-        text: "Financial assistance from government bodies that does not need to be repaid — typically for innovation, R&D, green energy or export promotion. Both Private Ltd and LLP companies can apply if the project matches the scheme. Grants come with strict compliance and reporting requirements.",
+        text: "Financial assistance from government bodies that does not need to be repaid - typically for innovation, R&D, green energy or export promotion. Both Private Ltd and LLP companies can apply if the project matches the scheme. Grants come with strict compliance and reporting requirements.",
         icon: "wallet" as const,
       },
       {
@@ -3778,7 +3778,7 @@ export const fundingPage = {
     items: [
       {
         title: "Equity Funding (VC, Angel, PE)",
-        text: "Private Ltd: excellent access (can issue shares). LLP: none or extremely limited — cannot issue equity.",
+        text: "Private Ltd: excellent access (can issue shares). LLP: none or extremely limited - cannot issue equity.",
         icon: "rocket" as const,
       },
       {
@@ -3796,16 +3796,16 @@ export const fundingPage = {
   private: {
     eyebrow: "Private Funding",
     heading: "2. Private Funding Instruments",
-    sub: "Non-Government, Domestic Debt And Equity — From Friends And Family Through To Professional VCs.",
+    sub: "Non-Government, Domestic Debt And Equity - From Friends And Family Through To Professional VCs.",
     items: [
       {
         title: "Private Loan",
-        text: "Typically from friends, family or HNIs who are not professional lenders — often trust-based with flexible terms. Both Pvt Ltd and LLP can use this; Pvt Ltd companies must comply with Company Law on loans from directors/shareholders, while LLPs often receive loans from partners.",
+        text: "Typically from friends, family or HNIs who are not professional lenders - often trust-based with flexible terms. Both Pvt Ltd and LLP can use this; Pvt Ltd companies must comply with Company Law on loans from directors/shareholders, while LLPs often receive loans from partners.",
         icon: "users" as const,
       },
       {
         title: "Institutional Loan",
-        text: "Debt from private sector banks, NBFCs or specialised institutions. Available to both Pvt Ltd and LLP — similar to government debt, often processed faster and potentially at higher interest rates.",
+        text: "Debt from private sector banks, NBFCs or specialised institutions. Available to both Pvt Ltd and LLP - similar to government debt, often processed faster and potentially at higher interest rates.",
         icon: "wallet" as const,
       },
       {
@@ -3823,7 +3823,7 @@ export const fundingPage = {
   international: {
     eyebrow: "Cross-Border Capital",
     heading: "3. International Funding Instruments",
-    sub: "Capital From Outside India For Companies With High Scalability — FEMA And RBI Rules Apply.",
+    sub: "Capital From Outside India For Companies With High Scalability - FEMA And RBI Rules Apply.",
     items: [
       {
         title: "Foreign Venture Capital",
@@ -3840,7 +3840,7 @@ export const fundingPage = {
   process: {
     eyebrow: "How We Match You",
     heading: "How We Match You To The Right Instrument",
-    sub: "Share Your Business Stage And Capital Need — We Map The Most Suitable Instruments And Follow Through.",
+    sub: "Share Your Business Stage And Capital Need - We Map The Most Suitable Instruments And Follow Through.",
     steps: [
       {
         title: "Profile Assessment",
@@ -3848,7 +3848,7 @@ export const fundingPage = {
       },
       {
         title: "Instrument Mapping",
-        text: "Identify eligible grants, loan schemes and investor categories — with pros and cons for each.",
+        text: "Identify eligible grants, loan schemes and investor categories - with pros and cons for each.",
       },
       {
         title: "Documentation",
@@ -3909,7 +3909,7 @@ export const naifPage = {
   heading: "NAIF Scheme (AIF)",
   kicker: "Loan, Eligibility & How to Apply",
   intro:
-    "The Agriculture Infrastructure Fund (AIF), also called NAIF, funds post-harvest infrastructure like cold storage, warehouses and processing units. Loans up to ₹2 Crore per project at an effective ~9% rate, 3% interest subvention for 7 years, and 100% credit guarantee via CGTMSE — so no collateral required.",
+    "The Agriculture Infrastructure Fund (AIF), also called NAIF, funds post-harvest infrastructure like cold storage, warehouses and processing units. Loans up to ₹2 Crore per project at an effective ~9% rate, 3% interest subvention for 7 years, and 100% credit guarantee via CGTMSE - so no collateral required.",
   cta: "Check Your Eligibility",
   imageAlt: "Agri infrastructure project eligible for AIF / NAIF financing",
   stats: [
@@ -3922,26 +3922,26 @@ export const naifPage = {
     eyebrow: "What It Is",
     heading: "What Is The Agriculture Infrastructure Fund (AIF / NAIF Scheme)?",
     paragraphs: [
-      "The Agriculture Infrastructure Fund (AIF) — referred to as NAIF in some government documents — is a central sector scheme of the Ministry of Agriculture & Farmers Welfare, launched in May 2020 with a total corpus of ₹1 Lakh Crore. It provides medium to long-term debt financing for post-harvest management infrastructure and community farming assets.",
-      "As of January 2026, over 1,50,431 projects have been sanctioned with ₹80,224 crore in loans, and ₹49,841 crore has already been disbursed across more than 1.13 lakh projects — mobilising a total investment of ₹1,27,508 crore across India. The scheme runs through FY 2032–33.",
+      "The Agriculture Infrastructure Fund (AIF) - referred to as NAIF in some government documents - is a central sector scheme of the Ministry of Agriculture & Farmers Welfare, launched in May 2020 with a total corpus of ₹1 Lakh Crore. It provides medium to long-term debt financing for post-harvest management infrastructure and community farming assets.",
+      "As of January 2026, over 1,50,431 projects have been sanctioned with ₹80,224 crore in loans, and ₹49,841 crore has already been disbursed across more than 1.13 lakh projects - mobilising a total investment of ₹1,27,508 crore across India. The scheme runs through FY 2032-33.",
       "What makes AIF different from most government loan schemes is the combination: the government pays the full CGTMSE guarantee fee on your behalf, so lenders need no collateral on loans up to ₹2 Crore, and the 3% subvention directly reduces your EMI burden for seven years.",
     ],
     benefitsHeading: "Why Founders Apply",
     benefits: [
       "Loan up to ₹2 Crore per project; can borrow more without subvention",
-      "3% interest subvention for 7 years — effective rate ~9% p.a.",
-      "100% credit guarantee by CGTMSE — no collateral required",
+      "3% interest subvention for 7 years - effective rate ~9% p.a.",
+      "100% credit guarantee by CGTMSE - no collateral required",
       "Moratorium on principal: 6 months to 2 years",
     ],
   },
   benefits: {
     eyebrow: "Key Benefits",
     heading: "Key Benefits Of The AIF / NAIF Scheme",
-    sub: "Subvention, CGTMSE Cover, A Principal Moratorium, And A 60-Day Lender Decision — On The Agriinfra Portal.",
+    sub: "Subvention, CGTMSE Cover, A Principal Moratorium, And A 60-Day Lender Decision - On The Agriinfra Portal.",
     items: [
       {
         title: "3% Interest Subvention For 7 Years",
-        text: "The government credits 3% subvention directly against your loan account, reducing the effective borrowing cost to approximately 9% per annum for the full 7-year duration. Interest is charged from disbursement day one — including during the moratorium period.",
+        text: "The government credits 3% subvention directly against your loan account, reducing the effective borrowing cost to approximately 9% per annum for the full 7-year duration. Interest is charged from disbursement day one - including during the moratorium period.",
         icon: "wallet" as const,
       },
       {
@@ -3961,11 +3961,11 @@ export const naifPage = {
       },
       {
         title: "Online Application With 60-Day Decision",
-        text: "Applications are submitted entirely online through agriinfra.dac.gov.in — no physical forms or branch visits needed. Lenders must communicate their sanction decision within 60 days of application.",
+        text: "Applications are submitted entirely online through agriinfra.dac.gov.in - no physical forms or branch visits needed. Lenders must communicate their sanction decision within 60 days of application.",
         icon: "search" as const,
       },
       {
-        title: "Broad Project Coverage — Expanded August 2024",
+        title: "Broad Project Coverage - Expanded August 2024",
         text: "The Union Cabinet expanded eligible project types in August 2024 to include integrated primary-and-secondary processing units, PM-KUSUM solar convergence, and a broader set of community farming assets including precision farming equipment and renewable energy infrastructure.",
         icon: "zap" as const,
       },
@@ -4017,7 +4017,7 @@ export const naifPage = {
     steps: [
       {
         title: "Register On Agriinfra.Dac.Gov.In",
-        text: "Create an account on the official Agriculture Infrastructure Fund portal. The entire application process — from submission to sanction communication — is online.",
+        text: "Create an account on the official Agriculture Infrastructure Fund portal. The entire application process - from submission to sanction communication - is online.",
       },
       {
         title: "Prepare A Detailed Project Report (DPR)",
@@ -4028,7 +4028,7 @@ export const naifPage = {
         text: "Upload the DPR, KYC, entity registration, land/lease papers and financial statements. The Project Management Unit (PMU) reviews and forwards to the lending institution.",
       },
       {
-        title: "Lender Appraisal — 60-Day Decision",
+        title: "Lender Appraisal - 60-Day Decision",
         text: "The lender conducts a site visit plus technical and financial appraisal, and must communicate a decision within 60 days. CGTMSE cover applies automatically for loans up to ₹2 Crore.",
       },
       {
@@ -4040,14 +4040,14 @@ export const naifPage = {
   documents: {
     eyebrow: "Paperwork",
     heading: "Documents Required For AIF Loan Application",
-    note: "Most AIF rejections and delays come down to a weak DPR or missing documents — not the project itself. Vikas Bharat helps agri-entrepreneurs and FPOs structure the DPR, identify the right lending partner, and move through the CGTMSE guarantee process. After eligibility we send a file-specific checklist.",
+    note: "Most AIF rejections and delays come down to a weak DPR or missing documents - not the project itself. Vikas Bharat helps agri-entrepreneurs and FPOs structure the DPR, identify the right lending partner, and move through the CGTMSE guarantee process. After eligibility we send a file-specific checklist.",
     items: [
-      "Detailed Project Report (DPR) — technical specifications, location, cost estimates, revenue projections and operational plan",
-      "KYC — Aadhaar and PAN of all promoters, directors or authorised signatories",
-      "Entity registration — incorporation, partnership deed, FPO/cooperative certificate, Udyam, or equivalent",
+      "Detailed Project Report (DPR) - technical specifications, location, cost estimates, revenue projections and operational plan",
+      "KYC - Aadhaar and PAN of all promoters, directors or authorised signatories",
+      "Entity registration - incorporation, partnership deed, FPO/cooperative certificate, Udyam, or equivalent",
       "Land ownership or a registered lease of at least 7 years covering the project site",
-      "Financial statements — audited last 2–3 years, or projected financials for new entities",
-      "Bank statements — last 6–12 months for the entity and promoters",
+      "Financial statements - audited last 2-3 years, or projected financials for new entities",
+      "Bank statements - last 6-12 months for the entity and promoters",
       "GST certificate (if applicable) and latest ITRs of the entity and key promoters",
     ],
     cta: "Download For More",
@@ -4061,17 +4061,17 @@ export const naifFaq = {
     {
       question: "What is the difference between NAIF and AIF?",
       answer:
-        "They refer to the same scheme. AIF is the official name — Agriculture Infrastructure Fund. NAIF (National Agri Infra Financing Facility) is an alternate abbreviation used in some government communications and media. The portal is agriinfra.dac.gov.in and the administering ministry is the Ministry of Agriculture & Farmers Welfare.",
+        "They refer to the same scheme. AIF is the official name - Agriculture Infrastructure Fund. NAIF (National Agri Infra Financing Facility) is an alternate abbreviation used in some government communications and media. The portal is agriinfra.dac.gov.in and the administering ministry is the Ministry of Agriculture & Farmers Welfare.",
     },
     {
       question: "Can I take a loan larger than ₹2 Crore under this scheme?",
       answer:
-        "Yes. The scheme does not cap the loan amount — borrowers can apply for whatever the project requires. However, the 3% interest subvention and the CGTMSE credit guarantee both apply only on the portion up to ₹2 Crore. The amount above ₹2 Crore is financed at the lender's standard rate with normal collateral requirements.",
+        "Yes. The scheme does not cap the loan amount - borrowers can apply for whatever the project requires. However, the 3% interest subvention and the CGTMSE credit guarantee both apply only on the portion up to ₹2 Crore. The amount above ₹2 Crore is financed at the lender's standard rate with normal collateral requirements.",
     },
     {
       question: "Is interest charged during the moratorium period?",
       answer:
-        "Yes, interest is payable from the date of first disbursement — including during the moratorium period. The moratorium applies only to principal repayment. The 3% subvention does apply to this interest during the moratorium phase.",
+        "Yes, interest is payable from the date of first disbursement - including during the moratorium period. The moratorium applies only to principal repayment. The 3% subvention does apply to this interest during the moratorium phase.",
     },
     {
       question: "Do I need to arrange collateral for an AIF loan?",
@@ -4081,7 +4081,7 @@ export const naifFaq = {
     {
       question: "How many projects can a single entity apply for?",
       answer:
-        "A single entity can avail AIF benefits for up to 25 projects across different locations — each eligible for its own ₹2 Crore loan with the 3% subvention. This cap does not apply to state agencies, national/state federations of cooperatives, federations of FPOs, or federations of SHGs.",
+        "A single entity can avail AIF benefits for up to 25 projects across different locations - each eligible for its own ₹2 Crore loan with the 3% subvention. This cap does not apply to state agencies, national/state federations of cooperatives, federations of FPOs, or federations of SHGs.",
     },
     {
       question: "What changed after the August 2024 Cabinet expansion?",
@@ -4096,7 +4096,7 @@ export const naifFaq = {
     {
       question: "What is the most common reason applications get delayed?",
       answer:
-        "An incomplete or poorly structured Detailed Project Report. Lenders cannot appraise the loan without credible technical specifications, realistic cost estimates and a clear revenue model. The second most common issue is unclear land documents — make sure land ownership or lease tenure covers at least 7 years from application date.",
+        "An incomplete or poorly structured Detailed Project Report. Lenders cannot appraise the loan without credible technical specifications, realistic cost estimates and a clear revenue model. The second most common issue is unclear land documents - make sure land ownership or lease tenure covers at least 7 years from application date.",
     },
   ],
 } as const;
@@ -4111,7 +4111,7 @@ export const cgtmsePage = {
   imageAlt: "Advisor reviewing a collateral-free CGTMSE loan file with an MSME founder",
   stats: [
     { value: "₹5 Cr", label: "Max Loan Cover" },
-    { value: "75–85%", label: "Guarantee Cover" },
+    { value: "75-85%", label: "Guarantee Cover" },
     { value: "0", label: "Collateral Needed" },
     { value: "1%", label: "Interest Subsidy (eligible)" },
   ] as const,
@@ -4120,7 +4120,7 @@ export const cgtmsePage = {
     heading: "What Is The CGTMSE Loan Scheme?",
     paragraphs: [
       "CGTMSE stands for Credit Guarantee Fund Trust for Micro and Small Enterprises. It was established to facilitate collateral-free loans to Micro and Small Enterprises (MSEs), enabling them to grow, scale, and overcome financial barriers in their early stages.",
-      "The scheme is managed by a trust which is a joint initiative of the Government of India and the Small Industries Development Bank of India (SIDBI). Banks and financial institutions receive a credit guarantee for the loans they offer to MSEs — which reduces lender risk and helps founders access a without-security business loan.",
+      "The scheme is managed by a trust which is a joint initiative of the Government of India and the Small Industries Development Bank of India (SIDBI). Banks and financial institutions receive a credit guarantee for the loans they offer to MSEs - which reduces lender risk and helps founders access a without-security business loan.",
       "The scheme is a permanent government initiative and operates on a rolling basis. You can apply at any time through a scheduled commercial bank, RRB, or NSIC.",
     ],
     benefitsHeading: "Why Founders Apply",
@@ -4128,7 +4128,7 @@ export const cgtmsePage = {
       "No need to pledge property or machinery",
       "Cover up to ₹500 Lakhs through eligible banks",
       "Guarantee cover ranging from 75% to 85%",
-      "Hybrid security — partial collateral plus CGTMSE for the rest",
+      "Hybrid security - partial collateral plus CGTMSE for the rest",
     ],
   },
   features: {
@@ -4166,7 +4166,7 @@ export const cgtmsePage = {
   benefits: {
     eyebrow: "What You Unlock",
     heading: "Benefits Of The CGTMSE Loan Scheme",
-    sub: "Built For Owners Who Lack Assets To Pledge — With Extra Cover For Micro Units And Women-Led Businesses.",
+    sub: "Built For Owners Who Lack Assets To Pledge - With Extra Cover For Micro Units And Women-Led Businesses.",
     leftHeading: "Amount & Rate",
     rightHeading: "Cover & Flexibility",
     items: [
@@ -4278,7 +4278,7 @@ export const cgtmsePage = {
   process: {
     eyebrow: "How To Apply",
     heading: "How To Apply For The CGTMSE Loan Scheme",
-    sub: "Five Steps From Documents To Disbursement Through Your Bank — There Is No Fixed Application Deadline.",
+    sub: "Five Steps From Documents To Disbursement Through Your Bank - There Is No Fixed Application Deadline.",
     steps: [
       {
         title: "Gather Required Documents",
@@ -4305,15 +4305,15 @@ export const cgtmsePage = {
   documents: {
     eyebrow: "Paperwork",
     heading: "Documents Required For The CGTMSE Loan Application",
-    note: "There is no application deadline — CGTMSE runs year-round. After eligibility we send a file-specific checklist. Vikas Bharat helps you structure the DPR and choose an eligible lender.",
+    note: "There is no application deadline - CGTMSE runs year-round. After eligibility we send a file-specific checklist. Vikas Bharat helps you structure the DPR and choose an eligible lender.",
     items: [
-      "Business registration — Certificate of Incorporation, Partnership Deed, or LLP Agreement",
+      "Business registration - Certificate of Incorporation, Partnership Deed, or LLP Agreement",
       "DPIIT recognition certificate, if available, for faster processing",
       "Udyam / MSME registration certificate",
       "Pitch deck / DPR explaining the business model and growth strategy",
-      "Financial statements — audited balance sheets and P&L for the past 2 years (if applicable)",
-      "Bank statements — last 6–12 months of the primary business account",
-      "KYC — PAN and Aadhaar of all directors and partners",
+      "Financial statements - audited balance sheets and P&L for the past 2 years (if applicable)",
+      "Bank statements - last 6-12 months of the primary business account",
+      "KYC - PAN and Aadhaar of all directors and partners",
       "Technology description / roadmap for tech-driven startups",
     ],
     cta: "Download For More",
@@ -4377,12 +4377,12 @@ export const pmegpPage = {
     paragraphs: [
       "The Prime Minister's Employment Generation Programme (PMEGP) is a credit-linked subsidy scheme implemented by the Ministry of MSME through the Khadi and Village Industries Commission (KVIC). It aims to generate employment by helping individuals set up new micro-enterprises.",
       "Under PMEGP, new manufacturing units can avail of project funding up to ₹25 Lakhs and service-sector enterprises up to ₹10 Lakhs. The government provides a subsidy of 15% to 35% of the project cost depending on the applicant category and location, while the applicant contributes 5% to 10% as their own margin money.",
-      "PMEGP is available across all states and union territories of India and is administered through KVIC, State Khadi and Village Industries Boards (KVIBs), and District Industries Centres (DICs). It does not support expansion of existing units — only new enterprises qualify.",
+      "PMEGP is available across all states and union territories of India and is administered through KVIC, State Khadi and Village Industries Boards (KVIBs), and District Industries Centres (DICs). It does not support expansion of existing units - only new enterprises qualify.",
     ],
     benefitsHeading: "Why Founders Apply",
     benefits: [
       "Up to 35% subsidy for rural special categories",
-      "Own contribution of only 5–10%",
+      "Own contribution of only 5-10%",
       "New manufacturing up to ₹25 Lakhs, services up to ₹10 Lakhs",
       "Implemented by KVIC, KVIBs and DICs nationwide",
     ],
@@ -4427,7 +4427,7 @@ export const pmegpPage = {
   eligibility: {
     eyebrow: "Who Qualifies",
     heading: "PMEGP Eligibility Criteria",
-    sub: "Only New Enterprises Are Eligible — Existing Businesses Cannot Apply For PMEGP Expansion.",
+    sub: "Only New Enterprises Are Eligible - Existing Businesses Cannot Apply For PMEGP Expansion.",
     leftHeading: "Applicant Rules",
     rightHeading: "Category & Exclusions",
     items: [
@@ -4499,10 +4499,10 @@ export const pmegpPage = {
     heading: "Documents Required For PMEGP",
     note: "Have these ready before applying on kviconline.gov.in. Vikas Bharat guides you from document preparation to bank sanction so the subsidy file does not stall on a weak DPR.",
     items: [
-      "Identity proof — Aadhaar, PAN, or Voter ID",
-      "Address proof — bank passbook, electricity bill, or Aadhaar",
+      "Identity proof - Aadhaar, PAN, or Voter ID",
+      "Address proof - bank passbook, electricity bill, or Aadhaar",
       "Detailed Project Report with cost estimates, revenue projections and market analysis",
-      "Educational certificate — 8th standard or higher (mandatory for projects above ₹10 Lakhs)",
+      "Educational certificate - 8th standard or higher (mandatory for projects above ₹10 Lakhs)",
       "Caste/category certificate if claiming special category subsidy",
       "Udyam registration or proof of new enterprise intent",
       "Recent passport-size photographs of the applicant",
@@ -4518,7 +4518,7 @@ export const pmegpFaq = {
     {
       question: "What is PMEGP?",
       answer:
-        "PMEGP (Prime Minister's Employment Generation Programme) is a government subsidy scheme that helps new businesses get funding of up to ₹25 Lakhs (manufacturing) or ₹10 Lakhs (service) with 15–35% government subsidy.",
+        "PMEGP (Prime Minister's Employment Generation Programme) is a government subsidy scheme that helps new businesses get funding of up to ₹25 Lakhs (manufacturing) or ₹10 Lakhs (service) with 15-35% government subsidy.",
     },
     {
       question: "Who implements PMEGP?",
@@ -4538,7 +4538,7 @@ export const pmegpFaq = {
     {
       question: "How long does PMEGP approval take?",
       answer:
-        "Typically 30–90 days from the date of complete application submission, subject to document verification, task force interview and bank processing.",
+        "Typically 30-90 days from the date of complete application submission, subject to document verification, task force interview and bank processing.",
     },
   ],
 } as const;
@@ -4561,7 +4561,7 @@ export const ahidfPage = {
     eyebrow: "What It Is",
     heading: "What Is The AHIDF Scheme?",
     paragraphs: [
-      "India's animal husbandry sector is evolving rapidly, and AHIDF — the Animal Husbandry Infrastructure Development Fund — aims to create modern infrastructure in dairy, meat processing, feed manufacturing and allied sectors.",
+      "India's animal husbandry sector is evolving rapidly, and AHIDF - the Animal Husbandry Infrastructure Development Fund - aims to create modern infrastructure in dairy, meat processing, feed manufacturing and allied sectors.",
       "Eligible entities can access loan plus subsidy support, including startups, MSMEs, FPOs, private companies, Section 8 companies and individual entrepreneurs. MSMEs can also avail 25% credit guarantee support via NABARD, so collateral is not mandatory for all applicants.",
     ],
     benefitsHeading: "Why Founders Apply",
@@ -4575,7 +4575,7 @@ export const ahidfPage = {
   benefits: {
     eyebrow: "Key Benefits",
     heading: "Key Benefits & Subsidy Breakdown",
-    sub: "Loan Cover, Subvention, NABARD Guarantee And A Principal Holiday — For Dairy, Meat, Feed And Allied Units.",
+    sub: "Loan Cover, Subvention, NABARD Guarantee And A Principal Holiday - For Dairy, Meat, Feed And Allied Units.",
     items: [
       {
         title: "Loan Coverage",
@@ -4725,13 +4725,13 @@ export const cgssPage = {
   heading: "CGSS Scheme",
   kicker: "Eligibility, Benefits, and How To Apply For Startups",
   intro:
-    "Learn about the CGSS Scheme — a government-backed initiative that offers collateral-free loans to startups in India. Get details on eligibility, loan limits, focus areas, and documents required to apply.",
+    "Learn about the CGSS Scheme - a government-backed initiative that offers collateral-free loans to startups in India. Get details on eligibility, loan limits, focus areas, and documents required to apply.",
   cta: "Apply Now",
   imageAlt: "DPIIT-recognised startup reviewing a CGSS collateral-free loan file",
   stats: [
     { value: "₹20 Cr", label: "Max Loan Cover" },
     { value: "85%", label: "Guarantee up to ₹10 Cr" },
-    { value: "75%", label: "Guarantee ₹10–20 Cr" },
+    { value: "75%", label: "Guarantee ₹10-20 Cr" },
     { value: "10 Yrs", label: "Max Startup Age" },
   ] as const,
   unlock: {
@@ -4739,14 +4739,14 @@ export const cgssPage = {
     heading: "What Is The CGSS Scheme?",
     paragraphs: [
       "The Credit Guarantee Scheme for Startups (CGSS) is a government-backed initiative that offers collateral-free loans to recognised startups. Under this scheme, the government acts as a guarantor for a significant portion of the loan amount.",
-      "This reduces the risk for lenders — including banks and NBFCs — making them more willing to provide large-scale capital to young companies. The loan can go up to ₹20 crore, making it one of the most substantial debt-based schemes available for entrepreneurs today.",
+      "This reduces the risk for lenders - including banks and NBFCs - making them more willing to provide large-scale capital to young companies. The loan can go up to ₹20 crore, making it one of the most substantial debt-based schemes available for entrepreneurs today.",
     ],
     benefitsHeading: "Why Founders Apply",
     benefits: [
-      "Collateral-free — no land, property or inventory pledge",
+      "Collateral-free - no land, property or inventory pledge",
       "Cover up to ₹20 crore with NCGTC backing",
-      "85% guarantee up to ₹10 crore; 75% between ₹10–20 crore",
-      "Debt route — no equity dilution",
+      "85% guarantee up to ₹10 crore; 75% between ₹10-20 crore",
+      "Debt route - no equity dilution",
     ],
   },
   benefits: {
@@ -4891,7 +4891,7 @@ export const cgssPage = {
   process: {
     eyebrow: "How To Apply",
     heading: "How To Apply For The CGSS Loan Scheme",
-    sub: "Five Steps Through An Eligible Bank Or NBFC. There Is No Fixed Deadline — CGSS Runs On A Rolling Basis.",
+    sub: "Five Steps Through An Eligible Bank Or NBFC. There Is No Fixed Deadline - CGSS Runs On A Rolling Basis.",
     steps: [
       {
         title: "Prepare Your Documents",
@@ -4920,14 +4920,14 @@ export const cgssPage = {
     heading: "Documents Required For The CGSS Loan Application",
     note: "There is no fixed deadline, but banks have quarterly CGSS disbursement targets. After eligibility we send a file-specific checklist. Vikas Bharat helps you make the file bank-ready.",
     items: [
-      "DPIIT Recognition Certificate — proof of recognised startup status",
-      "Incorporation documents — entity registration and constitutional records",
+      "DPIIT Recognition Certificate - proof of recognised startup status",
+      "Incorporation documents - entity registration and constitutional records",
       "MSME / Udyam certificate where applicable",
-      "Professional pitch deck — problem, solution, and growth roadmap",
-      "Audited financials — balance sheet and P&L",
-      "Detailed Project Report — 3–5 year strategy and forecast",
-      "Founder KYC — Aadhaar, PAN, and address proof",
-      "Technology readiness proof — evidence of product or prototype maturity",
+      "Professional pitch deck - problem, solution, and growth roadmap",
+      "Audited financials - balance sheet and P&L",
+      "Detailed Project Report - 3-5 year strategy and forecast",
+      "Founder KYC - Aadhaar, PAN, and address proof",
+      "Technology readiness proof - evidence of product or prototype maturity",
     ],
     cta: "Download For More",
   },
@@ -4997,7 +4997,7 @@ export const sisfsPage = {
   whyChoose: {
     eyebrow: "SISFS Desk",
     heading: "Why Choose Our SISFS Support?",
-    sub: "Incubator Selection, Milestone Structure And A Compliance-Ready File — So The First Instalment Is Not Stuck On Paperwork.",
+    sub: "Incubator Selection, Milestone Structure And A Compliance-Ready File - So The First Instalment Is Not Stuck On Paperwork.",
     items: [
       {
         title: "Non-Dilutive Grants",
@@ -5034,7 +5034,7 @@ export const sisfsPage = {
   eligibility: {
     eyebrow: "Who Qualifies",
     heading: "Eligibility Criteria",
-    sub: "DPIIT Recognition, Age, Shareholding And Prior-Funding Caps — Plus The Conditions That Govern How Money Can Be Used.",
+    sub: "DPIIT Recognition, Age, Shareholding And Prior-Funding Caps - Plus The Conditions That Govern How Money Can Be Used.",
     leftHeading: "Who Can Apply?",
     rightHeading: "Conditions",
     items: [
@@ -5065,7 +5065,7 @@ export const sisfsPage = {
       },
       {
         title: "Grant Use",
-        text: "Grant strictly for PoC, prototype and trials — not for creation of facilities.",
+        text: "Grant strictly for PoC, prototype and trials - not for creation of facilities.",
         icon: "clipboard" as const,
       },
       {
@@ -5164,7 +5164,7 @@ export const sisfsFaq = {
     {
       question: "Can a startup receive support more than once?",
       answer:
-        "A startup can receive seed support once in each category — once as a grant and once as debt/convertible — subject to selections and scheme provisions.",
+        "A startup can receive seed support once in each category - once as a grant and once as debt/convertible - subject to selections and scheme provisions.",
     },
   ],
 } as const;
@@ -5187,30 +5187,30 @@ export const ublPage = {
     eyebrow: "What It Is",
     heading: "What Are Unsecured Business Loans?",
     paragraphs: [
-      "An unsecured business loan is financing where the borrower does not need to pledge collateral — such as property, machinery or inventory. Approval is based on creditworthiness, cash flow, profitability and overall financial health.",
+      "An unsecured business loan is financing where the borrower does not need to pledge collateral - such as property, machinery or inventory. Approval is based on creditworthiness, cash flow, profitability and overall financial health.",
       "These loans suit MSMEs and startups with steady revenue or a strong plan but limited assets to pledge. They are offered by commercial banks, NBFCs and fintech lenders. Typical amounts range from ₹1 Lakh to ₹50 Lakhs with tenures of 12 to 60 months.",
     ],
     benefitsHeading: "Why Founders Apply",
     benefits: [
       "No pledge of property, machinery or inventory",
-      "Approvals often within 48–72 hours with complete docs",
+      "Approvals often within 48-72 hours with complete docs",
       "Use for working capital, inventory, equipment or expansion",
-      "Debt route — no equity dilution",
+      "Debt route - no equity dilution",
     ],
   },
   whyChoose: {
     eyebrow: "Loan Desk",
     heading: "Why Choose An Unsecured Business Loan?",
-    sub: "Speed, Flexibility And Asset Protection — Matched To The Right Bank, NBFC Or Fintech Lender.",
+    sub: "Speed, Flexibility And Asset Protection - Matched To The Right Bank, NBFC Or Fintech Lender.",
     items: [
       {
         title: "No Collateral Required",
-        text: "Your personal and business assets remain fully protected — no pledge of property, machinery or inventory.",
+        text: "Your personal and business assets remain fully protected - no pledge of property, machinery or inventory.",
         icon: "shield" as const,
       },
       {
         title: "Fast Processing",
-        text: "Documentation is minimal and approvals are typically faster than secured loans — often within 48–72 hours.",
+        text: "Documentation is minimal and approvals are typically faster than secured loans - often within 48-72 hours.",
         icon: "zap" as const,
       },
       {
@@ -5220,7 +5220,7 @@ export const ublPage = {
       },
       {
         title: "Preserves Equity",
-        text: "Unlike equity financing, unsecured loans do not dilute ownership — you retain full control of your business.",
+        text: "Unlike equity financing, unsecured loans do not dilute ownership - you retain full control of your business.",
         icon: "users" as const,
       },
       {
@@ -5244,12 +5244,12 @@ export const ublPage = {
     items: [
       {
         title: "Business Age",
-        text: "Minimum 1–3 years of operation (varies by lender; some fintechs accept 6 months).",
+        text: "Minimum 1-3 years of operation (varies by lender; some fintechs accept 6 months).",
         icon: "rocket" as const,
       },
       {
         title: "Annual Turnover",
-        text: "Minimum annual turnover of ₹5–10 Lakhs required by most lenders.",
+        text: "Minimum annual turnover of ₹5-10 Lakhs required by most lenders.",
         icon: "wallet" as const,
       },
       {
@@ -5297,7 +5297,7 @@ export const ublPage = {
       },
       {
         title: "Approval & Disbursement",
-        text: "Once approved, funds are disbursed directly to your business account — typically within 48–72 hours.",
+        text: "Once approved, funds are disbursed directly to your business account - typically within 48-72 hours.",
       },
     ],
   },
@@ -5306,12 +5306,12 @@ export const ublPage = {
     heading: "Documents Required",
     note: "Keep these ready for a smooth application. Vikas Bharat sends a lender-specific checklist after eligibility.",
     items: [
-      "Identity proof — PAN and Aadhaar of all directors, partners or proprietor",
-      "Business proof — Udyam Registration, GST certificate or incorporation certificate",
-      "Bank statements — last 6–12 months of business bank statements",
-      "ITR & financials — last 1–2 years of ITR, balance sheet and profit & loss statement",
-      "Address proof — office lease agreement, utility bill or property documents",
-      "Business vintage proof — trade license, shop establishment certificate or registration showing business age",
+      "Identity proof - PAN and Aadhaar of all directors, partners or proprietor",
+      "Business proof - Udyam Registration, GST certificate or incorporation certificate",
+      "Bank statements - last 6-12 months of business bank statements",
+      "ITR & financials - last 1-2 years of ITR, balance sheet and profit & loss statement",
+      "Address proof - office lease agreement, utility bill or property documents",
+      "Business vintage proof - trade license, shop establishment certificate or registration showing business age",
     ],
     cta: "Download For More",
   },
@@ -5344,7 +5344,7 @@ export const ublFaq = {
     {
       question: "How long does it take to get an unsecured business loan?",
       answer:
-        "With complete documentation, approvals typically happen in 48–72 hours from bank/NBFC submission. Vikas Bharat’s pre-checks further reduce processing time.",
+        "With complete documentation, approvals typically happen in 48-72 hours from bank/NBFC submission. Vikas Bharat’s pre-checks further reduce processing time.",
     },
   ],
 } as const;
@@ -5354,13 +5354,13 @@ export const rdifPage = {
   heading: "RDIF Scheme",
   kicker: "Eligibility, Benefits, Funding & How to Apply",
   intro:
-    "India’s Research Development and Innovation Fund — long-term, concessional capital for startups and MSMEs building strategic and deep-tech innovations.",
+    "India’s Research Development and Innovation Fund - long-term, concessional capital for startups and MSMEs building strategic and deep-tech innovations.",
   cta: "Check Your Eligibility",
   imageAlt: "Researchers and founders reviewing an RDIF deep-tech funding proposal",
   stats: [
     { value: "₹1L Cr", label: "Total Fund Size" },
     { value: "50%", label: "Max Project Cost Cover" },
-    { value: "3–4%", label: "Concessional Interest" },
+    { value: "3-4%", label: "Concessional Interest" },
     { value: "15 Yrs", label: "Max Repayment Tenure" },
   ] as const,
   unlock: {
@@ -5368,13 +5368,13 @@ export const rdifPage = {
     heading: "What Is The RDIF?",
     paragraphs: [
       "The RDIF (Research Development and Innovation Fund) is a flagship Department of Science and Technology (DST) initiative to strengthen India’s research ecosystem. It is a central pillar of Atmanirbhar Bharat, aimed at increasing private-sector investment in R&D.",
-      "Managed by Focused Research Organisations such as the Technology Development Board (TDB), the fund supports technology-intensive projects that traditional banks may consider too risky — with lower interest rates and longer tenures than a typical unsecured business loan. The overall outlay is ₹1 lakh crore over six years.",
+      "Managed by Focused Research Organisations such as the Technology Development Board (TDB), the fund supports technology-intensive projects that traditional banks may consider too risky - with lower interest rates and longer tenures than a typical unsecured business loan. The overall outlay is ₹1 lakh crore over six years.",
     ],
     benefitsHeading: "Why Founders Apply",
     benefits: [
       "Up to 50% of assessed project cost as funding support",
-      "Concessional interest typically 3%–4% per annum",
-      "Repayment horizon of 12–15 years",
+      "Concessional interest typically 3%-4% per annum",
+      "Repayment horizon of 12-15 years",
       "Implemented through TDB and DST",
     ],
   },
@@ -5452,7 +5452,7 @@ export const rdifPage = {
   focus: {
     eyebrow: "Sectors",
     heading: "Strategic Focus Areas For Funding",
-    sub: "Sectors Critical For National Growth And Economic Resilience — Prime Candidates For RDIF Support.",
+    sub: "Sectors Critical For National Growth And Economic Resilience - Prime Candidates For RDIF Support.",
     leftHeading: "Deep Tech & Climate",
     rightHeading: "AI, Bio & Strategic",
     items: [
@@ -5497,12 +5497,12 @@ export const rdifPage = {
     items: [
       {
         title: "Long-Term R&D Loan",
-        text: "Soft loan covering up to 50% of project cost, tenure 12–15 years, interest as low as about 3%.",
+        text: "Soft loan covering up to 50% of project cost, tenure 12-15 years, interest as low as about 3%.",
         icon: "wallet" as const,
       },
       {
         title: "Loan + Equity",
-        text: "For high-growth ventures, TDB can mix debt and equity — equity typically capped at 25% shareholding.",
+        text: "For high-growth ventures, TDB can mix debt and equity - equity typically capped at 25% shareholding.",
         icon: "landmark" as const,
       },
       {
@@ -5548,14 +5548,14 @@ export const rdifPage = {
     heading: "Documents Required For RDIF",
     note: "Prepare a comprehensive professional file for evaluation. Vikas Bharat sends a file-specific RDIF checklist after eligibility.",
     items: [
-      "Incorporation proof — Certificate of Incorporation, MoA and AoA",
+      "Incorporation proof - Certificate of Incorporation, MoA and AoA",
       "DPIIT / Startup India recognition certificate (or MSME registration, as applicable)",
       "Detailed Project Report (DPR) covering R&D scope, TRL level and startup health",
-      "Audited financials — balance sheets and P&L for the last 3 years (as applicable)",
-      "TRL assessment — independent or self-certified proof of TRL 4 or above",
+      "Audited financials - balance sheets and P&L for the last 3 years (as applicable)",
+      "TRL assessment - independent or self-certified proof of TRL 4 or above",
       "Business plan with financial projections",
-      "IP documentation — patents filed or trademarks obtained (if any)",
-      "Promoter KYC — Aadhaar, PAN and DIN of primary directors",
+      "IP documentation - patents filed or trademarks obtained (if any)",
+      "Promoter KYC - Aadhaar, PAN and DIN of primary directors",
     ],
     cta: "Download For More",
   },
@@ -5603,7 +5603,7 @@ export const sssPage = {
   heading: "Startup Support Scheme (SSS)",
   kicker: "How To Apply, Benefits & Eligibility",
   intro:
-    "Apply for the Startup Support Scheme (SSS) and get financial assistance of ₹25 Lakh to ₹1 Crore — plus mentorship and market connections for technology-driven startups.",
+    "Apply for the Startup Support Scheme (SSS) and get financial assistance of ₹25 Lakh to ₹1 Crore - plus mentorship and market connections for technology-driven startups.",
   cta: "Check Your Eligibility",
   imageAlt: "Founders preparing a Startup Support Scheme equity funding application",
   stats: [
@@ -5630,7 +5630,7 @@ export const sssPage = {
   benefits: {
     eyebrow: "What You Unlock",
     heading: "Benefits Of The Startup Support Scheme (SSS)",
-    sub: "Capital Plus Mentorship, Product Support And Market Pathways — Not Just A Cheque.",
+    sub: "Capital Plus Mentorship, Product Support And Market Pathways - Not Just A Cheque.",
     items: [
       {
         title: "Funding Support",
@@ -5730,13 +5730,13 @@ export const sssPage = {
     heading: "Documents Required For SSS",
     note: "Keep these ready for submission and verification. Vikas Bharat sends a file-specific SSS checklist after eligibility.",
     items: [
-      "Incorporation proof — Certificate of Incorporation, Partnership Deed or LLP Agreement",
-      "DPIIT certificate — mandatory Startup India recognition",
+      "Incorporation proof - Certificate of Incorporation, Partnership Deed or LLP Agreement",
+      "DPIIT certificate - mandatory Startup India recognition",
       "Startup pitch deck or business plan outlining goals and milestones",
-      "Financial records — audited balance sheets, P&L and bank statements for 1–2 years (as applicable)",
-      "Technology description — MVP demo, photos or technical whitepapers as evidence of innovation",
-      "Founder profiles — bios and CVs of core team members",
-      "MSME details — copy of Udyam / MSME certification (if available)",
+      "Financial records - audited balance sheets, P&L and bank statements for 1-2 years (as applicable)",
+      "Technology description - MVP demo, photos or technical whitepapers as evidence of innovation",
+      "Founder profiles - bios and CVs of core team members",
+      "MSME details - copy of Udyam / MSME certification (if available)",
     ],
     cta: "Download For More",
   },
@@ -5774,7 +5774,7 @@ export const equityLinkedSeedPage = {
   heading: "Equity Linked Seed Fund",
   kicker: "Eligibility, Benefits, and How to Apply",
   intro:
-    "Discover everything you need to know about the Equity Linked Seed Fund — eligibility, benefits, focus sectors and documents required to apply for funding for your innovative startup.",
+    "Discover everything you need to know about the Equity Linked Seed Fund - eligibility, benefits, focus sectors and documents required to apply for funding for your innovative startup.",
   cta: "Check Your Eligibility",
   imageAlt: "Founders preparing an Equity Linked Seed Fund application",
   stats: [
@@ -5945,7 +5945,7 @@ export const equityLinkedSeedPage = {
   process: {
     eyebrow: "How To Apply",
     heading: "How To Apply For The Equity Linked Seed Fund",
-    sub: "Five Steps From Document Prep To Disbursement — Applications Typically Run On A Rolling Basis.",
+    sub: "Five Steps From Document Prep To Disbursement - Applications Typically Run On A Rolling Basis.",
     steps: [
       {
         title: "Prepare Documents",
@@ -5974,12 +5974,12 @@ export const equityLinkedSeedPage = {
     heading: "Documents Required",
     note: "Prepare a complete equity-ready file. Vikas Bharat sends a checklist tailored to your sector after eligibility.",
     items: [
-      "Company registration documents — Certificate of Incorporation, MoA and AoA",
+      "Company registration documents - Certificate of Incorporation, MoA and AoA",
       "DPIIT recognition proof as a Startup India entity",
       "Pitch deck or business plan with market opportunity and growth strategy",
-      "Financial statements — balance sheet, P&L and fund utilisation breakdown",
-      "Founders’ information — resumes and background of the core team",
-      "Innovation proof — technology, IP or market-readiness evidence",
+      "Financial statements - balance sheet, P&L and fund utilisation breakdown",
+      "Founders’ information - resumes and background of the core team",
+      "Innovation proof - technology, IP or market-readiness evidence",
     ],
     cta: "Download For More",
   },
@@ -6012,7 +6012,7 @@ export const equityLinkedSeedFaq = {
     {
       question: "Is there a deadline to apply?",
       answer:
-        "The fund generally operates on a rolling application basis. Specific windows may be announced periodically — check the official portal or ask Vikas Bharat for the latest cycle dates.",
+        "The fund generally operates on a rolling application basis. Specific windows may be announced periodically - check the official portal or ask Vikas Bharat for the latest cycle dates.",
     },
   ],
 } as const;
@@ -6198,7 +6198,7 @@ export const evolveTechPage = {
   stats: [
     { value: "₹25L", label: "Seed Investment" },
     { value: "5%", label: "Typical Equity Exchange" },
-    { value: "7–8 Wks", label: "Evaluation Cycle" },
+    { value: "7-8 Wks", label: "Evaluation Cycle" },
     { value: "MVP", label: "Minimum Product Stage" },
   ],
   unlock: {
@@ -6209,7 +6209,7 @@ export const evolveTechPage = {
       "It helps founders bridge the gap between early traction and larger Series A rounds through professional evaluation, seed funding and high-level mentorship.",
     ],
     benefitsHeading: "Why Founders Apply",
-    benefits: ["Up to ₹25 lakh seed investment", "Typically around 5% equity", "7–8 week structured evaluation", "Sector-agnostic technology focus"],
+    benefits: ["Up to ₹25 lakh seed investment", "Typically around 5% equity", "7-8 week structured evaluation", "Sector-agnostic technology focus"],
   },
   benefits: {
     eyebrow: "What You Unlock",
@@ -6233,7 +6233,7 @@ export const evolveTechPage = {
       { title: "Startup India", text: "Valid Startup India registration certificate.", icon: "rocket" as const },
       { title: "Technology Startup", text: "Technology-enabled business seeking private equity funding.", icon: "tech" as const },
       { title: "MVP / Prototype", text: "Pre-revenue or early-revenue venture with a working product sample.", icon: "chip" as const },
-      { title: "Founder Commitment", text: "Founders available for the 7–8 week evaluation process.", icon: "users" as const },
+      { title: "Founder Commitment", text: "Founders available for the 7-8 week evaluation process.", icon: "users" as const },
       { title: "Compliance", text: "Adherence to applicable MSME guidelines for small and micro units.", icon: "shield" as const },
     ],
   },
@@ -6403,7 +6403,7 @@ export const matrixCapitalPage = {
 
 export const horizonFundFaq = equityFundingFaq("Horizon Fund", "Initial investment can reach USD 100,000, followed by up to USD 250,000 based on milestones.", "Revenue-generating growth-stage startups registered as a Partnership, LLP or Private Limited Company with strong traction and compliance readiness.", "Pitch deck, business plan, audited financials, customer-traction proof, founder CVs and company registration papers.");
 export const gvflFaq = equityFundingFaq("GVFL", "GVFL assesses equity and quasi-equity support based on business readiness and evaluation outcomes.", "Registered innovation-led businesses at a scalable stage with a compliant legal structure and credible execution plan.", "Pitch deck, business plan, registration proof, financial statements, cap table and market-validation evidence.");
-export const evolveTechFaq = equityFundingFaq("Evolve-Tech Funding 2.0", "The programme offers seed investment up to ₹25 lakh, typically in exchange for about 5% equity, subject to committee terms.", "Technology-enabled startups with Startup India recognition, a working prototype or MVP, and founders available for the 7–8 week review.", "Company deck, DPIIT certificate, founder CVs, financial records, cap table, MSME certificate and product demo.");
+export const evolveTechFaq = equityFundingFaq("Evolve-Tech Funding 2.0", "The programme offers seed investment up to ₹25 lakh, typically in exchange for about 5% equity, subject to committee terms.", "Technology-enabled startups with Startup India recognition, a working prototype or MVP, and founders available for the 7-8 week review.", "Company deck, DPIIT certificate, founder CVs, financial records, cap table, MSME certificate and product demo.");
 export const marineVentureFaq = equityFundingFaq("Marine Venture", "Support is equity-led and linked to startup readiness, with related hub initiatives offering prototyping grant pathways.", "DPIIT-recognised Indian maritime, shipping, logistics or ocean-tech startups with an MVP and at least 51% Indian ownership.", "DPIIT certificate, ownership proof, maritime pitch deck, technical whitepaper, financials, cap table and pilot letters.");
 export const matrixCapitalFaq = equityFundingFaq("Matrix Capital Fellowship", "Fellows may access up to ₹4.52 crore in investment support, subject to programme and investment terms.", "Exceptional global founders from ideation stage through ventures with up to €2M ARR; Indian applicants may apply.", "Founder portfolio, pitch deck, video introduction, financials and cap table for traction-stage applicants, plus technical whitepaper for deep-tech.");
 
@@ -6526,7 +6526,7 @@ export const vcFundStPage = createEquityProgramme({
   eyebrow: "Tribal Entrepreneurship • Venture Capital",
   kicker: "Institutional Capital for Scheduled Tribe Entrepreneurs",
   intro: "The Ministry of Tribal Affairs' VC Fund for ST supports Scheduled Tribe entrepreneurs through equity and debt-linked capital, incubation support and long-term growth guidance.",
-  funding: "₹10L–₹5 Cr",
+  funding: "₹10L-₹5 Cr",
   eligibility: "The lead applicant must be an Indian Scheduled Tribe entrepreneur, with at least 51% ST ownership and control in a DPIIT-recognised Private Limited Company. The venture must meet applicable operating-history and compliance conditions.",
   benefits: ["Funding from ₹10 lakh to ₹5 crore", "Up to 75% project-cost support", "4% coupon rate; 3.75% for eligible women and differently-abled founders", "Up to 10-year tenure and 36-month moratorium", "Incubation and prototype-refinement support"],
   documents: ["Aadhaar, PAN and valid ST certificate", "Certificate of Incorporation, MoA and AoA", "DPIIT recognition certificate", "CA-certified shareholding proof showing ≥51% ST ownership", "Detailed Project Report and three-year projections", "Audited financials and bank statements", "TBI selection letter, if applicable", "Udyam / MSME certificate"],
@@ -6564,7 +6564,7 @@ export const ventureFundingChallengePage = createEquityProgramme({
   eyebrow: "Shiv Nadar AIC • Startup Acceleration",
   kicker: "Seed Funding & Hybrid Incubation for Innovation-Led Startups",
   intro: "The Venture Funding Challenge by Shiv Nadar AIC provides seed-stage capital, expert mentorship and a nine-month hybrid incubation programme for high-potential technology ventures.",
-  funding: "₹5L–₹1 Cr",
+  funding: "₹5L-₹1 Cr",
   eligibility: "Early-stage or scaling Indian startups incorporated as a Private Limited Company, LLP or Partnership, with at least a PoC or working prototype, a committed founding team and a scalable technology or research-led solution.",
   benefits: ["Funding from ₹5 lakh to ₹1 crore", "Nine-month hybrid incubation", "One-to-one founder and academic mentorship", "University lab and ecosystem access", "Curated investor Demo Days", "Market-validation support"],
   documents: ["Certificate of Incorporation, MoA and AoA", "DPIIT / Startup India recognition", "Comprehensive pitch deck", "Prototype, PoC or TRL evidence", "Current financials and three-year projections", "Founder and technical-team CVs", "Udyam / MSME certificate", "Patent or trademark documents, if applicable"],
@@ -6600,9 +6600,9 @@ export const deepTechPage = createEquityProgramme({
   name: "Deep Tech Funding",
   eyebrow: "IIT Tirupati TIH • NM-ICPS",
   kicker: "Up to ₹1 Crore for Research-to-Prototype Deep Tech",
-  intro: "Deep Tech Funding under IIT Tirupati TIH supports academia–industry–startup collaborations advancing technologies from TRL 2–4 to TRL 5–6 in PNT, Earth Observation, Digital Twin and subsurface intelligence.",
+  intro: "Deep Tech Funding under IIT Tirupati TIH supports academia-industry-startup collaborations advancing technologies from TRL 2-4 to TRL 5-6 in PNT, Earth Observation, Digital Twin and subsurface intelligence.",
   funding: "Up to ₹1 Cr",
-  eligibility: "Indian nationals with a Principal Investigator affiliated to a recognised Indian academic or research institution. Startup-only proposals are not allowed — academia–industry–startup collaboration is required, with a 12–18 month project timeline aligned to focus domains.",
+  eligibility: "Indian nationals with a Principal Investigator affiliated to a recognised Indian academic or research institution. Startup-only proposals are not allowed - academia-industry-startup collaboration is required, with a 12-18 month project timeline aligned to focus domains.",
   benefits: ["Grant support up to ₹1 crore", "Milestone-linked tranche release", "DST and industry mentorship", "IP and commercialisation assistance", "Access to elite research labs and validation facilities"],
   documents: ["Detailed project proposal with TRL entry and exit points", "Prototype roadmap and timeline", "IP filing strategy", "Commercial deployment pathway", "PI and startup team CVs", "MSME certification for the industrial partner", "Collaboration letters or MoUs from partners"],
   process: [
@@ -6611,7 +6611,7 @@ export const deepTechPage = createEquityProgramme({
     { title: "Portal Submission", text: "Submit the complete proposal through the official TIH channel." },
     { title: "Evaluation", text: "Experts assess technical feasibility, impact and delivery readiness." },
     { title: "Funding Disbursement", text: "Approved projects receive milestone-linked grant support." },
-    { title: "Execution & Monitoring", text: "Teams execute over 12–18 months with progress reviews." },
+    { title: "Execution & Monitoring", text: "Teams execute over 12-18 months with progress reviews." },
   ],
 });
 
@@ -6658,7 +6658,7 @@ export const investmentReadinessPage = createEquityProgramme({
   kicker: "Prepare Seed to Series A Startups for Investor Meetings",
   intro: "IRA 2.0 by ISB I-Venture helps early-to-growth startups become investor-ready through pitch coaching, financial modelling, one-to-one mentorship, compliance gap closure and a curated Demo Day with VC and angel networks.",
   funding: "Accelerator",
-  eligibility: "DPIIT-recognised Private Limited Companies or LLPs at early-to-growth stage with a deployed product or MVP, measurable traction, active fundraising intent within 6–12 months, and at least one full-time founder participating.",
+  eligibility: "DPIIT-recognised Private Limited Companies or LLPs at early-to-growth stage with a deployed product or MVP, measurable traction, active fundraising intent within 6-12 months, and at least one full-time founder participating.",
   benefits: ["Pitch-deck refinement with investor feedback", "Financial model and valuation workshops", "One-to-one domain mentorship", "Demo Day and warm investor introductions", "Compliance and legal gap closure", "Open across FinTech, HealthTech, DeepTech, SaaS and more"],
   documents: ["Company Incorporation Certificate (Pvt Ltd / LLP)", "DPIIT Recognition Certificate", "Pitch deck with problem, solution, market, traction and team", "Three-year financial projections and current statements", "Cap table", "Founder and leadership biographies", "MVP or product proof", "Udyam / MSME certificate"],
   process: [
@@ -6717,7 +6717,7 @@ export const equityElevatorFaq = equityFundingFaq("Equity Elevator", "Selected s
 export const deepTechFaq = equityFundingFaq("Deep Tech Funding", "Selected projects can receive up to ₹1 crore in grant-in-aid support.", "Indian collaborative proposals with an academic Principal Investigator; startup-only applications are not eligible.", "Project proposal, prototype roadmap, IP plan and collaboration letters from partners.");
 export const newVentureFaq = equityFundingFaq("New Venture Program", "Selected startups may receive up to ₹30 lakh to support prototype development and scaling.", "Indian Industry 4.0 startups registered as Private Limited, LLP, Partnership or MSME entities.", "Application form, project proposal, business model, registration proof and prototype or demo if available.");
 export const ratanFundingFaq = equityFundingFaq("Ratan Funding", "Selected startups can receive up to ₹30 lakh in milestone-linked grants or seed capital.", "DPIIT / Startup India recognised startups with a validated prototype or MVP and a full-time founding team.", "Incorporation papers, pitch deck, TRL evidence, financials and founder profiles.");
-export const investmentReadinessFaq = equityFundingFaq("Investment Readiness Accelerator (IRA) 2.0", "IRA 2.0 does not invest capital directly — it prepares startups to raise Seed to Series A funding from external investors.", "DPIIT-recognised Pvt Ltd or LLP startups with a deployed product or MVP, traction and fundraising intent within 6–12 months.", "Pitch deck, financial model, cap table, DPIIT certificate, incorporation papers and product proof.");
+export const investmentReadinessFaq = equityFundingFaq("Investment Readiness Accelerator (IRA) 2.0", "IRA 2.0 does not invest capital directly - it prepares startups to raise Seed to Series A funding from external investors.", "DPIIT-recognised Pvt Ltd or LLP startups with a deployed product or MVP, traction and fundraising intent within 6-12 months.", "Pitch deck, financial model, cap table, DPIIT certificate, incorporation papers and product proof.");
 export const technovibeFaq = equityFundingFaq("TechnoVibe Funding", "Startups can access up to ₹10 lakh across Prototype (₹1.5L), MVP (₹4L) and Deployment (₹10L) stages.", "DPIIT-recognised or early-stage Indian blockchain startups (Pvt Ltd or LLP) with proprietary technology at prototype to pilot stage.", "DPIIT certificate, technical whitepaper, pitch deck, TRL proof and incorporation documents.");
 export const ventureTechFaq = equityFundingFaq("Venture Tech Funding", "Selected startups may receive seed funding up to USD 2 million (about ₹18 crore), subject to evaluation and investment terms.", "Early-stage Companies Act startups with a prototype or market validation in disruptive tech domains such as AI, biotech, energy, quantum, robotics or space.", "Pitch deck, business plan, product description, founder bios, market analysis, traction proof and incorporation papers.");
 
@@ -6832,11 +6832,11 @@ export const coldStorageSubsidyPage = createSubsidyProgramme({
   name: "Cold Storage Subsidy Scheme",
   eyebrow: "NHB • MIDH • Agro Infrastructure",
   kicker: "Capital Subsidy & Interest Support for Cold Storage Units",
-  intro: "The Cold Storage Subsidy Scheme, implemented through NHB and MIDH, supports construction and modernisation of multi-chamber, energy-efficient cold storage for fruits, vegetables, spices and onions — typically from 251 MT to 20,000 MT capacity.",
+  intro: "The Cold Storage Subsidy Scheme, implemented through NHB and MIDH, supports construction and modernisation of multi-chamber, energy-efficient cold storage for fruits, vegetables, spices and onions - typically from 251 MT to 20,000 MT capacity.",
   funding: "Up to 50%",
-  eligibility: "Individual entrepreneurs, farmers, FPOs, cooperatives and MSMEs registered as Private Limited, LLP or Partnership, with land ownership or a registered lease of at least 15 years, term-loan financial closure, and primary use for horticulture commodities within 251–20,000 MT capacity.",
+  eligibility: "Individual entrepreneurs, farmers, FPOs, cooperatives and MSMEs registered as Private Limited, LLP or Partnership, with land ownership or a registered lease of at least 15 years, term-loan financial closure, and primary use for horticulture commodities within 251-20,000 MT capacity.",
   benefits: [
-    "Capital subsidy of 35–50% of project cost (higher in Gujarat and hilly/scheduled areas)",
+    "Capital subsidy of 35-50% of project cost (higher in Gujarat and hilly/scheduled areas)",
     "3% interest subvention on term loans up to ₹2 crore",
     "100% CGTMSE-style guarantee cover pathways for eligible loans up to ₹2 crore",
     "State incentives such as electricity bill reimbursement in select states",
@@ -6866,7 +6866,7 @@ export const pmKusumPage = createSubsidyProgramme({
   eyebrow: "MNRE • Solar Agriculture",
   kicker: "Solar Pumps, Decentralised Plants & Grid Solarisation",
   intro: "PM KUSUM (Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan) helps farmers shift to solar power through decentralised plants on barren land (Component A), standalone solar pumps (Component B), and solarisation of grid-connected pumps (Component C).",
-  funding: "Up to 60–80%",
+  funding: "Up to 60-80%",
   eligibility: "Eligibility varies by component: individual farmers, FPOs, cooperatives, panchayats and water user associations for Component A; farmers in off-grid or weak-grid areas for Component B; and farmers with existing grid-connected pumps for Component C, as per state policy.",
   benefits: [
     "Subsidy up to 60% (30% Central + 30% State) in most regions, and up to 80% in special regions",
@@ -6899,7 +6899,7 @@ export const tweesPage = createSubsidyProgramme({
   intro: "TWEES (Tamil Nadu Women Employment and Entrepreneurship Scheme) provides collateral-free loan support up to ₹10 lakh with a 25% government subsidy (capped at ₹2 lakh) for women and transgender entrepreneurs setting up or expanding micro and small businesses.",
   funding: "25% / ₹2L",
   routeLabel: "Loan + Subsidy",
-  eligibility: "Women and transgender residents of Tamil Nadu aged 18–55 with a valid ration card, proposing manufacturing, service or trading projects (large agriculture projects are excluded), and able to contribute at least 5% of project cost. Priority is given to SC/ST, BPL, widows and differently-abled applicants.",
+  eligibility: "Women and transgender residents of Tamil Nadu aged 18-55 with a valid ration card, proposing manufacturing, service or trading projects (large agriculture projects are excluded), and able to contribute at least 5% of project cost. Priority is given to SC/ST, BPL, widows and differently-abled applicants.",
   benefits: [
     "Loan assistance up to ₹10 lakh through empanelled banks",
     "25% subsidy on project cost, capped at ₹2 lakh",
@@ -6931,12 +6931,12 @@ export const semiconductorPage = createSubsidyProgramme({
   name: "Semiconductor Scheme",
   eyebrow: "India Semiconductor Mission • Deep Tech",
   kicker: "Fab, Packaging, Design & Accelerator Incentives",
-  intro: "India’s Semiconductor Scheme ecosystem — anchored by the India Semiconductor Mission — supports chip manufacturing, display fabs, compound semiconductors, packaging, design-linked incentives and accelerator programmes such as Semiconductor Future 2025 (Bharat Byte) with Cadence, AIC IIT Delhi, FITT-IIT Delhi and AIM–NITI Aayog.",
+  intro: "India’s Semiconductor Scheme ecosystem - anchored by the India Semiconductor Mission - supports chip manufacturing, display fabs, compound semiconductors, packaging, design-linked incentives and accelerator programmes such as Semiconductor Future 2025 (Bharat Byte) with Cadence, AIC IIT Delhi, FITT-IIT Delhi and AIM-NITI Aayog.",
   funding: "Up to 50%",
   eligibility: "Manufacturing companies, packaging units, design startups, early-stage deep-tech ventures, student teams, researchers and individual innovators applying under relevant ISM tracks or accelerator windows such as Semiconductor Future 2025.",
   benefits: [
     "Up to 50% capital subsidy for semiconductor and display fabs",
-    "30–50% incentives for compound semiconductors and packaging",
+    "30-50% incentives for compound semiconductors and packaging",
     "Design Linked Incentive (DLI) support up to ₹30 crore per company",
     "Access to EDA tools, mentorship and incubation under accelerator tracks",
     "Milestone-linked disbursement for approved projects",
@@ -6962,10 +6962,10 @@ export const maharashtraGovtPage = createSubsidyProgramme({
   name: "Maharashtra Government Schemes",
   eyebrow: "State Funding • Grants, Equity & Loans",
   kicker: "Agri-Sure, Startup Agro, Venture Fund & Cluster Support",
-  intro: "Maharashtra Government Schemes are state-backed grants, equity and loan instruments for Maharashtra-based startups and MSMEs — including Agri-Sure Fund, Startup Agro Fund, Venture Fund (MH) and Cluster Development Program pathways.",
+  intro: "Maharashtra Government Schemes are state-backed grants, equity and loan instruments for Maharashtra-based startups and MSMEs - including Agri-Sure Fund, Startup Agro Fund, Venture Fund (MH) and Cluster Development Program pathways.",
   funding: "Up to ₹5 Cr+",
   routeLabel: "Grant / Equity",
-  eligibility: "Maharashtra-based Private Limited Companies, LLPs and other eligible organisations — typically with MVP or early-stage readiness — applying to sector-aligned programmes such as AgriTech, clean energy, healthcare and industrial clusters. Specific funds may require DPIIT recognition, operating history or self-contribution.",
+  eligibility: "Maharashtra-based Private Limited Companies, LLPs and other eligible organisations - typically with MVP or early-stage readiness - applying to sector-aligned programmes such as AgriTech, clean energy, healthcare and industrial clusters. Specific funds may require DPIIT recognition, operating history or self-contribution.",
   benefits: [
     "Agri-Sure Fund support up to ₹1 crore for AgriTech startups",
     "Startup Agro Fund grants from ₹20 lakh to ₹1 crore for sustainable agriculture ventures",
@@ -6975,7 +6975,7 @@ export const maharashtraGovtPage = createSubsidyProgramme({
   ],
   documents: [
     "Certificate of Incorporation (Pvt Ltd / LLP)",
-    "Pitch deck covering business model, traction and problem–solution fit",
+    "Pitch deck covering business model, traction and problem-solution fit",
     "Audited financial statements, ITR and revenue projections",
     "Business plan",
     "DPIIT / Startup India recognition certificate, where required",
@@ -6993,34 +6993,34 @@ export const maharashtraGovtPage = createSubsidyProgramme({
 export const coldStorageSubsidyFaq = subsidySchemeFaq(
   "Cold Storage Subsidy Scheme",
   "Capital subsidy typically ranges from 35% to 50% of project cost depending on capacity and location, with interest subvention of about 3% on eligible term loans up to ₹2 crore.",
-  "Entrepreneurs, farmers, FPOs, cooperatives and MSMEs with eligible cold-storage projects of 251–20,000 MT, land rights and bank financial closure.",
+  "Entrepreneurs, farmers, FPOs, cooperatives and MSMEs with eligible cold-storage projects of 251-20,000 MT, land rights and bank financial closure.",
   "DPR, land documents, bank sanction letter, civil drawings, KYC, incorporation papers, GST/MSME proofs and statutory NOCs.",
 );
 
 export const pmKusumFaq = subsidySchemeFaq(
   "PM KUSUM Scheme",
   "Most regions offer up to 60% subsidy (30% Central + 30% State) for solar pumps, rising to about 80% in special regions as per prevailing guidelines.",
-  "Farmers, FPOs, cooperatives, panchayats and water user associations — depending on Component A, B or C and state policy.",
+  "Farmers, FPOs, cooperatives, panchayats and water user associations - depending on Component A, B or C and state policy.",
   "Aadhaar, land ownership proof, bank details, DPR for larger plants and DISCOM consent where required.",
 );
 
 export const tweesFaq = subsidySchemeFaq(
   "TWEES Scheme",
   "Loans up to ₹10 lakh with 25% subsidy on project cost, capped at ₹2 lakh, generally without collateral.",
-  "Women and transgender residents of Tamil Nadu aged 18–55 with a valid ration card and a manufacturing, service or trading project.",
+  "Women and transgender residents of Tamil Nadu aged 18-55 with a valid ration card and a manufacturing, service or trading project.",
   "Aadhaar, ration card, bank passbook, photographs, DPR, vendor quotations and category certificates if applicable.",
 );
 
 export const semiconductorFaq = subsidySchemeFaq(
   "Semiconductor Scheme",
-  "Fab and display projects may receive up to 50% capital subsidy; packaging and compound semiconductor incentives often range 30–50%; Design Linked Incentive support can reach up to ₹30 crore per company.",
+  "Fab and display projects may receive up to 50% capital subsidy; packaging and compound semiconductor incentives often range 30-50%; Design Linked Incentive support can reach up to ₹30 crore per company.",
   "Manufacturers, packaging units, design startups, researchers and deep-tech innovators applying under relevant ISM or accelerator tracks.",
   "DPR, incorporation and KYC, technology roadmap, financial plan, team or IP evidence and portal-specific declarations.",
 );
 
 export const maharashtraGovtFaq = subsidySchemeFaq(
   "Maharashtra Government Schemes",
-  "Support ranges by programme — for example Agri-Sure up to ₹1 crore, Startup Agro grants ₹20 lakh–₹1 crore, and Venture Fund (MH) equity up to ₹5 crore.",
+  "Support ranges by programme - for example Agri-Sure up to ₹1 crore, Startup Agro grants ₹20 lakh-₹1 crore, and Venture Fund (MH) equity up to ₹5 crore.",
   "Maharashtra-based startups and eligible entities meeting the specific fund’s stage, sector and registration requirements.",
   "Incorporation certificate, pitch deck, financials, business plan, DPIIT proof where required, and GST/MSME documents.",
 );
@@ -7136,7 +7136,7 @@ export const mudraPage = createLoanProgramme({
   name: "Mudra Loans (PMMY)",
   eyebrow: "Pradhan Mantri MUDRA Yojana",
   kicker: "Collateral-Free Micro Loans up to ₹20 Lakh",
-  intro: "Mudra Loans under Pradhan Mantri Mudra Yojana (PMMY) provide collateral-free credit to micro and small businesses through banks, RRBs, small finance banks and NBFCs — across Shishu (up to ₹50,000), Kishore (₹50,001–₹5 lakh) and Tarun (₹5–₹20 lakh) categories.",
+  intro: "Mudra Loans under Pradhan Mantri Mudra Yojana (PMMY) provide collateral-free credit to micro and small businesses through banks, RRBs, small finance banks and NBFCs - across Shishu (up to ₹50,000), Kishore (₹50,001-₹5 lakh) and Tarun (₹5-₹20 lakh) categories.",
   funding: "Up to ₹20L",
   eligibility: "Indian citizens running or proposing non-farm micro enterprises as Proprietorship, Partnership, LLP or Private Limited, typically under about 7 years old with turnover generally not exceeding ₹25 lakh, and with no default history at any bank or financial institution.",
   benefits: [
@@ -7148,8 +7148,8 @@ export const mudraPage = createLoanProgramme({
     "Coverage across manufacturing, services, trading, transport and agri-allied activities",
   ],
   documents: [
-    "Identity proof — Aadhaar, PAN or Voter ID",
-    "Address proof — bank statement, electricity bill or Aadhaar",
+    "Identity proof - Aadhaar, PAN or Voter ID",
+    "Address proof - bank statement, electricity bill or Aadhaar",
     "Detailed Project Report / business profile",
     "Udyam registration and entity documents (Partnership Deed / Incorporation)",
     "Latest ITR, balance sheet and P&L for Kishore and Tarun",
@@ -7169,22 +7169,22 @@ export const msmeLoanPage = createLoanProgramme({
   name: "MSME Loan",
   eyebrow: "Bank & NBFC Credit For MSMEs",
   kicker: "Loans from ₹50,000 to ₹5 Crore with CGTMSE Pathways",
-  intro: "MSME Loans help micro, small and medium enterprises fund expansion, equipment and working capital through banks and NBFCs — often at rates from about 7–12% p.a., with collateral-free options under CGTMSE and related government-backed programmes.",
-  funding: "₹50K–₹5 Cr",
+  intro: "MSME Loans help micro, small and medium enterprises fund expansion, equipment and working capital through banks and NBFCs - often at rates from about 7-12% p.a., with collateral-free options under CGTMSE and related government-backed programmes.",
+  funding: "₹50K-₹5 Cr",
   eligibility: "Udyam-registered MSMEs and eligible new or expanding units in manufacturing, services or trading that meet lender turnover, vintage and credit norms. New businesses can also access pathways such as Mudra Shishu and PMEGP where eligible.",
   benefits: [
     "Loan amounts typically from ₹50,000 to ₹5 crore depending on product",
     "Collateral-free options under CGTMSE for eligible units",
-    "Interest rates often in the 7–12% p.a. band by lender",
+    "Interest rates often in the 7-12% p.a. band by lender",
     "Working capital, term loan and equipment finance coverage",
     "Links to subsidy-backed routes such as PMEGP where applicable",
     "Faster digital and 59-minute loan products at select lenders",
   ],
   documents: [
     "Identity proof of directors / partners / proprietor",
-    "Address proof — utility bills, rent agreement or bank statement",
+    "Address proof - utility bills, rent agreement or bank statement",
     "Udyam registration, GST certificate and Startup India proof if applicable",
-    "Last 6–12 months bank statements, ITR and audited financials",
+    "Last 6-12 months bank statements, ITR and audited financials",
     "Detailed Project Report or growth plan",
     "Founder / promoter profiles and CVs",
   ],
@@ -7202,7 +7202,7 @@ export const standupPage = createLoanProgramme({
   eyebrow: "Women & SC/ST Entrepreneurship",
   kicker: "Bank Loans from ₹10 Lakh to ₹1 Crore",
   intro: "Stand-Up India facilitates bank loans for women entrepreneurs and SC/ST borrowers to set up greenfield enterprises or expand existing businesses through scheduled commercial banks, with structured appraisal and documentation support.",
-  funding: "₹10L–₹1 Cr",
+  funding: "₹10L-₹1 Cr",
   eligibility: "Women entrepreneurs and SC/ST borrowers with a viable greenfield or expansion plan, applying through participating scheduled commercial banks and meeting KYC, category and bank appraisal requirements.",
   benefits: [
     "Bank loans typically from ₹10 lakh to ₹1 crore",
@@ -7231,8 +7231,8 @@ export const standupPage = createLoanProgramme({
 
 export const mudraFaq = loanSchemeFaq(
   "Mudra Loans (PMMY)",
-  "Collateral-free loans up to ₹20 lakh across Shishu (up to ₹50,000), Kishore (₹50,001–₹5 lakh) and Tarun (₹5–₹20 lakh).",
-  "Indian micro and small non-farm businesses — typically Proprietorship, Partnership, LLP or Pvt Ltd — with clean credit history and activity in manufacturing, services, trading or allied sectors.",
+  "Collateral-free loans up to ₹20 lakh across Shishu (up to ₹50,000), Kishore (₹50,001-₹5 lakh) and Tarun (₹5-₹20 lakh).",
+  "Indian micro and small non-farm businesses - typically Proprietorship, Partnership, LLP or Pvt Ltd - with clean credit history and activity in manufacturing, services, trading or allied sectors.",
   "KYC, address proof, DPR/business profile, Udyam or entity documents, financials for higher categories, and asset quotations where needed.",
 );
 
@@ -7362,11 +7362,11 @@ export const actGrantPage = createGrantProgramme({
   name: "ACT Grants",
   eyebrow: "Social Innovation Grant",
   kicker: "Non-Repayable Grants for Social Entrepreneurs",
-  intro: "The ACT Grant programme supports social entrepreneurs who are building technology-led solutions to real social problems — in areas like education, health, climate action, and women's entrepreneurship. Unlike a business loan, this is a grant — the money does not have to be repaid and you do not give up any ownership of your organisation in exchange.",
-  funding: "₹5L–₹50L",
+  intro: "The ACT Grant programme supports social entrepreneurs who are building technology-led solutions to real social problems - in areas like education, health, climate action, and women's entrepreneurship. Unlike a business loan, this is a grant - the money does not have to be repaid and you do not give up any ownership of your organisation in exchange.",
+  funding: "₹5L-₹50L",
   eligibility: "Gender Eligibility: Open to women entrepreneurs and gender-diverse leadership teams.; Target Sectors: Education, Health, Environment, or Women Entrepreneurship.; Stage of Startup: Primarily early-stage with a viable MVP (Minimum Viable Product).; Technology Focus: Technology-driven solution with potential for large-scale impact.; Geography: Targeted towards Indian startups solving Indian social challenges.",
   benefits: ["Non-Repayable Financial Assistance", "Seed Funding", "Elite Mentorship", "Networking", "Demo Day Exposure", "MSME Support"],
-  documents: ["Business Profile — Company website link, product/service details and pitch deck.", "Founder & Team Details — CVs highlighting experience and roles.", "Financial Proof — Last 6 months of bank statements and ITR (if applicable).", "Registration Proof — MSME Certification and DPIIT Recognition.", "Innovation Narrative — Proof of Concept (PoC) or working prototype demo.", "Compliance Docs — Proof of business registration (Pvt Ltd/LLP)."],
+  documents: ["Business Profile - Company website link, product/service details and pitch deck.", "Founder & Team Details - CVs highlighting experience and roles.", "Financial Proof - Last 6 months of bank statements and ITR (if applicable).", "Registration Proof - MSME Certification and DPIIT Recognition.", "Innovation Narrative - Proof of Concept (PoC) or working prototype demo.", "Compliance Docs - Proof of business registration (Pvt Ltd/LLP)."],
   process: [
     { title: "Drafting The Plan", text: "2" },
     { title: "Document Compilation", text: "3" },
@@ -7378,9 +7378,9 @@ export const actGrantPage = createGrantProgramme({
 });
 export const actGrantFaq = grantSchemeFaq(
   "ACT Grants",
-  "Selected applicants may receive support of about ₹5L–₹50L, subject to evaluation and scheme guidelines.",
+  "Selected applicants may receive support of about ₹5L-₹50L, subject to evaluation and scheme guidelines.",
   "Gender Eligibility: Open to women entrepreneurs and gender-diverse leadership teams.; Target Sectors: Education, Health, Environment, or Women Entrepreneurship.; Stage of Startup: Primarily early-stage with a viable MVP (Minimum Viable Product).; Technology Focus: Technology-driv",
-  "Business Profile — Company website link, product/service details and pitch deck., Founder & Team Details — CVs highlighting experience and roles., Financial Proof — Last 6 months of bank statements and ITR (if applicable)., Registration Proof — MSME Certification and DPIIT Recognition..",
+  "Business Profile - Company website link, product/service details and pitch deck., Founder & Team Details - CVs highlighting experience and roles., Financial Proof - Last 6 months of bank statements and ITR (if applicable)., Registration Proof - MSME Certification and DPIIT Recognition..",
 );
 
 export const mahilaEmpowermentPage = createGrantProgramme({
@@ -7416,7 +7416,7 @@ export const sparkGrantPage = createGrantProgramme({
   funding: "Up to ₹88L",
   eligibility: "The Spark Grant is open to a wide range of entrepreneurs, provided they meet the following requirements:; Registered Business: Must be a registered for-profit entity, such as a Proprietorship, LLP, Pvt Ltd, Partnership, etc.; At Least One Woman Founder: The business must have at least one woman founder or co-founder. Individual women entrepreneurs planning to start a venture can also apply.; Innovative and Scalable I",
   benefits: ["Non-Dilutive Funding", "Eligibility for All for-Profit Entities", "Sector Agnostic", "Equity-Free Funding", "Women Empowerment", "Diverse Sectors"],
-  documents: ["Keep the following ready before you apply (as typically requested for incubator-led grants):", "-   Certificate of incorporation / partnership deed and business registration proof", "-   Proof of women founder/co-founder identity and shareholding — -   Pitch deck, business plan and financial projections", "-   Bank account details and KYC for the applying entity — -   Sector-specific technical or product roadmap (where applicable)"],
+  documents: ["Keep the following ready before you apply (as typically requested for incubator-led grants):", "-   Certificate of incorporation / partnership deed and business registration proof", "-   Proof of women founder/co-founder identity and shareholding - -   Pitch deck, business plan and financial projections", "-   Bank account details and KYC for the applying entity - -   Sector-specific technical or product roadmap (where applicable)"],
   process: [
     { title: "Ensure Eligibility", text: "Confirm sector fit, women-founder requirement and registration status." },
     { title: "Prepare Your Application", text: "Compile business plan, traction metrics and funding ask." },
@@ -7430,7 +7430,7 @@ export const sparkGrantFaq = grantSchemeFaq(
   "Spark Grant",
   "Selected applicants may receive support of about Up to ₹88L, subject to evaluation and scheme guidelines.",
   "The Spark Grant is open to a wide range of entrepreneurs, provided they meet the following requirements:; Registered Business: Must be a registered for-profit entity, such as a Proprietorship, LLP, Pvt Ltd, Partnership, etc.; At Least One Woman Founder: The business must have at ",
-  "Keep the following ready before you apply (as typically requested for incubator-led grants):, -   Certificate of incorporation / partnership deed and business registration proof, -   Proof of women founder/co-founder identity and shareholding — -   Pitch deck, business plan and financial projections, -   Bank account details and KYC for the applying entity — -   Sector-specific technical or product roadmap (where applicable).",
+  "Keep the following ready before you apply (as typically requested for incubator-led grants):, -   Certificate of incorporation / partnership deed and business registration proof, -   Proof of women founder/co-founder identity and shareholding - -   Pitch deck, business plan and financial projections, -   Bank account details and KYC for the applying entity - -   Sector-specific technical or product roadmap (where applicable).",
 );
 
 export const tide2Page = createGrantProgramme({
@@ -7441,7 +7441,7 @@ export const tide2Page = createGrantProgramme({
   funding: "Up to ₹7L",
   eligibility: "Startup Stage: Revenue stage or market-ready prototype/MVP with traction.; Entity Type: Private Limited Company, LLP, Partnership, or Sole Proprietorship.; Registration: Indian-incorporated entity with Startup India recognition.; Founder’s Commitment: Founders/co-founders must work full-time on the business.; Tech Focus: Deep-tech or emerging sectors.",
   benefits: ["Financial Grant Support", "Expert Mentoring", "Lab and Workspace Access", "Market Access"],
-  documents: ["-   Company Profile", "-   Founders’ Information — -   DPIIT / Startup India Recognition Certificate", "-   Business Plan", "-   TRL Evidence", "-   Financial Documents", "-   IP Documents"],
+  documents: ["-   Company Profile", "-   Founders’ Information - -   DPIIT / Startup India Recognition Certificate", "-   Business Plan", "-   TRL Evidence", "-   Financial Documents", "-   IP Documents"],
   process: [
     { title: "Portal Entry", text: "2" },
     { title: "Fill Application", text: "3" },
@@ -7455,7 +7455,7 @@ export const tide2Faq = grantSchemeFaq(
   "TIDE 2.0 Scheme",
   "Selected applicants may receive support of about Up to ₹7L, subject to evaluation and scheme guidelines.",
   "Startup Stage: Revenue stage or market-ready prototype/MVP with traction.; Entity Type: Private Limited Company, LLP, Partnership, or Sole Proprietorship.; Registration: Indian-incorporated entity with Startup India recognition.; Founder’s Commitment: Founders/co-founders must wo",
-  "-   Company Profile, -   Founders’ Information — -   DPIIT / Startup India Recognition Certificate, -   Business Plan, -   TRL Evidence.",
+  "-   Company Profile, -   Founders’ Information - -   DPIIT / Startup India Recognition Certificate, -   Business Plan, -   TRL Evidence.",
 );
 
 export const rkvyRaftaarPage = createGrantProgramme({
@@ -7466,7 +7466,7 @@ export const rkvyRaftaarPage = createGrantProgramme({
   funding: "Up to ₹25L",
   eligibility: "Applicants must meet the specific RKVY RAFTAAR eligibility requirements, with priority for startups beyond concept stage.; Startup Type: Must be a DPIIT-recognized Indian startup under Startup India.; Prototype Requirement: Minimum Viable Product (MVP) or working prototype is required.; Focus Areas: Startup should work in agriculture or allied sectors.; Business Stage: Idea-stage innovators or seed-stage startups wit",
   benefits: ["Grant Support", "Milestone-linked Funding", "Mentorship & Training", "Networking Opportunities", "Waste to Wealth", "Market Access & Visibility"],
-  documents: ["Preparing your file correctly is essential. Here are the mandatory documents for submission:", "Company Registration — Certificate of Incorporation (Pvt Ltd or LLP).", "DPIIT Recognition — Startup India recognition status.", "MSME Certificate — MSME certificate for additional government support.", "Pitch Deck — Technology, TRL level, and market potential details.", "TRL Proof — Prototype photos, demo videos, or test reports.", "Founders' CVs — Relevant founder and core team credentials.", "Financials — Bank statements and tax filings, where applicable."],
+  documents: ["Preparing your file correctly is essential. Here are the mandatory documents for submission:", "Company Registration - Certificate of Incorporation (Pvt Ltd or LLP).", "DPIIT Recognition - Startup India recognition status.", "MSME Certificate - MSME certificate for additional government support.", "Pitch Deck - Technology, TRL level, and market potential details.", "TRL Proof - Prototype photos, demo videos, or test reports.", "Founders' CVs - Relevant founder and core team credentials.", "Financials - Bank statements and tax filings, where applicable."],
   process: [
     { title: "Prepare Documents", text: "2" },
     { title: "Submit Application", text: "3" },
@@ -7480,7 +7480,7 @@ export const rkvyRaftaarFaq = grantSchemeFaq(
   "RKVY RAFTAAR",
   "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
   "Applicants must meet the specific RKVY RAFTAAR eligibility requirements, with priority for startups beyond concept stage.; Startup Type: Must be a DPIIT-recognized Indian startup under Startup India.; Prototype Requirement: Minimum Viable Product (MVP) or working prototype is req",
-  "Preparing your file correctly is essential. Here are the mandatory documents for submission:, Company Registration — Certificate of Incorporation (Pvt Ltd or LLP)., DPIIT Recognition — Startup India recognition status., MSME Certificate — MSME certificate for additional government support..",
+  "Preparing your file correctly is essential. Here are the mandatory documents for submission:, Company Registration - Certificate of Incorporation (Pvt Ltd or LLP)., DPIIT Recognition - Startup India recognition status., MSME Certificate - MSME certificate for additional government support..",
 );
 
 export const nidhiPrayasPage = createGrantProgramme({
@@ -7491,7 +7491,7 @@ export const nidhiPrayasPage = createGrantProgramme({
   funding: "Up to ₹10L",
   eligibility: "Applicants must meet defined innovation, age, and compliance criteria before applying through an authorized PRAYAS center.; Applicant Type: Individuals, Proprietorships, Partnerships, LLPs, or Private Limited companies.; Business Stage: Early stage with a validated PoC or MVP.; Company Age: Up to 7 years old (10 years for biotech).; Annual Turnover: Should not exceed ₹25 Lakhs in any prior financial year.",
   benefits: ["Seed Capital", "Technical Mentorship", "Incubation Support", "Networking", "Commercialization"],
-  documents: ["Prepare a complete, compliant file before submission to improve review speed and approval likelihood.", "Pitch Deck — A detailed deck explaining the problem, solution, and roadmap. (Refer to grant for ventures for structure).", "DPIIT Recognition Certificate — Copy of the Startup India recognition certificate.", "MSME Certificate — MSME Certification for additional credibility.", "Technology Description and PoC evidence — Proof of concept (PoC) and technical whitepaper.", "Financial Statements — Audited statements or self-certified balance sheets for the past year.", "Founder Profiles/CVs — Detailed CVs highlighting technical expertise.", "IP/Patent details (if any) — Details of patents or IP filings (if any)."],
+  documents: ["Prepare a complete, compliant file before submission to improve review speed and approval likelihood.", "Pitch Deck - A detailed deck explaining the problem, solution, and roadmap. (Refer to grant for ventures for structure).", "DPIIT Recognition Certificate - Copy of the Startup India recognition certificate.", "MSME Certificate - MSME Certification for additional credibility.", "Technology Description and PoC evidence - Proof of concept (PoC) and technical whitepaper.", "Financial Statements - Audited statements or self-certified balance sheets for the past year.", "Founder Profiles/CVs - Detailed CVs highlighting technical expertise.", "IP/Patent details (if any) - Details of patents or IP filings (if any)."],
   process: [
     { title: "Prepare The Documents", text: "2" },
     { title: "Submit Your Application", text: "3" },
@@ -7505,7 +7505,7 @@ export const nidhiPrayasFaq = grantSchemeFaq(
   "NIDHI PRAYAS Grant",
   "Selected applicants may receive support of about Up to ₹10L, subject to evaluation and scheme guidelines.",
   "Applicants must meet defined innovation, age, and compliance criteria before applying through an authorized PRAYAS center.; Applicant Type: Individuals, Proprietorships, Partnerships, LLPs, or Private Limited companies.; Business Stage: Early stage with a validated PoC or MVP.; C",
-  "Prepare a complete, compliant file before submission to improve review speed and approval likelihood., Pitch Deck — A detailed deck explaining the problem, solution, and roadmap. (Refer to grant for ventures for structure)., DPIIT Recognition Certificate — Copy of the Startup India recognition certificate., MSME Certificate — MSME Certification for additional credibility..",
+  "Prepare a complete, compliant file before submission to improve review speed and approval likelihood., Pitch Deck - A detailed deck explaining the problem, solution, and roadmap. (Refer to grant for ventures for structure)., DPIIT Recognition Certificate - Copy of the Startup India recognition certificate., MSME Certificate - MSME Certification for additional credibility..",
 );
 
 export const meityGenesisEirPage = createGrantProgramme({
@@ -7516,7 +7516,7 @@ export const meityGenesisEirPage = createGrantProgramme({
   funding: "Up to ₹10L",
   eligibility: "To qualify for the GENESIS EiR 2.0 program, applicants must meet the following criteria:; Who Can Apply?: - Indian Citizenship: Applicants must be Indian nationals and at least 18 years old.; - Students or DPIIT-Registered Founders: Full-time students (UG/PG) or founders/co-founders of DPIIT-registered startups, generally less than 2 years old.; - Innovation Stage: Startups should be at ideation, validation, or proto",
   benefits: ["Grant or incentive support under scheme guidelines", "Mentorship and ecosystem guidance", "Structured application and documentation support", "Market access and incubation pathways"],
-  documents: ["-   DPIIT Registration Certificate (if applicable) — -   Educational Certificates for students", "-   Business Plan or Pitch Deck detailing your vision, technology, market potential, and projections", "-   Proof of Indian Citizenship (Aadhaar or Passport) — -   Prototype or Ideation Details outlining your current stage and roadmap"],
+  documents: ["-   DPIIT Registration Certificate (if applicable) - -   Educational Certificates for students", "-   Business Plan or Pitch Deck detailing your vision, technology, market potential, and projections", "-   Proof of Indian Citizenship (Aadhaar or Passport) - -   Prototype or Ideation Details outlining your current stage and roadmap"],
   process: [
     { title: "Check Fit", text: "Review deeptech / ICT / ESDM fit for your startup idea." },
     { title: "Prepare Deck", text: "Prepare your innovation concept, market validation and MVP plan." },
@@ -7530,18 +7530,18 @@ export const meityGenesisEirFaq = grantSchemeFaq(
   "MeitY GENESIS EIR",
   "Selected applicants may receive support of about Up to ₹10L, subject to evaluation and scheme guidelines.",
   "To qualify for the GENESIS EiR 2.0 program, applicants must meet the following criteria:; Who Can Apply?: - Indian Citizenship: Applicants must be Indian nationals and at least 18 years old.; - Students or DPIIT-Registered Founders: Full-time students (UG/PG) or founders/co-found",
-  "-   DPIIT Registration Certificate (if applicable) — -   Educational Certificates for students, -   Business Plan or Pitch Deck detailing your vision, technology, market potential, and projections, -   Proof of Indian Citizenship (Aadhaar or Passport) — -   Prototype or Ideation Details outlining your current stage and roadmap.",
+  "-   DPIIT Registration Certificate (if applicable) - -   Educational Certificates for students, -   Business Plan or Pitch Deck detailing your vision, technology, market potential, and projections, -   Proof of Indian Citizenship (Aadhaar or Passport) - -   Prototype or Ideation Details outlining your current stage and roadmap.",
 );
 
 export const agriBusinessGrantsPage = createGrantProgramme({
   name: "Agri Business Grants",
   eyebrow: "Maharashtra Agri Value Chain",
   kicker: "Agri Processing & Rural Enterprise Grants",
-  intro: "India's central and state governments fund agri-businesses through more than 15 active grant and subsidy schemes — covering agri-tech, food processing, cold chain infrastructure, and farming inputs. Most of these schemes give money you do not have to repay, offer loans at subsidised interest rates, or reimburse part of your input costs directly. This page covers the major agri business grants available in 2026 — who can apply, how much funding is on offer, where to apply, and what documents you ",
+  intro: "India's central and state governments fund agri-businesses through more than 15 active grant and subsidy schemes - covering agri-tech, food processing, cold chain infrastructure, and farming inputs. Most of these schemes give money you do not have to repay, offer loans at subsidised interest rates, or reimburse part of your input costs directly. This page covers the major agri business grants available in 2026 - who can apply, how much funding is on offer, where to apply, and what documents you ",
   funding: "Up to ₹40L",
-  eligibility: "Eligibility varies by track. Broadly, the following entities are eligible:; Track 1 – Innovators & Early-Stage Startups: Individual innovators, early-stage startups, researchers working on AI-based solutions for agriculture at concept, prototype, PoC, or MVP stage with a clear problem statement and expected impact.; Track 2 – Registered Startups & FPOs: Registered startups, FPOs, NGOs, and research teams with a worki",
+  eligibility: "Eligibility varies by track. Broadly, the following entities are eligible:; Track 1 - Innovators & Early-Stage Startups: Individual innovators, early-stage startups, researchers working on AI-based solutions for agriculture at concept, prototype, PoC, or MVP stage with a clear problem statement and expected impact.; Track 2 - Registered Startups & FPOs: Registered startups, FPOs, NGOs, and research teams with a worki",
   benefits: ["Grant or incentive support under scheme guidelines", "Mentorship and ecosystem guidance", "Structured application and documentation support", "Market access and incubation pathways"],
-  documents: ["Below is a general document checklist applicable to most agri business grant applications:", "-   Registration certificate, PAN, GST (if applicable), Udyam/MSME registration — -   Aadhaar and PAN of founders/directors, photograph, basic CV/profile", "-   Detailed Project Report (DPR), business plan or project proposal, master pitch deck", "-   Problem-solution summary, revenue model and pricing strategy — -   Description of product/service, PoC/MVP details, screenshots, demos, pilot data (if any)", "-   Estimated project cost, 3–5 year projections, fund requirement and utilization plan", "-   Bank statements and basic financials (if applicable) — -   For Track 2: Working prototype or tested solution documentation"],
+  documents: ["Below is a general document checklist applicable to most agri business grant applications:", "-   Registration certificate, PAN, GST (if applicable), Udyam/MSME registration - -   Aadhaar and PAN of founders/directors, photograph, basic CV/profile", "-   Detailed Project Report (DPR), business plan or project proposal, master pitch deck", "-   Problem-solution summary, revenue model and pricing strategy - -   Description of product/service, PoC/MVP details, screenshots, demos, pilot data (if any)", "-   Estimated project cost, 3-5 year projections, fund requirement and utilization plan", "-   Bank statements and basic financials (if applicable) - -   For Track 2: Working prototype or tested solution documentation"],
   process: [
     { title: "Identify Relevant Scheme", text: "Map your project to central/state agri grant categories and track conditions. We help you shortlist the most suitable schemes based on your business profile." },
     { title: "Stage 1 \U2013 Application Documentation", text: "We coordinate with your team to collect all required documents, prepare the master pitch deck, scheme-specific PPT, company/startup profile, and detailed project proposal (DPR-styl" },
@@ -7554,8 +7554,8 @@ export const agriBusinessGrantsPage = createGrantProgramme({
 export const agriBusinessGrantsFaq = grantSchemeFaq(
   "Agri Business Grants",
   "Selected applicants may receive support of about Up to ₹40L, subject to evaluation and scheme guidelines.",
-  "Eligibility varies by track. Broadly, the following entities are eligible:; Track 1 – Innovators & Early-Stage Startups: Individual innovators, early-stage startups, researchers working on AI-based solutions for agriculture at concept, prototype, PoC, or MVP stage with a clear pr",
-  "Below is a general document checklist applicable to most agri business grant applications:, -   Registration certificate, PAN, GST (if applicable), Udyam/MSME registration — -   Aadhaar and PAN of founders/directors, photograph, basic CV/profile, -   Detailed Project Report (DPR), business plan or project proposal, master pitch deck, -   Problem-solution summary, revenue model and pricing strategy — -   Description of product/service, PoC/MVP details, screenshots, demos, pilot data (if any).",
+  "Eligibility varies by track. Broadly, the following entities are eligible:; Track 1 - Innovators & Early-Stage Startups: Individual innovators, early-stage startups, researchers working on AI-based solutions for agriculture at concept, prototype, PoC, or MVP stage with a clear pr",
+  "Below is a general document checklist applicable to most agri business grant applications:, -   Registration certificate, PAN, GST (if applicable), Udyam/MSME registration - -   Aadhaar and PAN of founders/directors, photograph, basic CV/profile, -   Detailed Project Report (DPR), business plan or project proposal, master pitch deck, -   Problem-solution summary, revenue model and pricing strategy - -   Description of product/service, PoC/MVP details, screenshots, demos, pilot data (if any).",
 );
 
 export const socialImpactPage = createGrantProgramme({
@@ -7566,7 +7566,7 @@ export const socialImpactPage = createGrantProgramme({
   funding: "Up to ₹5L",
   eligibility: "The Social Impact Innovation Scheme eligibility is tailored to identify high-potential innovators at the very beginning of their journey. Meeting these requirements is essential before initiating the business registration process or submitting a proposal. Social Impact Innovation Scheme Eligibility Table; Applicant Age: Must be an Indian citizen between 18 and 35 years of age.; Entity Type: Open to Individual Innovat",
   benefits: ["Direct Financial Assistance:", "Elite Mentorship:", "Incubation Support:", "Networking & Visibility:", "Market Readiness:"],
-  documents: ["Proof of Identity: — Valid PAN Card of the primary applicant.", "Address Proof: — Aadhaar Card or Voter ID.", "Project Proposal: — A detailed document outlining the venture's problem statement, impact metrics, and scaling roadmap. (See our guide on how government grants ", "Incorporation Docs: — If registered, provide the Certificate of Incorporation and PAN of the startup.", "Innovation Proof: — Photos, videos, or early concept designs of the prototype/MVP.", "MSME Certification: — Valid MSME certification (Udyam) for startups."],
+  documents: ["Proof of Identity: - Valid PAN Card of the primary applicant.", "Address Proof: - Aadhaar Card or Voter ID.", "Project Proposal: - A detailed document outlining the venture's problem statement, impact metrics, and scaling roadmap. (See our guide on how government grants ", "Incorporation Docs: - If registered, provide the Certificate of Incorporation and PAN of the startup.", "Innovation Proof: - Photos, videos, or early concept designs of the prototype/MVP.", "MSME Certification: - Valid MSME certification (Udyam) for startups."],
   process: [
     { title: "Verify Status", text: "2" },
     { title: "Technical Drafting", text: "3" },
@@ -7580,7 +7580,7 @@ export const socialImpactFaq = grantSchemeFaq(
   "Social Impact Innovation Scheme",
   "Selected applicants may receive support of about Up to ₹5L, subject to evaluation and scheme guidelines.",
   "The Social Impact Innovation Scheme eligibility is tailored to identify high-potential innovators at the very beginning of their journey. Meeting these requirements is essential before initiating the business registration process or submitting a proposal. Social Impact Innovation",
-  "Proof of Identity: — Valid PAN Card of the primary applicant., Address Proof: — Aadhaar Card or Voter ID., Project Proposal: — A detailed document outlining the venture's problem statement, impact metrics, and scaling roadmap. (See our guide on how government grants , Incorporation Docs: — If registered, provide the Certificate of Incorporation and PAN of the startup..",
+  "Proof of Identity: - Valid PAN Card of the primary applicant., Address Proof: - Aadhaar Card or Voter ID., Project Proposal: - A detailed document outlining the venture's problem statement, impact metrics, and scaling roadmap. (See our guide on how government grants , Incorporation Docs: - If registered, provide the Certificate of Incorporation and PAN of the startup..",
 );
 
 export const mobilityInnovationPage = createGrantProgramme({
@@ -7616,7 +7616,7 @@ export const greatSchemePage = createGrantProgramme({
   funding: "Up to ₹50L",
   eligibility: "The GREAT Scheme 2025 is open to a diverse range of individuals and startups involved in technical textiles innovation. Here's who can apply:; Individual Applicants: Indian citizen, at least 21 years old. The primary applicant must be the Project Leader.; Startups: Registered as a company with a minimum 51% Indian ownership. The startup must be represented by a qualified Project Leader.; Incubation Requirement: Appli",
   benefits: ["Initial Funding up to ₹50 Lakhs", "Follow-on Funding up to ₹1 Crore", "3-4 Months Structured Guidance", "400+ Investor Network", "Incubation Support", "Long-term Post-program Support"],
-  documents: ["Company Registration — Proof of registration (Private Limited or LLP)", "Project Proposal — Detailed proposal outlining objectives, milestones, and Project Leader role", "Proof of Incubation — Certificate from approved incubator facility", "Proof of Product Readiness — Customer feedback, sales reports, or product/service validation", "Financial Statements — Financial statements for the last fiscal year", "IP Documents — Legal documentation related to IP and business ownership"],
+  documents: ["Company Registration - Proof of registration (Private Limited or LLP)", "Project Proposal - Detailed proposal outlining objectives, milestones, and Project Leader role", "Proof of Incubation - Certificate from approved incubator facility", "Proof of Product Readiness - Customer feedback, sales reports, or product/service validation", "Financial Statements - Financial statements for the last fiscal year", "IP Documents - Legal documentation related to IP and business ownership"],
   process: [
     { title: "Prepare Your Documents", text: "Gather all required documents including registration, proposal, and financial statements." },
     { title: "Submit Your Application", text: "Submit through the official scheme portal with pitch deck and project details." },
@@ -7630,7 +7630,7 @@ export const greatSchemeFaq = grantSchemeFaq(
   "GREAT Scheme",
   "Selected applicants may receive support of about Up to ₹50L, subject to evaluation and scheme guidelines.",
   "The GREAT Scheme 2025 is open to a diverse range of individuals and startups involved in technical textiles innovation. Here's who can apply:; Individual Applicants: Indian citizen, at least 21 years old. The primary applicant must be the Project Leader.; Startups: Registered as ",
-  "Company Registration — Proof of registration (Private Limited or LLP), Project Proposal — Detailed proposal outlining objectives, milestones, and Project Leader role, Proof of Incubation — Certificate from approved incubator facility, Proof of Product Readiness — Customer feedback, sales reports, or product/service validation.",
+  "Company Registration - Proof of registration (Private Limited or LLP), Project Proposal - Detailed proposal outlining objectives, milestones, and Project Leader role, Proof of Incubation - Certificate from approved incubator facility, Proof of Product Readiness - Customer feedback, sales reports, or product/service validation.",
 );
 
 export const uyegpPage = createGrantProgramme({
@@ -7641,7 +7641,7 @@ export const uyegpPage = createGrantProgramme({
   funding: "Up to ₹15L",
   eligibility: "To apply for the UYEGP Scheme, applicants need to meet specific eligibility criteria. The key requirements are as follows:; Educational Qualification: Must have passed at least the 8th standard.; Annual Household Income: Should not exceed ₹5 Lakhs per year.; Age Limit: Minimum age: 18 years - Maximum age: 45 years for general category - Maximum age: 55 years for SC/ST, BC, MBC, Minorities, Women, Ex-Servicemen, Diffe",
   benefits: ["Capital Subsidy", "Loan Assistance", "Repayment Terms", "Promoter's Contribution", "Training & Mentorship", "Bank Support"],
-  documents: ["To apply for the UYEGP Scheme, you must submit the following documents:", "Aadhaar Card — Proof of identity for the applicant.", "Ration Card — Proof of residence (or nativity certificate if the Ration card is unavailable).", "Educational Certificates — Transfer certificate or school record sheet copy.", "Community Certificate — SC/ST, BC, or MBC certificate (if applicable).", "Project Report — Detailed business plan or project report covering the total cost, objectives, and milestones.", "Bank Passbook — Bank account details for funding disbursement.", "Photographs — Passport-sized photographs of the applicant."],
+  documents: ["To apply for the UYEGP Scheme, you must submit the following documents:", "Aadhaar Card - Proof of identity for the applicant.", "Ration Card - Proof of residence (or nativity certificate if the Ration card is unavailable).", "Educational Certificates - Transfer certificate or school record sheet copy.", "Community Certificate - SC/ST, BC, or MBC certificate (if applicable).", "Project Report - Detailed business plan or project report covering the total cost, objectives, and milestones.", "Bank Passbook - Bank account details for funding disbursement.", "Photographs - Passport-sized photographs of the applicant."],
   process: [
     { title: "Prepare Your Documents", text: "2" },
     { title: "Submit Application", text: "3" },
@@ -7655,7 +7655,7 @@ export const uyegpFaq = grantSchemeFaq(
   "UYEGP Scheme",
   "Selected applicants may receive support of about Up to ₹15L, subject to evaluation and scheme guidelines.",
   "To apply for the UYEGP Scheme, applicants need to meet specific eligibility criteria. The key requirements are as follows:; Educational Qualification: Must have passed at least the 8th standard.; Annual Household Income: Should not exceed ₹5 Lakhs per year.; Age Limit: Minimum ag",
-  "To apply for the UYEGP Scheme, you must submit the following documents:, Aadhaar Card — Proof of identity for the applicant., Ration Card — Proof of residence (or nativity certificate if the Ration card is unavailable)., Educational Certificates — Transfer certificate or school record sheet copy..",
+  "To apply for the UYEGP Scheme, you must submit the following documents:, Aadhaar Card - Proof of identity for the applicant., Ration Card - Proof of residence (or nativity certificate if the Ration card is unavailable)., Educational Certificates - Transfer certificate or school record sheet copy..",
 );
 
 export const cybersecurityFundPage = createGrantProgramme({
@@ -7666,7 +7666,7 @@ export const cybersecurityFundPage = createGrantProgramme({
   funding: "Up to ₹30L",
   eligibility: "To access the benefits of this program, startups must meet specific deep-tech and defence eligibility requirements:; Company Types: Private Limited Company - LLP - Registered Partnership - MSMEs (Proprietorship); Focus Areas: Organizations developing solutions in cybersecurity, such as AI-powered tools, malware analysis, and fraud detection.; Industry Sectors: AI, IoT, Robotics - Companies focused on cyber risk evalu",
   benefits: ["Funding", "Mentorship", "Incubation Support", "Investor Access", "Long-Term Support"],
-  documents: ["To apply for the Cybersecurity Fund 2.0, you will need to submit the following documents:", "Company Registration Documents — Proof of company registration (Private Limited Company, LLP, Partnership).", "GST Registration — Proof of GST registration (for applicable businesses).", "PAN Card — PAN card of the applicant.", "Project Proposal / Business Plan — Detailed business plan outlining your project goals, milestones, and funding needs.", "Financial Statements — Balance Sheet, Profit & Loss Account for the previous fiscal year.", "Technology / Innovation Description — Description of the technology or cybersecurity solution you are developing.", "Tax Clearance — Income Tax Returns or Tax Clearance Certificates (if applicable)."],
+  documents: ["To apply for the Cybersecurity Fund 2.0, you will need to submit the following documents:", "Company Registration Documents - Proof of company registration (Private Limited Company, LLP, Partnership).", "GST Registration - Proof of GST registration (for applicable businesses).", "PAN Card - PAN card of the applicant.", "Project Proposal / Business Plan - Detailed business plan outlining your project goals, milestones, and funding needs.", "Financial Statements - Balance Sheet, Profit & Loss Account for the previous fiscal year.", "Technology / Innovation Description - Description of the technology or cybersecurity solution you are developing.", "Tax Clearance - Income Tax Returns or Tax Clearance Certificates (if applicable)."],
   process: [
     { title: "Ensure Eligibility", text: "2" },
     { title: "Prepare Required Documents", text: "3" },
@@ -7680,7 +7680,7 @@ export const cybersecurityFundFaq = grantSchemeFaq(
   "Cybersecurity Fund 2.0",
   "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
   "To access the benefits of this program, startups must meet specific deep-tech and defence eligibility requirements:; Company Types: Private Limited Company - LLP - Registered Partnership - MSMEs (Proprietorship); Focus Areas: Organizations developing solutions in cybersecurity, s",
-  "To apply for the Cybersecurity Fund 2.0, you will need to submit the following documents:, Company Registration Documents — Proof of company registration (Private Limited Company, LLP, Partnership)., GST Registration — Proof of GST registration (for applicable businesses)., PAN Card — PAN card of the applicant..",
+  "To apply for the Cybersecurity Fund 2.0, you will need to submit the following documents:, Company Registration Documents - Proof of company registration (Private Limited Company, LLP, Partnership)., GST Registration - Proof of GST registration (for applicable businesses)., PAN Card - PAN card of the applicant..",
 );
 
 export const artProgramPage = createGrantProgramme({
@@ -7691,7 +7691,7 @@ export const artProgramPage = createGrantProgramme({
   funding: "Up to ₹30L",
   eligibility: "To apply for the ART Program, the applicant must meet the following eligibility criteria:; Applicant Type: Academic Institutes (e.g., universities, research organizations) or Startups focused on Bio-CPS innovations.; Principal Investigator (PI): Must hold a regular position within an academic institute or research establishment (e.g., ISRO, DRDO, CSIR).; Technology Readiness Level (TRL): Projects must be at a TRL of ",
   benefits: ["Funding Support (Up to ₹30 Lakhs)", "Mentorship and Technical Guidance", "Networking and Market Access"],
-  documents: ["To apply for the ART Program, you will need to submit the following documents:", "Proof of Concept — Image or prototype showing the working model of your technology or product.", "Project Proposal — A detailed business plan or project proposal outlining the objectives, milestones, and expected outcomes.", "Proof of Employment (PI) — Proof of regular employment for the Principal Investigator at an eligible academic institution or research establishment.", "Partnership Details — Any existing partnerships (e.g., MoUs with universities, research organizations, or companies).", "Clinical Trial Evidence — If applicable, evidence of clinical trials or testing results for medical-related projects.", "Product Certifications — Relevant certifications for your product or technology (if applicable).", "Licensing Deals — If applicable, proof of any licensing agreements for your innovation."],
+  documents: ["To apply for the ART Program, you will need to submit the following documents:", "Proof of Concept - Image or prototype showing the working model of your technology or product.", "Project Proposal - A detailed business plan or project proposal outlining the objectives, milestones, and expected outcomes.", "Proof of Employment (PI) - Proof of regular employment for the Principal Investigator at an eligible academic institution or research establishment.", "Partnership Details - Any existing partnerships (e.g., MoUs with universities, research organizations, or companies).", "Clinical Trial Evidence - If applicable, evidence of clinical trials or testing results for medical-related projects.", "Product Certifications - Relevant certifications for your product or technology (if applicable).", "Licensing Deals - If applicable, proof of any licensing agreements for your innovation."],
   process: [
     { title: "Prepare Your Documents", text: "2" },
     { title: "Submit Your Application", text: "3" },
@@ -7705,7 +7705,7 @@ export const artProgramFaq = grantSchemeFaq(
   "ART Program",
   "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
   "To apply for the ART Program, the applicant must meet the following eligibility criteria:; Applicant Type: Academic Institutes (e.g., universities, research organizations) or Startups focused on Bio-CPS innovations.; Principal Investigator (PI): Must hold a regular position withi",
-  "To apply for the ART Program, you will need to submit the following documents:, Proof of Concept — Image or prototype showing the working model of your technology or product., Project Proposal — A detailed business plan or project proposal outlining the objectives, milestones, and expected outcomes., Proof of Employment (PI) — Proof of regular employment for the Principal Investigator at an eligible academic institution or research establishment..",
+  "To apply for the ART Program, you will need to submit the following documents:, Proof of Concept - Image or prototype showing the working model of your technology or product., Project Proposal - A detailed business plan or project proposal outlining the objectives, milestones, and expected outcomes., Proof of Employment (PI) - Proof of regular employment for the Principal Investigator at an eligible academic institution or research establishment..",
 );
 
 export const agriSureFundPage = createGrantProgramme({
@@ -7716,7 +7716,7 @@ export const agriSureFundPage = createGrantProgramme({
   funding: "Up to ₹25L",
   eligibility: "To apply for the Agri-Sure Fund, your startup must meet the following eligibility criteria:; Startup Type: LLP, Private Limited Company, or Registered Partnership; Geographical Focus: The startup must be based and registered in India.; Technology Readiness: Startups must be in the early-stage with TRL 5+ (Technology Readiness Level) and have proof of concept.; Innovation: The startup must focus on innovative technolo",
   benefits: ["Financial Support", "Funding Options", "Reinvestment Opportunity", "Sustained Growth Support", "Pre-Series A Funding", "Interest Subsidy"],
-  documents: ["To apply, you must ensure your startup health program metrics and documents are ready. The Documents required for Agri-Sure Fund include:", "Company Registration — Certificate of Incorporation, MoA, and AoA (Pvt Ltd or LLP).", "DPIIT Recognition — Recognition certificate confirming eligibility under Startup India.", "MSME Certificate — Obtain MSME Certification for additional government benefits.", "Pitch Deck — A detailed deck explaining the solution and traction.", "Technology Description — Roadmap showing TRL 5+ progress.", "Founders' CVs — Highlighting experience in the agri-domain.", "Financials — Audited statements, tax exemption status, and fund utilization plans (if any, check tax exemptions)."],
+  documents: ["To apply, you must ensure your startup health program metrics and documents are ready. The Documents required for Agri-Sure Fund include:", "Company Registration - Certificate of Incorporation, MoA, and AoA (Pvt Ltd or LLP).", "DPIIT Recognition - Recognition certificate confirming eligibility under Startup India.", "MSME Certificate - Obtain MSME Certification for additional government benefits.", "Pitch Deck - A detailed deck explaining the solution and traction.", "Technology Description - Roadmap showing TRL 5+ progress.", "Founders' CVs - Highlighting experience in the agri-domain.", "Financials - Audited statements, tax exemption status, and fund utilization plans (if any, check tax exemptions)."],
   process: [
     { title: "Prepare Required Documents", text: "2" },
     { title: "Submit Your Application", text: "3" },
@@ -7730,7 +7730,7 @@ export const agriSureFundFaq = grantSchemeFaq(
   "Agri-Sure Fund",
   "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
   "To apply for the Agri-Sure Fund, your startup must meet the following eligibility criteria:; Startup Type: LLP, Private Limited Company, or Registered Partnership; Geographical Focus: The startup must be based and registered in India.; Technology Readiness: Startups must be in th",
-  "To apply, you must ensure your startup health program metrics and documents are ready. The Documents required for Agri-Sure Fund include:, Company Registration — Certificate of Incorporation, MoA, and AoA (Pvt Ltd or LLP)., DPIIT Recognition — Recognition certificate confirming eligibility under Startup India., MSME Certificate — Obtain MSME Certification for additional government benefits..",
+  "To apply, you must ensure your startup health program metrics and documents are ready. The Documents required for Agri-Sure Fund include:, Company Registration - Certificate of Incorporation, MoA, and AoA (Pvt Ltd or LLP)., DPIIT Recognition - Recognition certificate confirming eligibility under Startup India., MSME Certificate - Obtain MSME Certification for additional government benefits..",
 );
 
 export const grantForVenturesPage = createGrantProgramme({
@@ -7741,7 +7741,7 @@ export const grantForVenturesPage = createGrantProgramme({
   funding: "Up to ₹30L",
   eligibility: "To apply for the Grant for Ventures program, startups must meet the following eligibility criteria:; Startup Type: Must be a Private Limited Company, LLP, or Partnership registered in India.; DPIIT Recognition: Must be DPIIT-recognized under the Startup India scheme.; Revenue: Must have an existing customer base and monthly revenue.; Stage of Development: Must be in the ideation, validation, or early traction stage.",
   benefits: ["Grant Support", "Equity-Free Funding", "Mentorship & Training", "Market Access", "Networking Opportunities", "Bank Support"],
-  documents: ["To apply for the Grant for Ventures scheme, you will need to submit the following documents:", "Pitch Deck — A comprehensive pitch deck covering the problem, solution, market opportunity, and growth strategy.", "Executive Summary — A brief summary of your startup's mission, vision, and business goals.", "Business Plan — A detailed business plan outlining your market analysis, financial projections, and growth strategy.", "Proof of DPIIT Registration — Proof of recognition under Startup India (DPIIT).", "Revenue Proof — Evidence of monthly revenue and customer base.", "Product Demo or Video — A demo video or product introduction video (optional but recommended)."],
+  documents: ["To apply for the Grant for Ventures scheme, you will need to submit the following documents:", "Pitch Deck - A comprehensive pitch deck covering the problem, solution, market opportunity, and growth strategy.", "Executive Summary - A brief summary of your startup's mission, vision, and business goals.", "Business Plan - A detailed business plan outlining your market analysis, financial projections, and growth strategy.", "Proof of DPIIT Registration - Proof of recognition under Startup India (DPIIT).", "Revenue Proof - Evidence of monthly revenue and customer base.", "Product Demo or Video - A demo video or product introduction video (optional but recommended)."],
   process: [
     { title: "Prepare Documents", text: "Gather all necessary documents, including pitch deck, executive summary, business plan, DPIIT registration proof, revenue proof, and product demo/video." },
     { title: "Submit Application", text: "Complete and submit your application online through the official Grant for Ventures portal." },
@@ -7755,7 +7755,7 @@ export const grantForVenturesFaq = grantSchemeFaq(
   "Grant for Ventures",
   "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
   "To apply for the Grant for Ventures program, startups must meet the following eligibility criteria:; Startup Type: Must be a Private Limited Company, LLP, or Partnership registered in India.; DPIIT Recognition: Must be DPIIT-recognized under the Startup India scheme.; Revenue: Mu",
-  "To apply for the Grant for Ventures scheme, you will need to submit the following documents:, Pitch Deck — A comprehensive pitch deck covering the problem, solution, market opportunity, and growth strategy., Executive Summary — A brief summary of your startup's mission, vision, and business goals., Business Plan — A detailed business plan outlining your market analysis, financial projections, and growth strategy..",
+  "To apply for the Grant for Ventures scheme, you will need to submit the following documents:, Pitch Deck - A comprehensive pitch deck covering the problem, solution, market opportunity, and growth strategy., Executive Summary - A brief summary of your startup's mission, vision, and business goals., Business Plan - A detailed business plan outlining your market analysis, financial projections, and growth strategy..",
 );
 
 export const growthGrantPage = createGrantProgramme({
@@ -7766,7 +7766,7 @@ export const growthGrantPage = createGrantProgramme({
   funding: "Up to ₹1.7Cr",
   eligibility: "The Growth Grant targets young, innovative entrepreneurs who are ready to take their ventures to the next stage. It is important to understand the Growth Grant eligibility before preparing your business registration documents.; Age Limit: Applicants must be 22 years or younger at the time of application.; Educational Status: Must not hold a university degree; must be willing to defer or drop out.; Business Stage: Hig",
   benefits: ["Grant Support", "Mentorship", "Global Exposure", "Networking Opportunities", "Creative Freedom"],
-  documents: ["Pitch Deck — A detailed presentation of the problem, solution, and market size.", "Executive Summary — A one-page overview of your vision.", "Business Plan — Comprehensive roadmap including financial projections.", "Technology Description — Details of the MVP or working prototype.", "Founders' CVs — Proof of technical capability and founder-market fit.", "Legal Documents — Business registration and MSME certification (if applicable).", "Traction Metrics — User base, revenue, or partnership letters."],
+  documents: ["Pitch Deck - A detailed presentation of the problem, solution, and market size.", "Executive Summary - A one-page overview of your vision.", "Business Plan - Comprehensive roadmap including financial projections.", "Technology Description - Details of the MVP or working prototype.", "Founders' CVs - Proof of technical capability and founder-market fit.", "Legal Documents - Business registration and MSME certification (if applicable).", "Traction Metrics - User base, revenue, or partnership letters."],
   process: [
     { title: "Prepare Your Documents", text: "2" },
     { title: "Submit Your Application", text: "3" },
@@ -7780,7 +7780,7 @@ export const growthGrantFaq = grantSchemeFaq(
   "Growth Grant",
   "Selected applicants may receive support of about Up to ₹1.7Cr, subject to evaluation and scheme guidelines.",
   "The Growth Grant targets young, innovative entrepreneurs who are ready to take their ventures to the next stage. It is important to understand the Growth Grant eligibility before preparing your business registration documents.; Age Limit: Applicants must be 22 years or younger at",
-  "Pitch Deck — A detailed presentation of the problem, solution, and market size., Executive Summary — A one-page overview of your vision., Business Plan — Comprehensive roadmap including financial projections., Technology Description — Details of the MVP or working prototype..",
+  "Pitch Deck - A detailed presentation of the problem, solution, and market size., Executive Summary - A one-page overview of your vision., Business Plan - Comprehensive roadmap including financial projections., Technology Description - Details of the MVP or working prototype..",
 );
 
 export const brightpathVenturesPage = createGrantProgramme({
@@ -7791,7 +7791,7 @@ export const brightpathVenturesPage = createGrantProgramme({
   funding: "Up to ₹18Cr",
   eligibility: "To be eligible for the BrightPath Ventures program, startups must meet specific criteria focused on tech innovation and regional presence.; Tech-Focused Startup: Must be a tech-focused startup with a working MVP or product; Location: Startups must be based and operating in the MENA region; Early Traction: Must have early traction, such as market interest or customer adoption; Founders: The startup must have founders ",
   benefits: ["Seed Funding", "Fast-Track Application", "Demo Day Access", "Global Network Access", "Ongoing Support", "Investor Exposure"],
-  documents: ["To apply for BrightPath Ventures, you need to submit comprehensive documentation that showcases your startup's potential, traction, and business model.", "Pitch Deck — A comprehensive pitch deck covering your problem, solution, market potential, and growth strategy", "Executive Summary — A brief summary of your startup's objectives, market opportunity, and vision", "Business Plan & Financial Projections — A detailed business plan with financial projections and growth milestones", "Product/Technology Description — Description of your product or technology, including market validation and proof of concept", "Founders' CVs — Resumes of the founders outlining their experience and role in the startup", "Market Analysis — A comprehensive market analysis covering competitors, target market, and customer segments", "Current Traction Metrics — Evidence of traction, such as user numbers, revenue, or partnerships (if applicable)"],
+  documents: ["To apply for BrightPath Ventures, you need to submit comprehensive documentation that showcases your startup's potential, traction, and business model.", "Pitch Deck - A comprehensive pitch deck covering your problem, solution, market potential, and growth strategy", "Executive Summary - A brief summary of your startup's objectives, market opportunity, and vision", "Business Plan & Financial Projections - A detailed business plan with financial projections and growth milestones", "Product/Technology Description - Description of your product or technology, including market validation and proof of concept", "Founders' CVs - Resumes of the founders outlining their experience and role in the startup", "Market Analysis - A comprehensive market analysis covering competitors, target market, and customer segments", "Current Traction Metrics - Evidence of traction, such as user numbers, revenue, or partnerships (if applicable)"],
   process: [
     { title: "Prepare Documents", text: "Gather all required documents including pitch deck, business plan, and founder information." },
     { title: "Submit Application", text: "Submit your complete application through the BrightPath Ventures online portal." },
@@ -7805,7 +7805,7 @@ export const brightpathVenturesFaq = grantSchemeFaq(
   "BrightPath Ventures",
   "Selected applicants may receive support of about Up to ₹18Cr, subject to evaluation and scheme guidelines.",
   "To be eligible for the BrightPath Ventures program, startups must meet specific criteria focused on tech innovation and regional presence.; Tech-Focused Startup: Must be a tech-focused startup with a working MVP or product; Location: Startups must be based and operating in the ME",
-  "To apply for BrightPath Ventures, you need to submit comprehensive documentation that showcases your startup's potential, traction, and business model., Pitch Deck — A comprehensive pitch deck covering your problem, solution, market potential, and growth strategy, Executive Summary — A brief summary of your startup's objectives, market opportunity, and vision, Business Plan & Financial Projections — A detailed business plan with financial projections and growth milestones.",
+  "To apply for BrightPath Ventures, you need to submit comprehensive documentation that showcases your startup's potential, traction, and business model., Pitch Deck - A comprehensive pitch deck covering your problem, solution, market potential, and growth strategy, Executive Summary - A brief summary of your startup's objectives, market opportunity, and vision, Business Plan & Financial Projections - A detailed business plan with financial projections and growth milestones.",
 );
 
 export const healthAcceleratorPage = createGrantProgramme({
@@ -7816,7 +7816,7 @@ export const healthAcceleratorPage = createGrantProgramme({
   funding: "Up to ₹10L",
   eligibility: "To apply for the program, startups must meet specific health accelerator eligibility requirements to ensure they are ready for the intensive scaling process.; Startup Type: Must be a Private Limited Company.; Prototype Requirement: Must have a working prototype or a Minimum Viable Product (MVP).; Stage of Startup: Early-stage with some market traction or customer adoption.; Commitment: Founders must demonstrate commi",
   benefits: ["Seed Funding", "Expert Mentorship", "Ecosystem Access", "Demo Day Exposure", "Growth Strategy"],
-  documents: ["To ensure a smooth application process, prepare the following documents required for health accelerator submission:", "Company Registration Documents — Certificate of Incorporation, MoA, and AoA.", "Pitch Deck — Outlining the problem, solution, business model, and market traction.", "Technology Description — Proof of MVP or working prototype.", "Founders' CVs — Resumes outlining the experience of the core team.", "Market Analysis — Detailed go-to-market strategy.", "Compliance Documents — Tax filings and ISO certifications if applicable."],
+  documents: ["To ensure a smooth application process, prepare the following documents required for health accelerator submission:", "Company Registration Documents - Certificate of Incorporation, MoA, and AoA.", "Pitch Deck - Outlining the problem, solution, business model, and market traction.", "Technology Description - Proof of MVP or working prototype.", "Founders' CVs - Resumes outlining the experience of the core team.", "Market Analysis - Detailed go-to-market strategy.", "Compliance Documents - Tax filings and ISO certifications if applicable."],
   process: [
     { title: "Prepare Your Documents", text: "2" },
     { title: "Submit Your Application", text: "3" },
@@ -7830,7 +7830,7 @@ export const healthAcceleratorFaq = grantSchemeFaq(
   "Health Accelerator",
   "Selected applicants may receive support of about Up to ₹10L, subject to evaluation and scheme guidelines.",
   "To apply for the program, startups must meet specific health accelerator eligibility requirements to ensure they are ready for the intensive scaling process.; Startup Type: Must be a Private Limited Company.; Prototype Requirement: Must have a working prototype or a Minimum Viabl",
-  "To ensure a smooth application process, prepare the following documents required for health accelerator submission:, Company Registration Documents — Certificate of Incorporation, MoA, and AoA., Pitch Deck — Outlining the problem, solution, business model, and market traction., Technology Description — Proof of MVP or working prototype..",
+  "To ensure a smooth application process, prepare the following documents required for health accelerator submission:, Company Registration Documents - Certificate of Incorporation, MoA, and AoA., Pitch Deck - Outlining the problem, solution, business model, and market traction., Technology Description - Proof of MVP or working prototype..",
 );
 
 export const startupAcceleratorPage = createGrantProgramme({
@@ -7840,8 +7840,8 @@ export const startupAcceleratorPage = createGrantProgramme({
   intro: "A startup accelerator scheme is a program that helps early-stage startups accelerate their growth by providing access to investment, mentorship, networking opportunities, and resources. These schemes are typically designed for pre-seed and early-stage startups that are ready to scale and expand their operations. The Marwari Catalysts Startup Accelerator Scheme 2025 is specifically aimed at supporting startups in India by providing both financial and strategic guidance to help them scale rapidly.",
   funding: "Up to ₹25L",
   eligibility: "The Marwari Catalysts Startup Accelerator Scheme is open to early-stage startups that meet the following criteria:; Pre-seed & Early-stage Startups: Startups that are in the idea or product development phase. Those looking for seed funding or initial investment to bring their products or services to market. Getting [DPIIT startup recognition](/services/startup-india-certification-registration) in place early keeps th",
-  benefits: ["₹25 Lakhs Initial Investment", "₹75 Lakhs to ₹1 Crore Follow-on Funding", "3–4 Months of Guidance", "Access to a Network of 400+ Investors", "Post-program Long-term Support"],
-  documents: ["Ensure your application is complete and error-free by preparing the following documents:", "Company Registration", "Founder Profiles — Background and experience of the founder/co-founders", "Business Plan / Pitch Deck — Outline of the startup's objectives, target market, and scalability", "Financial Projections — 3–5 year financial projections", "Product / Service Traction — Proof of product readiness or customer feedback", "IP Documents"],
+  benefits: ["₹25 Lakhs Initial Investment", "₹75 Lakhs to ₹1 Crore Follow-on Funding", "3-4 Months of Guidance", "Access to a Network of 400+ Investors", "Post-program Long-term Support"],
+  documents: ["Ensure your application is complete and error-free by preparing the following documents:", "Company Registration", "Founder Profiles - Background and experience of the founder/co-founders", "Business Plan / Pitch Deck - Outline of the startup's objectives, target market, and scalability", "Financial Projections - 3-5 year financial projections", "Product / Service Traction - Proof of product readiness or customer feedback", "IP Documents"],
   process: [
     { title: "Check Eligibility", text: "Confirm entity fit, stage and documentation readiness." },
     { title: "Prepare Documents", text: "Assemble proposal, KYC, financials and registration proofs." },
@@ -7854,7 +7854,7 @@ export const startupAcceleratorFaq = grantSchemeFaq(
   "Startup Accelerator Scheme",
   "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
   "The Marwari Catalysts Startup Accelerator Scheme is open to early-stage startups that meet the following criteria:; Pre-seed & Early-stage Startups: Startups that are in the idea or product development phase. Those looking for seed funding or initial investment to bring their pro",
-  "Ensure your application is complete and error-free by preparing the following documents:, Company Registration, Founder Profiles — Background and experience of the founder/co-founders, Business Plan / Pitch Deck — Outline of the startup's objectives, target market, and scalability.",
+  "Ensure your application is complete and error-free by preparing the following documents:, Company Registration, Founder Profiles - Background and experience of the founder/co-founders, Business Plan / Pitch Deck - Outline of the startup's objectives, target market, and scalability.",
 );
 
 export const startupSparkPage = createGrantProgramme({
@@ -7865,7 +7865,7 @@ export const startupSparkPage = createGrantProgramme({
   funding: "Up to ₹50L",
   eligibility: "To ensure your application is successful, you must meet the specific Startup Spark eligibility requirements. These criteria are designed to identify startups that are past the basic ideation phase and ready for market deployment.; Technology Focus: Must be a tech-driven venture with an existing MVP.; Recognition: Startups must be DPIIT-recognized. If you haven't done this yet, our business registration services can h",
   benefits: ["Grant Support", "Expert Mentorship", "SINE Ecosystem", "Investor Visibility", "Global Access"],
-  documents: ["To apply for the Startup Spark Program, you will need to submit the following documents:", "Detailed Pitch Deck — Explaining the problem, solution, and market opportunity.", "Business Plan — A comprehensive roadmap with financial projections.", "Technology Description — Evidence of TRL (Technology Readiness Level).", "Traction Metrics — Proof of user base, revenue, or existing partnerships.", "Legal Documents — Incorporation certificates, MSME Certification, and tax filings.", "Founders’ CVs — Highlighting domain expertise."],
+  documents: ["To apply for the Startup Spark Program, you will need to submit the following documents:", "Detailed Pitch Deck - Explaining the problem, solution, and market opportunity.", "Business Plan - A comprehensive roadmap with financial projections.", "Technology Description - Evidence of TRL (Technology Readiness Level).", "Traction Metrics - Proof of user base, revenue, or existing partnerships.", "Legal Documents - Incorporation certificates, MSME Certification, and tax filings.", "Founders’ CVs - Highlighting domain expertise."],
   process: [
     { title: "Prepare Your Documents", text: "2" },
     { title: "Submit Your Application", text: "3" },
@@ -7879,7 +7879,7 @@ export const startupSparkFaq = grantSchemeFaq(
   "Startup Spark Scheme",
   "Selected applicants may receive support of about Up to ₹50L, subject to evaluation and scheme guidelines.",
   "To ensure your application is successful, you must meet the specific Startup Spark eligibility requirements. These criteria are designed to identify startups that are past the basic ideation phase and ready for market deployment.; Technology Focus: Must be a tech-driven venture w",
-  "To apply for the Startup Spark Program, you will need to submit the following documents:, Detailed Pitch Deck — Explaining the problem, solution, and market opportunity., Business Plan — A comprehensive roadmap with financial projections., Technology Description — Evidence of TRL (Technology Readiness Level)..",
+  "To apply for the Startup Spark Program, you will need to submit the following documents:, Detailed Pitch Deck - Explaining the problem, solution, and market opportunity., Business Plan - A comprehensive roadmap with financial projections., Technology Description - Evidence of TRL (Technology Readiness Level)..",
 );
 
 export const leapFundSchemePage = createGrantProgramme({
@@ -7915,7 +7915,7 @@ export const hpUdgamPage = createGrantProgramme({
   funding: "Up to ₹2.5Cr",
   eligibility: "HP Udgam eligibility emphasizes startup maturity, sector relevance, and operational readiness.; Business Type: Private Limited Company preferred for equity participation.; DPIIT Recognition: Valid startup recognition is generally expected.; Company Age: Typically below 10 years from incorporation.; Business Stage: Working prototype or early market traction.",
   benefits: ["High-Value Equity Funding", "Mentorship", "Infrastructure", "Market Validation", "Regulatory Support"],
-  documents: ["Build a complete application file before submission for better review quality and turnaround.", "Startup recognition certificate — Proof of startup india certificate and Registration.", "Company incorporation documents — Certificate of Incorporation, MoA, and AoA.", "Professional pitch deck — Detailing the problem, energy solution, and market size.", "Financial records — Audited balance sheets and P&L statements.", "Technology roadmap — Detailed description of the technology and TRL level.", "Founder profiles — Resumes of the core team showcasing domain expertise.", "MSME details — Copy of MSME Certification."],
+  documents: ["Build a complete application file before submission for better review quality and turnaround.", "Startup recognition certificate - Proof of startup india certificate and Registration.", "Company incorporation documents - Certificate of Incorporation, MoA, and AoA.", "Professional pitch deck - Detailing the problem, energy solution, and market size.", "Financial records - Audited balance sheets and P&L statements.", "Technology roadmap - Detailed description of the technology and TRL level.", "Founder profiles - Resumes of the core team showcasing domain expertise.", "MSME details - Copy of MSME Certification."],
   process: [
     { title: "Ensure Eligibility", text: "2" },
     { title: "Submit Application", text: "3" },
@@ -7929,7 +7929,7 @@ export const hpUdgamFaq = grantSchemeFaq(
   "HP Udgam Scheme",
   "Selected applicants may receive support of about Up to ₹2.5Cr, subject to evaluation and scheme guidelines.",
   "HP Udgam eligibility emphasizes startup maturity, sector relevance, and operational readiness.; Business Type: Private Limited Company preferred for equity participation.; DPIIT Recognition: Valid startup recognition is generally expected.; Company Age: Typically below 10 years f",
-  "Build a complete application file before submission for better review quality and turnaround., Startup recognition certificate — Proof of startup india certificate and Registration., Company incorporation documents — Certificate of Incorporation, MoA, and AoA., Professional pitch deck — Detailing the problem, energy solution, and market size..",
+  "Build a complete application file before submission for better review quality and turnaround., Startup recognition certificate - Proof of startup india certificate and Registration., Company incorporation documents - Certificate of Incorporation, MoA, and AoA., Professional pitch deck - Detailing the problem, energy solution, and market size..",
 );
 
 export const defenceSchemePage = createGrantProgramme({
@@ -7940,7 +7940,7 @@ export const defenceSchemePage = createGrantProgramme({
   funding: "Up to ₹1.5Cr",
   eligibility: "iDEX is open to a range of innovators and organisations working in defence and aerospace technology domains:; DPIIT-Recognised Startups: Startups officially recognised by DPIIT under the Startup India initiative are the primary target beneficiaries.; MSMEs: Micro, Small and Medium Enterprises with relevant technology capabilities in defence or aerospace domains.; Individual Innovators: Individual technology innovator",
   benefits: ["Up to ₹1.5 Crore Grant", "Direct Government Procurement", "Access to Defence Facilities", "Mentorship & Hand-holding", "IP Rights Retained", "Market Validation"],
-  documents: ["Prepare the following to apply for an iDEX DISC challenge:", "DPIIT Certificate — DPIIT startup recognition certificate (mandatory for startups).", "Company Registration — Certificate of Incorporation, LLP agreement or equivalent.", "Technical Proposal — Detailed solution proposal addressing the specific DISC challenge requirements.", "Team Profile — CVs of key technical and management team members demonstrating relevant expertise.", "IP Documentation — Patents, patent applications or other IP documentation relevant to the proposed solution.", "Financial Statements — Last 1–2 years of audited accounts or projected financials for early-stage startups."],
+  documents: ["Prepare the following to apply for an iDEX DISC challenge:", "DPIIT Certificate - DPIIT startup recognition certificate (mandatory for startups).", "Company Registration - Certificate of Incorporation, LLP agreement or equivalent.", "Technical Proposal - Detailed solution proposal addressing the specific DISC challenge requirements.", "Team Profile - CVs of key technical and management team members demonstrating relevant expertise.", "IP Documentation - Patents, patent applications or other IP documentation relevant to the proposed solution.", "Financial Statements - Last 1-2 years of audited accounts or projected financials for early-stage startups."],
   process: [
     { title: "Monitor Active Challenges", text: "Visit idex.gov.in to browse currently active DISC challenges posted by the Army, Navy, Air Force and MoD." },
     { title: "Register On iDEX Portal", text: "Create your innovator profile on the iDEX portal and ensure your DPIIT recognition is current." },
@@ -7954,7 +7954,7 @@ export const defenceSchemeFaq = grantSchemeFaq(
   "iDEX Defence Innovation Scheme",
   "Selected applicants may receive support of about Up to ₹1.5Cr, subject to evaluation and scheme guidelines.",
   "iDEX is open to a range of innovators and organisations working in defence and aerospace technology domains:; DPIIT-Recognised Startups: Startups officially recognised by DPIIT under the Startup India initiative are the primary target beneficiaries.; MSMEs: Micro, Small and Mediu",
-  "Prepare the following to apply for an iDEX DISC challenge:, DPIIT Certificate — DPIIT startup recognition certificate (mandatory for startups)., Company Registration — Certificate of Incorporation, LLP agreement or equivalent., Technical Proposal — Detailed solution proposal addressing the specific DISC challenge requirements..",
+  "Prepare the following to apply for an iDEX DISC challenge:, DPIIT Certificate - DPIIT startup recognition certificate (mandatory for startups)., Company Registration - Certificate of Incorporation, LLP agreement or equivalent., Technical Proposal - Detailed solution proposal addressing the specific DISC challenge requirements..",
 );
 
 export const aditiDefencePage = createGrantProgramme({
@@ -7965,7 +7965,7 @@ export const aditiDefencePage = createGrantProgramme({
   funding: "Up to ₹25Cr",
   eligibility: "Aditi Defence 4.0 is open to Indian entities with proven technological capabilities in defence or dual-use innovation areas.; Entity Type: Registered Indian startups, MSMEs, or private companies. Foreign entities are not eligible.; Technology Domain: Innovative defence or dual-use technology solution across autonomous systems, munitions, cybersecurity, AI, or space tech.; Technology Readiness: High Technology Readine",
   benefits: ["Grant up to ₹25 Crore", "DRDO Testing Facilities", "Defence Expert Mentorship", "Government Contract Pathway", "Export Opportunities", "Genesis Fund Access"],
-  documents: ["-   DPIIT Registration Certificate — -   Company Incorporation Certificate", "-   Pitch deck with technology description and market application — -   Technology Readiness Level (TRL) evidence and test data", "-   Financial model with cap table and 3-year projections — -   MVP evidence or pilot deployment proof", "-   Team CVs highlighting technical and leadership experience — -   Valid MSME (Udyam) Certification"],
+  documents: ["-   DPIIT Registration Certificate - -   Company Incorporation Certificate", "-   Pitch deck with technology description and market application - -   Technology Readiness Level (TRL) evidence and test data", "-   Financial model with cap table and 3-year projections - -   MVP evidence or pilot deployment proof", "-   Team CVs highlighting technical and leadership experience - -   Valid MSME (Udyam) Certification"],
   process: [
     { title: "Online Registration", text: "Register on the Aditi Defence 4.0 portal and create your startup profile with basic entity details." },
     { title: "Document Submission", text: "Upload DPIIT certificate, incorporation documents, pitch deck, TRL evidence, and financial projections." },
@@ -7979,7 +7979,7 @@ export const aditiDefenceFaq = grantSchemeFaq(
   "Aditi Defence 4.0 Challenge",
   "Selected applicants may receive support of about Up to ₹25Cr, subject to evaluation and scheme guidelines.",
   "Aditi Defence 4.0 is open to Indian entities with proven technological capabilities in defence or dual-use innovation areas.; Entity Type: Registered Indian startups, MSMEs, or private companies. Foreign entities are not eligible.; Technology Domain: Innovative defence or dual-us",
-  "-   DPIIT Registration Certificate — -   Company Incorporation Certificate, -   Pitch deck with technology description and market application — -   Technology Readiness Level (TRL) evidence and test data, -   Financial model with cap table and 3-year projections — -   MVP evidence or pilot deployment proof, -   Team CVs highlighting technical and leadership experience — -   Valid MSME (Udyam) Certification.",
+  "-   DPIIT Registration Certificate - -   Company Incorporation Certificate, -   Pitch deck with technology description and market application - -   Technology Readiness Level (TRL) evidence and test data, -   Financial model with cap table and 3-year projections - -   MVP evidence or pilot deployment proof, -   Team CVs highlighting technical and leadership experience - -   Valid MSME (Udyam) Certification.",
 );
 
 export const aerospaceDefencePage = createGrantProgramme({
@@ -7990,7 +7990,7 @@ export const aerospaceDefencePage = createGrantProgramme({
   funding: "Up to ₹25Cr",
   eligibility: "The Aerospace Defence Fund eligibility framework is strictly defined to ensure that resources are directed toward serious innovators who have a clear legal and technical foundation. Understanding these criteria is essential before initiating the business registration or application process. Aerospace Defence Fund Eligibility Table; Startup Stage: Early-stage entrepreneurs, including pre-seed, idea, or concept-stage v",
   benefits: ["Financial Support:", "Structured Mentorship:", "Industry Incubation:", "Networking & Visibility:", "Investor Readiness:"],
-  documents: ["DPIIT Recognition Certificate: — Proof of being a recognized startup under the Startup India certificate program.", "Company Incorporation Proof: — COI, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "Project Proposal: — A detailed whitepaper explaining the problem statement, technical solution, and defence relevance.", "TRL Description: — Evidence of the current Technology Readiness Level (photos, videos, or test reports).", "Founder CVs: — Resumes highlighting the technical and managerial expertise of the founding team.", "Financial Statements: — Balance sheets and P&L for the last 2 years (if applicable).", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  documents: ["DPIIT Recognition Certificate: - Proof of being a recognized startup under the Startup India certificate program.", "Company Incorporation Proof: - COI, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "Project Proposal: - A detailed whitepaper explaining the problem statement, technical solution, and defence relevance.", "TRL Description: - Evidence of the current Technology Readiness Level (photos, videos, or test reports).", "Founder CVs: - Resumes highlighting the technical and managerial expertise of the founding team.", "Financial Statements: - Balance sheets and P&L for the last 2 years (if applicable).", "MSME Certificate: - Valid MSME certification (Udyam)."],
   process: [
     { title: "Online Registration", text: "2" },
     { title: "Submit Proposal", text: "3" },
@@ -8004,18 +8004,18 @@ export const aerospaceDefenceFaq = grantSchemeFaq(
   "Aerospace Defence Fund",
   "Selected applicants may receive support of about Up to ₹25Cr, subject to evaluation and scheme guidelines.",
   "The Aerospace Defence Fund eligibility framework is strictly defined to ensure that resources are directed toward serious innovators who have a clear legal and technical foundation. Understanding these criteria is essential before initiating the business registration or applicati",
-  "DPIIT Recognition Certificate: — Proof of being a recognized startup under the Startup India certificate program., Company Incorporation Proof: — COI, MoA, and AoA. (Refer to minimum capital requirement for LLP)., Project Proposal: — A detailed whitepaper explaining the problem statement, technical solution, and defence relevance., TRL Description: — Evidence of the current Technology Readiness Level (photos, videos, or test reports)..",
+  "DPIIT Recognition Certificate: - Proof of being a recognized startup under the Startup India certificate program., Company Incorporation Proof: - COI, MoA, and AoA. (Refer to minimum capital requirement for LLP)., Project Proposal: - A detailed whitepaper explaining the problem statement, technical solution, and defence relevance., TRL Description: - Evidence of the current Technology Readiness Level (photos, videos, or test reports)..",
 );
 
 export const agriStartupShitijPage = createGrantProgramme({
   name: "Agri Startup Fund (SHITIJ 2.0)",
   eyebrow: "Agri-Tech Incubation",
   kicker: "Incubation, Mentoring & Market Access",
-  intro: "The Agri Startup Fund is offered through SHITIJ 2.0, a flagship incubation programme that supports startups working in agriculture and allied sectors. Unlike a traditional without security business loan, which focuses on debt, this initiative focuses on the entire lifecycle of a startup—from ideation to commercialization. The Agri Startup Fund Scheme provides access to the Indian Council of Agricultural Research (ICAR) experts and elite research infrastructure. It functions similarly to high-tec",
+  intro: "The Agri Startup Fund is offered through SHITIJ 2.0, a flagship incubation programme that supports startups working in agriculture and allied sectors. Unlike a traditional without security business loan, which focuses on debt, this initiative focuses on the entire lifecycle of a startup - from ideation to commercialization. The Agri Startup Fund Scheme provides access to the Indian Council of Agricultural Research (ICAR) experts and elite research infrastructure. It functions similarly to high-tec",
   funding: "Incubation",
   eligibility: "The Agri Startup Fund eligibility framework ensures that support is directed toward legally recognized and technically capable innovators. Meeting these standards is the first step in your business registration and funding journey. Agri Startup Fund Eligibility Table; Applicant Nationality: Must be an Indian Citizen.; Sector Focus: Innovation must be in Agriculture or Allied Sectors (Fisheries, Dairy, etc.).; Stage o",
   benefits: ["1\\. Structured Training & Mentorship", "2\\. Laboratory and Infrastructure Access", "3\\. Intellectual Property (IP) Support", "4\\. Market Linkages and Pilot Testing", "5\\. Funding Facilitation"],
-  documents: ["Startup India Certificate — Proof of Startup India recognition.", "Company Incorporation — COI, MoA, and AoA for Pvt Ltd or LLP.", "Innovation Proposal — Detailed explanation of the technical solution and farmer impact.", "Business Pitch Deck — Outlining market size, problem-solution fit, and startup health.", "Founder Profiles — Comprehensive CVs showing domain and technical expertise.", "Financial Statements — Previous 2 years' financials (if applicable) or financial projections.", "TRL Proof — Evidence of the prototype or MVP stage (photos/videos).", "MSME Certificate — Valid MSME Certification (Udyam)."],
+  documents: ["Startup India Certificate - Proof of Startup India recognition.", "Company Incorporation - COI, MoA, and AoA for Pvt Ltd or LLP.", "Innovation Proposal - Detailed explanation of the technical solution and farmer impact.", "Business Pitch Deck - Outlining market size, problem-solution fit, and startup health.", "Founder Profiles - Comprehensive CVs showing domain and technical expertise.", "Financial Statements - Previous 2 years' financials (if applicable) or financial projections.", "TRL Proof - Evidence of the prototype or MVP stage (photos/videos).", "MSME Certificate - Valid MSME Certification (Udyam)."],
   process: [
     { title: "Registration", text: "Create a profile on the official Accubate / SHITIJ 2.0 portal." },
     { title: "Technical Preparation", text: "Refine your innovation proposal and Pitch Deck." },
@@ -8029,7 +8029,7 @@ export const agriStartupShitijFaq = grantSchemeFaq(
   "Agri Startup Fund (SHITIJ 2.0)",
   "Selected applicants may receive support of about Incubation, subject to evaluation and scheme guidelines.",
   "The Agri Startup Fund eligibility framework ensures that support is directed toward legally recognized and technically capable innovators. Meeting these standards is the first step in your business registration and funding journey. Agri Startup Fund Eligibility Table; Applicant N",
-  "Startup India Certificate — Proof of Startup India recognition., Company Incorporation — COI, MoA, and AoA for Pvt Ltd or LLP., Innovation Proposal — Detailed explanation of the technical solution and farmer impact., Business Pitch Deck — Outlining market size, problem-solution fit, and startup health..",
+  "Startup India Certificate - Proof of Startup India recognition., Company Incorporation - COI, MoA, and AoA for Pvt Ltd or LLP., Innovation Proposal - Detailed explanation of the technical solution and farmer impact., Business Pitch Deck - Outlining market size, problem-solution fit, and startup health..",
 );
 
 export const agriTechFundPage = createGrantProgramme({
@@ -8040,7 +8040,7 @@ export const agriTechFundPage = createGrantProgramme({
   funding: "Up to ₹35L",
   eligibility: "The Agri-Tech Fund Assistance eligibility framework is designed to prioritize startups with a proven \"Proof of Concept\" and a clear path to market entry. Meeting these requirements is a prerequisite before initiating the startup registration process. Agri-Tech Fund Assistance Eligibility Table; Legal Structure: Must be registered as a Private Limited Company, LLP, or Partnership.; Startup Age: The entity must be inco",
   benefits: ["Financial Seed Support:", "World-Class Incubation:", "Advanced Research Labs:", "Strategic Mentorship:", "Go-to-Market Support:"],
-  documents: ["Incorporation Proof: — Certificate of Incorporation and PAN card of the entity.", "DPIIT Recognition: — Mandatory Startup India certificate.", "Detailed Project Proposal: — Outlining the innovation, TRL level, and startup health metrics.", "Pitch Deck: — A high-quality presentation detailing the market opportunity and problem-solution fit. (See Grants for Ventures).", "Founder Profiles: — Detailed CVs highlighting technical and domain expertise.", "Financial Statements: — 12-month financial projections or audited statements.", "IP Documentation: — Details of any patents filed or trademarks obtained (if any).", "MSME Certification: — Valid MSME certification (Udyam)."],
+  documents: ["Incorporation Proof: - Certificate of Incorporation and PAN card of the entity.", "DPIIT Recognition: - Mandatory Startup India certificate.", "Detailed Project Proposal: - Outlining the innovation, TRL level, and startup health metrics.", "Pitch Deck: - A high-quality presentation detailing the market opportunity and problem-solution fit. (See Grants for Ventures).", "Founder Profiles: - Detailed CVs highlighting technical and domain expertise.", "Financial Statements: - 12-month financial projections or audited statements.", "IP Documentation: - Details of any patents filed or trademarks obtained (if any).", "MSME Certification: - Valid MSME certification (Udyam)."],
   process: [
     { title: "Self-Audit", text: "Ensure your startup meets the Agri-Tech Fund Assistance eligibility norms." },
     { title: "Technical Drafting", text: "Prepare your innovation proposal focusing on scalability and impact." },
@@ -8054,18 +8054,18 @@ export const agriTechFundFaq = grantSchemeFaq(
   "Agri-Tech Fund Assistance",
   "Selected applicants may receive support of about Up to ₹35L, subject to evaluation and scheme guidelines.",
   "The Agri-Tech Fund Assistance eligibility framework is designed to prioritize startups with a proven \"Proof of Concept\" and a clear path to market entry. Meeting these requirements is a prerequisite before initiating the startup registration process. Agri-Tech Fund Assistance Eli",
-  "Incorporation Proof: — Certificate of Incorporation and PAN card of the entity., DPIIT Recognition: — Mandatory Startup India certificate., Detailed Project Proposal: — Outlining the innovation, TRL level, and startup health metrics., Pitch Deck: — A high-quality presentation detailing the market opportunity and problem-solution fit. (See Grants for Ventures)..",
+  "Incorporation Proof: - Certificate of Incorporation and PAN card of the entity., DPIIT Recognition: - Mandatory Startup India certificate., Detailed Project Proposal: - Outlining the innovation, TRL level, and startup health metrics., Pitch Deck: - A high-quality presentation detailing the market opportunity and problem-solution fit. (See Grants for Ventures)..",
 );
 
 export const agrinextPage = createGrantProgramme({
   name: "AgriNext",
   eyebrow: "Kerala Agri-Tech",
   kicker: "Grant & Incubation for Agri-Tech Startups",
-  intro: "AgriNext is a strategic innovation-focused initiative designed by KSUM to fund, mentor, and incubate 150 agri‑tech startups. The program targets startups that can drive real impact for small and marginal farmers, Farmer Producer Organizations (FPOs), and allied enterprises. Unlike a standard without security business loan, which focuses on debt repayment, the AgriNext Scheme provides non-refundable grant money to fuel research, development, and initial market pilots. The initiative works in syne",
+  intro: "AgriNext is a strategic innovation-focused initiative designed by KSUM to fund, mentor, and incubate 150 agri-tech startups. The program targets startups that can drive real impact for small and marginal farmers, Farmer Producer Organizations (FPOs), and allied enterprises. Unlike a standard without security business loan, which focuses on debt repayment, the AgriNext Scheme provides non-refundable grant money to fuel research, development, and initial market pilots. The initiative works in syne",
   funding: "Up to ₹25L",
   eligibility: "The AgriNext eligibility framework is strictly defined to identify startups with high technical feasibility and market scalability. Meeting these requirements is the first step before initiating the startup registration process in the state. AgriNext Eligibility Table; Entity Type: Must be a registered Private Limited Company, LLP, or Partnership.; Sector Focus: Must be an active Agri-Tech Startup impacting farmers, ",
   benefits: ["1\\. Substantial Financial Grant Support", "2\\. Structured Incubation & Mentorship", "3\\. Real-World Field Validation", "4\\. Global Ecosystem Access"],
-  documents: ["Incorporation Documents: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "Startup Recognition: — Mandatory Startup India certificate or KSUM ID.", "Pitch Deck: — A high-quality presentation detailing the problem, technical solution, pilot plan, and startup health. (See our guide on Grants for Ventures).", "Financial Records: — Audited statements or ITRs for the last 1-2 years (for existing units).", "TRL Proof: — Evidence of existing prototype, pilot results, or farmer testimonials (videos/photos).", "Founder KYC: — Aadhaar and PAN of all directors/partners.", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  documents: ["Incorporation Documents: - Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "Startup Recognition: - Mandatory Startup India certificate or KSUM ID.", "Pitch Deck: - A high-quality presentation detailing the problem, technical solution, pilot plan, and startup health. (See our guide on Grants for Ventures).", "Financial Records: - Audited statements or ITRs for the last 1-2 years (for existing units).", "TRL Proof: - Evidence of existing prototype, pilot results, or farmer testimonials (videos/photos).", "Founder KYC: - Aadhaar and PAN of all directors/partners.", "MSME Certificate: - Valid MSME certification (Udyam)."],
   process: [
     { title: "Self-Audit", text: "Ensure your entity meets the AgriNext eligibility norms for registration and stage." },
     { title: "Technical Preparation", text: "Refine your pitch deck to highlight farmer-centric impact and technical novelty." },
@@ -8079,7 +8079,7 @@ export const agrinextFaq = grantSchemeFaq(
   "AgriNext",
   "Selected applicants may receive support of about Up to ₹25L, subject to evaluation and scheme guidelines.",
   "The AgriNext eligibility framework is strictly defined to identify startups with high technical feasibility and market scalability. Meeting these requirements is the first step before initiating the startup registration process in the state. AgriNext Eligibility Table; Entity Typ",
-  "Incorporation Documents: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP)., Startup Recognition: — Mandatory Startup India certificate or KSUM ID., Pitch Deck: — A high-quality presentation detailing the problem, technical solution, pilot plan, and startup health. (See our guide on Grants for Ventures)., Financial Records: — Audited statements or ITRs for the last 1-2 years (for existing units)..",
+  "Incorporation Documents: - Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP)., Startup Recognition: - Mandatory Startup India certificate or KSUM ID., Pitch Deck: - A high-quality presentation detailing the problem, technical solution, pilot plan, and startup health. (See our guide on Grants for Ventures)., Financial Records: - Audited statements or ITRs for the last 1-2 years (for existing units)..",
 );
 
 export const lorealGreenPage = createGrantProgramme({
@@ -8090,7 +8090,7 @@ export const lorealGreenPage = createGrantProgramme({
   funding: "Up to €100K",
   eligibility: "The incubator targets technology-driven innovators in the beauty and personal care space with sustainable, science-backed solutions.; Innovation Focus: Technology-driven innovation in green chemistry, biotechnology, or sustainable sourcing applicable to cosmetics and personal care.; Development Stage: Early or growth-stage venture with a functional prototype at Technology Readiness Level (TRL) 5 or above.; Business R",
   benefits: ["Equity-Free Grant", "Genopole Lab Access", "L'Oréal Expert Mentorship", "Global Distribution Network", "Sustainability Credibility", "International Connections"],
-  documents: ["-   Company Incorporation Certificate — -   Professional pitch deck outlining problem, solution, market, and traction", "-   Product demonstration or prototype materials (videos, photos, test data) — -   Founder and team biographical information", "-   Financial snapshots or funding history — -   Market entry and growth roadmap", "-   MSME (Udyam) certification — recommended for Indian applicants"],
+  documents: ["-   Company Incorporation Certificate - -   Professional pitch deck outlining problem, solution, market, and traction", "-   Product demonstration or prototype materials (videos, photos, test data) - -   Founder and team biographical information", "-   Financial snapshots or funding history - -   Market entry and growth roadmap", "-   MSME (Udyam) certification - recommended for Indian applicants"],
   process: [
     { title: "Verify Eligibility", text: "Confirm your innovation is in green chemistry, biotech, or sustainable beauty at TRL 5 or above." },
     { title: "Prepare Documentation", text: "Assemble your pitch deck, prototype evidence, team bios, and financial overview." },
@@ -8104,7 +8104,7 @@ export const lorealGreenFaq = grantSchemeFaq(
   "L'Oréal Green Sciences Incubator",
   "Selected applicants may receive support of about Up to €100K, subject to evaluation and scheme guidelines.",
   "The incubator targets technology-driven innovators in the beauty and personal care space with sustainable, science-backed solutions.; Innovation Focus: Technology-driven innovation in green chemistry, biotechnology, or sustainable sourcing applicable to cosmetics and personal car",
-  "-   Company Incorporation Certificate — -   Professional pitch deck outlining problem, solution, market, and traction, -   Product demonstration or prototype materials (videos, photos, test data) — -   Founder and team biographical information, -   Financial snapshots or funding history — -   Market entry and growth roadmap, -   MSME (Udyam) certification — recommended for Indian applicants.",
+  "-   Company Incorporation Certificate - -   Professional pitch deck outlining problem, solution, market, and traction, -   Product demonstration or prototype materials (videos, photos, test data) - -   Founder and team biographical information, -   Financial snapshots or funding history - -   Market entry and growth roadmap, -   MSME (Udyam) certification - recommended for Indian applicants.",
 );
 
 export const csrFundPage = createGrantProgramme({
@@ -8115,7 +8115,7 @@ export const csrFundPage = createGrantProgramme({
   funding: "Up to ₹2.63Cr",
   eligibility: "The CSR Fund eligibility and the CSR Fund Scheme requirements are specifically tailored for organizations that have moved past the ideation phase and have a proven \"proof of concept.\" This ensures that the capital is deployed toward ventures that have already demonstrated a measurable social or environmental impact and are ready for professional scaling. Before you apply for CSR fund support, ensure your organization",
   benefits: ["Significant Non-Refundable Capital", "Strategic Capacity Building", "Elite Mentorship", "Global Networking", "Credibility"],
-  documents: ["To successfully apply for the CSR Fund Scheme, organizations must ensure the following Documents required for CSR Fund are professionally prepared:", "Executive Summary — A clear overview of the organization’s mission, operational strategy, and impact.", "Professional Pitch Deck — Detailing the approach, scalability potential, and social/environmental goals.", "Team Profiles — CVs of the leadership team highlighting relevant experience.", "Financial Projections — A 3-year budget and long-term sustainability plan.", "Impact Data — Audited evidence of past pilot programs and measurable outcomes.", "Registration Proof — Startup India registration certificate or NGO Registration papers (Trust/Society/Section 8).", "Tax Documents — Valid 12A and 80G certificates (for nonprofits)."],
+  documents: ["To successfully apply for the CSR Fund Scheme, organizations must ensure the following Documents required for CSR Fund are professionally prepared:", "Executive Summary - A clear overview of the organization’s mission, operational strategy, and impact.", "Professional Pitch Deck - Detailing the approach, scalability potential, and social/environmental goals.", "Team Profiles - CVs of the leadership team highlighting relevant experience.", "Financial Projections - A 3-year budget and long-term sustainability plan.", "Impact Data - Audited evidence of past pilot programs and measurable outcomes.", "Registration Proof - Startup India registration certificate or NGO Registration papers (Trust/Society/Section 8).", "Tax Documents - Valid 12A and 80G certificates (for nonprofits)."],
   process: [
     { title: "Check Eligibility", text: "2" },
     { title: "Prepare Documents", text: "3" },
@@ -8129,7 +8129,7 @@ export const csrFundFaq = grantSchemeFaq(
   "CSR Fund",
   "Selected applicants may receive support of about Up to ₹2.63Cr, subject to evaluation and scheme guidelines.",
   "The CSR Fund eligibility and the CSR Fund Scheme requirements are specifically tailored for organizations that have moved past the ideation phase and have a proven \"proof of concept.\" This ensures that the capital is deployed toward ventures that have already demonstrated a measu",
-  "To successfully apply for the CSR Fund Scheme, organizations must ensure the following Documents required for CSR Fund are professionally prepared:, Executive Summary — A clear overview of the organization’s mission, operational strategy, and impact., Professional Pitch Deck — Detailing the approach, scalability potential, and social/environmental goals., Team Profiles — CVs of the leadership team highlighting relevant experience..",
+  "To successfully apply for the CSR Fund Scheme, organizations must ensure the following Documents required for CSR Fund are professionally prepared:, Executive Summary - A clear overview of the organization’s mission, operational strategy, and impact., Professional Pitch Deck - Detailing the approach, scalability potential, and social/environmental goals., Team Profiles - CVs of the leadership team highlighting relevant experience..",
 );
 
 export const cybersecurityKarnatakaPage = createGrantProgramme({
@@ -8140,7 +8140,7 @@ export const cybersecurityKarnatakaPage = createGrantProgramme({
   funding: "Up to ₹50L",
   eligibility: "To ensure the incentives reach the right companies, the state has established specific criteria. These standards ensure that only legally recognized, innovation-led entities are part of the program. Cybersecurity Incentive Policy Eligibility Table; Geography: Must be registered and headquartered in the state of Karnataka.; Business Type: Open to Startups, MSMEs, MNCs, and SMEs with active operations.; Registration: M",
   benefits: ["Manpower Scalability:", "Innovation Fuel:", "Institutional Credibility:", "Academic-Industry Linkage:", "Audit Readiness:"],
-  documents: ["To successfully apply for Cybersecurity Incentive Policy, you must prepare a comprehensive set of documents depending on the sub-program:", "For Internship Claims: — -   KITS Registration: Proof of enrollment with the state IT department.", "-   Intern Details: List of interns with their Karnataka-based college certificates.", "-   Stipend Proof: CA-certified statement of stipends paid and bank transaction records.", "-   Completion Certificate: Issued by the company to the intern.", "-   Statutory Declaration: Confirming the internship activities were strictly in the cybersecurity domain.", "For R&D Funding: — -   Project Proposal: Detailed DPR outlining objectives and TRL (Technology Readiness Level). (See Grants for Ventures).", "-   DPIIT Recognition: Mandatory Startup India certificate."],
+  documents: ["To successfully apply for Cybersecurity Incentive Policy, you must prepare a comprehensive set of documents depending on the sub-program:", "For Internship Claims: - -   KITS Registration: Proof of enrollment with the state IT department.", "-   Intern Details: List of interns with their Karnataka-based college certificates.", "-   Stipend Proof: CA-certified statement of stipends paid and bank transaction records.", "-   Completion Certificate: Issued by the company to the intern.", "-   Statutory Declaration: Confirming the internship activities were strictly in the cybersecurity domain.", "For R&D Funding: - -   Project Proposal: Detailed DPR outlining objectives and TRL (Technology Readiness Level). (See Grants for Ventures).", "-   DPIIT Recognition: Mandatory Startup India certificate."],
   process: [
     { title: "Registration", text: "Register your entity on the KITS (Karnataka Innovation and Technology Society) portal." },
     { title: "Selection Of Program", text: "Choose between Internship, R&D, or Audit reimbursement." },
@@ -8154,18 +8154,18 @@ export const cybersecurityKarnatakaFaq = grantSchemeFaq(
   "Cybersecurity Incentive Policy Karnataka",
   "Selected applicants may receive support of about Up to ₹50L, subject to evaluation and scheme guidelines.",
   "To ensure the incentives reach the right companies, the state has established specific criteria. These standards ensure that only legally recognized, innovation-led entities are part of the program. Cybersecurity Incentive Policy Eligibility Table; Geography: Must be registered a",
-  "To successfully apply for Cybersecurity Incentive Policy, you must prepare a comprehensive set of documents depending on the sub-program:, For Internship Claims: — -   KITS Registration: Proof of enrollment with the state IT department., -   Intern Details: List of interns with their Karnataka-based college certificates., -   Stipend Proof: CA-certified statement of stipends paid and bank transaction records..",
+  "To successfully apply for Cybersecurity Incentive Policy, you must prepare a comprehensive set of documents depending on the sub-program:, For Internship Claims: - -   KITS Registration: Proof of enrollment with the state IT department., -   Intern Details: List of interns with their Karnataka-based college certificates., -   Stipend Proof: CA-certified statement of stipends paid and bank transaction records..",
 );
 
 export const earlyStageGrantPage = createGrantProgramme({
   name: "Early-Stage Startup Grant",
   eyebrow: "Incubation & Mentorship",
   kicker: "Funding to Grow Early-Stage Startups",
-  intro: "The Early-Stage Startup Grant is a financial assistance initiative aimed at nurturing and scaling startups that possess innovative ideas but lack the capital for execution. Unlike a traditional without security business loan, which is a debt-based instrument requiring repayment, a grant is typically non-repayable and equity-free. The Early-Stage Startup Grant Scheme focuses on \"high-risk, high-reward\" innovations—those that might be too early for venture tech funding but have a high potential fo",
-  funding: "₹5L–₹1Cr",
+  intro: "The Early-Stage Startup Grant is a financial assistance initiative aimed at nurturing and scaling startups that possess innovative ideas but lack the capital for execution. Unlike a traditional without security business loan, which is a debt-based instrument requiring repayment, a grant is typically non-repayable and equity-free. The Early-Stage Startup Grant Scheme focuses on \"high-risk, high-reward\" innovations - those that might be too early for venture tech funding but have a high potential fo",
+  funding: "₹5L-₹1Cr",
   eligibility: "The Early-Stage Startup Grant eligibility framework is strictly defined to identify the most promising ventures. Whether you are building an AI tool or a new medical device, meeting these standards is a prerequisite for any business registration seeking institutional support. Early-Stage Startup Grant Eligibility Table; Startup Stage: Early-stage: Must have at least a Proof of Concept (PoC) or a validated MVP.; Legal",
   benefits: ["1\\. Substantial Financial Support", "2\\. Elite Mentorship", "3\\. Structured Incubation", "4\\. Investor Networking", "5\\. Global Visibility"],
-  documents: ["DPIIT Recognition Certificate: — Proof of being a recognized \"Startup\" by the Government of India.", "Incorporation Proof: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "MSME Certificate: — Valid MSME certification (Udyam).", "Comprehensive Pitch Deck: — Must detail the problem, solution, market size, business model, and startup health.", "Technical Whitepaper: — Detailing the TRL (Technology Readiness Level) and proof of concept.", "Financial Statements: — Balance sheets and P&L for the last year (if applicable) or a 12-month financial projection.", "Team Profiles: — Bios of founders and core technical leads highlighting expertise.", "IP Documentation: — Copies of patents filed or trademarks obtained (if any)."],
+  documents: ["DPIIT Recognition Certificate: - Proof of being a recognized \"Startup\" by the Government of India.", "Incorporation Proof: - Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP).", "MSME Certificate: - Valid MSME certification (Udyam).", "Comprehensive Pitch Deck: - Must detail the problem, solution, market size, business model, and startup health.", "Technical Whitepaper: - Detailing the TRL (Technology Readiness Level) and proof of concept.", "Financial Statements: - Balance sheets and P&L for the last year (if applicable) or a 12-month financial projection.", "Team Profiles: - Bios of founders and core technical leads highlighting expertise.", "IP Documentation: - Copies of patents filed or trademarks obtained (if any)."],
   process: [
     { title: "Self-Assessment", text: "Ensure your entity meets the Early-Stage Startup Grant eligibility norms for age and sector." },
     { title: "Technical Preparation", text: "Refine your pitch deck and record a product demo video." },
@@ -8177,9 +8177,9 @@ export const earlyStageGrantPage = createGrantProgramme({
 });
 export const earlyStageGrantFaq = grantSchemeFaq(
   "Early-Stage Startup Grant",
-  "Selected applicants may receive support of about ₹5L–₹1Cr, subject to evaluation and scheme guidelines.",
+  "Selected applicants may receive support of about ₹5L-₹1Cr, subject to evaluation and scheme guidelines.",
   "The Early-Stage Startup Grant eligibility framework is strictly defined to identify the most promising ventures. Whether you are building an AI tool or a new medical device, meeting these standards is a prerequisite for any business registration seeking institutional support. Ear",
-  "DPIIT Recognition Certificate: — Proof of being a recognized \"Startup\" by the Government of India., Incorporation Proof: — Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP)., MSME Certificate: — Valid MSME certification (Udyam)., Comprehensive Pitch Deck: — Must detail the problem, solution, market size, business model, and startup health..",
+  "DPIIT Recognition Certificate: - Proof of being a recognized \"Startup\" by the Government of India., Incorporation Proof: - Certificate of Incorporation, MoA, and AoA. (Refer to minimum capital requirement for LLP)., MSME Certificate: - Valid MSME certification (Udyam)., Comprehensive Pitch Deck: - Must detail the problem, solution, market size, business model, and startup health..",
 );
 
 export const elevateNxtPage = createGrantProgramme({
@@ -8190,7 +8190,7 @@ export const elevateNxtPage = createGrantProgramme({
   funding: "Up to ₹1Cr",
   eligibility: "The ELEVATE NxT eligibility framework is strictly defined to ensure that the government grants for MSME and startups reach entities with demonstrable innovation and scalability. Meeting these standards is the first step in the startup registration process. ELEVATE NxT Eligibility Table; Entity Status: Must be a registered Private Limited Company, LLP, or Partnership.; Geography: Must be registered and headquartered i",
   benefits: ["1\\. Financial Benefits", "2\\. Strategic Mentorship", "3\\. Ecosystem & Market Access"],
-  documents: ["To successfully apply for ELEVATE NxT, you must prepare a comprehensive professional file. The following Documents required for ELEVATE NxT are mandatory:", "Pitch Deck: — A detailed presentation covering the problem, technology, market fit, and traction. (See our guide on Grants for Ventures).", "Startup Affidavit: — Declaration on INR 100 stamped paper confirming eligibility.", "Incorporation Proof: — Certificate of Incorporation, MoA, and AoA.", "Revenue Certificate: — CA-certified revenue certificate for the previous financial year.", "DPIIT Recognition: — Mandatory Startup India registration certificate.", "IP Proof: — Copies of patents filed or trademarks obtained (if applicable).", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  documents: ["To successfully apply for ELEVATE NxT, you must prepare a comprehensive professional file. The following Documents required for ELEVATE NxT are mandatory:", "Pitch Deck: - A detailed presentation covering the problem, technology, market fit, and traction. (See our guide on Grants for Ventures).", "Startup Affidavit: - Declaration on INR 100 stamped paper confirming eligibility.", "Incorporation Proof: - Certificate of Incorporation, MoA, and AoA.", "Revenue Certificate: - CA-certified revenue certificate for the previous financial year.", "DPIIT Recognition: - Mandatory Startup India registration certificate.", "IP Proof: - Copies of patents filed or trademarks obtained (if applicable).", "MSME Certificate: - Valid MSME certification (Udyam)."],
   process: [
     { title: "Document Prep", text: "2" },
     { title: "Online Registration", text: "3" },
@@ -8204,7 +8204,7 @@ export const elevateNxtFaq = grantSchemeFaq(
   "ELEVATE NxT",
   "Selected applicants may receive support of about Up to ₹1Cr, subject to evaluation and scheme guidelines.",
   "The ELEVATE NxT eligibility framework is strictly defined to ensure that the government grants for MSME and startups reach entities with demonstrable innovation and scalability. Meeting these standards is the first step in the startup registration process. ELEVATE NxT Eligibility",
-  "To successfully apply for ELEVATE NxT, you must prepare a comprehensive professional file. The following Documents required for ELEVATE NxT are mandatory:, Pitch Deck: — A detailed presentation covering the problem, technology, market fit, and traction. (See our guide on Grants for Ventures)., Startup Affidavit: — Declaration on INR 100 stamped paper confirming eligibility., Incorporation Proof: — Certificate of Incorporation, MoA, and AoA..",
+  "To successfully apply for ELEVATE NxT, you must prepare a comprehensive professional file. The following Documents required for ELEVATE NxT are mandatory:, Pitch Deck: - A detailed presentation covering the problem, technology, market fit, and traction. (See our guide on Grants for Ventures)., Startup Affidavit: - Declaration on INR 100 stamped paper confirming eligibility., Incorporation Proof: - Certificate of Incorporation, MoA, and AoA..",
 );
 
 export const empowerspherePage = createGrantProgramme({
@@ -8215,7 +8215,7 @@ export const empowerspherePage = createGrantProgramme({
   funding: "Up to ₹12.5L",
   eligibility: "The EmpowerSphere Skilling & Livelihood Futures eligibility framework is strictly defined to ensure that the grant reaches ventures with high potential for measurable impact. These standards ensure that only the most viable, innovation-driven projects are selected for the government grants for MSME. EmpowerSphere Eligibility Table; Legal Status: Must be a registered entity as a Private Limited, LLP, or Trust/Society/",
   benefits: ["1\\. Financial Support", "2\\. Mentorship & Advisory", "3\\. Ecosystem Access"],
-  documents: ["Incorporation Proof: — Certificate of Incorporation or Trust Deed and PAN card.", "DPIIT Recognition: — Mandatory Startup India certificate (for startups).", "MSME Certificate: — Valid MSME certification (Udyam).", "Pitch Deck: — A detailed PDF outlining the problem, technology-driven solution, and business model. (See Grants for Ventures).", "Financial Statements: — Revenue statements, bank statements, or audited P&L accounts for the last 1 year.", "Team Profiles: — CVs of founders and key leadership highlighting technical and social impact expertise.", "Proof of Traction: — Letters of support from beneficiaries, partner MoUs, or existing revenue proofs.", "Technical roadmap: — Description of the Technology Readiness Level (TRL) for your platform."],
+  documents: ["Incorporation Proof: - Certificate of Incorporation or Trust Deed and PAN card.", "DPIIT Recognition: - Mandatory Startup India certificate (for startups).", "MSME Certificate: - Valid MSME certification (Udyam).", "Pitch Deck: - A detailed PDF outlining the problem, technology-driven solution, and business model. (See Grants for Ventures).", "Financial Statements: - Revenue statements, bank statements, or audited P&L accounts for the last 1 year.", "Team Profiles: - CVs of founders and key leadership highlighting technical and social impact expertise.", "Proof of Traction: - Letters of support from beneficiaries, partner MoUs, or existing revenue proofs.", "Technical roadmap: - Description of the Technology Readiness Level (TRL) for your platform."],
   process: [
     { title: "Self-Audit", text: "2" },
     { title: "Documentation", text: "3" },
@@ -8229,7 +8229,7 @@ export const empowersphereFaq = grantSchemeFaq(
   "EmpowerSphere Skilling & Livelihood Futures",
   "Selected applicants may receive support of about Up to ₹12.5L, subject to evaluation and scheme guidelines.",
   "The EmpowerSphere Skilling & Livelihood Futures eligibility framework is strictly defined to ensure that the grant reaches ventures with high potential for measurable impact. These standards ensure that only the most viable, innovation-driven projects are selected for the governm",
-  "Incorporation Proof: — Certificate of Incorporation or Trust Deed and PAN card., DPIIT Recognition: — Mandatory Startup India certificate (for startups)., MSME Certificate: — Valid MSME certification (Udyam)., Pitch Deck: — A detailed PDF outlining the problem, technology-driven solution, and business model. (See Grants for Ventures)..",
+  "Incorporation Proof: - Certificate of Incorporation or Trust Deed and PAN card., DPIIT Recognition: - Mandatory Startup India certificate (for startups)., MSME Certificate: - Valid MSME certification (Udyam)., Pitch Deck: - A detailed PDF outlining the problem, technology-driven solution, and business model. (See Grants for Ventures)..",
 );
 
 export const fintechChallengePage = createGrantProgramme({
@@ -8240,7 +8240,7 @@ export const fintechChallengePage = createGrantProgramme({
   funding: "Challenge",
   eligibility: "Company Type: DPIIT-recognized startups across India. - Private Limited Company, LLP, Partnership, or MSME (Proprietorship).; Innovation Focus: Startups must offer scalable, innovative solutions in fintech.; Stages of Development: Startups at Ideation, Validation, Early Traction, or Scaling stages.; Sector Focus: Startups focused on fintech, such as payments, digital lending, cybersecurity, blockchain, AI, etc.; Othe",
   benefits: ["Fiscal Incentives", "Follow-on Funding", "Mentorship", "Networking Opportunities", "Pilot Programs"],
-  documents: ["Pitch Deck — A detailed presentation of your product, market opportunity, business model, and growth plans.", "Founders' Details — Background information, qualifications, and experience of the founding team.", "Registration Documents — Proof of DPIIT recognition, startup registration, and other legal documents.", "Financials — Balance Sheet, Profit & Loss account, and fund utilization breakdown.", "Proof of Innovation — Evidence of the scalability and technological aspect of your fintech solution."],
+  documents: ["Pitch Deck - A detailed presentation of your product, market opportunity, business model, and growth plans.", "Founders' Details - Background information, qualifications, and experience of the founding team.", "Registration Documents - Proof of DPIIT recognition, startup registration, and other legal documents.", "Financials - Balance Sheet, Profit & Loss account, and fund utilization breakdown.", "Proof of Innovation - Evidence of the scalability and technological aspect of your fintech solution."],
   process: [
     { title: "Prepare Documents", text: "Gather all necessary documents, including pitch deck, founder details, registration documents, financials, and proof of innovation." },
     { title: "Submit Application", text: "Fill out the online application form on the official portal and upload all prepared documents." },
@@ -8254,7 +8254,7 @@ export const fintechChallengeFaq = grantSchemeFaq(
   "Fintech Startup Challenge",
   "Selected applicants may receive support of about Challenge, subject to evaluation and scheme guidelines.",
   "Company Type: DPIIT-recognized startups across India. - Private Limited Company, LLP, Partnership, or MSME (Proprietorship).; Innovation Focus: Startups must offer scalable, innovative solutions in fintech.; Stages of Development: Startups at Ideation, Validation, Early Traction,",
-  "Pitch Deck — A detailed presentation of your product, market opportunity, business model, and growth plans., Founders' Details — Background information, qualifications, and experience of the founding team., Registration Documents — Proof of DPIIT recognition, startup registration, and other legal documents., Financials — Balance Sheet, Profit & Loss account, and fund utilization breakdown..",
+  "Pitch Deck - A detailed presentation of your product, market opportunity, business model, and growth plans., Founders' Details - Background information, qualifications, and experience of the founding team., Registration Documents - Proof of DPIIT recognition, startup registration, and other legal documents., Financials - Balance Sheet, Profit & Loss account, and fund utilization breakdown..",
 );
 
 export const fundScYouthPage = createGrantProgramme({
@@ -8265,7 +8265,7 @@ export const fundScYouthPage = createGrantProgramme({
   funding: "Up to ₹30L",
   eligibility: "The Fund for SC Youth 2.0 eligibility has specific criteria that must be met to apply for funding and support. These standards ensure that the resources are channeled toward legally compliant and innovation-driven ventures led by the SC community. Fund for SC Youth 2.0 Eligibility Table; Applicant Profile: Must be an Indian citizen belonging to the Scheduled Caste (SC) category.; Shareholding: The startup must have a",
   benefits: ["1\\. Substantial Financial Support", "2\\. Elite Incubation & Mentorship", "3\\. Investor Readiness & Networking", "4\\. Impact Amplification"],
-  documents: ["Identity Proof: — Aadhaar Card of the founders.", "Caste Certificate: — Valid certificate proving the lead applicant's SC status.", "Incorporation Docs: — Certificate of Incorporation, MoA, and AoA.", "DPIIT Recognition: — Mandatory Startup India certificate.", "Ownership Proof: — Shareholding pattern document showing at least 51% SC ownership.", "Pitch Deck: — A detailed presentation covering the problem, solution, and market traction (See our guide on Grants for Ventures).", "Financial Projections: — 3-year revenue forecast and financial statements.", "TRL Proof: — Description or video of the working prototype/MVP."],
+  documents: ["Identity Proof: - Aadhaar Card of the founders.", "Caste Certificate: - Valid certificate proving the lead applicant's SC status.", "Incorporation Docs: - Certificate of Incorporation, MoA, and AoA.", "DPIIT Recognition: - Mandatory Startup India certificate.", "Ownership Proof: - Shareholding pattern document showing at least 51% SC ownership.", "Pitch Deck: - A detailed presentation covering the problem, solution, and market traction (See our guide on Grants for Ventures).", "Financial Projections: - 3-year revenue forecast and financial statements.", "TRL Proof: - Description or video of the working prototype/MVP."],
   process: [
     { title: "Verify Eligibility", text: "2" },
     { title: "Prepare The Pitch", text: "3" },
@@ -8279,7 +8279,7 @@ export const fundScYouthFaq = grantSchemeFaq(
   "Fund for SC Youth 2.0",
   "Selected applicants may receive support of about Up to ₹30L, subject to evaluation and scheme guidelines.",
   "The Fund for SC Youth 2.0 eligibility has specific criteria that must be met to apply for funding and support. These standards ensure that the resources are channeled toward legally compliant and innovation-driven ventures led by the SC community. Fund for SC Youth 2.0 Eligibilit",
-  "Identity Proof: — Aadhaar Card of the founders., Caste Certificate: — Valid certificate proving the lead applicant's SC status., Incorporation Docs: — Certificate of Incorporation, MoA, and AoA., DPIIT Recognition: — Mandatory Startup India certificate..",
+  "Identity Proof: - Aadhaar Card of the founders., Caste Certificate: - Valid certificate proving the lead applicant's SC status., Incorporation Docs: - Certificate of Incorporation, MoA, and AoA., DPIIT Recognition: - Mandatory Startup India certificate..",
 );
 
 export const fundForUpPage = createGrantProgramme({
@@ -8290,7 +8290,7 @@ export const fundForUpPage = createGrantProgramme({
   funding: "Up to ₹7.5L",
   eligibility: "The Fund for UP eligibility framework is strictly defined to identify startups that are legally compliant and have a high potential for commercialization. Meeting these standards is a prerequisite for any business registration seeking state support. Fund for UP Eligibility Table; Entity Status: Must be registered as a Private Limited Company or LLP.; Geography: Headquartered and primarily operating within Uttar Prade",
   benefits: ["1\\. Financial Benefits", "Women Founders:", "Special Regions:", "Priority Sectors:", "2\\. Non-Financial Benefits", "Elite Mentorship:"],
-  documents: ["StartInUP Certificate: — Proof of startup recognition on the state portal.", "Incorporation Documents: — Certificate of Incorporation, MoA, and AoA (or Partnership Deed for LLPs).", "Incubation Proof: — Agreement with a recognized incubator or an official association letter.", "Detailed Project Report (DPR): — A technical whitepaper outlining milestones, KPIs, and fund utilization.", "Pitch Deck: — A high-quality presentation detailing the innovation and scalability. (See Grants for Ventures).", "Financial Projections: — 3-year roadmap showing how the grant will fuel growth.", "Founder Identity Proof: — Aadhaar and PAN cards of all primary founders.", "MSME Certificate: — Valid MSME certification (Udyam)."],
+  documents: ["StartInUP Certificate: - Proof of startup recognition on the state portal.", "Incorporation Documents: - Certificate of Incorporation, MoA, and AoA (or Partnership Deed for LLPs).", "Incubation Proof: - Agreement with a recognized incubator or an official association letter.", "Detailed Project Report (DPR): - A technical whitepaper outlining milestones, KPIs, and fund utilization.", "Pitch Deck: - A high-quality presentation detailing the innovation and scalability. (See Grants for Ventures).", "Financial Projections: - 3-year roadmap showing how the grant will fuel growth.", "Founder Identity Proof: - Aadhaar and PAN cards of all primary founders.", "MSME Certificate: - Valid MSME certification (Udyam)."],
   process: [
     { title: "Portal Registration", text: "2" },
     { title: "Incubator Affiliation", text: "3" },
@@ -8304,7 +8304,7 @@ export const fundForUpFaq = grantSchemeFaq(
   "Fund for UP",
   "Selected applicants may receive support of about Up to ₹7.5L, subject to evaluation and scheme guidelines.",
   "The Fund for UP eligibility framework is strictly defined to identify startups that are legally compliant and have a high potential for commercialization. Meeting these standards is a prerequisite for any business registration seeking state support. Fund for UP Eligibility Table;",
-  "StartInUP Certificate: — Proof of startup recognition on the state portal., Incorporation Documents: — Certificate of Incorporation, MoA, and AoA (or Partnership Deed for LLPs)., Incubation Proof: — Agreement with a recognized incubator or an official association letter., Detailed Project Report (DPR): — A technical whitepaper outlining milestones, KPIs, and fund utilization..",
+  "StartInUP Certificate: - Proof of startup recognition on the state portal., Incorporation Documents: - Certificate of Incorporation, MoA, and AoA (or Partnership Deed for LLPs)., Incubation Proof: - Agreement with a recognized incubator or an official association letter., Detailed Project Report (DPR): - A technical whitepaper outlining milestones, KPIs, and fund utilization..",
 );
 
 export const taxExemptionCertificatePage = {
@@ -8331,7 +8331,7 @@ export const taxExemptionCertificatePage = {
     ],
     benefitsHeading: "Key Requirements At A Glance",
     benefits: [
-      "DPIIT-recognised startup — mandatory first step",
+      "DPIIT-recognised startup - mandatory first step",
       "Incorporated after 1st April 2016",
       "Pvt Ltd or LLP entity type",
       "Annual turnover below ₹100 crore",
@@ -8354,7 +8354,7 @@ export const taxExemptionCertificatePage = {
       },
       {
         title: "Improves Cash Flow",
-        text: "Tax savings can be reinvested into product development, hiring and scaling — critical in the early growth phase.",
+        text: "Tax savings can be reinvested into product development, hiring and scaling - critical in the early growth phase.",
         icon: "zap" as const,
       },
       {
@@ -8420,7 +8420,7 @@ export const taxExemptionCertificatePage = {
     steps: [
       {
         title: "Obtain DPIIT Recognition",
-        text: "Register on the Startup India portal and get your DPIIT recognition number — this is mandatory before applying for Section 80IAC.",
+        text: "Register on the Startup India portal and get your DPIIT recognition number - this is mandatory before applying for Section 80IAC.",
       },
       {
         title: "Prepare Your Documents",
@@ -8519,7 +8519,7 @@ export const startupIndiaEligibilityPage = {
     paragraphs: [
       "Startup India scheme eligibility refers to the specific criteria defined by the Government of India for an entity to be recognised as a 'Startup' under the Startup India initiative, administered by the Department for Promotion of Industry and Internal Trade (DPIIT).",
       "Recognition under Startup India enables businesses to access tax exemptions under Section 80IAC, collateral-free loans through CGTMSE and CGSS, government procurement preferences, faster IP support and a simplified compliance environment.",
-      "The revised framework expands eligibility to support businesses at different maturity levels — especially research-heavy deep tech startups and cooperative-led innovation models, reflecting how the ecosystem has matured.",
+      "The revised framework expands eligibility to support businesses at different maturity levels - especially research-heavy deep tech startups and cooperative-led innovation models, reflecting how the ecosystem has matured.",
     ],
     benefitsHeading: "Key Requirements At A Glance",
     benefits: [
@@ -8536,12 +8536,12 @@ export const startupIndiaEligibilityPage = {
     items: [
       {
         title: "Higher Turnover Ceiling",
-        text: "Annual turnover limit raised from ₹100 crore to ₹200 crore for regular startups, and ₹300 crore for Deep Tech — allowing fast-growing startups to retain recognition longer.",
+        text: "Annual turnover limit raised from ₹100 crore to ₹200 crore for regular startups, and ₹300 crore for Deep Tech - allowing fast-growing startups to retain recognition longer.",
         icon: "wallet" as const,
       },
       {
         title: "Deep Tech Category",
-        text: "A dedicated Deep Tech category for startups working on advanced science and R&D-intensive technologies with long development cycles — up to 20 years age and ₹300 crore turnover.",
+        text: "A dedicated Deep Tech category for startups working on advanced science and R&D-intensive technologies with long development cycles - up to 20 years age and ₹300 crore turnover.",
         icon: "zap" as const,
       },
       {
@@ -8556,12 +8556,12 @@ export const startupIndiaEligibilityPage = {
       },
       {
         title: "Access To Collateral-Free Loans",
-        text: "DPIIT recognition is the gateway to CGTMSE and CGSS collateral-free credit — making it easier to access business loans without security.",
+        text: "DPIIT recognition is the gateway to CGTMSE and CGSS collateral-free credit - making it easier to access business loans without security.",
         icon: "shield" as const,
       },
       {
         title: "Tax Holiday Eligibility",
-        text: "Recognition enables application for Section 80IAC — up to 100% income tax exemption for three consecutive years within the first decade of incorporation.",
+        text: "Recognition enables application for Section 80IAC - up to 100% income tax exemption for three consecutive years within the first decade of incorporation.",
         icon: "landmark" as const,
       },
     ],
@@ -8595,7 +8595,7 @@ export const startupIndiaEligibilityPage = {
       },
       {
         title: "Not Formed By Splitting",
-        text: "Must not have been formed by splitting up or reconstruction of an existing business — it must be a genuinely new enterprise.",
+        text: "Must not have been formed by splitting up or reconstruction of an existing business - it must be a genuinely new enterprise.",
         icon: "shield" as const,
       },
       {
@@ -8642,7 +8642,7 @@ export const startupIndiaEligibilityPage = {
       "Details of directors/partners/promoters with Aadhaar and PAN",
       "Brief description of the business, product/service and innovation",
       "Website URL or product demo link (if available)",
-      "Proof of funding received (if any) — angel, VC or government grants",
+      "Proof of funding received (if any) - angel, VC or government grants",
       "Audited financial statements (if the entity is more than 1 year old)",
     ],
     cta: "Download For More",
@@ -8666,7 +8666,7 @@ export const startupIndiaEligibilityFaq = {
     {
       question: "Are cooperative societies eligible under Startup India scheme?",
       answer:
-        "Yes, both Multi-State and State-registered Cooperative Societies are now eligible under the 2026 revised framework — a significant expansion from the earlier criteria.",
+        "Yes, both Multi-State and State-registered Cooperative Societies are now eligible under the 2026 revised framework - a significant expansion from the earlier criteria.",
     },
     {
       question: "What qualifies a startup as Deep Tech?",
@@ -8681,7 +8681,7 @@ export const startupIndiaEligibilityFaq = {
     {
       question: "Does recognition under Startup India give tax benefits?",
       answer:
-        "Yes, DPIIT recognition is the prerequisite for applying for Section 80IAC — 100% income tax exemption for three consecutive years within the first ten years of incorporation.",
+        "Yes, DPIIT recognition is the prerequisite for applying for Section 80IAC - 100% income tax exemption for three consecutive years within the first ten years of incorporation.",
     },
   ],
 } as const;
@@ -8714,7 +8714,7 @@ export const hero = {
     },
     {
       title: "Licences Done Right",
-      text: "FSSAI, ISO, BIS, GST, trademark — filed with clear timelines and status updates.",
+      text: "FSSAI, ISO, BIS, GST, trademark - filed with clear timelines and status updates.",
     },
     {
       title: "One Desk For Everything",
@@ -8755,7 +8755,7 @@ export const trustBadges = [
 export const passbook = {
   title: "Our Ledger",
   subtitle:
-    "Real Outcomes From Registrations, Loans, And Scheme Filings — Stamped In Plain Numbers So You Can Trust The Desk Before You Dial.",
+    "Real Outcomes From Registrations, Loans, And Scheme Filings - Stamped In Plain Numbers So You Can Trust The Desk Before You Dial.",
   body: "We track every rupee sanctioned, every licence issued, and every first reply. These figures update from live case work at our Noida desk and across India.",
   stats: [
     { value: "₹480Cr+", label: "Money Delivered", stamp: "PAID" },
@@ -8775,7 +8775,7 @@ export const startupIndia = {
   id: "startup-india",
   eyebrow: "Startup India · DPIIT",
   heading: "Recognition Numbers That Matter.",
-  sub: "Live Snapshot Founders Ask About First — Recognition Scale, Tax Relief, And The Revised Turnover Ceiling.",
+  sub: "Live Snapshot Founders Ask About First - Recognition Scale, Tax Relief, And The Revised Turnover Ceiling.",
   notice:
     "Pursuant to DPIIT Gazette Notification 108(E) dated 4 February 2026, the turnover threshold for Startup recognition has been revised from ₹100 crore to ₹200 crore. DPIIT-recognised startups should log in to the Startup India portal and download their updated Startup Recognition certificate.",
   stats: [
@@ -8797,14 +8797,14 @@ export const startupIndia = {
   ],
 } as const;
 
-/** MSME counts by state / UT — mapped to @svg-maps/india location ids */
+/** MSME counts by state / UT - mapped to @svg-maps/india location ids */
 export const network = {
   id: "network",
   headingLead: "We Have The",
   headingStrong: "Strongest network of",
   headingAccent: "MSME Guidance",
   headingEnd: "in India",
-  sub: "Providing Support Across The Nation — Hover Any State For MSME Counts.",
+  sub: "Providing Support Across The Nation - Hover Any State For MSME Counts.",
   cta: "Share Your Business Plan Today",
   ctaHref: `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent("Hi, I want to share my business plan.")}`,
   moreLabel: "and 100+ more",
@@ -8890,7 +8890,7 @@ export const missionTrees = {
     {
       id: "core-mission",
       root: "Core Mission",
-      blurb: "Why we exist — Bharat-first growth for startups & MSMEs.",
+      blurb: "Why we exist - Bharat-first growth for startups & MSMEs.",
       accent: "marigold" as const,
       children: [
         "Atmanirbhar Bharat",
@@ -8902,7 +8902,7 @@ export const missionTrees = {
     {
       id: "funding",
       root: "Funding Assistance",
-      blurb: "Money pathways we open — grants, loans, subsidies, reports.",
+      blurb: "Money pathways we open - grants, loans, subsidies, reports.",
       accent: "success" as const,
       children: [
         "Government Grants",
@@ -8916,7 +8916,7 @@ export const missionTrees = {
     {
       id: "process",
       root: "Our Process",
-      blurb: "How your file moves — guided, documented, on time.",
+      blurb: "How your file moves - guided, documented, on time.",
       accent: "indigo" as const,
       children: [
         "Expert Guidance",
@@ -8930,7 +8930,7 @@ export const missionTrees = {
     {
       id: "benefits",
       root: "Key Benefits",
-      blurb: "What you walk away with — credibility and sustainable growth.",
+      blurb: "What you walk away with - credibility and sustainable growth.",
       accent: "ink" as const,
       children: [
         "Professional Credibility",
@@ -8946,14 +8946,14 @@ export const about = {
   id: "about",
   eyebrow: "Company Introduction",
   heading: "Who We Are. What We Do. Who We Help.",
-  body: "Vikas Bharat is a pan-India business help desk for startups and MSMEs — registration, funding, certifications, and growth support explained in clear Hindi and English.",
+  body: "Vikas Bharat is a pan-India business help desk for startups and MSMEs - registration, funding, certifications, and growth support explained in clear Hindi and English.",
   whoWeAre: {
     title: "Who We Are",
     text: "A walk-in consultancy built for founders and shop owners who need capital, licences, and compliance without portal jargon.",
   },
   whatWeDo: {
     title: "What We Do",
-    text: "We map the right grant, loan, registration, or certification path — then handle documentation, filing, and follow-up until the outcome is stamped.",
+    text: "We map the right grant, loan, registration, or certification path - then handle documentation, filing, and follow-up until the outcome is stamped.",
   },
   whoWeHelp: {
     title: "Who We Help",
@@ -8966,7 +8966,7 @@ export const about = {
   values: [
     {
       title: "Trust",
-      text: "Clear advice before any document is collected — eligibility first, paperwork second.",
+      text: "Clear advice before any document is collected - eligibility first, paperwork second.",
     },
     {
       title: "Transparency",
@@ -8974,7 +8974,7 @@ export const about = {
     },
     {
       title: "Customer First",
-      text: "Your business type and city drive the plan — not a one-size template.",
+      text: "Your business type and city drive the plan - not a one-size template.",
     },
     {
       title: "Integrity",
@@ -8986,7 +8986,7 @@ export const about = {
     },
     {
       title: "Growth",
-      text: "Every case aims at the next stage — sanction, licence live, or expansion-ready.",
+      text: "Every case aims at the next stage - sanction, licence live, or expansion-ready.",
     },
   ],
   servicesOverview: [
@@ -9037,7 +9037,7 @@ export const about = {
     },
     {
       title: "Documentation",
-      text: "WhatsApp checklist — only the papers that matter.",
+      text: "WhatsApp checklist - only the papers that matter.",
     },
     {
       title: "Application / Execution",
@@ -9049,7 +9049,7 @@ export const about = {
     },
     {
       title: "Results",
-      text: "Sanction, licence, or registration — outcome in your hands.",
+      text: "Sanction, licence, or registration - outcome in your hands.",
     },
   ],
   certifications: [
@@ -9069,7 +9069,7 @@ export const about = {
       imageKey: "aboutCertFssai" as const,
     },
     {
-      title: "Tax Exemption – Section 80-IAC",
+      title: "Tax Exemption - Section 80-IAC",
       text: "Startup tax exemption pathway guidance where eligible.",
       imageKey: "aboutCertTax" as const,
     },
@@ -9091,7 +9091,7 @@ export const about = {
     },
     {
       title: "End-To-End Support",
-      text: "From first call to stamped outcome — one accountable team.",
+      text: "From first call to stamped outcome - one accountable team.",
     },
     {
       title: "Transparent Process",
@@ -9099,7 +9099,7 @@ export const about = {
     },
     {
       title: "Multiple Business Solutions",
-      text: "Grants, loans, registration, certifications, legal, and more — one desk.",
+      text: "Grants, loans, registration, certifications, legal, and more - one desk.",
     },
     {
       title: "Dedicated Support",
@@ -9121,7 +9121,7 @@ export const about = {
         },
         {
           q: "Are you a government office?",
-          a: "No. We are a private consultancy. We work with you on forms, banks, and portals — we are not a government department.",
+          a: "No. We are a private consultancy. We work with you on forms, banks, and portals - we are not a government department.",
         },
       ],
     },
@@ -9131,11 +9131,11 @@ export const about = {
       items: [
         {
           q: "Can I get a loan without collateral?",
-          a: "Often yes under Mudra and select NBFC products — eligibility depends on business vintage and cash flows.",
+          a: "Often yes under Mudra and select NBFC products - eligibility depends on business vintage and cash flows.",
         },
         {
           q: "How long does funding usually take?",
-          a: "Most funding cases take about 4–8 weeks depending on the product, bank queries, and document readiness.",
+          a: "Most funding cases take about 4-8 weeks depending on the product, bank queries, and document readiness.",
         },
       ],
     },
@@ -9145,7 +9145,7 @@ export const about = {
       items: [
         {
           q: "Do I need Udyam if I already have GST?",
-          a: "Yes for most MSME schemes and many bank products — Udyam is key eligibility proof.",
+          a: "Yes for most MSME schemes and many bank products - Udyam is key eligibility proof.",
         },
         {
           q: "Which structure should I choose?",
@@ -9163,7 +9163,7 @@ export const about = {
         },
         {
           q: "How do I know which certificate I need?",
-          a: "A short consultation maps your industry and sales channel to the right licence set — no guesswork filing.",
+          a: "A short consultation maps your industry and sales channel to the right licence set - no guesswork filing.",
         },
       ],
     },
@@ -9173,7 +9173,7 @@ export const about = {
       items: [
         {
           q: "Do you help with digital / branding needs?",
-          a: "Yes — marketing and branding support sits alongside registration and funding so growth is not left for later.",
+          a: "Yes - marketing and branding support sits alongside registration and funding so growth is not left for later.",
         },
         {
           q: "Can updates happen on WhatsApp?",
@@ -9191,7 +9191,7 @@ export const about = {
         },
         {
           q: "Is the first consultation free?",
-          a: "Yes. The first call is free with no obligation — we clarify fit before any paid work begins.",
+          a: "Yes. The first call is free with no obligation - we clarify fit before any paid work begins.",
         },
       ],
     },
@@ -9207,12 +9207,12 @@ export const about = {
     },
     mission: {
       src: photos.aboutMission,
-      alt: "Mission visual — growth for Indian MSMEs",
+      alt: "Mission visual - growth for Indian MSMEs",
     },
   },
 } as const;
 
-/** About page — Certifications & Recognition (real credentials only) */
+/** About page - Certifications & Recognition (real credentials only) */
 export const aboutCredentials = {
   id: "credentials",
   section: "06",
@@ -9220,7 +9220,7 @@ export const aboutCredentials = {
   headingLead: "Proof That Travels",
   headingAccent: "With Every File.",
   hindi: "मान्यता एवं प्रमाण",
-  sub: "The Same Stamps, Registries, And Partner Desks We Cite When A Founder Asks Why Our Filings Hold — ISO Process Quality, MSME Registration, Bank Liaison, And Scheme Documentation.",
+  sub: "The Same Stamps, Registries, And Partner Desks We Cite When A Founder Asks Why Our Filings Hold - ISO Process Quality, MSME Registration, Bank Liaison, And Scheme Documentation.",
   founded: "2016",
   certifications: [
     {
@@ -9228,7 +9228,7 @@ export const aboutCredentials = {
       num: "01",
       name: "ISO 9001:2015",
       authority: "Process quality systems",
-      detail: "ISO 9001:2015 process quality — documented workflows for filings, follow-ups, and client status.",
+      detail: "ISO 9001:2015 process quality - documented workflows for filings, follow-ups, and client status.",
       status: "VERIFIED",
       tag: "CERTIFIED",
       image: photos.serviceCertificate,
@@ -9239,7 +9239,7 @@ export const aboutCredentials = {
       num: "02",
       name: "MSME Registered",
       authority: "MSME / Udyam consultancy",
-      detail: "MSME registered consultancy — Udyam-ready guidance for scheme eligibility and bank desks.",
+      detail: "MSME registered consultancy - Udyam-ready guidance for scheme eligibility and bank desks.",
       status: "ACTIVE",
       tag: "REGISTERED",
       image: photos.badgeMsme,
@@ -9250,7 +9250,7 @@ export const aboutCredentials = {
       num: "03",
       name: "Bank & NBFC Partner Desk",
       authority: "Partner bank recognition",
-      detail: "Bank & NBFC partner desk — liaison with branch managers for Mudra, CGTMSE, and collateral-light products.",
+      detail: "Bank & NBFC partner desk - liaison with branch managers for Mudra, CGTMSE, and collateral-light products.",
       status: "LIAISON",
       tag: "PARTNER",
       image: photos.serviceLoan,
@@ -9261,7 +9261,7 @@ export const aboutCredentials = {
       num: "04",
       name: "Scheme Documentation",
       authority: "Central & state scheme portals",
-      detail: "Scheme documentation specialists — checklists and DPRs matched to Mudra, PMEGP, Startup India, and Stand-Up India pathways.",
+      detail: "Scheme documentation specialists - checklists and DPRs matched to Mudra, PMEGP, Startup India, and Stand-Up India pathways.",
       status: "SPECIALIST",
       tag: "SCHEMES",
       image: photos.stepMatch,
@@ -9284,7 +9284,7 @@ export const aboutCredentials = {
     {
       id: "cities",
       label: "Noida Walk-in Desk",
-      text: "1st floor, F-5, C Block, Sector 63, Noida — a real room, not a call centre only.",
+      text: "1st floor, F-5, C Block, Sector 63, Noida - a real room, not a call centre only.",
       image: photos.aboutOffice,
     },
     {
@@ -9311,7 +9311,7 @@ export const aboutCredentials = {
 export const services = {
   eyebrow: "What We Do",
   heading: "Ek Jagah, Har Madad.",
-  sub: "Everything Your Business Needs Under One Roof — Registration, Funding, Licences, Growth, And Legal — With Bilingual Guidance And WhatsApp-First Updates.",
+  sub: "Everything Your Business Needs Under One Roof - Registration, Funding, Licences, Growth, And Legal - With Bilingual Guidance And WhatsApp-First Updates.",
   overview:
     "Whether you are registering a private limited company, applying for a Mudra loan, claiming a PMEGP subsidy, or renewing FSSAI, our desk maps the path, collects the right papers, and follows up with banks and portals until the outcome is real.",
   categories: [
@@ -9375,15 +9375,15 @@ export const services = {
         "Passport photos & specimen signatures",
         "Partnership deed / MoA-AoA drafts (as applicable)",
       ],
-      timeline: "7–21 working days depending on structure",
+      timeline: "7-21 working days depending on structure",
       faqs: [
         {
-          q: "Private limited vs proprietorship — which is faster?",
+          q: "Private limited vs proprietorship - which is faster?",
           a: "Proprietorship + GST is usually faster for a single-owner dukaan. Private limited suits fundraising and larger contracts.",
         },
         {
           q: "Do I need Udyam if I already have GST?",
-          a: "Yes for most MSME schemes and many bank products — Udyam is the key eligibility proof.",
+          a: "Yes for most MSME schemes and many bank products - Udyam is the key eligibility proof.",
         },
       ],
       includes: [
@@ -9399,7 +9399,7 @@ export const services = {
       slug: "loan",
       aspectRatio: "4 / 5",
       summary:
-        "We match you to Mudra, Stand-Up India, working-capital, and NBFC products — then prepare the file banks actually accept.",
+        "We match you to Mudra, Stand-Up India, working-capital, and NBFC products - then prepare the file banks actually accept.",
       benefits: [
         "Lender shortlist based on turnover & collateral",
         "CMA / basic projections where required",
@@ -9408,15 +9408,15 @@ export const services = {
       ],
       documents: [
         "KYC + business registration proofs",
-        "Bank statements (6–12 months)",
+        "Bank statements (6-12 months)",
         "ITR / GST returns where available",
         "Quotations / project cost sheet",
       ],
-      timeline: "3–8 weeks typical for MSME tickets",
+      timeline: "3-8 weeks typical for MSME tickets",
       faqs: [
         {
           q: "Can I get a loan without collateral?",
-          a: "Often yes under Mudra and select NBFC products — eligibility depends on business vintage and cash flows.",
+          a: "Often yes under Mudra and select NBFC products - eligibility depends on business vintage and cash flows.",
         },
       ],
       includes: [
@@ -9432,7 +9432,7 @@ export const services = {
       slug: "grant",
       aspectRatio: "4 / 5",
       summary:
-        "PMEGP, seed funds, and state subsidies — we check fit, prepare DPR-style packs, and track portal status.",
+        "PMEGP, seed funds, and state subsidies - we check fit, prepare DPR-style packs, and track portal status.",
       benefits: [
         "Eligibility screen across 120+ schemes",
         "Project report support",
@@ -9445,11 +9445,11 @@ export const services = {
         "Own contribution proof",
         "Category certificates (if claiming reserved benefits)",
       ],
-      timeline: "4–12 weeks depending on scheme queue",
+      timeline: "4-12 weeks depending on scheme queue",
       faqs: [
         {
           q: "Is subsidy free money?",
-          a: "Subsidy reduces your project cost or loan burden when approved — it is not instant cash without a viable project.",
+          a: "Subsidy reduces your project cost or loan burden when approved - it is not instant cash without a viable project.",
         },
       ],
       includes: [
@@ -9478,11 +9478,11 @@ export const services = {
         "Label / packaging samples (FSSAI)",
         "Quality manual inputs (ISO)",
       ],
-      timeline: "1–6 weeks by licence type",
+      timeline: "1-6 weeks by licence type",
       faqs: [
         {
           q: "Do online sellers need FSSAI?",
-          a: "Most food sellers do — we map the correct category before you pay any portal fee.",
+          a: "Most food sellers do - we map the correct category before you pay any portal fee.",
         },
       ],
       includes: [
@@ -9510,7 +9510,7 @@ export const services = {
         "Rent / property options for expansion",
         "Staff & inventory estimates",
       ],
-      timeline: "Advisory sprints of 2–4 weeks",
+      timeline: "Advisory sprints of 2-4 weeks",
       faqs: [
         {
           q: "Do you run ads for me?",
@@ -9530,7 +9530,7 @@ export const services = {
       slug: "legal",
       aspectRatio: "4 / 5",
       summary:
-        "Agreements, compliance calendars, and notices — practical legal support so small teams do not miss deadlines.",
+        "Agreements, compliance calendars, and notices - practical legal support so small teams do not miss deadlines.",
       benefits: [
         "Vendor & partner agreement templates reviewed",
         "Basic labour & shop act orientation",
@@ -9542,7 +9542,7 @@ export const services = {
         "Company / firm papers",
         "Notice copies (if any)",
       ],
-      timeline: "Depends on matter — first review in 48–72 hrs",
+      timeline: "Depends on matter - first review in 48-72 hrs",
       faqs: [
         {
           q: "Is this a law firm?",
@@ -9569,7 +9569,7 @@ export function getAllServiceSlugs() {
 export const howItWorks = {
   eyebrow: "The Process",
   heading: "4 Kadam, Poora Kaam.",
-  sub: "You Just Show Up. We Handle The Rest — From A 2-Minute Discovery Call To Money Or Licence In Hand.",
+  sub: "You Just Show Up. We Handle The Rest - From A 2-Minute Discovery Call To Money Or Licence In Hand.",
   diagram: {
     src: photos.processDiagram,
     alt: "Four-step process diagram from call to disbursement",
@@ -9579,28 +9579,28 @@ export const howItWorks = {
       title: "Tell Us About You",
       caption: "2-minute call. No forms.",
       detail:
-        "Share business type, city, turnover band, and what you need — loan, licence, registration, or subsidy. We reply on WhatsApp with a simple checklist.",
+        "Share business type, city, turnover band, and what you need - loan, licence, registration, or subsidy. We reply on WhatsApp with a simple checklist.",
       image: photos.stepCall,
     },
     {
       title: "We Find Your Match",
       caption: "We check 120+ schemes for you.",
       detail:
-        "Our desk screens loans and government schemes against your eligibility, then ranks the top 2–3 realistic options with timelines.",
+        "Our desk screens loans and government schemes against your eligibility, then ranks the top 2-3 realistic options with timelines.",
       image: photos.stepMatch,
     },
     {
       title: "We Do The Paperwork",
       caption: "You just sign. We handle the rest.",
       detail:
-        "We assemble KYC, statements, quotations, and portal forms. You review and sign — we file and track queries.",
+        "We assemble KYC, statements, quotations, and portal forms. You review and sign - we file and track queries.",
       image: photos.stepPaperwork,
     },
     {
       title: "Money In Your Account",
       caption: "We follow up until it's done.",
       detail:
-        "Sanction, disbursement, licence download, or GST live — we stay on the case until the outcome is in your hands.",
+        "Sanction, disbursement, licence download, or GST live - we stay on the case until the outcome is in your hands.",
       image: photos.stepMoney,
     },
   ],
@@ -9609,7 +9609,7 @@ export const howItWorks = {
 export const caseStudies = {
   eyebrow: "Case Studies",
   heading: "Challenge → Solution → Paisa.",
-  sub: "Short Stories From Food, Hardware, And Tailoring Businesses — What Blocked Them, What We Filed, And What Landed.",
+  sub: "Short Stories From Food, Hardware, And Tailoring Businesses - What Blocked Them, What We Filed, And What Landed.",
   items: [
     {
       name: "Ritu Sharma",
@@ -9649,7 +9649,7 @@ export const caseStudies = {
   ],
 } as const;
 
-/** About page — Customer Success Stories (editorial human impact) */
+/** About page - Customer Success Stories (editorial human impact) */
 export const aboutStories = {
   id: "customer-stories",
   section: "07",
@@ -9657,7 +9657,7 @@ export const aboutStories = {
   headingLead: "Real People.",
   headingAccent: "Real Transform.",
   hindi: "Unki Kahani, Unki Zubaani.",
-  sub: "Short Stories From Food, Hardware, And Tailoring Businesses — What Blocked Them, What We Filed, And What Landed.",
+  sub: "Short Stories From Food, Hardware, And Tailoring Businesses - What Blocked Them, What We Filed, And What Landed.",
   continuity: "FROM PROOF → PEOPLE",
   exitLabel: "TRUST · HUMAN IMPACT · MOMENTUM",
   exitLead: "Every File Has A Face.",
@@ -9728,7 +9728,7 @@ export const aboutStories = {
 export const testimonials = {
   eyebrow: "Real People",
   heading: "Unki Kahani, Unki Zubaani.",
-  sub: "Ratings, Business Types, And Rupee Outcomes From Founders Who Look Like Our Visitors — Not Stock Models.",
+  sub: "Ratings, Business Types, And Rupee Outcomes From Founders Who Look Like Our Visitors - Not Stock Models.",
   items: [
     {
       name: "Ritu Sharma",
@@ -9765,12 +9765,12 @@ export const testimonials = {
 export const resources = {
   id: "resources",
   eyebrow: "Guides & SEO Desk",
-  heading: "Topics Founders Search For — Explained Clearly.",
+  heading: "Topics Founders Search For - Explained Clearly.",
   sub: "Deep Dives On Registration, GST, MSME/Udyam, Loans, Schemes, And Licences So You Can Learn Before You Call.",
   topics: [
     {
       title: "Business & Company Registration",
-      text: "Private limited, LLP, and proprietorship paths — when each makes sense for a dukaan or startup.",
+      text: "Private limited, LLP, and proprietorship paths - when each makes sense for a dukaan or startup.",
       image: photos.seoCompany,
       href: "/services/registration",
     },
@@ -9788,7 +9788,7 @@ export const resources = {
     },
     {
       title: "FSSAI Licence",
-      text: "Basic vs state vs central — mapped to your food business model.",
+      text: "Basic vs state vs central - mapped to your food business model.",
       image: photos.seoFssai,
       href: "/services/certificate",
     },
@@ -9809,22 +9809,22 @@ export const resources = {
 
 export const faq = {
   heading: "Sawal Jo Har Founder Poochta Hai",
-  sub: "Eligibility, Fees, Timelines, And Small-Business Fit — Answered Without Legal Fog.",
+  sub: "Eligibility, Fees, Timelines, And Small-Business Fit - Answered Without Legal Fog.",
   items: [
     {
       question: "Kya main eligible hoon?",
       answer:
-        "Bas 2 minute ka call karo, hum free mein bata denge. Hum business type, city, turnover band, aur documents dekh kar 2–3 realistic options shortlist karte hain — loan, subsidy, ya licence.",
+        "Bas 2 minute ka call karo, hum free mein bata denge. Hum business type, city, turnover band, aur documents dekh kar 2-3 realistic options shortlist karte hain - loan, subsidy, ya licence.",
     },
     {
       question: "Kitna paisa lagega hume?",
       answer:
-        "Pehli baat-cheet bilkul free hai. Koi hidden charge nahi. Agar aap case proceed karte ho to fees clear WhatsApp summary mein likh kar bhejte hain — pehle kaam, phir paisa clarity.",
+        "Pehli baat-cheet bilkul free hai. Koi hidden charge nahi. Agar aap case proceed karte ho to fees clear WhatsApp summary mein likh kar bhejte hain - pehle kaam, phir paisa clarity.",
     },
     {
       question: "Kitna time lagega?",
       answer:
-        "Zyadatar funding case mein 4–8 hafte, scheme ke hisaab se. Registration aur FSSAI aksar 1–3 hafte. Portal queries aur bank holidays timeline badha sakte hain — hum weekly status dete hain.",
+        "Zyadatar funding case mein 4-8 hafte, scheme ke hisaab se. Registration aur FSSAI aksar 1-3 hafte. Portal queries aur bank holidays timeline badha sakte hain - hum weekly status dete hain.",
     },
     {
       question: "Kya mera business chhota hai to bhi help milegi?",
@@ -9834,7 +9834,7 @@ export const faq = {
     {
       question: "Kya aap government office ho?",
       answer:
-        "Nahi. Hum private consultancy hain. Hum forms, banks, aur portals par aapke saath kaam karte hain — kisi bhi sarkari department ka hissa nahi.",
+        "Nahi. Hum private consultancy hain. Hum forms, banks, aur portals par aapke saath kaam karte hain - kisi bhi sarkari department ka hissa nahi.",
     },
     {
       question: "Documents kaise bheju?",
@@ -9856,7 +9856,7 @@ export const serviceFaq = {
     {
       question: "How long does business registration take in India?",
       answer:
-        "Registration timelines vary by structure — a Private Limited Company typically takes 7–15 working days, an LLP 10–20 days and a One Person Company 5–10 days. With Vikas Bharat's expert guidance, documentation is streamlined for faster, first-time approvals.",
+        "Registration timelines vary by structure - a Private Limited Company typically takes 7-15 working days, an LLP 10-20 days and a One Person Company 5-10 days. With Vikas Bharat's expert guidance, documentation is streamlined for faster, first-time approvals.",
     },
     {
       question: "What are the costs involved in business registration?",
@@ -9876,22 +9876,22 @@ export const serviceFaq = {
     {
       question: "Can I convert from one business structure to another later?",
       answer:
-        "Yes — common conversions include Proprietorship to Pvt Ltd, LLP to Pvt Ltd and Pvt Ltd to Public Ltd. Vikas Bharat manages the full conversion process, including legal documentation, ROC filings and regulatory compliance, with minimal disruption to your operations.",
+        "Yes - common conversions include Proprietorship to Pvt Ltd, LLP to Pvt Ltd and Pvt Ltd to Public Ltd. Vikas Bharat manages the full conversion process, including legal documentation, ROC filings and regulatory compliance, with minimal disruption to your operations.",
     },
     {
       question: "How do I start the registration or funding process with Vikas Bharat?",
       answer:
-        "Submit your basic business details through our website for a free eligibility assessment. Our advisors craft a custom action plan — whether for registration, compliance or funding — within 48 hours.",
+        "Submit your basic business details through our website for a free eligibility assessment. Our advisors craft a custom action plan - whether for registration, compliance or funding - within 48 hours.",
     },
     {
       question: "Is Vikas Bharat a reliable partner for business advisory?",
       answer:
-        "DPIIT-recognised since 2023, with a proven track record of ₹500Cr*+ in facilitated funding, 20,000+ businesses supported and transparent client testimonials — Vikas Bharat is India's trusted MSME growth partner.",
+        "DPIIT-recognised since 2023, with a proven track record of ₹500Cr*+ in facilitated funding, 20,000+ businesses supported and transparent client testimonials - Vikas Bharat is India's trusted MSME growth partner.",
     },
   ],
 } as const;
 
-/** About page — FAQ (editorial clarity index) */
+/** About page - FAQ (editorial clarity index) */
 export const aboutFaq = {
   id: "faq",
   section: "08",
@@ -9899,7 +9899,7 @@ export const aboutFaq = {
   headingLead: "Questions",
   headingAccent: "Before You Begin.",
   hindi: "Sawal Jo Har Founder Poochta Hai.",
-  sub: "Eligibility, Fees, Timelines, And Small-Business Fit — Answered Without Legal Fog.",
+  sub: "Eligibility, Fees, Timelines, And Small-Business Fit - Answered Without Legal Fog.",
   continuity: "FROM PEOPLE → CLARITY",
   indexLabel: "CLARITY INDEX",
   answerLabel: "ANSWER",
@@ -9908,7 +9908,7 @@ export const aboutFaq = {
   exitLead: "Still Unsure?",
   exitAccent: "Ek Free Call.",
   exitSub:
-    "Eligibility, scheme fit, aur next documents — 2 minute mein clear. Koi obligation nahi.",
+    "Eligibility, scheme fit, aur next documents - 2 minute mein clear. Koi obligation nahi.",
   ctaPrimary: "WhatsApp Par Baat Karo",
   ctaSecondary: "Call an Expert",
   items: [
@@ -9919,7 +9919,7 @@ export const aboutFaq = {
       question: "Kya main eligible hoon?",
       display: ["Kya main", "eligible hoon?"],
       answer:
-        "Bas 2 minute ka call karo, hum free mein bata denge. Hum business type, city, turnover band, aur documents dekh kar 2–3 realistic options shortlist karte hain — loan, subsidy, ya licence.",
+        "Bas 2 minute ka call karo, hum free mein bata denge. Hum business type, city, turnover band, aur documents dekh kar 2-3 realistic options shortlist karte hain - loan, subsidy, ya licence.",
       note: "FREE CHECK · 2 MIN",
       image: photos.faqConsult,
       imageAlt: "Advisor reviewing eligibility with a founder",
@@ -9931,7 +9931,7 @@ export const aboutFaq = {
       question: "Kitna paisa lagega hume?",
       display: ["Kitna paisa", "lagega hume?"],
       answer:
-        "Pehli baat-cheet bilkul free hai. Koi hidden charge nahi. Agar aap case proceed karte ho to fees clear WhatsApp summary mein likh kar bhejte hain — pehle kaam, phir paisa clarity.",
+        "Pehli baat-cheet bilkul free hai. Koi hidden charge nahi. Agar aap case proceed karte ho to fees clear WhatsApp summary mein likh kar bhejte hain - pehle kaam, phir paisa clarity.",
       note: "FIRST CALL FREE",
       image: photos.faqFounder,
       imageAlt: "Founder reviewing a clear fee summary",
@@ -9943,7 +9943,7 @@ export const aboutFaq = {
       question: "Kitna time lagega?",
       display: ["Kitna time", "lagega?"],
       answer:
-        "Zyadatar funding case mein 4–8 hafte, scheme ke hisaab se. Registration aur FSSAI aksar 1–3 hafte. Portal queries aur bank holidays timeline badha sakte hain — hum weekly status dete hain.",
+        "Zyadatar funding case mein 4-8 hafte, scheme ke hisaab se. Registration aur FSSAI aksar 1-3 hafte. Portal queries aur bank holidays timeline badha sakte hain - hum weekly status dete hain.",
       note: "WEEKLY STATUS",
       image: photos.stepMatch,
       imageAlt: "Team tracking application timelines",
@@ -9967,7 +9967,7 @@ export const aboutFaq = {
       question: "Kya aap government office ho?",
       display: ["Kya aap", "government office ho?"],
       answer:
-        "Nahi. Hum private consultancy hain. Hum forms, banks, aur portals par aapke saath kaam karte hain — kisi bhi sarkari department ka hissa nahi.",
+        "Nahi. Hum private consultancy hain. Hum forms, banks, aur portals par aapke saath kaam karte hain - kisi bhi sarkari department ka hissa nahi.",
       note: "PRIVATE CONSULTANCY",
       image: photos.credentialTeam,
       imageAlt: "Private consultancy desk at work",
@@ -9991,7 +9991,7 @@ export const aboutFaq = {
       question: "Collateral ke bina loan mil sakta hai?",
       display: ["Collateral ke bina", "loan mil sakta hai?"],
       answer:
-        "Often yes under Mudra and select NBFC products — eligibility depends on business vintage and cash flows.",
+        "Often yes under Mudra and select NBFC products - eligibility depends on business vintage and cash flows.",
       note: "MUDRA · NBFC PATHS",
       image: photos.serviceLoan,
       imageAlt: "Loan paperwork review for MSME funding",
@@ -10003,7 +10003,7 @@ export const aboutFaq = {
       question: "GST hai to bhi Udyam chahiye?",
       display: ["GST hai to bhi", "Udyam chahiye?"],
       answer:
-        "Yes for most MSME schemes and many bank products — Udyam is the key eligibility proof.",
+        "Yes for most MSME schemes and many bank products - Udyam is the key eligibility proof.",
       note: "UDYAM UNLOCKS SCHEMES",
       image: photos.seoUdyam,
       imageAlt: "MSME Udyam registration desk",
@@ -10013,7 +10013,7 @@ export const aboutFaq = {
 
 export const finalCta = {
   heading: "Aaj Hi Shuru Karo.",
-  sub: "Ek Free Call. Koi Obligation Nahi. Eligibility, Scheme Fit, Aur Next Documents — 2 Minute Mein Clear.",
+  sub: "Ek Free Call. Koi Obligation Nahi. Eligibility, Scheme Fit, Aur Next Documents - 2 Minute Mein Clear.",
   primary: "WhatsApp Par Baat Karo",
   secondary: site.phoneDisplay,
 } as const;
@@ -10022,7 +10022,7 @@ export const footer = {
   companyName: site.companyName,
   tagline: site.tagline,
   overview:
-    "Pan-India business help desk for registration, GST, MSME/Udyam, loans, government schemes, FSSAI, ISO, and growth advisory — bilingual and WhatsApp-first.",
+    "Pan-India business help desk for registration, GST, MSME/Udyam, loans, government schemes, FSSAI, ISO, and growth advisory - bilingual and WhatsApp-first.",
   offices: site.offices,
   disclaimer: site.disclaimer,
   map: { src: photos.footerCity, alt: "Noida office location" },

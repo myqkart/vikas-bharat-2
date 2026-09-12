@@ -20,7 +20,7 @@ import TiltCard from "@/components/motion/TiltCard";
 import CountUp from "@/components/motion/CountUp";
 
 const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-  "Hi, I want a guide for my business — loans, GST or schemes.",
+  "Hi, I want a guide for my business - loans, GST or schemes.",
 )}`;
 
 const blogsPageStatsFallback = [

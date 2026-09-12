@@ -480,7 +480,7 @@ export default function AboutFAQ() {
         </svg>
       </div>
 
-      {/* Ambient glows — light paper language */}
+      {/* Ambient glows - light paper language */}
       <div className="absolute inset-0 pointer-events-none -z-30">
         <div className="absolute top-[6%] right-[-12%] w-[520px] h-[520px] rounded-full bg-marigold/8 blur-[140px]" />
         <div className="absolute top-[40%] left-[-10%] w-[460px] h-[460px] rounded-full bg-indigo/5 blur-[130px]" />
@@ -502,7 +502,7 @@ export default function AboutFAQ() {
         </svg>
       </div>
 
-      {/* Fine diagonal hatch — subtle */}
+      {/* Fine diagonal hatch - subtle */}
       <div className="absolute inset-0 opacity-[0.015] pointer-events-none select-none -z-20">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <pattern
@@ -665,13 +665,13 @@ export default function AboutFAQ() {
       </div>
 
       {/* ========== INTERACTIVE FAQ ==========
-          Desktop: pinned split — left stays fixed, only the question list scrolls.
+          Desktop: pinned split - left stays fixed, only the question list scrolls.
       */}
       <div className="relative px-6 sm:px-8 lg:px-14 xl:px-20 pb-8 lg:pb-12">
         <div
           className="mx-auto max-w-[1240px] grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-10 lg:gap-14 lg:items-stretch lg:h-[calc(100dvh-7.5rem)] lg:max-h-[820px] lg:sticky lg:top-[6.5rem]"
         >
-          {/* Left clarity panel — stays put on desktop */}
+          {/* Left clarity panel - stays put on desktop */}
           <aside className="relative z-10 hidden lg:flex lg:flex-col lg:min-h-0 lg:overflow-hidden">
             {/* Number index rail (stays with left panel) */}
             <div className="mb-5 flex flex-wrap items-center gap-x-1 gap-y-2 border-b border-border/50 pb-4 shrink-0">
@@ -748,7 +748,7 @@ export default function AboutFAQ() {
             </div>
           </aside>
 
-          {/* Right — question list scrolls independently on desktop */}
+          {/* Right - question list scrolls independently on desktop */}
           <div
             ref={listRef}
             role="list"

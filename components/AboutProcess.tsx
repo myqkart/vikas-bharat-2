@@ -69,7 +69,7 @@ export default function AboutProcess() {
             variants={dramaticFadeUp}
             className="mt-4 text-base leading-relaxed text-slate sm:text-lg"
           >
-            A clear path — consultation to stamped outcome.
+            A clear path - consultation to stamped outcome.
           </motion.p>
         </motion.div>
 

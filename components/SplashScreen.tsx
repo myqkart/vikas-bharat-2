@@ -10,7 +10,7 @@ const EXIT_MS = 850;
 
 /**
  * Survives client-side navigations in the same JS runtime,
- * but resets on a full page reload — so reload always shows splash.
+ * but resets on a full page reload - so reload always shows splash.
  */
 let splashDoneThisRuntime = false;
 

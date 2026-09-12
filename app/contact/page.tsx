@@ -44,7 +44,7 @@ const services = [
 
 const title = "Contact Us";
 const description =
-  "Talk to the Vikas Bharat desk in Noida or remotely — WhatsApp, phone or email for registrations, loans, government schemes and MSME growth support.";
+  "Talk to the Vikas Bharat desk in Noida or remotely - WhatsApp, phone or email for registrations, loans, government schemes and MSME growth support.";
 const breadcrumbs = [
   { name: "Home", path: "/" },
   { name: "Contact Us", path: "/contact" },
@@ -76,7 +76,7 @@ const contactFaq = {
     },
     {
       question: "Can I visit an office in person?",
-      answer: "Yes. Walk in at our Noida desk — 1st floor, F-5, C Block, Sector 63. Please call ahead so the right specialist can be available.",
+      answer: "Yes. Walk in at our Noida desk - 1st floor, F-5, C Block, Sector 63. Please call ahead so the right specialist can be available.",
     },
     {
       question: "Is the first consultation charged?",
@@ -102,7 +102,7 @@ export default function ContactPage() {
           {
             "@type": "LocalBusiness",
             "@id": `${SITE_URL}/#noida-office`,
-            name: "Vikas Bharat — Noida desk",
+            name: "Vikas Bharat - Noida desk",
             url: absoluteUrl("/contact"),
             telephone: site.phoneNumber,
             email: site.email,

@@ -20,7 +20,7 @@ import {
 
 const title = "About Us";
 const description =
-  "Vikas Bharat is a private consultancy helping Indian startups and MSMEs with registrations, loans, government schemes, certifications and business growth — Sapno Se Safalta Tak.";
+  "Vikas Bharat is a private consultancy helping Indian startups and MSMEs with registrations, loans, government schemes, certifications and business growth - Sapno Se Safalta Tak.";
 const breadcrumbs = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },

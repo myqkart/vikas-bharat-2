@@ -65,21 +65,21 @@ export const blogsPage = {
   eyebrow: "Knowledge Desk",
   heading: "Guides For Founders & MSMEs",
   intro:
-    "Practical articles on registration, loans, GST, schemes and compliance — written the way we explain it on a call. Padho, phir poochho.",
+    "Practical articles on registration, loans, GST, schemes and compliance - written the way we explain it on a call. Padho, phir poochho.",
   cta: "Browse articles",
   catalogCta: "Talk on WhatsApp",
   imageAlt: "Advisor reviewing business guides with a founder",
   catalog: {
     eyebrow: "Latest From The Desk",
     heading: "Read What Founders Actually Ask",
-    sub: "Search A Scheme, Licence Or Loan Type. Every Guide Ends With A Clear Next Step — Not A Maze Of Links.",
+    sub: "Search A Scheme, Licence Or Loan Type. Every Guide Ends With A Clear Next Step - Not A Maze Of Links.",
     searchPlaceholder: "Search GST, Mudra, Udyam, FSSAI…",
     empty: "No guides match that search. Try a category, or WhatsApp the desk.",
   },
   topics: {
     eyebrow: "What We Write About",
     heading: "Pick A Desk. Start Reading.",
-    sub: "Same Topics We Handle On WhatsApp — Explained Before You Send A Document.",
+    sub: "Same Topics We Handle On WhatsApp - Explained Before You Send A Document.",
   },
 } as const;
 
@@ -90,7 +90,7 @@ export const blogFaq = {
     {
       question: "Are these official government articles?",
       answer:
-        "No. Vikas Bharat is a private consultancy. Guides explain how schemes, loans and licences usually work in practice. Always confirm current portal rules before you file — we help you do that on the desk.",
+        "No. Vikas Bharat is a private consultancy. Guides explain how schemes, loans and licences usually work in practice. Always confirm current portal rules before you file - we help you do that on the desk.",
     },
     {
       question: "Can I apply from the blog itself?",
@@ -100,7 +100,7 @@ export const blogFaq = {
     {
       question: "How often are guides updated?",
       answer:
-        "We refresh when scheme rules, documents or our desk process change. Dates sit on every card. If something looks old, message us — live eligibility beats a screenshot.",
+        "We refresh when scheme rules, documents or our desk process change. Dates sit on every card. If something looks old, message us - live eligibility beats a screenshot.",
     },
     {
       question: "Do I need documents before reading?",
@@ -110,7 +110,7 @@ export const blogFaq = {
     {
       question: "Will you write about my industry?",
       answer:
-        "Tell us the sector on WhatsApp. If it is a common MSME path — food, retail, manufacturing, services — we already have a desk. If not, we still map the closest scheme and licence route.",
+        "Tell us the sector on WhatsApp. If it is a common MSME path - food, retail, manufacturing, services - we already have a desk. If not, we still map the closest scheme and licence route.",
     },
   ],
 } as const;

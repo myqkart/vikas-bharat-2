@@ -148,7 +148,7 @@ function tokenAngle(index: number, total: number) {
   return start + index * step;
 }
 
-/** Reduced-motion: ink dossier — discovery-shaped, never a timeline */
+/** Reduced-motion: ink dossier - discovery-shaped, never a timeline */
 function InkDossier() {
   return (
     <section
@@ -365,7 +365,7 @@ function MandateArc({
             </div>
           </foreignObject>
         </g>
-        {/* Upright label — only when near the lock meridian */}
+        {/* Upright label - only when near the lock meridian */}
         {selected ? (
           <foreignObject
             x={-100}
@@ -487,7 +487,7 @@ export default function MissionTrees() {
 
   return (
     <div id={missionTrees.id}>
-      {/* Mobile: large HTML seal — SVG compass is unreadable below ~500px */}
+      {/* Mobile: large HTML seal - SVG compass is unreadable below ~500px */}
       <div className="lg:hidden">
         <MobileInkCompass />
       </div>
@@ -499,7 +499,7 @@ export default function MissionTrees() {
   );
 }
 
-/** Mobile-only compass — big center mark + scroll parallax (sticky spin) */
+/** Mobile-only compass - big center mark + scroll parallax (sticky spin) */
 function MobileInkCompass() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -1026,7 +1026,7 @@ function DesktopInkCompass() {
                   viewBox="0 0 1000 1000"
                   className="h-full w-full select-none"
                   role="img"
-                  aria-label="Interactive Ink Compass — drag or click to lock mandates"
+                  aria-label="Interactive Ink Compass - drag or click to lock mandates"
                 >
                   <defs>
                     <radialGradient id={glowId} cx="50%" cy="50%" r="50%">

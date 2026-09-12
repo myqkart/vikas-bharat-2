@@ -55,7 +55,7 @@ export async function generateMetadata({
     description: service.summary,
     path: servicePath(slug),
     image: service.image,
-    imageAlt: `${service.title} — ${service.subtitle}`,
+    imageAlt: `${service.title} - ${service.subtitle}`,
   });
 }
 
@@ -142,7 +142,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         subhead={service.summary}
         image={{
           src: service.image,
-          alt: `${service.title} — ${service.subtitle}`,
+          alt: `${service.title} - ${service.subtitle}`,
         }}
         floatingProof={null}
         showCtas={false}

@@ -363,7 +363,7 @@ export default function Passbook() {
             </div>
             <div>
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                DPIT–RECOGNISED STARTUPS
+                DPIT-RECOGNISED STARTUPS
               </span>
               <span className="font-sans text-2xl lg:text-3xl font-extrabold text-slate-900 mt-1 block leading-none">
                 <CountUp to={245430} />

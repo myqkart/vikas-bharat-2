@@ -106,7 +106,7 @@ select:disabled,
   cursor: not-allowed;
 }
 
-/* Offset in-page anchors for the floating header (never #home — that must stay at 0) */
+/* Offset in-page anchors for the floating header (never #home - that must stay at 0) */
 section[id]:not(#home),
 div[id]:not(#home) {
   scroll-margin-top: 4.5rem;
@@ -249,7 +249,7 @@ div[id]:not(#home) {
   pointer-events: none;
 }
 
-/* Floating glass navigation — morphing beacon */
+/* Floating glass navigation - morphing beacon */
 .nav-glass {
   background: linear-gradient(
     135deg,

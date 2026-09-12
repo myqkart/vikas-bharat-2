@@ -199,7 +199,7 @@ export default function CaseStudies() {
 
             <Reveal className="mt-6">
               <p className="text-base text-slate max-w-md leading-relaxed font-medium">
-                Short stories from food, hardware, and tailoring businesses — what
+                Short stories from food, hardware, and tailoring businesses - what
                 blocked them, what we filed, and what landed.
               </p>
             </Reveal>

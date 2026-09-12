@@ -166,7 +166,7 @@ const desks: Record<string, ServiceDesk> = {
   naif: {
     title: `NAIF Scheme (AIF) | ${site.companyName}`,
     description:
-      "Agriculture Infrastructure Fund (AIF / NAIF) — loans up to ₹2 Crore per project, 3% interest subvention for 7 years, and 100% CGTMSE cover for post-harvest agri infrastructure.",
+      "Agriculture Infrastructure Fund (AIF / NAIF) - loans up to ₹2 Crore per project, 3% interest subvention for 7 years, and 100% CGTMSE cover for post-harvest agri infrastructure.",
     hero: {
       data: naifPage,
       images: {
@@ -211,7 +211,7 @@ const desks: Record<string, ServiceDesk> = {
   cgtmse: {
     title: `CGTMSE Loan Scheme | ${site.companyName}`,
     description:
-      "CGTMSE collateral-free loans for micro and small enterprises — cover up to ₹500 Lakhs, 75–85% guarantee, and hybrid security through scheduled banks.",
+      "CGTMSE collateral-free loans for micro and small enterprises - cover up to ₹500 Lakhs, 75-85% guarantee, and hybrid security through scheduled banks.",
     hero: {
       data: cgtmsePage,
       images: {
@@ -269,7 +269,7 @@ const desks: Record<string, ServiceDesk> = {
   pmegp: {
     title: `PMEGP Scheme | ${site.companyName}`,
     description:
-      "Prime Minister's Employment Generation Programme — up to 35% subsidy for new manufacturing and service units, implemented through KVIC, KVIBs and DICs.",
+      "Prime Minister's Employment Generation Programme - up to 35% subsidy for new manufacturing and service units, implemented through KVIC, KVIBs and DICs.",
     hero: {
       data: pmegpPage,
       images: {
@@ -312,7 +312,7 @@ const desks: Record<string, ServiceDesk> = {
   ahidf: {
     title: `AHIDF Scheme | ${site.companyName}`,
     description:
-      "Animal Husbandry Infrastructure Development Fund — up to 90% loan cover, 3% interest subvention for 8 years, and 25% NABARD guarantee for dairy, meat, feed and allied units.",
+      "Animal Husbandry Infrastructure Development Fund - up to 90% loan cover, 3% interest subvention for 8 years, and 25% NABARD guarantee for dairy, meat, feed and allied units.",
     hero: {
       data: ahidfPage,
       images: {
@@ -355,7 +355,7 @@ const desks: Record<string, ServiceDesk> = {
   cgss: {
     title: `CGSS Scheme | ${site.companyName}`,
     description:
-      "Credit Guarantee Scheme for Startups — collateral-free loans up to ₹20 crore for DPIIT-recognised startups, with 85%/75% NCGTC cover and no equity dilution.",
+      "Credit Guarantee Scheme for Startups - collateral-free loans up to ₹20 crore for DPIIT-recognised startups, with 85%/75% NCGTC cover and no equity dilution.",
     hero: {
       data: cgssPage,
       images: {
@@ -408,7 +408,7 @@ const desks: Record<string, ServiceDesk> = {
   "seed-fund": {
     title: `Startup India Seed Fund (SISFS) | ${site.companyName}`,
     description:
-      "Startup India Seed Fund Scheme — grants up to ₹20 lakh for PoC, prototype and trials, and up to ₹50 lakh as debt or convertible for market entry, via DPIIT incubators.",
+      "Startup India Seed Fund Scheme - grants up to ₹20 lakh for PoC, prototype and trials, and up to ₹50 lakh as debt or convertible for market entry, via DPIIT incubators.",
     hero: {
       data: sisfsPage,
       images: {
@@ -453,7 +453,7 @@ const desks: Record<string, ServiceDesk> = {
   "unsecured-business-loan": {
     title: `Unsecured Business Loans | ${site.companyName}`,
     description:
-      "Collateral-free unsecured business loans up to ₹50 Lakhs for MSMEs and startups — lender matching, documentation and fast approval without pledging assets.",
+      "Collateral-free unsecured business loans up to ₹50 Lakhs for MSMEs and startups - lender matching, documentation and fast approval without pledging assets.",
     hero: {
       data: ublPage,
       images: {
@@ -498,7 +498,7 @@ const desks: Record<string, ServiceDesk> = {
   rdif: {
     title: `RDIF Scheme | ${site.companyName}`,
     description:
-      "Research Development and Innovation Fund (RDIF) — up to 50% project cost cover, concessional 3–4% interest, and 12–15 year tenure for deep-tech and strategic R&D via DST/TDB.",
+      "Research Development and Innovation Fund (RDIF) - up to 50% project cost cover, concessional 3-4% interest, and 12-15 year tenure for deep-tech and strategic R&D via DST/TDB.",
     hero: {
       data: rdifPage,
       images: {
@@ -551,7 +551,7 @@ const desks: Record<string, ServiceDesk> = {
   sss: {
     title: `Startup Support Scheme (SSS) | ${site.companyName}`,
     description:
-      "Startup Support Scheme (SSS) — equity, debt or equity-linked funding from ₹25 lakh to ₹1 crore for DPIIT-recognised tech startups, with mentorship and growth support.",
+      "Startup Support Scheme (SSS) - equity, debt or equity-linked funding from ₹25 lakh to ₹1 crore for DPIIT-recognised tech startups, with mentorship and growth support.",
     hero: {
       data: sssPage,
       images: {
@@ -596,7 +596,7 @@ const desks: Record<string, ServiceDesk> = {
   "equity-linked-seed": {
     title: `Equity Linked Seed Fund | ${site.companyName}`,
     description:
-      "Equity Linked Seed Fund — up to ₹30 lakh grant/equity-linked support, capped ~10% stake, and pre-Series A pathways for DPIIT-recognised innovative startups.",
+      "Equity Linked Seed Fund - up to ₹30 lakh grant/equity-linked support, capped ~10% stake, and pre-Series A pathways for DPIIT-recognised innovative startups.",
     hero: {
       data: equityLinkedSeedPage,
       images: {
@@ -805,7 +805,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "deep-tech": {
     title: `Deep Tech Funding | ${site.companyName}`,
-    description: "IIT Tirupati TIH deep-tech grant support up to ₹1 crore for academia–startup collaborations.",
+    description: "IIT Tirupati TIH deep-tech grant support up to ₹1 crore for academia-startup collaborations.",
     hero: { data: deepTechPage, images: { primary: photos.schemeLab, secondary: photos.schemeTech, circle: photos.schemeStartup, secondaryAlt: "Deep tech research collaboration", circleAlt: "Early-stage deep-tech founders" }, whatsappText: "Hi, I want to check eligibility for Deep Tech Funding." },
     unlock: { data: deepTechPage.unlock, image: { src: photos.schemeLab, alt: "Deep Tech Funding research support" } },
     sections: [{ type: "services", data: deepTechPage.benefits, sectionId: "deep-tech-benefits" }, { type: "categories", data: deepTechPage.eligibility, sectionId: "deep-tech-eligibility" }, { type: "process", data: deepTechPage.process, sectionId: "deep-tech-process" }, { type: "documents", data: deepTechPage.documents, sectionId: "deep-tech-documents", whatsappText: "Hi, please send me the Deep Tech Funding documents checklist." }],
@@ -862,7 +862,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "pm-kusum": {
     title: `PM KUSUM Scheme | ${site.companyName}`,
-    description: "Solar pumps, decentralised plants and grid solarisation with subsidy support up to 60–80% for eligible farmers.",
+    description: "Solar pumps, decentralised plants and grid solarisation with subsidy support up to 60-80% for eligible farmers.",
     hero: {
       data: pmKusumPage,
       images: { primary: photos.schemeSolar, secondary: photos.schemeAgri, circle: photos.schemeHorticulture, secondaryAlt: "Solar agricultural pump installation", circleAlt: "Farmers using solar irrigation" },
@@ -879,7 +879,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   twees: {
     title: `TWEES Scheme | ${site.companyName}`,
-    description: "Tamil Nadu Women Employment and Entrepreneurship Scheme — loans up to ₹10 lakh with 25% subsidy.",
+    description: "Tamil Nadu Women Employment and Entrepreneurship Scheme - loans up to ₹10 lakh with 25% subsidy.",
     hero: {
       data: tweesPage,
       images: { primary: photos.schemeStandup, secondary: photos.schemePitch, circle: photos.schemeStartup, secondaryAlt: "Women entrepreneur business planning", circleAlt: "TWEES scheme applicants" },
@@ -930,7 +930,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   mudra: {
     title: `MUDRA Loans (PMMY) | ${site.companyName}`,
-    description: "Pradhan Mantri Mudra Yojana — collateral-free micro loans up to ₹20 lakh across Shishu, Kishore and Tarun.",
+    description: "Pradhan Mantri Mudra Yojana - collateral-free micro loans up to ₹20 lakh across Shishu, Kishore and Tarun.",
     hero: {
       data: mudraPage,
       images: { primary: photos.schemeMudra, secondary: photos.serviceLoan, circle: photos.schemeStandup, secondaryAlt: "Micro enterprise Mudra loan documentation", circleAlt: "Small business owner receiving Mudra credit" },
@@ -1041,7 +1041,7 @@ const desks: Record<string, ServiceDesk> = {
   "tax-exemption-certificate": {
     title: `Tax Exemption Certificate | ${site.companyName}`,
     description:
-      "Section 80IAC tax exemption for DPIIT-recognised startups — up to 100% tax holiday for three consecutive years within the first decade.",
+      "Section 80IAC tax exemption for DPIIT-recognised startups - up to 100% tax holiday for three consecutive years within the first decade.",
     hero: {
       data: taxExemptionCertificatePage,
       images: {
@@ -1073,7 +1073,7 @@ const desks: Record<string, ServiceDesk> = {
   "startup-india-eligibility": {
     title: `Startup India Scheme Eligibility | ${site.companyName}`,
     description:
-      "2026 revised DPIIT Startup India eligibility — ₹200 Cr / ₹300 Cr turnover limits, Deep Tech age extension, and cooperative inclusion.",
+      "2026 revised DPIIT Startup India eligibility - ₹200 Cr / ₹300 Cr turnover limits, Deep Tech age extension, and cooperative inclusion.",
     hero: {
       data: startupIndiaEligibilityPage,
       images: {
@@ -1104,7 +1104,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "act-grant": {
     title: `ACT Grants | ${site.companyName}`,
-    description: "ACT Grants — grant support of about ₹5L–₹50L for qualifying innovators and startups.",
+    description: "ACT Grants - grant support of about ₹5L-₹50L for qualifying innovators and startups.",
     hero: {
       data: actGrantPage,
       images: { primary: photos.schemeSeed, secondary: photos.schemeStartup, circle: photos.schemePitch, secondaryAlt: "ACT Grants application support", circleAlt: "Founders preparing a ACT Grants proposal" },
@@ -1121,7 +1121,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "mahila-empowerment": {
     title: `Mahila Empowerment Scheme | ${site.companyName}`,
-    description: "Mahila Empowerment Scheme — grant support of about Up to ₹15L for qualifying innovators and startups.",
+    description: "Mahila Empowerment Scheme - grant support of about Up to ₹15L for qualifying innovators and startups.",
     hero: {
       data: mahilaEmpowermentPage,
       images: { primary: photos.schemeStartup, secondary: photos.schemePitch, circle: photos.schemeVc, secondaryAlt: "Mahila Empowerment Scheme application support", circleAlt: "Founders preparing a Mahila Empowerment Scheme proposal" },
@@ -1138,7 +1138,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "spark-grant": {
     title: `Spark Grant | ${site.companyName}`,
-    description: "Spark Grant — grant support of about Up to ₹88L for qualifying innovators and startups.",
+    description: "Spark Grant - grant support of about Up to ₹88L for qualifying innovators and startups.",
     hero: {
       data: sparkGrantPage,
       images: { primary: photos.schemePitch, secondary: photos.schemeVc, circle: photos.schemeLab, secondaryAlt: "Spark Grant application support", circleAlt: "Founders preparing a Spark Grant proposal" },
@@ -1155,7 +1155,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "tide-2": {
     title: `TIDE 2.0 Scheme | ${site.companyName}`,
-    description: "TIDE 2.0 Scheme — grant support of about Up to ₹7L for qualifying innovators and startups.",
+    description: "TIDE 2.0 Scheme - grant support of about Up to ₹7L for qualifying innovators and startups.",
     hero: {
       data: tide2Page,
       images: { primary: photos.schemeVc, secondary: photos.schemeLab, circle: photos.schemeTech, secondaryAlt: "TIDE 2.0 Scheme application support", circleAlt: "Founders preparing a TIDE 2.0 Scheme proposal" },
@@ -1172,7 +1172,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "rkvy-raftaar": {
     title: `RKVY RAFTAAR | ${site.companyName}`,
-    description: "RKVY RAFTAAR — grant support of about Up to ₹25L for qualifying innovators and startups.",
+    description: "RKVY RAFTAAR - grant support of about Up to ₹25L for qualifying innovators and startups.",
     hero: {
       data: rkvyRaftaarPage,
       images: { primary: photos.schemeLab, secondary: photos.schemeTech, circle: photos.schemeAgri, secondaryAlt: "RKVY RAFTAAR application support", circleAlt: "Founders preparing a RKVY RAFTAAR proposal" },
@@ -1189,7 +1189,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "nidhi-prayas": {
     title: `NIDHI PRAYAS Grant | ${site.companyName}`,
-    description: "NIDHI PRAYAS Grant — grant support of about Up to ₹10L for qualifying innovators and startups.",
+    description: "NIDHI PRAYAS Grant - grant support of about Up to ₹10L for qualifying innovators and startups.",
     hero: {
       data: nidhiPrayasPage,
       images: { primary: photos.schemeTech, secondary: photos.schemeAgri, circle: photos.aboutServiceGrants, secondaryAlt: "NIDHI PRAYAS Grant application support", circleAlt: "Founders preparing a NIDHI PRAYAS Grant proposal" },
@@ -1206,7 +1206,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "meity-genesis-eir": {
     title: `MeitY GENESIS EIR | ${site.companyName}`,
-    description: "MeitY GENESIS EIR — grant support of about Up to ₹10L for qualifying innovators and startups.",
+    description: "MeitY GENESIS EIR - grant support of about Up to ₹10L for qualifying innovators and startups.",
     hero: {
       data: meityGenesisEirPage,
       images: { primary: photos.schemeAgri, secondary: photos.aboutServiceGrants, circle: photos.schemeGuarantee, secondaryAlt: "MeitY GENESIS EIR application support", circleAlt: "Founders preparing a MeitY GENESIS EIR proposal" },
@@ -1223,7 +1223,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "agri-business-grants": {
     title: `Agri Business Grants | ${site.companyName}`,
-    description: "Agri Business Grants — grant support of about Up to ₹40L for qualifying innovators and startups.",
+    description: "Agri Business Grants - grant support of about Up to ₹40L for qualifying innovators and startups.",
     hero: {
       data: agriBusinessGrantsPage,
       images: { primary: photos.aboutServiceGrants, secondary: photos.schemeGuarantee, circle: photos.schemeSeed, secondaryAlt: "Agri Business Grants application support", circleAlt: "Founders preparing a Agri Business Grants proposal" },
@@ -1240,7 +1240,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "social-impact": {
     title: `Social Impact Innovation Scheme | ${site.companyName}`,
-    description: "Social Impact Innovation Scheme — grant support of about Up to ₹5L for qualifying innovators and startups.",
+    description: "Social Impact Innovation Scheme - grant support of about Up to ₹5L for qualifying innovators and startups.",
     hero: {
       data: socialImpactPage,
       images: { primary: photos.schemeGuarantee, secondary: photos.schemeSeed, circle: photos.schemeStartup, secondaryAlt: "Social Impact Innovation Scheme application support", circleAlt: "Founders preparing a Social Impact Innovation Scheme proposal" },
@@ -1257,7 +1257,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "mobility-innovation": {
     title: `Mobility Innovation Program | ${site.companyName}`,
-    description: "Mobility Innovation Program — grant support of about Up to ₹10L for qualifying innovators and startups.",
+    description: "Mobility Innovation Program - grant support of about Up to ₹10L for qualifying innovators and startups.",
     hero: {
       data: mobilityInnovationPage,
       images: { primary: photos.schemeSeed, secondary: photos.schemeStartup, circle: photos.schemePitch, secondaryAlt: "Mobility Innovation Program application support", circleAlt: "Founders preparing a Mobility Innovation Program proposal" },
@@ -1274,7 +1274,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "great-scheme": {
     title: `GREAT Scheme | ${site.companyName}`,
-    description: "GREAT Scheme — grant support of about Up to ₹50L for qualifying innovators and startups.",
+    description: "GREAT Scheme - grant support of about Up to ₹50L for qualifying innovators and startups.",
     hero: {
       data: greatSchemePage,
       images: { primary: photos.schemeStartup, secondary: photos.schemePitch, circle: photos.schemeVc, secondaryAlt: "GREAT Scheme application support", circleAlt: "Founders preparing a GREAT Scheme proposal" },
@@ -1291,7 +1291,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "uyegp": {
     title: `UYEGP Scheme | ${site.companyName}`,
-    description: "UYEGP Scheme — grant support of about Up to ₹15L for qualifying innovators and startups.",
+    description: "UYEGP Scheme - grant support of about Up to ₹15L for qualifying innovators and startups.",
     hero: {
       data: uyegpPage,
       images: { primary: photos.schemePitch, secondary: photos.schemeVc, circle: photos.schemeLab, secondaryAlt: "UYEGP Scheme application support", circleAlt: "Founders preparing a UYEGP Scheme proposal" },
@@ -1308,7 +1308,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "cybersecurity-fund": {
     title: `Cybersecurity Fund 2.0 | ${site.companyName}`,
-    description: "Cybersecurity Fund 2.0 — grant support of about Up to ₹30L for qualifying innovators and startups.",
+    description: "Cybersecurity Fund 2.0 - grant support of about Up to ₹30L for qualifying innovators and startups.",
     hero: {
       data: cybersecurityFundPage,
       images: { primary: photos.schemeVc, secondary: photos.schemeLab, circle: photos.schemeTech, secondaryAlt: "Cybersecurity Fund 2.0 application support", circleAlt: "Founders preparing a Cybersecurity Fund 2.0 proposal" },
@@ -1325,7 +1325,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "art-program": {
     title: `ART Program | ${site.companyName}`,
-    description: "ART Program — grant support of about Up to ₹30L for qualifying innovators and startups.",
+    description: "ART Program - grant support of about Up to ₹30L for qualifying innovators and startups.",
     hero: {
       data: artProgramPage,
       images: { primary: photos.schemeLab, secondary: photos.schemeTech, circle: photos.schemeAgri, secondaryAlt: "ART Program application support", circleAlt: "Founders preparing a ART Program proposal" },
@@ -1342,7 +1342,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "agri-sure-fund": {
     title: `Agri-Sure Fund | ${site.companyName}`,
-    description: "Agri-Sure Fund — grant support of about Up to ₹25L for qualifying innovators and startups.",
+    description: "Agri-Sure Fund - grant support of about Up to ₹25L for qualifying innovators and startups.",
     hero: {
       data: agriSureFundPage,
       images: { primary: photos.schemeTech, secondary: photos.schemeAgri, circle: photos.aboutServiceGrants, secondaryAlt: "Agri-Sure Fund application support", circleAlt: "Founders preparing a Agri-Sure Fund proposal" },
@@ -1359,7 +1359,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "grant-for-ventures": {
     title: `Grant For Ventures | ${site.companyName}`,
-    description: "Grant for Ventures — grant support of about Up to ₹30L for qualifying innovators and startups.",
+    description: "Grant for Ventures - grant support of about Up to ₹30L for qualifying innovators and startups.",
     hero: {
       data: grantForVenturesPage,
       images: { primary: photos.schemeAgri, secondary: photos.aboutServiceGrants, circle: photos.schemeGuarantee, secondaryAlt: "Grant for Ventures application support", circleAlt: "Founders preparing a Grant for Ventures proposal" },
@@ -1376,7 +1376,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "growth-grant": {
     title: `Growth Grant | ${site.companyName}`,
-    description: "Growth Grant — grant support of about Up to ₹1.7Cr for qualifying innovators and startups.",
+    description: "Growth Grant - grant support of about Up to ₹1.7Cr for qualifying innovators and startups.",
     hero: {
       data: growthGrantPage,
       images: { primary: photos.aboutServiceGrants, secondary: photos.schemeGuarantee, circle: photos.schemeSeed, secondaryAlt: "Growth Grant application support", circleAlt: "Founders preparing a Growth Grant proposal" },
@@ -1393,7 +1393,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "brightpath-ventures": {
     title: `BrightPath Ventures | ${site.companyName}`,
-    description: "BrightPath Ventures — grant support of about Up to ₹18Cr for qualifying innovators and startups.",
+    description: "BrightPath Ventures - grant support of about Up to ₹18Cr for qualifying innovators and startups.",
     hero: {
       data: brightpathVenturesPage,
       images: { primary: photos.schemeGuarantee, secondary: photos.schemeSeed, circle: photos.schemeStartup, secondaryAlt: "BrightPath Ventures application support", circleAlt: "Founders preparing a BrightPath Ventures proposal" },
@@ -1410,7 +1410,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "health-accelerator": {
     title: `Health Accelerator | ${site.companyName}`,
-    description: "Health Accelerator — grant support of about Up to ₹10L for qualifying innovators and startups.",
+    description: "Health Accelerator - grant support of about Up to ₹10L for qualifying innovators and startups.",
     hero: {
       data: healthAcceleratorPage,
       images: { primary: photos.schemeSeed, secondary: photos.schemeStartup, circle: photos.schemePitch, secondaryAlt: "Health Accelerator application support", circleAlt: "Founders preparing a Health Accelerator proposal" },
@@ -1427,7 +1427,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "startup-accelerator": {
     title: `Startup Accelerator Scheme | ${site.companyName}`,
-    description: "Startup Accelerator Scheme — grant support of about Up to ₹25L for qualifying innovators and startups.",
+    description: "Startup Accelerator Scheme - grant support of about Up to ₹25L for qualifying innovators and startups.",
     hero: {
       data: startupAcceleratorPage,
       images: { primary: photos.schemeStartup, secondary: photos.schemePitch, circle: photos.schemeVc, secondaryAlt: "Startup Accelerator Scheme application support", circleAlt: "Founders preparing a Startup Accelerator Scheme proposal" },
@@ -1444,7 +1444,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "startup-spark": {
     title: `Startup Spark Scheme | ${site.companyName}`,
-    description: "Startup Spark Scheme — grant support of about Up to ₹50L for qualifying innovators and startups.",
+    description: "Startup Spark Scheme - grant support of about Up to ₹50L for qualifying innovators and startups.",
     hero: {
       data: startupSparkPage,
       images: { primary: photos.schemePitch, secondary: photos.schemeVc, circle: photos.schemeLab, secondaryAlt: "Startup Spark Scheme application support", circleAlt: "Founders preparing a Startup Spark Scheme proposal" },
@@ -1461,7 +1461,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "leap-fund-scheme": {
     title: `Leap Fund Scheme | ${site.companyName}`,
-    description: "Leap Fund Scheme — grant support of about Up to ₹1Cr for qualifying innovators and startups.",
+    description: "Leap Fund Scheme - grant support of about Up to ₹1Cr for qualifying innovators and startups.",
     hero: {
       data: leapFundSchemePage,
       images: { primary: photos.schemeVc, secondary: photos.schemeLab, circle: photos.schemeTech, secondaryAlt: "Leap Fund Scheme application support", circleAlt: "Founders preparing a Leap Fund Scheme proposal" },
@@ -1478,7 +1478,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "hp-udgam": {
     title: `HP Udgam Scheme | ${site.companyName}`,
-    description: "HP Udgam Scheme — grant support of about Up to ₹2.5Cr for qualifying innovators and startups.",
+    description: "HP Udgam Scheme - grant support of about Up to ₹2.5Cr for qualifying innovators and startups.",
     hero: {
       data: hpUdgamPage,
       images: { primary: photos.schemeLab, secondary: photos.schemeTech, circle: photos.schemeAgri, secondaryAlt: "HP Udgam Scheme application support", circleAlt: "Founders preparing a HP Udgam Scheme proposal" },
@@ -1495,7 +1495,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "defence-scheme": {
     title: `iDEX Defence Innovation Scheme | ${site.companyName}`,
-    description: "iDEX Defence Innovation Scheme — grant support of about Up to ₹1.5Cr for qualifying innovators and startups.",
+    description: "iDEX Defence Innovation Scheme - grant support of about Up to ₹1.5Cr for qualifying innovators and startups.",
     hero: {
       data: defenceSchemePage,
       images: { primary: photos.schemeTech, secondary: photos.schemeAgri, circle: photos.aboutServiceGrants, secondaryAlt: "iDEX Defence Innovation Scheme application support", circleAlt: "Founders preparing a iDEX Defence Innovation Scheme proposal" },
@@ -1512,7 +1512,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "aditi-defence": {
     title: `Aditi Defence 4.0 Challenge | ${site.companyName}`,
-    description: "Aditi Defence 4.0 Challenge — grant support of about Up to ₹25Cr for qualifying innovators and startups.",
+    description: "Aditi Defence 4.0 Challenge - grant support of about Up to ₹25Cr for qualifying innovators and startups.",
     hero: {
       data: aditiDefencePage,
       images: { primary: photos.schemeAgri, secondary: photos.aboutServiceGrants, circle: photos.schemeGuarantee, secondaryAlt: "Aditi Defence 4.0 Challenge application support", circleAlt: "Founders preparing a Aditi Defence 4.0 Challenge proposal" },
@@ -1529,7 +1529,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "aerospace-defence": {
     title: `Aerospace Defence Fund | ${site.companyName}`,
-    description: "Aerospace Defence Fund — grant support of about Up to ₹25Cr for qualifying innovators and startups.",
+    description: "Aerospace Defence Fund - grant support of about Up to ₹25Cr for qualifying innovators and startups.",
     hero: {
       data: aerospaceDefencePage,
       images: { primary: photos.aboutServiceGrants, secondary: photos.schemeGuarantee, circle: photos.schemeSeed, secondaryAlt: "Aerospace Defence Fund application support", circleAlt: "Founders preparing a Aerospace Defence Fund proposal" },
@@ -1546,7 +1546,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "agri-startup-shitij": {
     title: `Agri Startup Fund (SHITIJ 2.0) | ${site.companyName}`,
-    description: "Agri Startup Fund (SHITIJ 2.0) — grant support of about Incubation for qualifying innovators and startups.",
+    description: "Agri Startup Fund (SHITIJ 2.0) - grant support of about Incubation for qualifying innovators and startups.",
     hero: {
       data: agriStartupShitijPage,
       images: { primary: photos.schemeGuarantee, secondary: photos.schemeSeed, circle: photos.schemeStartup, secondaryAlt: "Agri Startup Fund (SHITIJ 2.0) application support", circleAlt: "Founders preparing a Agri Startup Fund (SHITIJ 2.0) proposal" },
@@ -1563,7 +1563,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "agri-tech-fund": {
     title: `Agri-Tech Fund Assistance | ${site.companyName}`,
-    description: "Agri-Tech Fund Assistance — grant support of about Up to ₹35L for qualifying innovators and startups.",
+    description: "Agri-Tech Fund Assistance - grant support of about Up to ₹35L for qualifying innovators and startups.",
     hero: {
       data: agriTechFundPage,
       images: { primary: photos.schemeSeed, secondary: photos.schemeStartup, circle: photos.schemePitch, secondaryAlt: "Agri-Tech Fund Assistance application support", circleAlt: "Founders preparing a Agri-Tech Fund Assistance proposal" },
@@ -1580,7 +1580,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "agrinext": {
     title: `AgriNext | ${site.companyName}`,
-    description: "AgriNext — grant support of about Up to ₹25L for qualifying innovators and startups.",
+    description: "AgriNext - grant support of about Up to ₹25L for qualifying innovators and startups.",
     hero: {
       data: agrinextPage,
       images: { primary: photos.schemeStartup, secondary: photos.schemePitch, circle: photos.schemeVc, secondaryAlt: "AgriNext application support", circleAlt: "Founders preparing a AgriNext proposal" },
@@ -1597,7 +1597,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "loreal-green": {
     title: `L'Oréal Green Sciences Incubator | ${site.companyName}`,
-    description: "L'Oréal Green Sciences Incubator — grant support of about Up to €100K for qualifying innovators and startups.",
+    description: "L'Oréal Green Sciences Incubator - grant support of about Up to €100K for qualifying innovators and startups.",
     hero: {
       data: lorealGreenPage,
       images: { primary: photos.schemePitch, secondary: photos.schemeVc, circle: photos.schemeLab, secondaryAlt: "L'Oréal Green Sciences Incubator application support", circleAlt: "Founders preparing a L'Oréal Green Sciences Incubator proposal" },
@@ -1614,7 +1614,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "csr-fund": {
     title: `CSR Fund | ${site.companyName}`,
-    description: "CSR Fund — grant support of about Up to ₹2.63Cr for qualifying innovators and startups.",
+    description: "CSR Fund - grant support of about Up to ₹2.63Cr for qualifying innovators and startups.",
     hero: {
       data: csrFundPage,
       images: { primary: photos.schemeVc, secondary: photos.schemeLab, circle: photos.schemeTech, secondaryAlt: "CSR Fund application support", circleAlt: "Founders preparing a CSR Fund proposal" },
@@ -1631,7 +1631,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "cybersecurity-karnataka": {
     title: `Cybersecurity Incentive Policy Karnataka | ${site.companyName}`,
-    description: "Cybersecurity Incentive Policy Karnataka — grant support of about Up to ₹50L for qualifying innovators and startups.",
+    description: "Cybersecurity Incentive Policy Karnataka - grant support of about Up to ₹50L for qualifying innovators and startups.",
     hero: {
       data: cybersecurityKarnatakaPage,
       images: { primary: photos.schemeLab, secondary: photos.schemeTech, circle: photos.schemeAgri, secondaryAlt: "Cybersecurity Incentive Policy Karnataka application support", circleAlt: "Founders preparing a Cybersecurity Incentive Policy Karnataka proposal" },
@@ -1648,7 +1648,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "early-stage-grant": {
     title: `Early-Stage Startup Grant | ${site.companyName}`,
-    description: "Early-Stage Startup Grant — grant support of about ₹5L–₹1Cr for qualifying innovators and startups.",
+    description: "Early-Stage Startup Grant - grant support of about ₹5L-₹1Cr for qualifying innovators and startups.",
     hero: {
       data: earlyStageGrantPage,
       images: { primary: photos.schemeTech, secondary: photos.schemeAgri, circle: photos.aboutServiceGrants, secondaryAlt: "Early-Stage Startup Grant application support", circleAlt: "Founders preparing a Early-Stage Startup Grant proposal" },
@@ -1665,7 +1665,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "elevate-nxt": {
     title: `ELEVATE NxT | ${site.companyName}`,
-    description: "ELEVATE NxT — grant support of about Up to ₹1Cr for qualifying innovators and startups.",
+    description: "ELEVATE NxT - grant support of about Up to ₹1Cr for qualifying innovators and startups.",
     hero: {
       data: elevateNxtPage,
       images: { primary: photos.schemeAgri, secondary: photos.aboutServiceGrants, circle: photos.schemeGuarantee, secondaryAlt: "ELEVATE NxT application support", circleAlt: "Founders preparing a ELEVATE NxT proposal" },
@@ -1682,7 +1682,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "empowersphere": {
     title: `EmpowerSphere Skilling & Livelihood Futures | ${site.companyName}`,
-    description: "EmpowerSphere Skilling & Livelihood Futures — grant support of about Up to ₹12.5L for qualifying innovators and startups.",
+    description: "EmpowerSphere Skilling & Livelihood Futures - grant support of about Up to ₹12.5L for qualifying innovators and startups.",
     hero: {
       data: empowerspherePage,
       images: { primary: photos.aboutServiceGrants, secondary: photos.schemeGuarantee, circle: photos.schemeSeed, secondaryAlt: "EmpowerSphere Skilling & Livelihood Futures application support", circleAlt: "Founders preparing a EmpowerSphere Skilling & Livelihood Futures proposal" },
@@ -1699,7 +1699,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "fintech-challenge": {
     title: `Fintech Startup Challenge | ${site.companyName}`,
-    description: "Fintech Startup Challenge — grant support of about Challenge for qualifying innovators and startups.",
+    description: "Fintech Startup Challenge - grant support of about Challenge for qualifying innovators and startups.",
     hero: {
       data: fintechChallengePage,
       images: { primary: photos.schemeGuarantee, secondary: photos.schemeSeed, circle: photos.schemeStartup, secondaryAlt: "Fintech Startup Challenge application support", circleAlt: "Founders preparing a Fintech Startup Challenge proposal" },
@@ -1716,7 +1716,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "fund-sc-youth": {
     title: `Fund For SC Youth 2.0 | ${site.companyName}`,
-    description: "Fund for SC Youth 2.0 — grant support of about Up to ₹30L for qualifying innovators and startups.",
+    description: "Fund for SC Youth 2.0 - grant support of about Up to ₹30L for qualifying innovators and startups.",
     hero: {
       data: fundScYouthPage,
       images: { primary: photos.schemeSeed, secondary: photos.schemeStartup, circle: photos.schemePitch, secondaryAlt: "Fund for SC Youth 2.0 application support", circleAlt: "Founders preparing a Fund for SC Youth 2.0 proposal" },
@@ -1733,7 +1733,7 @@ const desks: Record<string, ServiceDesk> = {
   },
   "fund-for-up": {
     title: `Fund For UP | ${site.companyName}`,
-    description: "Fund for UP — grant support of about Up to ₹7.5L for qualifying innovators and startups.",
+    description: "Fund for UP - grant support of about Up to ₹7.5L for qualifying innovators and startups.",
     hero: {
       data: fundForUpPage,
       images: { primary: photos.schemeStartup, secondary: photos.schemePitch, circle: photos.schemeVc, secondaryAlt: "Fund for UP application support", circleAlt: "Founders preparing a Fund for UP proposal" },

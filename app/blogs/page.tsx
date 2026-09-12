@@ -74,7 +74,7 @@ export default function BlogsPage() {
       />
       <RelatedDesks
         heading="Visit A Desk From These Guides"
-        sub="Every Topic We Write About Maps To A Live Vikas Bharat Desk — Read, Then Talk To Someone."
+        sub="Every Topic We Write About Maps To A Live Vikas Bharat Desk - Read, Then Talk To Someone."
         items={[
           {
             href: "/about",
@@ -84,7 +84,7 @@ export default function BlogsPage() {
           {
             href: "/contact",
             title: "Contact",
-            text: "WhatsApp, call or walk in — first review is free.",
+            text: "WhatsApp, call or walk in - first review is free.",
           },
           {
             href: "/services/loan",

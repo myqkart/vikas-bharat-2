@@ -548,7 +548,7 @@ function SchemeCard({
         <div className="relative aspect-[16/10] overflow-hidden">
           <Image
             src={item.image}
-            alt={`${item.title} — ${item.text}`}
+            alt={`${item.title} - ${item.text}`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"

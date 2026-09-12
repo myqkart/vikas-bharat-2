@@ -174,9 +174,9 @@ export default function CareerApplicationForm({
       `Email: ${email}`,
       `Current location: ${location}`,
       `Years of experience: ${experience}`,
-      `Current CTC: ${currentCtc || "—"}`,
-      `Expected CTC: ${expectedCtc || "—"}`,
-      `Notice period: ${notice || "—"}`,
+      `Current CTC: ${currentCtc || " - "}`,
+      `Expected CTC: ${expectedCtc || " - "}`,
+      `Notice period: ${notice || " - "}`,
       `Resume file: ${resume.name}`,
       message ? `Note:\n${message}` : "",
       "",
@@ -186,7 +186,7 @@ export default function CareerApplicationForm({
       .join("\n");
 
     const href = `${gmailComposeHref(careersPage.applyEmail)}&su=${encodeURIComponent(
-      `Career application — ${roleLabel} — ${name}`,
+      `Career application - ${roleLabel} - ${name}`,
     )}&body=${encodeURIComponent(body)}`;
     window.open(href, "_blank", "noopener,noreferrer");
 
@@ -236,7 +236,7 @@ export default function CareerApplicationForm({
 
       <div className="mb-3 flex items-center justify-between gap-3">
         <p className="text-xs font-semibold text-slate sm:text-sm">
-          {step === 1 ? "Step 1 of 2 — contact details" : "Step 2 of 2 — experience & resume"}
+          {step === 1 ? "Step 1 of 2 - contact details" : "Step 2 of 2 - experience & resume"}
         </p>
         <p className="text-[11px] font-bold tabular-nums text-ink">{step}/2</p>
       </div>
@@ -385,7 +385,7 @@ export default function CareerApplicationForm({
           <span className="relative flex min-h-12 items-center rounded-[12px] border border-dashed border-[#d8d2c4] bg-[#fbf8f1] px-3 py-2.5 transition focus-within:border-indigo">
             <FileUp className="mr-2 h-4 w-4 shrink-0 text-indigo" />
             <span className="min-w-0 flex-1 truncate text-sm text-slate">
-              {resumeName || "PDF, DOC or DOCX — max 5 MB"}
+              {resumeName || "PDF, DOC or DOCX - max 5 MB"}
             </span>
             <span className="ml-2 inline-flex shrink-0 items-center gap-1 rounded-full bg-ink px-3 py-1.5 text-xs font-bold text-white">
               <Upload className="h-3.5 w-3.5" />

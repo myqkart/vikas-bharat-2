@@ -297,7 +297,7 @@ export const refundPolicy: LegalDocument = {
       blocks: [
         {
           type: "p",
-          text: "Where a refund is approved in writing by the Company, the approved amount will ordinarily be processed within 7–15 business days from the date of approval, subject to applicable banking and payment-processing timelines.",
+          text: "Where a refund is approved in writing by the Company, the approved amount will ordinarily be processed within 7-15 business days from the date of approval, subject to applicable banking and payment-processing timelines.",
         },
         {
           type: "p",
